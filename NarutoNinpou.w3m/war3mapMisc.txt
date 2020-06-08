@@ -17,6 +17,7 @@ HeroFactorXP=50
 IntManaBonus=13.0
 MaxHeroLevel=50
 MaxUnitSpeed=522.0
+PawnItemRange=800.0
 StrAttackBonus=1.0
 StrHitPointBonus=27.0
 TradingIncLarge=0
