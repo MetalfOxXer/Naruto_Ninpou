@@ -1,0 +1,96 @@
+[CustomSkin]
+CommandNewSkill=BTNJutsu.blp
+CommandPatrol=ReplaceableTextures\CommandButtons\BTNPatrol2.blp
+GoldIcon=UI\Feedback\Resources\ResourceGold.blp
+IdlePeon=ReplaceableTextures\CommandButtons\BTNBloodElfSupplyWagon.blp
+InfoPanelIconArmorHero=WP_02.blp
+InfoPanelIconArmorHeroNeutral=WP_02.blp
+InfoPanelIconDamageHeroNeutral=WP_01.blp
+InfoPanelIconHeroIconAGI=ATTshuriken.blp
+InfoPanelIconHeroIconINT=ATTsenb.blp
+InfoPanelIconHeroIconSTR=ATTkunaiweap.blp
+LumberIcon=UI\Widgets\ToolTips\Human\ToolTipStonesIcon.blp
+SupplyIcon=ReplaceableTextures\CommandButtons\BTNblank.blp
+
+[Errors]
+Absorbmana=TRIGSTR_8280
+Cooldown=TRIGSTR_7427
+Goldandlumberfromally=TRIGSTR_5316
+HPmanamaxed=TRIGSTR_8275
+Immunetomagic=TRIGSTR_7430
+Lumberfromally=TRIGSTR_8281
+Manamaxed=TRIGSTR_8274
+Nolumber=TRIGSTR_3163
+Nomana=TRIGSTR_5896
+Noward=TRIGSTR_8273
+Targetmanauser=TRIGSTR_8272
+UnitManaMaxed=TRIGSTR_8276
+
+[FrameDef]
+AGILITY=TRIGSTR_5318
+AGILITY_HILIGHT=TRIGSTR_5319
+BONUS_DEFENSE=TRIGSTR_8282
+BONUS_DEFENSE_FIXED=TRIGSTR_8283
+BONUS_MANA=TRIGSTR_8284
+BONUS_MANAREGEN=TRIGSTR_8285
+CHEATENABLED=TRIGSTR_051
+COLON_AGILITY=TRIGSTR_5324
+COLON_ARMOR=TRIGSTR_8306
+COLON_FOOD=TRIGSTR_5325
+COLON_HERO_ATTRIBUTES=TRIGSTR_12091
+COLON_HUMAN=TRIGSTR_12092
+COLON_INTELLECT=TRIGSTR_5326
+COLON_LUMBER=TRIGSTR_5343
+COLON_SPELLS=TRIGSTR_5327
+COLON_STRENGTH=TRIGSTR_5328
+COLON_UNDEAD=TRIGSTR_6556
+COMPUTER=TRIGSTR_8311
+COMPUTER_INSANE=TRIGSTR_18296
+COMPUTER_NEWBIE=TRIGSTR_18297
+COMPUTER_NORMAL=TRIGSTR_18298
+HEROES_COLUMN0=TRIGSTR_12093
+HUMAN=TRIGSTR_12094
+IDLE_PEON=TRIGSTR_2443
+IDLE_PEON_DESC=TRIGSTR_054
+INTELLECT=TRIGSTR_5331
+INTELLECT_HILIGHT=TRIGSTR_5330
+INTELLIGENCE=TRIGSTR_7421
+INVENTORY=TRIGSTR_000
+LUMBER=TRIGSTR_8310
+OVERVIEW_COLUMN0=TRIGSTR_5344
+OVERVIEW_COLUMN1=TRIGSTR_8315
+OVERVIEW_COLUMN2=TRIGSTR_5346
+QUESTS=TRIGSTR_8316
+REQUIREDLEVELTOOLTIP=TRIGSTR_12096
+RESOURCE_UBERTIP_GOLD=TRIGSTR_8317
+RESOURCE_UBERTIP_LUMBER=TRIGSTR_8364
+RESOURCE_UBERTIP_SUPPLY=TRIGSTR_5352
+RESOURCE_UBERTIP_UPKEEP_INFO=TRIGSTR_5350
+RESOURCE_UBERTIP_UPKEEP_INFO_WOOD=TRIGSTR_5351
+SCORESCREEN_TAB2=TRIGSTR_12097
+STRENGTH=TRIGSTR_5333
+STRENGTH_HILIGHT=TRIGSTR_5334
+UNDEAD=TRIGSTR_10542
+UPKEEP_HIGH=TRIGSTR_550
+UPKEEP_LOW=TRIGSTR_058
+UPKEEP_NONE=TRIGSTR_024
+
+[Terrain]
+MaxHeight=3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712,3712
+MaxSlope=90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90
+MinHeight=-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-2048,-20
+
+[WorldEditMisc]
+MaximumMapSize=480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480
+MinimumMapSize=32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32
+
+[WorldEditStrings]
+WESTRING_MODULE_AI=AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI Editor,AI 
+WESTRING_MODULE_CAMPAIGN=Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor,Campaign Editor
+WESTRING_MODULE_IMPORT=Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Import Manager,Imp
+WESTRING_MODULE_OBJEDIT=Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,Object Editor,O
+WESTRING_MODULE_OBJMAN=Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Object Manager,Obj
+WESTRING_MODULE_SCRIPTS=Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Trigger Editor,Tri
+WESTRING_MODULE_SOUND=Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Editor,Sound Edi
+WESTRING_MODULE_TERRAIN=Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Terrain Editor,Ter
+

@@ -1,0 +1,8 @@
+
+Frame "BACKDROP" "Tile1" {
+    BackdropBackground  "UI_Tile_1.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.0,
+    BackdropBackgroundInsets 0.0 0.0 0.0 0.0,
+    BackdropEdgeFile  "UI\Widgets\ToolTips\Human\human-tooltip-border.blp",
+}
