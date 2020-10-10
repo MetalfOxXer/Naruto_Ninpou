@@ -1,6 +1,5 @@
 [CustomSkin]
 CommandNewSkill=ReplaceableTextures\CommandButtons\BTNJutsu.blp
-CommandPatrol=
 GoldIcon=UI\Feedback\Resources\ResourceGold.blp
 IdlePeon=ReplaceableTextures\CommandButtons\BTNBloodElfSupplyWagon.blp
 InfoPanelIconArmorHero=WP_02.blp
