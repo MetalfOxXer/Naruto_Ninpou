@@ -9,6 +9,8 @@ InfoPanelIconHeroIconAGI=ATTshuriken.blp
 InfoPanelIconHeroIconINT=ATTsenb.blp
 InfoPanelIconHeroIconSTR=ATTkunaiweap.blp
 LumberIcon=UI\Widgets\ToolTips\Human\ToolTipStonesIcon.blp
+MinimapHeroTexture=ui\MiniMap\minimap-hero.blp
+MinimapNeutralTexture=blank.blp
 SupplyIcon=ReplaceableTextures\CommandButtons\BTNblank.blp
 
 [Errors]
