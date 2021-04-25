@@ -1,0 +1,706 @@
+// Converted Thu Jan 21 14:18:24 2021
+// MdlxConv Version Jun 29 2010.
+Version {
+	FormatVersion 800,
+}
+Model "Windwalk" {
+	BlendTime 150,
+	MinimumExtent { -1200.000000, -1200.000000, -1200.000000 },
+	MaximumExtent { 1200.000000, 1200.000000, 1200.000000 },
+	BoundsRadius 1200.000000,
+}
+Sequences 4 {
+	Anim "Birth" {
+		Interval { 1000, 1100 },
+		NonLooping,
+		MinimumExtent { 0.000000, -16.000000, -16.000000 },
+		MaximumExtent { 0.000000, 16.000000, 16.000000 },
+		BoundsRadius 22.627399,
+	}
+	Anim "Stand" {
+		Interval { 4000, 5000 },
+		MinimumExtent { 0.000000, -16.000000, -16.000000 },
+		MaximumExtent { 0.000000, 16.000000, 16.000000 },
+		BoundsRadius 22.627399,
+	}
+	Anim "Stand 2" {
+		Interval { 7000, 8000 },
+		Rarity 2.000000,
+		MinimumExtent { 0.000000, -16.000000, -16.000000 },
+		MaximumExtent { 0.000000, 16.000000, 16.000000 },
+		BoundsRadius 22.627399,
+	}
+	Anim "Death" {
+		Interval { 10000, 10400 },
+		NonLooping,
+		MinimumExtent { 0.000000, -16.000000, -16.000000 },
+		MaximumExtent { 0.000000, 16.000000, 16.000000 },
+		BoundsRadius 22.627399,
+	}
+}
+GlobalSequences 1 {
+	Duration 900,
+}
+Textures 4 {
+	Bitmap {
+		Image "Textures\Flare.blp",
+		WrapWidth,
+		WrapHeight,
+	}
+	Bitmap {
+		Image "Textures\Shockwave1White.blp",
+	}
+	Bitmap {
+		Image "Textures\Dust3.blp",
+	}
+	Bitmap {
+		Image "Textures\Leaf4x4.blp",
+	}
+}
+Materials 2 {
+	Material {
+		Layer {
+			FilterMode AddAlpha,
+			Unshaded,
+			TwoSided,
+			static TextureID 2,
+		}
+		Layer {
+			FilterMode AddAlpha,
+			Unshaded,
+			TwoSided,
+			static TextureID 2,
+			static Alpha 0.200000,
+		}
+	}
+	Material {
+		Layer {
+			FilterMode AddAlpha,
+			Unshaded,
+			TwoSided,
+			static TextureID 0,
+			static Alpha 0.100000,
+		}
+	}
+}
+Geoset {
+	Vertices 4 {
+		{ 0.000000, -16.000000, 16.000000 },
+		{ 0.000000, 16.000000, 16.000000 },
+		{ 0.000000, -16.000000, -16.000000 },
+		{ 0.000000, 16.000000, -16.000000 },
+	}
+	Normals 4 {
+		{ 1.000000, 0.000000, 0.000000 },
+		{ 1.000000, 0.000000, 0.000000 },
+		{ 1.000000, 0.000000, 0.000000 },
+		{ 1.000000, 0.000000, 0.000000 },
+	}
+	TVertices 4 {
+		{ 0.000000, 0.000000 },
+		{ 1.000000, 0.000000 },
+		{ 0.000000, 1.000000 },
+		{ 1.000000, 1.000000 },
+	}
+	VertexGroup {
+		0,
+		0,
+		0,
+		0,
+	}
+	Faces 1 6 {
+		Triangles {
+			{ 0, 2, 3, 0, 3, 1 },
+		}
+	}
+	Groups 1 1 {
+		Matrices { 1 },
+	}
+	MinimumExtent { 0.000000, -16.000000, -16.000000 },
+	MaximumExtent { 0.000000, 16.000000, 16.000000 },
+	BoundsRadius 22.627399,
+	Anim {
+		MinimumExtent { 0.000000, -16.000000, -16.000000 },
+		MaximumExtent { 0.000000, 16.000000, 16.000000 },
+		BoundsRadius 22.627399,
+	}
+	Anim {
+		MinimumExtent { 0.000000, -16.000000, -16.000000 },
+		MaximumExtent { 0.000000, 16.000000, 16.000000 },
+		BoundsRadius 22.627399,
+	}
+	Anim {
+		MinimumExtent { 0.000000, -16.000000, -16.000000 },
+		MaximumExtent { 0.000000, 16.000000, 16.000000 },
+		BoundsRadius 22.627399,
+	}
+	Anim {
+		MinimumExtent { 0.000000, -16.000000, -16.000000 },
+		MaximumExtent { 0.000000, 16.000000, 16.000000 },
+		BoundsRadius 22.627399,
+	}
+	MaterialID 1,
+	SelectionGroup 0,
+}
+GeosetAnim {
+	static Alpha 0.000000,
+	GeosetId 0,
+}
+Bone "Root of All Evil" {
+	ObjectId 0,
+	GeosetId Multiple,
+	GeosetAnimId None,
+	Translation 2 {
+		DontInterp,
+		GlobalSeqId 0,
+		0: { 0.000000, 0.000000, 80.000000 },
+		900: { 0.000000, 0.000000, 80.000000 },
+	}
+}
+Bone "Swamp Trump" {
+	ObjectId 1,
+	Parent 0,
+	Billboarded,
+	GeosetId Multiple,
+	GeosetAnimId None,
+}
+Light "Lite" {
+	ObjectId 2,
+	Parent 3,
+	Omnidirectional,
+	static AttenuationStart 60.000000,
+	static AttenuationEnd 180.000000,
+	Intensity 8 {
+		Linear,
+		1000: 0.000000,
+		1100: 3.000000,
+		4000: 3.000000,
+		5000: 3.000000,
+		7000: 3.000000,
+		8000: 3.000000,
+		10000: 3.000000,
+		10400: 0.000000,
+	}
+	static Color { 1.000000, 0.901961, 0.639216 },
+	static AmbIntensity 0.000000,
+	static AmbColor { 1.000000, 1.000000, 1.000000 },
+}
+Helper "Objects" {
+	ObjectId 3,
+	Parent 0,
+}
+Helper "Party Monster" {
+	ObjectId 4,
+	Parent 0,
+}
+Helper "Atras" {
+	ObjectId 5,
+	Parent 4,
+	Rotation 2 {
+		DontInterp,
+		GlobalSeqId 0,
+		0: { 0.000000, -0.710190, 0.000000, 0.710190 },
+		900: { 0.000000, -0.710190, 0.000000, 0.710190 },
+	}
+}
+Helper "Ribbon Monster" {
+	ObjectId 6,
+	Parent 0,
+}
+Helper "RTwister 1" {
+	ObjectId 7,
+	Parent 6,
+	Translation 3 {
+		Linear,
+		GlobalSeqId 0,
+		0: { 0.000000, -10.000000, 0.000000 },
+		360: { 0.000000, 20.000000, 0.000000 },
+		900: { 0.000000, -10.000000, 0.000000 },
+	}
+	Rotation 4 {
+		Linear,
+		GlobalSeqId 0,
+		0: { 0.000000, 0.000000, 0.000000, 1.000000 },
+		300: { 0.866000, 0.000000, 0.000000, -0.500000 },
+		600: { 0.866000, 0.000000, 0.000000, 0.500000 },
+		900: { 0.000000, 0.000000, 0.000000, 1.000000 },
+	}
+}
+Helper "RTwister 2" {
+	ObjectId 8,
+	Parent 6,
+	Translation 3 {
+		Linear,
+		GlobalSeqId 0,
+		0: { 0.000000, -10.000000, 0.000000 },
+		720: { 0.000000, 20.000000, 0.000000 },
+		900: { 0.000000, -10.000000, 0.000000 },
+	}
+	Rotation 4 {
+		Linear,
+		GlobalSeqId 0,
+		0: { 0.000000, 0.000000, 0.000000, 1.000000 },
+		300: { 0.866000, 0.000000, 0.000000, 0.500000 },
+		600: { 0.866000, 0.000000, 0.000000, -0.500000 },
+		900: { 0.000000, 0.000000, 0.000000, 1.000000 },
+	}
+}
+Helper "RTrans" {
+	ObjectId 9,
+	Parent 6,
+	Translation 3 {
+		Linear,
+		GlobalSeqId 0,
+		0: { 0.000000, -10.000000, 0.000000 },
+		360: { 0.000000, 20.000000, 0.000000 },
+		900: { 0.000000, -10.000000, 0.000000 },
+	}
+	Rotation 4 {
+		Linear,
+		GlobalSeqId 0,
+		0: { 0.000000, 0.000000, 0.000000, 1.000000 },
+		300: { 0.866000, 0.000000, 0.000000, 0.500000 },
+		600: { 0.866000, 0.000000, 0.000000, -0.500000 },
+		900: { 0.000000, 0.000000, 0.000000, 1.000000 },
+	}
+}
+Helper "RTwister 3" {
+	ObjectId 10,
+	Parent 6,
+	Translation 3 {
+		Linear,
+		GlobalSeqId 0,
+		0: { 0.000000, -10.000000, 0.000000 },
+		720: { 0.000000, 20.000000, 0.000000 },
+		900: { 0.000000, -10.000000, 0.000000 },
+	}
+	Rotation 4 {
+		Linear,
+		GlobalSeqId 0,
+		0: { 0.000000, 0.000000, 0.000000, 1.000000 },
+		300: { 0.866000, 0.000000, 0.000000, -0.500000 },
+		600: { 0.866000, 0.000000, 0.000000, 0.500000 },
+		900: { 0.000000, 0.000000, 0.000000, 1.000000 },
+	}
+}
+PivotPoints 25 {
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, -6.000000, 0.000000 },
+	{ 0.000000, 8.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, -6.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, 0.000000, 66.000000 },
+	{ 0.000000, 0.000000, 66.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, 17.000000, 0.000000 },
+	{ 0.000000, -13.000000, 0.000000 },
+	{ 0.000000, 12.000000, 0.000000 },
+	{ 0.000000, 12.000000, 0.000000 },
+	{ 0.000000, 17.000000, 0.000000 },
+	{ 0.000000, -13.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+	{ 0.000000, 0.000000, 0.000000 },
+}
+ParticleEmitter2 "Leaves Rot" {
+	ObjectId 11,
+	Parent 5,
+	SortPrimsFarZ,
+	Unshaded,
+	static Speed 180.000000,
+	static Variation 0.600000,
+	static Latitude 66.599998,
+	static Gravity 0.000000,
+	LifeSpan 0.660000,
+	EmissionRate 3 {
+		DontInterp,
+		4000: 10.000000,
+		7400: 20.000000,
+		7700: 0.000000,
+	}
+	static Width 0.000000,
+	static Length 0.000000,
+	Blend,
+	Rows 4,
+	Columns 4,
+	Tail,
+	TailLength 0.200000,
+	Time 0.220000,
+	SegmentColor {
+		Color { 0.282353, 1.000000, 0.768628 },
+		Color { 1.000000, 1.000000, 1.000000 },
+		Color { 0.050980, 1.000000, 0.239216 },
+	},
+	Alpha { 140, 255, 255 },
+	ParticleScaling { 7.000000, 14.000000, 0.000000 },
+	LifeSpanUVAnim { 0, 15, 3 },
+	DecayUVAnim { 0, 10, 3 },
+	TailUVAnim { 0, 0, 1 },
+	TailDecayUVAnim { 0, 0, 1 },
+	TextureID 3,
+}
+ParticleEmitter2 "Pings" {
+	ObjectId 12,
+	Parent 5,
+	Unshaded,
+	static Speed 233.000000,
+	static Variation 0.600000,
+	static Latitude 2.000000,
+	static Gravity 0.000000,
+	LifeSpan 0.380000,
+	EmissionRate 5 {
+		DontInterp,
+		4000: 3.000000,
+		7000: 12.000000,
+		7250: 0.000000,
+		7700: 12.000000,
+		7950: 0.000000,
+	}
+	static Width 12.000000,
+	static Length 12.000000,
+	Additive,
+	Rows 1,
+	Columns 1,
+	Head,
+	TailLength 0.200000,
+	Time 0.150000,
+	SegmentColor {
+		Color { 1.000000, 1.000000, 1.000000 },
+		Color { 1.000000, 1.000000, 1.000000 },
+		Color { 0.784314, 0.662745, 0.301961 },
+	},
+	Alpha { 0, 255, 0 },
+	ParticleScaling { 60.000000, 60.000000, 60.000000 },
+	LifeSpanUVAnim { 0, 0, 1 },
+	DecayUVAnim { 0, 0, 1 },
+	TailUVAnim { 0, 0, 1 },
+	TailDecayUVAnim { 0, 0, 1 },
+	TextureID 1,
+}
+ParticleEmitter2 "Flares T" {
+	ObjectId 13,
+	Parent 5,
+	Unshaded,
+	static Speed 420.000000,
+	static Variation 0.720000,
+	static Latitude 7.000000,
+	static Gravity 0.000000,
+	LifeSpan 0.330000,
+	EmissionRate 5 {
+		DontInterp,
+		4000: 8.000000,
+		7000: 18.000000,
+		7200: 0.000000,
+		7700: 18.000000,
+		7900: 0.000000,
+	}
+	static Width 66.000000,
+	static Length 66.000000,
+	Additive,
+	Rows 1,
+	Columns 1,
+	Both,
+	TailLength 0.240000,
+	Time 0.110000,
+	SegmentColor {
+		Color { 1.000000, 1.000000, 1.000000 },
+		Color { 1.000000, 1.000000, 1.000000 },
+		Color { 1.000000, 1.000000, 1.000000 },
+	},
+	Alpha { 255, 255, 255 },
+	ParticleScaling { 0.000000, 7.000000, 0.000000 },
+	LifeSpanUVAnim { 0, 0, 1 },
+	DecayUVAnim { 0, 0, 1 },
+	TailUVAnim { 0, 0, 1 },
+	TailDecayUVAnim { 0, 0, 1 },
+	TextureID 0,
+}
+ParticleEmitter2 "Flares T2" {
+	ObjectId 14,
+	Parent 5,
+	Unshaded,
+	static Speed 555.000000,
+	static Variation 0.720000,
+	static Latitude 7.000000,
+	static Gravity 0.000000,
+	LifeSpan 0.330000,
+	EmissionRate 2 {
+		DontInterp,
+		4000: 9.000000,
+		7000: 9.000000,
+	}
+	static Width 111.000000,
+	static Length 111.000000,
+	Additive,
+	Rows 1,
+	Columns 1,
+	Both,
+	TailLength 0.240000,
+	Time 0.110000,
+	SegmentColor {
+		Color { 1.000000, 1.000000, 1.000000 },
+		Color { 1.000000, 1.000000, 1.000000 },
+		Color { 1.000000, 1.000000, 1.000000 },
+	},
+	Alpha { 0, 255, 0 },
+	ParticleScaling { 5.000000, 5.000000, 5.000000 },
+	LifeSpanUVAnim { 0, 0, 1 },
+	DecayUVAnim { 0, 0, 1 },
+	TailUVAnim { 0, 0, 1 },
+	TailDecayUVAnim { 0, 0, 1 },
+	TextureID 0,
+}
+ParticleEmitter2 "Dust G" {
+	ObjectId 15,
+	Parent 5,
+	SortPrimsFarZ,
+	Unshaded,
+	static Speed 122.000000,
+	static Variation 0.600000,
+	static Latitude 9.000000,
+	static Gravity 0.000000,
+	LifeSpan 0.750000,
+	EmissionRate 5 {
+		DontInterp,
+		4000: 20.000000,
+		7000: 40.000000,
+		7200: 0.000000,
+		7700: 40.000000,
+		7900: 0.000000,
+	}
+	static Width 24.000000,
+	static Length 24.000000,
+	Blend,
+	Rows 1,
+	Columns 1,
+	Head,
+	TailLength 0.240000,
+	Time 0.250000,
+	SegmentColor {
+		Color { 1.000000, 1.000000, 1.000000 },
+		Color { 0.945098, 0.749020, 0.494118 },
+		Color { 1.000000, 0.823529, 0.000000 },
+	},
+	Alpha { 0, 255, 0 },
+	ParticleScaling { 110.000000, 60.000000, 0.000000 },
+	LifeSpanUVAnim { 0, 0, 1 },
+	DecayUVAnim { 0, 0, 1 },
+	TailUVAnim { 0, 0, 1 },
+	TailDecayUVAnim { 0, 0, 1 },
+	TextureID 2,
+}
+RibbonEmitter "Rib Main" {
+	ObjectId 16,
+	Parent 9,
+	static HeightAbove 24.000000,
+	static HeightBelow 24.000000,
+	Alpha 8 {
+		Linear,
+		1000: 0.000000,
+		1100: 1.000000,
+		4000: 1.000000,
+		5000: 1.000000,
+		7000: 1.000000,
+		8000: 1.000000,
+		10000: 1.000000,
+		10400: 0.000000,
+	}
+	static Color { 0.788235, 0.749020, 0.678431 },
+	static TextureSlot 0,
+	EmissionRate 76,
+	LifeSpan 1.250000,
+	Gravity 100.000000,
+	Rows 1,
+	Columns 1,
+	MaterialID 0,
+}
+RibbonEmitter "Rib Short" {
+	ObjectId 17,
+	Parent 7,
+	static HeightAbove 36.000000,
+	static HeightBelow 36.000000,
+	Alpha 8 {
+		Linear,
+		1000: 0.000000,
+		1100: 1.000000,
+		4000: 1.000000,
+		5000: 1.000000,
+		7000: 1.000000,
+		8000: 1.000000,
+		10000: 1.000000,
+		10400: 0.000000,
+	}
+	static Color { 0.952941, 0.894118, 0.694118 },
+	static TextureSlot 0,
+	EmissionRate 76,
+	LifeSpan 0.900000,
+	Gravity 125.000000,
+	Rows 1,
+	Columns 1,
+	MaterialID 0,
+}
+RibbonEmitter "Rib Shorter" {
+	ObjectId 18,
+	Parent 8,
+	static HeightAbove 48.000000,
+	static HeightBelow 48.000000,
+	Alpha 8 {
+		Linear,
+		1000: 0.000000,
+		1100: 1.000000,
+		4000: 1.000000,
+		5000: 1.000000,
+		7000: 1.000000,
+		8000: 1.000000,
+		10000: 1.000000,
+		10400: 0.000000,
+	}
+	static Color { 1.000000, 0.796079, 0.607843 },
+	static TextureSlot 0,
+	EmissionRate 85,
+	LifeSpan 0.600000,
+	Gravity 70.000000,
+	Rows 1,
+	Columns 1,
+	MaterialID 0,
+}
+RibbonEmitter "Rib Shortest" {
+	ObjectId 19,
+	Parent 10,
+	static HeightAbove 64.000000,
+	static HeightBelow 64.000000,
+	Alpha 8 {
+		Linear,
+		1000: 0.000000,
+		1100: 1.000000,
+		4000: 1.000000,
+		5000: 1.000000,
+		7000: 1.000000,
+		8000: 1.000000,
+		10000: 1.000000,
+		10400: 0.000000,
+	}
+	static Color { 1.000000, 1.000000, 1.000000 },
+	static TextureSlot 0,
+	EmissionRate 90,
+	LifeSpan 0.100000,
+	Gravity 85.000000,
+	Rows 1,
+	Columns 1,
+	MaterialID 0,
+}
+RibbonEmitter "Rib Shortest F" {
+	ObjectId 20,
+	Parent 10,
+	static HeightAbove 16.000000,
+	static HeightBelow 16.000000,
+	Alpha 8 {
+		Linear,
+		1000: 0.000000,
+		1100: 1.000000,
+		4000: 1.000000,
+		5000: 1.000000,
+		7000: 1.000000,
+		8000: 1.000000,
+		10000: 1.000000,
+		10400: 0.000000,
+	}
+	static Color { 0.403922, 0.290196, 0.227451 },
+	static TextureSlot 0,
+	EmissionRate 90,
+	LifeSpan 0.100000,
+	Gravity 85.000000,
+	Rows 1,
+	Columns 1,
+	MaterialID 1,
+}
+RibbonEmitter "Rib Short F" {
+	ObjectId 21,
+	Parent 7,
+	static HeightAbove 60.000000,
+	static HeightBelow 60.000000,
+	Alpha 8 {
+		Linear,
+		1000: 0.000000,
+		1100: 1.000000,
+		4000: 1.000000,
+		5000: 1.000000,
+		7000: 1.000000,
+		8000: 1.000000,
+		10000: 1.000000,
+		10400: 0.000000,
+	}
+	static Color { 0.352941, 0.321569, 0.254902 },
+	static TextureSlot 0,
+	EmissionRate 76,
+	LifeSpan 0.800000,
+	Gravity 125.000000,
+	Rows 1,
+	Columns 1,
+	MaterialID 1,
+}
+RibbonEmitter "Rib Shorter F" {
+	ObjectId 22,
+	Parent 8,
+	static HeightAbove 80.000000,
+	static HeightBelow 80.000000,
+	Alpha 8 {
+		Linear,
+		1000: 0.000000,
+		1100: 1.000000,
+		4000: 1.000000,
+		5000: 1.000000,
+		7000: 1.000000,
+		8000: 1.000000,
+		10000: 1.000000,
+		10400: 0.000000,
+	}
+	static Color { 0.274510, 0.274510, 0.235294 },
+	static TextureSlot 0,
+	EmissionRate 85,
+	LifeSpan 0.500000,
+	Gravity 70.000000,
+	Rows 1,
+	Columns 1,
+	MaterialID 1,
+}
+RibbonEmitter "Rib Main F" {
+	ObjectId 23,
+	Parent 9,
+	static HeightAbove 48.000000,
+	static HeightBelow 48.000000,
+	Alpha 8 {
+		Linear,
+		1000: 0.000000,
+		1100: 1.000000,
+		4000: 1.000000,
+		5000: 1.000000,
+		7000: 1.000000,
+		8000: 1.000000,
+		10000: 1.000000,
+		10400: 0.000000,
+	}
+	static Color { 0.294118, 0.262745, 0.196078 },
+	static TextureSlot 0,
+	EmissionRate 76,
+	LifeSpan 1.250000,
+	Gravity 100.000000,
+	Rows 1,
+	Columns 1,
+	MaterialID 1,
+}
+EventObject "SNDXMDTL" {
+	ObjectId 24,
+	Parent 3,
+	EventTrack 1 {
+		1000,
+	}
+}
