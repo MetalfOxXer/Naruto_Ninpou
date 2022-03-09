@@ -16,19 +16,19 @@ constant integer ARROW_KEY_UP= bj_KEYEVENTKEY_UP
 //endglobals from ArrowKeyEvent
 //globals from BoundSentinel:
 constant boolean LIBRARY_BoundSentinel=true
-constant boolean BoundSentinel___ALLOW_OUTSIDE_PLAYABLE_MAP_AREA= false
-real BoundSentinel___maxx
-real BoundSentinel___maxy
-real BoundSentinel___minx
-real BoundSentinel___miny
+constant boolean BoundSentinel__ALLOW_OUTSIDE_PLAYABLE_MAP_AREA= false
+real BoundSentinel__maxx
+real BoundSentinel__maxy
+real BoundSentinel__minx
+real BoundSentinel__miny
 //endglobals from BoundSentinel
 //globals from Event:
 constant boolean LIBRARY_Event=true
-real Event___q=0
+real Event__q=0
 //endglobals from Event
 //globals from GetZ:
 constant boolean LIBRARY_GetZ=true
-location GetZ___loc= Location(0, 0)
+location GetZ__loc= Location(0, 0)
 //endglobals from GetZ
 //globals from ItemTable:
 constant boolean LIBRARY_ItemTable=true
@@ -181,20 +181,20 @@ constant boolean LIBRARY_ItemUtils=true
 //globals from PlayerUtils:
 constant boolean LIBRARY_PlayerUtils=true
         // automatically change unit colors when changing player color
-constant boolean PlayerUtils___AUTO_COLOR_UNITS= true
+constant boolean PlayerUtils__AUTO_COLOR_UNITS= true
    
         // use an array for name / color lookups (instead of function calls)
-constant boolean PlayerUtils___ARRAY_LOOKUP= false
+constant boolean PlayerUtils__ARRAY_LOOKUP= false
    
         // this only applies if ARRAY_LOOKUP is true
-constant boolean PlayerUtils___HOOK_SAFETY= false
+constant boolean PlayerUtils__HOOK_SAFETY= false
    
 constant force FORCE_PLAYING= CreateForce()
    
-string array PlayerUtils___Name
-string array PlayerUtils___Hex
-string array PlayerUtils___OriginalHex
-playercolor array PlayerUtils___CurrentColor
+string array PlayerUtils__Name
+string array PlayerUtils__Hex
+string array PlayerUtils__OriginalHex
+playercolor array PlayerUtils__CurrentColor
 //endglobals from PlayerUtils
 //globals from PowerupSentinel:
 constant boolean LIBRARY_PowerupSentinel=true
@@ -202,19 +202,19 @@ constant boolean LIBRARY_PowerupSentinel=true
 //globals from PreventSave:
 constant boolean LIBRARY_PreventSave=true
 boolean GameAllowSave= false
-dialog PreventSave___Dialog= DialogCreate()
-timer PreventSave___Timer= CreateTimer()
-player PreventSave___localplayer
+dialog PreventSave__Dialog= DialogCreate()
+timer PreventSave__Timer= CreateTimer()
+player PreventSave__localplayer
 //endglobals from PreventSave
 //globals from Table:
 constant boolean LIBRARY_Table=true
-integer Table___less= 0
-integer Table___more= 8190
+integer Table__less= 0
+integer Table__more= 8190
     //Configure it if you use more than 8190 "key" variables in your map (this will never happen though).
     
-hashtable Table___ht= InitHashtable()
-constant integer Table___sizeK=7
-constant integer Table___listK=8
+hashtable Table__ht= InitHashtable()
+constant integer Table__sizeK=4
+constant integer Table__listK=6
 //endglobals from Table
 //globals from TimerUtils:
 constant boolean LIBRARY_TimerUtils=true
@@ -233,29 +233,29 @@ constant boolean LIBRARY_TimerUtils=true
         //  * THE LEAST SAFE ( you may have to tweak OFSSET manually for it to
         //                     work)
         //
-constant boolean TimerUtils___USE_HASH_TABLE= true
-constant boolean TimerUtils___USE_FLEXIBLE_OFFSET= false
+constant boolean TimerUtils__USE_HASH_TABLE= true
+constant boolean TimerUtils__USE_FLEXIBLE_OFFSET= false
 
-constant integer TimerUtils___OFFSET= 0x100000
-integer TimerUtils___VOFFSET= TimerUtils___OFFSET
+constant integer TimerUtils__OFFSET= 0x100000
+integer TimerUtils__VOFFSET= TimerUtils__OFFSET
               
         //Timers to preload at map init:
-constant integer TimerUtils___QUANTITY= 256
+constant integer TimerUtils__QUANTITY= 256
         
         //Changing this  to something big will allow you to keep recycling
         // timers even when there are already AN INCREDIBLE AMOUNT of timers in
         // the stack. But it will make things far slower so that's probably a bad idea...
-constant integer TimerUtils___ARRAY_SIZE= 8190
-// processed:         string array runningTimersString[TimerUtils___ARRAY_SIZE]
+constant integer TimerUtils__ARRAY_SIZE= 8190
+// processed:         string array runningTimersString[TimerUtils__ARRAY_SIZE]
 integer runningTimers
-// processed:         integer array TimerUtils___data[TimerUtils___ARRAY_SIZE]
-hashtable TimerUtils___ht
-// processed:         timer array TimerUtils___tT[TimerUtils___ARRAY_SIZE]
-integer TimerUtils___tN= 0
-constant integer TimerUtils___HELD=0x28829022
+// processed:         integer array TimerUtils__data[TimerUtils__ARRAY_SIZE]
+hashtable TimerUtils__ht
+// processed:         timer array TimerUtils__tT[TimerUtils__ARRAY_SIZE]
+integer TimerUtils__tN= 0
+constant integer TimerUtils__HELD=0x28829022
         //use a totally random number here, the more improbable someone uses it, the better.
         
-boolean TimerUtils___didinit= false
+boolean TimerUtils__didinit= false
 //endglobals from TimerUtils
 //globals from UIMath:
 constant boolean LIBRARY_UIMath=true
@@ -274,10 +274,10 @@ constant real XE_MAX_COLLISION_SIZE=  197.0
 //endglobals from xebasic
 //globals from AutoBuyS:
 constant boolean LIBRARY_AutoBuyS=true
-// processed: boolean array AutoBuyS__autobuy[12]
-// processed: boolean array AutoBuyS__firstUse[12] 
-// processed: integer array AutoBuyS__buildId[14]
-// processed:     ItemList array AutoBuyS__lists[12] 
+// processed: boolean array AutoBuyS___autobuy[12]
+// processed: boolean array AutoBuyS___firstUse[12] 
+// processed: integer array AutoBuyS___buildId[14]
+// processed:     ItemList array AutoBuyS___lists[12] 
 //endglobals from AutoBuyS
 //globals from Camera:
 constant boolean LIBRARY_Camera=true
@@ -302,9 +302,9 @@ constant player CAMERA_DUMMY_PLAYER= Player(bj_PLAYER_NEUTRAL_EXTRA)
         // endconfig
         
 unit array Camera_DummyUnit
-real Camera___DeltaZ= 0
-real Camera___TempX= 0
-real Camera___TempY= 0
+real Camera__DeltaZ= 0
+real Camera__TempX= 0
+real Camera__TempY= 0
 //endglobals from Camera
 //globals from Dialog:
 constant boolean LIBRARY_Dialog=true
@@ -421,48 +421,48 @@ constant integer EVENT_UNIT_INDEX= 0
 constant integer EVENT_UNIT_DEINDEX= 1
         
         // System variables
-trigger array UnitDex___IndexTrig
-integer UnitDex___Index= 0
-real UnitDex___E=- 1
-boolexpr UnitDex___FilterEnter
+trigger array UnitDex__IndexTrig
+integer UnitDex__Index= 0
+real UnitDex__E=- 1
+boolexpr UnitDex__FilterEnter
 //endglobals from UnitDex
 //globals from xepreload:
 constant boolean LIBRARY_xepreload=true
-unit xepreload___dum=null
+unit xepreload__dum=null
 //endglobals from xepreload
 //globals from EffectUtils:
 constant boolean LIBRARY_EffectUtils=true
 //endglobals from EffectUtils
 //globals from RegisterPlayerUnitEvent:
 constant boolean LIBRARY_RegisterPlayerUnitEvent=true
-trigger array RegisterPlayerUnitEvent___t
-// processed: 	integer array RegisterPlayerUnitEvent___leave_ids[300]
-integer RegisterPlayerUnitEvent___leave_ids_count= 0
-// processed: 	boolexpr array RegisterPlayerUnitEvent___death_events[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___death_events_b[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___death_events_count[300]
-// processed: 	boolexpr array RegisterPlayerUnitEvent___attack_events[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___attack_events_b[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___attack_events_count[300]
-// processed: 	boolexpr array RegisterPlayerUnitEvent___spell_events[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___spell_events_id[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___spell_events_b[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___spell_events_count[300]
-// processed: 	trigger array RegisterPlayerUnitEvent___trigger_events[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___trigger_events_count[300]
-trigger RegisterPlayerUnitEvent___leave_trigger= CreateTrigger()
+trigger array RegisterPlayerUnitEvent__t
+// processed: 	integer array RegisterPlayerUnitEvent__leave_ids[300]
+integer RegisterPlayerUnitEvent__leave_ids_count= 0
+// processed: 	boolexpr array RegisterPlayerUnitEvent__death_events[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__death_events_b[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__death_events_count[300]
+// processed: 	boolexpr array RegisterPlayerUnitEvent__attack_events[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__attack_events_b[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__attack_events_count[300]
+// processed: 	boolexpr array RegisterPlayerUnitEvent__spell_events[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__spell_events_id[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__spell_events_b[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__spell_events_count[300]
+// processed: 	trigger array RegisterPlayerUnitEvent__trigger_events[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__trigger_events_count[300]
+trigger RegisterPlayerUnitEvent__leave_trigger= CreateTrigger()
 //endglobals from RegisterPlayerUnitEvent
 //globals from UnitRecycler2:
 constant boolean LIBRARY_UnitRecycler2=true
-group UnitRecycler2___toRecycle
+group UnitRecycler2__toRecycle
 //endglobals from UnitRecycler2
 //globals from UnitUtils:
 constant boolean LIBRARY_UnitUtils=true
 unit GLOBAL_DUMMY
-integer UnitUtils___bars
-// processed: 	group array UnitUtils___dummies[12]
-// processed:     string array UnitUtils___ASCII_TABLE[91] 
-// processed:     integer array UnitUtils___PLAYER_ARRAY[9] 
+integer UnitUtils__bars
+// processed: 	group array UnitUtils__dummies[12]
+// processed:     string array UnitUtils__ASCII_TABLE[91] 
+// processed:     integer array UnitUtils__PLAYER_ARRAY[9] 
 //endglobals from UnitUtils
     // User-defined
 group udg_group01= null
@@ -1622,212 +1622,12 @@ rect gg_rct_UndergroundExit2= null
 rect gg_rct_UndergroundExit3= null
 rect gg_rct_waterfall= null
 camerasetup gg_cam_Camera_001= null
-sound gg_snd_Ajisai_Animal_Path_R= null
-sound gg_snd_Ajisai_Animal_Path_T= null
-sound gg_snd_Anbu_Kakashi_Kill= null
-sound gg_snd_Anko_Kill= null
-sound gg_snd_Anko_R= null
-sound gg_snd_Asuma_Kill= null
-sound gg_snd_Asuma_R= null
-sound gg_snd_Asuma_T2_Katon= null
-sound gg_snd_Asuma_T_Hien= null
 sound gg_snd_BattleRoar= null
-sound gg_snd_Bee_Kill= null
 sound gg_snd_BigButtonClick= null
-sound gg_snd_Boruto_E= null
-sound gg_snd_Boruto_Kill= null
-sound gg_snd_Boruto_T= null
-sound gg_snd_Byakugan= null
-sound gg_snd_Chiyo_Kill= null
-sound gg_snd_Chiyo_R= null
-sound gg_snd_Chiyo_T= null
-sound gg_snd_Chouji_Kill= null
-sound gg_snd_Chouji_R= null
-sound gg_snd_Chouji_T= null
-sound gg_snd_Curse_Sasuke_Kill= null
-sound gg_snd_Danzo_Kill= null
-sound gg_snd_Danzo_R= null
-sound gg_snd_Danzo_T= null
-sound gg_snd_Darui_Kill= null
-sound gg_snd_Darui_R= null
-sound gg_snd_Darui_T= null
-sound gg_snd_Deidara_D= null
-sound gg_snd_Deidara_Kill= null
-sound gg_snd_Deidara_R= null
-sound gg_snd_Dosu_R= null
-sound gg_snd_Dosu_T= null
-sound gg_snd_Duel_Accept= null
 sound gg_snd_EntanglingRootsTarget1= null
 sound gg_snd_Error= null
 sound gg_snd_FrostArrowHit1= null
-sound gg_snd_Fuu_Kill= null
-sound gg_snd_Fuu_R= null
-sound gg_snd_Fuu_T= null
-sound gg_snd_Gaara_D= null
-sound gg_snd_Gaara_Kill= null
-sound gg_snd_Gaara_T2_Shukaku= null
-sound gg_snd_Gaara_T_Sabaku= null
-sound gg_snd_Gai_E_Sekizo= null
-sound gg_snd_Gai_Kill= null
-sound gg_snd_Gai_Q= null
-sound gg_snd_Gai_Q_Yagai= null
-sound gg_snd_Gai_R= null
-sound gg_snd_Gai_R1= null
-sound gg_snd_Gai_T= null
-sound gg_snd_Gengetsu_Kill= null
-sound gg_snd_Gengetsu_R= null
-sound gg_snd_Gengetsu_T= null
-sound gg_snd_Ginkaku_Q= null
-sound gg_snd_Guren_R= null
-sound gg_snd_Guren_T= null
-sound gg_snd_Haku_Kill= null
-sound gg_snd_Haku_R= null
-sound gg_snd_Haku_T= null
-sound gg_snd_Han_Kill= null
-sound gg_snd_Han_R= null
-sound gg_snd_Han_T= null
-sound gg_snd_Hanabi_Kill= null
-sound gg_snd_Hanabi_R= null
-sound gg_snd_Hanabi_T= null
-sound gg_snd_Hanzo_Kill= null
-sound gg_snd_Hanzo_R= null
-sound gg_snd_Hanzo_T_Ibuse= null
-sound gg_snd_Hashirama_Kill= null
-sound gg_snd_Hashirama_T2_Mokuton= null
-sound gg_snd_Hashirama_T_Senpou= null
-sound gg_snd_Hayate_R= null
-sound gg_snd_Hayate_T= null
 sound gg_snd_HeroDemonMissileLaunch2= null
-sound gg_snd_Hidan_Kill= null
-sound gg_snd_Hidan_R= null
-sound gg_snd_Hidan_T= null
-sound gg_snd_Hinata_Kill= null
-sound gg_snd_Hinata_R= null
-sound gg_snd_Hinata_T2_Kuuten= null
-sound gg_snd_Hinata_T_Juuho= null
-sound gg_snd_Hiruzen_Kill= null
-sound gg_snd_Hiruzen_R2_Enma= null
-sound gg_snd_Hiruzen_R_Kongo= null
-sound gg_snd_Hiruzen_T2_Shiki= null
-sound gg_snd_Hiruzen_T_Goton= null
-sound gg_snd_Hokage_Minato_Kill= null
-sound gg_snd_Ichigo_Kill= null
-sound gg_snd_Ichigo_Q= null
-sound gg_snd_Ichigo_Q01= null
-sound gg_snd_Ichigo_R= null
-sound gg_snd_Ichigo_R01= null
-sound gg_snd_Ichigo_R_Active= null
-sound gg_snd_Ichigo_R_Transform= null
-sound gg_snd_Ichigo_T= null
-sound gg_snd_Ichigo_T01= null
-sound gg_snd_Ichigo_T_Transform= null
-sound gg_snd_Ichigo_Unleash= null
-sound gg_snd_Ichigo_Vasto_Lorde= null
-sound gg_snd_Ichigo_VastoLord= null
-sound gg_snd_Ino_Kill= null
-sound gg_snd_Ino_R= null
-sound gg_snd_Ino_T2_Mind_Control= null
-sound gg_snd_Ino_T_Cho_Shinka= null
-sound gg_snd_Iruka_Kill= null
-sound gg_snd_Itachi_Kill= null
-sound gg_snd_Itachi_Q= null
-sound gg_snd_Itachi_R= null
-sound gg_snd_Itachi_Susanoo_E= null
-sound gg_snd_Itachi_T2_Susanoo= null
-sound gg_snd_Itachi_T_Amaterasu= null
-sound gg_snd_Itachi_Yasaka_Q= null
-sound gg_snd_Jiraiya_Kill= null
-sound gg_snd_Jiraiya_Q= null
-sound gg_snd_Jiraiya_R= null
-sound gg_snd_Jiraiya_T= null
-sound gg_snd_Jirobo_D= null
-sound gg_snd_Jirobo_Kill= null
-sound gg_snd_Jirobo_R= null
-sound gg_snd_Jirobo_T= null
-sound gg_snd_Jounin_Kakashi_Kill= null
-sound gg_snd_Jounin_Minato_Kill= null
-sound gg_snd_Juugo_Kill= null
-sound gg_snd_Juugo_T= null
-sound gg_snd_Kabuto_R= null
-sound gg_snd_Kabuto_Sage_R= null
-sound gg_snd_Kabuto_Sage_W= null
-sound gg_snd_Kabuto_T_Transform= null
-sound gg_snd_Kabuto_Young_R= null
-sound gg_snd_Kabuto_Young_T= null
-sound gg_snd_Kaguya_Kill= null
-sound gg_snd_Kaguya_T_Gudoudama= null
-sound gg_snd_Kakashi_Anbu_R= null
-sound gg_snd_Kakashi_Anbu_T= null
-sound gg_snd_Kakashi_Jounin_Dimension_D= null
-sound gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q= null
-sound gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q01= null
-sound gg_snd_Kakashi_Jounin_R= null
-sound gg_snd_Kakashi_Jounin_T= null
-sound gg_snd_Kakuzu_Kill= null
-sound gg_snd_Kakuzu_R= null
-sound gg_snd_Kakuzu_T_Hearts= null
-sound gg_snd_Kakuzu_T_Zukokku= null
-sound gg_snd_Kankuro_Kill= null
-sound gg_snd_Kankuro_R= null
-sound gg_snd_Kankuro_T= null
-sound gg_snd_Karin_Kill= null
-sound gg_snd_Karin_R_Activation= null
-sound gg_snd_Karin_R_When_Hitting_An_Enemy= null
-sound gg_snd_Karin_R_When_Hitting_Sasuke= null
-sound gg_snd_Karin_T= null
-sound gg_snd_Kiba_Kill= null
-sound gg_snd_Kiba_R= null
-sound gg_snd_Kiba_T= null
-sound gg_snd_Kidomaru_D= null
-sound gg_snd_Kidomaru_Kill= null
-sound gg_snd_Kidomaru_T= null
-sound gg_snd_Killer_Bee_R= null
-sound gg_snd_Killer_Bee_T= null
-sound gg_snd_Killer_Bee_Transform= null
-sound gg_snd_Killer_Bee_Transform_Q= null
-sound gg_snd_Killer_Bee_Transformed_R= null
-sound gg_snd_Kimimaro_D= null
-sound gg_snd_Kimimaro_D_Resurrect= null
-sound gg_snd_Kimimaro_Kill= null
-sound gg_snd_Kimimaro_R= null
-sound gg_snd_Kimimaro_T= null
-sound gg_snd_Kinkaku_Q= null
-sound gg_snd_Kisame_D_Daikoudan= null
-sound gg_snd_Kisame_Kill= null
-sound gg_snd_Kisame_R= null
-sound gg_snd_Kisame_T= null
-sound gg_snd_Kisame_T_Muugen= null
-sound gg_snd_Konan_D= null
-sound gg_snd_Konan_Kill= null
-sound gg_snd_Konan_T_Aoe= null
-sound gg_snd_Konohamaru_Kill= null
-sound gg_snd_Konohamaru_R= null
-sound gg_snd_Konohamaru_T= null
-sound gg_snd_Kurenai_R= null
-sound gg_snd_Kurenai_T= null
-sound gg_snd_Lee_Kill= null
-sound gg_snd_Madara_Kill= null
-sound gg_snd_Madara_R= null
-sound gg_snd_Madara_T2_Susanoo= null
-sound gg_snd_Madara_T_Tengai= null
-sound gg_snd_Madara_T_Transform_Juubi= null
-sound gg_snd_Madara_T_Tsukuyomi= null
-sound gg_snd_Masked_Man_W_Space_Time= null
-sound gg_snd_Mecha_Naruto_Kill= null
-sound gg_snd_Mecha_Naruto_T= null
-sound gg_snd_Mei_Kill= null
-sound gg_snd_Mei_T= null
-sound gg_snd_Mifune_D_Reset= null
-sound gg_snd_Mifune_Kill= null
-sound gg_snd_Mifune_R= null
-sound gg_snd_Mifune_T= null
-sound gg_snd_Minato_Hokage_D= null
-sound gg_snd_Minato_Hokage_R= null
-sound gg_snd_Minato_Hokage_T_Shiki= null
-sound gg_snd_Minato_Jounin_T= null
-sound gg_snd_Mitsuki_Kill= null
-sound gg_snd_Mitsuki_Sage_Mode_W= null
-sound gg_snd_Mitsuki_W= null
 sound gg_snd_MouseClick1= null
 string gg_snd_Music01BeautifulWildGreenBeast
 string gg_snd_Music01Fang
@@ -1944,115 +1744,7 @@ string gg_snd_Music32HeavenshakingEvent
 string gg_snd_Music32MADARAvsNARUTO
 string gg_snd_Music33Flames
 string gg_snd_Music33MyName
-sound gg_snd_Muu_Kill= null
-sound gg_snd_Muu_R= null
-sound gg_snd_Muu_T_Bunretsu= null
-sound gg_snd_Nagato_Kill= null
-sound gg_snd_Nagato_Q= null
-sound gg_snd_Nagato_T_Chibaku= null
-sound gg_snd_Nagato_T_Shinra= null
-sound gg_snd_Naruto_Rikudou_R= null
-sound gg_snd_Naruto_Rikudou_T= null
-sound gg_snd_Naruto_Sage_R= null
-sound gg_snd_Naruto_Sage_T= null
-sound gg_snd_Neji_Kill= null
-sound gg_snd_Neji_R= null
-sound gg_snd_Neji_T= null
-sound gg_snd_Neji_T2_Hakke_Hyaku= null
-sound gg_snd_Neji_W= null
-sound gg_snd_Obito_Dimension_D= null
-sound gg_snd_Obito_Kill= null
-sound gg_snd_Obito_R= null
-sound gg_snd_Obito_T2_Transform= null
-sound gg_snd_Obito_T_Muugen= null
-sound gg_snd_Ohnoki_Kill= null
-sound gg_snd_Onooki_R= null
-sound gg_snd_Onooki_T= null
-sound gg_snd_Orochimaru_Kill= null
-sound gg_snd_Orochimaru_R= null
-sound gg_snd_Orochimaru_T2_Edo= null
-sound gg_snd_Orochimaru_T_Yamata= null
-sound gg_snd_Orochimaru_W= null
-sound gg_snd_Raikage_Kill= null
-sound gg_snd_Raikage_R= null
-sound gg_snd_Raikage_T= null
-sound gg_snd_Rikudou_Naruto_Kill= null
-sound gg_snd_Rikudou_Sasuke_Kill= null
-sound gg_snd_Ringo_Kill= null
-sound gg_snd_Ringo_R= null
-sound gg_snd_Rock_Lee_R= null
-sound gg_snd_Rock_Lee_T= null
-sound gg_snd_RockHeavyBashFlesh1= null
-sound gg_snd_Roshi_Kill= null
-sound gg_snd_Roshi_R= null
-sound gg_snd_Roshi_T= null
-sound gg_snd_Sage_Kabuto_Kill= null
-sound gg_snd_Sage_Naruto_Kill= null
-sound gg_snd_Sai_Kill= null
-sound gg_snd_Sai_R= null
-sound gg_snd_Sai_T= null
-sound gg_snd_Sakura_Kill= null
-sound gg_snd_Sakura_T= null
-sound gg_snd_Sasori_Kill= null
-sound gg_snd_Sasori_R_Puppets= null
-sound gg_snd_Sasuke_Hebi_R= null
-sound gg_snd_Sasuke_Hebi_T= null
-sound gg_snd_Sasuke_Q= null
-sound gg_snd_Sasuke_R_Amaterasu= null
-sound gg_snd_Sasuke_Rikudou_T2_Susanoo= null
-sound gg_snd_Sasuke_Rikudou_T_Chibaku= null
-sound gg_snd_Shikamaru_Kill= null
-sound gg_snd_Shikamaru_Q= null
-sound gg_snd_Shikamaru_R= null
-sound gg_snd_Shikamaru_T2_Emnaku= null
-sound gg_snd_Shikamaru_T_Kagemane= null
-sound gg_snd_Shino_Kill= null
-sound gg_snd_Shino_R= null
-sound gg_snd_Shino_T_Mushikui= null
-sound gg_snd_Shisui_Kill= null
-sound gg_snd_Shisui_R= null
-sound gg_snd_Shisui_T= null
-sound gg_snd_Shizune_R= null
-sound gg_snd_Shizune_T= null
-sound gg_snd_Shockwave= null
-sound gg_snd_SpellShieldImpact1= null
-sound gg_snd_StampedeCaster1= null
 sound gg_snd_StrongDrinkMissile1= null
-sound gg_snd_Suigetsu_Kill= null
-sound gg_snd_Suigetsu_R= null
-sound gg_snd_Suigetsu_T2_Bubble= null
-sound gg_snd_Suigetsu_T_Wave= null
-sound gg_snd_Temari_Kill= null
-sound gg_snd_Temari_R= null
-sound gg_snd_Temari_T= null
-sound gg_snd_Tenten_Kill= null
-sound gg_snd_Tenten_T= null
-sound gg_snd_Tobi_Kill= null
-sound gg_snd_Tobi_R= null
-sound gg_snd_Tobirama_Kill= null
-sound gg_snd_Tobirama_R= null
-sound gg_snd_Tobirama_T2_Suiton= null
-sound gg_snd_Tobirama_T_Gojou= null
-sound gg_snd_Torune_R= null
-sound gg_snd_Torune_T= null
-sound gg_snd_Tsunade_Kill= null
-sound gg_snd_Tsunade_R= null
-sound gg_snd_Tsunade_T= null
-sound gg_snd_Utakata_Kill= null
-sound gg_snd_Utakata_R= null
-sound gg_snd_Utakata_T= null
-sound gg_snd_Yagura_Kill= null
-sound gg_snd_Yagura_R= null
-sound gg_snd_Yagura_T= null
-sound gg_snd_Yamato_D= null
-sound gg_snd_Yamato_Kill= null
-sound gg_snd_Yamato_T= null
-sound gg_snd_Young_Kabuto_Kill= null
-sound gg_snd_Yugito_Kill= null
-sound gg_snd_Yugito_T= null
-sound gg_snd_Zabuza_Kill= null
-sound gg_snd_Zabuza_R= null
-sound gg_snd_Zabuza_T= null
 trigger gg_trg_xebasic= null
 trigger gg_trg_xepreload= null
 trigger gg_trg_Alloc= null
@@ -3247,7 +2939,304 @@ unit gg_unit_hcas_0193= null
 unit gg_unit_h00E_0194= null
 unit gg_unit_h00F_0195= null
 unit gg_unit_hspt_0202= null
+sound gg_snd_Anbu_Kakashi_Kill= null
+sound gg_snd_Asuma_Kill= null
+sound gg_snd_Bee_Kill= null
+sound gg_snd_Chiyo_Kill= null
+sound gg_snd_Chouji_Kill= null
+sound gg_snd_Curse_Sasuke_Kill= null
+sound gg_snd_Danzo_Kill= null
+sound gg_snd_Darui_Kill= null
+sound gg_snd_Deidara_Kill= null
+sound gg_snd_Fuu_Kill= null
+sound gg_snd_Gaara_Kill= null
+sound gg_snd_Gai_Kill= null
+sound gg_snd_Gengetsu_Kill= null
+sound gg_snd_Haku_Kill= null
+sound gg_snd_Hanzo_Kill= null
+sound gg_snd_Han_Kill= null
+sound gg_snd_Hashirama_Kill= null
+sound gg_snd_Hidan_Kill= null
+sound gg_snd_Hinata_Kill= null
+sound gg_snd_Hiruzen_Kill= null
+sound gg_snd_Hokage_Minato_Kill= null
+sound gg_snd_Ino_Kill= null
+sound gg_snd_Iruka_Kill= null
+sound gg_snd_Itachi_Kill= null
+sound gg_snd_Jiraiya_Kill= null
+sound gg_snd_Jirobo_Kill= null
+sound gg_snd_Jounin_Kakashi_Kill= null
+sound gg_snd_Jounin_Minato_Kill= null
+sound gg_snd_Juugo_Kill= null
+sound gg_snd_Kaguya_Kill= null
+sound gg_snd_Kakuzu_Kill= null
+sound gg_snd_Kankuro_Kill= null
+sound gg_snd_Karin_Kill= null
+sound gg_snd_Kiba_Kill= null
+sound gg_snd_Kidomaru_Kill= null
+sound gg_snd_Kimimaro_Kill= null
+sound gg_snd_Kisame_Kill= null
+sound gg_snd_Konan_Kill= null
+sound gg_snd_Konohamaru_Kill= null
+sound gg_snd_Lee_Kill= null
+sound gg_snd_Madara_Kill= null
+sound gg_snd_Mecha_Naruto_Kill= null
+sound gg_snd_Mei_Kill= null
+sound gg_snd_Mifune_Kill= null
+sound gg_snd_Muu_Kill= null
+sound gg_snd_Nagato_Kill= null
+sound gg_snd_Neji_Kill= null
+sound gg_snd_Obito_Kill= null
+sound gg_snd_Ohnoki_Kill= null
+sound gg_snd_Orochimaru_Kill= null
+sound gg_snd_Raikage_Kill= null
+sound gg_snd_Rikudou_Naruto_Kill= null
+sound gg_snd_Rikudou_Sasuke_Kill= null
+sound gg_snd_Roshi_Kill= null
+sound gg_snd_Sage_Kabuto_Kill= null
+sound gg_snd_Sage_Naruto_Kill= null
+sound gg_snd_Sai_Kill= null
+sound gg_snd_Sakura_Kill= null
+sound gg_snd_Sasori_Kill= null
+sound gg_snd_Shikamaru_Kill= null
+sound gg_snd_Shino_Kill= null
+sound gg_snd_Shisui_Kill= null
+sound gg_snd_Suigetsu_Kill= null
+sound gg_snd_Temari_Kill= null
+sound gg_snd_Tenten_Kill= null
+sound gg_snd_Tobi_Kill= null
+sound gg_snd_Tobirama_Kill= null
+sound gg_snd_Tsunade_Kill= null
+sound gg_snd_Utakata_Kill= null
+sound gg_snd_Yagura_Kill= null
+sound gg_snd_Yamato_Kill= null
+sound gg_snd_Young_Kabuto_Kill= null
+sound gg_snd_Yugito_Kill= null
+sound gg_snd_Zabuza_Kill= null
+sound gg_snd_Boruto_Kill= null
+sound gg_snd_Mitsuki_Kill= null
+sound gg_snd_Ringo_Kill= null
+sound gg_snd_Anko_Kill= null
+sound gg_snd_Ichigo_Kill= null
+sound gg_snd_Hanabi_Kill= null
+sound gg_snd_Asuma_R= null
+sound gg_snd_Asuma_T_Hien= null
+sound gg_snd_Asuma_T2_Katon= null
+sound gg_snd_Chiyo_R= null
+sound gg_snd_Chiyo_T= null
+sound gg_snd_Chouji_R= null
+sound gg_snd_Chouji_T= null
+sound gg_snd_Danzo_R= null
+sound gg_snd_Danzo_T= null
+sound gg_snd_Darui_R= null
+sound gg_snd_Darui_T= null
+sound gg_snd_Deidara_D= null
+sound gg_snd_Deidara_R= null
+sound gg_snd_Fuu_R= null
+sound gg_snd_Fuu_T= null
+sound gg_snd_Gaara_D= null
+sound gg_snd_Gaara_T_Sabaku= null
+sound gg_snd_Gaara_T2_Shukaku= null
+sound gg_snd_Gai_Q_Yagai= null
+sound gg_snd_Gai_R= null
+sound gg_snd_Gai_T= null
+sound gg_snd_Gengetsu_R= null
+sound gg_snd_Gengetsu_T= null
+sound gg_snd_Guren_R= null
+sound gg_snd_Guren_T= null
+sound gg_snd_Haku_R= null
+sound gg_snd_Haku_T= null
+sound gg_snd_Han_R= null
+sound gg_snd_Han_T= null
+sound gg_snd_Hanzo_R= null
+sound gg_snd_Hanzo_T_Ibuse= null
+sound gg_snd_Hashirama_T_Senpou= null
+sound gg_snd_Hashirama_T2_Mokuton= null
+sound gg_snd_Hayate_R= null
+sound gg_snd_Hayate_T= null
+sound gg_snd_Hidan_R= null
+sound gg_snd_Hidan_T= null
+sound gg_snd_Hinata_R= null
+sound gg_snd_Hinata_T_Juuho= null
+sound gg_snd_Hinata_T2_Kuuten= null
+sound gg_snd_Hiruzen_R_Kongo= null
+sound gg_snd_Hiruzen_R2_Enma= null
+sound gg_snd_Hiruzen_T_Goton= null
+sound gg_snd_Hiruzen_T2_Shiki= null
+sound gg_snd_Ino_R= null
+sound gg_snd_Ino_T_Cho_Shinka= null
+sound gg_snd_Ino_T2_Mind_Control= null
+sound gg_snd_Itachi_R= null
+sound gg_snd_Itachi_T_Amaterasu= null
+sound gg_snd_Itachi_T2_Susanoo= null
+sound gg_snd_Jiraiya_R= null
+sound gg_snd_Jiraiya_T= null
+sound gg_snd_Juugo_T= null
+sound gg_snd_Kabuto_R= null
+sound gg_snd_Kabuto_Sage_R= null
+sound gg_snd_Kabuto_Young_R= null
+sound gg_snd_Kaguya_T_Gudoudama= null
+sound gg_snd_Kakashi_Anbu_R= null
+sound gg_snd_Kakashi_Anbu_T= null
+sound gg_snd_Kakashi_Jounin_R= null
+sound gg_snd_Kakashi_Jounin_T= null
+sound gg_snd_Kakuzu_R= null
+sound gg_snd_Kakuzu_T_Hearts= null
+sound gg_snd_Kakuzu_T_Zukokku= null
+sound gg_snd_Kankuro_R= null
+sound gg_snd_Kankuro_T= null
+sound gg_snd_Karin_R_Activation= null
+sound gg_snd_Karin_R_When_Hitting_An_Enemy= null
+sound gg_snd_Karin_R_When_Hitting_Sasuke= null
+sound gg_snd_Karin_T= null
+sound gg_snd_Kiba_R= null
+sound gg_snd_Kiba_T= null
+sound gg_snd_Killer_Bee_R= null
+sound gg_snd_Killer_Bee_T= null
+sound gg_snd_Killer_Bee_Transformed_R= null
+sound gg_snd_Kimimaro_R= null
+sound gg_snd_Kimimaro_T= null
+sound gg_snd_Kisame_D_Daikoudan= null
+sound gg_snd_Kisame_R= null
+sound gg_snd_Kisame_T_Muugen= null
+sound gg_snd_Konan_D= null
+sound gg_snd_Konohamaru_R= null
+sound gg_snd_Konohamaru_T= null
+sound gg_snd_Kurenai_R= null
+sound gg_snd_Kurenai_T= null
+sound gg_snd_Madara_R= null
+sound gg_snd_Madara_T_Tengai= null
+sound gg_snd_Masked_Man_W_Space_Time= null
+sound gg_snd_Mei_T= null
+sound gg_snd_Minato_Hokage_D= null
+sound gg_snd_Minato_Hokage_R= null
+sound gg_snd_Minato_Hokage_T_Shiki= null
+sound gg_snd_Minato_Jounin_T= null
+sound gg_snd_Muu_R= null
+sound gg_snd_Muu_T_Bunretsu= null
+sound gg_snd_Nagato_T_Chibaku= null
+sound gg_snd_Nagato_T_Shinra= null
+sound gg_snd_Naruto_Rikudou_R= null
+sound gg_snd_Naruto_Rikudou_T= null
+sound gg_snd_Naruto_Sage_R= null
+sound gg_snd_Naruto_Sage_T= null
+sound gg_snd_Neji_R= null
+sound gg_snd_Neji_T= null
+sound gg_snd_Byakugan= null
 sound gg_snd_Anko_T= null
+sound gg_snd_Obito_T_Muugen= null
+sound gg_snd_Obito_T2_Transform= null
+sound gg_snd_Onooki_R= null
+sound gg_snd_Onooki_T= null
+sound gg_snd_Orochimaru_R= null
+sound gg_snd_Orochimaru_T_Yamata= null
+sound gg_snd_Orochimaru_T2_Edo= null
+sound gg_snd_Raikage_R= null
+sound gg_snd_Raikage_T= null
+sound gg_snd_Rock_Lee_R= null
+sound gg_snd_Rock_Lee_T= null
+sound gg_snd_Roshi_R= null
+sound gg_snd_Sai_R= null
+sound gg_snd_Sai_T= null
+sound gg_snd_Sakura_T= null
+sound gg_snd_Sasori_R_Puppets= null
+sound gg_snd_Sasuke_Hebi_R= null
+sound gg_snd_Sasuke_Hebi_T= null
+sound gg_snd_Sasuke_R_Amaterasu= null
+sound gg_snd_Sasuke_Rikudou_T_Chibaku= null
+sound gg_snd_Sasuke_Rikudou_T2_Susanoo= null
+sound gg_snd_Shikamaru_R= null
+sound gg_snd_Shikamaru_T_Kagemane= null
+sound gg_snd_Shikamaru_T2_Emnaku= null
+sound gg_snd_Shino_R= null
+sound gg_snd_Shino_T_Mushikui= null
+sound gg_snd_Shisui_R= null
+sound gg_snd_Shisui_T= null
+sound gg_snd_Shizune_R= null
+sound gg_snd_Shizune_T= null
+sound gg_snd_Suigetsu_R= null
+sound gg_snd_Suigetsu_T_Wave= null
+sound gg_snd_Suigetsu_T2_Bubble= null
+sound gg_snd_Temari_R= null
+sound gg_snd_Temari_T= null
+sound gg_snd_Tenten_T= null
+sound gg_snd_Tobi_R= null
+sound gg_snd_Tobirama_R= null
+sound gg_snd_Tobirama_T_Gojou= null
+sound gg_snd_Tobirama_T2_Suiton= null
+sound gg_snd_Torune_R= null
+sound gg_snd_Torune_T= null
+sound gg_snd_Tsunade_R= null
+sound gg_snd_Tsunade_T= null
+sound gg_snd_Utakata_R= null
+sound gg_snd_Utakata_T= null
+sound gg_snd_Yagura_R= null
+sound gg_snd_Yagura_T= null
+sound gg_snd_Yugito_T= null
+sound gg_snd_Zabuza_R= null
+sound gg_snd_Zabuza_T= null
+sound gg_snd_Ringo_R= null
+sound gg_snd_Gai_Q= null
+sound gg_snd_Gai_E_Sekizo= null
+sound gg_snd_Itachi_Q= null
+sound gg_snd_Mifune_R= null
+sound gg_snd_Mifune_T= null
+sound gg_snd_Orochimaru_W= null
+sound gg_snd_Sasuke_Q= null
+sound gg_snd_Shikamaru_Q= null
+sound gg_snd_Kabuto_Young_T= null
+sound gg_snd_Jiraiya_Q= null
+sound gg_snd_Kidomaru_D= null
+sound gg_snd_Kidomaru_T= null
+sound gg_snd_Kimimaro_D= null
+sound gg_snd_Kisame_T= null
+sound gg_snd_Madara_T2_Susanoo= null
+sound gg_snd_Roshi_T= null
+sound gg_snd_Yamato_T= null
+sound gg_snd_Neji_W= null
+sound gg_snd_Itachi_Yasaka_Q= null
+sound gg_snd_Kabuto_Sage_W= null
+sound gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q= null
+sound gg_snd_Kakashi_Jounin_Dimension_D= null
+sound gg_snd_Obito_Dimension_D= null
+sound gg_snd_Mecha_Naruto_T= null
+sound gg_snd_Mitsuki_W= null
+sound gg_snd_Mitsuki_Sage_Mode_W= null
+sound gg_snd_Jirobo_R= null
+sound gg_snd_Jirobo_D= null
+sound gg_snd_Jirobo_T= null
+sound gg_snd_Madara_T_Transform_Juubi= null
+sound gg_snd_Kabuto_T_Transform= null
+sound gg_snd_Obito_R= null
+sound gg_snd_Madara_T_Tsukuyomi= null
+sound gg_snd_Killer_Bee_Transform= null
+sound gg_snd_Kimimaro_D_Resurrect= null
+sound gg_snd_Neji_T2_Hakke_Hyaku= null
+sound gg_snd_Yamato_D= null
+sound gg_snd_Nagato_Q= null
+sound gg_snd_Boruto_T= null
+sound gg_snd_Killer_Bee_Transform_Q= null
+sound gg_snd_Boruto_E= null
+sound gg_snd_Itachi_Susanoo_E= null
+sound gg_snd_Kinkaku_Q= null
+sound gg_snd_Ginkaku_Q= null
+sound gg_snd_Gai_R1= null
+sound gg_snd_Dosu_R= null
+sound gg_snd_Dosu_T= null
+sound gg_snd_Konan_T_Aoe= null
+sound gg_snd_Ajisai_Animal_Path_R= null
+sound gg_snd_Ajisai_Animal_Path_T= null
+sound gg_snd_Anko_R= null
+sound gg_snd_Mifune_D_Reset= null
+sound gg_snd_Ichigo_Q= null
+sound gg_snd_Ichigo_R= null
+sound gg_snd_Ichigo_R_Active= null
+sound gg_snd_Ichigo_R_Transform= null
+sound gg_snd_Ichigo_T= null
+sound gg_snd_Ichigo_Vasto_Lorde= null
+sound gg_snd_Hanabi_R= null
+sound gg_snd_Hanabi_T= null
+sound gg_snd_Duel_Accept= null
 group hideheroes
 group HideHeroesSystem___hidedummy
 // processed:     boolean array HideHeroesSystem___numbers[11]
@@ -3263,14 +3252,14 @@ group HideHeroesSystem___hidedummy
 // processed:         unit array ItemKunai___heroes[12]
 // processed:         unit array Bashosen___dummies[1][1]
 // processed:     unit array ScrollOfTeleportScope___anbus[1][1] 
-// processed: dialog array SendGoldAndCystal__gd[12]
-// processed: button array SendGoldAndCystal__gb[12][12] 
-// processed: dialog array SendGoldAndCystal__cd[12]
-// processed: button array SendGoldAndCystal__cb[12][12] 
-// processed: integer array SendGoldAndCystal__g[12] 
-// processed: integer array SendGoldAndCystal__c[12] 
-// processed: integer array SendGoldAndCystal__given[12]
-// processed:         boolean array AssistSystem___sai[8190]
+// processed: dialog array SendGoldAndCystal___gd[12]
+// processed: button array SendGoldAndCystal___gb[12][12] 
+// processed: dialog array SendGoldAndCystal___cd[12]
+// processed: button array SendGoldAndCystal___cb[12][12] 
+// processed: integer array SendGoldAndCystal___g[12] 
+// processed: integer array SendGoldAndCystal___c[12] 
+// processed: integer array SendGoldAndCystal___given[12]
+// processed:         boolean array AssistSystem__sai[8190]
 
 trigger l__library_init
 
@@ -3301,51 +3290,51 @@ playercolor array s__User_Color
 group s__User_ENUM_GROUP= CreateGroup()
 integer array s__User_PlayingPlayer
 integer array s__User_PlayingPlayerIndex
-constant integer si__Table___dex=18
-constant integer si__Table___handles=19
-constant integer si__Table___agents=20
-constant integer si__Table___reals=21
-constant integer si__Table___booleans=22
-constant integer si__Table___strings=23
-constant integer si__Table___integers=24
-constant integer si__Table___players=25
-constant integer si__Table___widgets=26
-constant integer si__Table___destructables=27
-constant integer si__Table___items=28
-constant integer si__Table___units=29
-constant integer si__Table___abilitys=30
-constant integer si__Table___timers=31
-constant integer si__Table___triggers=32
-constant integer si__Table___triggerconditions=33
-constant integer si__Table___triggeractions=34
-constant integer si__Table___events=35
-constant integer si__Table___forces=36
-constant integer si__Table___groups=37
-constant integer si__Table___locations=38
-constant integer si__Table___rects=39
-constant integer si__Table___boolexprs=40
-constant integer si__Table___sounds=41
-constant integer si__Table___effects=42
-constant integer si__Table___unitpools=43
-constant integer si__Table___itempools=44
-constant integer si__Table___quests=45
-constant integer si__Table___questitems=46
-constant integer si__Table___defeatconditions=47
-constant integer si__Table___timerdialogs=48
-constant integer si__Table___leaderboards=49
-constant integer si__Table___multiboards=50
-constant integer si__Table___multiboarditems=51
-constant integer si__Table___trackables=52
-constant integer si__Table___dialogs=53
-constant integer si__Table___buttons=54
-constant integer si__Table___texttags=55
-constant integer si__Table___lightnings=56
-constant integer si__Table___images=57
-constant integer si__Table___ubersplats=58
-constant integer si__Table___regions=59
-constant integer si__Table___fogstates=60
-constant integer si__Table___fogmodifiers=61
-constant integer si__Table___hashtables=62
+constant integer si__Table__dex=18
+constant integer si__Table__handles=19
+constant integer si__Table__agents=20
+constant integer si__Table__reals=21
+constant integer si__Table__booleans=22
+constant integer si__Table__strings=23
+constant integer si__Table__integers=24
+constant integer si__Table__players=25
+constant integer si__Table__widgets=26
+constant integer si__Table__destructables=27
+constant integer si__Table__items=28
+constant integer si__Table__units=29
+constant integer si__Table__abilitys=30
+constant integer si__Table__timers=31
+constant integer si__Table__triggers=32
+constant integer si__Table__triggerconditions=33
+constant integer si__Table__triggeractions=34
+constant integer si__Table__events=35
+constant integer si__Table__forces=36
+constant integer si__Table__groups=37
+constant integer si__Table__locations=38
+constant integer si__Table__rects=39
+constant integer si__Table__boolexprs=40
+constant integer si__Table__sounds=41
+constant integer si__Table__effects=42
+constant integer si__Table__unitpools=43
+constant integer si__Table__itempools=44
+constant integer si__Table__quests=45
+constant integer si__Table__questitems=46
+constant integer si__Table__defeatconditions=47
+constant integer si__Table__timerdialogs=48
+constant integer si__Table__leaderboards=49
+constant integer si__Table__multiboards=50
+constant integer si__Table__multiboarditems=51
+constant integer si__Table__trackables=52
+constant integer si__Table__dialogs=53
+constant integer si__Table__buttons=54
+constant integer si__Table__texttags=55
+constant integer si__Table__lightnings=56
+constant integer si__Table__images=57
+constant integer si__Table__ubersplats=58
+constant integer si__Table__regions=59
+constant integer si__Table__fogstates=60
+constant integer si__Table__fogmodifiers=61
+constant integer si__Table__hashtables=62
 constant integer si__Table=63
 constant integer si__HandleTable=64
 constant integer si__StringTable=65
@@ -3411,8 +3400,8 @@ integer s__WorldBounds_centerY
 rect s__WorldBounds_world
 region s__WorldBounds_worldRegion
 constant integer si__ItemList=72
-integer s__ItemList_Alloc___instanceCount= 0
-integer array s__ItemList_Alloc___recycle
+integer s__ItemList_Alloc__instanceCount= 0
+integer array s__ItemList_Alloc__recycle
 integer array s__ItemList_items
 integer array s__ItemList_itemsFrom
 integer array s__ItemList_prices
@@ -3438,10 +3427,10 @@ integer array s__Camera_view
 integer array s__Camera_projection
 boolean array s__Camera_change
 integer array s__Camera_customValue
-constant integer si__Camera___CamInit=74
-integer si__Camera___CamInit_F=0
-integer si__Camera___CamInit_I=0
-integer array si__Camera___CamInit_V
+constant integer si__Camera__CamInit=74
+integer si__Camera__CamInit_F=0
+integer si__Camera__CamInit_I=0
+integer array si__Camera__CamInit_V
 constant integer si__Dialog=75
 integer si__Dialog_F=0
 integer si__Dialog_I=0
@@ -3488,27 +3477,27 @@ integer array s__UnitDex_List
 constant integer s__UnitDex_DETECT_LEAVE_ABILITY= 'uDex'
 constant boolean s__UnitDex_ALLOW_DEBUGGING= true
 integer s__UnitDex_Counter= 0
-constant integer si__xepreload___init=78
-constant integer si__EffectUtils___EffectTimer=79
-integer si__EffectUtils___EffectTimer_F=0
-integer si__EffectUtils___EffectTimer_I=0
-integer array si__EffectUtils___EffectTimer_V
-effect array s__EffectUtils___EffectTimer_e
-boolean array s__EffectUtils___EffectTimer_remove
-constant integer si__RegisterPlayerUnitEvent___S=80
-integer s__RegisterPlayerUnitEvent___S_tb
-constant integer si__UnitUtils___ReleaseDummy=81
-integer si__UnitUtils___ReleaseDummy_F=0
-integer si__UnitUtils___ReleaseDummy_I=0
-integer array si__UnitUtils___ReleaseDummy_V
-unit array s__UnitUtils___ReleaseDummy_u
-integer array s__UnitUtils___ReleaseDummy_i
-constant integer si__UnitUtils___InitASCIITable=82
-constant integer si__UnitUtils___UpdateMultiboardS=83
+constant integer si__xepreload__init=78
+constant integer si__EffectUtils__EffectTimer=79
+integer si__EffectUtils__EffectTimer_F=0
+integer si__EffectUtils__EffectTimer_I=0
+integer array si__EffectUtils__EffectTimer_V
+effect array s__EffectUtils__EffectTimer_e
+boolean array s__EffectUtils__EffectTimer_remove
+constant integer si__RegisterPlayerUnitEvent__S=80
+integer s__RegisterPlayerUnitEvent__S_tb
+constant integer si__UnitUtils__ReleaseDummy=81
+integer si__UnitUtils__ReleaseDummy_F=0
+integer si__UnitUtils__ReleaseDummy_I=0
+integer array si__UnitUtils__ReleaseDummy_V
+unit array s__UnitUtils__ReleaseDummy_u
+integer array s__UnitUtils__ReleaseDummy_i
+constant integer si__UnitUtils__InitASCIITable=82
+constant integer si__UnitUtils__UpdateMultiboardS=83
 constant integer si__PlayerName=84
 constant integer si__String=85
-integer s__String_Alloc___instanceCount= 0
-integer array s__String_Alloc___recycle
+integer s__String_Alloc__instanceCount= 0
+integer array s__String_Alloc__recycle
 string array s__String_s
 constant integer si__Tree=86
 integer si__Tree_F=0
@@ -3596,8 +3585,8 @@ constant integer si__RikuudouNecklacePassive=114
 constant integer si__EightHeadSwordCritical=115
 boolean s__EightHeadSwordCritical_b= false
 constant integer si__ThunderKusanagiCritical=116
-integer s__ThunderKusanagiCritical_Alloc___instanceCount= 0
-integer array s__ThunderKusanagiCritical_Alloc___recycle
+integer s__ThunderKusanagiCritical_Alloc__instanceCount= 0
+integer array s__ThunderKusanagiCritical_Alloc__recycle
 unit array s__ThunderKusanagiCritical_caster
 unit array s__ThunderKusanagiCritical_target
 integer array s__ThunderKusanagiCritical_count
@@ -3629,8 +3618,8 @@ integer si__KyuubiImmolation_F=0
 integer si__KyuubiImmolation_I=0
 integer array si__KyuubiImmolation_V
 constant integer si__AntiEnergyStones=128
-integer s__AntiEnergyStones_Alloc___instanceCount= 0
-integer array s__AntiEnergyStones_Alloc___recycle
+integer s__AntiEnergyStones_Alloc__instanceCount= 0
+integer array s__AntiEnergyStones_Alloc__recycle
 unit array s__AntiEnergyStones_u
 integer array s__AntiEnergyStones_id
 integer array s__AntiEnergyStones_hps
@@ -3642,8 +3631,8 @@ group s__HokageRobeAura_casters
 constant integer si__KazekageRobeAura=130
 group s__KazekageRobeAura_casters
 constant integer si__ItachiRing=131
-integer s__ItachiRing_Alloc___instanceCount= 0
-integer array s__ItachiRing_Alloc___recycle
+integer s__ItachiRing_Alloc__instanceCount= 0
+integer array s__ItachiRing_Alloc__recycle
 constant integer si__KisameRing=132
 integer si__KisameRing_F=0
 integer si__KisameRing_I=0
@@ -3651,8 +3640,8 @@ integer array si__KisameRing_V
 constant integer si__SasoriRingGold=133
 boolean s__SasoriRingGold_b= false
 constant integer si__Fireworks=134
-integer s__Fireworks_Alloc___instanceCount= 0
-integer array s__Fireworks_Alloc___recycle
+integer s__Fireworks_Alloc__instanceCount= 0
+integer array s__Fireworks_Alloc__recycle
 constant integer s__Fireworks_SPELL_ID= 'A0JJ'
 unit array s__Fireworks_caster
 real array s__Fireworks_target_x
@@ -3661,8 +3650,8 @@ integer array s__Fireworks_count
 constant integer si__BijuuEssence=135
 constant integer s__BijuuEssence_SPELL_ID= 'A0ZD'
 constant integer si__WireStrings=136
-integer s__WireStrings_Alloc___instanceCount= 0
-integer array s__WireStrings_Alloc___recycle
+integer s__WireStrings_Alloc__instanceCount= 0
+integer array s__WireStrings_Alloc__recycle
 constant integer s__WireStrings_SPELL_ID= 'A1EH'
 unit array s__WireStrings_caster
 unit array s__WireStrings_target
@@ -3670,32 +3659,32 @@ real array s__WireStrings_x
 real array s__WireStrings_y
 real array s__WireStrings_count
 constant integer si__MedicalSphere=137
-integer s__MedicalSphere_Alloc___instanceCount= 0
-integer array s__MedicalSphere_Alloc___recycle
+integer s__MedicalSphere_Alloc__instanceCount= 0
+integer array s__MedicalSphere_Alloc__recycle
 constant integer s__MedicalSphere_SPELL_ID= 'A09G'
 unit array s__MedicalSphere_caster
 real array s__MedicalSphere_target_x
 real array s__MedicalSphere_target_y
 integer array s__MedicalSphere_count
 constant integer si__WoodOfSubstitution=138
-integer s__WoodOfSubstitution_Alloc___instanceCount= 0
-integer array s__WoodOfSubstitution_Alloc___recycle
+integer s__WoodOfSubstitution_Alloc__instanceCount= 0
+integer array s__WoodOfSubstitution_Alloc__recycle
 unit array s__WoodOfSubstitution_caster
 unit array s__WoodOfSubstitution_dummy
 constant integer s__WoodOfSubstitution_SPELL_ID= 'AOmi'
 constant integer si__SmokeBomb=139
-integer s__SmokeBomb_Alloc___instanceCount= 0
-integer array s__SmokeBomb_Alloc___recycle
+integer s__SmokeBomb_Alloc__instanceCount= 0
+integer array s__SmokeBomb_Alloc__recycle
 unit array s__SmokeBomb_caster
 constant integer si__YataMirror=140
-integer s__YataMirror_Alloc___instanceCount= 0
-integer array s__YataMirror_Alloc___recycle
+integer s__YataMirror_Alloc__instanceCount= 0
+integer array s__YataMirror_Alloc__recycle
 unit array s__YataMirror_target
 effect array s__YataMirror_e
 real array s__YataMirror_speed
 constant integer si__Oil=141
-integer s__Oil_Alloc___instanceCount= 0
-integer array s__Oil_Alloc___recycle
+integer s__Oil_Alloc__instanceCount= 0
+integer array s__Oil_Alloc__recycle
 constant integer s__Oil_SPELL_ID= 'A07U'
 unit array s__Oil_caster
 unit array s__Oil_projectile
@@ -3705,8 +3694,8 @@ unit s__Oil_dummy_oil
 integer array s__Oil_count
 real array s__Oil_dist_caster
 constant integer si__PoisonPill=142
-integer s__PoisonPill_Alloc___instanceCount= 0
-integer array s__PoisonPill_Alloc___recycle
+integer s__PoisonPill_Alloc__instanceCount= 0
+integer array s__PoisonPill_Alloc__recycle
 constant integer s__PoisonPill_SPELL_ID= 'A04H'
 unit array s__PoisonPill_caster
 integer array s__PoisonPill_count
@@ -3753,8 +3742,8 @@ real array s__BlastingSphere_target_y
 real array s__BlastingSphere_angle
 integer array s__BlastingSphere_count
 constant integer si__DragonBlast=149
-integer s__DragonBlast_Alloc___instanceCount= 0
-integer array s__DragonBlast_Alloc___recycle
+integer s__DragonBlast_Alloc__instanceCount= 0
+integer array s__DragonBlast_Alloc__recycle
 constant integer s__DragonBlast_SPELL_ID= 'A08Y'
 unit array s__DragonBlast_caster
 unit array s__DragonBlast_dummy
@@ -3762,8 +3751,8 @@ group array s__DragonBlast_damaged
 real array s__DragonBlast_angle
 integer array s__DragonBlast_count
 constant integer si__ItemFuumaShuriken=150
-integer s__ItemFuumaShuriken_Alloc___instanceCount= 0
-integer array s__ItemFuumaShuriken_Alloc___recycle
+integer s__ItemFuumaShuriken_Alloc__instanceCount= 0
+integer array s__ItemFuumaShuriken_Alloc__recycle
 constant integer s__ItemFuumaShuriken_SPELL_ID= 'A0GK'
 group array s__ItemFuumaShuriken_damaged
 unit array s__ItemFuumaShuriken_shuriken
@@ -3777,15 +3766,15 @@ constant integer s__ItemExplosiveKunai_SPELL_ID= 'A0GL'
 constant integer s__ItemExplosiveKunai_DUMMY_ID= 'n00N'
 constant integer si__SenbonsDance=152
 constant integer si__TimedExplosiveTag=153
-integer s__TimedExplosiveTag_Alloc___instanceCount= 0
-integer array s__TimedExplosiveTag_Alloc___recycle
+integer s__TimedExplosiveTag_Alloc__instanceCount= 0
+integer array s__TimedExplosiveTag_Alloc__recycle
 unit array s__TimedExplosiveTag_caster
 unit array s__TimedExplosiveTag_note
 integer array s__TimedExplosiveTag_count
 constant integer si__ExplosiveTagExplosion=154
 constant integer si__KohakuNoJohei=155
-integer s__KohakuNoJohei_Alloc___instanceCount= 0
-integer array s__KohakuNoJohei_Alloc___recycle
+integer s__KohakuNoJohei_Alloc__instanceCount= 0
+integer array s__KohakuNoJohei_Alloc__recycle
 constant integer s__KohakuNoJohei_SPELL_ID= 'A0JU'
 unit array s__KohakuNoJohei_caster
 integer array s__KohakuNoJohei_count
@@ -3793,31 +3782,31 @@ group array s__KohakuNoJohei_damaged
 group array s__KohakuNoJohei_winds
 constant integer si__HiraishinKunai=156
 constant integer si__Bashosen___Item=157
-integer s__Bashosen___Item_Alloc___instanceCount= 0
-integer array s__Bashosen___Item_Alloc___recycle
+integer s__Bashosen___Item_Alloc__instanceCount= 0
+integer array s__Bashosen___Item_Alloc__recycle
 constant integer s__Bashosen___Item_SPELL_ID= 'A0JH'
 group array s__Bashosen___Item_damaged
 unit array s__Bashosen___Item_caster
 integer array s__Bashosen___Item_count
 integer array s__Bashosen___Item_element
 constant integer si__Makibishi=158
-integer s__Makibishi_Alloc___instanceCount= 0
-integer array s__Makibishi_Alloc___recycle
+integer s__Makibishi_Alloc__instanceCount= 0
+integer array s__Makibishi_Alloc__recycle
 unit array s__Makibishi_caster
 real array s__Makibishi_x
 real array s__Makibishi_y
 integer array s__Makibishi_count
 group array s__Makibishi_damaged
 constant integer si__NinjaNet=159
-integer s__NinjaNet_Alloc___instanceCount= 0
-integer array s__NinjaNet_Alloc___recycle
+integer s__NinjaNet_Alloc__instanceCount= 0
+integer array s__NinjaNet_Alloc__recycle
 constant integer s__NinjaNet_SPELL_ID= 'A08T'
 unit array s__NinjaNet_caster
 unit array s__NinjaNet_projectile
 unit array s__NinjaNet_target
 constant integer si__SanbiProtection=160
-integer s__SanbiProtection_Alloc___instanceCount= 0
-integer array s__SanbiProtection_Alloc___recycle
+integer s__SanbiProtection_Alloc__instanceCount= 0
+integer array s__SanbiProtection_Alloc__recycle
 unit array s__SanbiProtection_caster
 constant integer si__AkatukiSet=161
 group s__AkatukiSet_cooldown
@@ -3825,27 +3814,27 @@ group s__AkatukiSet_invisibilityGroup
 integer s__AkatukiSet_secondsElapsed
 integer s__AkatukiSet_stats
 constant integer si__GreaterMedicalSphere=162
-integer s__GreaterMedicalSphere_Alloc___instanceCount= 0
-integer array s__GreaterMedicalSphere_Alloc___recycle
+integer s__GreaterMedicalSphere_Alloc__instanceCount= 0
+integer array s__GreaterMedicalSphere_Alloc__recycle
 constant integer s__GreaterMedicalSphere_SPELL_ID= 'A0UB'
 unit array s__GreaterMedicalSphere_caster
 real array s__GreaterMedicalSphere_target_x
 real array s__GreaterMedicalSphere_target_y
 integer array s__GreaterMedicalSphere_count
 constant integer si__ReverseOfAllCreation=163
-integer s__ReverseOfAllCreation_Alloc___instanceCount= 0
-integer array s__ReverseOfAllCreation_Alloc___recycle
+integer s__ReverseOfAllCreation_Alloc__instanceCount= 0
+integer array s__ReverseOfAllCreation_Alloc__recycle
 constant integer s__ReverseOfAllCreation_SPELL_ID= 'A08P'
 constant integer si__SubjugationOfEarth=164
-integer s__SubjugationOfEarth_Alloc___instanceCount= 0
-integer array s__SubjugationOfEarth_Alloc___recycle
+integer s__SubjugationOfEarth_Alloc__instanceCount= 0
+integer array s__SubjugationOfEarth_Alloc__recycle
 constant integer s__SubjugationOfEarth_SPELL_ID= 'A08U'
 unit array s__SubjugationOfEarth_caster
 unit array s__SubjugationOfEarth_target
 integer array s__SubjugationOfEarth_diff
 constant integer si__SubjugationOfHeaven=165
-integer s__SubjugationOfHeaven_Alloc___instanceCount= 0
-integer array s__SubjugationOfHeaven_Alloc___recycle
+integer s__SubjugationOfHeaven_Alloc__instanceCount= 0
+integer array s__SubjugationOfHeaven_Alloc__recycle
 constant integer s__SubjugationOfHeaven_SPELL_ID= 'A08K'
 unit array s__SubjugationOfHeaven_caster
 group array s__SubjugationOfHeaven_damaged
@@ -3853,8 +3842,8 @@ constant integer si__ElementalANBUMask=166
 constant integer si__HeavenStone=167
 constant integer s__HeavenStone_SPELL_ID= 'ACpu'
 constant integer si__HealingShoes=168
-integer s__HealingShoes_Alloc___instanceCount= 0
-integer array s__HealingShoes_Alloc___recycle
+integer s__HealingShoes_Alloc__instanceCount= 0
+integer array s__HealingShoes_Alloc__recycle
 unit array s__HealingShoes_caster
 real array s__HealingShoes_percent
 integer array s__HealingShoes_count
@@ -3863,13 +3852,13 @@ constant integer si__ScrollOfTeleport=170
 constant integer s__ScrollOfTeleport_SPELL_ID= 'A16S'
 constant integer si__BunshinStoneNew=171
 constant integer si__ItemShikiFuujin=172
-integer s__ItemShikiFuujin_Alloc___instanceCount= 0
-integer array s__ItemShikiFuujin_Alloc___recycle
+integer s__ItemShikiFuujin_Alloc__instanceCount= 0
+integer array s__ItemShikiFuujin_Alloc__recycle
 constant integer s__ItemShikiFuujin_SPELL_ID= 'A15X'
 constant integer si__HeavenSwordActive=173
 constant integer si__AdamantineStaffActive___Spell=174
-integer s__AdamantineStaffActive___Spell_Alloc___instanceCount= 0
-integer array s__AdamantineStaffActive___Spell_Alloc___recycle
+integer s__AdamantineStaffActive___Spell_Alloc__instanceCount= 0
+integer array s__AdamantineStaffActive___Spell_Alloc__recycle
 constant integer s__AdamantineStaffActive___Spell_SPELL_ID= 'A04Z'
 group array s__AdamantineStaffActive___Spell_g
 unit array s__AdamantineStaffActive___Spell_caster
@@ -3879,35 +3868,35 @@ unit array s__AdamantineStaffActive___Spell_jirobo
 real array s__AdamantineStaffActive___Spell_target_x
 real array s__AdamantineStaffActive___Spell_target_y
 constant integer si__ExecutionBlade=175
-integer s__ExecutionBlade_Alloc___instanceCount= 0
-integer array s__ExecutionBlade_Alloc___recycle
+integer s__ExecutionBlade_Alloc__instanceCount= 0
+integer array s__ExecutionBlade_Alloc__recycle
 unit array s__ExecutionBlade_target
 real array s__ExecutionBlade_hp
 real array s__ExecutionBlade_count
 boolean array s__ExecutionBlade_duel
 constant integer si__ThunderKusanagi=176
-integer s__ThunderKusanagi_Alloc___instanceCount= 0
-integer array s__ThunderKusanagi_Alloc___recycle
+integer s__ThunderKusanagi_Alloc__instanceCount= 0
+integer array s__ThunderKusanagi_Alloc__recycle
 unit array s__ThunderKusanagi_caster
 unit array s__ThunderKusanagi_target
 integer array s__ThunderKusanagi_count
 constant integer si__NewKusanagiStrike=177
-integer s__NewKusanagiStrike_Alloc___instanceCount= 0
-integer array s__NewKusanagiStrike_Alloc___recycle
+integer s__NewKusanagiStrike_Alloc__instanceCount= 0
+integer array s__NewKusanagiStrike_Alloc__recycle
 constant integer s__NewKusanagiStrike_SPELL_ID= 'A138'
 unit array s__NewKusanagiStrike_caster
 unit array s__NewKusanagiStrike_kusanagi
 integer array s__NewKusanagiStrike_count
 real array s__NewKusanagiStrike_angle
 constant integer si__LightKusanagi=178
-integer s__LightKusanagi_Alloc___instanceCount= 0
-integer array s__LightKusanagi_Alloc___recycle
+integer s__LightKusanagi_Alloc__instanceCount= 0
+integer array s__LightKusanagi_Alloc__recycle
 constant integer s__LightKusanagi_SPELL_ID= 'A1DZ'
 constant integer si__FireKusanagi=179
 constant integer si__IceKusanagi=180
 constant integer si__EarthPierce=181
-integer s__EarthPierce_Alloc___instanceCount= 0
-integer array s__EarthPierce_Alloc___recycle
+integer s__EarthPierce_Alloc__instanceCount= 0
+integer array s__EarthPierce_Alloc__recycle
 constant integer s__EarthPierce_SPELL_ID= 'A16V'
 group array s__EarthPierce_damaged
 unit array s__EarthPierce_caster
@@ -3918,19 +3907,19 @@ effect array s__EarthPierce_e
 unit array s__EarthPierce_rock
 constant integer si__DarkKusanagi=182
 constant integer si__WindKusa=183
-integer s__WindKusa_Alloc___instanceCount= 0
-integer array s__WindKusa_Alloc___recycle
+integer s__WindKusa_Alloc__instanceCount= 0
+integer array s__WindKusa_Alloc__recycle
 constant integer s__WindKusa_SPELL_ID= 'A1BP'
 unit array s__WindKusa_caster
 integer array s__WindKusa_count
 group array s__WindKusa_damaged
 group array s__WindKusa_winds
 constant integer si__Shichiseiken=184
-integer s__Shichiseiken_Alloc___instanceCount= 0
-integer array s__Shichiseiken_Alloc___recycle
+integer s__Shichiseiken_Alloc__instanceCount= 0
+integer array s__Shichiseiken_Alloc__recycle
 constant integer si__NewHidanScythe=185
-integer s__NewHidanScythe_Alloc___instanceCount= 0
-integer array s__NewHidanScythe_Alloc___recycle
+integer s__NewHidanScythe_Alloc__instanceCount= 0
+integer array s__NewHidanScythe_Alloc__recycle
 constant integer s__NewHidanScythe_SPELL_ID= 'A139'
 unit array s__NewHidanScythe_caster
 unit array s__NewHidanScythe_scythe
@@ -3939,13 +3928,13 @@ integer array s__NewHidanScythe_count
 real array s__NewHidanScythe_angle
 integer array s__NewHidanScythe_l
 constant integer si__ZetsuRing=186
-integer s__ZetsuRing_Alloc___instanceCount= 0
-integer array s__ZetsuRing_Alloc___recycle
+integer s__ZetsuRing_Alloc__instanceCount= 0
+integer array s__ZetsuRing_Alloc__recycle
 constant integer s__ZetsuRing_SPELL_ID= 'A1CX'
 integer s__ZetsuRing_instance
 constant integer si__ItachiRingActive=187
-integer s__ItachiRingActive_Alloc___instanceCount= 0
-integer array s__ItachiRingActive_Alloc___recycle
+integer s__ItachiRingActive_Alloc__instanceCount= 0
+integer array s__ItachiRingActive_Alloc__recycle
 constant integer s__ItachiRingActive_SPELL_ID= 'A1CT'
 unit array s__ItachiRingActive_caster
 unit array s__ItachiRingActive_target
@@ -3957,8 +3946,8 @@ integer array si__AntiAFK_V
 constant integer si__ModeMinutesGold=189
 constant integer si__FixTeamDuelLocations=190
 constant integer si__MissionARankReward=191
-integer s__MissionARankReward_Alloc___instanceCount= 0
-integer array s__MissionARankReward_Alloc___recycle
+integer s__MissionARankReward_Alloc__instanceCount= 0
+integer array s__MissionARankReward_Alloc__recycle
 unit s__MissionARankReward_u
 integer s__MissionARankReward_d
 button s__MissionARankReward_buttonSanninCloth
@@ -3973,17 +3962,17 @@ timer s__TeamDuel_DUEL_TIMER
 timerdialog s__TeamDuel_DUEL_TIMER_DIALOG
 boolean s__TeamDuel_ENABLED
 boolean s__TeamDuel_STARTED
-constant integer si__SendGoldAndCystal__Command=193
-integer si__SendGoldAndCystal__Command_F=0
-integer si__SendGoldAndCystal__Command_I=0
-integer array si__SendGoldAndCystal__Command_V
+constant integer si__SendGoldAndCystal___Command=193
+integer si__SendGoldAndCystal___Command_F=0
+integer si__SendGoldAndCystal___Command_I=0
+integer array si__SendGoldAndCystal___Command_V
 constant integer si__BuyAttributes=194
 integer si__BuyAttributes_F=0
 integer si__BuyAttributes_I=0
 integer array si__BuyAttributes_V
 constant integer si__Killme=195
-integer s__Killme_Alloc___instanceCount= 0
-integer array s__Killme_Alloc___recycle
+integer s__Killme_Alloc__instanceCount= 0
+integer array s__Killme_Alloc__recycle
 integer array s__Killme_id
 integer array s__Killme_count
 constant integer si__MoveSpeedBug=196
@@ -4024,8 +4013,8 @@ constant integer si__UndergroundDrainMana=206
 constant integer si__MusicS=207
 integer s__MusicS_offset
 constant integer si__HeroIcon=208
-integer s__HeroIcon_Alloc___instanceCount= 0
-integer array s__HeroIcon_Alloc___recycle
+integer s__HeroIcon_Alloc__instanceCount= 0
+integer array s__HeroIcon_Alloc__recycle
 framehandle array s__HeroIcon_mainbutton
 framehandle array s__HeroIcon_imgFrame
 unit array s__HeroIcon_caster
@@ -4039,8 +4028,8 @@ real array s__HeroIcon_original_x
 real array s__HeroIcon_original_y
 boolean array s__HeroIcon_fade
 constant integer si__HeroMessage=209
-integer s__HeroMessage_Alloc___instanceCount= 0
-integer array s__HeroMessage_Alloc___recycle
+integer s__HeroMessage_Alloc__instanceCount= 0
+integer array s__HeroMessage_Alloc__recycle
 framehandle array s__HeroMessage_imgFrame
 unit array s__HeroMessage_caster
 integer array s__HeroMessage_count
@@ -4050,8 +4039,8 @@ real array s__HeroMessage_y
 real array s__HeroMessage_original_x
 real array s__HeroMessage_original_y
 constant integer si__HeroUIMessage=210
-integer s__HeroUIMessage_Alloc___instanceCount= 0
-integer array s__HeroUIMessage_Alloc___recycle
+integer s__HeroUIMessage_Alloc__instanceCount= 0
+integer array s__HeroUIMessage_Alloc__recycle
 boolean s__HeroUIMessage_enabled
 integer s__HeroUIMessage_instance
 integer array s__HeroUIMessage_message
@@ -4379,20 +4368,20 @@ integer si__NewSwap_I=0
 integer array si__NewSwap_V
 constant integer si__ChakraJump=263
 constant integer si__FixTransformations=264
-integer s__FixTransformations_Alloc___instanceCount= 0
-integer array s__FixTransformations_Alloc___recycle
+integer s__FixTransformations_Alloc__instanceCount= 0
+integer array s__FixTransformations_Alloc__recycle
 unit array s__FixTransformations_caster
 constant integer si__SetUnitVariables=265
-constant integer si__AssistSystem___System=266
-integer si__AssistSystem___System_F=0
-integer si__AssistSystem___System_I=0
-integer array si__AssistSystem___System_V
-trigger s__AssistSystem___System_assist_trigger
-integer s__AssistSystem___System_count_active
+constant integer si__AssistSystem__System=266
+integer si__AssistSystem__System_F=0
+integer si__AssistSystem__System_I=0
+integer array si__AssistSystem__System_V
+trigger s__AssistSystem__System_assist_trigger
+integer s__AssistSystem__System_count_active
 constant integer si__BaseRemoveItems=267
 constant integer si__SpawnBijuus=268
-integer s__SpawnBijuus_Alloc___instanceCount= 0
-integer array s__SpawnBijuus_Alloc___recycle
+integer s__SpawnBijuus_Alloc__instanceCount= 0
+integer array s__SpawnBijuus_Alloc__recycle
 constant integer s__SpawnBijuus_SHUKAKU= 'u01D'
 constant integer s__SpawnBijuus_MATATABI= 'u011'
 constant integer s__SpawnBijuus_ISOBU= 'u015'
@@ -4437,8 +4426,8 @@ integer si__Spectator_I=0
 integer array si__Spectator_V
 constant integer si__PeriodicActions=270
 string array s__runningTimersString
-integer array s__TimerUtils___data
-timer array s__TimerUtils___tT
+integer array s__TimerUtils__data
+timer array s__TimerUtils__tT
 integer array s__assisted
 integer array s__2assisted
 integer array s__3assisted
@@ -4451,34 +4440,34 @@ integer array s__9assisted
 integer array s__10assisted
 integer array s__11assisted
 integer array s__12assisted
-boolean array s__AutoBuyS__autobuy
-boolean array s__AutoBuyS__firstUse
-integer array s__AutoBuyS__buildId
-integer array s__AutoBuyS__lists
-integer array s__RegisterPlayerUnitEvent___leave_ids
-boolexpr array s__RegisterPlayerUnitEvent___death_events
-boolexpr array s__2RegisterPlayerUnitEvent___death_events
-integer array s__RegisterPlayerUnitEvent___death_events_b
-integer array s__2RegisterPlayerUnitEvent___death_events_b
-integer array s__RegisterPlayerUnitEvent___death_events_count
-boolexpr array s__RegisterPlayerUnitEvent___attack_events
-boolexpr array s__2RegisterPlayerUnitEvent___attack_events
-integer array s__RegisterPlayerUnitEvent___attack_events_b
-integer array s__2RegisterPlayerUnitEvent___attack_events_b
-integer array s__RegisterPlayerUnitEvent___attack_events_count
-boolexpr array s__RegisterPlayerUnitEvent___spell_events
-boolexpr array s__2RegisterPlayerUnitEvent___spell_events
-integer array s__RegisterPlayerUnitEvent___spell_events_id
-integer array s__2RegisterPlayerUnitEvent___spell_events_id
-integer array s__RegisterPlayerUnitEvent___spell_events_b
-integer array s__2RegisterPlayerUnitEvent___spell_events_b
-integer array s__RegisterPlayerUnitEvent___spell_events_count
-trigger array s__RegisterPlayerUnitEvent___trigger_events
-trigger array s__2RegisterPlayerUnitEvent___trigger_events
-integer array s__RegisterPlayerUnitEvent___trigger_events_count
-group array s__UnitUtils___dummies
-string array s__UnitUtils___ASCII_TABLE
-integer array s__UnitUtils___PLAYER_ARRAY
+boolean array s__AutoBuyS___autobuy
+boolean array s__AutoBuyS___firstUse
+integer array s__AutoBuyS___buildId
+integer array s__AutoBuyS___lists
+integer array s__RegisterPlayerUnitEvent__leave_ids
+boolexpr array s__RegisterPlayerUnitEvent__death_events
+boolexpr array s__2RegisterPlayerUnitEvent__death_events
+integer array s__RegisterPlayerUnitEvent__death_events_b
+integer array s__2RegisterPlayerUnitEvent__death_events_b
+integer array s__RegisterPlayerUnitEvent__death_events_count
+boolexpr array s__RegisterPlayerUnitEvent__attack_events
+boolexpr array s__2RegisterPlayerUnitEvent__attack_events
+integer array s__RegisterPlayerUnitEvent__attack_events_b
+integer array s__2RegisterPlayerUnitEvent__attack_events_b
+integer array s__RegisterPlayerUnitEvent__attack_events_count
+boolexpr array s__RegisterPlayerUnitEvent__spell_events
+boolexpr array s__2RegisterPlayerUnitEvent__spell_events
+integer array s__RegisterPlayerUnitEvent__spell_events_id
+integer array s__2RegisterPlayerUnitEvent__spell_events_id
+integer array s__RegisterPlayerUnitEvent__spell_events_b
+integer array s__2RegisterPlayerUnitEvent__spell_events_b
+integer array s__RegisterPlayerUnitEvent__spell_events_count
+trigger array s__RegisterPlayerUnitEvent__trigger_events
+trigger array s__2RegisterPlayerUnitEvent__trigger_events
+integer array s__RegisterPlayerUnitEvent__trigger_events_count
+group array s__UnitUtils__dummies
+string array s__UnitUtils__ASCII_TABLE
+integer array s__UnitUtils__PLAYER_ARRAY
 boolean array s__HideHeroesSystem___numbers
 real array s__herosize
 integer array s__HideHeroesSystem___herored
@@ -4503,14 +4492,14 @@ boolean array s__12HideHeroesSystem___ishidden
 unit array s__ItemKunai___heroes
 unit array s__Bashosen___dummies
 unit array s__ScrollOfTeleportScope___anbus
-dialog array s__SendGoldAndCystal__gd
-button array s__SendGoldAndCystal__gb
-dialog array s__SendGoldAndCystal__cd
-button array s__SendGoldAndCystal__cb
-integer array s__SendGoldAndCystal__g
-integer array s__SendGoldAndCystal__c
-integer array s__SendGoldAndCystal__given
-boolean array s__AssistSystem___sai
+dialog array s__SendGoldAndCystal___gd
+button array s__SendGoldAndCystal___gb
+dialog array s__SendGoldAndCystal___cd
+button array s__SendGoldAndCystal___cb
+integer array s__SendGoldAndCystal___g
+integer array s__SendGoldAndCystal___c
+integer array s__SendGoldAndCystal___given
+boolean array s__AssistSystem__sai
 integer array s__s__Recipes_recipes
 integer array s__s__Recipes_items
 integer array s__s__BadgeOfAnbu_icon
@@ -4756,131 +4745,131 @@ function sg__assisted_set takes integer i,integer v returns nothing
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___death_events_get takes integer i returns boolexpr
+function sg__RegisterPlayerUnitEvent__death_events_get takes integer i returns boolexpr
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___death_events[i]
+        return s__RegisterPlayerUnitEvent__death_events[i]
     else
-        return s__2RegisterPlayerUnitEvent___death_events[i-8191]
+        return s__2RegisterPlayerUnitEvent__death_events[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___death_events_set takes integer i,boolexpr v returns nothing
+function sg__RegisterPlayerUnitEvent__death_events_set takes integer i,boolexpr v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___death_events[i]=v
+        set s__RegisterPlayerUnitEvent__death_events[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___death_events[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__death_events[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___death_events_b_get takes integer i returns integer
+function sg__RegisterPlayerUnitEvent__death_events_b_get takes integer i returns integer
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___death_events_b[i]
+        return s__RegisterPlayerUnitEvent__death_events_b[i]
     else
-        return s__2RegisterPlayerUnitEvent___death_events_b[i-8191]
+        return s__2RegisterPlayerUnitEvent__death_events_b[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___death_events_b_set takes integer i,integer v returns nothing
+function sg__RegisterPlayerUnitEvent__death_events_b_set takes integer i,integer v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___death_events_b[i]=v
+        set s__RegisterPlayerUnitEvent__death_events_b[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___death_events_b[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__death_events_b[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___attack_events_get takes integer i returns boolexpr
+function sg__RegisterPlayerUnitEvent__attack_events_get takes integer i returns boolexpr
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___attack_events[i]
+        return s__RegisterPlayerUnitEvent__attack_events[i]
     else
-        return s__2RegisterPlayerUnitEvent___attack_events[i-8191]
+        return s__2RegisterPlayerUnitEvent__attack_events[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___attack_events_set takes integer i,boolexpr v returns nothing
+function sg__RegisterPlayerUnitEvent__attack_events_set takes integer i,boolexpr v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___attack_events[i]=v
+        set s__RegisterPlayerUnitEvent__attack_events[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___attack_events[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__attack_events[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___attack_events_b_get takes integer i returns integer
+function sg__RegisterPlayerUnitEvent__attack_events_b_get takes integer i returns integer
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___attack_events_b[i]
+        return s__RegisterPlayerUnitEvent__attack_events_b[i]
     else
-        return s__2RegisterPlayerUnitEvent___attack_events_b[i-8191]
+        return s__2RegisterPlayerUnitEvent__attack_events_b[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___attack_events_b_set takes integer i,integer v returns nothing
+function sg__RegisterPlayerUnitEvent__attack_events_b_set takes integer i,integer v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___attack_events_b[i]=v
+        set s__RegisterPlayerUnitEvent__attack_events_b[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___attack_events_b[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__attack_events_b[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_get takes integer i returns boolexpr
+function sg__RegisterPlayerUnitEvent__spell_events_get takes integer i returns boolexpr
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___spell_events[i]
+        return s__RegisterPlayerUnitEvent__spell_events[i]
     else
-        return s__2RegisterPlayerUnitEvent___spell_events[i-8191]
+        return s__2RegisterPlayerUnitEvent__spell_events[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_set takes integer i,boolexpr v returns nothing
+function sg__RegisterPlayerUnitEvent__spell_events_set takes integer i,boolexpr v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___spell_events[i]=v
+        set s__RegisterPlayerUnitEvent__spell_events[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___spell_events[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__spell_events[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_id_get takes integer i returns integer
+function sg__RegisterPlayerUnitEvent__spell_events_id_get takes integer i returns integer
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___spell_events_id[i]
+        return s__RegisterPlayerUnitEvent__spell_events_id[i]
     else
-        return s__2RegisterPlayerUnitEvent___spell_events_id[i-8191]
+        return s__2RegisterPlayerUnitEvent__spell_events_id[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_id_set takes integer i,integer v returns nothing
+function sg__RegisterPlayerUnitEvent__spell_events_id_set takes integer i,integer v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___spell_events_id[i]=v
+        set s__RegisterPlayerUnitEvent__spell_events_id[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___spell_events_id[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__spell_events_id[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_b_get takes integer i returns integer
+function sg__RegisterPlayerUnitEvent__spell_events_b_get takes integer i returns integer
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___spell_events_b[i]
+        return s__RegisterPlayerUnitEvent__spell_events_b[i]
     else
-        return s__2RegisterPlayerUnitEvent___spell_events_b[i-8191]
+        return s__2RegisterPlayerUnitEvent__spell_events_b[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_b_set takes integer i,integer v returns nothing
+function sg__RegisterPlayerUnitEvent__spell_events_b_set takes integer i,integer v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___spell_events_b[i]=v
+        set s__RegisterPlayerUnitEvent__spell_events_b[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___spell_events_b[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__spell_events_b[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___trigger_events_get takes integer i returns trigger
+function sg__RegisterPlayerUnitEvent__trigger_events_get takes integer i returns trigger
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___trigger_events[i]
+        return s__RegisterPlayerUnitEvent__trigger_events[i]
     else
-        return s__2RegisterPlayerUnitEvent___trigger_events[i-8191]
+        return s__2RegisterPlayerUnitEvent__trigger_events[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___trigger_events_set takes integer i,trigger v returns nothing
+function sg__RegisterPlayerUnitEvent__trigger_events_set takes integer i,trigger v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___trigger_events[i]=v
+        set s__RegisterPlayerUnitEvent__trigger_events[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___trigger_events[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__trigger_events[i-8191]=v
     endif
 endfunction
 
@@ -4980,32 +4969,32 @@ function s__Spectator_deallocate takes integer this returns nothing
     set si__Spectator_F=this
 endfunction
 
-//Generated allocator of AssistSystem___System
-function s__AssistSystem___System__allocate takes nothing returns integer
- local integer this=si__AssistSystem___System_F
+//Generated allocator of AssistSystem__System
+function s__AssistSystem__System__allocate takes nothing returns integer
+ local integer this=si__AssistSystem__System_F
     if (this!=0) then
-        set si__AssistSystem___System_F=si__AssistSystem___System_V[this]
+        set si__AssistSystem__System_F=si__AssistSystem__System_V[this]
     else
-        set si__AssistSystem___System_I=si__AssistSystem___System_I+1
-        set this=si__AssistSystem___System_I
+        set si__AssistSystem__System_I=si__AssistSystem__System_I+1
+        set this=si__AssistSystem__System_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__AssistSystem___System_V[this]=-1
+    set si__AssistSystem__System_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of AssistSystem___System
-function s__AssistSystem___System_deallocate takes integer this returns nothing
+//Generated destructor of AssistSystem__System
+function s__AssistSystem__System_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__AssistSystem___System_V[this]!=-1) then
+    elseif (si__AssistSystem__System_V[this]!=-1) then
         return
     endif
-    set si__AssistSystem___System_V[this]=si__AssistSystem___System_F
-    set si__AssistSystem___System_F=this
+    set si__AssistSystem__System_V[this]=si__AssistSystem__System_F
+    set si__AssistSystem__System_F=this
 endfunction
 
 //Generated allocator of NewSwap
@@ -5944,32 +5933,32 @@ function s__BuyAttributes_deallocate takes integer this returns nothing
     set si__BuyAttributes_F=this
 endfunction
 
-//Generated allocator of SendGoldAndCystal__Command
-function s__SendGoldAndCystal__Command__allocate takes nothing returns integer
- local integer this=si__SendGoldAndCystal__Command_F
+//Generated allocator of SendGoldAndCystal___Command
+function s__SendGoldAndCystal___Command__allocate takes nothing returns integer
+ local integer this=si__SendGoldAndCystal___Command_F
     if (this!=0) then
-        set si__SendGoldAndCystal__Command_F=si__SendGoldAndCystal__Command_V[this]
+        set si__SendGoldAndCystal___Command_F=si__SendGoldAndCystal___Command_V[this]
     else
-        set si__SendGoldAndCystal__Command_I=si__SendGoldAndCystal__Command_I+1
-        set this=si__SendGoldAndCystal__Command_I
+        set si__SendGoldAndCystal___Command_I=si__SendGoldAndCystal___Command_I+1
+        set this=si__SendGoldAndCystal___Command_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__SendGoldAndCystal__Command_V[this]=-1
+    set si__SendGoldAndCystal___Command_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of SendGoldAndCystal__Command
-function s__SendGoldAndCystal__Command_deallocate takes integer this returns nothing
+//Generated destructor of SendGoldAndCystal___Command
+function s__SendGoldAndCystal___Command_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__SendGoldAndCystal__Command_V[this]!=-1) then
+    elseif (si__SendGoldAndCystal___Command_V[this]!=-1) then
         return
     endif
-    set si__SendGoldAndCystal__Command_V[this]=si__SendGoldAndCystal__Command_F
-    set si__SendGoldAndCystal__Command_F=this
+    set si__SendGoldAndCystal___Command_V[this]=si__SendGoldAndCystal___Command_F
+    set si__SendGoldAndCystal___Command_F=this
 endfunction
 
 //Generated allocator of TeamDuel
@@ -6352,60 +6341,60 @@ function s__Tree_deallocate takes integer this returns nothing
     set si__Tree_F=this
 endfunction
 
-//Generated allocator of UnitUtils___ReleaseDummy
-function s__UnitUtils___ReleaseDummy__allocate takes nothing returns integer
- local integer this=si__UnitUtils___ReleaseDummy_F
+//Generated allocator of UnitUtils__ReleaseDummy
+function s__UnitUtils__ReleaseDummy__allocate takes nothing returns integer
+ local integer this=si__UnitUtils__ReleaseDummy_F
     if (this!=0) then
-        set si__UnitUtils___ReleaseDummy_F=si__UnitUtils___ReleaseDummy_V[this]
+        set si__UnitUtils__ReleaseDummy_F=si__UnitUtils__ReleaseDummy_V[this]
     else
-        set si__UnitUtils___ReleaseDummy_I=si__UnitUtils___ReleaseDummy_I+1
-        set this=si__UnitUtils___ReleaseDummy_I
+        set si__UnitUtils__ReleaseDummy_I=si__UnitUtils__ReleaseDummy_I+1
+        set this=si__UnitUtils__ReleaseDummy_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__UnitUtils___ReleaseDummy_V[this]=-1
+    set si__UnitUtils__ReleaseDummy_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of UnitUtils___ReleaseDummy
-function s__UnitUtils___ReleaseDummy_deallocate takes integer this returns nothing
+//Generated destructor of UnitUtils__ReleaseDummy
+function s__UnitUtils__ReleaseDummy_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__UnitUtils___ReleaseDummy_V[this]!=-1) then
+    elseif (si__UnitUtils__ReleaseDummy_V[this]!=-1) then
         return
     endif
-    set si__UnitUtils___ReleaseDummy_V[this]=si__UnitUtils___ReleaseDummy_F
-    set si__UnitUtils___ReleaseDummy_F=this
+    set si__UnitUtils__ReleaseDummy_V[this]=si__UnitUtils__ReleaseDummy_F
+    set si__UnitUtils__ReleaseDummy_F=this
 endfunction
 
-//Generated allocator of EffectUtils___EffectTimer
-function s__EffectUtils___EffectTimer__allocate takes nothing returns integer
- local integer this=si__EffectUtils___EffectTimer_F
+//Generated allocator of EffectUtils__EffectTimer
+function s__EffectUtils__EffectTimer__allocate takes nothing returns integer
+ local integer this=si__EffectUtils__EffectTimer_F
     if (this!=0) then
-        set si__EffectUtils___EffectTimer_F=si__EffectUtils___EffectTimer_V[this]
+        set si__EffectUtils__EffectTimer_F=si__EffectUtils__EffectTimer_V[this]
     else
-        set si__EffectUtils___EffectTimer_I=si__EffectUtils___EffectTimer_I+1
-        set this=si__EffectUtils___EffectTimer_I
+        set si__EffectUtils__EffectTimer_I=si__EffectUtils__EffectTimer_I+1
+        set this=si__EffectUtils__EffectTimer_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__EffectUtils___EffectTimer_V[this]=-1
+    set si__EffectUtils__EffectTimer_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of EffectUtils___EffectTimer
-function s__EffectUtils___EffectTimer_deallocate takes integer this returns nothing
+//Generated destructor of EffectUtils__EffectTimer
+function s__EffectUtils__EffectTimer_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__EffectUtils___EffectTimer_V[this]!=-1) then
+    elseif (si__EffectUtils__EffectTimer_V[this]!=-1) then
         return
     endif
-    set si__EffectUtils___EffectTimer_V[this]=si__EffectUtils___EffectTimer_F
-    set si__EffectUtils___EffectTimer_F=this
+    set si__EffectUtils__EffectTimer_V[this]=si__EffectUtils__EffectTimer_F
+    set si__EffectUtils__EffectTimer_F=this
 endfunction
 
 //Generated method caller for UnitDex.Remove
@@ -6472,32 +6461,32 @@ function s__Dialog_deallocate takes integer this returns nothing
     set si__Dialog_F=this
 endfunction
 
-//Generated allocator of Camera___CamInit
-function s__Camera___CamInit__allocate takes nothing returns integer
- local integer this=si__Camera___CamInit_F
+//Generated allocator of Camera__CamInit
+function s__Camera__CamInit__allocate takes nothing returns integer
+ local integer this=si__Camera__CamInit_F
     if (this!=0) then
-        set si__Camera___CamInit_F=si__Camera___CamInit_V[this]
+        set si__Camera__CamInit_F=si__Camera__CamInit_V[this]
     else
-        set si__Camera___CamInit_I=si__Camera___CamInit_I+1
-        set this=si__Camera___CamInit_I
+        set si__Camera__CamInit_I=si__Camera__CamInit_I+1
+        set this=si__Camera__CamInit_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__Camera___CamInit_V[this]=-1
+    set si__Camera__CamInit_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of Camera___CamInit
-function s__Camera___CamInit_deallocate takes integer this returns nothing
+//Generated destructor of Camera__CamInit
+function s__Camera__CamInit_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__Camera___CamInit_V[this]!=-1) then
+    elseif (si__Camera__CamInit_V[this]!=-1) then
         return
     endif
-    set si__Camera___CamInit_V[this]=si__Camera___CamInit_F
-    set si__Camera___CamInit_F=this
+    set si__Camera__CamInit_V[this]=si__Camera__CamInit_F
+    set si__Camera__CamInit_F=this
 endfunction
 
 //Generated allocator of Camera
@@ -6769,8 +6758,8 @@ endfunction
 //ignored textmacro command: INIT_ARROW_KEY_LINK()
 
         //Initialize the system via module
-//Implemented from module ArrowKeyEvent___Init:
-        function s__ArrowKey_ArrowKeyEvent___Init___onInit takes nothing returns nothing
+//Implemented from module ArrowKeyEvent__Init:
+        function s__ArrowKey_ArrowKeyEvent__Init__onInit takes nothing returns nothing
             local player p
             local integer i= bj_MAX_PLAYER_SLOTS
             local trigger t= s__ArrowKey_trig
@@ -6864,20 +6853,20 @@ endfunction
    //=========================================================================================
 
    //=======================================================================
-   function BoundSentinel___dis takes nothing returns boolean
+   function BoundSentinel__dis takes nothing returns boolean
     local unit u=GetTriggerUnit()
     local real x=GetUnitX(u)
     local real y=GetUnitY(u)
 
-       if ( x > BoundSentinel___maxx ) then
-           set x=BoundSentinel___maxx
-       elseif ( x < BoundSentinel___minx ) then
-           set x=BoundSentinel___minx
+       if ( x > BoundSentinel__maxx ) then
+           set x=BoundSentinel__maxx
+       elseif ( x < BoundSentinel__minx ) then
+           set x=BoundSentinel__minx
        endif
-       if ( y > BoundSentinel___maxy ) then
-           set y=BoundSentinel___maxy
-       elseif ( y < BoundSentinel___miny ) then
-           set y=BoundSentinel___miny
+       if ( y > BoundSentinel__maxy ) then
+           set y=BoundSentinel__maxy
+       elseif ( y < BoundSentinel__miny ) then
+           set y=BoundSentinel__miny
        endif
        call SetUnitX(u, x)
        call SetUnitY(u, y)
@@ -6885,31 +6874,31 @@ endfunction
     return false
    endfunction
 
-   function BoundSentinel___init takes nothing returns nothing
+   function BoundSentinel__init takes nothing returns nothing
     local trigger t= CreateTrigger()
     local region r= CreateRegion()
     local rect map
     local rect rc
 
-       if BoundSentinel___ALLOW_OUTSIDE_PLAYABLE_MAP_AREA then
+       if BoundSentinel__ALLOW_OUTSIDE_PLAYABLE_MAP_AREA then
           set map=GetWorldBounds()
        else
           set map=bj_mapInitialPlayableArea
        endif
 
-       set BoundSentinel___minx=GetRectMinX(map)
-       set BoundSentinel___miny=GetRectMinY(map)
-       set BoundSentinel___maxx=GetRectMaxX(map)
-       set BoundSentinel___maxy=GetRectMaxY(map)
-       set rc=Rect(BoundSentinel___minx, BoundSentinel___miny, BoundSentinel___maxx, BoundSentinel___maxy)
+       set BoundSentinel__minx=GetRectMinX(map)
+       set BoundSentinel__miny=GetRectMinY(map)
+       set BoundSentinel__maxx=GetRectMaxX(map)
+       set BoundSentinel__maxy=GetRectMaxY(map)
+       set rc=Rect(BoundSentinel__minx, BoundSentinel__miny, BoundSentinel__maxx, BoundSentinel__maxy)
        call RegionAddRect(r, rc)
        call RemoveRect(rc)
-       if BoundSentinel___ALLOW_OUTSIDE_PLAYABLE_MAP_AREA then
+       if BoundSentinel__ALLOW_OUTSIDE_PLAYABLE_MAP_AREA then
           call RemoveRect(map)
        endif
 
        call TriggerRegisterLeaveRegion(t, r, null)
-       call TriggerAddCondition(t, Condition(function BoundSentinel___dis))
+       call TriggerAddCondition(t, Condition(function BoundSentinel__dis))
 
     set rc=null
     set map=null
@@ -6936,14 +6925,14 @@ endfunction
             return s__Event_w
         endfunction
         function s__Event_registerTrigger takes integer this,trigger t returns nothing
-            call TriggerRegisterVariableEvent(t, "Event___q", EQUAL, this)
+            call TriggerRegisterVariableEvent(t, "Event__q", EQUAL, this)
         endfunction
         function s__Event_register takes integer this,boolexpr c returns nothing
             call TriggerAddCondition(s__Event_e[this], c)
         endfunction
         function s__Event_fire takes integer this returns nothing
-            set Event___q=0
-            set Event___q=this
+            set Event__q=0
+            set Event__q=this
             call TriggerEvaluate(s__Event_e[this])
         endfunction
     function CreateEvent takes nothing returns integer
@@ -6964,13 +6953,13 @@ endfunction
  
  
     function GetPointZ takes real x,real y returns real
-        call MoveLocation(GetZ___loc, x, y)
-        return GetLocationZ(GetZ___loc)
+        call MoveLocation(GetZ__loc, x, y)
+        return GetLocationZ(GetZ__loc)
     endfunction
  
     function GetUnitZ takes unit u returns real
-        call MoveLocation(GetZ___loc, GetUnitX(u), GetUnitY(u))
-        return GetLocationZ(GetZ___loc) + GetUnitFlyHeight(u)
+        call MoveLocation(GetZ__loc, GetUnitX(u), GetUnitY(u))
+        return GetLocationZ(GetZ__loc) + GetUnitFlyHeight(u)
     endfunction
  
 
@@ -7062,7 +7051,7 @@ endfunction
         endfunction
    
         function s__User__get_hex takes integer this returns string
-            return PlayerUtils___OriginalHex[GetHandleId((GetPlayerColor(s__User_handle[(this)])))] // INLINED!!
+            return PlayerUtils__OriginalHex[GetHandleId((GetPlayerColor(s__User_handle[(this)])))] // INLINED!!
         endfunction
    
         function s__User__set_color takes integer this,playercolor c returns nothing
@@ -7083,7 +7072,7 @@ endfunction
         endfunction
    
         function s__User__get_nameColored takes integer this returns string
-            return (PlayerUtils___OriginalHex[GetHandleId((GetPlayerColor(s__User_handle[((this))])))]) + (GetPlayerName(s__User_handle[(this)])) + "|r" // INLINED!!
+            return (PlayerUtils__OriginalHex[GetHandleId((GetPlayerColor(s__User_handle[((this))])))]) + (GetPlayerName(s__User_handle[(this)])) + "|r" // INLINED!!
         endfunction
    
         function s__User_colorUnits takes integer this,playercolor c returns nothing
@@ -7126,8 +7115,8 @@ endfunction
             return false
         endfunction
    
-//Implemented from module PlayerUtils___PlayerUtilsInit:
-        function s__User_PlayerUtils___PlayerUtilsInit___onInit takes nothing returns nothing
+//Implemented from module PlayerUtils__PlayerUtilsInit:
+        function s__User_PlayerUtils__PlayerUtilsInit__onInit takes nothing returns nothing
             local trigger t= CreateTrigger()
             local integer i= 0
             local integer p
@@ -7135,18 +7124,18 @@ endfunction
             set s__User_Local=GetLocalPlayer()
             set s__User_LocalId=GetPlayerId(s__User_Local)
        
-            set PlayerUtils___OriginalHex[0]="|cffff0303"
-            set PlayerUtils___OriginalHex[1]="|cff0042ff"
-            set PlayerUtils___OriginalHex[2]="|cff1ce6b9"
-            set PlayerUtils___OriginalHex[3]="|cff540081"
-            set PlayerUtils___OriginalHex[4]="|cfffffc01"
-            set PlayerUtils___OriginalHex[5]="|cfffe8a0e"
-            set PlayerUtils___OriginalHex[6]="|cff20c000"
-            set PlayerUtils___OriginalHex[7]="|cffe55bb0"
-            set PlayerUtils___OriginalHex[8]="|cff959697"
-            set PlayerUtils___OriginalHex[9]="|cff7ebff1"
-            set PlayerUtils___OriginalHex[10]="|cff106246"
-            set PlayerUtils___OriginalHex[11]="|cff4e2a04"
+            set PlayerUtils__OriginalHex[0]="|cffff0303"
+            set PlayerUtils__OriginalHex[1]="|cff0042ff"
+            set PlayerUtils__OriginalHex[2]="|cff1ce6b9"
+            set PlayerUtils__OriginalHex[3]="|cff540081"
+            set PlayerUtils__OriginalHex[4]="|cfffffc01"
+            set PlayerUtils__OriginalHex[5]="|cfffe8a0e"
+            set PlayerUtils__OriginalHex[6]="|cff20c000"
+            set PlayerUtils__OriginalHex[7]="|cffe55bb0"
+            set PlayerUtils__OriginalHex[8]="|cff959697"
+            set PlayerUtils__OriginalHex[9]="|cff7ebff1"
+            set PlayerUtils__OriginalHex[10]="|cff106246"
+            set PlayerUtils__OriginalHex[11]="|cff4e2a04"
          
             set s__User_first=s__User_NULL
 
@@ -7158,7 +7147,7 @@ endfunction
                 set s__User_id[p]=i
            
                 set s__User_Color[i]=GetPlayerColor(s__User_handle[p])
-                set PlayerUtils___CurrentColor[i]=s__User_Color[i]
+                set PlayerUtils__CurrentColor[i]=s__User_Color[i]
              
                 if ( GetPlayerController(s__User_handle[p]) == MAP_CONTROL_USER and GetPlayerSlotState(s__User_handle[p]) == PLAYER_SLOT_STATE_PLAYING ) then
 
@@ -7182,14 +7171,14 @@ endfunction
                     call TriggerRegisterPlayerEvent(t, s__User_handle[p], EVENT_PLAYER_LEAVE)
                     call ForceAddPlayer(FORCE_PLAYING, s__User_handle[p])
                
-                    set PlayerUtils___Hex[p]=PlayerUtils___OriginalHex[GetHandleId(s__User_Color[i])]
+                    set PlayerUtils__Hex[p]=PlayerUtils__OriginalHex[GetHandleId(s__User_Color[i])]
                
                     set s__User_AmountPlaying=s__User_AmountPlaying + 1
 
                 endif
            
-                set PlayerUtils___Name[p]=GetPlayerName(s__User_handle[p])
-                set s__User_originalName[p]=PlayerUtils___Name[p]
+                set PlayerUtils__Name[p]=GetPlayerName(s__User_handle[p])
+                set s__User_originalName[p]=PlayerUtils__Name[p]
            
                 set i=i + 1
             endloop
@@ -7228,16 +7217,16 @@ endfunction
 //library PlayerUtils ends
 //library PowerupSentinel:
 
-        function PowerupSentinel___anon__0 takes nothing returns boolean
+        function PowerupSentinel__anon__0 takes nothing returns boolean
             if ( GetWidgetLife(GetManipulatedItem()) == 0 ) then
                 call RemoveItem(GetManipulatedItem())
             endif
             return false
         endfunction
-    function PowerupSentinel___onInit takes nothing returns nothing
+    function PowerupSentinel__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         call TriggerRegisterAnyUnitEventBJ(t, EVENT_PLAYER_UNIT_DROP_ITEM)
-        call TriggerAddCondition(t, Condition(function PowerupSentinel___anon__0))
+        call TriggerAddCondition(t, Condition(function PowerupSentinel__anon__0))
     endfunction
 
 //library PowerupSentinel ends
@@ -7273,29 +7262,29 @@ endfunction
     
     
     function PreventSave takes player p,boolean flag returns nothing
-        if ( p == PreventSave___localplayer ) then
+        if ( p == PreventSave__localplayer ) then
             set GameAllowSave=not flag
         endif
     endfunction
     
-    function PreventSave___Exit takes nothing returns nothing
-        call DialogDisplay(PreventSave___localplayer, PreventSave___Dialog, false)
+    function PreventSave__Exit takes nothing returns nothing
+        call DialogDisplay(PreventSave__localplayer, PreventSave__Dialog, false)
     endfunction
     
-    function PreventSave___StopSave takes nothing returns boolean
+    function PreventSave__StopSave takes nothing returns boolean
         if not GameAllowSave then
-            call DialogDisplay(PreventSave___localplayer, PreventSave___Dialog, true)
+            call DialogDisplay(PreventSave__localplayer, PreventSave__Dialog, true)
         endif
-        call TimerStart(PreventSave___Timer, 0.00, false, function PreventSave___Exit)
+        call TimerStart(PreventSave__Timer, 0.00, false, function PreventSave__Exit)
         return false
     endfunction
     
-    function PreventSave___onInit takes nothing returns nothing
+    function PreventSave__onInit takes nothing returns nothing
         local trigger t= CreateTrigger()
-        set PreventSave___localplayer=GetLocalPlayer()
+        set PreventSave__localplayer=GetLocalPlayer()
         
         call TriggerRegisterGameEvent(t, EVENT_GAME_SAVE)
-        call TriggerAddCondition(t, Condition(function PreventSave___StopSave))
+        call TriggerAddCondition(t, Condition(function PreventSave__StopSave))
     endfunction
 
 
@@ -7303,22 +7292,22 @@ endfunction
 //library Table:
     
     
-    function s__Table___dex__get_size takes nothing returns integer
-        return Table___sizeK
+    function s__Table__dex__get_size takes nothing returns integer
+        return Table__sizeK
     endfunction
-    function s__Table___dex__get_list takes nothing returns integer
-        return Table___listK
-    endfunction
-    
-    function s__Table___handles_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
-    endfunction
-    function s__Table___handles_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__dex__get_list takes nothing returns integer
+        return Table__listK
     endfunction
     
-    function s__Table___agents__setindex takes integer this,integer key,agent value returns nothing
-        call SaveAgentHandle(Table___ht, this, key, value)
+    function s__Table__handles_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
+    endfunction
+    function s__Table__handles_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
+    endfunction
+    
+    function s__Table__agents__setindex takes integer this,integer key,agent value returns nothing
+        call SaveAgentHandle(Table__ht, this, key, value)
     endfunction
     
     
@@ -7327,763 +7316,763 @@ endfunction
 //Don't be intimidated by the number of macros - Vexorian's map optimizer is
 //supposed to kill functions which inline (all of these functions inline).
 //textmacro instance: NEW_ARRAY_BASIC("Real", "Real", "real")
-    function s__Table___reals__getindex takes integer this,integer key returns real
-        return LoadReal(Table___ht, this, key)
+    function s__Table__reals__getindex takes integer this,integer key returns real
+        return LoadReal(Table__ht, this, key)
     endfunction
-    function s__Table___reals__setindex takes integer this,integer key,real value returns nothing
-        call SaveReal(Table___ht, this, key, value)
+    function s__Table__reals__setindex takes integer this,integer key,real value returns nothing
+        call SaveReal(Table__ht, this, key, value)
     endfunction
-    function s__Table___reals_has takes integer this,integer key returns boolean
-        return HaveSavedReal(Table___ht, this, key)
+    function s__Table__reals_has takes integer this,integer key returns boolean
+        return HaveSavedReal(Table__ht, this, key)
     endfunction
-    function s__Table___reals_remove takes integer this,integer key returns nothing
-        call RemoveSavedReal(Table___ht, this, key)
+    function s__Table__reals_remove takes integer this,integer key returns nothing
+        call RemoveSavedReal(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY_BASIC("Real", "Real", "real")
 //textmacro instance: NEW_ARRAY_BASIC("Boolean", "Boolean", "boolean")
-    function s__Table___booleans__getindex takes integer this,integer key returns boolean
-        return LoadBoolean(Table___ht, this, key)
+    function s__Table__booleans__getindex takes integer this,integer key returns boolean
+        return LoadBoolean(Table__ht, this, key)
     endfunction
-    function s__Table___booleans__setindex takes integer this,integer key,boolean value returns nothing
-        call SaveBoolean(Table___ht, this, key, value)
+    function s__Table__booleans__setindex takes integer this,integer key,boolean value returns nothing
+        call SaveBoolean(Table__ht, this, key, value)
     endfunction
-    function s__Table___booleans_has takes integer this,integer key returns boolean
-        return HaveSavedBoolean(Table___ht, this, key)
+    function s__Table__booleans_has takes integer this,integer key returns boolean
+        return HaveSavedBoolean(Table__ht, this, key)
     endfunction
-    function s__Table___booleans_remove takes integer this,integer key returns nothing
-        call RemoveSavedBoolean(Table___ht, this, key)
+    function s__Table__booleans_remove takes integer this,integer key returns nothing
+        call RemoveSavedBoolean(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY_BASIC("Boolean", "Boolean", "boolean")
 //textmacro instance: NEW_ARRAY_BASIC("String", "Str", "string")
-    function s__Table___strings__getindex takes integer this,integer key returns string
-        return LoadStr(Table___ht, this, key)
+    function s__Table__strings__getindex takes integer this,integer key returns string
+        return LoadStr(Table__ht, this, key)
     endfunction
-    function s__Table___strings__setindex takes integer this,integer key,string value returns nothing
-        call SaveStr(Table___ht, this, key, value)
+    function s__Table__strings__setindex takes integer this,integer key,string value returns nothing
+        call SaveStr(Table__ht, this, key, value)
     endfunction
-    function s__Table___strings_has takes integer this,integer key returns boolean
-        return HaveSavedString(Table___ht, this, key)
+    function s__Table__strings_has takes integer this,integer key returns boolean
+        return HaveSavedString(Table__ht, this, key)
     endfunction
-    function s__Table___strings_remove takes integer this,integer key returns nothing
-        call RemoveSavedString(Table___ht, this, key)
+    function s__Table__strings_remove takes integer this,integer key returns nothing
+        call RemoveSavedString(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY_BASIC("String", "Str", "string")
 //New textmacro to allow table.integer[] syntax for compatibility with textmacros that might desire it.
 //textmacro instance: NEW_ARRAY_BASIC("Integer", "Integer", "integer")
-    function s__Table___integers__getindex takes integer this,integer key returns integer
-        return LoadInteger(Table___ht, this, key)
+    function s__Table__integers__getindex takes integer this,integer key returns integer
+        return LoadInteger(Table__ht, this, key)
     endfunction
-    function s__Table___integers__setindex takes integer this,integer key,integer value returns nothing
-        call SaveInteger(Table___ht, this, key, value)
+    function s__Table__integers__setindex takes integer this,integer key,integer value returns nothing
+        call SaveInteger(Table__ht, this, key, value)
     endfunction
-    function s__Table___integers_has takes integer this,integer key returns boolean
-        return HaveSavedInteger(Table___ht, this, key)
+    function s__Table__integers_has takes integer this,integer key returns boolean
+        return HaveSavedInteger(Table__ht, this, key)
     endfunction
-    function s__Table___integers_remove takes integer this,integer key returns nothing
-        call RemoveSavedInteger(Table___ht, this, key)
+    function s__Table__integers_remove takes integer this,integer key returns nothing
+        call RemoveSavedInteger(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY_BASIC("Integer", "Integer", "integer")
     
 //textmacro instance: NEW_ARRAY("Player", "player")
-    function s__Table___players__getindex takes integer this,integer key returns player
-        return LoadPlayerHandle(Table___ht, this, key)
+    function s__Table__players__getindex takes integer this,integer key returns player
+        return LoadPlayerHandle(Table__ht, this, key)
     endfunction
-    function s__Table___players__setindex takes integer this,integer key,player value returns nothing
-        call SavePlayerHandle(Table___ht, this, key, value)
+    function s__Table__players__setindex takes integer this,integer key,player value returns nothing
+        call SavePlayerHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___players_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__players_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___players_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__players_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Player", "player")
 //textmacro instance: NEW_ARRAY("Widget", "widget")
-    function s__Table___widgets__getindex takes integer this,integer key returns widget
-        return LoadWidgetHandle(Table___ht, this, key)
+    function s__Table__widgets__getindex takes integer this,integer key returns widget
+        return LoadWidgetHandle(Table__ht, this, key)
     endfunction
-    function s__Table___widgets__setindex takes integer this,integer key,widget value returns nothing
-        call SaveWidgetHandle(Table___ht, this, key, value)
+    function s__Table__widgets__setindex takes integer this,integer key,widget value returns nothing
+        call SaveWidgetHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___widgets_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__widgets_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___widgets_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__widgets_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Widget", "widget")
 //textmacro instance: NEW_ARRAY("Destructable", "destructable")
-    function s__Table___destructables__getindex takes integer this,integer key returns destructable
-        return LoadDestructableHandle(Table___ht, this, key)
+    function s__Table__destructables__getindex takes integer this,integer key returns destructable
+        return LoadDestructableHandle(Table__ht, this, key)
     endfunction
-    function s__Table___destructables__setindex takes integer this,integer key,destructable value returns nothing
-        call SaveDestructableHandle(Table___ht, this, key, value)
+    function s__Table__destructables__setindex takes integer this,integer key,destructable value returns nothing
+        call SaveDestructableHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___destructables_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__destructables_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___destructables_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__destructables_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Destructable", "destructable")
 //textmacro instance: NEW_ARRAY("Item", "item")
-    function s__Table___items__getindex takes integer this,integer key returns item
-        return LoadItemHandle(Table___ht, this, key)
+    function s__Table__items__getindex takes integer this,integer key returns item
+        return LoadItemHandle(Table__ht, this, key)
     endfunction
-    function s__Table___items__setindex takes integer this,integer key,item value returns nothing
-        call SaveItemHandle(Table___ht, this, key, value)
+    function s__Table__items__setindex takes integer this,integer key,item value returns nothing
+        call SaveItemHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___items_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__items_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___items_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__items_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Item", "item")
 //textmacro instance: NEW_ARRAY("Unit", "unit")
-    function s__Table___units__getindex takes integer this,integer key returns unit
-        return LoadUnitHandle(Table___ht, this, key)
+    function s__Table__units__getindex takes integer this,integer key returns unit
+        return LoadUnitHandle(Table__ht, this, key)
     endfunction
-    function s__Table___units__setindex takes integer this,integer key,unit value returns nothing
-        call SaveUnitHandle(Table___ht, this, key, value)
+    function s__Table__units__setindex takes integer this,integer key,unit value returns nothing
+        call SaveUnitHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___units_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__units_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___units_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__units_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Unit", "unit")
 //textmacro instance: NEW_ARRAY("Ability", "ability")
-    function s__Table___abilitys__getindex takes integer this,integer key returns ability
-        return LoadAbilityHandle(Table___ht, this, key)
+    function s__Table__abilitys__getindex takes integer this,integer key returns ability
+        return LoadAbilityHandle(Table__ht, this, key)
     endfunction
-    function s__Table___abilitys__setindex takes integer this,integer key,ability value returns nothing
-        call SaveAbilityHandle(Table___ht, this, key, value)
+    function s__Table__abilitys__setindex takes integer this,integer key,ability value returns nothing
+        call SaveAbilityHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___abilitys_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__abilitys_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___abilitys_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__abilitys_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Ability", "ability")
 //textmacro instance: NEW_ARRAY("Timer", "timer")
-    function s__Table___timers__getindex takes integer this,integer key returns timer
-        return LoadTimerHandle(Table___ht, this, key)
+    function s__Table__timers__getindex takes integer this,integer key returns timer
+        return LoadTimerHandle(Table__ht, this, key)
     endfunction
-    function s__Table___timers__setindex takes integer this,integer key,timer value returns nothing
-        call SaveTimerHandle(Table___ht, this, key, value)
+    function s__Table__timers__setindex takes integer this,integer key,timer value returns nothing
+        call SaveTimerHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___timers_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__timers_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___timers_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__timers_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Timer", "timer")
 //textmacro instance: NEW_ARRAY("Trigger", "trigger")
-    function s__Table___triggers__getindex takes integer this,integer key returns trigger
-        return LoadTriggerHandle(Table___ht, this, key)
+    function s__Table__triggers__getindex takes integer this,integer key returns trigger
+        return LoadTriggerHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggers__setindex takes integer this,integer key,trigger value returns nothing
-        call SaveTriggerHandle(Table___ht, this, key, value)
+    function s__Table__triggers__setindex takes integer this,integer key,trigger value returns nothing
+        call SaveTriggerHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___triggers_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__triggers_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggers_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__triggers_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Trigger", "trigger")
 //textmacro instance: NEW_ARRAY("TriggerCondition", "triggercondition")
-    function s__Table___triggerconditions__getindex takes integer this,integer key returns triggercondition
-        return LoadTriggerConditionHandle(Table___ht, this, key)
+    function s__Table__triggerconditions__getindex takes integer this,integer key returns triggercondition
+        return LoadTriggerConditionHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggerconditions__setindex takes integer this,integer key,triggercondition value returns nothing
-        call SaveTriggerConditionHandle(Table___ht, this, key, value)
+    function s__Table__triggerconditions__setindex takes integer this,integer key,triggercondition value returns nothing
+        call SaveTriggerConditionHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___triggerconditions_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__triggerconditions_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggerconditions_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__triggerconditions_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("TriggerCondition", "triggercondition")
 //textmacro instance: NEW_ARRAY("TriggerAction", "triggeraction")
-    function s__Table___triggeractions__getindex takes integer this,integer key returns triggeraction
-        return LoadTriggerActionHandle(Table___ht, this, key)
+    function s__Table__triggeractions__getindex takes integer this,integer key returns triggeraction
+        return LoadTriggerActionHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggeractions__setindex takes integer this,integer key,triggeraction value returns nothing
-        call SaveTriggerActionHandle(Table___ht, this, key, value)
+    function s__Table__triggeractions__setindex takes integer this,integer key,triggeraction value returns nothing
+        call SaveTriggerActionHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___triggeractions_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__triggeractions_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggeractions_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__triggeractions_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("TriggerAction", "triggeraction")
 //textmacro instance: NEW_ARRAY("TriggerEvent", "event")
-    function s__Table___events__getindex takes integer this,integer key returns event
-        return LoadTriggerEventHandle(Table___ht, this, key)
+    function s__Table__events__getindex takes integer this,integer key returns event
+        return LoadTriggerEventHandle(Table__ht, this, key)
     endfunction
-    function s__Table___events__setindex takes integer this,integer key,event value returns nothing
-        call SaveTriggerEventHandle(Table___ht, this, key, value)
+    function s__Table__events__setindex takes integer this,integer key,event value returns nothing
+        call SaveTriggerEventHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___events_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__events_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___events_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__events_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("TriggerEvent", "event")
 //textmacro instance: NEW_ARRAY("Force", "force")
-    function s__Table___forces__getindex takes integer this,integer key returns force
-        return LoadForceHandle(Table___ht, this, key)
+    function s__Table__forces__getindex takes integer this,integer key returns force
+        return LoadForceHandle(Table__ht, this, key)
     endfunction
-    function s__Table___forces__setindex takes integer this,integer key,force value returns nothing
-        call SaveForceHandle(Table___ht, this, key, value)
+    function s__Table__forces__setindex takes integer this,integer key,force value returns nothing
+        call SaveForceHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___forces_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__forces_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___forces_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__forces_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Force", "force")
 //textmacro instance: NEW_ARRAY("Group", "group")
-    function s__Table___groups__getindex takes integer this,integer key returns group
-        return LoadGroupHandle(Table___ht, this, key)
+    function s__Table__groups__getindex takes integer this,integer key returns group
+        return LoadGroupHandle(Table__ht, this, key)
     endfunction
-    function s__Table___groups__setindex takes integer this,integer key,group value returns nothing
-        call SaveGroupHandle(Table___ht, this, key, value)
+    function s__Table__groups__setindex takes integer this,integer key,group value returns nothing
+        call SaveGroupHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___groups_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__groups_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___groups_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__groups_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Group", "group")
 //textmacro instance: NEW_ARRAY("Location", "location")
-    function s__Table___locations__getindex takes integer this,integer key returns location
-        return LoadLocationHandle(Table___ht, this, key)
+    function s__Table__locations__getindex takes integer this,integer key returns location
+        return LoadLocationHandle(Table__ht, this, key)
     endfunction
-    function s__Table___locations__setindex takes integer this,integer key,location value returns nothing
-        call SaveLocationHandle(Table___ht, this, key, value)
+    function s__Table__locations__setindex takes integer this,integer key,location value returns nothing
+        call SaveLocationHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___locations_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__locations_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___locations_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__locations_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Location", "location")
 //textmacro instance: NEW_ARRAY("Rect", "rect")
-    function s__Table___rects__getindex takes integer this,integer key returns rect
-        return LoadRectHandle(Table___ht, this, key)
+    function s__Table__rects__getindex takes integer this,integer key returns rect
+        return LoadRectHandle(Table__ht, this, key)
     endfunction
-    function s__Table___rects__setindex takes integer this,integer key,rect value returns nothing
-        call SaveRectHandle(Table___ht, this, key, value)
+    function s__Table__rects__setindex takes integer this,integer key,rect value returns nothing
+        call SaveRectHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___rects_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__rects_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___rects_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__rects_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Rect", "rect")
 //textmacro instance: NEW_ARRAY("BooleanExpr", "boolexpr")
-    function s__Table___boolexprs__getindex takes integer this,integer key returns boolexpr
-        return LoadBooleanExprHandle(Table___ht, this, key)
+    function s__Table__boolexprs__getindex takes integer this,integer key returns boolexpr
+        return LoadBooleanExprHandle(Table__ht, this, key)
     endfunction
-    function s__Table___boolexprs__setindex takes integer this,integer key,boolexpr value returns nothing
-        call SaveBooleanExprHandle(Table___ht, this, key, value)
+    function s__Table__boolexprs__setindex takes integer this,integer key,boolexpr value returns nothing
+        call SaveBooleanExprHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___boolexprs_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__boolexprs_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___boolexprs_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__boolexprs_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("BooleanExpr", "boolexpr")
 //textmacro instance: NEW_ARRAY("Sound", "sound")
-    function s__Table___sounds__getindex takes integer this,integer key returns sound
-        return LoadSoundHandle(Table___ht, this, key)
+    function s__Table__sounds__getindex takes integer this,integer key returns sound
+        return LoadSoundHandle(Table__ht, this, key)
     endfunction
-    function s__Table___sounds__setindex takes integer this,integer key,sound value returns nothing
-        call SaveSoundHandle(Table___ht, this, key, value)
+    function s__Table__sounds__setindex takes integer this,integer key,sound value returns nothing
+        call SaveSoundHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___sounds_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__sounds_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___sounds_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__sounds_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Sound", "sound")
 //textmacro instance: NEW_ARRAY("Effect", "effect")
-    function s__Table___effects__getindex takes integer this,integer key returns effect
-        return LoadEffectHandle(Table___ht, this, key)
+    function s__Table__effects__getindex takes integer this,integer key returns effect
+        return LoadEffectHandle(Table__ht, this, key)
     endfunction
-    function s__Table___effects__setindex takes integer this,integer key,effect value returns nothing
-        call SaveEffectHandle(Table___ht, this, key, value)
+    function s__Table__effects__setindex takes integer this,integer key,effect value returns nothing
+        call SaveEffectHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___effects_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__effects_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___effects_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__effects_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Effect", "effect")
 //textmacro instance: NEW_ARRAY("UnitPool", "unitpool")
-    function s__Table___unitpools__getindex takes integer this,integer key returns unitpool
-        return LoadUnitPoolHandle(Table___ht, this, key)
+    function s__Table__unitpools__getindex takes integer this,integer key returns unitpool
+        return LoadUnitPoolHandle(Table__ht, this, key)
     endfunction
-    function s__Table___unitpools__setindex takes integer this,integer key,unitpool value returns nothing
-        call SaveUnitPoolHandle(Table___ht, this, key, value)
+    function s__Table__unitpools__setindex takes integer this,integer key,unitpool value returns nothing
+        call SaveUnitPoolHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___unitpools_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__unitpools_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___unitpools_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__unitpools_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("UnitPool", "unitpool")
 //textmacro instance: NEW_ARRAY("ItemPool", "itempool")
-    function s__Table___itempools__getindex takes integer this,integer key returns itempool
-        return LoadItemPoolHandle(Table___ht, this, key)
+    function s__Table__itempools__getindex takes integer this,integer key returns itempool
+        return LoadItemPoolHandle(Table__ht, this, key)
     endfunction
-    function s__Table___itempools__setindex takes integer this,integer key,itempool value returns nothing
-        call SaveItemPoolHandle(Table___ht, this, key, value)
+    function s__Table__itempools__setindex takes integer this,integer key,itempool value returns nothing
+        call SaveItemPoolHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___itempools_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__itempools_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___itempools_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__itempools_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("ItemPool", "itempool")
 //textmacro instance: NEW_ARRAY("Quest", "quest")
-    function s__Table___quests__getindex takes integer this,integer key returns quest
-        return LoadQuestHandle(Table___ht, this, key)
+    function s__Table__quests__getindex takes integer this,integer key returns quest
+        return LoadQuestHandle(Table__ht, this, key)
     endfunction
-    function s__Table___quests__setindex takes integer this,integer key,quest value returns nothing
-        call SaveQuestHandle(Table___ht, this, key, value)
+    function s__Table__quests__setindex takes integer this,integer key,quest value returns nothing
+        call SaveQuestHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___quests_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__quests_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___quests_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__quests_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Quest", "quest")
 //textmacro instance: NEW_ARRAY("QuestItem", "questitem")
-    function s__Table___questitems__getindex takes integer this,integer key returns questitem
-        return LoadQuestItemHandle(Table___ht, this, key)
+    function s__Table__questitems__getindex takes integer this,integer key returns questitem
+        return LoadQuestItemHandle(Table__ht, this, key)
     endfunction
-    function s__Table___questitems__setindex takes integer this,integer key,questitem value returns nothing
-        call SaveQuestItemHandle(Table___ht, this, key, value)
+    function s__Table__questitems__setindex takes integer this,integer key,questitem value returns nothing
+        call SaveQuestItemHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___questitems_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__questitems_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___questitems_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__questitems_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("QuestItem", "questitem")
 //textmacro instance: NEW_ARRAY("DefeatCondition", "defeatcondition")
-    function s__Table___defeatconditions__getindex takes integer this,integer key returns defeatcondition
-        return LoadDefeatConditionHandle(Table___ht, this, key)
+    function s__Table__defeatconditions__getindex takes integer this,integer key returns defeatcondition
+        return LoadDefeatConditionHandle(Table__ht, this, key)
     endfunction
-    function s__Table___defeatconditions__setindex takes integer this,integer key,defeatcondition value returns nothing
-        call SaveDefeatConditionHandle(Table___ht, this, key, value)
+    function s__Table__defeatconditions__setindex takes integer this,integer key,defeatcondition value returns nothing
+        call SaveDefeatConditionHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___defeatconditions_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__defeatconditions_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___defeatconditions_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__defeatconditions_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("DefeatCondition", "defeatcondition")
 //textmacro instance: NEW_ARRAY("TimerDialog", "timerdialog")
-    function s__Table___timerdialogs__getindex takes integer this,integer key returns timerdialog
-        return LoadTimerDialogHandle(Table___ht, this, key)
+    function s__Table__timerdialogs__getindex takes integer this,integer key returns timerdialog
+        return LoadTimerDialogHandle(Table__ht, this, key)
     endfunction
-    function s__Table___timerdialogs__setindex takes integer this,integer key,timerdialog value returns nothing
-        call SaveTimerDialogHandle(Table___ht, this, key, value)
+    function s__Table__timerdialogs__setindex takes integer this,integer key,timerdialog value returns nothing
+        call SaveTimerDialogHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___timerdialogs_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__timerdialogs_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___timerdialogs_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__timerdialogs_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("TimerDialog", "timerdialog")
 //textmacro instance: NEW_ARRAY("Leaderboard", "leaderboard")
-    function s__Table___leaderboards__getindex takes integer this,integer key returns leaderboard
-        return LoadLeaderboardHandle(Table___ht, this, key)
+    function s__Table__leaderboards__getindex takes integer this,integer key returns leaderboard
+        return LoadLeaderboardHandle(Table__ht, this, key)
     endfunction
-    function s__Table___leaderboards__setindex takes integer this,integer key,leaderboard value returns nothing
-        call SaveLeaderboardHandle(Table___ht, this, key, value)
+    function s__Table__leaderboards__setindex takes integer this,integer key,leaderboard value returns nothing
+        call SaveLeaderboardHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___leaderboards_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__leaderboards_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___leaderboards_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__leaderboards_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Leaderboard", "leaderboard")
 //textmacro instance: NEW_ARRAY("Multiboard", "multiboard")
-    function s__Table___multiboards__getindex takes integer this,integer key returns multiboard
-        return LoadMultiboardHandle(Table___ht, this, key)
+    function s__Table__multiboards__getindex takes integer this,integer key returns multiboard
+        return LoadMultiboardHandle(Table__ht, this, key)
     endfunction
-    function s__Table___multiboards__setindex takes integer this,integer key,multiboard value returns nothing
-        call SaveMultiboardHandle(Table___ht, this, key, value)
+    function s__Table__multiboards__setindex takes integer this,integer key,multiboard value returns nothing
+        call SaveMultiboardHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___multiboards_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__multiboards_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___multiboards_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__multiboards_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Multiboard", "multiboard")
 //textmacro instance: NEW_ARRAY("MultiboardItem", "multiboarditem")
-    function s__Table___multiboarditems__getindex takes integer this,integer key returns multiboarditem
-        return LoadMultiboardItemHandle(Table___ht, this, key)
+    function s__Table__multiboarditems__getindex takes integer this,integer key returns multiboarditem
+        return LoadMultiboardItemHandle(Table__ht, this, key)
     endfunction
-    function s__Table___multiboarditems__setindex takes integer this,integer key,multiboarditem value returns nothing
-        call SaveMultiboardItemHandle(Table___ht, this, key, value)
+    function s__Table__multiboarditems__setindex takes integer this,integer key,multiboarditem value returns nothing
+        call SaveMultiboardItemHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___multiboarditems_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__multiboarditems_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___multiboarditems_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__multiboarditems_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("MultiboardItem", "multiboarditem")
 //textmacro instance: NEW_ARRAY("Trackable", "trackable")
-    function s__Table___trackables__getindex takes integer this,integer key returns trackable
-        return LoadTrackableHandle(Table___ht, this, key)
+    function s__Table__trackables__getindex takes integer this,integer key returns trackable
+        return LoadTrackableHandle(Table__ht, this, key)
     endfunction
-    function s__Table___trackables__setindex takes integer this,integer key,trackable value returns nothing
-        call SaveTrackableHandle(Table___ht, this, key, value)
+    function s__Table__trackables__setindex takes integer this,integer key,trackable value returns nothing
+        call SaveTrackableHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___trackables_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__trackables_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___trackables_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__trackables_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Trackable", "trackable")
 //textmacro instance: NEW_ARRAY("Dialog", "dialog")
-    function s__Table___dialogs__getindex takes integer this,integer key returns dialog
-        return LoadDialogHandle(Table___ht, this, key)
+    function s__Table__dialogs__getindex takes integer this,integer key returns dialog
+        return LoadDialogHandle(Table__ht, this, key)
     endfunction
-    function s__Table___dialogs__setindex takes integer this,integer key,dialog value returns nothing
-        call SaveDialogHandle(Table___ht, this, key, value)
+    function s__Table__dialogs__setindex takes integer this,integer key,dialog value returns nothing
+        call SaveDialogHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___dialogs_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__dialogs_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___dialogs_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__dialogs_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Dialog", "dialog")
 //textmacro instance: NEW_ARRAY("Button", "button")
-    function s__Table___buttons__getindex takes integer this,integer key returns button
-        return LoadButtonHandle(Table___ht, this, key)
+    function s__Table__buttons__getindex takes integer this,integer key returns button
+        return LoadButtonHandle(Table__ht, this, key)
     endfunction
-    function s__Table___buttons__setindex takes integer this,integer key,button value returns nothing
-        call SaveButtonHandle(Table___ht, this, key, value)
+    function s__Table__buttons__setindex takes integer this,integer key,button value returns nothing
+        call SaveButtonHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___buttons_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__buttons_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___buttons_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__buttons_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Button", "button")
 //textmacro instance: NEW_ARRAY("TextTag", "texttag")
-    function s__Table___texttags__getindex takes integer this,integer key returns texttag
-        return LoadTextTagHandle(Table___ht, this, key)
+    function s__Table__texttags__getindex takes integer this,integer key returns texttag
+        return LoadTextTagHandle(Table__ht, this, key)
     endfunction
-    function s__Table___texttags__setindex takes integer this,integer key,texttag value returns nothing
-        call SaveTextTagHandle(Table___ht, this, key, value)
+    function s__Table__texttags__setindex takes integer this,integer key,texttag value returns nothing
+        call SaveTextTagHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___texttags_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__texttags_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___texttags_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__texttags_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("TextTag", "texttag")
 //textmacro instance: NEW_ARRAY("Lightning", "lightning")
-    function s__Table___lightnings__getindex takes integer this,integer key returns lightning
-        return LoadLightningHandle(Table___ht, this, key)
+    function s__Table__lightnings__getindex takes integer this,integer key returns lightning
+        return LoadLightningHandle(Table__ht, this, key)
     endfunction
-    function s__Table___lightnings__setindex takes integer this,integer key,lightning value returns nothing
-        call SaveLightningHandle(Table___ht, this, key, value)
+    function s__Table__lightnings__setindex takes integer this,integer key,lightning value returns nothing
+        call SaveLightningHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___lightnings_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__lightnings_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___lightnings_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__lightnings_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Lightning", "lightning")
 //textmacro instance: NEW_ARRAY("Image", "image")
-    function s__Table___images__getindex takes integer this,integer key returns image
-        return LoadImageHandle(Table___ht, this, key)
+    function s__Table__images__getindex takes integer this,integer key returns image
+        return LoadImageHandle(Table__ht, this, key)
     endfunction
-    function s__Table___images__setindex takes integer this,integer key,image value returns nothing
-        call SaveImageHandle(Table___ht, this, key, value)
+    function s__Table__images__setindex takes integer this,integer key,image value returns nothing
+        call SaveImageHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___images_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__images_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___images_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__images_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Image", "image")
 //textmacro instance: NEW_ARRAY("Ubersplat", "ubersplat")
-    function s__Table___ubersplats__getindex takes integer this,integer key returns ubersplat
-        return LoadUbersplatHandle(Table___ht, this, key)
+    function s__Table__ubersplats__getindex takes integer this,integer key returns ubersplat
+        return LoadUbersplatHandle(Table__ht, this, key)
     endfunction
-    function s__Table___ubersplats__setindex takes integer this,integer key,ubersplat value returns nothing
-        call SaveUbersplatHandle(Table___ht, this, key, value)
+    function s__Table__ubersplats__setindex takes integer this,integer key,ubersplat value returns nothing
+        call SaveUbersplatHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___ubersplats_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__ubersplats_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___ubersplats_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__ubersplats_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Ubersplat", "ubersplat")
 //textmacro instance: NEW_ARRAY("Region", "region")
-    function s__Table___regions__getindex takes integer this,integer key returns region
-        return LoadRegionHandle(Table___ht, this, key)
+    function s__Table__regions__getindex takes integer this,integer key returns region
+        return LoadRegionHandle(Table__ht, this, key)
     endfunction
-    function s__Table___regions__setindex takes integer this,integer key,region value returns nothing
-        call SaveRegionHandle(Table___ht, this, key, value)
+    function s__Table__regions__setindex takes integer this,integer key,region value returns nothing
+        call SaveRegionHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___regions_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__regions_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___regions_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__regions_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Region", "region")
 //textmacro instance: NEW_ARRAY("FogState", "fogstate")
-    function s__Table___fogstates__getindex takes integer this,integer key returns fogstate
-        return LoadFogStateHandle(Table___ht, this, key)
+    function s__Table__fogstates__getindex takes integer this,integer key returns fogstate
+        return LoadFogStateHandle(Table__ht, this, key)
     endfunction
-    function s__Table___fogstates__setindex takes integer this,integer key,fogstate value returns nothing
-        call SaveFogStateHandle(Table___ht, this, key, value)
+    function s__Table__fogstates__setindex takes integer this,integer key,fogstate value returns nothing
+        call SaveFogStateHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___fogstates_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__fogstates_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___fogstates_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__fogstates_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("FogState", "fogstate")
 //textmacro instance: NEW_ARRAY("FogModifier", "fogmodifier")
-    function s__Table___fogmodifiers__getindex takes integer this,integer key returns fogmodifier
-        return LoadFogModifierHandle(Table___ht, this, key)
+    function s__Table__fogmodifiers__getindex takes integer this,integer key returns fogmodifier
+        return LoadFogModifierHandle(Table__ht, this, key)
     endfunction
-    function s__Table___fogmodifiers__setindex takes integer this,integer key,fogmodifier value returns nothing
-        call SaveFogModifierHandle(Table___ht, this, key, value)
+    function s__Table__fogmodifiers__setindex takes integer this,integer key,fogmodifier value returns nothing
+        call SaveFogModifierHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___fogmodifiers_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__fogmodifiers_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___fogmodifiers_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__fogmodifiers_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("FogModifier", "fogmodifier")
 //textmacro instance: NEW_ARRAY("Hashtable", "hashtable")
-    function s__Table___hashtables__getindex takes integer this,integer key returns hashtable
-        return LoadHashtableHandle(Table___ht, this, key)
+    function s__Table__hashtables__getindex takes integer this,integer key returns hashtable
+        return LoadHashtableHandle(Table__ht, this, key)
     endfunction
-    function s__Table___hashtables__setindex takes integer this,integer key,hashtable value returns nothing
-        call SaveHashtableHandle(Table___ht, this, key, value)
+    function s__Table__hashtables__setindex takes integer this,integer key,hashtable value returns nothing
+        call SaveHashtableHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___hashtables_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__hashtables_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___hashtables_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__hashtables_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Hashtable", "hashtable")
     
     
     // Implement modules for intuitive syntax (tb.handle; tb.unit; etc.)
-//Implemented from module Table___realm:
+//Implemented from module Table__realm:
     function s__Table__get_real takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___integerm:
+//Implemented from module Table__integerm:
     function s__Table__get_integer takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___booleanm:
+//Implemented from module Table__booleanm:
     function s__Table__get_boolean takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___stringm:
+//Implemented from module Table__stringm:
     function s__Table__get_string takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___playerm:
+//Implemented from module Table__playerm:
     function s__Table__get_player takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___widgetm:
+//Implemented from module Table__widgetm:
     function s__Table__get_widget takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___destructablem:
+//Implemented from module Table__destructablem:
     function s__Table__get_destructable takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___itemm:
+//Implemented from module Table__itemm:
     function s__Table__get_item takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___unitm:
+//Implemented from module Table__unitm:
     function s__Table__get_unit takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___abilitym:
+//Implemented from module Table__abilitym:
     function s__Table__get_ability takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___timerm:
+//Implemented from module Table__timerm:
     function s__Table__get_timer takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___triggerm:
+//Implemented from module Table__triggerm:
     function s__Table__get_trigger takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___triggerconditionm:
+//Implemented from module Table__triggerconditionm:
     function s__Table__get_triggercondition takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___triggeractionm:
+//Implemented from module Table__triggeractionm:
     function s__Table__get_triggeraction takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___eventm:
+//Implemented from module Table__eventm:
     function s__Table__get_event takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___forcem:
+//Implemented from module Table__forcem:
     function s__Table__get_force takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___groupm:
+//Implemented from module Table__groupm:
     function s__Table__get_group takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___locationm:
+//Implemented from module Table__locationm:
     function s__Table__get_location takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___rectm:
+//Implemented from module Table__rectm:
     function s__Table__get_rect takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___boolexprm:
+//Implemented from module Table__boolexprm:
     function s__Table__get_boolexpr takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___soundm:
+//Implemented from module Table__soundm:
     function s__Table__get_sound takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___effectm:
+//Implemented from module Table__effectm:
     function s__Table__get_effect takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___unitpoolm:
+//Implemented from module Table__unitpoolm:
     function s__Table__get_unitpool takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___itempoolm:
+//Implemented from module Table__itempoolm:
     function s__Table__get_itempool takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___questm:
+//Implemented from module Table__questm:
     function s__Table__get_quest takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___questitemm:
+//Implemented from module Table__questitemm:
     function s__Table__get_questitem takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___defeatconditionm:
+//Implemented from module Table__defeatconditionm:
     function s__Table__get_defeatcondition takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___timerdialogm:
+//Implemented from module Table__timerdialogm:
     function s__Table__get_timerdialog takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___leaderboardm:
+//Implemented from module Table__leaderboardm:
     function s__Table__get_leaderboard takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___multiboardm:
+//Implemented from module Table__multiboardm:
     function s__Table__get_multiboard takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___multiboarditemm:
+//Implemented from module Table__multiboarditemm:
     function s__Table__get_multiboarditem takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___trackablem:
+//Implemented from module Table__trackablem:
     function s__Table__get_trackable takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___dialogm:
+//Implemented from module Table__dialogm:
     function s__Table__get_dialog takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___buttonm:
+//Implemented from module Table__buttonm:
     function s__Table__get_button takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___texttagm:
+//Implemented from module Table__texttagm:
     function s__Table__get_texttag takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___lightningm:
+//Implemented from module Table__lightningm:
     function s__Table__get_lightning takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___imagem:
+//Implemented from module Table__imagem:
     function s__Table__get_image takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___ubersplatm:
+//Implemented from module Table__ubersplatm:
     function s__Table__get_ubersplat takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___regionm:
+//Implemented from module Table__regionm:
     function s__Table__get_region takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___fogstatem:
+//Implemented from module Table__fogstatem:
     function s__Table__get_fogstate takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___fogmodifierm:
+//Implemented from module Table__fogmodifierm:
     function s__Table__get_fogmodifier takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___hashtablem:
+//Implemented from module Table__hashtablem:
     function s__Table__get_hashtable takes integer this returns integer
         return this
     endfunction
@@ -8098,39 +8087,39 @@ endfunction
     
     //set this = tb[GetSpellAbilityId()]
     function s__Table__getindex takes integer this,integer key returns integer
-        return LoadInteger(Table___ht, this, key) //return this.integer[key]
+        return LoadInteger(Table__ht, this, key) //return this.integer[key]
     endfunction
     
     //set tb[389034] = 8192
     function s__Table__setindex takes integer this,integer key,integer tb returns nothing
-        call SaveInteger(Table___ht, this, key, tb) //set this.integer[key] = tb
+        call SaveInteger(Table__ht, this, key, tb) //set this.integer[key] = tb
     endfunction
     
     //set b = tb.has(2493223)
     function s__Table_has takes integer this,integer key returns boolean
-        return HaveSavedInteger(Table___ht, this, key) //return this.integer.has(key)
+        return HaveSavedInteger(Table__ht, this, key) //return this.integer.has(key)
     endfunction
     
     //call tb.remove(294080)
     function s__Table_remove takes integer this,integer key returns nothing
-        call RemoveSavedInteger(Table___ht, this, key) //call this.integer.remove(key)
+        call RemoveSavedInteger(Table__ht, this, key) //call this.integer.remove(key)
     endfunction
     
     //Remove all data from a Table instance
     function s__Table_flush takes integer this returns nothing
-        call FlushChildHashtable(Table___ht, this)
+        call FlushChildHashtable(Table__ht, this)
     endfunction
     
     //local Table tb = Table.create()
     function s__Table_create takes nothing returns integer
-        local integer this= (LoadInteger(Table___ht, ((Table___listK)), (0))) // INLINED!!
+        local integer this= (LoadInteger(Table__ht, ((Table__listK)), (0))) // INLINED!!
         
         if this == 0 then
-            set this=Table___more + 1
-            set Table___more=this
+            set this=Table__more + 1
+            set Table__more=this
         else
-            call SaveInteger(Table___ht, ((Table___listK)), (0), ( (LoadInteger(Table___ht, ((Table___listK)), (this))))) // INLINED!!
-            call RemoveSavedInteger(Table___ht, ((Table___listK)), (this)) //Clear hashed memory // INLINED!!
+            call SaveInteger(Table__ht, ((Table__listK)), (0), ( (LoadInteger(Table__ht, ((Table__listK)), (this))))) // INLINED!!
+            call RemoveSavedInteger(Table__ht, ((Table__listK)), (this)) //Clear hashed memory // INLINED!!
         endif
         
         return this
@@ -8142,34 +8131,34 @@ endfunction
     //
     function s__Table_destroy takes integer this returns nothing
         
-        call FlushChildHashtable(Table___ht, (this)) // INLINED!!
+        call FlushChildHashtable(Table__ht, (this)) // INLINED!!
         
-        call SaveInteger(Table___ht, ((Table___listK)), (this), ( (LoadInteger(Table___ht, ((Table___listK)), (0))))) // INLINED!!
-        call SaveInteger(Table___ht, ((Table___listK)), (0), ( this)) // INLINED!!
+        call SaveInteger(Table__ht, ((Table__listK)), (this), ( (LoadInteger(Table__ht, ((Table__listK)), (0))))) // INLINED!!
+        call SaveInteger(Table__ht, ((Table__listK)), (0), ( this)) // INLINED!!
     endfunction
     
 //textmacro instance: TABLE_BC_METHODS()
     function s__Table_reset takes integer this returns nothing
-        call FlushChildHashtable(Table___ht, (this)) // INLINED!!
+        call FlushChildHashtable(Table__ht, (this)) // INLINED!!
     endfunction
     function s__Table_exists takes integer this,integer key returns boolean
-        return (HaveSavedInteger(Table___ht, (this), (key))) // INLINED!!
+        return (HaveSavedInteger(Table__ht, (this), (key))) // INLINED!!
     endfunction
     function s__Table__staticgetindex takes string id returns integer
         local integer index= StringHash(id)
-        local integer t= (LoadInteger(Table___ht, ((si__Table)), (index))) // INLINED!!
+        local integer t= (LoadInteger(Table__ht, ((si__Table)), (index))) // INLINED!!
         if t == 0 then
             set t=s__Table_create()
-            call SaveInteger(Table___ht, ((si__Table)), (index), ( t)) // INLINED!!
+            call SaveInteger(Table__ht, ((si__Table)), (index), ( t)) // INLINED!!
         endif
         return t
     endfunction
     function s__Table_flush2D takes string id returns nothing
         local integer index= StringHash(id)
-        local integer t= (LoadInteger(Table___ht, ((si__Table)), (index))) // INLINED!!
+        local integer t= (LoadInteger(Table__ht, ((si__Table)), (index))) // INLINED!!
         if t != 0 then
             call s__Table_destroy(t)
-            call RemoveSavedInteger(Table___ht, ((si__Table)), (index)) // INLINED!!
+            call RemoveSavedInteger(Table__ht, ((si__Table)), (index)) // INLINED!!
         endif
     endfunction
 //end of: TABLE_BC_METHODS()
@@ -8182,19 +8171,19 @@ endfunction
         call s__Table_flush2D(index)
     endfunction
     function s__HandleTable__getindex takes integer this,handle key returns integer
-        return (LoadInteger(Table___ht, ((this)), (GetHandleId(key)))) // INLINED!!
+        return (LoadInteger(Table__ht, ((this)), (GetHandleId(key)))) // INLINED!!
     endfunction
     function s__HandleTable__setindex takes integer this,handle key,integer value returns nothing
-        call SaveInteger(Table___ht, ((this)), (GetHandleId(key)), ( value)) // INLINED!!
+        call SaveInteger(Table__ht, ((this)), (GetHandleId(key)), ( value)) // INLINED!!
     endfunction
     function s__HandleTable_flush takes integer this,handle key returns nothing
-        call RemoveSavedInteger(Table___ht, ((this)), (GetHandleId(key))) // INLINED!!
+        call RemoveSavedInteger(Table__ht, ((this)), (GetHandleId(key))) // INLINED!!
     endfunction
     function s__HandleTable_exists takes integer this,handle key returns boolean
-        return (HaveSavedInteger(Table___ht, ((this)), (GetHandleId(key)))) // INLINED!!
+        return (HaveSavedInteger(Table__ht, ((this)), (GetHandleId(key)))) // INLINED!!
     endfunction
     function s__HandleTable_reset takes integer this returns nothing
-        call FlushChildHashtable(Table___ht, ((this))) // INLINED!!
+        call FlushChildHashtable(Table__ht, ((this))) // INLINED!!
     endfunction
     function s__HandleTable_destroy takes integer this returns nothing
         call s__Table_destroy((this))
@@ -8210,19 +8199,19 @@ endfunction
         call s__Table_flush2D(index)
     endfunction
     function s__StringTable__getindex takes integer this,string key returns integer
-        return (LoadInteger(Table___ht, ((this)), (StringHash(key)))) // INLINED!!
+        return (LoadInteger(Table__ht, ((this)), (StringHash(key)))) // INLINED!!
     endfunction
     function s__StringTable__setindex takes integer this,string key,integer value returns nothing
-        call SaveInteger(Table___ht, ((this)), (StringHash(key)), ( value)) // INLINED!!
+        call SaveInteger(Table__ht, ((this)), (StringHash(key)), ( value)) // INLINED!!
     endfunction
     function s__StringTable_flush takes integer this,string key returns nothing
-        call RemoveSavedInteger(Table___ht, ((this)), (StringHash(key))) // INLINED!!
+        call RemoveSavedInteger(Table__ht, ((this)), (StringHash(key))) // INLINED!!
     endfunction
     function s__StringTable_exists takes integer this,string key returns boolean
-        return (HaveSavedInteger(Table___ht, ((this)), (StringHash(key)))) // INLINED!!
+        return (HaveSavedInteger(Table__ht, ((this)), (StringHash(key)))) // INLINED!!
     endfunction
     function s__StringTable_reset takes integer this returns nothing
-        call FlushChildHashtable(Table___ht, ((this))) // INLINED!!
+        call FlushChildHashtable(Table__ht, ((this))) // INLINED!!
     endfunction
     function s__StringTable_destroy takes integer this returns nothing
         call s__Table_destroy((this))
@@ -8238,25 +8227,25 @@ endfunction
     //    local TableArray ta = TableArray[array_size]
     //
     function s__TableArray__staticgetindex takes integer array_size returns integer
-        local integer tb= (LoadInteger(Table___ht, ((Table___sizeK)), (array_size))) // INLINED!!
-        local integer this= (LoadInteger(Table___ht, (tb), (0))) // INLINED!!
+        local integer tb= (LoadInteger(Table__ht, ((Table__sizeK)), (array_size))) // INLINED!!
+        local integer this= (LoadInteger(Table__ht, (tb), (0))) // INLINED!!
         
         
         if this == 0 then
-            set this=Table___less - array_size
-            set Table___less=this
+            set this=Table__less - array_size
+            set Table__less=this
         else
-            call SaveInteger(Table___ht, (tb), (0), ( (LoadInteger(Table___ht, (tb), (this))))) //Set the last destroyed to the last-last destroyed // INLINED!!
-            call RemoveSavedInteger(Table___ht, (tb), (this)) //Clear hashed memory // INLINED!!
+            call SaveInteger(Table__ht, (tb), (0), ( (LoadInteger(Table__ht, (tb), (this))))) //Set the last destroyed to the last-last destroyed // INLINED!!
+            call RemoveSavedInteger(Table__ht, (tb), (this)) //Clear hashed memory // INLINED!!
         endif
         
-        call SaveInteger(Table___ht, ((Table___sizeK)), (this), ( array_size)) //This remembers the array size // INLINED!!
+        call SaveInteger(Table__ht, ((Table__sizeK)), (this), ( array_size)) //This remembers the array size // INLINED!!
         return this
     endfunction
     
     //Returns the size of the TableArray
     function s__TableArray__get_size takes integer this returns integer
-        return (LoadInteger(Table___ht, ((Table___sizeK)), (this))) // INLINED!!
+        return (LoadInteger(Table__ht, ((Table__sizeK)), (this))) // INLINED!!
     endfunction
     
     //This magic method enables two-dimensional[array][syntax] for Tables,
@@ -8288,19 +8277,19 @@ endfunction
     //need to (ie. if you were flushing all child-keys as you used them).
     //
     function s__TableArray_destroy takes integer this returns nothing
-        local integer tb= (LoadInteger(Table___ht, ((Table___sizeK)), ((LoadInteger(Table___ht, ((Table___sizeK)), ((this))))))) // INLINED!!
+        local integer tb= (LoadInteger(Table__ht, ((Table__sizeK)), ((LoadInteger(Table__ht, ((Table__sizeK)), ((this))))))) // INLINED!!
         
         
         if tb == 0 then
             //Create a Table to index recycled instances with their array size
             set tb=s__Table_create()
-            call SaveInteger(Table___ht, ((Table___sizeK)), ((LoadInteger(Table___ht, ((Table___sizeK)), ((this))))), ( tb)) // INLINED!!
+            call SaveInteger(Table__ht, ((Table__sizeK)), ((LoadInteger(Table__ht, ((Table__sizeK)), ((this))))), ( tb)) // INLINED!!
         endif
         
-        call RemoveSavedInteger(Table___ht, ((Table___sizeK)), (this)) //Clear the array size from hash memory // INLINED!!
+        call RemoveSavedInteger(Table__ht, ((Table__sizeK)), (this)) //Clear the array size from hash memory // INLINED!!
         
-        call SaveInteger(Table___ht, (tb), (this), ( (LoadInteger(Table___ht, (tb), (0))))) // INLINED!!
-        call SaveInteger(Table___ht, (tb), (0), ( this)) // INLINED!!
+        call SaveInteger(Table__ht, (tb), (this), ( (LoadInteger(Table__ht, (tb), (0))))) // INLINED!!
+        call SaveInteger(Table__ht, (tb), (0), ( this)) // INLINED!!
     endfunction
     
     
@@ -8315,7 +8304,7 @@ endfunction
             set end=s__TableArray_tempEnd
         endif
         loop
-            call FlushChildHashtable(Table___ht, (tb)) // INLINED!!
+            call FlushChildHashtable(Table__ht, (tb)) // INLINED!!
             set tb=tb + 1
             exitwhen tb == end
         endloop
@@ -8326,7 +8315,7 @@ endfunction
     //
     function s__TableArray_flush takes integer this returns nothing
         set s__TableArray_tempTable=this
-        set s__TableArray_tempEnd=this + (LoadInteger(Table___ht, ((Table___sizeK)), ((this)))) // INLINED!!
+        set s__TableArray_tempEnd=this + (LoadInteger(Table__ht, ((Table__sizeK)), ((this)))) // INLINED!!
         call ForForce(bj_FORCE_PLAYER[0], function s__TableArray_clean)
         call s__TableArray_destroy(this)
     endfunction
@@ -8339,10 +8328,10 @@ endfunction
     //Basically, it creates a Table in the place of the parent key if
     //it didn't already get created earlier.
     function s__HashTable__getindex takes integer this,integer index returns integer
-        local integer t= (LoadInteger(Table___ht, ((this)), (index))) // INLINED!!
+        local integer t= (LoadInteger(Table__ht, ((this)), (index))) // INLINED!!
         if t == 0 then
             set t=s__Table_create()
-            call SaveInteger(Table___ht, ((this)), (index), ( t)) //whoops! Forgot that line. I'm out of practice! // INLINED!!
+            call SaveInteger(Table__ht, ((this)), (index), ( t)) //whoops! Forgot that line. I'm out of practice! // INLINED!!
         endif
         return t
     endfunction
@@ -8350,16 +8339,16 @@ endfunction
     //You need to call this on each parent key that you used if you
     //intend to destroy the HashTable or simply no longer need that key.
     function s__HashTable_remove takes integer this,integer index returns nothing
-        local integer t= (LoadInteger(Table___ht, ((this)), (index))) // INLINED!!
+        local integer t= (LoadInteger(Table__ht, ((this)), (index))) // INLINED!!
         if t != 0 then
             call s__Table_destroy(t)
-            call RemoveSavedInteger(Table___ht, ((this)), (index)) // INLINED!!
+            call RemoveSavedInteger(Table__ht, ((this)), (index)) // INLINED!!
         endif
     endfunction
     
     //Added in version 4.1
     function s__HashTable_has takes integer this,integer index returns boolean
-        return (HaveSavedInteger(Table___ht, ((this)), (index))) // INLINED!!
+        return (HaveSavedInteger(Table__ht, ((this)), (index))) // INLINED!!
     endfunction
     
     //HashTables are just fancy Table indices.
@@ -8419,7 +8408,7 @@ endfunction
     function SetTimerData takes timer t,integer value returns nothing
 
             // new blue
-            call SaveInteger(TimerUtils___ht, 0, GetHandleId(t), value)
+            call SaveInteger(TimerUtils__ht, 0, GetHandleId(t), value)
             
 
 
@@ -8443,7 +8432,7 @@ endfunction
     function GetTimerData takes timer t returns integer
 
             // new blue
-            return LoadInteger(TimerUtils___ht, 0, GetHandleId(t))
+            return LoadInteger(TimerUtils__ht, 0, GetHandleId(t))
             
 
 
@@ -8472,16 +8461,16 @@ endfunction
     //
 
     function NewTimerEx takes integer value returns timer
-        if ( TimerUtils___tN == 0 ) then
-            if ( not TimerUtils___didinit ) then
+        if ( TimerUtils__tN == 0 ) then
+            if ( not TimerUtils__didinit ) then
                 //This extra if shouldn't represent a major performance drawback
                 //because QUANTITY rule is not supposed to be broken every day. 
                 call TriggerEvaluate(st___prototype5[(1)]) // INLINED!!
-                set TimerUtils___tN=TimerUtils___tN - 1
+                set TimerUtils__tN=TimerUtils__tN - 1
             else
                 //If this happens then the QUANTITY rule has already been broken, try to fix the
                 // issue, else fail.
-                set s__TimerUtils___tT[0]= CreateTimer()
+                set s__TimerUtils__tT[0]= CreateTimer()
 
 
 
@@ -8499,10 +8488,10 @@ endfunction
 
             endif
         else
-            set TimerUtils___tN=TimerUtils___tN - 1
+            set TimerUtils__tN=TimerUtils__tN - 1
         endif
-        call SaveInteger(TimerUtils___ht, 0, GetHandleId((s__TimerUtils___tT[TimerUtils___tN] )), ( value)) // INLINED!!
-     return s__TimerUtils___tT[TimerUtils___tN]
+        call SaveInteger(TimerUtils__ht, 0, GetHandleId((s__TimerUtils__tT[TimerUtils__tN] )), ( value)) // INLINED!!
+     return s__TimerUtils__tT[TimerUtils__tN]
     endfunction
     
     function NewTimer takes nothing returns timer
@@ -8515,28 +8504,28 @@ endfunction
         if ( t == null ) then
             return
         endif
-        if ( TimerUtils___tN == TimerUtils___ARRAY_SIZE ) then
+        if ( TimerUtils__tN == TimerUtils__ARRAY_SIZE ) then
             //stack is full, the map already has much more troubles than the chance of bug
             call DestroyTimer(t)
         else
-            set s__runningTimersString[(LoadInteger(Table___ht, (runningTimers), (GetHandleId(t))))]= "" // INLINED!!
-	    call RemoveSavedInteger(Table___ht, (runningTimers), (GetHandleId(t))) // INLINED!!
+            set s__runningTimersString[(LoadInteger(Table__ht, (runningTimers), (GetHandleId(t))))]= "" // INLINED!!
+	    call RemoveSavedInteger(Table__ht, (runningTimers), (GetHandleId(t))) // INLINED!!
             call PauseTimer(t)
-            if ( (LoadInteger(TimerUtils___ht, 0, GetHandleId((t)))) == TimerUtils___HELD ) then // INLINED!!
+            if ( (LoadInteger(TimerUtils__ht, 0, GetHandleId((t)))) == TimerUtils__HELD ) then // INLINED!!
                 return
             endif
-            call SaveInteger(TimerUtils___ht, 0, GetHandleId((t )), ( TimerUtils___HELD)) // INLINED!!
-            set s__TimerUtils___tT[TimerUtils___tN]= t
-            set TimerUtils___tN=TimerUtils___tN + 1
+            call SaveInteger(TimerUtils__ht, 0, GetHandleId((t )), ( TimerUtils__HELD)) // INLINED!!
+            set s__TimerUtils__tT[TimerUtils__tN]= t
+            set TimerUtils__tN=TimerUtils__tN + 1
         endif
     endfunction
 
     function TimerStartEx takes timer whichTimer,real timeout,boolean periodic,code handlerFunc,string sHandlerFunc returns nothing
         local integer i= 0
         loop
-		exitwhen i >= TimerUtils___ARRAY_SIZE
+		exitwhen i >= TimerUtils__ARRAY_SIZE
 		if s__runningTimersString[i] == "" then
-			call SaveInteger(Table___ht, (runningTimers), (GetHandleId(whichTimer)), ( i)) // INLINED!!
+			call SaveInteger(Table__ht, (runningTimers), (GetHandleId(whichTimer)), ( i)) // INLINED!!
 			set s__runningTimersString[i]= R2S(timeout) + ": " + sHandlerFunc
 			exitwhen true
 		endif
@@ -8545,33 +8534,33 @@ endfunction
 	call TimerStart(whichTimer, timeout, periodic, handlerFunc)
     endfunction
 
-    function TimerUtils___init takes nothing returns nothing
+    function TimerUtils__init takes nothing returns nothing
      local integer i=0
      local integer o=- 1
      local boolean oops= false
-        if ( TimerUtils___didinit ) then
+        if ( TimerUtils__didinit ) then
             return
         else
-            set TimerUtils___didinit=true
+            set TimerUtils__didinit=true
         endif
       
         set i=0
         loop
-        	exitwhen i >= TimerUtils___ARRAY_SIZE
+        	exitwhen i >= TimerUtils__ARRAY_SIZE
 		set s__runningTimersString[i]= ""
 		set i=i + 1
 	endloop
         set i=0
         set runningTimers=s__Table_create()
 
-            set TimerUtils___ht=InitHashtable()
+            set TimerUtils__ht=InitHashtable()
             loop
-                exitwhen ( i == TimerUtils___QUANTITY )
-                set s__TimerUtils___tT[i]= CreateTimer()
-                call SaveInteger(TimerUtils___ht, 0, GetHandleId((s__TimerUtils___tT[i] )), ( TimerUtils___HELD)) // INLINED!!
+                exitwhen ( i == TimerUtils__QUANTITY )
+                set s__TimerUtils__tT[i]= CreateTimer()
+                call SaveInteger(TimerUtils__ht, 0, GetHandleId((s__TimerUtils__tT[i] )), ( TimerUtils__HELD)) // INLINED!!
                 set i=i + 1
             endloop
-            set TimerUtils___tN=TimerUtils___QUANTITY
+            set TimerUtils__tN=TimerUtils__QUANTITY
 
 
 
@@ -8962,7 +8951,7 @@ endfunction
         return s__MATRIX4_SetValues(Output,s__MATRIX4_m11[M1] * s__MATRIX4_m11[M2] + s__MATRIX4_m21[M1] * s__MATRIX4_m12[M2] + s__MATRIX4_m31[M1] * s__MATRIX4_m13[M2] + s__MATRIX4_m41[M1] * s__MATRIX4_m14[M2] , s__MATRIX4_m12[M1] * s__MATRIX4_m11[M2] + s__MATRIX4_m22[M1] * s__MATRIX4_m12[M2] + s__MATRIX4_m32[M1] * s__MATRIX4_m13[M2] + s__MATRIX4_m42[M1] * s__MATRIX4_m14[M2] , s__MATRIX4_m13[M1] * s__MATRIX4_m11[M2] + s__MATRIX4_m23[M1] * s__MATRIX4_m12[M2] + s__MATRIX4_m33[M1] * s__MATRIX4_m13[M2] + s__MATRIX4_m43[M1] * s__MATRIX4_m14[M2] , s__MATRIX4_m14[M1] * s__MATRIX4_m11[M2] + s__MATRIX4_m24[M1] * s__MATRIX4_m12[M2] + s__MATRIX4_m34[M1] * s__MATRIX4_m13[M2] + s__MATRIX4_m44[M1] * s__MATRIX4_m14[M2] , s__MATRIX4_m11[M1] * s__MATRIX4_m21[M2] + s__MATRIX4_m21[M1] * s__MATRIX4_m22[M2] + s__MATRIX4_m31[M1] * s__MATRIX4_m23[M2] + s__MATRIX4_m41[M1] * s__MATRIX4_m24[M2] , s__MATRIX4_m12[M1] * s__MATRIX4_m21[M2] + s__MATRIX4_m22[M1] * s__MATRIX4_m22[M2] + s__MATRIX4_m32[M1] * s__MATRIX4_m23[M2] + s__MATRIX4_m42[M1] * s__MATRIX4_m24[M2] , s__MATRIX4_m13[M1] * s__MATRIX4_m21[M2] + s__MATRIX4_m23[M1] * s__MATRIX4_m22[M2] + s__MATRIX4_m33[M1] * s__MATRIX4_m23[M2] + s__MATRIX4_m43[M1] * s__MATRIX4_m24[M2] , s__MATRIX4_m14[M1] * s__MATRIX4_m21[M2] + s__MATRIX4_m24[M1] * s__MATRIX4_m22[M2] + s__MATRIX4_m34[M1] * s__MATRIX4_m23[M2] + s__MATRIX4_m44[M1] * s__MATRIX4_m24[M2] , s__MATRIX4_m11[M1] * s__MATRIX4_m31[M2] + s__MATRIX4_m21[M1] * s__MATRIX4_m32[M2] + s__MATRIX4_m31[M1] * s__MATRIX4_m33[M2] + s__MATRIX4_m41[M1] * s__MATRIX4_m34[M2] , s__MATRIX4_m12[M1] * s__MATRIX4_m31[M2] + s__MATRIX4_m22[M1] * s__MATRIX4_m32[M2] + s__MATRIX4_m32[M1] * s__MATRIX4_m33[M2] + s__MATRIX4_m42[M1] * s__MATRIX4_m34[M2] , s__MATRIX4_m13[M1] * s__MATRIX4_m31[M2] + s__MATRIX4_m23[M1] * s__MATRIX4_m32[M2] + s__MATRIX4_m33[M1] * s__MATRIX4_m33[M2] + s__MATRIX4_m43[M1] * s__MATRIX4_m34[M2] , s__MATRIX4_m14[M1] * s__MATRIX4_m31[M2] + s__MATRIX4_m24[M1] * s__MATRIX4_m32[M2] + s__MATRIX4_m34[M1] * s__MATRIX4_m33[M2] + s__MATRIX4_m44[M1] * s__MATRIX4_m34[M2] , s__MATRIX4_m11[M1] * s__MATRIX4_m41[M2] + s__MATRIX4_m21[M1] * s__MATRIX4_m42[M2] + s__MATRIX4_m31[M1] * s__MATRIX4_m43[M2] + s__MATRIX4_m41[M1] * s__MATRIX4_m44[M2] , s__MATRIX4_m12[M1] * s__MATRIX4_m41[M2] + s__MATRIX4_m22[M1] * s__MATRIX4_m42[M2] + s__MATRIX4_m32[M1] * s__MATRIX4_m43[M2] + s__MATRIX4_m42[M1] * s__MATRIX4_m44[M2] , s__MATRIX4_m13[M1] * s__MATRIX4_m41[M2] + s__MATRIX4_m23[M1] * s__MATRIX4_m42[M2] + s__MATRIX4_m33[M1] * s__MATRIX4_m43[M2] + s__MATRIX4_m43[M1] * s__MATRIX4_m44[M2] , s__MATRIX4_m14[M1] * s__MATRIX4_m41[M2] + s__MATRIX4_m24[M1] * s__MATRIX4_m42[M2] + s__MATRIX4_m34[M1] * s__MATRIX4_m43[M2] + s__MATRIX4_m44[M1] * s__MATRIX4_m44[M2])
     endfunction
 
-    function UIMath___Init takes nothing returns nothing
+    function UIMath__Init takes nothing returns nothing
        set s__VECTOR3_Zero=s__VECTOR3_New_0()
        set s__VECTOR3_oneX=s__VECTOR3_New_1(1 , 0 , 0)
        set s__VECTOR3_oneY=s__VECTOR3_New_1(0 , 1 , 0)
@@ -8977,8 +8966,8 @@ endfunction
 //library UIMath ends
 //library WorldBounds:
     
-//Implemented from module WorldBounds___WorldBoundInit:
-        function s__WorldBounds_WorldBounds___WorldBoundInit___onInit takes nothing returns nothing
+//Implemented from module WorldBounds__WorldBoundInit:
+        function s__WorldBounds_WorldBounds__WorldBoundInit__onInit takes nothing returns nothing
             set s__WorldBounds_world=GetWorldBounds()
             set s__WorldBounds_maxX=R2I(GetRectMaxX(s__WorldBounds_world))
             set s__WorldBounds_maxY=R2I(GetRectMaxY(s__WorldBounds_world))
@@ -9041,12 +9030,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__ItemList_Alloc___recycle[(0)] == 0 ) then
-                set s__ItemList_Alloc___instanceCount=s__ItemList_Alloc___instanceCount + 1
-                set this=s__ItemList_Alloc___instanceCount
+            if ( s__ItemList_Alloc__recycle[(0)] == 0 ) then
+                set s__ItemList_Alloc__instanceCount=s__ItemList_Alloc__instanceCount + 1
+                set this=s__ItemList_Alloc__instanceCount
             else
-                set this=s__ItemList_Alloc___recycle[(0)]
-                set s__ItemList_Alloc___recycle[(0)]=s__ItemList_Alloc___recycle[s__ItemList_Alloc___recycle[(0)]]
+                set this=s__ItemList_Alloc__recycle[(0)]
+                set s__ItemList_Alloc__recycle[(0)]=s__ItemList_Alloc__recycle[s__ItemList_Alloc__recycle[(0)]]
             endif
 
     
@@ -9054,8 +9043,8 @@ endfunction
         endfunction
     
         function s__ItemList_deallocate takes integer this returns nothing
-            set s__ItemList_Alloc___recycle[this]=s__ItemList_Alloc___recycle[(0)]
-            set s__ItemList_Alloc___recycle[(0)]=this
+            set s__ItemList_Alloc__recycle[this]=s__ItemList_Alloc__recycle[(0)]
+            set s__ItemList_Alloc__recycle[(0)]=this
         endfunction
     function s__ItemList_create takes integer id returns integer
         local integer this= s__ItemList_allocate()
@@ -9068,19 +9057,19 @@ endfunction
         return this
     endfunction 
     function s__ItemList_addAction takes integer this,integer id,integer price,integer action returns nothing
-        call SaveInteger(Table___ht, (s__ItemList_items[this]), (s__ItemList_maxCount[this]), ( id)) // INLINED!!
+        call SaveInteger(Table__ht, (s__ItemList_items[this]), (s__ItemList_maxCount[this]), ( id)) // INLINED!!
 	if s__ItemList_maxCount[this] > 0 then
-        	call SaveInteger(Table___ht, (s__ItemList_itemsFrom[this]), (s__ItemList_maxCount[this]), ( (LoadInteger(Table___ht, (s__ItemList_items[this]), (s__ItemList_maxCount[this] - 1))))) // INLINED!!
+        	call SaveInteger(Table__ht, (s__ItemList_itemsFrom[this]), (s__ItemList_maxCount[this]), ( (LoadInteger(Table__ht, (s__ItemList_items[this]), (s__ItemList_maxCount[this] - 1))))) // INLINED!!
 	endif
-        call SaveInteger(Table___ht, (s__ItemList_prices[this]), (s__ItemList_maxCount[this]), ( price)) // INLINED!!
-        call SaveInteger(Table___ht, (s__ItemList_actions[this]), (s__ItemList_maxCount[this]), ( action)) // INLINED!!
+        call SaveInteger(Table__ht, (s__ItemList_prices[this]), (s__ItemList_maxCount[this]), ( price)) // INLINED!!
+        call SaveInteger(Table__ht, (s__ItemList_actions[this]), (s__ItemList_maxCount[this]), ( action)) // INLINED!!
         set s__ItemList_maxCount[this]=s__ItemList_maxCount[this] + 1
     endfunction 
     function s__ItemList_addActionFrom takes integer this,integer id,integer price,integer from,integer action returns nothing
-        call SaveInteger(Table___ht, (s__ItemList_items[this]), (s__ItemList_maxCount[this]), ( id)) // INLINED!!
-        call SaveInteger(Table___ht, (s__ItemList_itemsFrom[this]), (s__ItemList_maxCount[this]), ( from)) // INLINED!!
-        call SaveInteger(Table___ht, (s__ItemList_prices[this]), (s__ItemList_maxCount[this]), ( price)) // INLINED!!
-        call SaveInteger(Table___ht, (s__ItemList_actions[this]), (s__ItemList_maxCount[this]), ( action)) // INLINED!!
+        call SaveInteger(Table__ht, (s__ItemList_items[this]), (s__ItemList_maxCount[this]), ( id)) // INLINED!!
+        call SaveInteger(Table__ht, (s__ItemList_itemsFrom[this]), (s__ItemList_maxCount[this]), ( from)) // INLINED!!
+        call SaveInteger(Table__ht, (s__ItemList_prices[this]), (s__ItemList_maxCount[this]), ( price)) // INLINED!!
+        call SaveInteger(Table__ht, (s__ItemList_actions[this]), (s__ItemList_maxCount[this]), ( action)) // INLINED!!
         set s__ItemList_maxCount[this]=s__ItemList_maxCount[this] + 1
     endfunction 
     function s__ItemList_buyItem takes integer this,integer id,integer price returns nothing
@@ -9103,9 +9092,9 @@ endfunction
         local integer gold= GetPlayerState(Player(s__ItemList_id[this]), PLAYER_STATE_RESOURCE_GOLD)
         local unit u= udg_units33[s__ItemList_id[this] + 1]
         if s__ItemList_count[this] < s__ItemList_maxCount[this] then
-            set id=(LoadInteger(Table___ht, (s__ItemList_items[this]), (s__ItemList_count[this]))) // INLINED!!
-            set price=(LoadInteger(Table___ht, (s__ItemList_prices[this]), (s__ItemList_count[this]))) // INLINED!!
-            set action=(LoadInteger(Table___ht, (s__ItemList_actions[this]), (s__ItemList_count[this]))) // INLINED!!
+            set id=(LoadInteger(Table__ht, (s__ItemList_items[this]), (s__ItemList_count[this]))) // INLINED!!
+            set price=(LoadInteger(Table__ht, (s__ItemList_prices[this]), (s__ItemList_count[this]))) // INLINED!!
+            set action=(LoadInteger(Table__ht, (s__ItemList_actions[this]), (s__ItemList_count[this]))) // INLINED!!
             if action == 0 then
                 if (UnitHasItemOfTypeBJ((u ), ( id))) then // INLINED!!
                     set s__ItemList_count[this]=s__ItemList_count[this] + 1
@@ -9123,7 +9112,7 @@ endfunction
                     return false
                 endif
             elseif action == 1 then
-                 set id2=(LoadInteger(Table___ht, (s__ItemList_itemsFrom[this]), (s__ItemList_count[this]))) // INLINED!!
+                 set id2=(LoadInteger(Table__ht, (s__ItemList_itemsFrom[this]), (s__ItemList_count[this]))) // INLINED!!
                  if gold >= price and (UnitHasItemOfTypeBJ((u ), ( id2))) then // INLINED!!
                     call RemoveItem(GetItemOfTypeFromUnitBJ((u ), ( id2))) // INLINED!!
                     call UnitAddItemEx(u , id)
@@ -9146,34 +9135,34 @@ endfunction
     endfunction 
 
 
-    function AutoBuyS__buyItems takes unit u returns nothing
+    function AutoBuyS___buyItems takes unit u returns nothing
         local integer id= GetPlayerId(GetOwningPlayer(u))
         loop
-            exitwhen not s__ItemList_doAction(s__AutoBuyS__lists[id])
+            exitwhen not s__ItemList_doAction(s__AutoBuyS___lists[id])
         endloop
     endfunction
     
-    function AutoBuyS__enterKonoha takes nothing returns nothing
-        if IsUnitAlly(GetEnteringUnit(), Player(3)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS__autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] then
-		call AutoBuyS__buyItems(GetEnteringUnit())
+    function AutoBuyS___enterKonoha takes nothing returns nothing
+        if IsUnitAlly(GetEnteringUnit(), Player(3)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS___autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] then
+		call AutoBuyS___buyItems(GetEnteringUnit())
         endif
     endfunction
     
-    function AutoBuyS__enterEvil takes nothing returns nothing
-        if IsUnitAlly(GetTriggerUnit(), Player(7)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS__autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] then
-            call AutoBuyS__buyItems(GetEnteringUnit())
+    function AutoBuyS___enterEvil takes nothing returns nothing
+        if IsUnitAlly(GetTriggerUnit(), Player(7)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS___autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] then
+            call AutoBuyS___buyItems(GetEnteringUnit())
         endif
     endfunction
     
-    function AutoBuyS__enterAkt takes nothing returns nothing
-        if IsUnitAlly(GetEnteringUnit(), Player(11)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS__autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] then
-            call AutoBuyS__buyItems(GetEnteringUnit())
+    function AutoBuyS___enterAkt takes nothing returns nothing
+        if IsUnitAlly(GetEnteringUnit(), Player(11)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS___autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] then
+            call AutoBuyS___buyItems(GetEnteringUnit())
         endif
     endfunction
      
     function autoBuyCmdEnable takes boolean enable returns nothing
  local integer id= GetPlayerId(GetTriggerPlayer())
-	set s__AutoBuyS__autobuy[id]= enable
+	set s__AutoBuyS___autobuy[id]= enable
     endfunction 
 
     function autobuyCmdBuild takes integer build returns nothing
@@ -9184,306 +9173,306 @@ endfunction
   local boolean gen
   local boolean nin
   local integer id= GetPlayerId(GetTriggerPlayer())
-		set s__AutoBuyS__autobuy[id]= true
-		set s__AutoBuyS__buildId[id]= build
-                if s__AutoBuyS__firstUse[id] then
+		set s__AutoBuyS___autobuy[id]= true
+		set s__AutoBuyS___buildId[id]= build
+                if s__AutoBuyS___firstUse[id] then
                     set str=GetHeroStr(udg_units33[id + 1], true)
                     set agi=GetHeroAgi(udg_units33[id + 1], true)
                     set int=GetHeroInt(udg_units33[id + 1], true)
                     set tai=str >= agi and str >= int
                     set nin=agi >= str and agi >= int
                     set gen=int >= str and int >= agi
-                    set s__AutoBuyS__lists[id]= s__ItemList_create(id)
-                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CLOGS ) , ( 800) , 0) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I00B' ) , ( 900) , 1) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),(NINJA_BOOTS ) , ( 900) , 1) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OIL ) , ( 2250) , 0) // INLINED!!
-                    if s__AutoBuyS__buildId[id] == 2 then
+                    set s__AutoBuyS___lists[id]= s__ItemList_create(id)
+                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CLOGS ) , ( 800) , 0) // INLINED!!
+                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I00B' ) , ( 900) , 1) // INLINED!!
+                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NINJA_BOOTS ) , ( 900) , 1) // INLINED!!
+                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 0) // INLINED!!
+                    if s__AutoBuyS___buildId[id] == 2 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing offensive build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_BADGE ) , ( 2000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_MASK ) , ( 800 + 2500) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_BADGE ) , ( 2000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_MASK ) , ( 800 + 2500) , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(BAULK_OF_KAWARIMI ) , ( 2000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('fwss' ) , ( 800) , 2) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(BAULK_OF_KAWARIMI ) , ( 2000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('fwss' ) , ( 800) , 2) // INLINED!!
 			if tai then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),(HOKAGE_ROBE ) , ( 9500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(HOKAGE_ROBE ) , ( 9500 ) , ( KAGE_ROBE) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),(RAIKAGE_ROBE ) , ( 9500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(RAIKAGE_ROBE ) , ( 9500 ) , ( KAGE_ROBE) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),(MIZUKAGE_ROBE ) , ( 9500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(MIZUKAGE_ROBE ) , ( 9500 ) , ( KAGE_ROBE) , 1) // INLINED!!
                         endif
 
 			if tai then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I07A' ) , ( 14000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07A' ) , ( 14000 ) , ( ANBU_MASK) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I07E' ) , ( 14000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07E' ) , ( 14000 ) , ( ANBU_MASK) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I07B' ) , ( 14000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07B' ) , ( 14000 ) , ( ANBU_MASK) , 1) // INLINED!!
                         endif
-                    elseif s__AutoBuyS__buildId[id] == 3 then
+                    elseif s__AutoBuyS___buildId[id] == 3 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing anti-stun build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('mcou' ) , ( 4000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('mcou' ) , ( 4000) , 0) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(BAULK_OF_KAWARIMI ) , ( 2000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OTOKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I006' ) , ( 10300 ) , ( 'mcou') , 1) // INLINED!!
-                    elseif s__AutoBuyS__buildId[id] == 4 then
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(BAULK_OF_KAWARIMI ) , ( 2000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OTOKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I006' ) , ( 10300 ) , ( 'mcou') , 1) // INLINED!!
+                    elseif s__AutoBuyS___buildId[id] == 4 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing anti-debuff build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('modt' ) , ( 2000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_MASK ) , ( 800 + 2500) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANBI_SKIN ) , ( 3300) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I054' ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I055' ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I05Q' ) , ( 5000) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('modt' ) , ( 2000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_MASK ) , ( 800 + 2500) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANBI_SKIN ) , ( 3300) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I054' ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I055' ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05Q' ) , ( 5000) , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I033' ) , ( 2250) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I033' ) , ( 2250) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I006' ) , ( 9000 ) , ( ANBU_MASK) , 1) // INLINED!!
-                    elseif s__AutoBuyS__buildId[id] == 5 then
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I006' ) , ( 9000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                    elseif s__AutoBuyS___buildId[id] == 5 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing auto-attack build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I007' ) , ( 6000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(AKATSUKI_RING ) , ( 3500) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JADE_OF_SUSANOO ) , ( 8000) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I007' ) , ( 6000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(AKATSUKI_RING ) , ( 3500) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JADE_OF_SUSANOO ) , ( 8000) , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I03X' ) , ( 2250) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KAZEKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('rhth' ) , ( 5000 ) , ( JADE_OF_SUSANOO) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03X' ) , ( 2250) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAZEKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('rhth' ) , ( 5000 ) , ( JADE_OF_SUSANOO) , 1) // INLINED!!
                     else
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing defensive build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I00R' ) , ( 800) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I00R' ) , ( 800) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(BAULK_OF_KAWARIMI ) , ( 2000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(BAULK_OF_KAWARIMI ) , ( 2000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),(KAGE_ROBE ) , ( 12800 ) , ( SANNIN_CLOTH) , 1) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800 ) , ( SANNIN_CLOTH) , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(HOKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(HOKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(RAIKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(RAIKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(MIZUKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(MIZUKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I03Y' ) , ( 2700) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I03Z' ) , ( 2700) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I040' ) , ( 2700 ) , ( 'I03Z') , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I04T' ) , ( 9900 ) , ( 'I03Z') , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03Y' ) , ( 2700) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03Z' ) , ( 2700) , 1) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I040' ) , ( 2700 ) , ( 'I03Z') , 1) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I04T' ) , ( 9900 ) , ( 'I03Z') , 1) // INLINED!!
                     endif
                 endif
-                set s__AutoBuyS__firstUse[id]= false
+                set s__AutoBuyS___firstUse[id]= false
     endfunction
 
-    function AutoBuyS__autobuyCmd takes nothing returns nothing
+    function AutoBuyS___autobuyCmd takes nothing returns nothing
         local integer id= GetPlayerId(GetTriggerPlayer())
         if udg_units33[id + 1] == null then
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You must have a hero to enable this command.|r")
         else
-            if s__AutoBuyS__autobuy[id] then
+            if s__AutoBuyS___autobuy[id] then
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebAutobuy disabled.|r")
-                set s__AutoBuyS__autobuy[id]= false
+                set s__AutoBuyS___autobuy[id]= false
             else
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebAutobuy enabled. Type -autobuy again to disable it. |cffff0000DO NOT BUY ANYTHING MANUALLY!|r")
-                set s__AutoBuyS__buildId[id]= S2I(SubStringBJ(GetEventPlayerChatString(), 10, 11))
-		call autobuyCmdBuild(s__AutoBuyS__buildId[id])
+                set s__AutoBuyS___buildId[id]= S2I(SubStringBJ(GetEventPlayerChatString(), 10, 11))
+		call autobuyCmdBuild(s__AutoBuyS___buildId[id])
 	    endif
         endif
     endfunction
     
-    function AutoBuyS__init takes nothing returns nothing
+    function AutoBuyS___init takes nothing returns nothing
         local trigger t= CreateTrigger()
         local trigger t1= CreateTrigger()
         local trigger t2= CreateTrigger()
@@ -9491,19 +9480,19 @@ endfunction
         local integer i= 0
         loop
             exitwhen i > 11
-            set s__AutoBuyS__autobuy[i]= false
-            set s__AutoBuyS__firstUse[i]= true
+            set s__AutoBuyS___autobuy[i]= false
+            set s__AutoBuyS___firstUse[i]= true
             call TriggerRegisterPlayerChatEvent(t, Player(i), "-autobuy", false)
             set i=i + 1
         endloop
-        call TriggerAddAction(t, function AutoBuyS__autobuyCmd)
+        call TriggerAddAction(t, function AutoBuyS___autobuyCmd)
 
         call TriggerRegisterEnterRectSimple(t1, gg_rct_KONOHA)
-        call TriggerAddAction(t1, function AutoBuyS__enterKonoha)
+        call TriggerAddAction(t1, function AutoBuyS___enterKonoha)
         call TriggerRegisterEnterRectSimple(t2, gg_rct_EVIL)
-        call TriggerAddAction(t2, function AutoBuyS__enterEvil)
+        call TriggerAddAction(t2, function AutoBuyS___enterEvil)
         call TriggerRegisterEnterRectSimple(t3, gg_rct_AKATSUKI)
-        call TriggerAddAction(t3, function AutoBuyS__enterAkt)
+        call TriggerAddAction(t3, function AutoBuyS___enterAkt)
 
     endfunction
    
@@ -9514,18 +9503,18 @@ endfunction
 
 
     function GetCameraDeltaZ takes nothing returns real
-        return Camera___DeltaZ
+        return Camera__DeltaZ
     endfunction
     
-    function Camera___Matrix4Perspective1 takes integer Output,real fovy,real Aspect,real zn,real zf returns integer
+    function Camera__Matrix4Perspective1 takes integer Output,real fovy,real Aspect,real zn,real zf returns integer
         return s__MATRIX4_SetValues(Output,2 * zn / fovy , 0 , 0 , 0 , 0 , 2 * zn / Aspect , 0 , 0 , 0 , 0 , zf / ( zf - zn ) , 1 , 0 , 0 , zn * zf / ( zn - zf ) , 0)
     endfunction
 
-    function Camera___Matrix4Perspective2 takes integer Output,real n,real f,real r,real l,real t,real b returns integer
+    function Camera__Matrix4Perspective2 takes integer Output,real n,real f,real r,real l,real t,real b returns integer
         return s__MATRIX4_SetValues(Output,2 * n / ( r - l ) , 0 , ( r + l ) / ( r - l ) , 0 , 0 , 2 * n / ( t - b ) , ( t + b ) / ( t - b ) , 0 , 0 , 0 , - ( f + n ) / ( f - n ) , - 2 * f * n / ( f - n ) , 0 , 0 , - 1 , 0)
     endfunction
 
-    function Camera___Matrix4Look takes integer Output,integer PosCamera,integer AxisX,integer AxisY,integer AxisZ returns integer
+    function Camera__Matrix4Look takes integer Output,integer PosCamera,integer AxisX,integer AxisY,integer AxisZ returns integer
         return s__MATRIX4_SetValues(Output,s__VECTOR3_x[AxisX] , s__VECTOR3_x[AxisY] , s__VECTOR3_x[AxisZ] , 0 , s__VECTOR3_y[AxisX] , s__VECTOR3_y[AxisY] , s__VECTOR3_y[AxisZ] , 0 , s__VECTOR3_z[AxisX] , s__VECTOR3_z[AxisY] , s__VECTOR3_z[AxisZ] , 0 , - Vec3Dot(AxisX , PosCamera) , - Vec3Dot(AxisY , PosCamera) , - Vec3Dot(AxisZ , PosCamera) , 1)
     endfunction
 
@@ -9568,7 +9557,7 @@ endfunction
             call Vec3Normalize(s__Camera_axisX[this] , Vec3Cross(s__Camera_axisX[this] , s__Camera_axisZ[this] , s__VECTOR3_oneZ))
             call Vec3Transform_1(s__Camera_axisY[this] , Vec3Cross(s__Camera_axisY[this] , s__Camera_axisX[this] , s__Camera_axisZ[this]) , mat)
             call Vec3Transform_1(s__Camera_axisX[this] , s__Camera_axisX[this] , mat)
-            call Camera___Matrix4Look(s__Camera_view[this] , s__Camera_eye[this] , s__Camera_axisX[this] , s__Camera_axisY[this] , s__Camera_axisZ[this])
+            call Camera__Matrix4Look(s__Camera_view[this] , s__Camera_eye[this] , s__Camera_axisX[this] , s__Camera_axisY[this] , s__Camera_axisZ[this])
             call s__MATRIX3_deallocate(mat)
         endfunction
 
@@ -9579,7 +9568,7 @@ endfunction
                 call SetCameraField(CAMERA_FIELD_ROLL, s__Camera_roll[this] * bj_RADTODEG, 0)
                 call SetCameraField(CAMERA_FIELD_TARGET_DISTANCE, s__Camera_distance[this], 0)
                 call SetCameraTargetController(Camera_DummyUnit[GetPlayerId(p)], s__VECTOR3_x[s__Camera_at[this]], s__VECTOR3_y[s__Camera_at[this]], false)
-                call SetCameraField(CAMERA_FIELD_ZOFFSET, s__VECTOR3_z[s__Camera_at[this]] - Camera___DeltaZ, 0)
+                call SetCameraField(CAMERA_FIELD_ZOFFSET, s__VECTOR3_z[s__Camera_at[this]] - Camera__DeltaZ, 0)
             endif
             if s__Camera_change[this] or ignoreChange then
                 set s__Camera_change[this]=false
@@ -9639,8 +9628,8 @@ endfunction
             
             set s__Camera_customValue[this]=0
             set s__Camera_change[this]=true
-            set s__Camera_eye[this]=s__VECTOR3_New_1(0.0 , - 922.668 , Camera___DeltaZ + 1367.912)
-            set s__Camera_at[this]=s__VECTOR3_New_1(0 , 0 , Camera___DeltaZ)
+            set s__Camera_eye[this]=s__VECTOR3_New_1(0.0 , - 922.668 , Camera__DeltaZ + 1367.912)
+            set s__Camera_at[this]=s__VECTOR3_New_1(0 , 0 , Camera__DeltaZ)
             set s__Camera_distance[this]=0
             set s__Camera_yaw[this]=0
             set s__Camera_pitch[this]=0
@@ -9649,7 +9638,7 @@ endfunction
             set s__Camera_axisY[this]=s__VECTOR3__allocate()
             set s__Camera_axisZ[this]=s__VECTOR3__allocate()
             set s__Camera_view[this]=s__MATRIX4__allocate()
-            set s__Camera_projection[this]=Camera___Matrix4Perspective2(s__MATRIX4__allocate() , 0.5 , 10000 , - SCREEN_WIDTH / 2 , SCREEN_WIDTH / 2 , - SCREEN_HEIGHT / 2 , SCREEN_HEIGHT / 2)
+            set s__Camera_projection[this]=Camera__Matrix4Perspective2(s__MATRIX4__allocate() , 0.5 , 10000 , - SCREEN_WIDTH / 2 , SCREEN_WIDTH / 2 , - SCREEN_HEIGHT / 2 , SCREEN_HEIGHT / 2)
             call s__Camera_updateDistanceYawPitch(this)
             call s__Camera_updateAxisMatrix(this)
             
@@ -9669,14 +9658,14 @@ endfunction
         
 
 
-    function Camera___InitDeltaZ takes nothing returns nothing
+    function Camera__InitDeltaZ takes nothing returns nothing
         local timer t= GetExpiredTimer()
         
-        set Camera___TempX=GetCameraTargetPositionX()
-        set Camera___TempY=GetCameraTargetPositionY()
+        set Camera__TempX=GetCameraTargetPositionX()
+        set Camera__TempY=GetCameraTargetPositionY()
         call SetCameraPosition(CHECK_DELTAZ_X, CHECK_DELTAZ_Y)
-        set Camera___DeltaZ=GetCameraTargetPositionZ()
-        call SetCameraPosition(Camera___TempX, Camera___TempY)
+        set Camera__DeltaZ=GetCameraTargetPositionZ()
+        call SetCameraPosition(Camera__TempX, Camera__TempY)
 
 
             call ReleaseTimer(t)
@@ -9688,8 +9677,8 @@ endfunction
     endfunction
     
     
-//Implemented from module Camera___CamInitModule:
-        function s__Camera___CamInit_Camera___CamInitModule___onInit takes nothing returns nothing
+//Implemented from module Camera__CamInitModule:
+        function s__Camera__CamInit_Camera__CamInitModule__onInit takes nothing returns nothing
             local integer i= 0
             local integer user
             
@@ -9707,7 +9696,7 @@ endfunction
             
             // init delta z
 
-                call TimerStartEx((NewTimerEx(0)) , 0. , false , function Camera___InitDeltaZ , "InitDeltaZ") // INLINED!!
+                call TimerStartEx((NewTimerEx(0)) , 0. , false , function Camera__InitDeltaZ , "InitDeltaZ") // INLINED!!
 
 
 
@@ -9722,7 +9711,7 @@ endfunction
 
         
         function s__Dialog_getClickedDialog takes nothing returns integer
-            return (LoadInteger(Table___ht, (Dialog___instance), (GetHandleId(GetClickedDialog())))) // INLINED!!
+            return (LoadInteger(Table__ht, (Dialog___instance), (GetHandleId(GetClickedDialog())))) // INLINED!!
         endfunction
         function s__Dialog_getClickedButton takes nothing returns button
             return GetClickedButton()
@@ -9756,7 +9745,7 @@ endfunction
         
         function s__Dialog_registerClickEvent takes integer this,boolexpr b returns nothing
             if s__Dialog_click[this] == null then
-                call SaveInteger(Table___ht, (Dialog___instance), (GetHandleId(s__Dialog_dg[this])), ( this)) // INLINED!!
+                call SaveInteger(Table__ht, (Dialog___instance), (GetHandleId(s__Dialog_dg[this])), ( this)) // INLINED!!
                 set s__Dialog_click[this]=CreateTrigger()
                 call TriggerRegisterDialogEvent(s__Dialog_click[this], s__Dialog_dg[this])
             endif
@@ -9767,7 +9756,7 @@ endfunction
             
             if s__Dialog_click[this] != null then
                 call DestroyTrigger(s__Dialog_click[this])
-                call RemoveSavedInteger(Table___ht, (Dialog___instance), (GetHandleId(s__Dialog_dg[this]))) // INLINED!!
+                call RemoveSavedInteger(Table__ht, (Dialog___instance), (GetHandleId(s__Dialog_dg[this]))) // INLINED!!
                 set s__Dialog_click[this]=null
             endif
             
@@ -9784,7 +9773,7 @@ endfunction
         endfunction
         
 //Implemented from module Dialog___DialogInit:
-        function s__Dialog_Dialog___DialogInit___onInit takes nothing returns nothing
+        function s__Dialog_Dialog___DialogInit__onInit takes nothing returns nothing
             set Dialog___instance=s__Table_create()
         endfunction
     
@@ -10479,23 +10468,23 @@ endfunction
     endfunction
     
     function RegisterUnitIndexEvent takes boolexpr func,integer eventtype returns triggercondition
-        return TriggerAddCondition(UnitDex___IndexTrig[eventtype], func)
+        return TriggerAddCondition(UnitDex__IndexTrig[eventtype], func)
     endfunction
     
     function RemoveUnitIndexEvent takes triggercondition c,integer eventtype returns nothing
-        call TriggerRemoveCondition(UnitDex___IndexTrig[eventtype], c)
+        call TriggerRemoveCondition(UnitDex__IndexTrig[eventtype], c)
     endfunction
     
     function TriggerRegisterUnitIndexEvent takes trigger t,integer eventtype returns nothing
-        call TriggerRegisterVariableEvent(t, "UnitDex___E", EQUAL, eventtype)
+        call TriggerRegisterVariableEvent(t, "UnitDex__E", EQUAL, eventtype)
     endfunction
     
     function OnUnitIndex takes code func returns triggercondition
-        return TriggerAddCondition(UnitDex___IndexTrig[EVENT_UNIT_INDEX], Filter(func))
+        return TriggerAddCondition(UnitDex__IndexTrig[EVENT_UNIT_INDEX], Filter(func))
     endfunction
 
     function OnUnitDeindex takes code func returns triggercondition
-        return TriggerAddCondition(UnitDex___IndexTrig[EVENT_UNIT_DEINDEX], Filter(func))
+        return TriggerAddCondition(UnitDex__IndexTrig[EVENT_UNIT_DEINDEX], Filter(func))
     endfunction
     
     function UnitDexRemove takes unit u,boolean runEvents returns boolean
@@ -10507,7 +10496,7 @@ endfunction
     
         
         
-//Implemented from module UnitDex___UnitDexConfig:
+//Implemented from module UnitDex__UnitDexConfig:
     
         // The raw code of the leave detection ability.
         
@@ -10519,24 +10508,24 @@ endfunction
         
         
         
-//Implemented from module UnitDex___UnitDexCore:
+//Implemented from module UnitDex__UnitDexCore:
     
         function s__UnitDex_Remove takes unit u,boolean runEvents returns boolean
             local integer i
             
             if ( ((s__UnitDex_Unit[((GetUnitUserData(((u)))))]) != null) ) then // INLINED!!
                 set i=(GetUnitUserData((u))) // INLINED!!
-                set s__UnitDex_List[i]=UnitDex___Index
-                set UnitDex___Index=i
+                set s__UnitDex_List[i]=UnitDex__Index
+                set UnitDex__Index=i
                 
                 call GroupRemoveUnit(s__UnitDex_Group, u)
                 call SetUnitUserData(u, 0)
             
                 if ( runEvents ) then
                     set s__UnitDex_LastIndex=i
-                    set UnitDex___E=EVENT_UNIT_DEINDEX
-                    call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_DEINDEX])
-                    set UnitDex___E=- 1
+                    set UnitDex__E=EVENT_UNIT_DEINDEX
+                    call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_DEINDEX])
+                    set UnitDex__E=- 1
                 endif
                 
                 set s__UnitDex_Unit[i]=null
@@ -10548,7 +10537,7 @@ endfunction
             return false
         endfunction
         
-        function s__UnitDex_UnitDex___UnitDexCore___onGameStart takes nothing returns nothing
+        function s__UnitDex_UnitDex__UnitDexCore__onGameStart takes nothing returns nothing
             local integer i= 0
 
                 local group ENUM_GROUP= CreateGroup()
@@ -10556,7 +10545,7 @@ endfunction
             
             // Index preplaced units
             loop
-                call GroupEnumUnitsOfPlayer(ENUM_GROUP, Player(i), UnitDex___FilterEnter)
+                call GroupEnumUnitsOfPlayer(ENUM_GROUP, Player(i), UnitDex__FilterEnter)
                 
                 set i=i + 1
                 
@@ -10575,24 +10564,24 @@ endfunction
                 
                 set s__UnitDex_LastIndex=i
                 
-                call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_INDEX])
-                set UnitDex___E=EVENT_UNIT_INDEX
-                set UnitDex___E=- 1
+                call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_INDEX])
+                set UnitDex__E=EVENT_UNIT_INDEX
+                set UnitDex__E=- 1
                 
                 set i=i + 1
             endloop
 
             set s__UnitDex_LastIndex=s__UnitDex_Counter
             set s__UnitDex_Initialized=true
-            set UnitDex___FilterEnter=null
+            set UnitDex__FilterEnter=null
             
             call DestroyTimer(GetExpiredTimer())
         endfunction
         
-        function s__UnitDex_UnitDex___UnitDexCore___onEnter takes nothing returns boolean
+        function s__UnitDex_UnitDex__UnitDexCore__onEnter takes nothing returns boolean
             local unit u= GetFilterUnit()
             local integer i= (GetUnitUserData((u))) // INLINED!!
-            local integer t= UnitDex___Index
+            local integer t= UnitDex__Index
             
             if ( i == 0 and s__UnitDex_Enabled ) then
                 
@@ -10621,8 +10610,8 @@ endfunction
                 call UnitMakeAbilityPermanent(u, true, s__UnitDex_DETECT_LEAVE_ABILITY)
                 
                 // Allocate index
-                if ( UnitDex___Index != 0 ) then
-                    set UnitDex___Index=s__UnitDex_List[t]
+                if ( UnitDex__Index != 0 ) then
+                    set UnitDex__Index=s__UnitDex_List[t]
                 else
                     set s__UnitDex_Counter=s__UnitDex_Counter + 1
                     set t=s__UnitDex_Counter
@@ -10638,13 +10627,13 @@ endfunction
                 
                 if ( s__UnitDex_Initialized ) then
                     // Execute custom events registered with RegisterUnitIndexEvent
-                    call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_INDEX])
+                    call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_INDEX])
                     
                     // Handle TriggerRegisterUnitIndexEvent
-                    set UnitDex___E=EVENT_UNIT_INDEX
+                    set UnitDex__E=EVENT_UNIT_INDEX
 
                     // Reset so the event can occur again
-                    set UnitDex___E=- 1
+                    set UnitDex__E=- 1
                 endif
             endif
             
@@ -10653,7 +10642,7 @@ endfunction
             return false
         endfunction
 
-        function s__UnitDex_UnitDex___UnitDexCore___onLeave takes nothing returns boolean
+        function s__UnitDex_UnitDex__UnitDexCore__onLeave takes nothing returns boolean
             local unit u
             local integer i
             
@@ -10674,18 +10663,18 @@ endfunction
                 if ( i > 0 and i <= s__UnitDex_Counter and u == (s__UnitDex_Unit[(i)]) ) then // INLINED!!
                     
                     // Recycle the index
-                    set s__UnitDex_List[i]=UnitDex___Index
-                    set UnitDex___Index=i
+                    set s__UnitDex_List[i]=UnitDex__Index
+                    set UnitDex__Index=i
                     set s__UnitDex_LastIndex=i
                     
                     // Remove to group of indexed units
                     call GroupRemoveUnit(s__UnitDex_Group, u)
                 
                     // Execute custom events without any associated triggers
-                    call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_DEINDEX])
+                    call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_DEINDEX])
                     
                     // Handle TriggerRegisterUnitIndexEvent
-                    set UnitDex___E=EVENT_UNIT_DEINDEX
+                    set UnitDex__E=EVENT_UNIT_DEINDEX
                     
                     // Remove entry
                     call SetUnitUserData(u, 0)
@@ -10695,7 +10684,7 @@ endfunction
                     set s__UnitDex_Count=s__UnitDex_Count - 1
                
                     // Reset so the event can occur again
-                    set UnitDex___E=- 1
+                    set UnitDex__E=- 1
                 endif
                 
                 set u=null
@@ -10704,7 +10693,7 @@ endfunction
             return false
         endfunction
         
-        function s__UnitDex_UnitDex___UnitDexCore___onInit takes nothing returns nothing
+        function s__UnitDex_UnitDex__UnitDexCore__onInit takes nothing returns nothing
             local trigger t= CreateTrigger()
             local integer i= 0
             local player p
@@ -10715,11 +10704,11 @@ endfunction
 
 
             
-            set UnitDex___FilterEnter=Filter(function s__UnitDex_UnitDex___UnitDexCore___onEnter)
+            set UnitDex__FilterEnter=Filter(function s__UnitDex_UnitDex__UnitDexCore__onEnter)
             
             // Begin to index units when they enter the map
 
-                call TriggerRegisterEnterRegion(CreateTrigger(), s__WorldBounds_worldRegion, UnitDex___FilterEnter)
+                call TriggerRegisterEnterRegion(CreateTrigger(), s__WorldBounds_worldRegion, UnitDex__FilterEnter)
 
 
 
@@ -10727,10 +10716,10 @@ endfunction
 
 
             
-            call TriggerAddCondition(t, Filter(function s__UnitDex_UnitDex___UnitDexCore___onLeave))
+            call TriggerAddCondition(t, Filter(function s__UnitDex_UnitDex__UnitDexCore__onLeave))
             
-            set UnitDex___IndexTrig[EVENT_UNIT_INDEX]=CreateTrigger()
-            set UnitDex___IndexTrig[EVENT_UNIT_DEINDEX]=CreateTrigger()
+            set UnitDex__IndexTrig[EVENT_UNIT_INDEX]=CreateTrigger()
+            set UnitDex__IndexTrig[EVENT_UNIT_DEINDEX]=CreateTrigger()
             
             loop
                 set p=Player(i)
@@ -10745,7 +10734,7 @@ endfunction
                 exitwhen i == bj_MAX_PLAYER_SLOTS
             endloop
             
-            call TimerStart(CreateTimer(), 0, false, function s__UnitDex_UnitDex___UnitDexCore___onGameStart)
+            call TimerStart(CreateTimer(), 0, false, function s__UnitDex_UnitDex__UnitDexCore__onGameStart)
         endfunction
     
     
@@ -10770,7 +10759,7 @@ endfunction
 
     //inline friendly (when debug mode is off..)
     function XE_PreloadAbility takes integer abilid returns nothing
-        call UnitAddAbility(xepreload___dum, abilid)
+        call UnitAddAbility(xepreload__dum, abilid)
 
 
 
@@ -10790,7 +10779,7 @@ endfunction
     //   due to the infamous % bug. Then again, if you do that then you probably 
     // deserve it....
     //
-    function xepreload___DebugIdInteger2IdString takes integer value returns string
+    function xepreload__DebugIdInteger2IdString takes integer value returns string
      local string charMap= ".................................!.#$%&'()*+,-./0123456789:;<=>.@ABCDEFGHIJKLMNOPQRSTUVWXYZ[.]^_`abcdefghijklmnopqrstuvwxyz{|}~................................................................................................................................."
      local string result= ""
      local integer remainingValue= value
@@ -10810,9 +10799,9 @@ endfunction
     endfunction
 
     //--------------------------------
-    function xepreload___kill takes nothing returns nothing
-        call RemoveUnit(xepreload___dum)
-        set xepreload___dum=null
+    function xepreload__kill takes nothing returns nothing
+        call RemoveUnit(xepreload__dum)
+        set xepreload__dum=null
 
             call ReleaseTimer(GetExpiredTimer())
 
@@ -10820,17 +10809,17 @@ endfunction
 
     endfunction
     
-    function s__xepreload___init_onInit takes nothing returns nothing
+    function s__xepreload__init_onInit takes nothing returns nothing
      local timer t
-        set xepreload___dum=CreateUnit(Player(15), XE_DUMMY_UNITID, 0, 0, 0)
-        if ( xepreload___dum == null ) then
+        set xepreload__dum=CreateUnit(Player(15), XE_DUMMY_UNITID, 0, 0, 0)
+        if ( xepreload__dum == null ) then
         endif
 
             set t=(NewTimerEx(0)) // INLINED!!
 
 
 
-        call TimerStart(t, 0.0, false, function xepreload___kill)
+        call TimerStart(t, 0.0, false, function xepreload__kill)
         set t=null
     endfunction
 
@@ -10894,32 +10883,32 @@ endfunction
 
 
 
- function s__EffectUtils___EffectTimer_finish takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-		if s__EffectUtils___EffectTimer_remove[this] then
-			call BlzSetSpecialEffectScale(s__EffectUtils___EffectTimer_e[this], 0)
+ function s__EffectUtils__EffectTimer_finish takes nothing returns nothing
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+		if s__EffectUtils__EffectTimer_remove[this] then
+			call BlzSetSpecialEffectScale(s__EffectUtils__EffectTimer_e[this], 0)
 		endif
-		call DestroyEffect(s__EffectUtils___EffectTimer_e[this])
-		set s__EffectUtils___EffectTimer_e[this]=null
-		call s__EffectUtils___EffectTimer_deallocate(this)
+		call DestroyEffect(s__EffectUtils__EffectTimer_e[this])
+		set s__EffectUtils__EffectTimer_e[this]=null
+		call s__EffectUtils__EffectTimer_deallocate(this)
 		call ReleaseTimer(GetExpiredTimer())
  endfunction 
 
- function s__EffectUtils___EffectTimer_create takes effect eff,real duration,boolean r returns integer
-  local integer this= s__EffectUtils___EffectTimer__allocate()
-		set s__EffectUtils___EffectTimer_e[this]=eff
-		set s__EffectUtils___EffectTimer_remove[this]=r
-		call TimerStartEx(NewTimerEx(this) , duration , false , function s__EffectUtils___EffectTimer_finish , "EffectUtils_finish")
+ function s__EffectUtils__EffectTimer_create takes effect eff,real duration,boolean r returns integer
+  local integer this= s__EffectUtils__EffectTimer__allocate()
+		set s__EffectUtils__EffectTimer_e[this]=eff
+		set s__EffectUtils__EffectTimer_remove[this]=r
+		call TimerStartEx(NewTimerEx(this) , duration , false , function s__EffectUtils__EffectTimer_finish , "EffectUtils_finish")
 		return this
  endfunction
 		
 
 function DestroyEffectTimed takes effect e,real duration returns nothing
-	call s__EffectUtils___EffectTimer_create(e , duration , false)
+	call s__EffectUtils__EffectTimer_create(e , duration , false)
 endfunction
 
 function RemoveEffectTimed takes effect e,real duration returns nothing
-	call s__EffectUtils___EffectTimer_create(e , duration , true)
+	call s__EffectUtils__EffectTimer_create(e , duration , true)
 endfunction
 
 
@@ -10929,15 +10918,15 @@ endfunction
     function RegisterPlayerUnitEvent2 takes playerunitevent p,boolexpr c returns nothing
         local integer i= GetHandleId(p)
         local integer k= 15
-        if RegisterPlayerUnitEvent___t[i] == null then
-            set RegisterPlayerUnitEvent___t[i]=CreateTrigger()
+        if RegisterPlayerUnitEvent__t[i] == null then
+            set RegisterPlayerUnitEvent__t[i]=CreateTrigger()
             loop
-                call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent___t[i], Player(k), p, null)
+                call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent__t[i], Player(k), p, null)
                 exitwhen k == 0
                 set k=k - 1
             endloop
         endif
-        call TriggerAddCondition(RegisterPlayerUnitEvent___t[i], c)
+        call TriggerAddCondition(RegisterPlayerUnitEvent__t[i], c)
     endfunction
     
     function RegisterPlayerUnitEvent takes playerunitevent p,code c returns nothing
@@ -10946,47 +10935,47 @@ endfunction
     
     function RegisterPlayerUnitEventForPlayer takes playerunitevent p,code c,player pl returns nothing
         local integer i= 16 * GetHandleId(p) + GetPlayerId(pl)
-        if RegisterPlayerUnitEvent___t[i] == null then
-            set RegisterPlayerUnitEvent___t[i]=CreateTrigger()
-            call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent___t[i], pl, p, null)
+        if RegisterPlayerUnitEvent__t[i] == null then
+            set RegisterPlayerUnitEvent__t[i]=CreateTrigger()
+            call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent__t[i], pl, p, null)
         endif
-        call TriggerAddCondition(RegisterPlayerUnitEvent___t[i], Filter(c))
+        call TriggerAddCondition(RegisterPlayerUnitEvent__t[i], Filter(c))
     endfunction
     
     function GetPlayerUnitEventTrigger takes playerunitevent p returns trigger
-        return RegisterPlayerUnitEvent___t[GetHandleId(p)]
+        return RegisterPlayerUnitEvent__t[GetHandleId(p)]
     endfunction
 
 //============================================================================
  
-//Implemented from module RegisterPlayerUnitEvent___M:
+//Implemented from module RegisterPlayerUnitEvent__M:
     
 
 
 
 
     
-    function s__RegisterPlayerUnitEvent___S_onCast takes nothing returns nothing
+    function s__RegisterPlayerUnitEvent__S_onCast takes nothing returns nothing
 
-            call TriggerEvaluate((LoadTriggerHandle(Table___ht, (((s__RegisterPlayerUnitEvent___S_tb))), (GetSpellAbilityId())))) // INLINED!!
+            call TriggerEvaluate((LoadTriggerHandle(Table__ht, (((s__RegisterPlayerUnitEvent__S_tb))), (GetSpellAbilityId())))) // INLINED!!
 
 
 
     endfunction
  
-    function s__RegisterPlayerUnitEvent___S_RegisterPlayerUnitEvent___M___onInit takes nothing returns nothing
+    function s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onInit takes nothing returns nothing
 
-            set s__RegisterPlayerUnitEvent___S_tb=s__Table_create()
+            set s__RegisterPlayerUnitEvent__S_tb=s__Table_create()
 
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_EFFECT ) , Filter(( function s__RegisterPlayerUnitEvent___S_onCast))) // INLINED!!
+        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_EFFECT ) , Filter(( function s__RegisterPlayerUnitEvent__S_onCast))) // INLINED!!
     endfunction
  
 function RegisterSpellEffectEvent2 takes integer abil,boolexpr b returns nothing
 
-        if not (HaveSavedHandle(Table___ht, (((s__RegisterPlayerUnitEvent___S_tb))), (abil))) then // INLINED!!
-            call SaveTriggerHandle(Table___ht, (((s__RegisterPlayerUnitEvent___S_tb))), (abil), ( CreateTrigger())) // INLINED!!
+        if not (HaveSavedHandle(Table__ht, (((s__RegisterPlayerUnitEvent__S_tb))), (abil))) then // INLINED!!
+            call SaveTriggerHandle(Table__ht, (((s__RegisterPlayerUnitEvent__S_tb))), (abil), ( CreateTrigger())) // INLINED!!
         endif
-        call TriggerAddCondition((LoadTriggerHandle(Table___ht, (((s__RegisterPlayerUnitEvent___S_tb))), (abil))), b) // INLINED!!
+        call TriggerAddCondition((LoadTriggerHandle(Table__ht, (((s__RegisterPlayerUnitEvent__S_tb))), (abil))), b) // INLINED!!
 
 
 
@@ -11007,47 +10996,47 @@ endfunction
 	//call BJDebugMsg("unit leaving fountain...")
 	set j=0
 	loop
-		exitwhen j == RegisterPlayerUnitEvent___leave_ids_count
+		exitwhen j == RegisterPlayerUnitEvent__leave_ids_count
 		//call BJDebugMsg("checking for " + I2S(leave_ids[j]) + "...")
-		if s__RegisterPlayerUnitEvent___leave_ids[j] == id then
+		if s__RegisterPlayerUnitEvent__leave_ids[j] == id then
 			//call BJDebugMsg("detected!!")
 			set i=0
 			loop
-				exitwhen i == s__RegisterPlayerUnitEvent___death_events_count[id]
-				if sg__RegisterPlayerUnitEvent___death_events_b_get((id)*(30)+i) == 0 then
-					call RegisterPlayerUnitEvent2(EVENT_PLAYER_UNIT_DEATH , sg__RegisterPlayerUnitEvent___death_events_get((id)*(30)+i))
+				exitwhen i == s__RegisterPlayerUnitEvent__death_events_count[id]
+				if sg__RegisterPlayerUnitEvent__death_events_b_get((id)*(30)+i) == 0 then
+					call RegisterPlayerUnitEvent2(EVENT_PLAYER_UNIT_DEATH , sg__RegisterPlayerUnitEvent__death_events_get((id)*(30)+i))
 				endif
-				call sg__RegisterPlayerUnitEvent___death_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent___death_events_b_get((id)*(30)+i) + 1)
+				call sg__RegisterPlayerUnitEvent__death_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent__death_events_b_get((id)*(30)+i) + 1)
 				set i=i + 1
 			endloop
-			set s__RegisterPlayerUnitEvent___death_events_count[id]= 0
+			set s__RegisterPlayerUnitEvent__death_events_count[id]= 0
 			set i=0
 			loop
-				exitwhen i == s__RegisterPlayerUnitEvent___attack_events_count[id]
-				if sg__RegisterPlayerUnitEvent___attack_events_b_get((id)*(30)+i) == 0 then
-					call RegisterPlayerUnitEvent2(EVENT_PLAYER_UNIT_ATTACKED , sg__RegisterPlayerUnitEvent___attack_events_get((id)*(30)+i))
+				exitwhen i == s__RegisterPlayerUnitEvent__attack_events_count[id]
+				if sg__RegisterPlayerUnitEvent__attack_events_b_get((id)*(30)+i) == 0 then
+					call RegisterPlayerUnitEvent2(EVENT_PLAYER_UNIT_ATTACKED , sg__RegisterPlayerUnitEvent__attack_events_get((id)*(30)+i))
 				endif
-				call sg__RegisterPlayerUnitEvent___attack_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent___attack_events_b_get((id)*(30)+i) + 1)
+				call sg__RegisterPlayerUnitEvent__attack_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent__attack_events_b_get((id)*(30)+i) + 1)
 				set i=i + 1
 			endloop
-			set s__RegisterPlayerUnitEvent___attack_events_count[id]= 0
+			set s__RegisterPlayerUnitEvent__attack_events_count[id]= 0
 			set i=0
 			loop
-				exitwhen i == s__RegisterPlayerUnitEvent___spell_events_count[id]
+				exitwhen i == s__RegisterPlayerUnitEvent__spell_events_count[id]
 				//call BJDebugMsg(I2S(spell_events_id[id][i]))
-				if sg__RegisterPlayerUnitEvent___spell_events_b_get((id)*(30)+i) == 0 then
-					call RegisterSpellEffectEvent2(sg__RegisterPlayerUnitEvent___spell_events_id_get((id)*(30)+i) , sg__RegisterPlayerUnitEvent___spell_events_get((id)*(30)+i))
+				if sg__RegisterPlayerUnitEvent__spell_events_b_get((id)*(30)+i) == 0 then
+					call RegisterSpellEffectEvent2(sg__RegisterPlayerUnitEvent__spell_events_id_get((id)*(30)+i) , sg__RegisterPlayerUnitEvent__spell_events_get((id)*(30)+i))
 				endif
-				call sg__RegisterPlayerUnitEvent___spell_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent___spell_events_b_get((id)*(30)+i) + 1)
+				call sg__RegisterPlayerUnitEvent__spell_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent__spell_events_b_get((id)*(30)+i) + 1)
 				set i=i + 1
 			endloop
 			set i=0
 			loop
-				exitwhen i == s__RegisterPlayerUnitEvent___trigger_events_count[id]
-				call EnableTrigger(sg__RegisterPlayerUnitEvent___trigger_events_get((id)*(30)+i))
+				exitwhen i == s__RegisterPlayerUnitEvent__trigger_events_count[id]
+				call EnableTrigger(sg__RegisterPlayerUnitEvent__trigger_events_get((id)*(30)+i))
 				set i=i + 1
 			endloop
-			set s__RegisterPlayerUnitEvent___trigger_events_count[id]= 0
+			set s__RegisterPlayerUnitEvent__trigger_events_count[id]= 0
 			exitwhen true
 		endif
 		set j=j + 1
@@ -11057,21 +11046,21 @@ endfunction
     function AddIdToLeaveGroup takes integer id returns nothing
  local integer i= 0
 	loop
-		exitwhen i == RegisterPlayerUnitEvent___leave_ids_count
-		if s__RegisterPlayerUnitEvent___leave_ids[i] == id then
+		exitwhen i == RegisterPlayerUnitEvent__leave_ids_count
+		if s__RegisterPlayerUnitEvent__leave_ids[i] == id then
 			return
 		endif
 		set i=i + 1
 	endloop
-	set s__RegisterPlayerUnitEvent___leave_ids[RegisterPlayerUnitEvent___leave_ids_count]= id
-	set RegisterPlayerUnitEvent___leave_ids_count=RegisterPlayerUnitEvent___leave_ids_count + 1
+	set s__RegisterPlayerUnitEvent__leave_ids[RegisterPlayerUnitEvent__leave_ids_count]= id
+	set RegisterPlayerUnitEvent__leave_ids_count=RegisterPlayerUnitEvent__leave_ids_count + 1
     endfunction
 
     function RegisterSpellEffectEventForId takes integer id,integer spellId,code c returns nothing
-	call sg__RegisterPlayerUnitEvent___spell_events_set((id)*(30)+s__RegisterPlayerUnitEvent___spell_events_count[id],Filter(c))
-	call sg__RegisterPlayerUnitEvent___spell_events_id_set((id)*(30)+s__RegisterPlayerUnitEvent___spell_events_count[id],spellId)
-	call sg__RegisterPlayerUnitEvent___spell_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent___spell_events_count[id],0)
-	set s__RegisterPlayerUnitEvent___spell_events_count[id]= s__RegisterPlayerUnitEvent___spell_events_count[id] + 1
+	call sg__RegisterPlayerUnitEvent__spell_events_set((id)*(30)+s__RegisterPlayerUnitEvent__spell_events_count[id],Filter(c))
+	call sg__RegisterPlayerUnitEvent__spell_events_id_set((id)*(30)+s__RegisterPlayerUnitEvent__spell_events_count[id],spellId)
+	call sg__RegisterPlayerUnitEvent__spell_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent__spell_events_count[id],0)
+	set s__RegisterPlayerUnitEvent__spell_events_count[id]= s__RegisterPlayerUnitEvent__spell_events_count[id] + 1
 	call AddIdToLeaveGroup(id)
     endfunction
  
@@ -11086,13 +11075,13 @@ endfunction
  
     function RegisterPlayerUnitEventForId takes integer id,playerunitevent p,code c returns nothing
 	if p == EVENT_PLAYER_UNIT_DEATH then
-		call sg__RegisterPlayerUnitEvent___death_events_set((id)*(30)+s__RegisterPlayerUnitEvent___death_events_count[id],Filter(c))
-		call sg__RegisterPlayerUnitEvent___death_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent___death_events_count[id],0)
-		set s__RegisterPlayerUnitEvent___death_events_count[id]= s__RegisterPlayerUnitEvent___death_events_count[id] + 1
+		call sg__RegisterPlayerUnitEvent__death_events_set((id)*(30)+s__RegisterPlayerUnitEvent__death_events_count[id],Filter(c))
+		call sg__RegisterPlayerUnitEvent__death_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent__death_events_count[id],0)
+		set s__RegisterPlayerUnitEvent__death_events_count[id]= s__RegisterPlayerUnitEvent__death_events_count[id] + 1
 	elseif p == EVENT_PLAYER_UNIT_ATTACKED then
-		call sg__RegisterPlayerUnitEvent___attack_events_set((id)*(30)+s__RegisterPlayerUnitEvent___attack_events_count[id],Filter(c))
-		call sg__RegisterPlayerUnitEvent___attack_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent___attack_events_count[id],0)
-		set s__RegisterPlayerUnitEvent___attack_events_count[id]= s__RegisterPlayerUnitEvent___attack_events_count[id] + 1
+		call sg__RegisterPlayerUnitEvent__attack_events_set((id)*(30)+s__RegisterPlayerUnitEvent__attack_events_count[id],Filter(c))
+		call sg__RegisterPlayerUnitEvent__attack_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent__attack_events_count[id],0)
+		set s__RegisterPlayerUnitEvent__attack_events_count[id]= s__RegisterPlayerUnitEvent__attack_events_count[id] + 1
 	else
 		call RegisterPlayerUnitEvent2((p ) , Filter(( c))) // INLINED!!
 	endif
@@ -11108,31 +11097,31 @@ endfunction
 	call RegisterPlayerUnitEventForId(id , p , c)
     endfunction
 
-function EnableTriggerForId takes integer id,trigger l__RegisterPlayerUnitEvent___t returns nothing
-	call sg__RegisterPlayerUnitEvent___trigger_events_set((id)*(30)+s__RegisterPlayerUnitEvent___trigger_events_count[id],l__RegisterPlayerUnitEvent___t)
-	set s__RegisterPlayerUnitEvent___trigger_events_count[id]= s__RegisterPlayerUnitEvent___trigger_events_count[id] + 1
+function EnableTriggerForId takes integer id,trigger l__RegisterPlayerUnitEvent__t returns nothing
+	call sg__RegisterPlayerUnitEvent__trigger_events_set((id)*(30)+s__RegisterPlayerUnitEvent__trigger_events_count[id],l__RegisterPlayerUnitEvent__t)
+	set s__RegisterPlayerUnitEvent__trigger_events_count[id]= s__RegisterPlayerUnitEvent__trigger_events_count[id] + 1
 	call AddIdToLeaveGroup(id)
-	call DisableTrigger(l__RegisterPlayerUnitEvent___t)
+	call DisableTrigger(l__RegisterPlayerUnitEvent__t)
     endfunction
 
-function EnableTriggerForUnit takes unit u,trigger l__RegisterPlayerUnitEvent___t returns nothing
+function EnableTriggerForUnit takes unit u,trigger l__RegisterPlayerUnitEvent__t returns nothing
  local integer id
 	if u == null then
 		return
 	endif
 	set id=GetUnitPointValue(u)
-	call EnableTriggerForId(id , l__RegisterPlayerUnitEvent___t)
+	call EnableTriggerForId(id , l__RegisterPlayerUnitEvent__t)
     endfunction
 
     function RegisterLeaveFunction takes code c returns nothing
-	call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter(c))
+	call TriggerAddCondition(RegisterPlayerUnitEvent__leave_trigger, Filter(c))
     endfunction 
 
     function RegisterPlayerUnitEvent_init takes nothing returns nothing
- local trigger l__RegisterPlayerUnitEvent___t= CreateTrigger()
-	call TriggerRegisterLeaveRectSimple(l__RegisterPlayerUnitEvent___t, gg_rct_fonte)
-	call TriggerAddAction(l__RegisterPlayerUnitEvent___t, function RegisterPlayerUnitEventForUnit_actions)
-	call TriggerRegisterLeaveRectSimple(RegisterPlayerUnitEvent___leave_trigger, gg_rct_fonte)
+ local trigger l__RegisterPlayerUnitEvent__t= CreateTrigger()
+	call TriggerRegisterLeaveRectSimple(l__RegisterPlayerUnitEvent__t, gg_rct_fonte)
+	call TriggerAddAction(l__RegisterPlayerUnitEvent__t, function RegisterPlayerUnitEventForUnit_actions)
+	call TriggerRegisterLeaveRectSimple(RegisterPlayerUnitEvent__leave_trigger, gg_rct_fonte)
     endfunction
 
 
@@ -11164,14 +11153,14 @@ function EnableTriggerForUnit takes unit u,trigger l__RegisterPlayerUnitEvent___
     endfunction 
     
     
-    function UnitRecycler2___RecycleHide takes nothing returns nothing
-        call ShowUnit((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), false) // INLINED!!
+    function UnitRecycler2__RecycleHide takes nothing returns nothing
+        call ShowUnit((s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]), false) // INLINED!!
         call ReleaseTimer(GetExpiredTimer())
     endfunction 
     
     function RecycleUnitDelayed takes unit u,real delay returns nothing
         call UnitApplyTimedLife(u, 'BTLF', delay)
-        call TimerStartEx(NewTimerEx((GetUnitUserData((u)))) , delay , false , function UnitRecycler2___RecycleHide , "RecycleHide") // INLINED!!
+        call TimerStartEx(NewTimerEx((GetUnitUserData((u)))) , delay , false , function UnitRecycler2__RecycleHide , "RecycleHide") // INLINED!!
     endfunction 
     
 
@@ -11181,41 +11170,41 @@ function EnableTriggerForUnit takes unit u,trigger l__RegisterPlayerUnitEvent___
 
 
 	
- function s__UnitUtils___ReleaseDummy_finish takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-		call UnitRemoveAbility(s__UnitUtils___ReleaseDummy_u[this], s__UnitUtils___ReleaseDummy_i[this])
-		call SetUnitX(s__UnitUtils___ReleaseDummy_u[this], 5092)
-		call SetUnitY(s__UnitUtils___ReleaseDummy_u[this], - 6846)
-		call SetUnitFlyHeight(s__UnitUtils___ReleaseDummy_u[this], 0, 0)
-		call SetUnitScale(s__UnitUtils___ReleaseDummy_u[this], 1.0, 1.0, 1.0)
-		call IssueImmediateOrder(s__UnitUtils___ReleaseDummy_u[this], "stop")
-		call GroupAddUnit(s__UnitUtils___dummies[GetPlayerId(GetOwningPlayer(s__UnitUtils___ReleaseDummy_u[this]))], s__UnitUtils___ReleaseDummy_u[this])
-		set s__UnitUtils___ReleaseDummy_u[this]=null
-		call s__UnitUtils___ReleaseDummy_deallocate(this)
+ function s__UnitUtils__ReleaseDummy_finish takes nothing returns nothing
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+		call UnitRemoveAbility(s__UnitUtils__ReleaseDummy_u[this], s__UnitUtils__ReleaseDummy_i[this])
+		call SetUnitX(s__UnitUtils__ReleaseDummy_u[this], 5092)
+		call SetUnitY(s__UnitUtils__ReleaseDummy_u[this], - 6846)
+		call SetUnitFlyHeight(s__UnitUtils__ReleaseDummy_u[this], 0, 0)
+		call SetUnitScale(s__UnitUtils__ReleaseDummy_u[this], 1.0, 1.0, 1.0)
+		call IssueImmediateOrder(s__UnitUtils__ReleaseDummy_u[this], "stop")
+		call GroupAddUnit(s__UnitUtils__dummies[GetPlayerId(GetOwningPlayer(s__UnitUtils__ReleaseDummy_u[this]))], s__UnitUtils__ReleaseDummy_u[this])
+		set s__UnitUtils__ReleaseDummy_u[this]=null
+		call s__UnitUtils__ReleaseDummy_deallocate(this)
 		call ReleaseTimer(GetExpiredTimer())
  endfunction 
 	
- function s__UnitUtils___ReleaseDummy_create takes unit uu,integer ii,real duration returns integer
-  local integer this= s__UnitUtils___ReleaseDummy__allocate()
-		set s__UnitUtils___ReleaseDummy_u[this]=uu
-		set s__UnitUtils___ReleaseDummy_i[this]=ii
-		call TimerStartEx(NewTimerEx(this) , duration , false , function s__UnitUtils___ReleaseDummy_finish , "UnitUtils_finish")
+ function s__UnitUtils__ReleaseDummy_create takes unit uu,integer ii,real duration returns integer
+  local integer this= s__UnitUtils__ReleaseDummy__allocate()
+		set s__UnitUtils__ReleaseDummy_u[this]=uu
+		set s__UnitUtils__ReleaseDummy_i[this]=ii
+		call TimerStartEx(NewTimerEx(this) , duration , false , function s__UnitUtils__ReleaseDummy_finish , "UnitUtils_finish")
 		return this
  endfunction 
 	
 
 function CreateAbilityDummy takes unit owner,integer spellId returns unit
- local unit u= FirstOfGroup(s__UnitUtils___dummies[GetPlayerId(GetOwningPlayer(owner))])
+ local unit u= FirstOfGroup(s__UnitUtils__dummies[GetPlayerId(GetOwningPlayer(owner))])
 	if u == null then
 		set u=GetInvisibleDummy(GetOwningPlayer(owner) , GetUnitX(owner) , GetUnitY(owner))
 	else
-		call GroupRemoveUnit(s__UnitUtils___dummies[GetPlayerId(GetOwningPlayer(owner))], u)
+		call GroupRemoveUnit(s__UnitUtils__dummies[GetPlayerId(GetOwningPlayer(owner))], u)
 		call BlzEndUnitAbilityCooldown(u, spellId)
 	endif
 	call SetUnitX(u, GetUnitX(owner))
 	call SetUnitY(u, GetUnitY(owner))
 call UnitAddAbility((u ), ( spellId)) // INLINED!!
-	call s__UnitUtils___ReleaseDummy_create(u , spellId , 1.0)
+	call s__UnitUtils__ReleaseDummy_create(u , spellId , 1.0)
     return u
 endfunction 
 
@@ -11270,17 +11259,17 @@ function ShowCriticalMessage takes unit u,real damage returns nothing
 	set l=null
 endfunction
 
-function UnitUtils___init takes nothing returns nothing
+function UnitUtils__init takes nothing returns nothing
  local integer i= 0
 	loop
 		exitwhen i > 11
-		set s__UnitUtils___dummies[i]= CreateGroup()
+		set s__UnitUtils__dummies[i]= CreateGroup()
 		set i=i + 1
 	endloop
-    call UnitAddAbility(xepreload___dum, ('A0NN')) // INLINED!!
-    call UnitAddAbility(xepreload___dum, ('A0VM')) // INLINED!!
-    call UnitAddAbility(xepreload___dum, ('A0VY')) // INLINED!!
-    set UnitUtils___bars=s__Table_create()
+    call UnitAddAbility(xepreload__dum, ('A0NN')) // INLINED!!
+    call UnitAddAbility(xepreload__dum, ('A0VM')) // INLINED!!
+    call UnitAddAbility(xepreload__dum, ('A0VY')) // INLINED!!
+    set UnitUtils__bars=s__Table_create()
 endfunction
 
 function AddUnitStat takes unit whichUnit,unitstate whichStatus,real amount,string sfx returns nothing
@@ -11315,10 +11304,10 @@ function AddUnitManaPercent takes unit whichUnit,real percentage,string sfx retu
 endfunction 
 //end of: AddUnitStat("Mana", "MANA")
 
-function UnitUtils___LoadingBarMove takes nothing returns nothing
-    local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+function UnitUtils__LoadingBarMove takes nothing returns nothing
+    local integer id= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
     local unit bar= (s__UnitDex_Unit[(id)]) // INLINED!!
-    local unit caster= (s__UnitDex_Unit[((LoadInteger(Table___ht, (UnitUtils___bars), (id))))]) // INLINED!!
+    local unit caster= (s__UnitDex_Unit[((LoadInteger(Table__ht, (UnitUtils__bars), (id))))]) // INLINED!!
     local integer alpha
     if IsUnitInvisible(caster, GetLocalPlayer()) then
         set alpha=0
@@ -11345,117 +11334,117 @@ function AddLoadingBar takes unit u,real time returns nothing
 endfunction  
 
 
-    function s__UnitUtils___InitASCIITable_onInit takes nothing returns nothing
-        set s__UnitUtils___PLAYER_ARRAY[0]= 6
-        set s__UnitUtils___PLAYER_ARRAY[1]= 10
-        set s__UnitUtils___PLAYER_ARRAY[2]= 0
-        set s__UnitUtils___PLAYER_ARRAY[3]= 9
-        set s__UnitUtils___PLAYER_ARRAY[4]= 5
-        set s__UnitUtils___PLAYER_ARRAY[5]= 4
-        set s__UnitUtils___PLAYER_ARRAY[6]= 2
-        set s__UnitUtils___PLAYER_ARRAY[7]= 1
-        set s__UnitUtils___PLAYER_ARRAY[8]= 8
+    function s__UnitUtils__InitASCIITable_onInit takes nothing returns nothing
+        set s__UnitUtils__PLAYER_ARRAY[0]= 6
+        set s__UnitUtils__PLAYER_ARRAY[1]= 10
+        set s__UnitUtils__PLAYER_ARRAY[2]= 0
+        set s__UnitUtils__PLAYER_ARRAY[3]= 9
+        set s__UnitUtils__PLAYER_ARRAY[4]= 5
+        set s__UnitUtils__PLAYER_ARRAY[5]= 4
+        set s__UnitUtils__PLAYER_ARRAY[6]= 2
+        set s__UnitUtils__PLAYER_ARRAY[7]= 1
+        set s__UnitUtils__PLAYER_ARRAY[8]= 8
         
-        set s__UnitUtils___ASCII_TABLE[5]= "0"
-        set s__UnitUtils___ASCII_TABLE[84]= "1"
-        set s__UnitUtils___ASCII_TABLE[21]= "2"
-        set s__UnitUtils___ASCII_TABLE[78]= "3"
-        set s__UnitUtils___ASCII_TABLE[44]= "4"
-        set s__UnitUtils___ASCII_TABLE[45]= "5"
-        set s__UnitUtils___ASCII_TABLE[76]= "6"
-        set s__UnitUtils___ASCII_TABLE[41]= "7"
-        set s__UnitUtils___ASCII_TABLE[25]= "8"
-        set s__UnitUtils___ASCII_TABLE[67]= "9"
-        set s__UnitUtils___ASCII_TABLE[39]= "a"
-        set s__UnitUtils___ASCII_TABLE[23]= "b"
-        set s__UnitUtils___ASCII_TABLE[85]= "c"
-        set s__UnitUtils___ASCII_TABLE[74]= "d"
-        set s__UnitUtils___ASCII_TABLE[11]= "e"
-        set s__UnitUtils___ASCII_TABLE[30]= "f"
-        set s__UnitUtils___ASCII_TABLE[24]= "g"
-        set s__UnitUtils___ASCII_TABLE[66]= "h"
-        set s__UnitUtils___ASCII_TABLE[42]= "i"
-        set s__UnitUtils___ASCII_TABLE[0]= "j"
-        set s__UnitUtils___ASCII_TABLE[77]= "k"
-        set s__UnitUtils___ASCII_TABLE[59]= "l"
-        set s__UnitUtils___ASCII_TABLE[49]= "m"
-        set s__UnitUtils___ASCII_TABLE[9]= "n"
-        set s__UnitUtils___ASCII_TABLE[79]= "o"
-        set s__UnitUtils___ASCII_TABLE[61]= "p"
-        set s__UnitUtils___ASCII_TABLE[69]= "q"
-        set s__UnitUtils___ASCII_TABLE[83]= "r"
-        set s__UnitUtils___ASCII_TABLE[8]= "s"
-        set s__UnitUtils___ASCII_TABLE[27]= "t"
-        set s__UnitUtils___ASCII_TABLE[16]= "u"
-        set s__UnitUtils___ASCII_TABLE[75]= "v"
-        set s__UnitUtils___ASCII_TABLE[70]= "w"
-        set s__UnitUtils___ASCII_TABLE[18]= "x"
-        set s__UnitUtils___ASCII_TABLE[62]= "y"
-        set s__UnitUtils___ASCII_TABLE[65]= "z"
-        set s__UnitUtils___ASCII_TABLE[7]= "A"
-        set s__UnitUtils___ASCII_TABLE[82]= "B"
-        set s__UnitUtils___ASCII_TABLE[19]= "C"
-        set s__UnitUtils___ASCII_TABLE[52]= "D"
-        set s__UnitUtils___ASCII_TABLE[38]= "E"
-        set s__UnitUtils___ASCII_TABLE[56]= "F"
-        set s__UnitUtils___ASCII_TABLE[6]= "G"
-        set s__UnitUtils___ASCII_TABLE[28]= "H"
-        set s__UnitUtils___ASCII_TABLE[58]= "I"
-        set s__UnitUtils___ASCII_TABLE[57]= "J"
-        set s__UnitUtils___ASCII_TABLE[17]= "K"
-        set s__UnitUtils___ASCII_TABLE[29]= "L"
-        set s__UnitUtils___ASCII_TABLE[68]= "M"
-        set s__UnitUtils___ASCII_TABLE[34]= "N"
-        set s__UnitUtils___ASCII_TABLE[54]= "O"
-        set s__UnitUtils___ASCII_TABLE[26]= "P"
-        set s__UnitUtils___ASCII_TABLE[81]= "Q"
-        set s__UnitUtils___ASCII_TABLE[2]= "R"
-        set s__UnitUtils___ASCII_TABLE[12]= "S"
-        set s__UnitUtils___ASCII_TABLE[50]= "T"
-        set s__UnitUtils___ASCII_TABLE[89]= "U"
-        set s__UnitUtils___ASCII_TABLE[71]= "V"
-        set s__UnitUtils___ASCII_TABLE[15]= "W"
-        set s__UnitUtils___ASCII_TABLE[47]= "X"
-        set s__UnitUtils___ASCII_TABLE[22]= "Y"
-        set s__UnitUtils___ASCII_TABLE[35]= "Z"
-        set s__UnitUtils___ASCII_TABLE[20]= ">"
-        set s__UnitUtils___ASCII_TABLE[32]= "|"
-        set s__UnitUtils___ASCII_TABLE[10]= ";"
-        set s__UnitUtils___ASCII_TABLE[87]= "/"
-        set s__UnitUtils___ASCII_TABLE[46]= "["
-        set s__UnitUtils___ASCII_TABLE[64]= "]"
-        set s__UnitUtils___ASCII_TABLE[1]= "+"
-        set s__UnitUtils___ASCII_TABLE[53]= "'"
-        set s__UnitUtils___ASCII_TABLE[43]= "-"
-        set s__UnitUtils___ASCII_TABLE[60]= "*"
-        set s__UnitUtils___ASCII_TABLE[13]= "/"
-        set s__UnitUtils___ASCII_TABLE[37]= "<"
-        set s__UnitUtils___ASCII_TABLE[3]= ","
-        set s__UnitUtils___ASCII_TABLE[80]= ":"
-        set s__UnitUtils___ASCII_TABLE[72]= "?"
-        set s__UnitUtils___ASCII_TABLE[33]= "{"
-        set s__UnitUtils___ASCII_TABLE[63]= "}"
-        set s__UnitUtils___ASCII_TABLE[55]= "!"
-        set s__UnitUtils___ASCII_TABLE[36]= "\""
-        set s__UnitUtils___ASCII_TABLE[14]= "@"
-        set s__UnitUtils___ASCII_TABLE[40]= "#"
-        set s__UnitUtils___ASCII_TABLE[86]= "$"
-        set s__UnitUtils___ASCII_TABLE[51]= "%"
-        set s__UnitUtils___ASCII_TABLE[73]= "("
-        set s__UnitUtils___ASCII_TABLE[31]= ")"
-        set s__UnitUtils___ASCII_TABLE[4]= "."
-        set s__UnitUtils___ASCII_TABLE[88]= "="
-        set s__UnitUtils___ASCII_TABLE[48]= "\\"
-	set s__UnitUtils___ASCII_TABLE[90]= "á"
-	set s__UnitUtils___ASCII_TABLE[91]= "é"
-	set s__UnitUtils___ASCII_TABLE[92]= "ó"
-	set s__UnitUtils___ASCII_TABLE[93]= "ú"
-	set s__UnitUtils___ASCII_TABLE[94]= "Á"
-	set s__UnitUtils___ASCII_TABLE[95]= "É"
-	set s__UnitUtils___ASCII_TABLE[96]= "Ó"
-	set s__UnitUtils___ASCII_TABLE[97]= "Ú"
-	set s__UnitUtils___ASCII_TABLE[98]= "ã"
-	set s__UnitUtils___ASCII_TABLE[99]= "õ"
+        set s__UnitUtils__ASCII_TABLE[5]= "0"
+        set s__UnitUtils__ASCII_TABLE[84]= "1"
+        set s__UnitUtils__ASCII_TABLE[21]= "2"
+        set s__UnitUtils__ASCII_TABLE[78]= "3"
+        set s__UnitUtils__ASCII_TABLE[44]= "4"
+        set s__UnitUtils__ASCII_TABLE[45]= "5"
+        set s__UnitUtils__ASCII_TABLE[76]= "6"
+        set s__UnitUtils__ASCII_TABLE[41]= "7"
+        set s__UnitUtils__ASCII_TABLE[25]= "8"
+        set s__UnitUtils__ASCII_TABLE[67]= "9"
+        set s__UnitUtils__ASCII_TABLE[39]= "a"
+        set s__UnitUtils__ASCII_TABLE[23]= "b"
+        set s__UnitUtils__ASCII_TABLE[85]= "c"
+        set s__UnitUtils__ASCII_TABLE[74]= "d"
+        set s__UnitUtils__ASCII_TABLE[11]= "e"
+        set s__UnitUtils__ASCII_TABLE[30]= "f"
+        set s__UnitUtils__ASCII_TABLE[24]= "g"
+        set s__UnitUtils__ASCII_TABLE[66]= "h"
+        set s__UnitUtils__ASCII_TABLE[42]= "i"
+        set s__UnitUtils__ASCII_TABLE[0]= "j"
+        set s__UnitUtils__ASCII_TABLE[77]= "k"
+        set s__UnitUtils__ASCII_TABLE[59]= "l"
+        set s__UnitUtils__ASCII_TABLE[49]= "m"
+        set s__UnitUtils__ASCII_TABLE[9]= "n"
+        set s__UnitUtils__ASCII_TABLE[79]= "o"
+        set s__UnitUtils__ASCII_TABLE[61]= "p"
+        set s__UnitUtils__ASCII_TABLE[69]= "q"
+        set s__UnitUtils__ASCII_TABLE[83]= "r"
+        set s__UnitUtils__ASCII_TABLE[8]= "s"
+        set s__UnitUtils__ASCII_TABLE[27]= "t"
+        set s__UnitUtils__ASCII_TABLE[16]= "u"
+        set s__UnitUtils__ASCII_TABLE[75]= "v"
+        set s__UnitUtils__ASCII_TABLE[70]= "w"
+        set s__UnitUtils__ASCII_TABLE[18]= "x"
+        set s__UnitUtils__ASCII_TABLE[62]= "y"
+        set s__UnitUtils__ASCII_TABLE[65]= "z"
+        set s__UnitUtils__ASCII_TABLE[7]= "A"
+        set s__UnitUtils__ASCII_TABLE[82]= "B"
+        set s__UnitUtils__ASCII_TABLE[19]= "C"
+        set s__UnitUtils__ASCII_TABLE[52]= "D"
+        set s__UnitUtils__ASCII_TABLE[38]= "E"
+        set s__UnitUtils__ASCII_TABLE[56]= "F"
+        set s__UnitUtils__ASCII_TABLE[6]= "G"
+        set s__UnitUtils__ASCII_TABLE[28]= "H"
+        set s__UnitUtils__ASCII_TABLE[58]= "I"
+        set s__UnitUtils__ASCII_TABLE[57]= "J"
+        set s__UnitUtils__ASCII_TABLE[17]= "K"
+        set s__UnitUtils__ASCII_TABLE[29]= "L"
+        set s__UnitUtils__ASCII_TABLE[68]= "M"
+        set s__UnitUtils__ASCII_TABLE[34]= "N"
+        set s__UnitUtils__ASCII_TABLE[54]= "O"
+        set s__UnitUtils__ASCII_TABLE[26]= "P"
+        set s__UnitUtils__ASCII_TABLE[81]= "Q"
+        set s__UnitUtils__ASCII_TABLE[2]= "R"
+        set s__UnitUtils__ASCII_TABLE[12]= "S"
+        set s__UnitUtils__ASCII_TABLE[50]= "T"
+        set s__UnitUtils__ASCII_TABLE[89]= "U"
+        set s__UnitUtils__ASCII_TABLE[71]= "V"
+        set s__UnitUtils__ASCII_TABLE[15]= "W"
+        set s__UnitUtils__ASCII_TABLE[47]= "X"
+        set s__UnitUtils__ASCII_TABLE[22]= "Y"
+        set s__UnitUtils__ASCII_TABLE[35]= "Z"
+        set s__UnitUtils__ASCII_TABLE[20]= ">"
+        set s__UnitUtils__ASCII_TABLE[32]= "|"
+        set s__UnitUtils__ASCII_TABLE[10]= ";"
+        set s__UnitUtils__ASCII_TABLE[87]= "/"
+        set s__UnitUtils__ASCII_TABLE[46]= "["
+        set s__UnitUtils__ASCII_TABLE[64]= "]"
+        set s__UnitUtils__ASCII_TABLE[1]= "+"
+        set s__UnitUtils__ASCII_TABLE[53]= "'"
+        set s__UnitUtils__ASCII_TABLE[43]= "-"
+        set s__UnitUtils__ASCII_TABLE[60]= "*"
+        set s__UnitUtils__ASCII_TABLE[13]= "/"
+        set s__UnitUtils__ASCII_TABLE[37]= "<"
+        set s__UnitUtils__ASCII_TABLE[3]= ","
+        set s__UnitUtils__ASCII_TABLE[80]= ":"
+        set s__UnitUtils__ASCII_TABLE[72]= "?"
+        set s__UnitUtils__ASCII_TABLE[33]= "{"
+        set s__UnitUtils__ASCII_TABLE[63]= "}"
+        set s__UnitUtils__ASCII_TABLE[55]= "!"
+        set s__UnitUtils__ASCII_TABLE[36]= "\""
+        set s__UnitUtils__ASCII_TABLE[14]= "@"
+        set s__UnitUtils__ASCII_TABLE[40]= "#"
+        set s__UnitUtils__ASCII_TABLE[86]= "$"
+        set s__UnitUtils__ASCII_TABLE[51]= "%"
+        set s__UnitUtils__ASCII_TABLE[73]= "("
+        set s__UnitUtils__ASCII_TABLE[31]= ")"
+        set s__UnitUtils__ASCII_TABLE[4]= "."
+        set s__UnitUtils__ASCII_TABLE[88]= "="
+        set s__UnitUtils__ASCII_TABLE[48]= "\\"
+	set s__UnitUtils__ASCII_TABLE[90]= "á"
+	set s__UnitUtils__ASCII_TABLE[91]= "é"
+	set s__UnitUtils__ASCII_TABLE[92]= "ó"
+	set s__UnitUtils__ASCII_TABLE[93]= "ú"
+	set s__UnitUtils__ASCII_TABLE[94]= "Á"
+	set s__UnitUtils__ASCII_TABLE[95]= "É"
+	set s__UnitUtils__ASCII_TABLE[96]= "Ó"
+	set s__UnitUtils__ASCII_TABLE[97]= "Ú"
+	set s__UnitUtils__ASCII_TABLE[98]= "ã"
+	set s__UnitUtils__ASCII_TABLE[99]= "õ"
     endfunction 
 
 function Round takes real r returns integer
@@ -11470,13 +11459,13 @@ function GetEncodedCharacter takes string s returns string
  local integer i= 0
 	loop
 		exitwhen i > 99
-		if s__UnitUtils___ASCII_TABLE[i] == s then
+		if s__UnitUtils__ASCII_TABLE[i] == s then
 			exitwhen true
 		endif
 		set i=i + 1
 	endloop
 	set i=ModuloInteger(i + 10, 100)
-	return s__UnitUtils___ASCII_TABLE[i]
+	return s__UnitUtils__ASCII_TABLE[i]
 endfunction 
 
 function GetFarm takes integer id returns integer
@@ -11522,33 +11511,33 @@ function GetCode takes nothing returns string
     set i=0
     loop
         exitwhen i > 8
-        set sum=sum + GetFarm(s__UnitUtils___PLAYER_ARRAY[i]) / 10
+        set sum=sum + GetFarm(s__UnitUtils__PLAYER_ARRAY[i]) / 10
         set i=i + 1
     endloop
     set sum=sum + 1
-    set s=s__UnitUtils___ASCII_TABLE[IMinBJ(sum, 99)] + s__UnitUtils___ASCII_TABLE[IMinBJ(udg_Minutes, 99)] + s__UnitUtils___ASCII_TABLE[udg_Winning_Team]
+    set s=s__UnitUtils__ASCII_TABLE[IMinBJ(sum, 99)] + s__UnitUtils__ASCII_TABLE[IMinBJ(udg_Minutes, 99)] + s__UnitUtils__ASCII_TABLE[udg_Winning_Team]
     set i=0
     loop
         exitwhen i > 8
-        if GetPlayerSlotState(Player(s__UnitUtils___PLAYER_ARRAY[i])) == PLAYER_SLOT_STATE_PLAYING then
-            set s=s + "1" + StringCase(SubString(udg_Repick_Names[s__UnitUtils___PLAYER_ARRAY[i] + 1], 0, 1), false)
-        elseif GetPlayerSlotState(Player(s__UnitUtils___PLAYER_ARRAY[i])) == PLAYER_SLOT_STATE_LEFT then
-            set s=s + "2" + StringCase(SubString(udg_Repick_Names[s__UnitUtils___PLAYER_ARRAY[i] + 1], 0, 1), false)
-        elseif GetPlayerSlotState(Player(s__UnitUtils___PLAYER_ARRAY[i])) == PLAYER_SLOT_STATE_EMPTY then
+        if GetPlayerSlotState(Player(s__UnitUtils__PLAYER_ARRAY[i])) == PLAYER_SLOT_STATE_PLAYING then
+            set s=s + "1" + StringCase(SubString(udg_Repick_Names[s__UnitUtils__PLAYER_ARRAY[i] + 1], 0, 1), false)
+        elseif GetPlayerSlotState(Player(s__UnitUtils__PLAYER_ARRAY[i])) == PLAYER_SLOT_STATE_LEFT then
+            set s=s + "2" + StringCase(SubString(udg_Repick_Names[s__UnitUtils__PLAYER_ARRAY[i] + 1], 0, 1), false)
+        elseif GetPlayerSlotState(Player(s__UnitUtils__PLAYER_ARRAY[i])) == PLAYER_SLOT_STATE_EMPTY then
             set s=s + "0"
         endif
-        if GetPlayerSlotState(Player(s__UnitUtils___PLAYER_ARRAY[i])) != PLAYER_SLOT_STATE_EMPTY then
-            set s=s + s__UnitUtils___ASCII_TABLE[IMinBJ(99, udg_HeroPointValue[s__UnitUtils___PLAYER_ARRAY[i]])]
-            set s=s + s__UnitUtils___ASCII_TABLE[IMinBJ(99, udg_integers13[s__UnitUtils___PLAYER_ARRAY[i] + 1])]
-            set s=s + s__UnitUtils___ASCII_TABLE[IMinBJ(99, udg_integers14[s__UnitUtils___PLAYER_ARRAY[i] + 1])]
-            set s=s + s__UnitUtils___ASCII_TABLE[IMinBJ(99, udg_assists[s__UnitUtils___PLAYER_ARRAY[i] + 1])]
-	    set s=s + GetPoints(udg_integers11[s__UnitUtils___PLAYER_ARRAY[i] + 1])
-            set s=s + s__UnitUtils___ASCII_TABLE[IMinBJ(99, GetFarm(s__UnitUtils___PLAYER_ARRAY[i]))]
-	    set s=s + s__UnitUtils___ASCII_TABLE[IMinBJ(99, StringLength(udg_Repick_Names[s__UnitUtils___PLAYER_ARRAY[i] + 1]) - 4)]
+        if GetPlayerSlotState(Player(s__UnitUtils__PLAYER_ARRAY[i])) != PLAYER_SLOT_STATE_EMPTY then
+            set s=s + s__UnitUtils__ASCII_TABLE[IMinBJ(99, udg_HeroPointValue[s__UnitUtils__PLAYER_ARRAY[i]])]
+            set s=s + s__UnitUtils__ASCII_TABLE[IMinBJ(99, udg_integers13[s__UnitUtils__PLAYER_ARRAY[i] + 1])]
+            set s=s + s__UnitUtils__ASCII_TABLE[IMinBJ(99, udg_integers14[s__UnitUtils__PLAYER_ARRAY[i] + 1])]
+            set s=s + s__UnitUtils__ASCII_TABLE[IMinBJ(99, udg_assists[s__UnitUtils__PLAYER_ARRAY[i] + 1])]
+	    set s=s + GetPoints(udg_integers11[s__UnitUtils__PLAYER_ARRAY[i] + 1])
+            set s=s + s__UnitUtils__ASCII_TABLE[IMinBJ(99, GetFarm(s__UnitUtils__PLAYER_ARRAY[i]))]
+	    set s=s + s__UnitUtils__ASCII_TABLE[IMinBJ(99, StringLength(udg_Repick_Names[s__UnitUtils__PLAYER_ARRAY[i] + 1]) - 4)]
 	    set j=0
             loop
-	        exitwhen j > IMinBJ(99, StringLength(udg_Repick_Names[s__UnitUtils___PLAYER_ARRAY[i] + 1]) - 4)
-                set s=s + GetEncodedCharacter(StringCase(SubString(udg_Repick_Names[s__UnitUtils___PLAYER_ARRAY[i] + 1], j, j + 1), false))
+	        exitwhen j > IMinBJ(99, StringLength(udg_Repick_Names[s__UnitUtils__PLAYER_ARRAY[i] + 1]) - 4)
+                set s=s + GetEncodedCharacter(StringCase(SubString(udg_Repick_Names[s__UnitUtils__PLAYER_ARRAY[i] + 1], j, j + 1), false))
                 set j=j + 1
             endloop
         endif
@@ -11559,7 +11548,7 @@ function GetCode takes nothing returns string
 endfunction 
 
 function TimedVictoryActions takes nothing returns nothing
- local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+ local integer id= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 	call CustomVictoryBJ(Player(id), true, true)
 	call ReleaseTimer(GetExpiredTimer())
 endfunction
@@ -11577,7 +11566,7 @@ function TimedVictory takes player whichPlayer returns nothing
 endfunction
  
 function TimedDefeatActions takes nothing returns nothing
- local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+ local integer id= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 	call CustomDefeatBJ(Player(id), "Defeated!")
 	call ReleaseTimer(GetExpiredTimer())
 endfunction
@@ -11595,7 +11584,7 @@ function TimedDefeat takes player whichPlayer returns nothing
 endfunction
 
 function TimedDrawActions takes nothing returns nothing
- local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+ local integer id= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 	call CustomDefeatBJ(Player(id), "Draw!")
 	call ReleaseTimer(GetExpiredTimer())
 endfunction
@@ -11815,15 +11804,15 @@ function UpdateMultiboard takes nothing returns nothing
     endif
 endfunction
 
-    function s__UnitUtils___UpdateMultiboardS_update takes nothing returns nothing
+    function s__UnitUtils__UpdateMultiboardS_update takes nothing returns nothing
         if udg_multiboard01 != null then
             call UpdateMultiboard()
         endif
-        call TimerStartEx((NewTimerEx(0)) , RMaxBJ(5, 60 - udg_Minutes) , false , function s__UnitUtils___UpdateMultiboardS_update , "UpdateMultiboardS_update") // INLINED!!
+        call TimerStartEx((NewTimerEx(0)) , RMaxBJ(5, 60 - udg_Minutes) , false , function s__UnitUtils__UpdateMultiboardS_update , "UpdateMultiboardS_update") // INLINED!!
         call ReleaseTimer(GetExpiredTimer())
     endfunction 
-    function s__UnitUtils___UpdateMultiboardS_onInit takes nothing returns nothing
-        call TimerStartEx((NewTimerEx(0)) , 60.0 , false , function s__UnitUtils___UpdateMultiboardS_update , "UpdateMultiboardS_update") // INLINED!!
+    function s__UnitUtils__UpdateMultiboardS_onInit takes nothing returns nothing
+        call TimerStartEx((NewTimerEx(0)) , 60.0 , false , function s__UnitUtils__UpdateMultiboardS_update , "UpdateMultiboardS_update") // INLINED!!
     endfunction 
 
 
@@ -12981,15 +12970,18 @@ endfunction
 //***************************************************************************
 
 function InitSounds takes nothing returns nothing
-    set gg_snd_Ajisai_Animal_Path_R=CreateSound("war3mapImported/Ajisai_Animal_Path_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    set gg_snd_Ajisai_Animal_Path_R=CreateSound("Sounds/Abilities/Ajisai_Animal_Path_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ajisai_Animal_Path_R, 1149)
     call SetSoundChannel(gg_snd_Ajisai_Animal_Path_R, 0)
     call SetSoundVolume(gg_snd_Ajisai_Animal_Path_R, 127)
     call SetSoundPitch(gg_snd_Ajisai_Animal_Path_R, 1.0)
-    set gg_snd_Ajisai_Animal_Path_T=CreateSound("war3mapImported/Ajisai_Animal_Path_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    set gg_snd_Ajisai_Animal_Path_T=CreateSound("Sounds/Abilities/Ajisai_Animal_Path_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ajisai_Animal_Path_T, 2037)
     call SetSoundChannel(gg_snd_Ajisai_Animal_Path_T, 0)
     call SetSoundVolume(gg_snd_Ajisai_Animal_Path_T, 127)
     call SetSoundPitch(gg_snd_Ajisai_Animal_Path_T, 1.0)
-    set gg_snd_Anbu_Kakashi_Kill=CreateSound("war3mapImported/Anbu_Kakashi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    set gg_snd_Anbu_Kakashi_Kill=CreateSound("Sounds/Kills/Anbu_Kakashi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Anbu_Kakashi_Kill, 3631)
     call SetSoundChannel(gg_snd_Anbu_Kakashi_Kill, 0)
     call SetSoundVolume(gg_snd_Anbu_Kakashi_Kill, 127)
     call SetSoundPitch(gg_snd_Anbu_Kakashi_Kill, 1.0)
@@ -12998,28 +12990,33 @@ function InitSounds takes nothing returns nothing
     call SetSoundChannel(gg_snd_Anko_Kill, 0)
     call SetSoundVolume(gg_snd_Anko_Kill, 127)
     call SetSoundPitch(gg_snd_Anko_Kill, 1.0)
-    set gg_snd_Anko_R=CreateSound("war3mapImported/Anko_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Anko_R, 2037)
+    set gg_snd_Anko_R=CreateSound("Sounds/Abilities/Anko_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Anko_R, 1280)
     call SetSoundChannel(gg_snd_Anko_R, 0)
     call SetSoundVolume(gg_snd_Anko_R, 127)
     call SetSoundPitch(gg_snd_Anko_R, 1.0)
-    set gg_snd_Asuma_Kill=CreateSound("war3mapImported/Asuma_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Asuma_Kill, 2037)
+    set gg_snd_Anko_T=CreateSound("Sounds/Abilities/Anko_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Anko_T, 2507)
+    call SetSoundChannel(gg_snd_Anko_T, 0)
+    call SetSoundVolume(gg_snd_Anko_T, 127)
+    call SetSoundPitch(gg_snd_Anko_T, 1.0)
+    set gg_snd_Asuma_Kill=CreateSound("Sounds/Kills/Asuma_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Asuma_Kill, 2246)
     call SetSoundChannel(gg_snd_Asuma_Kill, 0)
     call SetSoundVolume(gg_snd_Asuma_Kill, 127)
     call SetSoundPitch(gg_snd_Asuma_Kill, 1.0)
-    set gg_snd_Asuma_R=CreateSound("war3mapImported/Asuma_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Asuma_R, 2037)
+    set gg_snd_Asuma_R=CreateSound("Sounds/Abilities/Asuma_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Asuma_R, 2063)
     call SetSoundChannel(gg_snd_Asuma_R, 0)
     call SetSoundVolume(gg_snd_Asuma_R, 127)
     call SetSoundPitch(gg_snd_Asuma_R, 1.0)
-    set gg_snd_Asuma_T2_Katon=CreateSound("war3mapImported/Asuma_T2_Katon.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Asuma_T2_Katon, 2037)
+    set gg_snd_Asuma_T2_Katon=CreateSound("Sounds/Abilities/Asuma_T2_Katon.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Asuma_T2_Katon, 1541)
     call SetSoundChannel(gg_snd_Asuma_T2_Katon, 0)
     call SetSoundVolume(gg_snd_Asuma_T2_Katon, 127)
     call SetSoundPitch(gg_snd_Asuma_T2_Katon, 1.0)
-    set gg_snd_Asuma_T_Hien=CreateSound("war3mapImported/Asuma_T_Hien.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Asuma_T_Hien, 2037)
+    set gg_snd_Asuma_T_Hien=CreateSound("Sounds/Abilities/Asuma_T_Hien.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Asuma_T_Hien, 2115)
     call SetSoundChannel(gg_snd_Asuma_T_Hien, 0)
     call SetSoundVolume(gg_snd_Asuma_T_Hien, 127)
     call SetSoundPitch(gg_snd_Asuma_T_Hien, 1.0)
@@ -13027,8 +13024,8 @@ function InitSounds takes nothing returns nothing
     call SetSoundParamsFromLabel(gg_snd_BattleRoar, "BattleRoar")
     call SetSoundDuration(gg_snd_BattleRoar, 1991)
     call SetSoundVolume(gg_snd_BattleRoar, 127)
-    set gg_snd_Bee_Kill=CreateSound("war3mapImported/Bee_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Bee_Kill, 1991)
+    set gg_snd_Bee_Kill=CreateSound("Sounds/Kills/Bee_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Bee_Kill, 7026)
     call SetSoundChannel(gg_snd_Bee_Kill, 0)
     call SetSoundVolume(gg_snd_Bee_Kill, 127)
     call SetSoundPitch(gg_snd_Bee_Kill, 1.0)
@@ -13036,126 +13033,118 @@ function InitSounds takes nothing returns nothing
     call SetSoundParamsFromLabel(gg_snd_BigButtonClick, "GlueScreenClick")
     call SetSoundDuration(gg_snd_BigButtonClick, 390)
     call SetSoundVolume(gg_snd_BigButtonClick, 100)
-    set gg_snd_Boruto_E=CreateSound("war3mapImported/Boruto_E.mp3", false, true, false, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Boruto_E, 390)
+    set gg_snd_Boruto_E=CreateSound("Sounds/Abilities/Boruto_E.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Boruto_E, 653)
     call SetSoundChannel(gg_snd_Boruto_E, 0)
     call SetSoundVolume(gg_snd_Boruto_E, 127)
     call SetSoundPitch(gg_snd_Boruto_E, 1.0)
-    call SetSoundDistances(gg_snd_Boruto_E, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Boruto_E, 3000.0)
-    call SetSoundConeAngles(gg_snd_Boruto_E, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Boruto_E, 0.0, 0.0, 0.0)
-    set gg_snd_Boruto_Kill=CreateSound("war3mapImported/Boruto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Boruto_Kill, 390)
+    set gg_snd_Boruto_Kill=CreateSound("Sounds/Kills/Boruto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Boruto_Kill, 3761)
     call SetSoundChannel(gg_snd_Boruto_Kill, 0)
     call SetSoundVolume(gg_snd_Boruto_Kill, 127)
     call SetSoundPitch(gg_snd_Boruto_Kill, 1.0)
-    set gg_snd_Boruto_T=CreateSound("war3mapImported/Boruto_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Boruto_T, 390)
+    set gg_snd_Boruto_T=CreateSound("Sounds/Abilities/Boruto_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Boruto_T, 1227)
     call SetSoundChannel(gg_snd_Boruto_T, 0)
     call SetSoundVolume(gg_snd_Boruto_T, 127)
     call SetSoundPitch(gg_snd_Boruto_T, 1.0)
-    set gg_snd_Byakugan=CreateSound("war3mapImported/Byakugan.mp3", false, true, true, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Byakugan, 390)
+    set gg_snd_Byakugan=CreateSound("Sounds/Abilities/Byakugan.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Byakugan, 2160)
     call SetSoundChannel(gg_snd_Byakugan, 0)
     call SetSoundVolume(gg_snd_Byakugan, 127)
     call SetSoundPitch(gg_snd_Byakugan, 1.0)
-    call SetSoundDistances(gg_snd_Byakugan, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Byakugan, 3000.0)
-    call SetSoundConeAngles(gg_snd_Byakugan, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Byakugan, 0.0, 0.0, 0.0)
-    set gg_snd_Chiyo_Kill=CreateSound("war3mapImported/Chiyo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Chiyo_Kill, 390)
+    set gg_snd_Chiyo_Kill=CreateSound("Sounds/Kills/Chiyo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Chiyo_Kill, 4702)
     call SetSoundChannel(gg_snd_Chiyo_Kill, 0)
     call SetSoundVolume(gg_snd_Chiyo_Kill, 127)
     call SetSoundPitch(gg_snd_Chiyo_Kill, 1.0)
-    set gg_snd_Chiyo_R=CreateSound("war3mapImported/Chiyo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Chiyo_R, 390)
+    set gg_snd_Chiyo_R=CreateSound("Sounds/Abilities/Chiyo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Chiyo_R, 3239)
     call SetSoundChannel(gg_snd_Chiyo_R, 0)
     call SetSoundVolume(gg_snd_Chiyo_R, 127)
     call SetSoundPitch(gg_snd_Chiyo_R, 1.0)
-    set gg_snd_Chiyo_T=CreateSound("war3mapImported/Chiyo_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Chiyo_T, 390)
+    set gg_snd_Chiyo_T=CreateSound("Sounds/Abilities/Chiyo_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Chiyo_T, 4571)
     call SetSoundChannel(gg_snd_Chiyo_T, 0)
     call SetSoundVolume(gg_snd_Chiyo_T, 127)
     call SetSoundPitch(gg_snd_Chiyo_T, 1.0)
-    set gg_snd_Chouji_Kill=CreateSound("war3mapImported/Chouji_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Chouji_Kill, 390)
+    set gg_snd_Chouji_Kill=CreateSound("Sounds/Kills/Chouji_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Chouji_Kill, 3761)
     call SetSoundChannel(gg_snd_Chouji_Kill, 0)
     call SetSoundVolume(gg_snd_Chouji_Kill, 127)
     call SetSoundPitch(gg_snd_Chouji_Kill, 1.0)
-    set gg_snd_Chouji_R=CreateSound("war3mapImported/Chouji_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Chouji_R, 390)
+    set gg_snd_Chouji_R=CreateSound("Sounds/Abilities/Chouji_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Chouji_R, 2298)
     call SetSoundChannel(gg_snd_Chouji_R, 0)
     call SetSoundVolume(gg_snd_Chouji_R, 127)
     call SetSoundPitch(gg_snd_Chouji_R, 1.0)
-    set gg_snd_Chouji_T=CreateSound("war3mapImported/Chouji_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Chouji_T, 390)
+    set gg_snd_Chouji_T=CreateSound("Sounds/Abilities/Chouji_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Chouji_T, 2560)
     call SetSoundChannel(gg_snd_Chouji_T, 0)
     call SetSoundVolume(gg_snd_Chouji_T, 127)
     call SetSoundPitch(gg_snd_Chouji_T, 1.0)
-    set gg_snd_Curse_Sasuke_Kill=CreateSound("war3mapImported/Curse_Sasuke_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Curse_Sasuke_Kill, 390)
+    set gg_snd_Curse_Sasuke_Kill=CreateSound("Sounds/Kills/Curse_Sasuke_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Curse_Sasuke_Kill, 4101)
     call SetSoundChannel(gg_snd_Curse_Sasuke_Kill, 0)
     call SetSoundVolume(gg_snd_Curse_Sasuke_Kill, 127)
     call SetSoundPitch(gg_snd_Curse_Sasuke_Kill, 1.0)
-    set gg_snd_Danzo_Kill=CreateSound("war3mapImported/Danzo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Danzo_Kill, 390)
+    set gg_snd_Danzo_Kill=CreateSound("Sounds/Kills/Danzo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Danzo_Kill, 5929)
     call SetSoundChannel(gg_snd_Danzo_Kill, 0)
     call SetSoundVolume(gg_snd_Danzo_Kill, 127)
     call SetSoundPitch(gg_snd_Danzo_Kill, 1.0)
-    set gg_snd_Danzo_R=CreateSound("war3mapImported/Danzo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Danzo_R, 390)
+    set gg_snd_Danzo_R=CreateSound("Sounds/Abilities/Danzo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Danzo_R, 3108)
     call SetSoundChannel(gg_snd_Danzo_R, 0)
     call SetSoundVolume(gg_snd_Danzo_R, 127)
     call SetSoundPitch(gg_snd_Danzo_R, 1.0)
-    set gg_snd_Danzo_T=CreateSound("war3mapImported/Danzo_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Danzo_T, 390)
+    set gg_snd_Danzo_T=CreateSound("Sounds/Abilities/Danzo_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Danzo_T, 2899)
     call SetSoundChannel(gg_snd_Danzo_T, 0)
     call SetSoundVolume(gg_snd_Danzo_T, 127)
     call SetSoundPitch(gg_snd_Danzo_T, 1.0)
-    set gg_snd_Darui_Kill=CreateSound("war3mapImported/Darui_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Darui_Kill, 390)
+    set gg_snd_Darui_Kill=CreateSound("Sounds/Kills/Darui_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Darui_Kill, 3683)
     call SetSoundChannel(gg_snd_Darui_Kill, 0)
     call SetSoundVolume(gg_snd_Darui_Kill, 127)
     call SetSoundPitch(gg_snd_Darui_Kill, 1.0)
-    set gg_snd_Darui_R=CreateSound("war3mapImported/Darui_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Darui_R, 390)
+    set gg_snd_Darui_R=CreateSound("Sounds/Abilities/Darui_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Darui_R, 3108)
     call SetSoundChannel(gg_snd_Darui_R, 0)
     call SetSoundVolume(gg_snd_Darui_R, 127)
     call SetSoundPitch(gg_snd_Darui_R, 1.0)
-    set gg_snd_Darui_T=CreateSound("war3mapImported/Darui_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Darui_T, 390)
+    set gg_snd_Darui_T=CreateSound("Sounds/Abilities/Darui_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Darui_T, 1149)
     call SetSoundChannel(gg_snd_Darui_T, 0)
     call SetSoundVolume(gg_snd_Darui_T, 127)
     call SetSoundPitch(gg_snd_Darui_T, 1.0)
-    set gg_snd_Deidara_D=CreateSound("war3mapImported/Deidara_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Deidara_D, 390)
+    set gg_snd_Deidara_D=CreateSound("Sounds/Abilities/Deidara_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Deidara_D, 2377)
     call SetSoundChannel(gg_snd_Deidara_D, 0)
     call SetSoundVolume(gg_snd_Deidara_D, 127)
     call SetSoundPitch(gg_snd_Deidara_D, 1.0)
-    set gg_snd_Deidara_Kill=CreateSound("war3mapImported/Deidara_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Deidara_Kill, 390)
+    set gg_snd_Deidara_Kill=CreateSound("Sounds/Kills/Deidara_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Deidara_Kill, 3474)
     call SetSoundChannel(gg_snd_Deidara_Kill, 0)
     call SetSoundVolume(gg_snd_Deidara_Kill, 127)
     call SetSoundPitch(gg_snd_Deidara_Kill, 1.0)
-    set gg_snd_Deidara_R=CreateSound("war3mapImported/Deidara_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Deidara_R, 390)
+    set gg_snd_Deidara_R=CreateSound("Sounds/Abilities/Deidara_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Deidara_R, 1619)
     call SetSoundChannel(gg_snd_Deidara_R, 0)
     call SetSoundVolume(gg_snd_Deidara_R, 127)
     call SetSoundPitch(gg_snd_Deidara_R, 1.0)
-    set gg_snd_Dosu_R=CreateSound("war3mapImported/Dosu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Dosu_R, 390)
+    set gg_snd_Dosu_R=CreateSound("Sounds/Abilities/Dosu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Dosu_R, 1671)
     call SetSoundChannel(gg_snd_Dosu_R, 0)
     call SetSoundVolume(gg_snd_Dosu_R, 127)
     call SetSoundPitch(gg_snd_Dosu_R, 1.0)
-    set gg_snd_Dosu_T=CreateSound("war3mapImported/Dosu_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Dosu_T, 390)
+    set gg_snd_Dosu_T=CreateSound("Sounds/Abilities/Dosu_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Dosu_T, 2586)
     call SetSoundChannel(gg_snd_Dosu_T, 0)
     call SetSoundVolume(gg_snd_Dosu_T, 127)
     call SetSoundPitch(gg_snd_Dosu_T, 1.0)
-    set gg_snd_Duel_Accept=CreateSound("war3mapImported/Duel_Accept.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Duel_Accept, 390)
+    set gg_snd_Duel_Accept=CreateSound("Sounds/Duel_Accept.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Duel_Accept, 2037)
     call SetSoundChannel(gg_snd_Duel_Accept, 0)
     call SetSoundVolume(gg_snd_Duel_Accept, 127)
     call SetSoundPitch(gg_snd_Duel_Accept, 1.0)
@@ -13171,196 +13160,188 @@ function InitSounds takes nothing returns nothing
     call SetSoundParamsFromLabel(gg_snd_FrostArrowHit1, "FrostArrowHit")
     call SetSoundDuration(gg_snd_FrostArrowHit1, 1114)
     call SetSoundVolume(gg_snd_FrostArrowHit1, 127)
-    set gg_snd_Fuu_Kill=CreateSound("war3mapImported/Fuu_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Fuu_Kill, 1114)
+    set gg_snd_Fuu_Kill=CreateSound("Sounds/Kills/Fuu_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Fuu_Kill, 3840)
     call SetSoundChannel(gg_snd_Fuu_Kill, 0)
     call SetSoundVolume(gg_snd_Fuu_Kill, 127)
     call SetSoundPitch(gg_snd_Fuu_Kill, 1.0)
-    set gg_snd_Fuu_R=CreateSound("war3mapImported/Fuu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Fuu_R, 1114)
+    set gg_snd_Fuu_R=CreateSound("Sounds/Abilities/Fuu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Fuu_R, 2533)
     call SetSoundChannel(gg_snd_Fuu_R, 0)
     call SetSoundVolume(gg_snd_Fuu_R, 127)
     call SetSoundPitch(gg_snd_Fuu_R, 1.0)
-    set gg_snd_Fuu_T=CreateSound("war3mapImported/Fuu_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Fuu_T, 1114)
+    set gg_snd_Fuu_T=CreateSound("Sounds/Abilities/Fuu_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Fuu_T, 2951)
     call SetSoundChannel(gg_snd_Fuu_T, 0)
     call SetSoundVolume(gg_snd_Fuu_T, 127)
     call SetSoundPitch(gg_snd_Fuu_T, 1.0)
-    set gg_snd_Gaara_D=CreateSound("war3mapImported/Gaara_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gaara_D, 1114)
+    set gg_snd_Gaara_D=CreateSound("Sounds/Abilities/Gaara_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gaara_D, 1541)
     call SetSoundChannel(gg_snd_Gaara_D, 0)
     call SetSoundVolume(gg_snd_Gaara_D, 127)
     call SetSoundPitch(gg_snd_Gaara_D, 1.0)
-    set gg_snd_Gaara_Kill=CreateSound("war3mapImported/Gaara_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gaara_Kill, 1114)
+    set gg_snd_Gaara_Kill=CreateSound("Sounds/Kills/Gaara_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gaara_Kill, 2272)
     call SetSoundChannel(gg_snd_Gaara_Kill, 0)
     call SetSoundVolume(gg_snd_Gaara_Kill, 127)
     call SetSoundPitch(gg_snd_Gaara_Kill, 1.0)
-    set gg_snd_Gaara_T2_Shukaku=CreateSound("war3mapImported/Gaara_T2_Shukaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gaara_T2_Shukaku, 1114)
+    set gg_snd_Gaara_T2_Shukaku=CreateSound("Sounds/Abilities/Gaara_T2_Shukaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gaara_T2_Shukaku, 1071)
     call SetSoundChannel(gg_snd_Gaara_T2_Shukaku, 0)
     call SetSoundVolume(gg_snd_Gaara_T2_Shukaku, 127)
     call SetSoundPitch(gg_snd_Gaara_T2_Shukaku, 1.0)
-    set gg_snd_Gaara_T_Sabaku=CreateSound("war3mapImported/Gaara_T_Sabaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gaara_T_Sabaku, 1114)
+    set gg_snd_Gaara_T_Sabaku=CreateSound("Sounds/Abilities/Gaara_T_Sabaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gaara_T_Sabaku, 1959)
     call SetSoundChannel(gg_snd_Gaara_T_Sabaku, 0)
     call SetSoundVolume(gg_snd_Gaara_T_Sabaku, 127)
     call SetSoundPitch(gg_snd_Gaara_T_Sabaku, 1.0)
-    set gg_snd_Gai_E_Sekizo=CreateSound("war3mapImported/Gai_E_Sekizo.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gai_E_Sekizo, 1114)
+    set gg_snd_Gai_E_Sekizo=CreateSound("Sounds/Abilities/Gai_E_Sekizo.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gai_E_Sekizo, 940)
     call SetSoundChannel(gg_snd_Gai_E_Sekizo, 0)
     call SetSoundVolume(gg_snd_Gai_E_Sekizo, 127)
     call SetSoundPitch(gg_snd_Gai_E_Sekizo, 1.0)
-    set gg_snd_Gai_Kill=CreateSound("war3mapImported/Gai_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gai_Kill, 1114)
+    set gg_snd_Gai_Kill=CreateSound("Sounds/Kills/Gai_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gai_Kill, 3657)
     call SetSoundChannel(gg_snd_Gai_Kill, 0)
     call SetSoundVolume(gg_snd_Gai_Kill, 127)
     call SetSoundPitch(gg_snd_Gai_Kill, 1.0)
-    set gg_snd_Gai_Q=CreateSound("war3mapImported/Gai_Q.mp3", false, true, true, 1, 1, "DoodadsEAX")
-    call SetSoundDuration(gg_snd_Gai_Q, 1114)
+    set gg_snd_Gai_Q=CreateSound("Sounds/Abilities/Gai_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gai_Q, 3213)
     call SetSoundChannel(gg_snd_Gai_Q, 0)
     call SetSoundVolume(gg_snd_Gai_Q, 127)
     call SetSoundPitch(gg_snd_Gai_Q, 1.0)
-    call SetSoundDistances(gg_snd_Gai_Q, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Gai_Q, 3000.0)
-    call SetSoundConeAngles(gg_snd_Gai_Q, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Gai_Q, 0.0, 0.0, 0.0)
-    set gg_snd_Gai_Q_Yagai=CreateSound("war3mapImported/Gai_Q_Yagai.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gai_Q_Yagai, 1114)
+    set gg_snd_Gai_Q_Yagai=CreateSound("Sounds/Abilities/Gai_Q_Yagai.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gai_Q_Yagai, 2533)
     call SetSoundChannel(gg_snd_Gai_Q_Yagai, 0)
     call SetSoundVolume(gg_snd_Gai_Q_Yagai, 127)
     call SetSoundPitch(gg_snd_Gai_Q_Yagai, 1.0)
-    set gg_snd_Gai_R=CreateSound("war3mapImported/Gai_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gai_R, 1114)
+    set gg_snd_Gai_R=CreateSound("Sounds/Abilities/Gai_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gai_R, 1332)
     call SetSoundChannel(gg_snd_Gai_R, 0)
     call SetSoundVolume(gg_snd_Gai_R, 127)
     call SetSoundPitch(gg_snd_Gai_R, 1.0)
-    set gg_snd_Gai_R1=CreateSound("war3mapImported/Gai_R1.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gai_R1, 1114)
+    set gg_snd_Gai_R1=CreateSound("Sounds/Abilities/Gai_R1.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gai_R1, 1384)
     call SetSoundChannel(gg_snd_Gai_R1, 0)
     call SetSoundVolume(gg_snd_Gai_R1, 127)
     call SetSoundPitch(gg_snd_Gai_R1, 1.0)
-    set gg_snd_Gai_T=CreateSound("war3mapImported/Gai_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gai_T, 1114)
+    set gg_snd_Gai_T=CreateSound("Sounds/Abilities/Gai_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gai_T, 1253)
     call SetSoundChannel(gg_snd_Gai_T, 0)
     call SetSoundVolume(gg_snd_Gai_T, 127)
     call SetSoundPitch(gg_snd_Gai_T, 1.0)
-    set gg_snd_Gengetsu_Kill=CreateSound("war3mapImported/Gengetsu_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gengetsu_Kill, 1114)
+    set gg_snd_Gengetsu_Kill=CreateSound("Sounds/Kills/Gengetsu_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gengetsu_Kill, 3395)
     call SetSoundChannel(gg_snd_Gengetsu_Kill, 0)
     call SetSoundVolume(gg_snd_Gengetsu_Kill, 127)
     call SetSoundPitch(gg_snd_Gengetsu_Kill, 1.0)
-    set gg_snd_Gengetsu_R=CreateSound("war3mapImported/Gengetsu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gengetsu_R, 1114)
+    set gg_snd_Gengetsu_R=CreateSound("Sounds/Abilities/Gengetsu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gengetsu_R, 2037)
     call SetSoundChannel(gg_snd_Gengetsu_R, 0)
     call SetSoundVolume(gg_snd_Gengetsu_R, 127)
     call SetSoundPitch(gg_snd_Gengetsu_R, 1.0)
-    set gg_snd_Gengetsu_T=CreateSound("war3mapImported/Gengetsu_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Gengetsu_T, 1114)
+    set gg_snd_Gengetsu_T=CreateSound("Sounds/Abilities/Gengetsu_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Gengetsu_T, 2246)
     call SetSoundChannel(gg_snd_Gengetsu_T, 0)
     call SetSoundVolume(gg_snd_Gengetsu_T, 127)
     call SetSoundPitch(gg_snd_Gengetsu_T, 1.0)
-    set gg_snd_Ginkaku_Q=CreateSound("war3mapImported/Ginkaku_Q.mp3", false, true, false, 1, 1, "DoodadsEAX")
-    call SetSoundDuration(gg_snd_Ginkaku_Q, 1114)
+    set gg_snd_Ginkaku_Q=CreateSound("Sounds/Abilities/Ginkaku_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ginkaku_Q, 966)
     call SetSoundChannel(gg_snd_Ginkaku_Q, 0)
     call SetSoundVolume(gg_snd_Ginkaku_Q, 127)
     call SetSoundPitch(gg_snd_Ginkaku_Q, 1.0)
-    call SetSoundDistances(gg_snd_Ginkaku_Q, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Ginkaku_Q, 3000.0)
-    call SetSoundConeAngles(gg_snd_Ginkaku_Q, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Ginkaku_Q, 0.0, 0.0, 0.0)
-    set gg_snd_Guren_R=CreateSound("war3mapImported/Guren_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Guren_R, 1114)
+    set gg_snd_Guren_R=CreateSound("Sounds/Abilities/Guren_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Guren_R, 2586)
     call SetSoundChannel(gg_snd_Guren_R, 0)
     call SetSoundVolume(gg_snd_Guren_R, 127)
     call SetSoundPitch(gg_snd_Guren_R, 1.0)
-    set gg_snd_Guren_T=CreateSound("war3mapImported/Guren_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Guren_T, 1114)
+    set gg_snd_Guren_T=CreateSound("Sounds/Abilities/Guren_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Guren_T, 1750)
     call SetSoundChannel(gg_snd_Guren_T, 0)
     call SetSoundVolume(gg_snd_Guren_T, 127)
     call SetSoundPitch(gg_snd_Guren_T, 1.0)
-    set gg_snd_Haku_Kill=CreateSound("war3mapImported/Haku_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Haku_Kill, 1114)
+    set gg_snd_Haku_Kill=CreateSound("Sounds/Kills/Haku_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Haku_Kill, 3369)
     call SetSoundChannel(gg_snd_Haku_Kill, 0)
     call SetSoundVolume(gg_snd_Haku_Kill, 127)
     call SetSoundPitch(gg_snd_Haku_Kill, 1.0)
-    set gg_snd_Haku_R=CreateSound("war3mapImported/Haku_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Haku_R, 1114)
+    set gg_snd_Haku_R=CreateSound("Sounds/Abilities/Haku_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Haku_R, 1750)
     call SetSoundChannel(gg_snd_Haku_R, 0)
     call SetSoundVolume(gg_snd_Haku_R, 127)
     call SetSoundPitch(gg_snd_Haku_R, 1.0)
-    set gg_snd_Haku_T=CreateSound("war3mapImported/Haku_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Haku_T, 1114)
+    set gg_snd_Haku_T=CreateSound("Sounds/Abilities/Haku_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Haku_T, 1697)
     call SetSoundChannel(gg_snd_Haku_T, 0)
     call SetSoundVolume(gg_snd_Haku_T, 127)
     call SetSoundPitch(gg_snd_Haku_T, 1.0)
-    set gg_snd_Han_Kill=CreateSound("war3mapImported/Han_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Han_Kill, 1114)
+    set gg_snd_Han_Kill=CreateSound("Sounds/Kills/Han_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Han_Kill, 5564)
     call SetSoundChannel(gg_snd_Han_Kill, 0)
     call SetSoundVolume(gg_snd_Han_Kill, 127)
     call SetSoundPitch(gg_snd_Han_Kill, 1.0)
-    set gg_snd_Han_R=CreateSound("war3mapImported/Han_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Han_R, 1114)
+    set gg_snd_Han_R=CreateSound("Sounds/Abilities/Han_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Han_R, 2768)
     call SetSoundChannel(gg_snd_Han_R, 0)
     call SetSoundVolume(gg_snd_Han_R, 127)
     call SetSoundPitch(gg_snd_Han_R, 1.0)
-    set gg_snd_Han_T=CreateSound("war3mapImported/Han_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Han_T, 1114)
+    set gg_snd_Han_T=CreateSound("Sounds/Abilities/Han_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Han_T, 1149)
     call SetSoundChannel(gg_snd_Han_T, 0)
     call SetSoundVolume(gg_snd_Han_T, 127)
     call SetSoundPitch(gg_snd_Han_T, 1.0)
-    set gg_snd_Hanabi_Kill=CreateSound("war3mapImported/Hanabi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hanabi_Kill, 1114)
+    set gg_snd_Hanabi_Kill=CreateSound("Sounds/Kills/Hanabi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hanabi_Kill, 4257)
     call SetSoundChannel(gg_snd_Hanabi_Kill, 0)
     call SetSoundVolume(gg_snd_Hanabi_Kill, 127)
     call SetSoundPitch(gg_snd_Hanabi_Kill, 1.0)
-    set gg_snd_Hanabi_R=CreateSound("war3mapImported/Hanabi_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hanabi_R, 1114)
+    set gg_snd_Hanabi_R=CreateSound("Sounds/Abilities/Hanabi_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hanabi_R, 1959)
     call SetSoundChannel(gg_snd_Hanabi_R, 0)
     call SetSoundVolume(gg_snd_Hanabi_R, 127)
     call SetSoundPitch(gg_snd_Hanabi_R, 1.0)
-    set gg_snd_Hanabi_T=CreateSound("war3mapImported/Hanabi_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hanabi_T, 1114)
+    set gg_snd_Hanabi_T=CreateSound("Sounds/Abilities/Hanabi_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hanabi_T, 6870)
     call SetSoundChannel(gg_snd_Hanabi_T, 0)
     call SetSoundVolume(gg_snd_Hanabi_T, 127)
     call SetSoundPitch(gg_snd_Hanabi_T, 1.0)
-    set gg_snd_Hanzo_Kill=CreateSound("war3mapImported/Hanzo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hanzo_Kill, 1114)
+    set gg_snd_Hanzo_Kill=CreateSound("Sounds/Kills/Hanzo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hanzo_Kill, 5355)
     call SetSoundChannel(gg_snd_Hanzo_Kill, 0)
     call SetSoundVolume(gg_snd_Hanzo_Kill, 127)
     call SetSoundPitch(gg_snd_Hanzo_Kill, 1.0)
-    set gg_snd_Hanzo_R=CreateSound("war3mapImported/Hanzo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hanzo_R, 1114)
+    set gg_snd_Hanzo_R=CreateSound("Sounds/Abilities/Hanzo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hanzo_R, 3056)
     call SetSoundChannel(gg_snd_Hanzo_R, 0)
     call SetSoundVolume(gg_snd_Hanzo_R, 127)
     call SetSoundPitch(gg_snd_Hanzo_R, 1.0)
-    set gg_snd_Hanzo_T_Ibuse=CreateSound("war3mapImported/Hanzo_T_Ibuse.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hanzo_T_Ibuse, 1114)
+    set gg_snd_Hanzo_T_Ibuse=CreateSound("Sounds/Abilities/Hanzo_T_Ibuse.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hanzo_T_Ibuse, 1854)
     call SetSoundChannel(gg_snd_Hanzo_T_Ibuse, 0)
     call SetSoundVolume(gg_snd_Hanzo_T_Ibuse, 127)
     call SetSoundPitch(gg_snd_Hanzo_T_Ibuse, 1.0)
-    set gg_snd_Hashirama_Kill=CreateSound("war3mapImported/Hashirama_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hashirama_Kill, 1114)
+    set gg_snd_Hashirama_Kill=CreateSound("Sounds/Kills/Hashirama_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hashirama_Kill, 3996)
     call SetSoundChannel(gg_snd_Hashirama_Kill, 0)
     call SetSoundVolume(gg_snd_Hashirama_Kill, 127)
     call SetSoundPitch(gg_snd_Hashirama_Kill, 1.0)
-    set gg_snd_Hashirama_T2_Mokuton=CreateSound("war3mapImported/Hashirama_T2_Mokuton.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hashirama_T2_Mokuton, 1114)
+    set gg_snd_Hashirama_T2_Mokuton=CreateSound("Sounds/Abilities/Hashirama_T2_Mokuton.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hashirama_T2_Mokuton, 4153)
     call SetSoundChannel(gg_snd_Hashirama_T2_Mokuton, 0)
     call SetSoundVolume(gg_snd_Hashirama_T2_Mokuton, 127)
     call SetSoundPitch(gg_snd_Hashirama_T2_Mokuton, 1.0)
-    set gg_snd_Hashirama_T_Senpou=CreateSound("war3mapImported/Hashirama_T_Senpou.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hashirama_T_Senpou, 1114)
+    set gg_snd_Hashirama_T_Senpou=CreateSound("Sounds/Abilities/Hashirama_T_Senpou.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hashirama_T_Senpou, 5355)
     call SetSoundChannel(gg_snd_Hashirama_T_Senpou, 0)
     call SetSoundVolume(gg_snd_Hashirama_T_Senpou, 127)
     call SetSoundPitch(gg_snd_Hashirama_T_Senpou, 1.0)
-    set gg_snd_Hayate_R=CreateSound("war3mapImported/Hayate_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hayate_R, 1114)
+    set gg_snd_Hayate_R=CreateSound("Sounds/Abilities/Hayate_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hayate_R, 1149)
     call SetSoundChannel(gg_snd_Hayate_R, 0)
     call SetSoundVolume(gg_snd_Hayate_R, 127)
     call SetSoundPitch(gg_snd_Hayate_R, 1.0)
-    set gg_snd_Hayate_T=CreateSound("war3mapImported/Hayate_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hayate_T, 1114)
+    set gg_snd_Hayate_T=CreateSound("Sounds/Abilities/Hayate_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hayate_T, 5381)
     call SetSoundChannel(gg_snd_Hayate_T, 0)
     call SetSoundVolume(gg_snd_Hayate_T, 127)
     call SetSoundPitch(gg_snd_Hayate_T, 1.0)
@@ -13370,672 +13351,621 @@ function InitSounds takes nothing returns nothing
     call SetSoundVolume(gg_snd_HeroDemonMissileLaunch2, 127)
     call SetSoundDistances(gg_snd_HeroDemonMissileLaunch2, 0.0, 10000.0)
     call SetSoundDistanceCutoff(gg_snd_HeroDemonMissileLaunch2, 2500.0)
-    set gg_snd_Hidan_Kill=CreateSound("war3mapImported/Hidan_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hidan_Kill, 1219)
+    set gg_snd_Hidan_Kill=CreateSound("Sounds/Kills/Hidan_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hidan_Kill, 4153)
     call SetSoundChannel(gg_snd_Hidan_Kill, 0)
     call SetSoundVolume(gg_snd_Hidan_Kill, 127)
     call SetSoundPitch(gg_snd_Hidan_Kill, 1.0)
-    set gg_snd_Hidan_R=CreateSound("war3mapImported/Hidan_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hidan_R, 1219)
+    set gg_snd_Hidan_R=CreateSound("Sounds/Abilities/Hidan_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hidan_R, 757)
     call SetSoundChannel(gg_snd_Hidan_R, 0)
     call SetSoundVolume(gg_snd_Hidan_R, 127)
     call SetSoundPitch(gg_snd_Hidan_R, 1.0)
-    set gg_snd_Hidan_T=CreateSound("war3mapImported/Hidan_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hidan_T, 1219)
+    set gg_snd_Hidan_T=CreateSound("Sounds/Abilities/Hidan_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hidan_T, 1280)
     call SetSoundChannel(gg_snd_Hidan_T, 0)
     call SetSoundVolume(gg_snd_Hidan_T, 127)
     call SetSoundPitch(gg_snd_Hidan_T, 1.0)
-    set gg_snd_Hinata_Kill=CreateSound("war3mapImported/Hinata_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hinata_Kill, 1219)
+    set gg_snd_Hinata_Kill=CreateSound("Sounds/Kills/Hinata_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hinata_Kill, 3291)
     call SetSoundChannel(gg_snd_Hinata_Kill, 0)
     call SetSoundVolume(gg_snd_Hinata_Kill, 127)
     call SetSoundPitch(gg_snd_Hinata_Kill, 1.0)
-    set gg_snd_Hinata_R=CreateSound("war3mapImported/Hinata_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hinata_R, 1219)
+    set gg_snd_Hinata_R=CreateSound("Sounds/Abilities/Hinata_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hinata_R, 4127)
     call SetSoundChannel(gg_snd_Hinata_R, 0)
     call SetSoundVolume(gg_snd_Hinata_R, 127)
     call SetSoundPitch(gg_snd_Hinata_R, 1.0)
-    set gg_snd_Hinata_T2_Kuuten=CreateSound("war3mapImported/Hinata_T2_Kuuten.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hinata_T2_Kuuten, 1219)
+    set gg_snd_Hinata_T2_Kuuten=CreateSound("Sounds/Abilities/Hinata_T2_Kuuten.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hinata_T2_Kuuten, 2377)
     call SetSoundChannel(gg_snd_Hinata_T2_Kuuten, 0)
     call SetSoundVolume(gg_snd_Hinata_T2_Kuuten, 127)
     call SetSoundPitch(gg_snd_Hinata_T2_Kuuten, 1.0)
-    set gg_snd_Hinata_T_Juuho=CreateSound("war3mapImported/Hinata_T_Juuho.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hinata_T_Juuho, 1219)
+    set gg_snd_Hinata_T_Juuho=CreateSound("Sounds/Abilities/Hinata_T_Juuho.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hinata_T_Juuho, 1384)
     call SetSoundChannel(gg_snd_Hinata_T_Juuho, 0)
     call SetSoundVolume(gg_snd_Hinata_T_Juuho, 127)
     call SetSoundPitch(gg_snd_Hinata_T_Juuho, 1.0)
-    set gg_snd_Hiruzen_Kill=CreateSound("war3mapImported/Hiruzen_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hiruzen_Kill, 1219)
+    set gg_snd_Hiruzen_Kill=CreateSound("Sounds/Kills/Hiruzen_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hiruzen_Kill, 3604)
     call SetSoundChannel(gg_snd_Hiruzen_Kill, 0)
     call SetSoundVolume(gg_snd_Hiruzen_Kill, 127)
     call SetSoundPitch(gg_snd_Hiruzen_Kill, 1.0)
-    set gg_snd_Hiruzen_R2_Enma=CreateSound("war3mapImported/Hiruzen_R2_Enma.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hiruzen_R2_Enma, 1219)
+    set gg_snd_Hiruzen_R2_Enma=CreateSound("Sounds/Abilities/Hiruzen_R2_Enma.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hiruzen_R2_Enma, 7105)
     call SetSoundChannel(gg_snd_Hiruzen_R2_Enma, 0)
     call SetSoundVolume(gg_snd_Hiruzen_R2_Enma, 127)
     call SetSoundPitch(gg_snd_Hiruzen_R2_Enma, 1.0)
-    set gg_snd_Hiruzen_R_Kongo=CreateSound("war3mapImported/Hiruzen_R_Kongo.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hiruzen_R_Kongo, 1219)
+    set gg_snd_Hiruzen_R_Kongo=CreateSound("Sounds/Abilities/Hiruzen_R_Kongo.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hiruzen_R_Kongo, 2847)
     call SetSoundChannel(gg_snd_Hiruzen_R_Kongo, 0)
     call SetSoundVolume(gg_snd_Hiruzen_R_Kongo, 127)
     call SetSoundPitch(gg_snd_Hiruzen_R_Kongo, 1.0)
-    set gg_snd_Hiruzen_T2_Shiki=CreateSound("war3mapImported/Hiruzen_T2_Shiki.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hiruzen_T2_Shiki, 1219)
+    set gg_snd_Hiruzen_T2_Shiki=CreateSound("Sounds/Abilities/Hiruzen_T2_Shiki.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hiruzen_T2_Shiki, 2560)
     call SetSoundChannel(gg_snd_Hiruzen_T2_Shiki, 0)
     call SetSoundVolume(gg_snd_Hiruzen_T2_Shiki, 127)
     call SetSoundPitch(gg_snd_Hiruzen_T2_Shiki, 1.0)
-    set gg_snd_Hiruzen_T_Goton=CreateSound("war3mapImported/Hiruzen_T_Goton.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hiruzen_T_Goton, 1219)
+    set gg_snd_Hiruzen_T_Goton=CreateSound("Sounds/Abilities/Hiruzen_T_Goton.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hiruzen_T_Goton, 4284)
     call SetSoundChannel(gg_snd_Hiruzen_T_Goton, 0)
     call SetSoundVolume(gg_snd_Hiruzen_T_Goton, 127)
     call SetSoundPitch(gg_snd_Hiruzen_T_Goton, 1.0)
-    set gg_snd_Hokage_Minato_Kill=CreateSound("war3mapImported/Hokage_Minato_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Hokage_Minato_Kill, 1219)
+    set gg_snd_Hokage_Minato_Kill=CreateSound("Sounds/Kills/Hokage_Minato_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Hokage_Minato_Kill, 3604)
     call SetSoundChannel(gg_snd_Hokage_Minato_Kill, 0)
     call SetSoundVolume(gg_snd_Hokage_Minato_Kill, 127)
     call SetSoundPitch(gg_snd_Hokage_Minato_Kill, 1.0)
-    set gg_snd_Ichigo_Kill=CreateSound("war3mapImported/Ichigo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_Kill, 1219)
+    set gg_snd_Ichigo_Kill=CreateSound("Sounds/Kills/Ichigo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ichigo_Kill, 15986)
     call SetSoundChannel(gg_snd_Ichigo_Kill, 0)
     call SetSoundVolume(gg_snd_Ichigo_Kill, 127)
     call SetSoundPitch(gg_snd_Ichigo_Kill, 1.0)
-    set gg_snd_Ichigo_Q=CreateSound("war3mapImported/Ichigo_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_Q, 1219)
+    set gg_snd_Ichigo_Q=CreateSound("Sounds/Abilities/Ichigo_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ichigo_Q, 1750)
     call SetSoundChannel(gg_snd_Ichigo_Q, 0)
     call SetSoundVolume(gg_snd_Ichigo_Q, 127)
     call SetSoundPitch(gg_snd_Ichigo_Q, 1.0)
-    set gg_snd_Ichigo_Q01=CreateSound("war3mapImported/Ichigo_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_Q01, 1219)
-    call SetSoundChannel(gg_snd_Ichigo_Q01, 0)
-    call SetSoundVolume(gg_snd_Ichigo_Q01, 127)
-    call SetSoundPitch(gg_snd_Ichigo_Q01, 1.0)
-    set gg_snd_Ichigo_R=CreateSound("war3mapImported/Ichigo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_R, 1219)
+    set gg_snd_Ichigo_R=CreateSound("Sounds/Abilities/Ichigo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ichigo_R, 1515)
     call SetSoundChannel(gg_snd_Ichigo_R, 0)
     call SetSoundVolume(gg_snd_Ichigo_R, 127)
     call SetSoundPitch(gg_snd_Ichigo_R, 1.0)
-    set gg_snd_Ichigo_R01=CreateSound("war3mapImported/Ichigo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_R01, 1219)
-    call SetSoundChannel(gg_snd_Ichigo_R01, 0)
-    call SetSoundVolume(gg_snd_Ichigo_R01, 127)
-    call SetSoundPitch(gg_snd_Ichigo_R01, 1.0)
-    set gg_snd_Ichigo_R_Active=CreateSound("war3mapImported/Ichigo_R_Active.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_R_Active, 1219)
+    set gg_snd_Ichigo_R_Active=CreateSound("Sounds/Abilities/Ichigo_R_Active.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ichigo_R_Active, 1724)
     call SetSoundChannel(gg_snd_Ichigo_R_Active, 0)
     call SetSoundVolume(gg_snd_Ichigo_R_Active, 127)
     call SetSoundPitch(gg_snd_Ichigo_R_Active, 1.0)
-    set gg_snd_Ichigo_R_Transform=CreateSound("war3mapImported/Ichigo_R_Transform.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_R_Transform, 1219)
+    set gg_snd_Ichigo_R_Transform=CreateSound("Sounds/Abilities/Ichigo_R_Transform.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ichigo_R_Transform, 1854)
     call SetSoundChannel(gg_snd_Ichigo_R_Transform, 0)
     call SetSoundVolume(gg_snd_Ichigo_R_Transform, 127)
     call SetSoundPitch(gg_snd_Ichigo_R_Transform, 1.0)
-    set gg_snd_Ichigo_T=CreateSound("war3mapImported/Ichigo_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_T, 1219)
+    set gg_snd_Ichigo_T=CreateSound("Sounds/Abilities/Ichigo_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ichigo_T, 3631)
     call SetSoundChannel(gg_snd_Ichigo_T, 0)
     call SetSoundVolume(gg_snd_Ichigo_T, 127)
     call SetSoundPitch(gg_snd_Ichigo_T, 1.0)
-    set gg_snd_Ichigo_T01=CreateSound("war3mapImported/Ichigo_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_T01, 1219)
-    call SetSoundChannel(gg_snd_Ichigo_T01, 0)
-    call SetSoundVolume(gg_snd_Ichigo_T01, 127)
-    call SetSoundPitch(gg_snd_Ichigo_T01, 1.0)
-    set gg_snd_Ichigo_T_Transform=CreateSound("war3mapImported/Ichigo_T_Transform.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_T_Transform, 1219)
-    call SetSoundChannel(gg_snd_Ichigo_T_Transform, 0)
-    call SetSoundVolume(gg_snd_Ichigo_T_Transform, 127)
-    call SetSoundPitch(gg_snd_Ichigo_T_Transform, 1.0)
-    set gg_snd_Ichigo_Unleash=CreateSound("war3mapImported/Ichigo_Unleash.wav", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_Unleash, 1219)
-    call SetSoundChannel(gg_snd_Ichigo_Unleash, 0)
-    call SetSoundVolume(gg_snd_Ichigo_Unleash, 127)
-    call SetSoundPitch(gg_snd_Ichigo_Unleash, 1.0)
-    set gg_snd_Ichigo_Vasto_Lorde=CreateSound("war3mapImported/Ichigo_Vasto_Lorde.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_Vasto_Lorde, 1219)
+    set gg_snd_Ichigo_Vasto_Lorde=CreateSound("Sounds/Abilities/Ichigo_Vasto_Lorde.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ichigo_Vasto_Lorde, 4884)
     call SetSoundChannel(gg_snd_Ichigo_Vasto_Lorde, 0)
     call SetSoundVolume(gg_snd_Ichigo_Vasto_Lorde, 127)
     call SetSoundPitch(gg_snd_Ichigo_Vasto_Lorde, 1.0)
-    set gg_snd_Ichigo_VastoLord=CreateSound("war3mapImported/Ichigo_VastoLord.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ichigo_VastoLord, 1219)
-    call SetSoundChannel(gg_snd_Ichigo_VastoLord, 0)
-    call SetSoundVolume(gg_snd_Ichigo_VastoLord, 127)
-    call SetSoundPitch(gg_snd_Ichigo_VastoLord, 1.0)
-    set gg_snd_Ino_Kill=CreateSound("war3mapImported/Ino_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ino_Kill, 1219)
+    set gg_snd_Ino_Kill=CreateSound("Sounds/Kills/Ino_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ino_Kill, 2377)
     call SetSoundChannel(gg_snd_Ino_Kill, 0)
     call SetSoundVolume(gg_snd_Ino_Kill, 127)
     call SetSoundPitch(gg_snd_Ino_Kill, 1.0)
-    set gg_snd_Ino_R=CreateSound("war3mapImported/Ino_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ino_R, 1219)
+    set gg_snd_Ino_R=CreateSound("Sounds/Abilities/Ino_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ino_R, 4127)
     call SetSoundChannel(gg_snd_Ino_R, 0)
     call SetSoundVolume(gg_snd_Ino_R, 127)
     call SetSoundPitch(gg_snd_Ino_R, 1.0)
-    set gg_snd_Ino_T2_Mind_Control=CreateSound("war3mapImported/Ino_T2_Mind_Control.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ino_T2_Mind_Control, 1219)
+    set gg_snd_Ino_T2_Mind_Control=CreateSound("Sounds/Abilities/Ino_T2_Mind_Control.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ino_T2_Mind_Control, 2847)
     call SetSoundChannel(gg_snd_Ino_T2_Mind_Control, 0)
     call SetSoundVolume(gg_snd_Ino_T2_Mind_Control, 127)
     call SetSoundPitch(gg_snd_Ino_T2_Mind_Control, 1.0)
-    set gg_snd_Ino_T_Cho_Shinka=CreateSound("war3mapImported/Ino_T_Cho_Shinka.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ino_T_Cho_Shinka, 1219)
+    set gg_snd_Ino_T_Cho_Shinka=CreateSound("Sounds/Abilities/Ino_T_Cho_Shinka.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ino_T_Cho_Shinka, 5590)
     call SetSoundChannel(gg_snd_Ino_T_Cho_Shinka, 0)
     call SetSoundVolume(gg_snd_Ino_T_Cho_Shinka, 127)
     call SetSoundPitch(gg_snd_Ino_T_Cho_Shinka, 1.0)
-    set gg_snd_Iruka_Kill=CreateSound("war3mapImported/Iruka_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Iruka_Kill, 1219)
+    set gg_snd_Iruka_Kill=CreateSound("Sounds/Kills/Iruka_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Iruka_Kill, 2455)
     call SetSoundChannel(gg_snd_Iruka_Kill, 0)
     call SetSoundVolume(gg_snd_Iruka_Kill, 127)
     call SetSoundPitch(gg_snd_Iruka_Kill, 1.0)
-    set gg_snd_Itachi_Kill=CreateSound("war3mapImported/Itachi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Itachi_Kill, 1219)
+    set gg_snd_Itachi_Kill=CreateSound("Sounds/Kills/Itachi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Itachi_Kill, 3578)
     call SetSoundChannel(gg_snd_Itachi_Kill, 0)
     call SetSoundVolume(gg_snd_Itachi_Kill, 127)
     call SetSoundPitch(gg_snd_Itachi_Kill, 1.0)
-    set gg_snd_Itachi_Q=CreateSound("war3mapImported/Itachi_Q.mp3", false, true, true, 1, 1, "DoodadsEAX")
-    call SetSoundDuration(gg_snd_Itachi_Q, 1219)
+    set gg_snd_Itachi_Q=CreateSound("Sounds/Abilities/Itachi_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Itachi_Q, 1619)
     call SetSoundChannel(gg_snd_Itachi_Q, 0)
     call SetSoundVolume(gg_snd_Itachi_Q, 127)
     call SetSoundPitch(gg_snd_Itachi_Q, 1.0)
-    call SetSoundDistances(gg_snd_Itachi_Q, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Itachi_Q, 2500.0)
-    call SetSoundConeAngles(gg_snd_Itachi_Q, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Itachi_Q, 0.0, 0.0, 0.0)
-    set gg_snd_Itachi_R=CreateSound("war3mapImported/Itachi_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Itachi_R, 1219)
+    set gg_snd_Itachi_R=CreateSound("Sounds/Abilities/Itachi_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Itachi_R, 6948)
     call SetSoundChannel(gg_snd_Itachi_R, 0)
     call SetSoundVolume(gg_snd_Itachi_R, 127)
     call SetSoundPitch(gg_snd_Itachi_R, 1.0)
-    set gg_snd_Itachi_Susanoo_E=CreateSound("war3mapImported/Itachi_Susanoo_E.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Itachi_Susanoo_E, 1219)
+    set gg_snd_Itachi_Susanoo_E=CreateSound("Sounds/Abilities/Itachi_Susanoo_E.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Itachi_Susanoo_E, 1306)
     call SetSoundChannel(gg_snd_Itachi_Susanoo_E, 0)
     call SetSoundVolume(gg_snd_Itachi_Susanoo_E, 127)
     call SetSoundPitch(gg_snd_Itachi_Susanoo_E, 1.0)
-    set gg_snd_Itachi_T2_Susanoo=CreateSound("war3mapImported/Itachi_T2_Susanoo.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Itachi_T2_Susanoo, 1219)
+    set gg_snd_Itachi_T2_Susanoo=CreateSound("Sounds/Abilities/Itachi_T2_Susanoo.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Itachi_T2_Susanoo, 2377)
     call SetSoundChannel(gg_snd_Itachi_T2_Susanoo, 0)
     call SetSoundVolume(gg_snd_Itachi_T2_Susanoo, 127)
     call SetSoundPitch(gg_snd_Itachi_T2_Susanoo, 1.0)
-    set gg_snd_Itachi_T_Amaterasu=CreateSound("war3mapImported/Itachi_T_Amaterasu.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Itachi_T_Amaterasu, 1219)
+    set gg_snd_Itachi_T_Amaterasu=CreateSound("Sounds/Abilities/Itachi_T_Amaterasu.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Itachi_T_Amaterasu, 3500)
     call SetSoundChannel(gg_snd_Itachi_T_Amaterasu, 0)
     call SetSoundVolume(gg_snd_Itachi_T_Amaterasu, 127)
     call SetSoundPitch(gg_snd_Itachi_T_Amaterasu, 1.0)
-    set gg_snd_Itachi_Yasaka_Q=CreateSound("war3mapImported/Itachi_Yasaka_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Itachi_Yasaka_Q, 1219)
+    set gg_snd_Itachi_Yasaka_Q=CreateSound("Sounds/Abilities/Itachi_Yasaka_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Itachi_Yasaka_Q, 1358)
     call SetSoundChannel(gg_snd_Itachi_Yasaka_Q, 0)
     call SetSoundVolume(gg_snd_Itachi_Yasaka_Q, 127)
     call SetSoundPitch(gg_snd_Itachi_Yasaka_Q, 1.0)
-    set gg_snd_Jiraiya_Kill=CreateSound("war3mapImported/Jiraiya_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Jiraiya_Kill, 1219)
+    set gg_snd_Jiraiya_Kill=CreateSound("Sounds/Kills/Jiraiya_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Jiraiya_Kill, 6426)
     call SetSoundChannel(gg_snd_Jiraiya_Kill, 0)
     call SetSoundVolume(gg_snd_Jiraiya_Kill, 127)
     call SetSoundPitch(gg_snd_Jiraiya_Kill, 1.0)
-    set gg_snd_Jiraiya_Q=CreateSound("war3mapImported/Jiraiya_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Jiraiya_Q, 1219)
+    set gg_snd_Jiraiya_Q=CreateSound("Sounds/Abilities/Jiraiya_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Jiraiya_Q, 3213)
     call SetSoundChannel(gg_snd_Jiraiya_Q, 0)
     call SetSoundVolume(gg_snd_Jiraiya_Q, 127)
     call SetSoundPitch(gg_snd_Jiraiya_Q, 1.0)
-    set gg_snd_Jiraiya_R=CreateSound("war3mapImported/Jiraiya_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Jiraiya_R, 1219)
+    set gg_snd_Jiraiya_R=CreateSound("Sounds/Abilities/Jiraiya_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Jiraiya_R, 4127)
     call SetSoundChannel(gg_snd_Jiraiya_R, 0)
     call SetSoundVolume(gg_snd_Jiraiya_R, 127)
     call SetSoundPitch(gg_snd_Jiraiya_R, 1.0)
-    set gg_snd_Jiraiya_T=CreateSound("war3mapImported/Jiraiya_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Jiraiya_T, 1219)
+    set gg_snd_Jiraiya_T=CreateSound("Sounds/Abilities/Jiraiya_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Jiraiya_T, 1959)
     call SetSoundChannel(gg_snd_Jiraiya_T, 0)
     call SetSoundVolume(gg_snd_Jiraiya_T, 127)
     call SetSoundPitch(gg_snd_Jiraiya_T, 1.0)
-    set gg_snd_Jirobo_D=CreateSound("war3mapImported/Jirobo_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Jirobo_D, 1219)
+    set gg_snd_Jirobo_D=CreateSound("Sounds/Abilities/Jirobo_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Jirobo_D, 1828)
     call SetSoundChannel(gg_snd_Jirobo_D, 0)
     call SetSoundVolume(gg_snd_Jirobo_D, 127)
     call SetSoundPitch(gg_snd_Jirobo_D, 1.0)
-    set gg_snd_Jirobo_Kill=CreateSound("war3mapImported/Jirobo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Jirobo_Kill, 1219)
+    set gg_snd_Jirobo_Kill=CreateSound("Sounds/Kills/Jirobo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Jirobo_Kill, 2742)
     call SetSoundChannel(gg_snd_Jirobo_Kill, 0)
     call SetSoundVolume(gg_snd_Jirobo_Kill, 127)
     call SetSoundPitch(gg_snd_Jirobo_Kill, 1.0)
-    set gg_snd_Jirobo_R=CreateSound("war3mapImported/Jirobo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Jirobo_R, 1219)
+    set gg_snd_Jirobo_R=CreateSound("Sounds/Abilities/Jirobo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Jirobo_R, 1462)
     call SetSoundChannel(gg_snd_Jirobo_R, 0)
     call SetSoundVolume(gg_snd_Jirobo_R, 127)
     call SetSoundPitch(gg_snd_Jirobo_R, 1.0)
-    set gg_snd_Jirobo_T=CreateSound("war3mapImported/Jirobo_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Jirobo_T, 1219)
+    set gg_snd_Jirobo_T=CreateSound("Sounds/Abilities/Jirobo_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Jirobo_T, 626)
     call SetSoundChannel(gg_snd_Jirobo_T, 0)
     call SetSoundVolume(gg_snd_Jirobo_T, 127)
     call SetSoundPitch(gg_snd_Jirobo_T, 1.0)
-    set gg_snd_Jounin_Kakashi_Kill=CreateSound("war3mapImported/Jounin_Kakashi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Jounin_Kakashi_Kill, 1219)
+    set gg_snd_Jounin_Kakashi_Kill=CreateSound("Sounds/Kills/Jounin_Kakashi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Jounin_Kakashi_Kill, 2925)
     call SetSoundChannel(gg_snd_Jounin_Kakashi_Kill, 0)
     call SetSoundVolume(gg_snd_Jounin_Kakashi_Kill, 127)
     call SetSoundPitch(gg_snd_Jounin_Kakashi_Kill, 1.0)
-    set gg_snd_Jounin_Minato_Kill=CreateSound("war3mapImported/Jounin_Minato_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Jounin_Minato_Kill, 1219)
+    set gg_snd_Jounin_Minato_Kill=CreateSound("Sounds/Kills/Jounin_Minato_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Jounin_Minato_Kill, 2455)
     call SetSoundChannel(gg_snd_Jounin_Minato_Kill, 0)
     call SetSoundVolume(gg_snd_Jounin_Minato_Kill, 127)
     call SetSoundPitch(gg_snd_Jounin_Minato_Kill, 1.0)
-    set gg_snd_Juugo_Kill=CreateSound("war3mapImported/Juugo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Juugo_Kill, 1219)
+    set gg_snd_Juugo_Kill=CreateSound("Sounds/Kills/Juugo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Juugo_Kill, 4205)
     call SetSoundChannel(gg_snd_Juugo_Kill, 0)
     call SetSoundVolume(gg_snd_Juugo_Kill, 127)
     call SetSoundPitch(gg_snd_Juugo_Kill, 1.0)
-    set gg_snd_Juugo_T=CreateSound("war3mapImported/Juugo_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Juugo_T, 1219)
+    set gg_snd_Juugo_T=CreateSound("Sounds/Abilities/Juugo_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Juugo_T, 1018)
     call SetSoundChannel(gg_snd_Juugo_T, 0)
     call SetSoundVolume(gg_snd_Juugo_T, 127)
     call SetSoundPitch(gg_snd_Juugo_T, 1.0)
-    set gg_snd_Kabuto_R=CreateSound("war3mapImported/Kabuto_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kabuto_R, 1219)
+    set gg_snd_Kabuto_R=CreateSound("Sounds/Abilities/Kabuto_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kabuto_R, 2220)
     call SetSoundChannel(gg_snd_Kabuto_R, 0)
     call SetSoundVolume(gg_snd_Kabuto_R, 127)
     call SetSoundPitch(gg_snd_Kabuto_R, 1.0)
-    set gg_snd_Kabuto_Sage_R=CreateSound("war3mapImported/Kabuto_Sage_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kabuto_Sage_R, 1219)
+    set gg_snd_Kabuto_Sage_R=CreateSound("Sounds/Abilities/Kabuto_Sage_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kabuto_Sage_R, 2246)
     call SetSoundChannel(gg_snd_Kabuto_Sage_R, 0)
     call SetSoundVolume(gg_snd_Kabuto_Sage_R, 127)
     call SetSoundPitch(gg_snd_Kabuto_Sage_R, 1.0)
-    set gg_snd_Kabuto_Sage_W=CreateSound("war3mapImported/Kabuto_Sage_W.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kabuto_Sage_W, 1219)
+    set gg_snd_Kabuto_Sage_W=CreateSound("Sounds/Abilities/Kabuto_Sage_W.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kabuto_Sage_W, 3813)
     call SetSoundChannel(gg_snd_Kabuto_Sage_W, 0)
     call SetSoundVolume(gg_snd_Kabuto_Sage_W, 127)
     call SetSoundPitch(gg_snd_Kabuto_Sage_W, 1.0)
-    set gg_snd_Kabuto_T_Transform=CreateSound("war3mapImported/Kabuto_T_Transform.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kabuto_T_Transform, 1219)
+    set gg_snd_Kabuto_T_Transform=CreateSound("Sounds/Abilities/Kabuto_T_Transform.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kabuto_T_Transform, 1906)
     call SetSoundChannel(gg_snd_Kabuto_T_Transform, 0)
     call SetSoundVolume(gg_snd_Kabuto_T_Transform, 127)
     call SetSoundPitch(gg_snd_Kabuto_T_Transform, 1.0)
-    set gg_snd_Kabuto_Young_R=CreateSound("war3mapImported/Kabuto_Young_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kabuto_Young_R, 1219)
+    set gg_snd_Kabuto_Young_R=CreateSound("Sounds/Abilities/Kabuto_Young_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kabuto_Young_R, 1149)
     call SetSoundChannel(gg_snd_Kabuto_Young_R, 0)
     call SetSoundVolume(gg_snd_Kabuto_Young_R, 127)
     call SetSoundPitch(gg_snd_Kabuto_Young_R, 1.0)
-    set gg_snd_Kabuto_Young_T=CreateSound("war3mapImported/Kabuto_Young_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kabuto_Young_T, 1219)
+    set gg_snd_Kabuto_Young_T=CreateSound("Sounds/Abilities/Kabuto_Young_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kabuto_Young_T, 4858)
     call SetSoundChannel(gg_snd_Kabuto_Young_T, 0)
     call SetSoundVolume(gg_snd_Kabuto_Young_T, 127)
     call SetSoundPitch(gg_snd_Kabuto_Young_T, 1.0)
-    set gg_snd_Kaguya_Kill=CreateSound("war3mapImported/Kaguya_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kaguya_Kill, 1219)
+    set gg_snd_Kaguya_Kill=CreateSound("Sounds/Kills/Kaguya_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kaguya_Kill, 5224)
     call SetSoundChannel(gg_snd_Kaguya_Kill, 0)
     call SetSoundVolume(gg_snd_Kaguya_Kill, 127)
     call SetSoundPitch(gg_snd_Kaguya_Kill, 1.0)
-    set gg_snd_Kaguya_T_Gudoudama=CreateSound("war3mapImported/Kaguya_T_Gudoudama.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kaguya_T_Gudoudama, 1219)
+    set gg_snd_Kaguya_T_Gudoudama=CreateSound("Sounds/Abilities/Kaguya_T_Gudoudama.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kaguya_T_Gudoudama, 4022)
     call SetSoundChannel(gg_snd_Kaguya_T_Gudoudama, 0)
     call SetSoundVolume(gg_snd_Kaguya_T_Gudoudama, 127)
     call SetSoundPitch(gg_snd_Kaguya_T_Gudoudama, 1.0)
-    set gg_snd_Kakashi_Anbu_R=CreateSound("war3mapImported/Kakashi_Anbu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kakashi_Anbu_R, 1219)
+    set gg_snd_Kakashi_Anbu_R=CreateSound("Sounds/Abilities/Kakashi_Anbu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kakashi_Anbu_R, 2821)
     call SetSoundChannel(gg_snd_Kakashi_Anbu_R, 0)
     call SetSoundVolume(gg_snd_Kakashi_Anbu_R, 127)
     call SetSoundPitch(gg_snd_Kakashi_Anbu_R, 1.0)
-    set gg_snd_Kakashi_Anbu_T=CreateSound("war3mapImported/Kakashi_Anbu_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kakashi_Anbu_T, 1219)
+    set gg_snd_Kakashi_Anbu_T=CreateSound("Sounds/Abilities/Kakashi_Anbu_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kakashi_Anbu_T, 1906)
     call SetSoundChannel(gg_snd_Kakashi_Anbu_T, 0)
     call SetSoundVolume(gg_snd_Kakashi_Anbu_T, 127)
     call SetSoundPitch(gg_snd_Kakashi_Anbu_T, 1.0)
-    set gg_snd_Kakashi_Jounin_Dimension_D=CreateSound("war3mapImported/Kakashi_Jounin_Dimension_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kakashi_Jounin_Dimension_D, 1219)
+    set gg_snd_Kakashi_Jounin_Dimension_D=CreateSound("Sounds/Abilities/Kakashi_Jounin_Dimension_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kakashi_Jounin_Dimension_D, 1985)
     call SetSoundChannel(gg_snd_Kakashi_Jounin_Dimension_D, 0)
     call SetSoundVolume(gg_snd_Kakashi_Jounin_Dimension_D, 127)
     call SetSoundPitch(gg_snd_Kakashi_Jounin_Dimension_D, 1.0)
-    set gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q=CreateSound("war3mapImported/Kakashi_Jounin_Kamui_Raikiri_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q, 1219)
+    set gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q=CreateSound("Sounds/Abilities/Kakashi_Jounin_Kamui_Raikiri_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q, 2638)
     call SetSoundChannel(gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q, 0)
     call SetSoundVolume(gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q, 127)
     call SetSoundPitch(gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q, 1.0)
-    set gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q01=CreateSound("war3mapImported/Kakashi_Jounin_Kamui_Raikiri_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q01, 1219)
-    call SetSoundChannel(gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q01, 0)
-    call SetSoundVolume(gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q01, 127)
-    call SetSoundPitch(gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q01, 1.0)
-    set gg_snd_Kakashi_Jounin_R=CreateSound("war3mapImported/Kakashi_Jounin_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kakashi_Jounin_R, 1219)
+    set gg_snd_Kakashi_Jounin_R=CreateSound("Sounds/Abilities/Kakashi_Jounin_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kakashi_Jounin_R, 1541)
     call SetSoundChannel(gg_snd_Kakashi_Jounin_R, 0)
     call SetSoundVolume(gg_snd_Kakashi_Jounin_R, 127)
     call SetSoundPitch(gg_snd_Kakashi_Jounin_R, 1.0)
-    set gg_snd_Kakashi_Jounin_T=CreateSound("war3mapImported/Kakashi_Jounin_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kakashi_Jounin_T, 1219)
+    set gg_snd_Kakashi_Jounin_T=CreateSound("Sounds/Abilities/Kakashi_Jounin_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kakashi_Jounin_T, 1671)
     call SetSoundChannel(gg_snd_Kakashi_Jounin_T, 0)
     call SetSoundVolume(gg_snd_Kakashi_Jounin_T, 127)
     call SetSoundPitch(gg_snd_Kakashi_Jounin_T, 1.0)
-    set gg_snd_Kakuzu_Kill=CreateSound("war3mapImported/Kakuzu_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kakuzu_Kill, 1219)
+    set gg_snd_Kakuzu_Kill=CreateSound("Sounds/Kills/Kakuzu_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kakuzu_Kill, 3474)
     call SetSoundChannel(gg_snd_Kakuzu_Kill, 0)
     call SetSoundVolume(gg_snd_Kakuzu_Kill, 127)
     call SetSoundPitch(gg_snd_Kakuzu_Kill, 1.0)
-    set gg_snd_Kakuzu_R=CreateSound("war3mapImported/Kakuzu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kakuzu_R, 1219)
+    set gg_snd_Kakuzu_R=CreateSound("Sounds/Abilities/Kakuzu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kakuzu_R, 3996)
     call SetSoundChannel(gg_snd_Kakuzu_R, 0)
     call SetSoundVolume(gg_snd_Kakuzu_R, 127)
     call SetSoundPitch(gg_snd_Kakuzu_R, 1.0)
-    set gg_snd_Kakuzu_T_Hearts=CreateSound("war3mapImported/Kakuzu_T_Hearts.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kakuzu_T_Hearts, 1219)
+    set gg_snd_Kakuzu_T_Hearts=CreateSound("Sounds/Abilities/Kakuzu_T_Hearts.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kakuzu_T_Hearts, 2873)
     call SetSoundChannel(gg_snd_Kakuzu_T_Hearts, 0)
     call SetSoundVolume(gg_snd_Kakuzu_T_Hearts, 127)
     call SetSoundPitch(gg_snd_Kakuzu_T_Hearts, 1.0)
-    set gg_snd_Kakuzu_T_Zukokku=CreateSound("war3mapImported/Kakuzu_T_Zukokku.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kakuzu_T_Zukokku, 1219)
+    set gg_snd_Kakuzu_T_Zukokku=CreateSound("Sounds/Abilities/Kakuzu_T_Zukokku.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kakuzu_T_Zukokku, 2142)
     call SetSoundChannel(gg_snd_Kakuzu_T_Zukokku, 0)
     call SetSoundVolume(gg_snd_Kakuzu_T_Zukokku, 127)
     call SetSoundPitch(gg_snd_Kakuzu_T_Zukokku, 1.0)
-    set gg_snd_Kankuro_Kill=CreateSound("war3mapImported/Kankuro_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kankuro_Kill, 1219)
+    set gg_snd_Kankuro_Kill=CreateSound("Sounds/Kills/Kankuro_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kankuro_Kill, 3317)
     call SetSoundChannel(gg_snd_Kankuro_Kill, 0)
     call SetSoundVolume(gg_snd_Kankuro_Kill, 127)
     call SetSoundPitch(gg_snd_Kankuro_Kill, 1.0)
-    set gg_snd_Kankuro_R=CreateSound("war3mapImported/Kankuro_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kankuro_R, 1219)
+    set gg_snd_Kankuro_R=CreateSound("Sounds/Abilities/Kankuro_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kankuro_R, 3004)
     call SetSoundChannel(gg_snd_Kankuro_R, 0)
     call SetSoundVolume(gg_snd_Kankuro_R, 127)
     call SetSoundPitch(gg_snd_Kankuro_R, 1.0)
-    set gg_snd_Kankuro_T=CreateSound("war3mapImported/Kankuro_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kankuro_T, 1219)
+    set gg_snd_Kankuro_T=CreateSound("Sounds/Abilities/Kankuro_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kankuro_T, 1776)
     call SetSoundChannel(gg_snd_Kankuro_T, 0)
     call SetSoundVolume(gg_snd_Kankuro_T, 127)
     call SetSoundPitch(gg_snd_Kankuro_T, 1.0)
-    set gg_snd_Karin_Kill=CreateSound("war3mapImported/Karin_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Karin_Kill, 1219)
+    set gg_snd_Karin_Kill=CreateSound("Sounds/Kills/Karin_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Karin_Kill, 4231)
     call SetSoundChannel(gg_snd_Karin_Kill, 0)
     call SetSoundVolume(gg_snd_Karin_Kill, 127)
     call SetSoundPitch(gg_snd_Karin_Kill, 1.0)
-    set gg_snd_Karin_R_Activation=CreateSound("war3mapImported/Karin_R_Activation.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Karin_R_Activation, 1219)
+    set gg_snd_Karin_R_Activation=CreateSound("Sounds/Abilities/Karin_R_Activation.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Karin_R_Activation, 1933)
     call SetSoundChannel(gg_snd_Karin_R_Activation, 0)
     call SetSoundVolume(gg_snd_Karin_R_Activation, 127)
     call SetSoundPitch(gg_snd_Karin_R_Activation, 1.0)
-    set gg_snd_Karin_R_When_Hitting_An_Enemy=CreateSound("war3mapImported/Karin_R_When_Hitting_An_Enemy.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Karin_R_When_Hitting_An_Enemy, 1219)
+    set gg_snd_Karin_R_When_Hitting_An_Enemy=CreateSound("Sounds/Abilities/Karin_R_When_Hitting_An_Enemy.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Karin_R_When_Hitting_An_Enemy, 3657)
     call SetSoundChannel(gg_snd_Karin_R_When_Hitting_An_Enemy, 0)
     call SetSoundVolume(gg_snd_Karin_R_When_Hitting_An_Enemy, 127)
     call SetSoundPitch(gg_snd_Karin_R_When_Hitting_An_Enemy, 1.0)
-    set gg_snd_Karin_R_When_Hitting_Sasuke=CreateSound("war3mapImported/Karin_R_When_Hitting_Sasuke.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Karin_R_When_Hitting_Sasuke, 1219)
+    set gg_snd_Karin_R_When_Hitting_Sasuke=CreateSound("Sounds/Abilities/Karin_R_When_Hitting_Sasuke.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Karin_R_When_Hitting_Sasuke, 4336)
     call SetSoundChannel(gg_snd_Karin_R_When_Hitting_Sasuke, 0)
     call SetSoundVolume(gg_snd_Karin_R_When_Hitting_Sasuke, 127)
     call SetSoundPitch(gg_snd_Karin_R_When_Hitting_Sasuke, 1.0)
-    set gg_snd_Karin_T=CreateSound("war3mapImported/Karin_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Karin_T, 1219)
+    set gg_snd_Karin_T=CreateSound("Sounds/Abilities/Karin_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Karin_T, 2298)
     call SetSoundChannel(gg_snd_Karin_T, 0)
     call SetSoundVolume(gg_snd_Karin_T, 127)
     call SetSoundPitch(gg_snd_Karin_T, 1.0)
-    set gg_snd_Kiba_Kill=CreateSound("war3mapImported/Kiba_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kiba_Kill, 1219)
+    set gg_snd_Kiba_Kill=CreateSound("Sounds/Kills/Kiba_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kiba_Kill, 3813)
     call SetSoundChannel(gg_snd_Kiba_Kill, 0)
     call SetSoundVolume(gg_snd_Kiba_Kill, 127)
     call SetSoundPitch(gg_snd_Kiba_Kill, 1.0)
-    set gg_snd_Kiba_R=CreateSound("war3mapImported/Kiba_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kiba_R, 1219)
+    set gg_snd_Kiba_R=CreateSound("Sounds/Abilities/Kiba_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kiba_R, 1175)
     call SetSoundChannel(gg_snd_Kiba_R, 0)
     call SetSoundVolume(gg_snd_Kiba_R, 127)
     call SetSoundPitch(gg_snd_Kiba_R, 1.0)
-    set gg_snd_Kiba_T=CreateSound("war3mapImported/Kiba_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kiba_T, 1219)
+    set gg_snd_Kiba_T=CreateSound("Sounds/Abilities/Kiba_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kiba_T, 2455)
     call SetSoundChannel(gg_snd_Kiba_T, 0)
     call SetSoundVolume(gg_snd_Kiba_T, 127)
     call SetSoundPitch(gg_snd_Kiba_T, 1.0)
-    set gg_snd_Kidomaru_D=CreateSound("war3mapImported/Kidomaru_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kidomaru_D, 1219)
+    set gg_snd_Kidomaru_D=CreateSound("Sounds/Abilities/Kidomaru_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kidomaru_D, 1306)
     call SetSoundChannel(gg_snd_Kidomaru_D, 0)
     call SetSoundVolume(gg_snd_Kidomaru_D, 127)
     call SetSoundPitch(gg_snd_Kidomaru_D, 1.0)
-    set gg_snd_Kidomaru_Kill=CreateSound("war3mapImported/Kidomaru_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kidomaru_Kill, 1219)
+    set gg_snd_Kidomaru_Kill=CreateSound("Sounds/Kills/Kidomaru_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kidomaru_Kill, 4414)
     call SetSoundChannel(gg_snd_Kidomaru_Kill, 0)
     call SetSoundVolume(gg_snd_Kidomaru_Kill, 127)
     call SetSoundPitch(gg_snd_Kidomaru_Kill, 1.0)
-    set gg_snd_Kidomaru_T=CreateSound("war3mapImported/Kidomaru_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kidomaru_T, 1219)
+    set gg_snd_Kidomaru_T=CreateSound("Sounds/Abilities/Kidomaru_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kidomaru_T, 4597)
     call SetSoundChannel(gg_snd_Kidomaru_T, 0)
     call SetSoundVolume(gg_snd_Kidomaru_T, 127)
     call SetSoundPitch(gg_snd_Kidomaru_T, 1.0)
-    set gg_snd_Killer_Bee_R=CreateSound("war3mapImported/Killer_Bee_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Killer_Bee_R, 1219)
+    set gg_snd_Killer_Bee_R=CreateSound("Sounds/Abilities/Killer_Bee_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Killer_Bee_R, 3239)
     call SetSoundChannel(gg_snd_Killer_Bee_R, 0)
     call SetSoundVolume(gg_snd_Killer_Bee_R, 127)
     call SetSoundPitch(gg_snd_Killer_Bee_R, 1.0)
-    set gg_snd_Killer_Bee_T=CreateSound("war3mapImported/Killer_Bee_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Killer_Bee_T, 1219)
+    set gg_snd_Killer_Bee_T=CreateSound("Sounds/Abilities/Killer_Bee_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Killer_Bee_T, 1933)
     call SetSoundChannel(gg_snd_Killer_Bee_T, 0)
     call SetSoundVolume(gg_snd_Killer_Bee_T, 127)
     call SetSoundPitch(gg_snd_Killer_Bee_T, 1.0)
-    set gg_snd_Killer_Bee_Transform=CreateSound("war3mapImported/Killer_Bee_Transform.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Killer_Bee_Transform, 1219)
+    set gg_snd_Killer_Bee_Transform=CreateSound("Sounds/Abilities/Killer_Bee_Transform.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Killer_Bee_Transform, 3578)
     call SetSoundChannel(gg_snd_Killer_Bee_Transform, 0)
     call SetSoundVolume(gg_snd_Killer_Bee_Transform, 127)
     call SetSoundPitch(gg_snd_Killer_Bee_Transform, 1.0)
-    set gg_snd_Killer_Bee_Transform_Q=CreateSound("war3mapImported/Killer_Bee_Transform_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Killer_Bee_Transform_Q, 1219)
+    set gg_snd_Killer_Bee_Transform_Q=CreateSound("Sounds/Abilities/Killer_Bee_Transform_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Killer_Bee_Transform_Q, 1933)
     call SetSoundChannel(gg_snd_Killer_Bee_Transform_Q, 0)
     call SetSoundVolume(gg_snd_Killer_Bee_Transform_Q, 127)
     call SetSoundPitch(gg_snd_Killer_Bee_Transform_Q, 1.0)
-    set gg_snd_Killer_Bee_Transformed_R=CreateSound("war3mapImported/Killer_Bee_Transformed_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Killer_Bee_Transformed_R, 1219)
+    set gg_snd_Killer_Bee_Transformed_R=CreateSound("Sounds/Abilities/Killer_Bee_Transformed_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Killer_Bee_Transformed_R, 1123)
     call SetSoundChannel(gg_snd_Killer_Bee_Transformed_R, 0)
     call SetSoundVolume(gg_snd_Killer_Bee_Transformed_R, 127)
     call SetSoundPitch(gg_snd_Killer_Bee_Transformed_R, 1.0)
-    set gg_snd_Kimimaro_D=CreateSound("war3mapImported/Kimimaro_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kimimaro_D, 1219)
+    set gg_snd_Kimimaro_D=CreateSound("Sounds/Abilities/Kimimaro_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kimimaro_D, 1175)
     call SetSoundChannel(gg_snd_Kimimaro_D, 0)
     call SetSoundVolume(gg_snd_Kimimaro_D, 127)
     call SetSoundPitch(gg_snd_Kimimaro_D, 1.0)
-    set gg_snd_Kimimaro_D_Resurrect=CreateSound("war3mapImported/Kimimaro_D_Resurrect.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kimimaro_D_Resurrect, 1219)
+    set gg_snd_Kimimaro_D_Resurrect=CreateSound("Sounds/Abilities/Kimimaro_D_Resurrect.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kimimaro_D_Resurrect, 4414)
     call SetSoundChannel(gg_snd_Kimimaro_D_Resurrect, 0)
     call SetSoundVolume(gg_snd_Kimimaro_D_Resurrect, 127)
     call SetSoundPitch(gg_snd_Kimimaro_D_Resurrect, 1.0)
-    set gg_snd_Kimimaro_Kill=CreateSound("war3mapImported/Kimimaro_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kimimaro_Kill, 1219)
+    set gg_snd_Kimimaro_Kill=CreateSound("Sounds/Kills/Kimimaro_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kimimaro_Kill, 5799)
     call SetSoundChannel(gg_snd_Kimimaro_Kill, 0)
     call SetSoundVolume(gg_snd_Kimimaro_Kill, 127)
     call SetSoundPitch(gg_snd_Kimimaro_Kill, 1.0)
-    set gg_snd_Kimimaro_R=CreateSound("war3mapImported/Kimimaro_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kimimaro_R, 1219)
+    set gg_snd_Kimimaro_R=CreateSound("Sounds/Abilities/Kimimaro_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kimimaro_R, 2586)
     call SetSoundChannel(gg_snd_Kimimaro_R, 0)
     call SetSoundVolume(gg_snd_Kimimaro_R, 127)
     call SetSoundPitch(gg_snd_Kimimaro_R, 1.0)
-    set gg_snd_Kimimaro_T=CreateSound("war3mapImported/Kimimaro_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kimimaro_T, 1219)
+    set gg_snd_Kimimaro_T=CreateSound("Sounds/Abilities/Kimimaro_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kimimaro_T, 1645)
     call SetSoundChannel(gg_snd_Kimimaro_T, 0)
     call SetSoundVolume(gg_snd_Kimimaro_T, 127)
     call SetSoundPitch(gg_snd_Kimimaro_T, 1.0)
-    set gg_snd_Kinkaku_Q=CreateSound("war3mapImported/Kinkaku_Q.mp3", false, true, false, 1, 1, "DoodadsEAX")
-    call SetSoundDuration(gg_snd_Kinkaku_Q, 1219)
+    set gg_snd_Kinkaku_Q=CreateSound("Sounds/Abilities/Kinkaku_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kinkaku_Q, 992)
     call SetSoundChannel(gg_snd_Kinkaku_Q, 0)
     call SetSoundVolume(gg_snd_Kinkaku_Q, 127)
     call SetSoundPitch(gg_snd_Kinkaku_Q, 1.0)
-    call SetSoundDistances(gg_snd_Kinkaku_Q, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Kinkaku_Q, 3000.0)
-    call SetSoundConeAngles(gg_snd_Kinkaku_Q, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Kinkaku_Q, 0.0, 0.0, 0.0)
-    set gg_snd_Kisame_D_Daikoudan=CreateSound("war3mapImported/Kisame_D_Daikoudan.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kisame_D_Daikoudan, 1219)
+    set gg_snd_Kisame_D_Daikoudan=CreateSound("Sounds/Abilities/Kisame_D_Daikoudan.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kisame_D_Daikoudan, 2664)
     call SetSoundChannel(gg_snd_Kisame_D_Daikoudan, 0)
     call SetSoundVolume(gg_snd_Kisame_D_Daikoudan, 127)
     call SetSoundPitch(gg_snd_Kisame_D_Daikoudan, 1.0)
-    set gg_snd_Kisame_Kill=CreateSound("war3mapImported/Kisame_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kisame_Kill, 1219)
+    set gg_snd_Kisame_Kill=CreateSound("Sounds/Kills/Kisame_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kisame_Kill, 4571)
     call SetSoundChannel(gg_snd_Kisame_Kill, 0)
     call SetSoundVolume(gg_snd_Kisame_Kill, 127)
     call SetSoundPitch(gg_snd_Kisame_Kill, 1.0)
-    set gg_snd_Kisame_R=CreateSound("war3mapImported/Kisame_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kisame_R, 1219)
+    set gg_snd_Kisame_R=CreateSound("Sounds/Abilities/Kisame_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kisame_R, 3369)
     call SetSoundChannel(gg_snd_Kisame_R, 0)
     call SetSoundVolume(gg_snd_Kisame_R, 127)
     call SetSoundPitch(gg_snd_Kisame_R, 1.0)
-    set gg_snd_Kisame_T=CreateSound("war3mapImported/Kisame_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kisame_T, 1219)
+    set gg_snd_Kisame_T=CreateSound("Sounds/Abilities/Kisame_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kisame_T, 3944)
     call SetSoundChannel(gg_snd_Kisame_T, 0)
     call SetSoundVolume(gg_snd_Kisame_T, 127)
     call SetSoundPitch(gg_snd_Kisame_T, 1.0)
-    set gg_snd_Kisame_T_Muugen=CreateSound("war3mapImported/Kisame_T_Muugen.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kisame_T_Muugen, 1219)
+    set gg_snd_Kisame_T_Muugen=CreateSound("Sounds/Abilities/Kisame_T_Muugen.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kisame_T_Muugen, 1933)
     call SetSoundChannel(gg_snd_Kisame_T_Muugen, 0)
     call SetSoundVolume(gg_snd_Kisame_T_Muugen, 127)
     call SetSoundPitch(gg_snd_Kisame_T_Muugen, 1.0)
-    set gg_snd_Konan_D=CreateSound("war3mapImported/Konan_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Konan_D, 1219)
+    set gg_snd_Konan_D=CreateSound("Sounds/Abilities/Konan_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Konan_D, 1410)
     call SetSoundChannel(gg_snd_Konan_D, 0)
     call SetSoundVolume(gg_snd_Konan_D, 127)
     call SetSoundPitch(gg_snd_Konan_D, 1.0)
-    set gg_snd_Konan_Kill=CreateSound("war3mapImported/Konan_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Konan_Kill, 1219)
+    set gg_snd_Konan_Kill=CreateSound("Sounds/Kills/Konan_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Konan_Kill, 3056)
     call SetSoundChannel(gg_snd_Konan_Kill, 0)
     call SetSoundVolume(gg_snd_Konan_Kill, 127)
     call SetSoundPitch(gg_snd_Konan_Kill, 1.0)
-    set gg_snd_Konan_T_Aoe=CreateSound("war3mapImported/Konan_T_Aoe.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Konan_T_Aoe, 1219)
+    set gg_snd_Konan_T_Aoe=CreateSound("Sounds/Abilities/Konan_T_Aoe.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Konan_T_Aoe, 1619)
     call SetSoundChannel(gg_snd_Konan_T_Aoe, 0)
     call SetSoundVolume(gg_snd_Konan_T_Aoe, 127)
     call SetSoundPitch(gg_snd_Konan_T_Aoe, 1.0)
-    set gg_snd_Konohamaru_Kill=CreateSound("war3mapImported/Konohamaru_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Konohamaru_Kill, 1219)
+    set gg_snd_Konohamaru_Kill=CreateSound("Sounds/Kills/Konohamaru_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Konohamaru_Kill, 5067)
     call SetSoundChannel(gg_snd_Konohamaru_Kill, 0)
     call SetSoundVolume(gg_snd_Konohamaru_Kill, 127)
     call SetSoundPitch(gg_snd_Konohamaru_Kill, 1.0)
-    set gg_snd_Konohamaru_R=CreateSound("war3mapImported/Konohamaru_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Konohamaru_R, 1219)
+    set gg_snd_Konohamaru_R=CreateSound("Sounds/Abilities/Konohamaru_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Konohamaru_R, 1802)
     call SetSoundChannel(gg_snd_Konohamaru_R, 0)
     call SetSoundVolume(gg_snd_Konohamaru_R, 127)
     call SetSoundPitch(gg_snd_Konohamaru_R, 1.0)
-    set gg_snd_Konohamaru_T=CreateSound("war3mapImported/Konohamaru_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Konohamaru_T, 1219)
+    set gg_snd_Konohamaru_T=CreateSound("Sounds/Abilities/Konohamaru_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Konohamaru_T, 1619)
     call SetSoundChannel(gg_snd_Konohamaru_T, 0)
     call SetSoundVolume(gg_snd_Konohamaru_T, 127)
     call SetSoundPitch(gg_snd_Konohamaru_T, 1.0)
-    set gg_snd_Kurenai_R=CreateSound("war3mapImported/Kurenai_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kurenai_R, 1219)
+    set gg_snd_Kurenai_R=CreateSound("Sounds/Abilities/Kurenai_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kurenai_R, 2011)
     call SetSoundChannel(gg_snd_Kurenai_R, 0)
     call SetSoundVolume(gg_snd_Kurenai_R, 127)
     call SetSoundPitch(gg_snd_Kurenai_R, 1.0)
-    set gg_snd_Kurenai_T=CreateSound("war3mapImported/Kurenai_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Kurenai_T, 1219)
+    set gg_snd_Kurenai_T=CreateSound("Sounds/Abilities/Kurenai_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Kurenai_T, 3108)
     call SetSoundChannel(gg_snd_Kurenai_T, 0)
     call SetSoundVolume(gg_snd_Kurenai_T, 127)
     call SetSoundPitch(gg_snd_Kurenai_T, 1.0)
-    set gg_snd_Lee_Kill=CreateSound("war3mapImported/Lee_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Lee_Kill, 1219)
+    set gg_snd_Lee_Kill=CreateSound("Sounds/Kills/Lee_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Lee_Kill, 3474)
     call SetSoundChannel(gg_snd_Lee_Kill, 0)
     call SetSoundVolume(gg_snd_Lee_Kill, 127)
     call SetSoundPitch(gg_snd_Lee_Kill, 1.0)
-    set gg_snd_Madara_Kill=CreateSound("war3mapImported/Madara_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Madara_Kill, 1219)
+    set gg_snd_Madara_Kill=CreateSound("Sounds/Kills/Madara_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Madara_Kill, 3082)
     call SetSoundChannel(gg_snd_Madara_Kill, 0)
     call SetSoundVolume(gg_snd_Madara_Kill, 127)
     call SetSoundPitch(gg_snd_Madara_Kill, 1.0)
-    set gg_snd_Madara_R=CreateSound("war3mapImported/Madara_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Madara_R, 1219)
+    set gg_snd_Madara_R=CreateSound("Sounds/Abilities/Madara_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Madara_R, 4127)
     call SetSoundChannel(gg_snd_Madara_R, 0)
     call SetSoundVolume(gg_snd_Madara_R, 127)
     call SetSoundPitch(gg_snd_Madara_R, 1.0)
-    set gg_snd_Madara_T2_Susanoo=CreateSound("war3mapImported/Madara_T2_Susanoo.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Madara_T2_Susanoo, 1219)
+    set gg_snd_Madara_T2_Susanoo=CreateSound("Sounds/Abilities/Madara_T2_Susanoo.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Madara_T2_Susanoo, 2533)
     call SetSoundChannel(gg_snd_Madara_T2_Susanoo, 0)
     call SetSoundVolume(gg_snd_Madara_T2_Susanoo, 127)
     call SetSoundPitch(gg_snd_Madara_T2_Susanoo, 1.0)
-    set gg_snd_Madara_T_Tengai=CreateSound("war3mapImported/Madara_T_Tengai.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Madara_T_Tengai, 1219)
+    set gg_snd_Madara_T_Tengai=CreateSound("Sounds/Abilities/Madara_T_Tengai.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Madara_T_Tengai, 3317)
     call SetSoundChannel(gg_snd_Madara_T_Tengai, 0)
     call SetSoundVolume(gg_snd_Madara_T_Tengai, 127)
     call SetSoundPitch(gg_snd_Madara_T_Tengai, 1.0)
-    set gg_snd_Madara_T_Transform_Juubi=CreateSound("war3mapImported/Madara_T_Transform_Juubi.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Madara_T_Transform_Juubi, 1219)
+    set gg_snd_Madara_T_Transform_Juubi=CreateSound("Sounds/Abilities/Madara_T_Transform_Juubi.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Madara_T_Transform_Juubi, 3552)
     call SetSoundChannel(gg_snd_Madara_T_Transform_Juubi, 0)
     call SetSoundVolume(gg_snd_Madara_T_Transform_Juubi, 127)
     call SetSoundPitch(gg_snd_Madara_T_Transform_Juubi, 1.0)
-    set gg_snd_Madara_T_Tsukuyomi=CreateSound("war3mapImported/Madara_T_Tsukuyomi.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Madara_T_Tsukuyomi, 1219)
+    set gg_snd_Madara_T_Tsukuyomi=CreateSound("Sounds/Abilities/Madara_T_Tsukuyomi.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Madara_T_Tsukuyomi, 6974)
     call SetSoundChannel(gg_snd_Madara_T_Tsukuyomi, 0)
     call SetSoundVolume(gg_snd_Madara_T_Tsukuyomi, 127)
     call SetSoundPitch(gg_snd_Madara_T_Tsukuyomi, 1.0)
-    set gg_snd_Masked_Man_W_Space_Time=CreateSound("war3mapImported/Masked_Man_W_Space_Time.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Masked_Man_W_Space_Time, 1219)
+    set gg_snd_Masked_Man_W_Space_Time=CreateSound("Sounds/Abilities/Masked_Man_W_Space_Time.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Masked_Man_W_Space_Time, 4884)
     call SetSoundChannel(gg_snd_Masked_Man_W_Space_Time, 0)
     call SetSoundVolume(gg_snd_Masked_Man_W_Space_Time, 127)
     call SetSoundPitch(gg_snd_Masked_Man_W_Space_Time, 1.0)
-    set gg_snd_Mecha_Naruto_Kill=CreateSound("war3mapImported/Mecha_Naruto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Mecha_Naruto_Kill, 1219)
+    set gg_snd_Mecha_Naruto_Kill=CreateSound("Sounds/Kills/Mecha_Naruto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Mecha_Naruto_Kill, 3709)
     call SetSoundChannel(gg_snd_Mecha_Naruto_Kill, 0)
     call SetSoundVolume(gg_snd_Mecha_Naruto_Kill, 127)
     call SetSoundPitch(gg_snd_Mecha_Naruto_Kill, 1.0)
-    set gg_snd_Mecha_Naruto_T=CreateSound("war3mapImported/Mecha_Naruto_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Mecha_Naruto_T, 1219)
+    set gg_snd_Mecha_Naruto_T=CreateSound("Sounds/Abilities/Mecha_Naruto_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Mecha_Naruto_T, 1933)
     call SetSoundChannel(gg_snd_Mecha_Naruto_T, 0)
     call SetSoundVolume(gg_snd_Mecha_Naruto_T, 127)
     call SetSoundPitch(gg_snd_Mecha_Naruto_T, 1.0)
-    set gg_snd_Mei_Kill=CreateSound("war3mapImported/Mei_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Mei_Kill, 1219)
+    set gg_snd_Mei_Kill=CreateSound("Sounds/Kills/Mei_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Mei_Kill, 4101)
     call SetSoundChannel(gg_snd_Mei_Kill, 0)
     call SetSoundVolume(gg_snd_Mei_Kill, 127)
     call SetSoundPitch(gg_snd_Mei_Kill, 1.0)
-    set gg_snd_Mei_T=CreateSound("war3mapImported/Mei_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Mei_T, 1219)
+    set gg_snd_Mei_T=CreateSound("Sounds/Abilities/Mei_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Mei_T, 7105)
     call SetSoundChannel(gg_snd_Mei_T, 0)
     call SetSoundVolume(gg_snd_Mei_T, 127)
     call SetSoundPitch(gg_snd_Mei_T, 1.0)
-    set gg_snd_Mifune_D_Reset=CreateSound("war3mapImported/Mifune_D_Reset.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Mifune_D_Reset, 1219)
+    set gg_snd_Mifune_D_Reset=CreateSound("Sounds/Abilities/Mifune_D_Reset.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Mifune_D_Reset, 2612)
     call SetSoundChannel(gg_snd_Mifune_D_Reset, 0)
     call SetSoundVolume(gg_snd_Mifune_D_Reset, 127)
     call SetSoundPitch(gg_snd_Mifune_D_Reset, 1.0)
-    set gg_snd_Mifune_Kill=CreateSound("war3mapImported/Mifune_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Mifune_Kill, 1219)
+    set gg_snd_Mifune_Kill=CreateSound("Sounds/Kills/Mifune_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Mifune_Kill, 6347)
     call SetSoundChannel(gg_snd_Mifune_Kill, 0)
     call SetSoundVolume(gg_snd_Mifune_Kill, 127)
     call SetSoundPitch(gg_snd_Mifune_Kill, 1.0)
-    set gg_snd_Mifune_R=CreateSound("war3mapImported/Mifune_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Mifune_R, 1219)
+    set gg_snd_Mifune_R=CreateSound("Sounds/Abilities/Mifune_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Mifune_R, 679)
     call SetSoundChannel(gg_snd_Mifune_R, 0)
     call SetSoundVolume(gg_snd_Mifune_R, 127)
     call SetSoundPitch(gg_snd_Mifune_R, 1.0)
-    set gg_snd_Mifune_T=CreateSound("war3mapImported/Mifune_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Mifune_T, 1219)
+    set gg_snd_Mifune_T=CreateSound("Sounds/Abilities/Mifune_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Mifune_T, 2351)
     call SetSoundChannel(gg_snd_Mifune_T, 0)
     call SetSoundVolume(gg_snd_Mifune_T, 127)
     call SetSoundPitch(gg_snd_Mifune_T, 1.0)
-    set gg_snd_Minato_Hokage_D=CreateSound("war3mapImported/Minato_Hokage_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Minato_Hokage_D, 1219)
+    set gg_snd_Minato_Hokage_D=CreateSound("Sounds/Abilities/Minato_Hokage_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Minato_Hokage_D, 2586)
     call SetSoundChannel(gg_snd_Minato_Hokage_D, 0)
     call SetSoundVolume(gg_snd_Minato_Hokage_D, 127)
     call SetSoundPitch(gg_snd_Minato_Hokage_D, 1.0)
-    set gg_snd_Minato_Hokage_R=CreateSound("war3mapImported/Minato_Hokage_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Minato_Hokage_R, 1219)
+    set gg_snd_Minato_Hokage_R=CreateSound("Sounds/Abilities/Minato_Hokage_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Minato_Hokage_R, 1750)
     call SetSoundChannel(gg_snd_Minato_Hokage_R, 0)
     call SetSoundVolume(gg_snd_Minato_Hokage_R, 127)
     call SetSoundPitch(gg_snd_Minato_Hokage_R, 1.0)
-    set gg_snd_Minato_Hokage_T_Shiki=CreateSound("war3mapImported/Minato_Hokage_T_Shiki.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Minato_Hokage_T_Shiki, 1219)
+    set gg_snd_Minato_Hokage_T_Shiki=CreateSound("Sounds/Abilities/Minato_Hokage_T_Shiki.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Minato_Hokage_T_Shiki, 3108)
     call SetSoundChannel(gg_snd_Minato_Hokage_T_Shiki, 0)
     call SetSoundVolume(gg_snd_Minato_Hokage_T_Shiki, 127)
     call SetSoundPitch(gg_snd_Minato_Hokage_T_Shiki, 1.0)
-    set gg_snd_Minato_Jounin_T=CreateSound("war3mapImported/Minato_Jounin_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Minato_Jounin_T, 1219)
+    set gg_snd_Minato_Jounin_T=CreateSound("Sounds/Abilities/Minato_Jounin_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Minato_Jounin_T, 2481)
     call SetSoundChannel(gg_snd_Minato_Jounin_T, 0)
     call SetSoundVolume(gg_snd_Minato_Jounin_T, 127)
     call SetSoundPitch(gg_snd_Minato_Jounin_T, 1.0)
-    set gg_snd_Mitsuki_Kill=CreateSound("war3mapImported/Mitsuki_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Mitsuki_Kill, 1219)
+    set gg_snd_Mitsuki_Kill=CreateSound("Sounds/Kills/Mitsuki_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Mitsuki_Kill, 2925)
     call SetSoundChannel(gg_snd_Mitsuki_Kill, 0)
     call SetSoundVolume(gg_snd_Mitsuki_Kill, 127)
     call SetSoundPitch(gg_snd_Mitsuki_Kill, 1.0)
-    set gg_snd_Mitsuki_Sage_Mode_W=CreateSound("war3mapImported/Mitsuki_Sage_Mode_W.mp3", false, true, false, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Mitsuki_Sage_Mode_W, 1219)
+    set gg_snd_Mitsuki_Sage_Mode_W=CreateSound("Sounds/Abilities/Mitsuki_Sage_Mode_W.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Mitsuki_Sage_Mode_W, 1097)
     call SetSoundChannel(gg_snd_Mitsuki_Sage_Mode_W, 0)
     call SetSoundVolume(gg_snd_Mitsuki_Sage_Mode_W, 127)
     call SetSoundPitch(gg_snd_Mitsuki_Sage_Mode_W, 1.0)
-    call SetSoundDistances(gg_snd_Mitsuki_Sage_Mode_W, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Mitsuki_Sage_Mode_W, 3000.0)
-    call SetSoundConeAngles(gg_snd_Mitsuki_Sage_Mode_W, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Mitsuki_Sage_Mode_W, 0.0, 0.0, 0.0)
-    set gg_snd_Mitsuki_W=CreateSound("war3mapImported/Mitsuki_W.mp3", false, true, false, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Mitsuki_W, 1219)
+    set gg_snd_Mitsuki_W=CreateSound("Sounds/Abilities/Mitsuki_W.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Mitsuki_W, 1201)
     call SetSoundChannel(gg_snd_Mitsuki_W, 0)
     call SetSoundVolume(gg_snd_Mitsuki_W, 127)
     call SetSoundPitch(gg_snd_Mitsuki_W, 1.0)
-    call SetSoundDistances(gg_snd_Mitsuki_W, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Mitsuki_W, 3000.0)
-    call SetSoundConeAngles(gg_snd_Mitsuki_W, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Mitsuki_W, 0.0, 0.0, 0.0)
     set gg_snd_MouseClick1=CreateSound("Sound/Interface/MouseClick1.flac", false, false, false, 0, 0, "DefaultEAXON")
     call SetSoundParamsFromLabel(gg_snd_MouseClick1, "InterfaceClick")
     call SetSoundDuration(gg_snd_MouseClick1, 239)
@@ -14155,573 +14085,532 @@ function InitSounds takes nothing returns nothing
     set gg_snd_Music32MADARAvsNARUTO="war3mapImported/Music32MADARAvsNARUTO.flac"
     set gg_snd_Music33Flames="war3mapImported/Music33Flames.flac"
     set gg_snd_Music33MyName="war3mapImported/Music33MyName.flac"
-    set gg_snd_Muu_Kill=CreateSound("war3mapImported/Muu_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Muu_Kill, 239)
+    set gg_snd_Muu_Kill=CreateSound("Sounds/Kills/Muu_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Muu_Kill, 4284)
     call SetSoundChannel(gg_snd_Muu_Kill, 0)
     call SetSoundVolume(gg_snd_Muu_Kill, 127)
     call SetSoundPitch(gg_snd_Muu_Kill, 1.0)
-    set gg_snd_Muu_R=CreateSound("war3mapImported/Muu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Muu_R, 239)
+    set gg_snd_Muu_R=CreateSound("Sounds/Abilities/Muu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Muu_R, 2664)
     call SetSoundChannel(gg_snd_Muu_R, 0)
     call SetSoundVolume(gg_snd_Muu_R, 127)
     call SetSoundPitch(gg_snd_Muu_R, 1.0)
-    set gg_snd_Muu_T_Bunretsu=CreateSound("war3mapImported/Muu_T_Bunretsu.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Muu_T_Bunretsu, 239)
+    set gg_snd_Muu_T_Bunretsu=CreateSound("Sounds/Abilities/Muu_T_Bunretsu.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Muu_T_Bunretsu, 3291)
     call SetSoundChannel(gg_snd_Muu_T_Bunretsu, 0)
     call SetSoundVolume(gg_snd_Muu_T_Bunretsu, 127)
     call SetSoundPitch(gg_snd_Muu_T_Bunretsu, 1.0)
-    set gg_snd_Nagato_Kill=CreateSound("war3mapImported/Nagato_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Nagato_Kill, 239)
+    set gg_snd_Nagato_Kill=CreateSound("Sounds/Kills/Nagato_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Nagato_Kill, 3030)
     call SetSoundChannel(gg_snd_Nagato_Kill, 0)
     call SetSoundVolume(gg_snd_Nagato_Kill, 127)
     call SetSoundPitch(gg_snd_Nagato_Kill, 1.0)
-    set gg_snd_Nagato_Q=CreateSound("war3mapImported/Nagato_Q.mp3", false, true, false, 1, 1, "DoodadsEAX")
-    call SetSoundDuration(gg_snd_Nagato_Q, 239)
+    set gg_snd_Nagato_Q=CreateSound("Sounds/Abilities/Nagato_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Nagato_Q, 1358)
     call SetSoundChannel(gg_snd_Nagato_Q, 0)
     call SetSoundVolume(gg_snd_Nagato_Q, 127)
     call SetSoundPitch(gg_snd_Nagato_Q, 1.0)
-    call SetSoundDistances(gg_snd_Nagato_Q, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Nagato_Q, 3000.0)
-    call SetSoundConeAngles(gg_snd_Nagato_Q, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Nagato_Q, 0.0, 0.0, 0.0)
-    set gg_snd_Nagato_T_Chibaku=CreateSound("war3mapImported/Nagato_T_Chibaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Nagato_T_Chibaku, 239)
+    set gg_snd_Nagato_T_Chibaku=CreateSound("Sounds/Abilities/Nagato_T_Chibaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Nagato_T_Chibaku, 1358)
     call SetSoundChannel(gg_snd_Nagato_T_Chibaku, 0)
     call SetSoundVolume(gg_snd_Nagato_T_Chibaku, 127)
     call SetSoundPitch(gg_snd_Nagato_T_Chibaku, 1.0)
-    set gg_snd_Nagato_T_Shinra=CreateSound("war3mapImported/Nagato_T_Shinra.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Nagato_T_Shinra, 239)
+    set gg_snd_Nagato_T_Shinra=CreateSound("Sounds/Abilities/Nagato_T_Shinra.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Nagato_T_Shinra, 1436)
     call SetSoundChannel(gg_snd_Nagato_T_Shinra, 0)
     call SetSoundVolume(gg_snd_Nagato_T_Shinra, 127)
     call SetSoundPitch(gg_snd_Nagato_T_Shinra, 1.0)
-    set gg_snd_Naruto_Rikudou_R=CreateSound("war3mapImported/Naruto_Rikudou_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Naruto_Rikudou_R, 239)
+    set gg_snd_Naruto_Rikudou_R=CreateSound("Sounds/Abilities/Naruto_Rikudou_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Naruto_Rikudou_R, 3395)
     call SetSoundChannel(gg_snd_Naruto_Rikudou_R, 0)
     call SetSoundVolume(gg_snd_Naruto_Rikudou_R, 127)
     call SetSoundPitch(gg_snd_Naruto_Rikudou_R, 1.0)
-    set gg_snd_Naruto_Rikudou_T=CreateSound("war3mapImported/Naruto_Rikudou_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Naruto_Rikudou_T, 239)
+    set gg_snd_Naruto_Rikudou_T=CreateSound("Sounds/Abilities/Naruto_Rikudou_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Naruto_Rikudou_T, 2638)
     call SetSoundChannel(gg_snd_Naruto_Rikudou_T, 0)
     call SetSoundVolume(gg_snd_Naruto_Rikudou_T, 127)
     call SetSoundPitch(gg_snd_Naruto_Rikudou_T, 1.0)
-    set gg_snd_Naruto_Sage_R=CreateSound("war3mapImported/Naruto_Sage_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Naruto_Sage_R, 239)
+    set gg_snd_Naruto_Sage_R=CreateSound("Sounds/Abilities/Naruto_Sage_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Naruto_Sage_R, 2063)
     call SetSoundChannel(gg_snd_Naruto_Sage_R, 0)
     call SetSoundVolume(gg_snd_Naruto_Sage_R, 127)
     call SetSoundPitch(gg_snd_Naruto_Sage_R, 1.0)
-    set gg_snd_Naruto_Sage_T=CreateSound("war3mapImported/Naruto_Sage_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Naruto_Sage_T, 239)
+    set gg_snd_Naruto_Sage_T=CreateSound("Sounds/Abilities/Naruto_Sage_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Naruto_Sage_T, 1358)
     call SetSoundChannel(gg_snd_Naruto_Sage_T, 0)
     call SetSoundVolume(gg_snd_Naruto_Sage_T, 127)
     call SetSoundPitch(gg_snd_Naruto_Sage_T, 1.0)
-    set gg_snd_Neji_Kill=CreateSound("war3mapImported/Neji_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Neji_Kill, 239)
+    set gg_snd_Neji_Kill=CreateSound("Sounds/Kills/Neji_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Neji_Kill, 4754)
     call SetSoundChannel(gg_snd_Neji_Kill, 0)
     call SetSoundVolume(gg_snd_Neji_Kill, 127)
     call SetSoundPitch(gg_snd_Neji_Kill, 1.0)
-    set gg_snd_Neji_R=CreateSound("war3mapImported/Neji_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Neji_R, 239)
+    set gg_snd_Neji_R=CreateSound("Sounds/Abilities/Neji_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Neji_R, 2011)
     call SetSoundChannel(gg_snd_Neji_R, 0)
     call SetSoundVolume(gg_snd_Neji_R, 127)
     call SetSoundPitch(gg_snd_Neji_R, 1.0)
-    set gg_snd_Neji_T=CreateSound("war3mapImported/Neji_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Neji_T, 239)
+    set gg_snd_Neji_T=CreateSound("Sounds/Abilities/Neji_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Neji_T, 2481)
     call SetSoundChannel(gg_snd_Neji_T, 0)
     call SetSoundVolume(gg_snd_Neji_T, 127)
     call SetSoundPitch(gg_snd_Neji_T, 1.0)
-    set gg_snd_Neji_T2_Hakke_Hyaku=CreateSound("war3mapImported/Neji_T2_Hakke_Hyaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Neji_T2_Hakke_Hyaku, 239)
+    set gg_snd_Neji_T2_Hakke_Hyaku=CreateSound("Sounds/Abilities/Neji_T2_Hakke_Hyaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Neji_T2_Hakke_Hyaku, 3160)
     call SetSoundChannel(gg_snd_Neji_T2_Hakke_Hyaku, 0)
     call SetSoundVolume(gg_snd_Neji_T2_Hakke_Hyaku, 127)
     call SetSoundPitch(gg_snd_Neji_T2_Hakke_Hyaku, 1.0)
-    set gg_snd_Neji_W=CreateSound("war3mapImported/Neji_W.mp3", false, true, true, 1, 1, "DoodadsEAX")
-    call SetSoundDuration(gg_snd_Neji_W, 239)
+    set gg_snd_Neji_W=CreateSound("Sounds/Abilities/Neji_W.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Neji_W, 1436)
     call SetSoundChannel(gg_snd_Neji_W, 0)
     call SetSoundVolume(gg_snd_Neji_W, 127)
     call SetSoundPitch(gg_snd_Neji_W, 1.0)
-    call SetSoundDistances(gg_snd_Neji_W, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Neji_W, 2500.0)
-    call SetSoundConeAngles(gg_snd_Neji_W, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Neji_W, 0.0, 0.0, 0.0)
-    set gg_snd_Obito_Dimension_D=CreateSound("war3mapImported/Obito_Dimension_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Obito_Dimension_D, 239)
+    set gg_snd_Obito_Dimension_D=CreateSound("Sounds/Abilities/Obito_Dimension_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Obito_Dimension_D, 2063)
     call SetSoundChannel(gg_snd_Obito_Dimension_D, 0)
     call SetSoundVolume(gg_snd_Obito_Dimension_D, 127)
     call SetSoundPitch(gg_snd_Obito_Dimension_D, 1.0)
-    set gg_snd_Obito_Kill=CreateSound("war3mapImported/Obito_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Obito_Kill, 239)
+    set gg_snd_Obito_Kill=CreateSound("Sounds/Kills/Obito_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Obito_Kill, 4153)
     call SetSoundChannel(gg_snd_Obito_Kill, 0)
     call SetSoundVolume(gg_snd_Obito_Kill, 127)
     call SetSoundPitch(gg_snd_Obito_Kill, 1.0)
-    set gg_snd_Obito_R=CreateSound("war3mapImported/Obito_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Obito_R, 239)
+    set gg_snd_Obito_R=CreateSound("Sounds/Abilities/Obito_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Obito_R, 1541)
     call SetSoundChannel(gg_snd_Obito_R, 0)
     call SetSoundVolume(gg_snd_Obito_R, 127)
     call SetSoundPitch(gg_snd_Obito_R, 1.0)
-    set gg_snd_Obito_T2_Transform=CreateSound("war3mapImported/Obito_T2_Transform.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Obito_T2_Transform, 239)
+    set gg_snd_Obito_T2_Transform=CreateSound("Sounds/Abilities/Obito_T2_Transform.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Obito_T2_Transform, 3683)
     call SetSoundChannel(gg_snd_Obito_T2_Transform, 0)
     call SetSoundVolume(gg_snd_Obito_T2_Transform, 127)
     call SetSoundPitch(gg_snd_Obito_T2_Transform, 1.0)
-    set gg_snd_Obito_T_Muugen=CreateSound("war3mapImported/Obito_T_Muugen.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Obito_T_Muugen, 239)
+    set gg_snd_Obito_T_Muugen=CreateSound("Sounds/Abilities/Obito_T_Muugen.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Obito_T_Muugen, 2246)
     call SetSoundChannel(gg_snd_Obito_T_Muugen, 0)
     call SetSoundVolume(gg_snd_Obito_T_Muugen, 127)
     call SetSoundPitch(gg_snd_Obito_T_Muugen, 1.0)
-    set gg_snd_Ohnoki_Kill=CreateSound("war3mapImported/Ohnoki_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ohnoki_Kill, 239)
+    set gg_snd_Ohnoki_Kill=CreateSound("Sounds/Kills/Ohnoki_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ohnoki_Kill, 4675)
     call SetSoundChannel(gg_snd_Ohnoki_Kill, 0)
     call SetSoundVolume(gg_snd_Ohnoki_Kill, 127)
     call SetSoundPitch(gg_snd_Ohnoki_Kill, 1.0)
-    set gg_snd_Onooki_R=CreateSound("war3mapImported/Onooki_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Onooki_R, 239)
+    set gg_snd_Onooki_R=CreateSound("Sounds/Abilities/Onooki_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Onooki_R, 3108)
     call SetSoundChannel(gg_snd_Onooki_R, 0)
     call SetSoundVolume(gg_snd_Onooki_R, 127)
     call SetSoundPitch(gg_snd_Onooki_R, 1.0)
-    set gg_snd_Onooki_T=CreateSound("war3mapImported/Onooki_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Onooki_T, 239)
+    set gg_snd_Onooki_T=CreateSound("Sounds/Abilities/Onooki_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Onooki_T, 2298)
     call SetSoundChannel(gg_snd_Onooki_T, 0)
     call SetSoundVolume(gg_snd_Onooki_T, 127)
     call SetSoundPitch(gg_snd_Onooki_T, 1.0)
-    set gg_snd_Orochimaru_Kill=CreateSound("war3mapImported/Orochimaru_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Orochimaru_Kill, 239)
+    set gg_snd_Orochimaru_Kill=CreateSound("Sounds/Kills/Orochimaru_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Orochimaru_Kill, 3918)
     call SetSoundChannel(gg_snd_Orochimaru_Kill, 0)
     call SetSoundVolume(gg_snd_Orochimaru_Kill, 127)
     call SetSoundPitch(gg_snd_Orochimaru_Kill, 1.0)
-    set gg_snd_Orochimaru_R=CreateSound("war3mapImported/Orochimaru_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Orochimaru_R, 239)
+    set gg_snd_Orochimaru_R=CreateSound("Sounds/Abilities/Orochimaru_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Orochimaru_R, 3108)
     call SetSoundChannel(gg_snd_Orochimaru_R, 0)
     call SetSoundVolume(gg_snd_Orochimaru_R, 127)
     call SetSoundPitch(gg_snd_Orochimaru_R, 1.0)
-    set gg_snd_Orochimaru_T2_Edo=CreateSound("war3mapImported/Orochimaru_T2_Edo.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Orochimaru_T2_Edo, 239)
+    set gg_snd_Orochimaru_T2_Edo=CreateSound("Sounds/Abilities/Orochimaru_T2_Edo.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Orochimaru_T2_Edo, 1828)
     call SetSoundChannel(gg_snd_Orochimaru_T2_Edo, 0)
     call SetSoundVolume(gg_snd_Orochimaru_T2_Edo, 127)
     call SetSoundPitch(gg_snd_Orochimaru_T2_Edo, 1.0)
-    set gg_snd_Orochimaru_T_Yamata=CreateSound("war3mapImported/Orochimaru_T_Yamata.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Orochimaru_T_Yamata, 239)
+    set gg_snd_Orochimaru_T_Yamata=CreateSound("Sounds/Abilities/Orochimaru_T_Yamata.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Orochimaru_T_Yamata, 3004)
     call SetSoundChannel(gg_snd_Orochimaru_T_Yamata, 0)
     call SetSoundVolume(gg_snd_Orochimaru_T_Yamata, 127)
     call SetSoundPitch(gg_snd_Orochimaru_T_Yamata, 1.0)
-    set gg_snd_Orochimaru_W=CreateSound("war3mapImported/Orochimaru_W.mp3", false, true, true, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Orochimaru_W, 239)
+    set gg_snd_Orochimaru_W=CreateSound("Sounds/Abilities/Orochimaru_W.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Orochimaru_W, 1567)
     call SetSoundChannel(gg_snd_Orochimaru_W, 0)
     call SetSoundVolume(gg_snd_Orochimaru_W, 127)
     call SetSoundPitch(gg_snd_Orochimaru_W, 1.0)
-    call SetSoundDistances(gg_snd_Orochimaru_W, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Orochimaru_W, 3000.0)
-    call SetSoundConeAngles(gg_snd_Orochimaru_W, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Orochimaru_W, 0.0, 0.0, 0.0)
-    set gg_snd_Raikage_Kill=CreateSound("war3mapImported/Raikage_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Raikage_Kill, 239)
+    set gg_snd_Raikage_Kill=CreateSound("Sounds/Kills/Raikage_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Raikage_Kill, 3813)
     call SetSoundChannel(gg_snd_Raikage_Kill, 0)
     call SetSoundVolume(gg_snd_Raikage_Kill, 127)
     call SetSoundPitch(gg_snd_Raikage_Kill, 1.0)
-    set gg_snd_Raikage_R=CreateSound("war3mapImported/Raikage_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Raikage_R, 239)
+    set gg_snd_Raikage_R=CreateSound("Sounds/Abilities/Raikage_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Raikage_R, 2324)
     call SetSoundChannel(gg_snd_Raikage_R, 0)
     call SetSoundVolume(gg_snd_Raikage_R, 127)
     call SetSoundPitch(gg_snd_Raikage_R, 1.0)
-    set gg_snd_Raikage_T=CreateSound("war3mapImported/Raikage_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Raikage_T, 239)
+    set gg_snd_Raikage_T=CreateSound("Sounds/Abilities/Raikage_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Raikage_T, 2873)
     call SetSoundChannel(gg_snd_Raikage_T, 0)
     call SetSoundVolume(gg_snd_Raikage_T, 127)
     call SetSoundPitch(gg_snd_Raikage_T, 1.0)
-    set gg_snd_Rikudou_Naruto_Kill=CreateSound("war3mapImported/Rikudou_Naruto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Rikudou_Naruto_Kill, 239)
+    set gg_snd_Rikudou_Naruto_Kill=CreateSound("Sounds/Kills/Rikudou_Naruto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Rikudou_Naruto_Kill, 3552)
     call SetSoundChannel(gg_snd_Rikudou_Naruto_Kill, 0)
     call SetSoundVolume(gg_snd_Rikudou_Naruto_Kill, 127)
     call SetSoundPitch(gg_snd_Rikudou_Naruto_Kill, 1.0)
-    set gg_snd_Rikudou_Sasuke_Kill=CreateSound("war3mapImported/Rikudou_Sasuke_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Rikudou_Sasuke_Kill, 239)
+    set gg_snd_Rikudou_Sasuke_Kill=CreateSound("Sounds/Kills/Rikudou_Sasuke_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Rikudou_Sasuke_Kill, 3056)
     call SetSoundChannel(gg_snd_Rikudou_Sasuke_Kill, 0)
     call SetSoundVolume(gg_snd_Rikudou_Sasuke_Kill, 127)
     call SetSoundPitch(gg_snd_Rikudou_Sasuke_Kill, 1.0)
-    set gg_snd_Ringo_Kill=CreateSound("war3mapImported/Ringo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ringo_Kill, 239)
+    set gg_snd_Ringo_Kill=CreateSound("Sounds/Kills/Ringo_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ringo_Kill, 4048)
     call SetSoundChannel(gg_snd_Ringo_Kill, 0)
     call SetSoundVolume(gg_snd_Ringo_Kill, 127)
     call SetSoundPitch(gg_snd_Ringo_Kill, 1.0)
-    set gg_snd_Ringo_R=CreateSound("war3mapImported/Ringo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Ringo_R, 239)
+    set gg_snd_Ringo_R=CreateSound("Sounds/Abilities/Ringo_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Ringo_R, 2063)
     call SetSoundChannel(gg_snd_Ringo_R, 0)
     call SetSoundVolume(gg_snd_Ringo_R, 127)
     call SetSoundPitch(gg_snd_Ringo_R, 1.0)
-    set gg_snd_Rock_Lee_R=CreateSound("war3mapImported/Rock_Lee_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Rock_Lee_R, 239)
+    set gg_snd_Rock_Lee_R=CreateSound("Sounds/Abilities/Rock_Lee_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Rock_Lee_R, 3004)
     call SetSoundChannel(gg_snd_Rock_Lee_R, 0)
     call SetSoundVolume(gg_snd_Rock_Lee_R, 127)
     call SetSoundPitch(gg_snd_Rock_Lee_R, 1.0)
-    set gg_snd_Rock_Lee_T=CreateSound("war3mapImported/Rock_Lee_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Rock_Lee_T, 239)
+    set gg_snd_Rock_Lee_T=CreateSound("Sounds/Abilities/Rock_Lee_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Rock_Lee_T, 1253)
     call SetSoundChannel(gg_snd_Rock_Lee_T, 0)
     call SetSoundVolume(gg_snd_Rock_Lee_T, 127)
     call SetSoundPitch(gg_snd_Rock_Lee_T, 1.0)
-    set gg_snd_RockHeavyBashFlesh1=CreateSound("Sound/Units/Combat/RockHeavyBashFlesh1.flac", false, true, true, 0, 0, "CombatSoundsEAX")
-    call SetSoundParamsFromLabel(gg_snd_RockHeavyBashFlesh1, "RockHeavyBashFlesh")
-    call SetSoundDuration(gg_snd_RockHeavyBashFlesh1, 1181)
-    call SetSoundVolume(gg_snd_RockHeavyBashFlesh1, 95)
-    set gg_snd_Roshi_Kill=CreateSound("war3mapImported/Roshi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Roshi_Kill, 1181)
+    set gg_snd_Roshi_Kill=CreateSound("Sounds/Kills/Roshi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Roshi_Kill, 4466)
     call SetSoundChannel(gg_snd_Roshi_Kill, 0)
     call SetSoundVolume(gg_snd_Roshi_Kill, 127)
     call SetSoundPitch(gg_snd_Roshi_Kill, 1.0)
-    set gg_snd_Roshi_R=CreateSound("war3mapImported/Roshi_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Roshi_R, 1181)
+    set gg_snd_Roshi_R=CreateSound("Sounds/Abilities/Roshi_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Roshi_R, 3108)
     call SetSoundChannel(gg_snd_Roshi_R, 0)
     call SetSoundVolume(gg_snd_Roshi_R, 127)
     call SetSoundPitch(gg_snd_Roshi_R, 1.0)
-    set gg_snd_Roshi_T=CreateSound("war3mapImported/Roshi_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Roshi_T, 1181)
+    set gg_snd_Roshi_T=CreateSound("Sounds/Abilities/Roshi_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Roshi_T, 3160)
     call SetSoundChannel(gg_snd_Roshi_T, 0)
     call SetSoundVolume(gg_snd_Roshi_T, 127)
     call SetSoundPitch(gg_snd_Roshi_T, 1.0)
-    set gg_snd_Sage_Kabuto_Kill=CreateSound("war3mapImported/Sage_Kabuto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sage_Kabuto_Kill, 1181)
+    set gg_snd_Sage_Kabuto_Kill=CreateSound("Sounds/Kills/Sage_Kabuto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sage_Kabuto_Kill, 2272)
     call SetSoundChannel(gg_snd_Sage_Kabuto_Kill, 0)
     call SetSoundVolume(gg_snd_Sage_Kabuto_Kill, 127)
     call SetSoundPitch(gg_snd_Sage_Kabuto_Kill, 1.0)
-    set gg_snd_Sage_Naruto_Kill=CreateSound("war3mapImported/Sage_Naruto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sage_Naruto_Kill, 1181)
+    set gg_snd_Sage_Naruto_Kill=CreateSound("Sounds/Kills/Sage_Naruto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sage_Naruto_Kill, 2560)
     call SetSoundChannel(gg_snd_Sage_Naruto_Kill, 0)
     call SetSoundVolume(gg_snd_Sage_Naruto_Kill, 127)
     call SetSoundPitch(gg_snd_Sage_Naruto_Kill, 1.0)
-    set gg_snd_Sai_Kill=CreateSound("war3mapImported/Sai_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sai_Kill, 1181)
+    set gg_snd_Sai_Kill=CreateSound("Sounds/Kills/Sai_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sai_Kill, 3369)
     call SetSoundChannel(gg_snd_Sai_Kill, 0)
     call SetSoundVolume(gg_snd_Sai_Kill, 127)
     call SetSoundPitch(gg_snd_Sai_Kill, 1.0)
-    set gg_snd_Sai_R=CreateSound("war3mapImported/Sai_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sai_R, 1181)
+    set gg_snd_Sai_R=CreateSound("Sounds/Abilities/Sai_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sai_R, 1384)
     call SetSoundChannel(gg_snd_Sai_R, 0)
     call SetSoundVolume(gg_snd_Sai_R, 127)
     call SetSoundPitch(gg_snd_Sai_R, 1.0)
-    set gg_snd_Sai_T=CreateSound("war3mapImported/Sai_T.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sai_T, 1181)
+    set gg_snd_Sai_T=CreateSound("Sounds/Abilities/Sai_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sai_T, 2324)
     call SetSoundChannel(gg_snd_Sai_T, 0)
     call SetSoundVolume(gg_snd_Sai_T, 127)
     call SetSoundPitch(gg_snd_Sai_T, 1.0)
-    set gg_snd_Sakura_Kill=CreateSound("war3mapImported/Sakura_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sakura_Kill, 1181)
+    set gg_snd_Sakura_Kill=CreateSound("Sounds/Kills/Sakura_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sakura_Kill, 5825)
     call SetSoundChannel(gg_snd_Sakura_Kill, 0)
     call SetSoundVolume(gg_snd_Sakura_Kill, 127)
     call SetSoundPitch(gg_snd_Sakura_Kill, 1.0)
-    set gg_snd_Sakura_T=CreateSound("war3mapImported/Sakura_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sakura_T, 1181)
+    set gg_snd_Sakura_T=CreateSound("Sounds/Abilities/Sakura_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sakura_T, 2821)
     call SetSoundChannel(gg_snd_Sakura_T, 0)
     call SetSoundVolume(gg_snd_Sakura_T, 127)
     call SetSoundPitch(gg_snd_Sakura_T, 1.0)
-    set gg_snd_Sasori_Kill=CreateSound("war3mapImported/Sasori_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sasori_Kill, 1181)
+    set gg_snd_Sasori_Kill=CreateSound("Sounds/Kills/Sasori_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sasori_Kill, 3709)
     call SetSoundChannel(gg_snd_Sasori_Kill, 0)
     call SetSoundVolume(gg_snd_Sasori_Kill, 127)
     call SetSoundPitch(gg_snd_Sasori_Kill, 1.0)
-    set gg_snd_Sasori_R_Puppets=CreateSound("war3mapImported/Sasori_R_Puppets.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sasori_R_Puppets, 1181)
+    set gg_snd_Sasori_R_Puppets=CreateSound("Sounds/Abilities/Sasori_R_Puppets.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sasori_R_Puppets, 2847)
     call SetSoundChannel(gg_snd_Sasori_R_Puppets, 0)
     call SetSoundVolume(gg_snd_Sasori_R_Puppets, 127)
     call SetSoundPitch(gg_snd_Sasori_R_Puppets, 1.0)
-    set gg_snd_Sasuke_Hebi_R=CreateSound("war3mapImported/Sasuke_Hebi_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sasuke_Hebi_R, 1181)
+    set gg_snd_Sasuke_Hebi_R=CreateSound("Sounds/Abilities/Sasuke_Hebi_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sasuke_Hebi_R, 1854)
     call SetSoundChannel(gg_snd_Sasuke_Hebi_R, 0)
     call SetSoundVolume(gg_snd_Sasuke_Hebi_R, 127)
     call SetSoundPitch(gg_snd_Sasuke_Hebi_R, 1.0)
-    set gg_snd_Sasuke_Hebi_T=CreateSound("war3mapImported/Sasuke_Hebi_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sasuke_Hebi_T, 1181)
+    set gg_snd_Sasuke_Hebi_T=CreateSound("Sounds/Abilities/Sasuke_Hebi_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sasuke_Hebi_T, 5120)
     call SetSoundChannel(gg_snd_Sasuke_Hebi_T, 0)
     call SetSoundVolume(gg_snd_Sasuke_Hebi_T, 127)
     call SetSoundPitch(gg_snd_Sasuke_Hebi_T, 1.0)
-    set gg_snd_Sasuke_Q=CreateSound("war3mapImported/Sasuke_Q.mp3", false, true, true, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sasuke_Q, 1181)
+    set gg_snd_Sasuke_Q=CreateSound("Sounds/Abilities/Sasuke_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sasuke_Q, 4754)
     call SetSoundChannel(gg_snd_Sasuke_Q, 0)
     call SetSoundVolume(gg_snd_Sasuke_Q, 127)
     call SetSoundPitch(gg_snd_Sasuke_Q, 1.0)
-    call SetSoundDistances(gg_snd_Sasuke_Q, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Sasuke_Q, 3000.0)
-    call SetSoundConeAngles(gg_snd_Sasuke_Q, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Sasuke_Q, 0.0, 0.0, 0.0)
-    set gg_snd_Sasuke_R_Amaterasu=CreateSound("war3mapImported/Sasuke_R_Amaterasu.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sasuke_R_Amaterasu, 1181)
+    set gg_snd_Sasuke_R_Amaterasu=CreateSound("Sounds/Abilities/Sasuke_R_Amaterasu.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sasuke_R_Amaterasu, 3500)
     call SetSoundChannel(gg_snd_Sasuke_R_Amaterasu, 0)
     call SetSoundVolume(gg_snd_Sasuke_R_Amaterasu, 127)
     call SetSoundPitch(gg_snd_Sasuke_R_Amaterasu, 1.0)
-    set gg_snd_Sasuke_Rikudou_T2_Susanoo=CreateSound("war3mapImported/Sasuke_Rikudou_T2_Susanoo.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sasuke_Rikudou_T2_Susanoo, 1181)
+    set gg_snd_Sasuke_Rikudou_T2_Susanoo=CreateSound("Sounds/Abilities/Sasuke_Rikudou_T2_Susanoo.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sasuke_Rikudou_T2_Susanoo, 2220)
     call SetSoundChannel(gg_snd_Sasuke_Rikudou_T2_Susanoo, 0)
     call SetSoundVolume(gg_snd_Sasuke_Rikudou_T2_Susanoo, 127)
     call SetSoundPitch(gg_snd_Sasuke_Rikudou_T2_Susanoo, 1.0)
-    set gg_snd_Sasuke_Rikudou_T_Chibaku=CreateSound("war3mapImported/Sasuke_Rikudou_T_Chibaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Sasuke_Rikudou_T_Chibaku, 1181)
+    set gg_snd_Sasuke_Rikudou_T_Chibaku=CreateSound("Sounds/Abilities/Sasuke_Rikudou_T_Chibaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Sasuke_Rikudou_T_Chibaku, 1515)
     call SetSoundChannel(gg_snd_Sasuke_Rikudou_T_Chibaku, 0)
     call SetSoundVolume(gg_snd_Sasuke_Rikudou_T_Chibaku, 127)
     call SetSoundPitch(gg_snd_Sasuke_Rikudou_T_Chibaku, 1.0)
-    set gg_snd_Shikamaru_Kill=CreateSound("war3mapImported/Shikamaru_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shikamaru_Kill, 1181)
+    set gg_snd_Shikamaru_Kill=CreateSound("Sounds/Kills/Shikamaru_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shikamaru_Kill, 3526)
     call SetSoundChannel(gg_snd_Shikamaru_Kill, 0)
     call SetSoundVolume(gg_snd_Shikamaru_Kill, 127)
     call SetSoundPitch(gg_snd_Shikamaru_Kill, 1.0)
-    set gg_snd_Shikamaru_Q=CreateSound("war3mapImported/Shikamaru_Q.mp3", false, true, true, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shikamaru_Q, 1181)
+    set gg_snd_Shikamaru_Q=CreateSound("Sounds/Abilities/Shikamaru_Q.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shikamaru_Q, 3343)
     call SetSoundChannel(gg_snd_Shikamaru_Q, 0)
     call SetSoundVolume(gg_snd_Shikamaru_Q, 127)
     call SetSoundPitch(gg_snd_Shikamaru_Q, 1.0)
-    call SetSoundDistances(gg_snd_Shikamaru_Q, 0.0, 10000.0)
-    call SetSoundDistanceCutoff(gg_snd_Shikamaru_Q, 3000.0)
-    call SetSoundConeAngles(gg_snd_Shikamaru_Q, 0.0, 0.0, 127)
-    call SetSoundConeOrientation(gg_snd_Shikamaru_Q, 0.0, 0.0, 0.0)
-    set gg_snd_Shikamaru_R=CreateSound("war3mapImported/Shikamaru_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shikamaru_R, 1181)
+    set gg_snd_Shikamaru_R=CreateSound("Sounds/Abilities/Shikamaru_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shikamaru_R, 5120)
     call SetSoundChannel(gg_snd_Shikamaru_R, 0)
     call SetSoundVolume(gg_snd_Shikamaru_R, 127)
     call SetSoundPitch(gg_snd_Shikamaru_R, 1.0)
-    set gg_snd_Shikamaru_T2_Emnaku=CreateSound("war3mapImported/Shikamaru_T2_Emnaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shikamaru_T2_Emnaku, 1181)
+    set gg_snd_Shikamaru_T2_Emnaku=CreateSound("Sounds/Abilities/Shikamaru_T2_Emnaku.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shikamaru_T2_Emnaku, 3813)
     call SetSoundChannel(gg_snd_Shikamaru_T2_Emnaku, 0)
     call SetSoundVolume(gg_snd_Shikamaru_T2_Emnaku, 127)
     call SetSoundPitch(gg_snd_Shikamaru_T2_Emnaku, 1.0)
-    set gg_snd_Shikamaru_T_Kagemane=CreateSound("war3mapImported/Shikamaru_T_Kagemane.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shikamaru_T_Kagemane, 1181)
+    set gg_snd_Shikamaru_T_Kagemane=CreateSound("Sounds/Abilities/Shikamaru_T_Kagemane.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shikamaru_T_Kagemane, 2612)
     call SetSoundChannel(gg_snd_Shikamaru_T_Kagemane, 0)
     call SetSoundVolume(gg_snd_Shikamaru_T_Kagemane, 127)
     call SetSoundPitch(gg_snd_Shikamaru_T_Kagemane, 1.0)
-    set gg_snd_Shino_Kill=CreateSound("war3mapImported/Shino_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shino_Kill, 1181)
+    set gg_snd_Shino_Kill=CreateSound("Sounds/Kills/Shino_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shino_Kill, 2533)
     call SetSoundChannel(gg_snd_Shino_Kill, 0)
     call SetSoundVolume(gg_snd_Shino_Kill, 127)
     call SetSoundPitch(gg_snd_Shino_Kill, 1.0)
-    set gg_snd_Shino_R=CreateSound("war3mapImported/Shino_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shino_R, 1181)
+    set gg_snd_Shino_R=CreateSound("Sounds/Abilities/Shino_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shino_R, 3108)
     call SetSoundChannel(gg_snd_Shino_R, 0)
     call SetSoundVolume(gg_snd_Shino_R, 127)
     call SetSoundPitch(gg_snd_Shino_R, 1.0)
-    set gg_snd_Shino_T_Mushikui=CreateSound("war3mapImported/Shino_T_Mushikui.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shino_T_Mushikui, 1181)
+    set gg_snd_Shino_T_Mushikui=CreateSound("Sounds/Abilities/Shino_T_Mushikui.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shino_T_Mushikui, 7340)
     call SetSoundChannel(gg_snd_Shino_T_Mushikui, 0)
     call SetSoundVolume(gg_snd_Shino_T_Mushikui, 127)
     call SetSoundPitch(gg_snd_Shino_T_Mushikui, 1.0)
-    set gg_snd_Shisui_Kill=CreateSound("war3mapImported/Shisui_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shisui_Kill, 1181)
+    set gg_snd_Shisui_Kill=CreateSound("Sounds/Kills/Shisui_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shisui_Kill, 6191)
     call SetSoundChannel(gg_snd_Shisui_Kill, 0)
     call SetSoundVolume(gg_snd_Shisui_Kill, 127)
     call SetSoundPitch(gg_snd_Shisui_Kill, 1.0)
-    set gg_snd_Shisui_R=CreateSound("war3mapImported/Shisui_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shisui_R, 1181)
+    set gg_snd_Shisui_R=CreateSound("Sounds/Abilities/Shisui_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shisui_R, 2925)
     call SetSoundChannel(gg_snd_Shisui_R, 0)
     call SetSoundVolume(gg_snd_Shisui_R, 127)
     call SetSoundPitch(gg_snd_Shisui_R, 1.0)
-    set gg_snd_Shisui_T=CreateSound("war3mapImported/Shisui_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shisui_T, 1181)
+    set gg_snd_Shisui_T=CreateSound("Sounds/Abilities/Shisui_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shisui_T, 3186)
     call SetSoundChannel(gg_snd_Shisui_T, 0)
     call SetSoundVolume(gg_snd_Shisui_T, 127)
     call SetSoundPitch(gg_snd_Shisui_T, 1.0)
-    set gg_snd_Shizune_R=CreateSound("war3mapImported/Shizune_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shizune_R, 1181)
+    set gg_snd_Shizune_R=CreateSound("Sounds/Abilities/Shizune_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shizune_R, 1175)
     call SetSoundChannel(gg_snd_Shizune_R, 0)
     call SetSoundVolume(gg_snd_Shizune_R, 127)
     call SetSoundPitch(gg_snd_Shizune_R, 1.0)
-    set gg_snd_Shizune_T=CreateSound("war3mapImported/Shizune_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Shizune_T, 1181)
+    set gg_snd_Shizune_T=CreateSound("Sounds/Abilities/Shizune_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Shizune_T, 574)
     call SetSoundChannel(gg_snd_Shizune_T, 0)
     call SetSoundVolume(gg_snd_Shizune_T, 127)
     call SetSoundPitch(gg_snd_Shizune_T, 1.0)
-    set gg_snd_Shockwave=CreateSound("Abilities/Spells/Orc/Shockwave/Shockwave.flac", false, true, true, 0, 0, "SpellsEAX")
-    call SetSoundParamsFromLabel(gg_snd_Shockwave, "ShockWave")
-    call SetSoundDuration(gg_snd_Shockwave, 2846)
-    call SetSoundVolume(gg_snd_Shockwave, 127)
-    set gg_snd_SpellShieldImpact1=CreateSound("Abilities/Spells/Items/SpellShieldAmulet/SpellShieldImpact1.flac", false, true, true, 0, 0, "SpellsEAX")
-    call SetSoundParamsFromLabel(gg_snd_SpellShieldImpact1, "SpellShieldAmulet")
-    call SetSoundDuration(gg_snd_SpellShieldImpact1, 475)
-    call SetSoundVolume(gg_snd_SpellShieldImpact1, 127)
-    set gg_snd_StampedeCaster1=CreateSound("Abilities/Spells/Other/Stampede/StampedeCaster1.flac", false, true, true, 0, 0, "SpellsEAX")
-    call SetSoundParamsFromLabel(gg_snd_StampedeCaster1, "StampedeCast")
-    call SetSoundDuration(gg_snd_StampedeCaster1, 2670)
-    call SetSoundVolume(gg_snd_StampedeCaster1, 127)
     set gg_snd_StrongDrinkMissile1=CreateSound("Abilities/Spells/Other/StrongDrink/StrongDrinkMissile1.flac", false, true, true, 1, 1, "SpellsEAX")
     call SetSoundParamsFromLabel(gg_snd_StrongDrinkMissile1, "StrongDrinkMissile")
     call SetSoundDuration(gg_snd_StrongDrinkMissile1, 732)
     call SetSoundVolume(gg_snd_StrongDrinkMissile1, 127)
     call SetSoundDistances(gg_snd_StrongDrinkMissile1, 0.0, 10000.0)
     call SetSoundDistanceCutoff(gg_snd_StrongDrinkMissile1, 2500.0)
-    set gg_snd_Suigetsu_Kill=CreateSound("war3mapImported/Suigetsu_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Suigetsu_Kill, 732)
+    set gg_snd_Suigetsu_Kill=CreateSound("Sounds/Kills/Suigetsu_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Suigetsu_Kill, 4231)
     call SetSoundChannel(gg_snd_Suigetsu_Kill, 0)
     call SetSoundVolume(gg_snd_Suigetsu_Kill, 127)
     call SetSoundPitch(gg_snd_Suigetsu_Kill, 1.0)
-    set gg_snd_Suigetsu_R=CreateSound("war3mapImported/Suigetsu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Suigetsu_R, 732)
+    set gg_snd_Suigetsu_R=CreateSound("Sounds/Abilities/Suigetsu_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Suigetsu_R, 1724)
     call SetSoundChannel(gg_snd_Suigetsu_R, 0)
     call SetSoundVolume(gg_snd_Suigetsu_R, 127)
     call SetSoundPitch(gg_snd_Suigetsu_R, 1.0)
-    set gg_snd_Suigetsu_T2_Bubble=CreateSound("war3mapImported/Suigetsu_T2_Bubble.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Suigetsu_T2_Bubble, 732)
+    set gg_snd_Suigetsu_T2_Bubble=CreateSound("Sounds/Abilities/Suigetsu_T2_Bubble.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Suigetsu_T2_Bubble, 2168)
     call SetSoundChannel(gg_snd_Suigetsu_T2_Bubble, 0)
     call SetSoundVolume(gg_snd_Suigetsu_T2_Bubble, 127)
     call SetSoundPitch(gg_snd_Suigetsu_T2_Bubble, 1.0)
-    set gg_snd_Suigetsu_T_Wave=CreateSound("war3mapImported/Suigetsu_T_Wave.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Suigetsu_T_Wave, 732)
+    set gg_snd_Suigetsu_T_Wave=CreateSound("Sounds/Abilities/Suigetsu_T_Wave.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Suigetsu_T_Wave, 1332)
     call SetSoundChannel(gg_snd_Suigetsu_T_Wave, 0)
     call SetSoundVolume(gg_snd_Suigetsu_T_Wave, 127)
     call SetSoundPitch(gg_snd_Suigetsu_T_Wave, 1.0)
-    set gg_snd_Temari_Kill=CreateSound("war3mapImported/Temari_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Temari_Kill, 732)
+    set gg_snd_Temari_Kill=CreateSound("Sounds/Kills/Temari_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Temari_Kill, 4754)
     call SetSoundChannel(gg_snd_Temari_Kill, 0)
     call SetSoundVolume(gg_snd_Temari_Kill, 127)
     call SetSoundPitch(gg_snd_Temari_Kill, 1.0)
-    set gg_snd_Temari_R=CreateSound("war3mapImported/Temari_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Temari_R, 732)
+    set gg_snd_Temari_R=CreateSound("Sounds/Abilities/Temari_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Temari_R, 2011)
     call SetSoundChannel(gg_snd_Temari_R, 0)
     call SetSoundVolume(gg_snd_Temari_R, 127)
     call SetSoundPitch(gg_snd_Temari_R, 1.0)
-    set gg_snd_Temari_T=CreateSound("war3mapImported/Temari_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Temari_T, 732)
+    set gg_snd_Temari_T=CreateSound("Sounds/Abilities/Temari_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Temari_T, 1593)
     call SetSoundChannel(gg_snd_Temari_T, 0)
     call SetSoundVolume(gg_snd_Temari_T, 127)
     call SetSoundPitch(gg_snd_Temari_T, 1.0)
-    set gg_snd_Tenten_Kill=CreateSound("war3mapImported/Tenten_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Tenten_Kill, 732)
+    set gg_snd_Tenten_Kill=CreateSound("Sounds/Kills/Tenten_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Tenten_Kill, 3918)
     call SetSoundChannel(gg_snd_Tenten_Kill, 0)
     call SetSoundVolume(gg_snd_Tenten_Kill, 127)
     call SetSoundPitch(gg_snd_Tenten_Kill, 1.0)
-    set gg_snd_Tenten_T=CreateSound("war3mapImported/Tenten_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Tenten_T, 732)
+    set gg_snd_Tenten_T=CreateSound("Sounds/Abilities/Tenten_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Tenten_T, 5120)
     call SetSoundChannel(gg_snd_Tenten_T, 0)
     call SetSoundVolume(gg_snd_Tenten_T, 127)
     call SetSoundPitch(gg_snd_Tenten_T, 1.0)
-    set gg_snd_Tobi_Kill=CreateSound("war3mapImported/Tobi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Tobi_Kill, 732)
+    set gg_snd_Tobi_Kill=CreateSound("Sounds/Kills/Tobi_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Tobi_Kill, 5433)
     call SetSoundChannel(gg_snd_Tobi_Kill, 0)
     call SetSoundVolume(gg_snd_Tobi_Kill, 127)
     call SetSoundPitch(gg_snd_Tobi_Kill, 1.0)
-    set gg_snd_Tobi_R=CreateSound("war3mapImported/Tobi_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Tobi_R, 732)
+    set gg_snd_Tobi_R=CreateSound("Sounds/Abilities/Tobi_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Tobi_R, 2063)
     call SetSoundChannel(gg_snd_Tobi_R, 0)
     call SetSoundVolume(gg_snd_Tobi_R, 127)
     call SetSoundPitch(gg_snd_Tobi_R, 1.0)
-    set gg_snd_Tobirama_Kill=CreateSound("war3mapImported/Tobirama_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Tobirama_Kill, 732)
+    set gg_snd_Tobirama_Kill=CreateSound("Sounds/Kills/Tobirama_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Tobirama_Kill, 3918)
     call SetSoundChannel(gg_snd_Tobirama_Kill, 0)
     call SetSoundVolume(gg_snd_Tobirama_Kill, 127)
     call SetSoundPitch(gg_snd_Tobirama_Kill, 1.0)
-    set gg_snd_Tobirama_R=CreateSound("war3mapImported/Tobirama_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Tobirama_R, 732)
+    set gg_snd_Tobirama_R=CreateSound("Sounds/Abilities/Tobirama_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Tobirama_R, 2481)
     call SetSoundChannel(gg_snd_Tobirama_R, 0)
     call SetSoundVolume(gg_snd_Tobirama_R, 127)
     call SetSoundPitch(gg_snd_Tobirama_R, 1.0)
-    set gg_snd_Tobirama_T2_Suiton=CreateSound("war3mapImported/Tobirama_T2_Suiton.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Tobirama_T2_Suiton, 732)
+    set gg_snd_Tobirama_T2_Suiton=CreateSound("Sounds/Abilities/Tobirama_T2_Suiton.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Tobirama_T2_Suiton, 3343)
     call SetSoundChannel(gg_snd_Tobirama_T2_Suiton, 0)
     call SetSoundVolume(gg_snd_Tobirama_T2_Suiton, 127)
     call SetSoundPitch(gg_snd_Tobirama_T2_Suiton, 1.0)
-    set gg_snd_Tobirama_T_Gojou=CreateSound("war3mapImported/Tobirama_T_Gojou.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Tobirama_T_Gojou, 732)
+    set gg_snd_Tobirama_T_Gojou=CreateSound("Sounds/Abilities/Tobirama_T_Gojou.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Tobirama_T_Gojou, 1959)
     call SetSoundChannel(gg_snd_Tobirama_T_Gojou, 0)
     call SetSoundVolume(gg_snd_Tobirama_T_Gojou, 127)
     call SetSoundPitch(gg_snd_Tobirama_T_Gojou, 1.0)
-    set gg_snd_Torune_R=CreateSound("war3mapImported/Torune_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Torune_R, 732)
+    set gg_snd_Torune_R=CreateSound("Sounds/Abilities/Torune_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Torune_R, 1227)
     call SetSoundChannel(gg_snd_Torune_R, 0)
     call SetSoundVolume(gg_snd_Torune_R, 127)
     call SetSoundPitch(gg_snd_Torune_R, 1.0)
-    set gg_snd_Torune_T=CreateSound("war3mapImported/Torune_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Torune_T, 732)
+    set gg_snd_Torune_T=CreateSound("Sounds/Abilities/Torune_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Torune_T, 1227)
     call SetSoundChannel(gg_snd_Torune_T, 0)
     call SetSoundVolume(gg_snd_Torune_T, 127)
     call SetSoundPitch(gg_snd_Torune_T, 1.0)
-    set gg_snd_Tsunade_Kill=CreateSound("war3mapImported/Tsunade_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Tsunade_Kill, 732)
+    set gg_snd_Tsunade_Kill=CreateSound("Sounds/Kills/Tsunade_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Tsunade_Kill, 3918)
     call SetSoundChannel(gg_snd_Tsunade_Kill, 0)
     call SetSoundVolume(gg_snd_Tsunade_Kill, 127)
     call SetSoundPitch(gg_snd_Tsunade_Kill, 1.0)
-    set gg_snd_Tsunade_R=CreateSound("war3mapImported/Tsunade_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Tsunade_R, 732)
+    set gg_snd_Tsunade_R=CreateSound("Sounds/Abilities/Tsunade_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Tsunade_R, 1253)
     call SetSoundChannel(gg_snd_Tsunade_R, 0)
     call SetSoundVolume(gg_snd_Tsunade_R, 127)
     call SetSoundPitch(gg_snd_Tsunade_R, 1.0)
-    set gg_snd_Tsunade_T=CreateSound("war3mapImported/Tsunade_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Tsunade_T, 732)
+    set gg_snd_Tsunade_T=CreateSound("Sounds/Abilities/Tsunade_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Tsunade_T, 1906)
     call SetSoundChannel(gg_snd_Tsunade_T, 0)
     call SetSoundVolume(gg_snd_Tsunade_T, 127)
     call SetSoundPitch(gg_snd_Tsunade_T, 1.0)
-    set gg_snd_Utakata_Kill=CreateSound("war3mapImported/Utakata_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Utakata_Kill, 732)
+    set gg_snd_Utakata_Kill=CreateSound("Sounds/Kills/Utakata_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Utakata_Kill, 3500)
     call SetSoundChannel(gg_snd_Utakata_Kill, 0)
     call SetSoundVolume(gg_snd_Utakata_Kill, 127)
     call SetSoundPitch(gg_snd_Utakata_Kill, 1.0)
-    set gg_snd_Utakata_R=CreateSound("war3mapImported/Utakata_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Utakata_R, 732)
+    set gg_snd_Utakata_R=CreateSound("Sounds/Abilities/Utakata_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Utakata_R, 2638)
     call SetSoundChannel(gg_snd_Utakata_R, 0)
     call SetSoundVolume(gg_snd_Utakata_R, 127)
     call SetSoundPitch(gg_snd_Utakata_R, 1.0)
-    set gg_snd_Utakata_T=CreateSound("war3mapImported/Utakata_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Utakata_T, 732)
+    set gg_snd_Utakata_T=CreateSound("Sounds/Abilities/Utakata_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Utakata_T, 2063)
     call SetSoundChannel(gg_snd_Utakata_T, 0)
     call SetSoundVolume(gg_snd_Utakata_T, 127)
     call SetSoundPitch(gg_snd_Utakata_T, 1.0)
-    set gg_snd_Yagura_Kill=CreateSound("war3mapImported/Yagura_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Yagura_Kill, 732)
+    set gg_snd_Yagura_Kill=CreateSound("Sounds/Kills/Yagura_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Yagura_Kill, 3291)
     call SetSoundChannel(gg_snd_Yagura_Kill, 0)
     call SetSoundVolume(gg_snd_Yagura_Kill, 127)
     call SetSoundPitch(gg_snd_Yagura_Kill, 1.0)
-    set gg_snd_Yagura_R=CreateSound("war3mapImported/Yagura_R.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Yagura_R, 732)
+    set gg_snd_Yagura_R=CreateSound("Sounds/Abilities/Yagura_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Yagura_R, 940)
     call SetSoundChannel(gg_snd_Yagura_R, 0)
     call SetSoundVolume(gg_snd_Yagura_R, 127)
     call SetSoundPitch(gg_snd_Yagura_R, 1.0)
-    set gg_snd_Yagura_T=CreateSound("war3mapImported/Yagura_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Yagura_T, 732)
+    set gg_snd_Yagura_T=CreateSound("Sounds/Abilities/Yagura_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Yagura_T, 2481)
     call SetSoundChannel(gg_snd_Yagura_T, 0)
     call SetSoundVolume(gg_snd_Yagura_T, 127)
     call SetSoundPitch(gg_snd_Yagura_T, 1.0)
-    set gg_snd_Yamato_D=CreateSound("war3mapImported/Yamato_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Yamato_D, 732)
+    set gg_snd_Yamato_D=CreateSound("Sounds/Abilities/Yamato_D.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Yamato_D, 1410)
     call SetSoundChannel(gg_snd_Yamato_D, 0)
     call SetSoundVolume(gg_snd_Yamato_D, 127)
     call SetSoundPitch(gg_snd_Yamato_D, 1.0)
-    set gg_snd_Yamato_Kill=CreateSound("war3mapImported/Yamato_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Yamato_Kill, 732)
+    set gg_snd_Yamato_Kill=CreateSound("Sounds/Kills/Yamato_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Yamato_Kill, 4571)
     call SetSoundChannel(gg_snd_Yamato_Kill, 0)
     call SetSoundVolume(gg_snd_Yamato_Kill, 127)
     call SetSoundPitch(gg_snd_Yamato_Kill, 1.0)
-    set gg_snd_Yamato_T=CreateSound("war3mapImported/Yamato_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Yamato_T, 732)
+    set gg_snd_Yamato_T=CreateSound("Sounds/Abilities/Yamato_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Yamato_T, 783)
     call SetSoundChannel(gg_snd_Yamato_T, 0)
     call SetSoundVolume(gg_snd_Yamato_T, 127)
     call SetSoundPitch(gg_snd_Yamato_T, 1.0)
-    set gg_snd_Young_Kabuto_Kill=CreateSound("war3mapImported/Young_Kabuto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Young_Kabuto_Kill, 732)
+    set gg_snd_Young_Kabuto_Kill=CreateSound("Sounds/Kills/Young_Kabuto_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Young_Kabuto_Kill, 3343)
     call SetSoundChannel(gg_snd_Young_Kabuto_Kill, 0)
     call SetSoundVolume(gg_snd_Young_Kabuto_Kill, 127)
     call SetSoundPitch(gg_snd_Young_Kabuto_Kill, 1.0)
-    set gg_snd_Yugito_Kill=CreateSound("war3mapImported/Yugito_Kill.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Yugito_Kill, 732)
+    set gg_snd_Yugito_Kill=CreateSound("Sounds/Kills/Yugito_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Yugito_Kill, 3683)
     call SetSoundChannel(gg_snd_Yugito_Kill, 0)
     call SetSoundVolume(gg_snd_Yugito_Kill, 127)
     call SetSoundPitch(gg_snd_Yugito_Kill, 1.0)
-    set gg_snd_Yugito_T=CreateSound("war3mapImported/Yugito_T.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Yugito_T, 732)
+    set gg_snd_Yugito_T=CreateSound("Sounds/Abilities/Yugito_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Yugito_T, 2063)
     call SetSoundChannel(gg_snd_Yugito_T, 0)
     call SetSoundVolume(gg_snd_Yugito_T, 127)
     call SetSoundPitch(gg_snd_Yugito_T, 1.0)
-    set gg_snd_Zabuza_Kill=CreateSound("war3mapImported/Zabuza_Kill.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Zabuza_Kill, 732)
+    set gg_snd_Zabuza_Kill=CreateSound("Sounds/Kills/Zabuza_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Zabuza_Kill, 5720)
     call SetSoundChannel(gg_snd_Zabuza_Kill, 0)
     call SetSoundVolume(gg_snd_Zabuza_Kill, 127)
     call SetSoundPitch(gg_snd_Zabuza_Kill, 1.0)
-    set gg_snd_Zabuza_R=CreateSound("war3mapImported/Zabuza_R.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Zabuza_R, 732)
+    set gg_snd_Zabuza_R=CreateSound("Sounds/Abilities/Zabuza_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Zabuza_R, 3108)
     call SetSoundChannel(gg_snd_Zabuza_R, 0)
     call SetSoundVolume(gg_snd_Zabuza_R, 127)
     call SetSoundPitch(gg_snd_Zabuza_R, 1.0)
-    set gg_snd_Zabuza_T=CreateSound("war3mapImported/Zabuza_T.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Zabuza_T, 732)
+    set gg_snd_Zabuza_T=CreateSound("Sounds/Abilities/Zabuza_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Zabuza_T, 1488)
     call SetSoundChannel(gg_snd_Zabuza_T, 0)
     call SetSoundVolume(gg_snd_Zabuza_T, 127)
     call SetSoundPitch(gg_snd_Zabuza_T, 1.0)
-    set gg_snd_Anko_T=CreateSound("Sounds/Abilities/Anko_T.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Anko_T, 2507)
-    call SetSoundChannel(gg_snd_Anko_T, 0)
-    call SetSoundVolume(gg_snd_Anko_T, 127)
-    call SetSoundPitch(gg_snd_Anko_T, 1.0)
 endfunction
 
 //***************************************************************************
@@ -15544,12 +15433,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__String_Alloc___recycle[(0)] == 0 ) then
-                set s__String_Alloc___instanceCount=s__String_Alloc___instanceCount + 1
-                set this=s__String_Alloc___instanceCount
+            if ( s__String_Alloc__recycle[(0)] == 0 ) then
+                set s__String_Alloc__instanceCount=s__String_Alloc__instanceCount + 1
+                set this=s__String_Alloc__instanceCount
             else
-                set this=s__String_Alloc___recycle[(0)]
-                set s__String_Alloc___recycle[(0)]=s__String_Alloc___recycle[s__String_Alloc___recycle[(0)]]
+                set this=s__String_Alloc__recycle[(0)]
+                set s__String_Alloc__recycle[(0)]=s__String_Alloc__recycle[s__String_Alloc__recycle[(0)]]
             endif
 
     
@@ -15557,8 +15446,8 @@ endfunction
         endfunction
     
         function s__String_deallocate takes integer this returns nothing
-            set s__String_Alloc___recycle[this]=s__String_Alloc___recycle[(0)]
-            set s__String_Alloc___recycle[(0)]=this
+            set s__String_Alloc__recycle[this]=s__String_Alloc__recycle[(0)]
+            set s__String_Alloc__recycle[(0)]=this
         endfunction
     
     
@@ -17571,20 +17460,20 @@ endfunction
 
     
     function s__RikuudouNecklacePassive_finishCooldown takes nothing returns nothing
-        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
-        set s__s__RikuudouNecklacePassive_cooldown[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= false // INLINED!!
+        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+        set s__s__RikuudouNecklacePassive_cooldown[(LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer()))))]= false // INLINED!!
         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl" ), (( GetUnitX(u) )*1.0), (( GetUnitY(u))*1.0))) // INLINED!!
         call ReleaseTimer(GetExpiredTimer())
 		set u=null
     endfunction
     
     function s__RikuudouNecklacePassive_finishInvul takes nothing returns nothing
-        call SetUnitInvulnerable((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), false) // INLINED!!
+        call SetUnitInvulnerable((s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]), false) // INLINED!!
         call ReleaseTimer(GetExpiredTimer())
     endfunction
     
     function s__RikuudouNecklacePassive_periodic takes nothing returns nothing
-  local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer id= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local unit u= (s__UnitDex_Unit[(id)]) // INLINED!!
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I04T') then
 			set s__s__RikuudouNecklacePassive_t[id]= null
@@ -17678,12 +17567,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__ThunderKusanagiCritical_Alloc___recycle[(0)] == 0 ) then
-                set s__ThunderKusanagiCritical_Alloc___instanceCount=s__ThunderKusanagiCritical_Alloc___instanceCount + 1
-                set this=s__ThunderKusanagiCritical_Alloc___instanceCount
+            if ( s__ThunderKusanagiCritical_Alloc__recycle[(0)] == 0 ) then
+                set s__ThunderKusanagiCritical_Alloc__instanceCount=s__ThunderKusanagiCritical_Alloc__instanceCount + 1
+                set this=s__ThunderKusanagiCritical_Alloc__instanceCount
             else
-                set this=s__ThunderKusanagiCritical_Alloc___recycle[(0)]
-                set s__ThunderKusanagiCritical_Alloc___recycle[(0)]=s__ThunderKusanagiCritical_Alloc___recycle[s__ThunderKusanagiCritical_Alloc___recycle[(0)]]
+                set this=s__ThunderKusanagiCritical_Alloc__recycle[(0)]
+                set s__ThunderKusanagiCritical_Alloc__recycle[(0)]=s__ThunderKusanagiCritical_Alloc__recycle[s__ThunderKusanagiCritical_Alloc__recycle[(0)]]
             endif
 
     
@@ -17691,8 +17580,8 @@ endfunction
         endfunction
     
         function s__ThunderKusanagiCritical_deallocate takes integer this returns nothing
-            set s__ThunderKusanagiCritical_Alloc___recycle[this]=s__ThunderKusanagiCritical_Alloc___recycle[(0)]
-            set s__ThunderKusanagiCritical_Alloc___recycle[(0)]=this
+            set s__ThunderKusanagiCritical_Alloc__recycle[this]=s__ThunderKusanagiCritical_Alloc__recycle[(0)]
+            set s__ThunderKusanagiCritical_Alloc__recycle[(0)]=this
         endfunction
     
     function s__ThunderKusanagiCritical_actions takes nothing returns nothing
@@ -17722,7 +17611,7 @@ endfunction
     endfunction 
     
     function s__ThunderKusanagiCritical_spellActions takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         if GetUnitAbilityLevel(s__ThunderKusanagiCritical_target[this], 'B04N') == 0 then
             set bj_lastCreatedUnit=CreateAbilityDummy(s__ThunderKusanagiCritical_caster[this] , 'A0TB')
             call IssueTargetOrder(bj_lastCreatedUnit, "soulburn", s__ThunderKusanagiCritical_target[this])
@@ -18110,11 +17999,11 @@ endfunction
 
 
     function s__MedicalNinjaCloth_periodic takes nothing returns nothing
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
   local integer id
                 local real newhp
 		if u == null or not ( UnitHasItemOfTypeBJ(u, 'I05H') or UnitHasItemOfTypeBJ(u, 'I05I') ) then
-			set s__s__MedicalNinjaCloth_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__MedicalNinjaCloth_t[(LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 			return
@@ -18195,10 +18084,10 @@ endfunction
     endfunction 
 
  function s__KyuubiImmolation_periodic takes nothing returns nothing
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
   local integer i
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I03W') then
-			set s__s__KyuubiImmolation_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__KyuubiImmolation_t[(LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 			return
@@ -18236,12 +18125,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__AntiEnergyStones_Alloc___recycle[(0)] == 0 ) then
-                set s__AntiEnergyStones_Alloc___instanceCount=s__AntiEnergyStones_Alloc___instanceCount + 1
-                set this=s__AntiEnergyStones_Alloc___instanceCount
+            if ( s__AntiEnergyStones_Alloc__recycle[(0)] == 0 ) then
+                set s__AntiEnergyStones_Alloc__instanceCount=s__AntiEnergyStones_Alloc__instanceCount + 1
+                set this=s__AntiEnergyStones_Alloc__instanceCount
             else
-                set this=s__AntiEnergyStones_Alloc___recycle[(0)]
-                set s__AntiEnergyStones_Alloc___recycle[(0)]=s__AntiEnergyStones_Alloc___recycle[s__AntiEnergyStones_Alloc___recycle[(0)]]
+                set this=s__AntiEnergyStones_Alloc__recycle[(0)]
+                set s__AntiEnergyStones_Alloc__recycle[(0)]=s__AntiEnergyStones_Alloc__recycle[s__AntiEnergyStones_Alloc__recycle[(0)]]
             endif
 
     
@@ -18249,12 +18138,12 @@ endfunction
         endfunction
     
         function s__AntiEnergyStones_deallocate takes integer this returns nothing
-            set s__AntiEnergyStones_Alloc___recycle[this]=s__AntiEnergyStones_Alloc___recycle[(0)]
-            set s__AntiEnergyStones_Alloc___recycle[(0)]=this
+            set s__AntiEnergyStones_Alloc__recycle[this]=s__AntiEnergyStones_Alloc__recycle[(0)]
+            set s__AntiEnergyStones_Alloc__recycle[(0)]=this
         endfunction
 
  function s__AntiEnergyStones_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local integer id2
   local integer hp
   local integer mp
@@ -18279,7 +18168,7 @@ endfunction
 					set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
 					exitwhen bj_lastCreatedUnit == null
 					if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__AntiEnergyStones_u[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and GetUnitAbilityLevel(bj_lastCreatedUnit, 'B00P') > 0 and not IsUnitInGroup(bj_lastCreatedUnit, s__AntiEnergyStones_yang_units[this]) then
-						call SaveInteger(Table___ht, (s__AntiEnergyStones_hps[this]), ((GetUnitUserData((bj_lastCreatedUnit)))), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE)))) // INLINED!!
+						call SaveInteger(Table__ht, (s__AntiEnergyStones_hps[this]), ((GetUnitUserData((bj_lastCreatedUnit)))), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE)))) // INLINED!!
 						call GroupAddUnit(s__AntiEnergyStones_yang_units[this], bj_lastCreatedUnit)
 					endif
 					call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
@@ -18290,14 +18179,14 @@ endfunction
 					exitwhen bj_lastCreatedUnit == null
 					set id2=(GetUnitUserData((bj_lastCreatedUnit))) // INLINED!!
 					if GetWidgetLife(bj_lastCreatedUnit) < 0.405 or GetUnitAbilityLevel(bj_lastCreatedUnit, 'B00P') == 0 then
-						call RemoveSavedInteger(Table___ht, (s__AntiEnergyStones_hps[this]), (id2)) // INLINED!!
+						call RemoveSavedInteger(Table__ht, (s__AntiEnergyStones_hps[this]), (id2)) // INLINED!!
 						call GroupRemoveUnit(s__AntiEnergyStones_yang_units[this], bj_lastCreatedUnit)
 					else
-						set hp=(LoadInteger(Table___ht, (s__AntiEnergyStones_hps[this]), (id2))) // INLINED!!
+						set hp=(LoadInteger(Table__ht, (s__AntiEnergyStones_hps[this]), (id2))) // INLINED!!
 						if GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE) > hp and not udg_EarthFinish[GetPlayerId(GetOwningPlayer(s__AntiEnergyStones_u[this]))] and not (UnitHasItemOfTypeBJ((bj_lastCreatedUnit ), ( 'I06J'))) and not (UnitHasItemOfTypeBJ((bj_lastCreatedUnit ), ( 'I06L'))) then // INLINED!!
-							call SetUnitState(s__AntiEnergyStones_u[this], UNIT_STATE_LIFE, GetUnitState(s__AntiEnergyStones_u[this], UNIT_STATE_LIFE) + GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE) - (LoadInteger(Table___ht, (s__AntiEnergyStones_hps[this]), (id2)))) // INLINED!!
+							call SetUnitState(s__AntiEnergyStones_u[this], UNIT_STATE_LIFE, GetUnitState(s__AntiEnergyStones_u[this], UNIT_STATE_LIFE) + GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE) - (LoadInteger(Table__ht, (s__AntiEnergyStones_hps[this]), (id2)))) // INLINED!!
 						endif
-						call SaveInteger(Table___ht, (s__AntiEnergyStones_hps[this]), (id2), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE)))) // INLINED!!
+						call SaveInteger(Table__ht, (s__AntiEnergyStones_hps[this]), (id2), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE)))) // INLINED!!
 					endif
 					call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
 				endloop
@@ -18312,7 +18201,7 @@ endfunction
 					set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
 					exitwhen bj_lastCreatedUnit == null
 					if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__AntiEnergyStones_u[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and GetUnitAbilityLevel(bj_lastCreatedUnit, 'B00R') > 0 and not IsUnitInGroup(bj_lastCreatedUnit, s__AntiEnergyStones_yin_units[this]) then
-						call SaveInteger(Table___ht, (s__AntiEnergyStones_mps[this]), ((GetUnitUserData((bj_lastCreatedUnit)))), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA)))) // INLINED!!
+						call SaveInteger(Table__ht, (s__AntiEnergyStones_mps[this]), ((GetUnitUserData((bj_lastCreatedUnit)))), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA)))) // INLINED!!
 						call GroupAddUnit(s__AntiEnergyStones_yin_units[this], bj_lastCreatedUnit)
 					endif
 					call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
@@ -18323,11 +18212,11 @@ endfunction
 					exitwhen bj_lastCreatedUnit == null
 					set id2=(GetUnitUserData((bj_lastCreatedUnit))) // INLINED!!
 					if GetWidgetLife(bj_lastCreatedUnit) < 0.405 or GetUnitAbilityLevel(bj_lastCreatedUnit, 'B00R') == 0 then
-						call RemoveSavedInteger(Table___ht, (s__AntiEnergyStones_mps[this]), (id2)) // INLINED!!
+						call RemoveSavedInteger(Table__ht, (s__AntiEnergyStones_mps[this]), (id2)) // INLINED!!
 						call GroupRemoveUnit(s__AntiEnergyStones_yin_units[this], bj_lastCreatedUnit)
 					else
 						if not udg_FallenSky[GetPlayerId(GetOwningPlayer(s__AntiEnergyStones_u[this]))] then
-							set mp=(LoadInteger(Table___ht, (s__AntiEnergyStones_mps[this]), (id2))) // INLINED!!
+							set mp=(LoadInteger(Table__ht, (s__AntiEnergyStones_mps[this]), (id2))) // INLINED!!
 							if GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA) > mp then
 								call SetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA, mp)
 							elseif GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA) < mp then
@@ -18337,7 +18226,7 @@ endfunction
 								endif
 							endif
 						endif
-						call SaveInteger(Table___ht, (s__AntiEnergyStones_mps[this]), (id2), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA)))) // INLINED!!
+						call SaveInteger(Table__ht, (s__AntiEnergyStones_mps[this]), (id2), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA)))) // INLINED!!
 					endif
 					call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
 				endloop
@@ -18539,12 +18428,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__ItachiRing_Alloc___recycle[(0)] == 0 ) then
-                set s__ItachiRing_Alloc___instanceCount=s__ItachiRing_Alloc___instanceCount + 1
-                set this=s__ItachiRing_Alloc___instanceCount
+            if ( s__ItachiRing_Alloc__recycle[(0)] == 0 ) then
+                set s__ItachiRing_Alloc__instanceCount=s__ItachiRing_Alloc__instanceCount + 1
+                set this=s__ItachiRing_Alloc__instanceCount
             else
-                set this=s__ItachiRing_Alloc___recycle[(0)]
-                set s__ItachiRing_Alloc___recycle[(0)]=s__ItachiRing_Alloc___recycle[s__ItachiRing_Alloc___recycle[(0)]]
+                set this=s__ItachiRing_Alloc__recycle[(0)]
+                set s__ItachiRing_Alloc__recycle[(0)]=s__ItachiRing_Alloc__recycle[s__ItachiRing_Alloc__recycle[(0)]]
             endif
 
     
@@ -18552,8 +18441,8 @@ endfunction
         endfunction
     
         function s__ItachiRing_deallocate takes integer this returns nothing
-            set s__ItachiRing_Alloc___recycle[this]=s__ItachiRing_Alloc___recycle[(0)]
-            set s__ItachiRing_Alloc___recycle[(0)]=this
+            set s__ItachiRing_Alloc__recycle[this]=s__ItachiRing_Alloc__recycle[(0)]
+            set s__ItachiRing_Alloc__recycle[(0)]=this
         endfunction
 
     function s__ItachiRing_death takes nothing returns nothing
@@ -18583,10 +18472,10 @@ endfunction
     endfunction 
 
  function s__KisameRing_periodic takes nothing returns nothing
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
   local integer i
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I00H') then
-			set s__s__KisameRing_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__KisameRing_t[(LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 			return
@@ -18679,12 +18568,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__Fireworks_Alloc___recycle[(0)] == 0 ) then
-                set s__Fireworks_Alloc___instanceCount=s__Fireworks_Alloc___instanceCount + 1
-                set this=s__Fireworks_Alloc___instanceCount
+            if ( s__Fireworks_Alloc__recycle[(0)] == 0 ) then
+                set s__Fireworks_Alloc__instanceCount=s__Fireworks_Alloc__instanceCount + 1
+                set this=s__Fireworks_Alloc__instanceCount
             else
-                set this=s__Fireworks_Alloc___recycle[(0)]
-                set s__Fireworks_Alloc___recycle[(0)]=s__Fireworks_Alloc___recycle[s__Fireworks_Alloc___recycle[(0)]]
+                set this=s__Fireworks_Alloc__recycle[(0)]
+                set s__Fireworks_Alloc__recycle[(0)]=s__Fireworks_Alloc__recycle[s__Fireworks_Alloc__recycle[(0)]]
             endif
 
     
@@ -18692,12 +18581,12 @@ endfunction
         endfunction
     
         function s__Fireworks_deallocate takes integer this returns nothing
-            set s__Fireworks_Alloc___recycle[this]=s__Fireworks_Alloc___recycle[(0)]
-            set s__Fireworks_Alloc___recycle[(0)]=this
+            set s__Fireworks_Alloc__recycle[this]=s__Fireworks_Alloc__recycle[(0)]
+            set s__Fireworks_Alloc__recycle[(0)]=this
         endfunction
     
     function s__Fireworks_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         local real angle= GetRandomReal(0, 2 * bj_PI)
         local real offset= GetRandomReal(0, 300)
         local real x= (((s__Fireworks_target_x[this] )*1.0) + Cos((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
@@ -18851,12 +18740,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__WireStrings_Alloc___recycle[(0)] == 0 ) then
-                set s__WireStrings_Alloc___instanceCount=s__WireStrings_Alloc___instanceCount + 1
-                set this=s__WireStrings_Alloc___instanceCount
+            if ( s__WireStrings_Alloc__recycle[(0)] == 0 ) then
+                set s__WireStrings_Alloc__instanceCount=s__WireStrings_Alloc__instanceCount + 1
+                set this=s__WireStrings_Alloc__instanceCount
             else
-                set this=s__WireStrings_Alloc___recycle[(0)]
-                set s__WireStrings_Alloc___recycle[(0)]=s__WireStrings_Alloc___recycle[s__WireStrings_Alloc___recycle[(0)]]
+                set this=s__WireStrings_Alloc__recycle[(0)]
+                set s__WireStrings_Alloc__recycle[(0)]=s__WireStrings_Alloc__recycle[s__WireStrings_Alloc__recycle[(0)]]
             endif
 
     
@@ -18864,12 +18753,12 @@ endfunction
         endfunction
     
         function s__WireStrings_deallocate takes integer this returns nothing
-            set s__WireStrings_Alloc___recycle[this]=s__WireStrings_Alloc___recycle[(0)]
-            set s__WireStrings_Alloc___recycle[(0)]=this
+            set s__WireStrings_Alloc__recycle[this]=s__WireStrings_Alloc__recycle[(0)]
+            set s__WireStrings_Alloc__recycle[(0)]=this
         endfunction
     
     function s__WireStrings_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local real x
   local real y
   local real angle
@@ -18923,12 +18812,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__MedicalSphere_Alloc___recycle[(0)] == 0 ) then
-                set s__MedicalSphere_Alloc___instanceCount=s__MedicalSphere_Alloc___instanceCount + 1
-                set this=s__MedicalSphere_Alloc___instanceCount
+            if ( s__MedicalSphere_Alloc__recycle[(0)] == 0 ) then
+                set s__MedicalSphere_Alloc__instanceCount=s__MedicalSphere_Alloc__instanceCount + 1
+                set this=s__MedicalSphere_Alloc__instanceCount
             else
-                set this=s__MedicalSphere_Alloc___recycle[(0)]
-                set s__MedicalSphere_Alloc___recycle[(0)]=s__MedicalSphere_Alloc___recycle[s__MedicalSphere_Alloc___recycle[(0)]]
+                set this=s__MedicalSphere_Alloc__recycle[(0)]
+                set s__MedicalSphere_Alloc__recycle[(0)]=s__MedicalSphere_Alloc__recycle[s__MedicalSphere_Alloc__recycle[(0)]]
             endif
 
     
@@ -18936,12 +18825,12 @@ endfunction
         endfunction
     
         function s__MedicalSphere_deallocate takes integer this returns nothing
-            set s__MedicalSphere_Alloc___recycle[this]=s__MedicalSphere_Alloc___recycle[(0)]
-            set s__MedicalSphere_Alloc___recycle[(0)]=this
+            set s__MedicalSphere_Alloc__recycle[this]=s__MedicalSphere_Alloc__recycle[(0)]
+            set s__MedicalSphere_Alloc__recycle[(0)]=this
         endfunction
 
     function s__MedicalSphere_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         set bj_lastCreatedGroup=CreateGroup()
         call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__MedicalSphere_target_x[this], s__MedicalSphere_target_y[this], 600.0, null)
         loop
@@ -18986,12 +18875,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__WoodOfSubstitution_Alloc___recycle[(0)] == 0 ) then
-                set s__WoodOfSubstitution_Alloc___instanceCount=s__WoodOfSubstitution_Alloc___instanceCount + 1
-                set this=s__WoodOfSubstitution_Alloc___instanceCount
+            if ( s__WoodOfSubstitution_Alloc__recycle[(0)] == 0 ) then
+                set s__WoodOfSubstitution_Alloc__instanceCount=s__WoodOfSubstitution_Alloc__instanceCount + 1
+                set this=s__WoodOfSubstitution_Alloc__instanceCount
             else
-                set this=s__WoodOfSubstitution_Alloc___recycle[(0)]
-                set s__WoodOfSubstitution_Alloc___recycle[(0)]=s__WoodOfSubstitution_Alloc___recycle[s__WoodOfSubstitution_Alloc___recycle[(0)]]
+                set this=s__WoodOfSubstitution_Alloc__recycle[(0)]
+                set s__WoodOfSubstitution_Alloc__recycle[(0)]=s__WoodOfSubstitution_Alloc__recycle[s__WoodOfSubstitution_Alloc__recycle[(0)]]
             endif
 
     
@@ -18999,13 +18888,13 @@ endfunction
         endfunction
     
         function s__WoodOfSubstitution_deallocate takes integer this returns nothing
-            set s__WoodOfSubstitution_Alloc___recycle[this]=s__WoodOfSubstitution_Alloc___recycle[(0)]
-            set s__WoodOfSubstitution_Alloc___recycle[(0)]=this
+            set s__WoodOfSubstitution_Alloc__recycle[this]=s__WoodOfSubstitution_Alloc__recycle[(0)]
+            set s__WoodOfSubstitution_Alloc__recycle[(0)]=this
         endfunction
     
     
     function s__WoodOfSubstitution_remove takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         call DestroyEffect(AddSpecialEffect(("s_Shadow_Smoke.mdx" ), (( GetUnitX(s__WoodOfSubstitution_dummy[this]) )*1.0), (( GetUnitY(s__WoodOfSubstitution_dummy[this]))*1.0))) // INLINED!!
         call RecycleUnit(s__WoodOfSubstitution_dummy[this])
         call ReleaseTimer(GetExpiredTimer())
@@ -19069,12 +18958,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__SmokeBomb_Alloc___recycle[(0)] == 0 ) then
-                set s__SmokeBomb_Alloc___instanceCount=s__SmokeBomb_Alloc___instanceCount + 1
-                set this=s__SmokeBomb_Alloc___instanceCount
+            if ( s__SmokeBomb_Alloc__recycle[(0)] == 0 ) then
+                set s__SmokeBomb_Alloc__instanceCount=s__SmokeBomb_Alloc__instanceCount + 1
+                set this=s__SmokeBomb_Alloc__instanceCount
             else
-                set this=s__SmokeBomb_Alloc___recycle[(0)]
-                set s__SmokeBomb_Alloc___recycle[(0)]=s__SmokeBomb_Alloc___recycle[s__SmokeBomb_Alloc___recycle[(0)]]
+                set this=s__SmokeBomb_Alloc__recycle[(0)]
+                set s__SmokeBomb_Alloc__recycle[(0)]=s__SmokeBomb_Alloc__recycle[s__SmokeBomb_Alloc__recycle[(0)]]
             endif
 
     
@@ -19082,12 +18971,12 @@ endfunction
         endfunction
     
         function s__SmokeBomb_deallocate takes integer this returns nothing
-            set s__SmokeBomb_Alloc___recycle[this]=s__SmokeBomb_Alloc___recycle[(0)]
-            set s__SmokeBomb_Alloc___recycle[(0)]=this
+            set s__SmokeBomb_Alloc__recycle[this]=s__SmokeBomb_Alloc__recycle[(0)]
+            set s__SmokeBomb_Alloc__recycle[(0)]=this
         endfunction
     
     function s__SmokeBomb_removeInivis takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         local integer id= GetUnitPointValueByType(GetUnitTypeId(s__SmokeBomb_caster[this]))
         call UnitAddAbility(s__SmokeBomb_caster[this], 'Arav')
         call UnitRemoveAbility(s__SmokeBomb_caster[this], 'Arav')
@@ -19171,7 +19060,7 @@ call UnitAddAbility((bj_lastCreatedUnit ), ( 'A03E')) // INLINED!!
 // Trigger: FlashBomb
 //===========================================================================
 function Trig_FlashBomb_Actions2 takes nothing returns nothing
-    local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+    local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
     local unit uu
         set bj_lastCreatedGroup=CreateGroup()
         call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(u), GetUnitY(u), 800, null)
@@ -19277,12 +19166,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__YataMirror_Alloc___recycle[(0)] == 0 ) then
-                set s__YataMirror_Alloc___instanceCount=s__YataMirror_Alloc___instanceCount + 1
-                set this=s__YataMirror_Alloc___instanceCount
+            if ( s__YataMirror_Alloc__recycle[(0)] == 0 ) then
+                set s__YataMirror_Alloc__instanceCount=s__YataMirror_Alloc__instanceCount + 1
+                set this=s__YataMirror_Alloc__instanceCount
             else
-                set this=s__YataMirror_Alloc___recycle[(0)]
-                set s__YataMirror_Alloc___recycle[(0)]=s__YataMirror_Alloc___recycle[s__YataMirror_Alloc___recycle[(0)]]
+                set this=s__YataMirror_Alloc__recycle[(0)]
+                set s__YataMirror_Alloc__recycle[(0)]=s__YataMirror_Alloc__recycle[s__YataMirror_Alloc__recycle[(0)]]
             endif
 
     
@@ -19290,13 +19179,13 @@ endfunction
         endfunction
     
         function s__YataMirror_deallocate takes integer this returns nothing
-            set s__YataMirror_Alloc___recycle[this]=s__YataMirror_Alloc___recycle[(0)]
-            set s__YataMirror_Alloc___recycle[(0)]=this
+            set s__YataMirror_Alloc__recycle[this]=s__YataMirror_Alloc__recycle[(0)]
+            set s__YataMirror_Alloc__recycle[(0)]=this
         endfunction
     
     
     function s__YataMirror_finish takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         call PauseUnit(s__YataMirror_target[this], false)
         call SetUnitInvulnerable(s__YataMirror_target[this], false)
         call DestroyEffect(s__YataMirror_e[this])
@@ -19310,7 +19199,7 @@ endfunction
     endfunction
     
     function s__YataMirror_invul takes nothing returns nothing
- local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+ local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         call SetUnitInvulnerable(s__YataMirror_target[this], true)
         //call UnitRemoveBuffs(this.target, false, true)
 	call ReleaseTimer(GetExpiredTimer())
@@ -19351,12 +19240,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__Oil_Alloc___recycle[(0)] == 0 ) then
-                set s__Oil_Alloc___instanceCount=s__Oil_Alloc___instanceCount + 1
-                set this=s__Oil_Alloc___instanceCount
+            if ( s__Oil_Alloc__recycle[(0)] == 0 ) then
+                set s__Oil_Alloc__instanceCount=s__Oil_Alloc__instanceCount + 1
+                set this=s__Oil_Alloc__instanceCount
             else
-                set this=s__Oil_Alloc___recycle[(0)]
-                set s__Oil_Alloc___recycle[(0)]=s__Oil_Alloc___recycle[s__Oil_Alloc___recycle[(0)]]
+                set this=s__Oil_Alloc__recycle[(0)]
+                set s__Oil_Alloc__recycle[(0)]=s__Oil_Alloc__recycle[s__Oil_Alloc__recycle[(0)]]
             endif
 
     
@@ -19364,12 +19253,12 @@ endfunction
         endfunction
     
         function s__Oil_deallocate takes integer this returns nothing
-            set s__Oil_Alloc___recycle[this]=s__Oil_Alloc___recycle[(0)]
-            set s__Oil_Alloc___recycle[(0)]=this
+            set s__Oil_Alloc__recycle[this]=s__Oil_Alloc__recycle[(0)]
+            set s__Oil_Alloc__recycle[(0)]=this
         endfunction
     
     function s__Oil_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         set s__Oil_count[this]=s__Oil_count[this] + 1
         set bj_lastCreatedGroup=CreateGroup()
         call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__Oil_target_x[this], s__Oil_target_y[this], 400, null)
@@ -19394,7 +19283,7 @@ endfunction
 
 
     function s__Oil_throw takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
  local real dist
  local real angle1
  local real x1
@@ -19422,7 +19311,7 @@ endfunction
 			set x1=(((s__Oil_target_x[this] )*1.0) + Cos((( angle1 )*1.0)) * (( dist)*1.0)) // INLINED!!
 			set y1=(((s__Oil_target_y[this] )*1.0) + Sin((( angle1 )*1.0)) * (( dist)*1.0)) // INLINED!!
                 	set bj_lastCreatedEffect=AddSpecialEffect("Abilities\\Spells\\Orc\\LiquidFire\\Liquidfire.mdl", x1, y1)
-                	call s__EffectUtils___EffectTimer_create((bj_lastCreatedEffect ) , (( 4.0)*1.0) , false) // INLINED!!
+                	call s__EffectUtils__EffectTimer_create((bj_lastCreatedEffect ) , (( 4.0)*1.0) , false) // INLINED!!
            	 endloop
            set bj_lastCreatedGroup=CreateGroup()
            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__Oil_target_x[this], s__Oil_target_y[this], 400, null)
@@ -19472,12 +19361,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__PoisonPill_Alloc___recycle[(0)] == 0 ) then
-                set s__PoisonPill_Alloc___instanceCount=s__PoisonPill_Alloc___instanceCount + 1
-                set this=s__PoisonPill_Alloc___instanceCount
+            if ( s__PoisonPill_Alloc__recycle[(0)] == 0 ) then
+                set s__PoisonPill_Alloc__instanceCount=s__PoisonPill_Alloc__instanceCount + 1
+                set this=s__PoisonPill_Alloc__instanceCount
             else
-                set this=s__PoisonPill_Alloc___recycle[(0)]
-                set s__PoisonPill_Alloc___recycle[(0)]=s__PoisonPill_Alloc___recycle[s__PoisonPill_Alloc___recycle[(0)]]
+                set this=s__PoisonPill_Alloc__recycle[(0)]
+                set s__PoisonPill_Alloc__recycle[(0)]=s__PoisonPill_Alloc__recycle[s__PoisonPill_Alloc__recycle[(0)]]
             endif
 
     
@@ -19485,8 +19374,8 @@ endfunction
         endfunction
     
         function s__PoisonPill_deallocate takes integer this returns nothing
-            set s__PoisonPill_Alloc___recycle[this]=s__PoisonPill_Alloc___recycle[(0)]
-            set s__PoisonPill_Alloc___recycle[(0)]=this
+            set s__PoisonPill_Alloc__recycle[this]=s__PoisonPill_Alloc__recycle[(0)]
+            set s__PoisonPill_Alloc__recycle[(0)]=this
         endfunction
 
     function s__PoisonPill_destroy takes integer this returns nothing
@@ -19497,7 +19386,7 @@ endfunction
     endfunction
     
     function s__PoisonPill_poison takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         set s__PoisonPill_count2[this]=s__PoisonPill_count2[this] + 1
         if s__PoisonPill_target[this] != null and GetUnitState(s__PoisonPill_target[this], UNIT_STATE_LIFE) >= 250.0 then
             call UnitDamageTarget(s__PoisonPill_caster[this], s__PoisonPill_target[this], 220, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
@@ -19509,7 +19398,7 @@ endfunction
     endfunction 
     
     function s__PoisonPill_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         local integer this2
         local unit u
             set bj_lastCreatedGroup=CreateGroup()
@@ -19536,7 +19425,7 @@ endfunction
     
 
    function s__PoisonPill_throw takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
  local real dist
  local real angle1
  local real x1
@@ -19681,7 +19570,7 @@ endfunction
     endfunction
 
     function s__NewChain_pull takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         if s__NewChain_count[this] > 0 then
 			call BlzSetSpecialEffectScale(s___NewChain_chains[s__NewChain_chains[this]+s__NewChain_count[this]], 0)
             call DestroyEffect(s___NewChain_chains[s__NewChain_chains[this]+s__NewChain_count[this]])
@@ -19709,7 +19598,7 @@ endfunction
     endfunction
     
     function s__NewChain_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         local real x= GetUnitX(s__NewChain_dummy[this])
         local real y= GetUnitY(s__NewChain_dummy[this])
         local real new_x= (((x )*1.0) + Cos((( s__NewChain_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
@@ -19808,7 +19697,7 @@ endfunction
     endfunction
     
  function s__BlastingSphere_damage takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 		//call AddSpecialEffectEx("Boom.mdx", GetUnitX(this.target), GetUnitY(this.target))
 		set bj_lastCreatedGroup=CreateGroup()
 		call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__BlastingSphere_target[this]), GetUnitY(s__BlastingSphere_target[this]), 200, null)
@@ -19828,7 +19717,7 @@ endfunction
  endfunction 
 	
     function s__BlastingSphere_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         local real x= GetUnitX(s__BlastingSphere_dummy[this])
         local real y= GetUnitY(s__BlastingSphere_dummy[this])
         local real new_x= (((x )*1.0) + Cos((( s__BlastingSphere_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
@@ -19900,12 +19789,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__DragonBlast_Alloc___recycle[(0)] == 0 ) then
-                set s__DragonBlast_Alloc___instanceCount=s__DragonBlast_Alloc___instanceCount + 1
-                set this=s__DragonBlast_Alloc___instanceCount
+            if ( s__DragonBlast_Alloc__recycle[(0)] == 0 ) then
+                set s__DragonBlast_Alloc__instanceCount=s__DragonBlast_Alloc__instanceCount + 1
+                set this=s__DragonBlast_Alloc__instanceCount
             else
-                set this=s__DragonBlast_Alloc___recycle[(0)]
-                set s__DragonBlast_Alloc___recycle[(0)]=s__DragonBlast_Alloc___recycle[s__DragonBlast_Alloc___recycle[(0)]]
+                set this=s__DragonBlast_Alloc__recycle[(0)]
+                set s__DragonBlast_Alloc__recycle[(0)]=s__DragonBlast_Alloc__recycle[s__DragonBlast_Alloc__recycle[(0)]]
             endif
 
     
@@ -19913,12 +19802,12 @@ endfunction
         endfunction
     
         function s__DragonBlast_deallocate takes integer this returns nothing
-            set s__DragonBlast_Alloc___recycle[this]=s__DragonBlast_Alloc___recycle[(0)]
-            set s__DragonBlast_Alloc___recycle[(0)]=this
+            set s__DragonBlast_Alloc__recycle[this]=s__DragonBlast_Alloc__recycle[(0)]
+            set s__DragonBlast_Alloc__recycle[(0)]=this
         endfunction
     
     function s__DragonBlast_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
  local unit u
         local real x= GetUnitX(s__DragonBlast_dummy[this])
         local real y= GetUnitY(s__DragonBlast_dummy[this])
@@ -20027,12 +19916,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__ItemFuumaShuriken_Alloc___recycle[(0)] == 0 ) then
-                set s__ItemFuumaShuriken_Alloc___instanceCount=s__ItemFuumaShuriken_Alloc___instanceCount + 1
-                set this=s__ItemFuumaShuriken_Alloc___instanceCount
+            if ( s__ItemFuumaShuriken_Alloc__recycle[(0)] == 0 ) then
+                set s__ItemFuumaShuriken_Alloc__instanceCount=s__ItemFuumaShuriken_Alloc__instanceCount + 1
+                set this=s__ItemFuumaShuriken_Alloc__instanceCount
             else
-                set this=s__ItemFuumaShuriken_Alloc___recycle[(0)]
-                set s__ItemFuumaShuriken_Alloc___recycle[(0)]=s__ItemFuumaShuriken_Alloc___recycle[s__ItemFuumaShuriken_Alloc___recycle[(0)]]
+                set this=s__ItemFuumaShuriken_Alloc__recycle[(0)]
+                set s__ItemFuumaShuriken_Alloc__recycle[(0)]=s__ItemFuumaShuriken_Alloc__recycle[s__ItemFuumaShuriken_Alloc__recycle[(0)]]
             endif
 
     
@@ -20040,8 +19929,8 @@ endfunction
         endfunction
     
         function s__ItemFuumaShuriken_deallocate takes integer this returns nothing
-            set s__ItemFuumaShuriken_Alloc___recycle[this]=s__ItemFuumaShuriken_Alloc___recycle[(0)]
-            set s__ItemFuumaShuriken_Alloc___recycle[(0)]=this
+            set s__ItemFuumaShuriken_Alloc__recycle[this]=s__ItemFuumaShuriken_Alloc__recycle[(0)]
+            set s__ItemFuumaShuriken_Alloc__recycle[(0)]=this
         endfunction
 
     
@@ -20055,7 +19944,7 @@ endfunction
     endfunction 
     
     function s__ItemFuumaShuriken_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         local real x= GetUnitX(s__ItemFuumaShuriken_shuriken[this])
         local real y= GetUnitY(s__ItemFuumaShuriken_shuriken[this])
         local real new_x= (((x )*1.0) + Cos((( s__ItemFuumaShuriken_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
@@ -20379,12 +20268,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__TimedExplosiveTag_Alloc___recycle[(0)] == 0 ) then
-                set s__TimedExplosiveTag_Alloc___instanceCount=s__TimedExplosiveTag_Alloc___instanceCount + 1
-                set this=s__TimedExplosiveTag_Alloc___instanceCount
+            if ( s__TimedExplosiveTag_Alloc__recycle[(0)] == 0 ) then
+                set s__TimedExplosiveTag_Alloc__instanceCount=s__TimedExplosiveTag_Alloc__instanceCount + 1
+                set this=s__TimedExplosiveTag_Alloc__instanceCount
             else
-                set this=s__TimedExplosiveTag_Alloc___recycle[(0)]
-                set s__TimedExplosiveTag_Alloc___recycle[(0)]=s__TimedExplosiveTag_Alloc___recycle[s__TimedExplosiveTag_Alloc___recycle[(0)]]
+                set this=s__TimedExplosiveTag_Alloc__recycle[(0)]
+                set s__TimedExplosiveTag_Alloc__recycle[(0)]=s__TimedExplosiveTag_Alloc__recycle[s__TimedExplosiveTag_Alloc__recycle[(0)]]
             endif
 
     
@@ -20392,12 +20281,12 @@ endfunction
         endfunction
     
         function s__TimedExplosiveTag_deallocate takes integer this returns nothing
-            set s__TimedExplosiveTag_Alloc___recycle[this]=s__TimedExplosiveTag_Alloc___recycle[(0)]
-            set s__TimedExplosiveTag_Alloc___recycle[(0)]=this
+            set s__TimedExplosiveTag_Alloc__recycle[this]=s__TimedExplosiveTag_Alloc__recycle[(0)]
+            set s__TimedExplosiveTag_Alloc__recycle[(0)]=this
         endfunction
     
     function s__TimedExplosiveTag_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         if s__TimedExplosiveTag_count[this] > 0 then
             call CreateTextTagUnitBJ(( I2S(s__TimedExplosiveTag_count[this]) + "!" ), s__TimedExplosiveTag_note[this], 0, 9.00, 100, 20, 20.00, 0)
             call SetTextTagVelocityBJ(bj_lastCreatedTextTag, 40.00, 90.00)
@@ -20496,12 +20385,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KohakuNoJohei_Alloc___recycle[(0)] == 0 ) then
-                set s__KohakuNoJohei_Alloc___instanceCount=s__KohakuNoJohei_Alloc___instanceCount + 1
-                set this=s__KohakuNoJohei_Alloc___instanceCount
+            if ( s__KohakuNoJohei_Alloc__recycle[(0)] == 0 ) then
+                set s__KohakuNoJohei_Alloc__instanceCount=s__KohakuNoJohei_Alloc__instanceCount + 1
+                set this=s__KohakuNoJohei_Alloc__instanceCount
             else
-                set this=s__KohakuNoJohei_Alloc___recycle[(0)]
-                set s__KohakuNoJohei_Alloc___recycle[(0)]=s__KohakuNoJohei_Alloc___recycle[s__KohakuNoJohei_Alloc___recycle[(0)]]
+                set this=s__KohakuNoJohei_Alloc__recycle[(0)]
+                set s__KohakuNoJohei_Alloc__recycle[(0)]=s__KohakuNoJohei_Alloc__recycle[s__KohakuNoJohei_Alloc__recycle[(0)]]
             endif
 
     
@@ -20509,12 +20398,12 @@ endfunction
         endfunction
     
         function s__KohakuNoJohei_deallocate takes integer this returns nothing
-            set s__KohakuNoJohei_Alloc___recycle[this]=s__KohakuNoJohei_Alloc___recycle[(0)]
-            set s__KohakuNoJohei_Alloc___recycle[(0)]=this
+            set s__KohakuNoJohei_Alloc__recycle[this]=s__KohakuNoJohei_Alloc__recycle[(0)]
+            set s__KohakuNoJohei_Alloc__recycle[(0)]=this
         endfunction
 
  function s__KohakuNoJohei_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local real angle
   local real new_x
   local real new_y
@@ -20604,7 +20493,7 @@ endfunction
 
 
     function s__HiraishinKunai_setCooldown takes nothing returns nothing
-        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
         call BlzStartUnitAbilityCooldown(u, 'A198', 35.0)
         set s__s__HiraishinKunai_first_activation[GetPlayerId(GetOwningPlayer(u))]= true
         set u=null
@@ -20612,7 +20501,7 @@ endfunction
     endfunction 
 
     function s__HiraishinKunai_resetCooldown takes nothing returns nothing
-        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
         call BlzEndUnitAbilityCooldown(u, 'A198')
         set u=null
         call ReleaseTimer(GetExpiredTimer())
@@ -20658,12 +20547,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__Bashosen___Item_Alloc___recycle[(0)] == 0 ) then
-                set s__Bashosen___Item_Alloc___instanceCount=s__Bashosen___Item_Alloc___instanceCount + 1
-                set this=s__Bashosen___Item_Alloc___instanceCount
+            if ( s__Bashosen___Item_Alloc__recycle[(0)] == 0 ) then
+                set s__Bashosen___Item_Alloc__instanceCount=s__Bashosen___Item_Alloc__instanceCount + 1
+                set this=s__Bashosen___Item_Alloc__instanceCount
             else
-                set this=s__Bashosen___Item_Alloc___recycle[(0)]
-                set s__Bashosen___Item_Alloc___recycle[(0)]=s__Bashosen___Item_Alloc___recycle[s__Bashosen___Item_Alloc___recycle[(0)]]
+                set this=s__Bashosen___Item_Alloc__recycle[(0)]
+                set s__Bashosen___Item_Alloc__recycle[(0)]=s__Bashosen___Item_Alloc__recycle[s__Bashosen___Item_Alloc__recycle[(0)]]
             endif
 
     
@@ -20671,8 +20560,8 @@ endfunction
         endfunction
     
         function s__Bashosen___Item_deallocate takes integer this returns nothing
-            set s__Bashosen___Item_Alloc___recycle[this]=s__Bashosen___Item_Alloc___recycle[(0)]
-            set s__Bashosen___Item_Alloc___recycle[(0)]=this
+            set s__Bashosen___Item_Alloc__recycle[this]=s__Bashosen___Item_Alloc__recycle[(0)]
+            set s__Bashosen___Item_Alloc__recycle[(0)]=this
         endfunction
         
     
@@ -20691,7 +20580,7 @@ endfunction
         endfunction
         
         function s__Bashosen___Item_periodic takes nothing returns nothing
-            local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real unit_x
             local real unit_y
             local real unit_x_2
@@ -20790,12 +20679,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__Makibishi_Alloc___recycle[(0)] == 0 ) then
-                set s__Makibishi_Alloc___instanceCount=s__Makibishi_Alloc___instanceCount + 1
-                set this=s__Makibishi_Alloc___instanceCount
+            if ( s__Makibishi_Alloc__recycle[(0)] == 0 ) then
+                set s__Makibishi_Alloc__instanceCount=s__Makibishi_Alloc__instanceCount + 1
+                set this=s__Makibishi_Alloc__instanceCount
             else
-                set this=s__Makibishi_Alloc___recycle[(0)]
-                set s__Makibishi_Alloc___recycle[(0)]=s__Makibishi_Alloc___recycle[s__Makibishi_Alloc___recycle[(0)]]
+                set this=s__Makibishi_Alloc__recycle[(0)]
+                set s__Makibishi_Alloc__recycle[(0)]=s__Makibishi_Alloc__recycle[s__Makibishi_Alloc__recycle[(0)]]
             endif
 
     
@@ -20803,12 +20692,12 @@ endfunction
         endfunction
     
         function s__Makibishi_deallocate takes integer this returns nothing
-            set s__Makibishi_Alloc___recycle[this]=s__Makibishi_Alloc___recycle[(0)]
-            set s__Makibishi_Alloc___recycle[(0)]=this
+            set s__Makibishi_Alloc__recycle[this]=s__Makibishi_Alloc__recycle[(0)]
+            set s__Makibishi_Alloc__recycle[(0)]=this
         endfunction
     
     function s__Makibishi_periodic takes nothing returns nothing
- local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+ local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 	set bj_lastCreatedGroup=CreateGroup()
 	call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__Makibishi_x[this], s__Makibishi_y[this], 350, null)
 	loop
@@ -20854,7 +20743,7 @@ endfunction
             	call BlzSetSpecialEffectPitch(bj_lastCreatedEffect, - 1.57)
 		call BlzSetSpecialEffectHeight(bj_lastCreatedEffect, GetPointZ(x , y))
 		call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 2.0)
-		call s__EffectUtils___EffectTimer_create((bj_lastCreatedEffect ) , (( 6.0)*1.0) , false) // INLINED!!
+		call s__EffectUtils__EffectTimer_create((bj_lastCreatedEffect ) , (( 6.0)*1.0) , false) // INLINED!!
                 set j=j + 1
             endloop
         endloop
@@ -20891,12 +20780,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__NinjaNet_Alloc___recycle[(0)] == 0 ) then
-                set s__NinjaNet_Alloc___instanceCount=s__NinjaNet_Alloc___instanceCount + 1
-                set this=s__NinjaNet_Alloc___instanceCount
+            if ( s__NinjaNet_Alloc__recycle[(0)] == 0 ) then
+                set s__NinjaNet_Alloc__instanceCount=s__NinjaNet_Alloc__instanceCount + 1
+                set this=s__NinjaNet_Alloc__instanceCount
             else
-                set this=s__NinjaNet_Alloc___recycle[(0)]
-                set s__NinjaNet_Alloc___recycle[(0)]=s__NinjaNet_Alloc___recycle[s__NinjaNet_Alloc___recycle[(0)]]
+                set this=s__NinjaNet_Alloc__recycle[(0)]
+                set s__NinjaNet_Alloc__recycle[(0)]=s__NinjaNet_Alloc__recycle[s__NinjaNet_Alloc__recycle[(0)]]
             endif
 
     
@@ -20904,12 +20793,12 @@ endfunction
         endfunction
     
         function s__NinjaNet_deallocate takes integer this returns nothing
-            set s__NinjaNet_Alloc___recycle[this]=s__NinjaNet_Alloc___recycle[(0)]
-            set s__NinjaNet_Alloc___recycle[(0)]=this
+            set s__NinjaNet_Alloc__recycle[this]=s__NinjaNet_Alloc__recycle[(0)]
+            set s__NinjaNet_Alloc__recycle[(0)]=this
         endfunction
     
     function s__NinjaNet_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         local real angle= Atan3(GetUnitX(s__NinjaNet_projectile[this]) , GetUnitY(s__NinjaNet_projectile[this]) , GetUnitX(s__NinjaNet_target[this]) , GetUnitY(s__NinjaNet_target[this]))
         local real x= (((GetUnitX(s__NinjaNet_projectile[this]) )*1.0) + Cos((( angle )*1.0)) * (( 40)*1.0)) // INLINED!!
         local real y= (((GetUnitY(s__NinjaNet_projectile[this]) )*1.0) + Sin((( angle )*1.0)) * (( 40)*1.0)) // INLINED!!
@@ -20961,12 +20850,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__SanbiProtection_Alloc___recycle[(0)] == 0 ) then
-                set s__SanbiProtection_Alloc___instanceCount=s__SanbiProtection_Alloc___instanceCount + 1
-                set this=s__SanbiProtection_Alloc___instanceCount
+            if ( s__SanbiProtection_Alloc__recycle[(0)] == 0 ) then
+                set s__SanbiProtection_Alloc__instanceCount=s__SanbiProtection_Alloc__instanceCount + 1
+                set this=s__SanbiProtection_Alloc__instanceCount
             else
-                set this=s__SanbiProtection_Alloc___recycle[(0)]
-                set s__SanbiProtection_Alloc___recycle[(0)]=s__SanbiProtection_Alloc___recycle[s__SanbiProtection_Alloc___recycle[(0)]]
+                set this=s__SanbiProtection_Alloc__recycle[(0)]
+                set s__SanbiProtection_Alloc__recycle[(0)]=s__SanbiProtection_Alloc__recycle[s__SanbiProtection_Alloc__recycle[(0)]]
             endif
 
     
@@ -20974,12 +20863,12 @@ endfunction
         endfunction
     
         function s__SanbiProtection_deallocate takes integer this returns nothing
-            set s__SanbiProtection_Alloc___recycle[this]=s__SanbiProtection_Alloc___recycle[(0)]
-            set s__SanbiProtection_Alloc___recycle[(0)]=this
+            set s__SanbiProtection_Alloc__recycle[this]=s__SanbiProtection_Alloc__recycle[(0)]
+            set s__SanbiProtection_Alloc__recycle[(0)]=this
         endfunction
 
     function s__SanbiProtection_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         call UnitRemoveBuffs(s__SanbiProtection_caster[this], false, true)
         if GetUnitAbilityLevel(s__SanbiProtection_caster[this], 'B038') == 0 then
             set s__SanbiProtection_caster[this]=null
@@ -21030,14 +20919,14 @@ endfunction
 
     
     function s__AkatukiSet_removeStats takes nothing returns nothing
-        local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer id= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         local unit u= (s__UnitDex_Unit[(id)]) // INLINED!!
-        call SetHeroAgi(u, GetHeroAgi(u, false) - (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
-        call SetHeroInt(u, GetHeroInt(u, false) - (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
-        call SetHeroStr(u, GetHeroStr(u, false) - (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
+        call SetHeroAgi(u, GetHeroAgi(u, false) - (LoadInteger(Table__ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
+        call SetHeroInt(u, GetHeroInt(u, false) - (LoadInteger(Table__ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
+        call SetHeroStr(u, GetHeroStr(u, false) - (LoadInteger(Table__ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
         call GroupRemoveUnit(s__AkatukiSet_cooldown, u)
-        call RemoveSavedInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id)) // INLINED!!
-        call RemoveSavedInteger(Table___ht, (s__AkatukiSet_stats), (id)) // INLINED!!
+        call RemoveSavedInteger(Table__ht, (s__AkatukiSet_secondsElapsed), (id)) // INLINED!!
+        call RemoveSavedInteger(Table__ht, (s__AkatukiSet_stats), (id)) // INLINED!!
         set u=null
         call ReleaseTimer(GetExpiredTimer())
     endfunction
@@ -21054,27 +20943,27 @@ endfunction
     endfunction 
 
     function s__AkatukiSet_periodic takes nothing returns nothing
-  local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer id= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local unit u= (s__UnitDex_Unit[(id)]) // INLINED!!
         local integer elapsed
 		//call UnitSetUsesAltIcon(u, true)
-		if (HaveSavedInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id))) then // INLINED!!
-			set elapsed=(LoadInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id))) // INLINED!!
+		if (HaveSavedInteger(Table__ht, (s__AkatukiSet_secondsElapsed), (id))) then // INLINED!!
+			set elapsed=(LoadInteger(Table__ht, (s__AkatukiSet_secondsElapsed), (id))) // INLINED!!
 			if elapsed < 15000 then
-				call SaveInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id), ( 100)) // INLINED!!
+				call SaveInteger(Table__ht, (s__AkatukiSet_secondsElapsed), (id), ( 100)) // INLINED!!
 				call ReleaseTimer(GetExpiredTimer())
 			else
 				call IssueImmediateOrder(u, "stop")
 				call ReleaseTimer(GetExpiredTimer())
 			endif
 		else
-			call SaveInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id), ( 1)) // INLINED!!
+			call SaveInteger(Table__ht, (s__AkatukiSet_secondsElapsed), (id), ( 1)) // INLINED!!
 		endif
 		set u=null
     endfunction
     
     function s__AkatukiSet_removeInvisEffect takes nothing returns nothing
-        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
         local integer id= GetUnitPointValueByType(GetUnitTypeId(u))
         call SetUnitFlyHeight(u, 0, 0)
         call UnitSetUsesAltIcon(u, false)
@@ -21092,11 +20981,11 @@ endfunction
             call GroupRemoveUnit(s__AkatukiSet_invisibilityGroup, GetTriggerUnit())
             call GroupAddUnit(s__AkatukiSet_cooldown, GetTriggerUnit())
             set id=(GetUnitUserData((GetTriggerUnit()))) // INLINED!!
-            set elapsed=(LoadInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id))) // INLINED!!
-            call SaveInteger(Table___ht, (s__AkatukiSet_stats), (id), ( R2I(elapsed * 0.15))) // INLINED!!
-            call SetHeroAgi(GetTriggerUnit(), GetHeroAgi(GetTriggerUnit(), false) + (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
-            call SetHeroInt(GetTriggerUnit(), GetHeroInt(GetTriggerUnit(), false) + (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
-            call SetHeroStr(GetTriggerUnit(), GetHeroStr(GetTriggerUnit(), false) + (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
+            set elapsed=(LoadInteger(Table__ht, (s__AkatukiSet_secondsElapsed), (id))) // INLINED!!
+            call SaveInteger(Table__ht, (s__AkatukiSet_stats), (id), ( R2I(elapsed * 0.15))) // INLINED!!
+            call SetHeroAgi(GetTriggerUnit(), GetHeroAgi(GetTriggerUnit(), false) + (LoadInteger(Table__ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
+            call SetHeroInt(GetTriggerUnit(), GetHeroInt(GetTriggerUnit(), false) + (LoadInteger(Table__ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
+            call SetHeroStr(GetTriggerUnit(), GetHeroStr(GetTriggerUnit(), false) + (LoadInteger(Table__ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
             if elapsed < 120 then
                 set u=CreateAbilityDummy(GetTriggerUnit() , 'A0S1')
                 call IssueTargetOrder(u, "bloodlust", GetTriggerUnit())
@@ -21113,9 +21002,9 @@ endfunction
     endfunction 
     
     function s__AkatukiSet_passive takes nothing returns nothing
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I03T') then
-			set s__s__AkatukiSet_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__AkatukiSet_t[(LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 			return
@@ -21159,12 +21048,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__GreaterMedicalSphere_Alloc___recycle[(0)] == 0 ) then
-                set s__GreaterMedicalSphere_Alloc___instanceCount=s__GreaterMedicalSphere_Alloc___instanceCount + 1
-                set this=s__GreaterMedicalSphere_Alloc___instanceCount
+            if ( s__GreaterMedicalSphere_Alloc__recycle[(0)] == 0 ) then
+                set s__GreaterMedicalSphere_Alloc__instanceCount=s__GreaterMedicalSphere_Alloc__instanceCount + 1
+                set this=s__GreaterMedicalSphere_Alloc__instanceCount
             else
-                set this=s__GreaterMedicalSphere_Alloc___recycle[(0)]
-                set s__GreaterMedicalSphere_Alloc___recycle[(0)]=s__GreaterMedicalSphere_Alloc___recycle[s__GreaterMedicalSphere_Alloc___recycle[(0)]]
+                set this=s__GreaterMedicalSphere_Alloc__recycle[(0)]
+                set s__GreaterMedicalSphere_Alloc__recycle[(0)]=s__GreaterMedicalSphere_Alloc__recycle[s__GreaterMedicalSphere_Alloc__recycle[(0)]]
             endif
 
     
@@ -21172,12 +21061,12 @@ endfunction
         endfunction
     
         function s__GreaterMedicalSphere_deallocate takes integer this returns nothing
-            set s__GreaterMedicalSphere_Alloc___recycle[this]=s__GreaterMedicalSphere_Alloc___recycle[(0)]
-            set s__GreaterMedicalSphere_Alloc___recycle[(0)]=this
+            set s__GreaterMedicalSphere_Alloc__recycle[this]=s__GreaterMedicalSphere_Alloc__recycle[(0)]
+            set s__GreaterMedicalSphere_Alloc__recycle[(0)]=this
         endfunction
 
     function s__GreaterMedicalSphere_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         call GroupClear(udg_GreaterMedicalSphereGroup)
         set bj_lastCreatedGroup=CreateGroup()
         call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__GreaterMedicalSphere_target_x[this], s__GreaterMedicalSphere_target_y[this], 600.0, null)
@@ -21231,12 +21120,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__ReverseOfAllCreation_Alloc___recycle[(0)] == 0 ) then
-                set s__ReverseOfAllCreation_Alloc___instanceCount=s__ReverseOfAllCreation_Alloc___instanceCount + 1
-                set this=s__ReverseOfAllCreation_Alloc___instanceCount
+            if ( s__ReverseOfAllCreation_Alloc__recycle[(0)] == 0 ) then
+                set s__ReverseOfAllCreation_Alloc__instanceCount=s__ReverseOfAllCreation_Alloc__instanceCount + 1
+                set this=s__ReverseOfAllCreation_Alloc__instanceCount
             else
-                set this=s__ReverseOfAllCreation_Alloc___recycle[(0)]
-                set s__ReverseOfAllCreation_Alloc___recycle[(0)]=s__ReverseOfAllCreation_Alloc___recycle[s__ReverseOfAllCreation_Alloc___recycle[(0)]]
+                set this=s__ReverseOfAllCreation_Alloc__recycle[(0)]
+                set s__ReverseOfAllCreation_Alloc__recycle[(0)]=s__ReverseOfAllCreation_Alloc__recycle[s__ReverseOfAllCreation_Alloc__recycle[(0)]]
             endif
 
     
@@ -21244,8 +21133,8 @@ endfunction
         endfunction
     
         function s__ReverseOfAllCreation_deallocate takes integer this returns nothing
-            set s__ReverseOfAllCreation_Alloc___recycle[this]=s__ReverseOfAllCreation_Alloc___recycle[(0)]
-            set s__ReverseOfAllCreation_Alloc___recycle[(0)]=this
+            set s__ReverseOfAllCreation_Alloc__recycle[this]=s__ReverseOfAllCreation_Alloc__recycle[(0)]
+            set s__ReverseOfAllCreation_Alloc__recycle[(0)]=this
         endfunction
 
  function s__ReverseOfAllCreation_actions takes nothing returns nothing
@@ -21323,12 +21212,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__SubjugationOfEarth_Alloc___recycle[(0)] == 0 ) then
-                set s__SubjugationOfEarth_Alloc___instanceCount=s__SubjugationOfEarth_Alloc___instanceCount + 1
-                set this=s__SubjugationOfEarth_Alloc___instanceCount
+            if ( s__SubjugationOfEarth_Alloc__recycle[(0)] == 0 ) then
+                set s__SubjugationOfEarth_Alloc__instanceCount=s__SubjugationOfEarth_Alloc__instanceCount + 1
+                set this=s__SubjugationOfEarth_Alloc__instanceCount
             else
-                set this=s__SubjugationOfEarth_Alloc___recycle[(0)]
-                set s__SubjugationOfEarth_Alloc___recycle[(0)]=s__SubjugationOfEarth_Alloc___recycle[s__SubjugationOfEarth_Alloc___recycle[(0)]]
+                set this=s__SubjugationOfEarth_Alloc__recycle[(0)]
+                set s__SubjugationOfEarth_Alloc__recycle[(0)]=s__SubjugationOfEarth_Alloc__recycle[s__SubjugationOfEarth_Alloc__recycle[(0)]]
             endif
 
     
@@ -21336,12 +21225,12 @@ endfunction
         endfunction
     
         function s__SubjugationOfEarth_deallocate takes integer this returns nothing
-            set s__SubjugationOfEarth_Alloc___recycle[this]=s__SubjugationOfEarth_Alloc___recycle[(0)]
-            set s__SubjugationOfEarth_Alloc___recycle[(0)]=this
+            set s__SubjugationOfEarth_Alloc__recycle[this]=s__SubjugationOfEarth_Alloc__recycle[(0)]
+            set s__SubjugationOfEarth_Alloc__recycle[(0)]=this
         endfunction
 
  function s__SubjugationOfEarth_finish takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local real percent= GetUnitLifePercent(s__SubjugationOfEarth_target[this])
 		call BlzSetUnitMaxHP(s__SubjugationOfEarth_target[this], BlzGetUnitMaxHP(s__SubjugationOfEarth_target[this]) + s__SubjugationOfEarth_diff[this])
 		set udg_EarthFinish[GetPlayerId(GetOwningPlayer(s__SubjugationOfEarth_caster[this]))]=true
@@ -21387,12 +21276,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__SubjugationOfHeaven_Alloc___recycle[(0)] == 0 ) then
-                set s__SubjugationOfHeaven_Alloc___instanceCount=s__SubjugationOfHeaven_Alloc___instanceCount + 1
-                set this=s__SubjugationOfHeaven_Alloc___instanceCount
+            if ( s__SubjugationOfHeaven_Alloc__recycle[(0)] == 0 ) then
+                set s__SubjugationOfHeaven_Alloc__instanceCount=s__SubjugationOfHeaven_Alloc__instanceCount + 1
+                set this=s__SubjugationOfHeaven_Alloc__instanceCount
             else
-                set this=s__SubjugationOfHeaven_Alloc___recycle[(0)]
-                set s__SubjugationOfHeaven_Alloc___recycle[(0)]=s__SubjugationOfHeaven_Alloc___recycle[s__SubjugationOfHeaven_Alloc___recycle[(0)]]
+                set this=s__SubjugationOfHeaven_Alloc__recycle[(0)]
+                set s__SubjugationOfHeaven_Alloc__recycle[(0)]=s__SubjugationOfHeaven_Alloc__recycle[s__SubjugationOfHeaven_Alloc__recycle[(0)]]
             endif
 
     
@@ -21400,12 +21289,12 @@ endfunction
         endfunction
     
         function s__SubjugationOfHeaven_deallocate takes integer this returns nothing
-            set s__SubjugationOfHeaven_Alloc___recycle[this]=s__SubjugationOfHeaven_Alloc___recycle[(0)]
-            set s__SubjugationOfHeaven_Alloc___recycle[(0)]=this
+            set s__SubjugationOfHeaven_Alloc__recycle[this]=s__SubjugationOfHeaven_Alloc__recycle[(0)]
+            set s__SubjugationOfHeaven_Alloc__recycle[(0)]=this
         endfunction
 
  function s__SubjugationOfHeaven_finish takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local real percent
 		set udg_FallenSky[GetPlayerId(GetOwningPlayer(s__SubjugationOfHeaven_caster[this]))]=true
 		set udg_FallenSky2[GetPlayerId(GetOwningPlayer(s__SubjugationOfHeaven_caster[this]))]=false
@@ -21506,7 +21395,7 @@ endfunction
  endfunction 
 
  function s__ElementalANBUMask_wind_off takes nothing returns nothing
-  local player trigger_player= Player((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))) // INLINED!!
+  local player trigger_player= Player((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer()))))) // INLINED!!
   local integer i
   local integer j
 		set j=0
@@ -21551,7 +21440,7 @@ endfunction
  endfunction 
 
  function s__ElementalANBUMask_light_off takes nothing returns nothing
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
 		call SetUnitInvulnerable(u, false)
 		call ReleaseTimer(GetExpiredTimer())
  endfunction 
@@ -21611,12 +21500,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__HealingShoes_Alloc___recycle[(0)] == 0 ) then
-                set s__HealingShoes_Alloc___instanceCount=s__HealingShoes_Alloc___instanceCount + 1
-                set this=s__HealingShoes_Alloc___instanceCount
+            if ( s__HealingShoes_Alloc__recycle[(0)] == 0 ) then
+                set s__HealingShoes_Alloc__instanceCount=s__HealingShoes_Alloc__instanceCount + 1
+                set this=s__HealingShoes_Alloc__instanceCount
             else
-                set this=s__HealingShoes_Alloc___recycle[(0)]
-                set s__HealingShoes_Alloc___recycle[(0)]=s__HealingShoes_Alloc___recycle[s__HealingShoes_Alloc___recycle[(0)]]
+                set this=s__HealingShoes_Alloc__recycle[(0)]
+                set s__HealingShoes_Alloc__recycle[(0)]=s__HealingShoes_Alloc__recycle[s__HealingShoes_Alloc__recycle[(0)]]
             endif
 
     
@@ -21624,12 +21513,12 @@ endfunction
         endfunction
     
         function s__HealingShoes_deallocate takes integer this returns nothing
-            set s__HealingShoes_Alloc___recycle[this]=s__HealingShoes_Alloc___recycle[(0)]
-            set s__HealingShoes_Alloc___recycle[(0)]=this
+            set s__HealingShoes_Alloc__recycle[this]=s__HealingShoes_Alloc__recycle[(0)]
+            set s__HealingShoes_Alloc__recycle[(0)]=this
         endfunction
 
  function s__HealingShoes_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 		if GetUnitAbilityLevel(s__HealingShoes_caster[this], 'B05V') > 0 and s__HealingShoes_count[this] < 15 then
 			set s__HealingShoes_count[this]=s__HealingShoes_count[this] + 1
 			call SetUnitState(s__HealingShoes_caster[this], UNIT_STATE_LIFE, GetUnitState(s__HealingShoes_caster[this], UNIT_STATE_LIFE) + GetUnitState(s__HealingShoes_caster[this], UNIT_STATE_MAX_LIFE) * s__HealingShoes_percent[this] / 15)
@@ -21786,12 +21675,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__ItemShikiFuujin_Alloc___recycle[(0)] == 0 ) then
-                set s__ItemShikiFuujin_Alloc___instanceCount=s__ItemShikiFuujin_Alloc___instanceCount + 1
-                set this=s__ItemShikiFuujin_Alloc___instanceCount
+            if ( s__ItemShikiFuujin_Alloc__recycle[(0)] == 0 ) then
+                set s__ItemShikiFuujin_Alloc__instanceCount=s__ItemShikiFuujin_Alloc__instanceCount + 1
+                set this=s__ItemShikiFuujin_Alloc__instanceCount
             else
-                set this=s__ItemShikiFuujin_Alloc___recycle[(0)]
-                set s__ItemShikiFuujin_Alloc___recycle[(0)]=s__ItemShikiFuujin_Alloc___recycle[s__ItemShikiFuujin_Alloc___recycle[(0)]]
+                set this=s__ItemShikiFuujin_Alloc__recycle[(0)]
+                set s__ItemShikiFuujin_Alloc__recycle[(0)]=s__ItemShikiFuujin_Alloc__recycle[s__ItemShikiFuujin_Alloc__recycle[(0)]]
             endif
 
     
@@ -21799,8 +21688,8 @@ endfunction
         endfunction
     
         function s__ItemShikiFuujin_deallocate takes integer this returns nothing
-            set s__ItemShikiFuujin_Alloc___recycle[this]=s__ItemShikiFuujin_Alloc___recycle[(0)]
-            set s__ItemShikiFuujin_Alloc___recycle[(0)]=this
+            set s__ItemShikiFuujin_Alloc__recycle[this]=s__ItemShikiFuujin_Alloc__recycle[(0)]
+            set s__ItemShikiFuujin_Alloc__recycle[(0)]=this
         endfunction
 
     function s__ItemShikiFuujin_actions takes nothing returns nothing
@@ -21971,12 +21860,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__AdamantineStaffActive___Spell_Alloc___recycle[(0)] == 0 ) then
-                set s__AdamantineStaffActive___Spell_Alloc___instanceCount=s__AdamantineStaffActive___Spell_Alloc___instanceCount + 1
-                set this=s__AdamantineStaffActive___Spell_Alloc___instanceCount
+            if ( s__AdamantineStaffActive___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__AdamantineStaffActive___Spell_Alloc__instanceCount=s__AdamantineStaffActive___Spell_Alloc__instanceCount + 1
+                set this=s__AdamantineStaffActive___Spell_Alloc__instanceCount
             else
-                set this=s__AdamantineStaffActive___Spell_Alloc___recycle[(0)]
-                set s__AdamantineStaffActive___Spell_Alloc___recycle[(0)]=s__AdamantineStaffActive___Spell_Alloc___recycle[s__AdamantineStaffActive___Spell_Alloc___recycle[(0)]]
+                set this=s__AdamantineStaffActive___Spell_Alloc__recycle[(0)]
+                set s__AdamantineStaffActive___Spell_Alloc__recycle[(0)]=s__AdamantineStaffActive___Spell_Alloc__recycle[s__AdamantineStaffActive___Spell_Alloc__recycle[(0)]]
             endif
 
     
@@ -21984,8 +21873,8 @@ endfunction
         endfunction
     
         function s__AdamantineStaffActive___Spell_deallocate takes integer this returns nothing
-            set s__AdamantineStaffActive___Spell_Alloc___recycle[this]=s__AdamantineStaffActive___Spell_Alloc___recycle[(0)]
-            set s__AdamantineStaffActive___Spell_Alloc___recycle[(0)]=this
+            set s__AdamantineStaffActive___Spell_Alloc__recycle[this]=s__AdamantineStaffActive___Spell_Alloc__recycle[(0)]
+            set s__AdamantineStaffActive___Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
@@ -21999,7 +21888,7 @@ endfunction
         endfunction
         
         function s__AdamantineStaffActive___Spell_delay2 takes nothing returns nothing
-            local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real new_x
             local real new_y
             local real angle
@@ -22030,7 +21919,7 @@ endfunction
         endfunction
         
         function s__AdamantineStaffActive___Spell_delay1 takes nothing returns nothing
-            local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real new_x
             local real new_y
             local real angle
@@ -22096,12 +21985,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__ExecutionBlade_Alloc___recycle[(0)] == 0 ) then
-                set s__ExecutionBlade_Alloc___instanceCount=s__ExecutionBlade_Alloc___instanceCount + 1
-                set this=s__ExecutionBlade_Alloc___instanceCount
+            if ( s__ExecutionBlade_Alloc__recycle[(0)] == 0 ) then
+                set s__ExecutionBlade_Alloc__instanceCount=s__ExecutionBlade_Alloc__instanceCount + 1
+                set this=s__ExecutionBlade_Alloc__instanceCount
             else
-                set this=s__ExecutionBlade_Alloc___recycle[(0)]
-                set s__ExecutionBlade_Alloc___recycle[(0)]=s__ExecutionBlade_Alloc___recycle[s__ExecutionBlade_Alloc___recycle[(0)]]
+                set this=s__ExecutionBlade_Alloc__recycle[(0)]
+                set s__ExecutionBlade_Alloc__recycle[(0)]=s__ExecutionBlade_Alloc__recycle[s__ExecutionBlade_Alloc__recycle[(0)]]
             endif
 
     
@@ -22109,8 +21998,8 @@ endfunction
         endfunction
     
         function s__ExecutionBlade_deallocate takes integer this returns nothing
-            set s__ExecutionBlade_Alloc___recycle[this]=s__ExecutionBlade_Alloc___recycle[(0)]
-            set s__ExecutionBlade_Alloc___recycle[(0)]=this
+            set s__ExecutionBlade_Alloc__recycle[this]=s__ExecutionBlade_Alloc__recycle[(0)]
+            set s__ExecutionBlade_Alloc__recycle[(0)]=this
         endfunction
 
  function s__ExecutionBlade_equip takes nothing returns nothing
@@ -22130,7 +22019,7 @@ endfunction
  endfunction
 
  function s__ExecutionBlade_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 		set s__ExecutionBlade_count[this]=s__ExecutionBlade_count[this] + 0.03
 		if RectContainsUnit(gg_rct_duel_area, s__ExecutionBlade_target[this]) and not s__ExecutionBlade_duel[this] then
 			set s__ExecutionBlade_duel[this]=true
@@ -22148,7 +22037,7 @@ endfunction
  endfunction
 
     function s__ExecutionBlade_finish takes nothing returns nothing
-	set udg_Execution[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]=null // INLINED!!
+	set udg_Execution[(LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer()))))]=null // INLINED!!
 	call ReleaseTimer(GetExpiredTimer())
     endfunction 
 
@@ -22198,12 +22087,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__ThunderKusanagi_Alloc___recycle[(0)] == 0 ) then
-                set s__ThunderKusanagi_Alloc___instanceCount=s__ThunderKusanagi_Alloc___instanceCount + 1
-                set this=s__ThunderKusanagi_Alloc___instanceCount
+            if ( s__ThunderKusanagi_Alloc__recycle[(0)] == 0 ) then
+                set s__ThunderKusanagi_Alloc__instanceCount=s__ThunderKusanagi_Alloc__instanceCount + 1
+                set this=s__ThunderKusanagi_Alloc__instanceCount
             else
-                set this=s__ThunderKusanagi_Alloc___recycle[(0)]
-                set s__ThunderKusanagi_Alloc___recycle[(0)]=s__ThunderKusanagi_Alloc___recycle[s__ThunderKusanagi_Alloc___recycle[(0)]]
+                set this=s__ThunderKusanagi_Alloc__recycle[(0)]
+                set s__ThunderKusanagi_Alloc__recycle[(0)]=s__ThunderKusanagi_Alloc__recycle[s__ThunderKusanagi_Alloc__recycle[(0)]]
             endif
 
     
@@ -22211,8 +22100,8 @@ endfunction
         endfunction
     
         function s__ThunderKusanagi_deallocate takes integer this returns nothing
-            set s__ThunderKusanagi_Alloc___recycle[this]=s__ThunderKusanagi_Alloc___recycle[(0)]
-            set s__ThunderKusanagi_Alloc___recycle[(0)]=this
+            set s__ThunderKusanagi_Alloc__recycle[this]=s__ThunderKusanagi_Alloc__recycle[(0)]
+            set s__ThunderKusanagi_Alloc__recycle[(0)]=this
         endfunction
 
 function s__ThunderKusanagi_prevent takes nothing returns nothing
@@ -22226,7 +22115,7 @@ function s__ThunderKusanagi_prevent takes nothing returns nothing
 endfunction
 
  function s__ThunderKusanagi_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 		set s__ThunderKusanagi_count[this]=s__ThunderKusanagi_count[this] + 1
 		if s__ThunderKusanagi_count[this] == 7 then
 			call s__ThunderKusanagi_deallocate(this)
@@ -22262,12 +22151,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__NewKusanagiStrike_Alloc___recycle[(0)] == 0 ) then
-                set s__NewKusanagiStrike_Alloc___instanceCount=s__NewKusanagiStrike_Alloc___instanceCount + 1
-                set this=s__NewKusanagiStrike_Alloc___instanceCount
+            if ( s__NewKusanagiStrike_Alloc__recycle[(0)] == 0 ) then
+                set s__NewKusanagiStrike_Alloc__instanceCount=s__NewKusanagiStrike_Alloc__instanceCount + 1
+                set this=s__NewKusanagiStrike_Alloc__instanceCount
             else
-                set this=s__NewKusanagiStrike_Alloc___recycle[(0)]
-                set s__NewKusanagiStrike_Alloc___recycle[(0)]=s__NewKusanagiStrike_Alloc___recycle[s__NewKusanagiStrike_Alloc___recycle[(0)]]
+                set this=s__NewKusanagiStrike_Alloc__recycle[(0)]
+                set s__NewKusanagiStrike_Alloc__recycle[(0)]=s__NewKusanagiStrike_Alloc__recycle[s__NewKusanagiStrike_Alloc__recycle[(0)]]
             endif
 
     
@@ -22275,12 +22164,12 @@ endfunction
         endfunction
     
         function s__NewKusanagiStrike_deallocate takes integer this returns nothing
-            set s__NewKusanagiStrike_Alloc___recycle[this]=s__NewKusanagiStrike_Alloc___recycle[(0)]
-            set s__NewKusanagiStrike_Alloc___recycle[(0)]=this
+            set s__NewKusanagiStrike_Alloc__recycle[this]=s__NewKusanagiStrike_Alloc__recycle[(0)]
+            set s__NewKusanagiStrike_Alloc__recycle[(0)]=this
         endfunction
 
  function s__NewKusanagiStrike_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local real x= GetUnitX(s__NewKusanagiStrike_kusanagi[this])
   local real y= GetUnitY(s__NewKusanagiStrike_kusanagi[this])
   local real new_x= (((x )*1.0) + Cos((( s__NewKusanagiStrike_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
@@ -22338,12 +22227,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__LightKusanagi_Alloc___recycle[(0)] == 0 ) then
-                set s__LightKusanagi_Alloc___instanceCount=s__LightKusanagi_Alloc___instanceCount + 1
-                set this=s__LightKusanagi_Alloc___instanceCount
+            if ( s__LightKusanagi_Alloc__recycle[(0)] == 0 ) then
+                set s__LightKusanagi_Alloc__instanceCount=s__LightKusanagi_Alloc__instanceCount + 1
+                set this=s__LightKusanagi_Alloc__instanceCount
             else
-                set this=s__LightKusanagi_Alloc___recycle[(0)]
-                set s__LightKusanagi_Alloc___recycle[(0)]=s__LightKusanagi_Alloc___recycle[s__LightKusanagi_Alloc___recycle[(0)]]
+                set this=s__LightKusanagi_Alloc__recycle[(0)]
+                set s__LightKusanagi_Alloc__recycle[(0)]=s__LightKusanagi_Alloc__recycle[s__LightKusanagi_Alloc__recycle[(0)]]
             endif
 
     
@@ -22351,8 +22240,8 @@ endfunction
         endfunction
     
         function s__LightKusanagi_deallocate takes integer this returns nothing
-            set s__LightKusanagi_Alloc___recycle[this]=s__LightKusanagi_Alloc___recycle[(0)]
-            set s__LightKusanagi_Alloc___recycle[(0)]=this
+            set s__LightKusanagi_Alloc__recycle[this]=s__LightKusanagi_Alloc__recycle[(0)]
+            set s__LightKusanagi_Alloc__recycle[(0)]=this
         endfunction
 
  function s__LightKusanagi_actions takes nothing returns nothing
@@ -22487,12 +22376,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__EarthPierce_Alloc___recycle[(0)] == 0 ) then
-                set s__EarthPierce_Alloc___instanceCount=s__EarthPierce_Alloc___instanceCount + 1
-                set this=s__EarthPierce_Alloc___instanceCount
+            if ( s__EarthPierce_Alloc__recycle[(0)] == 0 ) then
+                set s__EarthPierce_Alloc__instanceCount=s__EarthPierce_Alloc__instanceCount + 1
+                set this=s__EarthPierce_Alloc__instanceCount
             else
-                set this=s__EarthPierce_Alloc___recycle[(0)]
-                set s__EarthPierce_Alloc___recycle[(0)]=s__EarthPierce_Alloc___recycle[s__EarthPierce_Alloc___recycle[(0)]]
+                set this=s__EarthPierce_Alloc__recycle[(0)]
+                set s__EarthPierce_Alloc__recycle[(0)]=s__EarthPierce_Alloc__recycle[s__EarthPierce_Alloc__recycle[(0)]]
             endif
 
     
@@ -22500,8 +22389,8 @@ endfunction
         endfunction
     
         function s__EarthPierce_deallocate takes integer this returns nothing
-            set s__EarthPierce_Alloc___recycle[this]=s__EarthPierce_Alloc___recycle[(0)]
-            set s__EarthPierce_Alloc___recycle[(0)]=this
+            set s__EarthPierce_Alloc__recycle[this]=s__EarthPierce_Alloc__recycle[(0)]
+            set s__EarthPierce_Alloc__recycle[(0)]=this
         endfunction
 
     
@@ -22515,7 +22404,7 @@ endfunction
     endfunction 
     
     function s__EarthPierce_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         local real x= GetUnitX(s__EarthPierce_rock[this])
         local real y= GetUnitY(s__EarthPierce_rock[this])
         local real new_x= (((x )*1.0) + Cos((( s__EarthPierce_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
@@ -22633,12 +22522,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__WindKusa_Alloc___recycle[(0)] == 0 ) then
-                set s__WindKusa_Alloc___instanceCount=s__WindKusa_Alloc___instanceCount + 1
-                set this=s__WindKusa_Alloc___instanceCount
+            if ( s__WindKusa_Alloc__recycle[(0)] == 0 ) then
+                set s__WindKusa_Alloc__instanceCount=s__WindKusa_Alloc__instanceCount + 1
+                set this=s__WindKusa_Alloc__instanceCount
             else
-                set this=s__WindKusa_Alloc___recycle[(0)]
-                set s__WindKusa_Alloc___recycle[(0)]=s__WindKusa_Alloc___recycle[s__WindKusa_Alloc___recycle[(0)]]
+                set this=s__WindKusa_Alloc__recycle[(0)]
+                set s__WindKusa_Alloc__recycle[(0)]=s__WindKusa_Alloc__recycle[s__WindKusa_Alloc__recycle[(0)]]
             endif
 
     
@@ -22646,12 +22535,12 @@ endfunction
         endfunction
     
         function s__WindKusa_deallocate takes integer this returns nothing
-            set s__WindKusa_Alloc___recycle[this]=s__WindKusa_Alloc___recycle[(0)]
-            set s__WindKusa_Alloc___recycle[(0)]=this
+            set s__WindKusa_Alloc__recycle[this]=s__WindKusa_Alloc__recycle[(0)]
+            set s__WindKusa_Alloc__recycle[(0)]=this
         endfunction
 
  function s__WindKusa_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local real angle
   local real new_x
   local real new_y
@@ -22731,12 +22620,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__Shichiseiken_Alloc___recycle[(0)] == 0 ) then
-                set s__Shichiseiken_Alloc___instanceCount=s__Shichiseiken_Alloc___instanceCount + 1
-                set this=s__Shichiseiken_Alloc___instanceCount
+            if ( s__Shichiseiken_Alloc__recycle[(0)] == 0 ) then
+                set s__Shichiseiken_Alloc__instanceCount=s__Shichiseiken_Alloc__instanceCount + 1
+                set this=s__Shichiseiken_Alloc__instanceCount
             else
-                set this=s__Shichiseiken_Alloc___recycle[(0)]
-                set s__Shichiseiken_Alloc___recycle[(0)]=s__Shichiseiken_Alloc___recycle[s__Shichiseiken_Alloc___recycle[(0)]]
+                set this=s__Shichiseiken_Alloc__recycle[(0)]
+                set s__Shichiseiken_Alloc__recycle[(0)]=s__Shichiseiken_Alloc__recycle[s__Shichiseiken_Alloc__recycle[(0)]]
             endif
 
     
@@ -22744,8 +22633,8 @@ endfunction
         endfunction
     
         function s__Shichiseiken_deallocate takes integer this returns nothing
-            set s__Shichiseiken_Alloc___recycle[this]=s__Shichiseiken_Alloc___recycle[(0)]
-            set s__Shichiseiken_Alloc___recycle[(0)]=this
+            set s__Shichiseiken_Alloc__recycle[this]=s__Shichiseiken_Alloc__recycle[(0)]
+            set s__Shichiseiken_Alloc__recycle[(0)]=this
         endfunction
 
 
@@ -22789,7 +22678,7 @@ endfunction
     endfunction 
 
     function s__Shichiseiken_periodic takes nothing returns nothing
-        local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer id= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 	set s__s__Shichiseiken_timers[id]= s__s__Shichiseiken_timers[id] + 0.1
 	if GetWidgetLife(s__s__Shichiseiken_targets[id]) < 0.405 or GetWidgetLife(s__s__Shichiseiken_casters[id]) < 0.405 or s__s__Shichiseiken_timers[id] == 3 or IsUnitIllusion(s__s__Shichiseiken_targets[id]) then
 	    call DestroyEffect(s__s__Shichiseiken_effect[id])
@@ -22849,12 +22738,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__NewHidanScythe_Alloc___recycle[(0)] == 0 ) then
-                set s__NewHidanScythe_Alloc___instanceCount=s__NewHidanScythe_Alloc___instanceCount + 1
-                set this=s__NewHidanScythe_Alloc___instanceCount
+            if ( s__NewHidanScythe_Alloc__recycle[(0)] == 0 ) then
+                set s__NewHidanScythe_Alloc__instanceCount=s__NewHidanScythe_Alloc__instanceCount + 1
+                set this=s__NewHidanScythe_Alloc__instanceCount
             else
-                set this=s__NewHidanScythe_Alloc___recycle[(0)]
-                set s__NewHidanScythe_Alloc___recycle[(0)]=s__NewHidanScythe_Alloc___recycle[s__NewHidanScythe_Alloc___recycle[(0)]]
+                set this=s__NewHidanScythe_Alloc__recycle[(0)]
+                set s__NewHidanScythe_Alloc__recycle[(0)]=s__NewHidanScythe_Alloc__recycle[s__NewHidanScythe_Alloc__recycle[(0)]]
             endif
 
     
@@ -22862,12 +22751,12 @@ endfunction
         endfunction
     
         function s__NewHidanScythe_deallocate takes integer this returns nothing
-            set s__NewHidanScythe_Alloc___recycle[this]=s__NewHidanScythe_Alloc___recycle[(0)]
-            set s__NewHidanScythe_Alloc___recycle[(0)]=this
+            set s__NewHidanScythe_Alloc__recycle[this]=s__NewHidanScythe_Alloc__recycle[(0)]
+            set s__NewHidanScythe_Alloc__recycle[(0)]=this
         endfunction
 
  function s__NewHidanScythe_pull takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local real x= GetUnitX(s__NewHidanScythe_scythe[this])
   local real y= GetUnitY(s__NewHidanScythe_scythe[this])
   local real new_angle= Atan3(x , y , GetUnitX(s__NewHidanScythe_caster[this]) , GetUnitY(s__NewHidanScythe_caster[this]))
@@ -22891,7 +22780,7 @@ endfunction
  endfunction 
 
  function s__NewHidanScythe_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local real x= GetUnitX(s__NewHidanScythe_scythe[this])
   local real y= GetUnitY(s__NewHidanScythe_scythe[this])
   local real new_x= (((x )*1.0) + Cos((( s__NewHidanScythe_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
@@ -22952,12 +22841,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__ZetsuRing_Alloc___recycle[(0)] == 0 ) then
-                set s__ZetsuRing_Alloc___instanceCount=s__ZetsuRing_Alloc___instanceCount + 1
-                set this=s__ZetsuRing_Alloc___instanceCount
+            if ( s__ZetsuRing_Alloc__recycle[(0)] == 0 ) then
+                set s__ZetsuRing_Alloc__instanceCount=s__ZetsuRing_Alloc__instanceCount + 1
+                set this=s__ZetsuRing_Alloc__instanceCount
             else
-                set this=s__ZetsuRing_Alloc___recycle[(0)]
-                set s__ZetsuRing_Alloc___recycle[(0)]=s__ZetsuRing_Alloc___recycle[s__ZetsuRing_Alloc___recycle[(0)]]
+                set this=s__ZetsuRing_Alloc__recycle[(0)]
+                set s__ZetsuRing_Alloc__recycle[(0)]=s__ZetsuRing_Alloc__recycle[s__ZetsuRing_Alloc__recycle[(0)]]
             endif
 
     
@@ -22965,13 +22854,13 @@ endfunction
         endfunction
     
         function s__ZetsuRing_deallocate takes integer this returns nothing
-            set s__ZetsuRing_Alloc___recycle[this]=s__ZetsuRing_Alloc___recycle[(0)]
-            set s__ZetsuRing_Alloc___recycle[(0)]=this
+            set s__ZetsuRing_Alloc__recycle[this]=s__ZetsuRing_Alloc__recycle[(0)]
+            set s__ZetsuRing_Alloc__recycle[(0)]=this
         endfunction
     
 
     function s__ZetsuRing_finish takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
     	call s__ZetsuRing_deallocate(this)
         call ReleaseTimer(GetExpiredTimer())
     endfunction
@@ -23000,12 +22889,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__ItachiRingActive_Alloc___recycle[(0)] == 0 ) then
-                set s__ItachiRingActive_Alloc___instanceCount=s__ItachiRingActive_Alloc___instanceCount + 1
-                set this=s__ItachiRingActive_Alloc___instanceCount
+            if ( s__ItachiRingActive_Alloc__recycle[(0)] == 0 ) then
+                set s__ItachiRingActive_Alloc__instanceCount=s__ItachiRingActive_Alloc__instanceCount + 1
+                set this=s__ItachiRingActive_Alloc__instanceCount
             else
-                set this=s__ItachiRingActive_Alloc___recycle[(0)]
-                set s__ItachiRingActive_Alloc___recycle[(0)]=s__ItachiRingActive_Alloc___recycle[s__ItachiRingActive_Alloc___recycle[(0)]]
+                set this=s__ItachiRingActive_Alloc__recycle[(0)]
+                set s__ItachiRingActive_Alloc__recycle[(0)]=s__ItachiRingActive_Alloc__recycle[s__ItachiRingActive_Alloc__recycle[(0)]]
             endif
 
     
@@ -23013,8 +22902,8 @@ endfunction
         endfunction
     
         function s__ItachiRingActive_deallocate takes integer this returns nothing
-            set s__ItachiRingActive_Alloc___recycle[this]=s__ItachiRingActive_Alloc___recycle[(0)]
-            set s__ItachiRingActive_Alloc___recycle[(0)]=this
+            set s__ItachiRingActive_Alloc__recycle[this]=s__ItachiRingActive_Alloc__recycle[(0)]
+            set s__ItachiRingActive_Alloc__recycle[(0)]=this
         endfunction
 
     function s__ItachiRingActive_destroy takes integer this returns nothing
@@ -23026,12 +22915,12 @@ endfunction
     endfunction
 
     function s__ItachiRingActive_delay takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         call s__ItachiRingActive_destroy(this)
     endfunction
     
     function s__ItachiRingActive_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         call TimerStart(NewTimerEx(this), 10.0, true, function s__ItachiRingActive_delay)
 	if GetWidgetLife(s__ItachiRingActive_target[this]) < 0.405 then
 		call s__ItachiRingActive_destroy(this)
@@ -24737,12 +24626,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__MissionARankReward_Alloc___recycle[(0)] == 0 ) then
-                set s__MissionARankReward_Alloc___instanceCount=s__MissionARankReward_Alloc___instanceCount + 1
-                set this=s__MissionARankReward_Alloc___instanceCount
+            if ( s__MissionARankReward_Alloc__recycle[(0)] == 0 ) then
+                set s__MissionARankReward_Alloc__instanceCount=s__MissionARankReward_Alloc__instanceCount + 1
+                set this=s__MissionARankReward_Alloc__instanceCount
             else
-                set this=s__MissionARankReward_Alloc___recycle[(0)]
-                set s__MissionARankReward_Alloc___recycle[(0)]=s__MissionARankReward_Alloc___recycle[s__MissionARankReward_Alloc___recycle[(0)]]
+                set this=s__MissionARankReward_Alloc__recycle[(0)]
+                set s__MissionARankReward_Alloc__recycle[(0)]=s__MissionARankReward_Alloc__recycle[s__MissionARankReward_Alloc__recycle[(0)]]
             endif
 
     
@@ -24750,8 +24639,8 @@ endfunction
         endfunction
     
         function s__MissionARankReward_deallocate takes integer this returns nothing
-            set s__MissionARankReward_Alloc___recycle[this]=s__MissionARankReward_Alloc___recycle[(0)]
-            set s__MissionARankReward_Alloc___recycle[(0)]=this
+            set s__MissionARankReward_Alloc__recycle[this]=s__MissionARankReward_Alloc__recycle[(0)]
+            set s__MissionARankReward_Alloc__recycle[(0)]=this
         endfunction
 
  function s__MissionARankReward_pickReward takes nothing returns boolean
@@ -27546,22 +27435,22 @@ endfunction
 
 
     
-    function s__SendGoldAndCystal__Command_receiveCrystal takes nothing returns nothing
+    function s__SendGoldAndCystal___Command_receiveCrystal takes nothing returns nothing
         local integer id= 0
         local integer i
         loop
             exitwhen id > 11
-            if GetClickedDialog() == s__SendGoldAndCystal__cd[id] then
+            if GetClickedDialog() == s__SendGoldAndCystal___cd[id] then
                 set i=0
                 loop
                     exitwhen i > 11
-                    if GetClickedButton() == s__SendGoldAndCystal__cb[(id)*(12)+i] then
-                        if s__SendGoldAndCystal__c[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) then
-                            set s__SendGoldAndCystal__c[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER)
+                    if GetClickedButton() == s__SendGoldAndCystal___cb[(id)*(12)+i] then
+                        if s__SendGoldAndCystal___c[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) then
+                            set s__SendGoldAndCystal___c[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER)
                         endif
-                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) - s__SendGoldAndCystal__c[id])
-                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER) + s__SendGoldAndCystal__c[id])
-                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal__c[id]) + "|r|cff87ceeb crystal.|r")
+                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) - s__SendGoldAndCystal___c[id])
+                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER) + s__SendGoldAndCystal___c[id])
+                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal___c[id]) + "|r|cff87ceeb crystal.|r")
                     endif
                     set i=i + 1
                 endloop
@@ -27570,26 +27459,26 @@ endfunction
         endloop
     endfunction 
     
-    function s__SendGoldAndCystal__Command_receiveGold takes nothing returns nothing
+    function s__SendGoldAndCystal___Command_receiveGold takes nothing returns nothing
         local integer id= 0
         local integer i
         loop
             exitwhen id > 11
-            if GetClickedDialog() == s__SendGoldAndCystal__gd[id] then
+            if GetClickedDialog() == s__SendGoldAndCystal___gd[id] then
                 set i=0
                 loop
                     exitwhen i > 11
-                    if GetClickedButton() == s__SendGoldAndCystal__gb[(id)*(12)+i] then
-                        if s__SendGoldAndCystal__g[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) then
-                            set s__SendGoldAndCystal__g[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD)
+                    if GetClickedButton() == s__SendGoldAndCystal___gb[(id)*(12)+i] then
+                        if s__SendGoldAndCystal___g[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) then
+                            set s__SendGoldAndCystal___g[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD)
                         endif
-			if s__SendGoldAndCystal__given[id] + s__SendGoldAndCystal__g[id] > 5000 then
-				set s__SendGoldAndCystal__g[id]= 5000 - s__SendGoldAndCystal__given[id]
+			if s__SendGoldAndCystal___given[id] + s__SendGoldAndCystal___g[id] > 5000 then
+				set s__SendGoldAndCystal___g[id]= 5000 - s__SendGoldAndCystal___given[id]
 			endif
-                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) - s__SendGoldAndCystal__g[id])
-                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD) + s__SendGoldAndCystal__g[id])
-                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal__g[id]) + "|r|cff87ceeb gold.|r")
-			set s__SendGoldAndCystal__given[id]= s__SendGoldAndCystal__given[id] + s__SendGoldAndCystal__g[id]
+                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) - s__SendGoldAndCystal___g[id])
+                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD) + s__SendGoldAndCystal___g[id])
+                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal___g[id]) + "|r|cff87ceeb gold.|r")
+			set s__SendGoldAndCystal___given[id]= s__SendGoldAndCystal___given[id] + s__SendGoldAndCystal___g[id]
                     endif
                     set i=i + 1
                 endloop
@@ -27598,18 +27487,18 @@ endfunction
         endloop
     endfunction 
     
-    function s__SendGoldAndCystal__Command_sendCrystal takes nothing returns nothing
+    function s__SendGoldAndCystal___Command_sendCrystal takes nothing returns nothing
         local integer amount= S2I(SubStringBJ(GetEventPlayerChatString(), 4, 10))
         local integer id= GetPlayerId(GetTriggerPlayer())
         local integer i= 0
         local integer count= 0
-        set s__SendGoldAndCystal__c[id]= amount
-        call DialogClear(s__SendGoldAndCystal__cd[id])
-        call DialogSetMessage(s__SendGoldAndCystal__cd[id], "Choose a player to send crystal")
+        set s__SendGoldAndCystal___c[id]= amount
+        call DialogClear(s__SendGoldAndCystal___cd[id])
+        call DialogSetMessage(s__SendGoldAndCystal___cd[id], "Choose a player to send crystal")
         loop
             exitwhen i > 11
             if i != 3 and i != 7 and i != 11 and GetPlayerController(Player(i)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING and IsPlayerAlly(Player(i), GetTriggerPlayer()) and i != id then
-                set s__SendGoldAndCystal__cb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal__cd[id], GetPlayerName(Player(i)), 0)
+                set s__SendGoldAndCystal___cb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal___cd[id], GetPlayerName(Player(i)), 0)
                 set count=count + 1
             endif
             set i=i + 1
@@ -27617,11 +27506,11 @@ endfunction
         if count == 0 then
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You don't have any ally to send crystal to.|r")
         else
-            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal__cd[id], true)
+            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal___cd[id], true)
         endif
     endfunction 
     
-    function s__SendGoldAndCystal__Command_sendGold takes nothing returns nothing
+    function s__SendGoldAndCystal___Command_sendGold takes nothing returns nothing
         local integer amount= S2I(SubStringBJ(GetEventPlayerChatString(), 4, 10))
         local integer id= GetPlayerId(GetTriggerPlayer())
         local integer i= 0
@@ -27629,13 +27518,13 @@ endfunction
 	if SubStringBJ(GetEventPlayerChatString(), 1, 4) == "-gen" then
 		return
 	endif
-        set s__SendGoldAndCystal__g[id]= amount
-        call DialogClear(s__SendGoldAndCystal__gd[id])
-        call DialogSetMessage(s__SendGoldAndCystal__gd[id], "Choose a player to send gold")
+        set s__SendGoldAndCystal___g[id]= amount
+        call DialogClear(s__SendGoldAndCystal___gd[id])
+        call DialogSetMessage(s__SendGoldAndCystal___gd[id], "Choose a player to send gold")
         loop
             exitwhen i > 11
             if i != 3 and i != 7 and i != 11 and GetPlayerController(Player(i)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING and IsPlayerAlly(Player(i), GetTriggerPlayer()) and i != id then
-                set s__SendGoldAndCystal__gb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal__gd[id], GetPlayerName(Player(i)), 0)
+                set s__SendGoldAndCystal___gb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal___gd[id], GetPlayerName(Player(i)), 0)
                 set count=count + 1
             endif
             set i=i + 1
@@ -27643,11 +27532,11 @@ endfunction
         if count == 0 then
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You don't have any ally to send gold to.|r")
         else
-            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal__gd[id], true)
+            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal___gd[id], true)
         endif
     endfunction 
     
-    function s__SendGoldAndCystal__Command_onInit takes nothing returns nothing
+    function s__SendGoldAndCystal___Command_onInit takes nothing returns nothing
         local trigger t1= CreateTrigger()
         local trigger t2= CreateTrigger()
         local trigger t3= CreateTrigger()
@@ -27659,18 +27548,18 @@ endfunction
             if i != 3 and i != 7 and i != 11 then
                 call TriggerRegisterPlayerChatEvent(t1, Player(i), "-g", false)
                 call TriggerRegisterPlayerChatEvent(t2, Player(i), "-c", false)
-                set s__SendGoldAndCystal__gd[i]= DialogCreate()
-                set s__SendGoldAndCystal__cd[i]= DialogCreate()
-                call TriggerRegisterDialogEventBJ(t3, s__SendGoldAndCystal__gd[i])
-                call TriggerRegisterDialogEventBJ(t4, s__SendGoldAndCystal__cd[i])
+                set s__SendGoldAndCystal___gd[i]= DialogCreate()
+                set s__SendGoldAndCystal___cd[i]= DialogCreate()
+                call TriggerRegisterDialogEventBJ(t3, s__SendGoldAndCystal___gd[i])
+                call TriggerRegisterDialogEventBJ(t4, s__SendGoldAndCystal___cd[i])
             endif
-	    set s__SendGoldAndCystal__given[i]= 0
+	    set s__SendGoldAndCystal___given[i]= 0
             set i=i + 1
         endloop
-        call TriggerAddAction(t1, function s__SendGoldAndCystal__Command_sendGold)
-        call TriggerAddAction(t2, function s__SendGoldAndCystal__Command_sendCrystal)
-        call TriggerAddAction(t3, function s__SendGoldAndCystal__Command_receiveGold)
-        call TriggerAddAction(t4, function s__SendGoldAndCystal__Command_receiveCrystal)
+        call TriggerAddAction(t1, function s__SendGoldAndCystal___Command_sendGold)
+        call TriggerAddAction(t2, function s__SendGoldAndCystal___Command_sendCrystal)
+        call TriggerAddAction(t3, function s__SendGoldAndCystal___Command_receiveGold)
+        call TriggerAddAction(t4, function s__SendGoldAndCystal___Command_receiveCrystal)
     endfunction 
     
 
@@ -27809,12 +27698,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__Killme_Alloc___recycle[(0)] == 0 ) then
-                set s__Killme_Alloc___instanceCount=s__Killme_Alloc___instanceCount + 1
-                set this=s__Killme_Alloc___instanceCount
+            if ( s__Killme_Alloc__recycle[(0)] == 0 ) then
+                set s__Killme_Alloc__instanceCount=s__Killme_Alloc__instanceCount + 1
+                set this=s__Killme_Alloc__instanceCount
             else
-                set this=s__Killme_Alloc___recycle[(0)]
-                set s__Killme_Alloc___recycle[(0)]=s__Killme_Alloc___recycle[s__Killme_Alloc___recycle[(0)]]
+                set this=s__Killme_Alloc__recycle[(0)]
+                set s__Killme_Alloc__recycle[(0)]=s__Killme_Alloc__recycle[s__Killme_Alloc__recycle[(0)]]
             endif
 
     
@@ -27822,12 +27711,12 @@ endfunction
         endfunction
     
         function s__Killme_deallocate takes integer this returns nothing
-            set s__Killme_Alloc___recycle[this]=s__Killme_Alloc___recycle[(0)]
-            set s__Killme_Alloc___recycle[(0)]=this
+            set s__Killme_Alloc__recycle[this]=s__Killme_Alloc__recycle[(0)]
+            set s__Killme_Alloc__recycle[(0)]=this
         endfunction
     
     function s__Killme_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         if s__Killme_count[this] > 0 then
             call DisplayTextToPlayer(Player(s__Killme_id[this]), 0, 0, "|cffff0000" + I2S(s__Killme_count[this]) + " second remaining!")
         endif
@@ -28000,7 +27889,7 @@ endfunction
         		set i=i + 1
     		endloop
     		call TriggerAddAction(tg, function s__MoveSpeedBug_resetMs)
-		call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter((function s__MoveSpeedBug_leave))) // INLINED!!
+		call TriggerAddCondition(RegisterPlayerUnitEvent__leave_trigger, Filter((function s__MoveSpeedBug_leave))) // INLINED!!
  endfunction 
 
 //===========================================================================
@@ -28026,7 +27915,7 @@ endfunction
 			set i=i + 1
 		endloop
     		call TriggerAddAction(t, function s__WindowCommand_actions)
-		call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter((function s__WindowCommand_leave))) // INLINED!!
+		call TriggerAddCondition(RegisterPlayerUnitEvent__leave_trigger, Filter((function s__WindowCommand_leave))) // INLINED!!
  endfunction 
 
 
@@ -28066,7 +27955,7 @@ endfunction
     endfunction
     
     function s__RangeCommand_periodic takes nothing returns nothing
-        local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer id= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         local integer i= 0
         local real x= GetUnitX(s__s__RangeCommand_uu[id])
         local real y= GetUnitY(s__s__RangeCommand_uu[id])
@@ -28478,7 +28367,7 @@ endfunction
 	
     
     function s__LockCamera_periodic takes nothing returns nothing
-  local integer i= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer i= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         if s__s__LockCamera_targets[i] != null then
 			call PanCameraToTimedForPlayer(Player(i), GetUnitX(s__s__LockCamera_targets[i]), GetUnitY(s__s__LockCamera_targets[i]), 0)
 		endif
@@ -29310,7 +29199,7 @@ endfunction
     
 
     function s__MusicS_playSong takes nothing returns nothing
-        local integer i= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer i= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         if s__s__MusicS_intervals[i] <= 0 then
             if GetLocalPlayer() == Player(i) then
                 call ClearMapMusicBJ()
@@ -30056,12 +29945,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__HeroIcon_Alloc___recycle[(0)] == 0 ) then
-                set s__HeroIcon_Alloc___instanceCount=s__HeroIcon_Alloc___instanceCount + 1
-                set this=s__HeroIcon_Alloc___instanceCount
+            if ( s__HeroIcon_Alloc__recycle[(0)] == 0 ) then
+                set s__HeroIcon_Alloc__instanceCount=s__HeroIcon_Alloc__instanceCount + 1
+                set this=s__HeroIcon_Alloc__instanceCount
             else
-                set this=s__HeroIcon_Alloc___recycle[(0)]
-                set s__HeroIcon_Alloc___recycle[(0)]=s__HeroIcon_Alloc___recycle[s__HeroIcon_Alloc___recycle[(0)]]
+                set this=s__HeroIcon_Alloc__recycle[(0)]
+                set s__HeroIcon_Alloc__recycle[(0)]=s__HeroIcon_Alloc__recycle[s__HeroIcon_Alloc__recycle[(0)]]
             endif
 
     
@@ -30069,12 +29958,12 @@ endfunction
         endfunction
     
         function s__HeroIcon_deallocate takes integer this returns nothing
-            set s__HeroIcon_Alloc___recycle[this]=s__HeroIcon_Alloc___recycle[(0)]
-            set s__HeroIcon_Alloc___recycle[(0)]=this
+            set s__HeroIcon_Alloc__recycle[this]=s__HeroIcon_Alloc__recycle[(0)]
+            set s__HeroIcon_Alloc__recycle[(0)]=this
         endfunction
             
    function s__HeroIcon_periodic takes nothing returns nothing
-    local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+    local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 				set s__HeroIcon_count[this]=s__HeroIcon_count[this] + 1
 				call BlzFrameSetAlpha(s__HeroIcon_mainbutton[this], R2I(255 - 7.72 * s__HeroIcon_count[this]))
 				//set this.y = this.y - 0.002
@@ -30086,7 +29975,7 @@ endfunction
    endfunction 
 
    function s__HeroIcon_delay takes nothing returns nothing
-    local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+    local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 				set s__HeroIcon_count[this]=0
 				call TimerStart(NewTimerEx(this), 0.03, true, function s__HeroIcon_periodic)
 				call ReleaseTimer(GetExpiredTimer())
@@ -30135,12 +30024,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__HeroMessage_Alloc___recycle[(0)] == 0 ) then
-                set s__HeroMessage_Alloc___instanceCount=s__HeroMessage_Alloc___instanceCount + 1
-                set this=s__HeroMessage_Alloc___instanceCount
+            if ( s__HeroMessage_Alloc__recycle[(0)] == 0 ) then
+                set s__HeroMessage_Alloc__instanceCount=s__HeroMessage_Alloc__instanceCount + 1
+                set this=s__HeroMessage_Alloc__instanceCount
             else
-                set this=s__HeroMessage_Alloc___recycle[(0)]
-                set s__HeroMessage_Alloc___recycle[(0)]=s__HeroMessage_Alloc___recycle[s__HeroMessage_Alloc___recycle[(0)]]
+                set this=s__HeroMessage_Alloc__recycle[(0)]
+                set s__HeroMessage_Alloc__recycle[(0)]=s__HeroMessage_Alloc__recycle[s__HeroMessage_Alloc__recycle[(0)]]
             endif
 
     
@@ -30148,12 +30037,12 @@ endfunction
         endfunction
     
         function s__HeroMessage_deallocate takes integer this returns nothing
-            set s__HeroMessage_Alloc___recycle[this]=s__HeroMessage_Alloc___recycle[(0)]
-            set s__HeroMessage_Alloc___recycle[(0)]=this
+            set s__HeroMessage_Alloc__recycle[this]=s__HeroMessage_Alloc__recycle[(0)]
+            set s__HeroMessage_Alloc__recycle[(0)]=this
         endfunction
             
    function s__HeroMessage_periodic takes nothing returns nothing
-    local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+    local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 				set s__HeroMessage_count[this]=s__HeroMessage_count[this] + 1
 				//set this.y = this.y - 0.002 
 				call BlzFrameSetAlpha(s__HeroMessage_imgFrame[this], R2I(255 - 7.72 * s__HeroMessage_count[this]))
@@ -30165,7 +30054,7 @@ endfunction
    endfunction 
 
    function s__HeroMessage_delay takes nothing returns nothing
-    local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+    local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 				set s__HeroMessage_count[this]=0
 				call TimerStart(NewTimerEx(this), 0.03, true, function s__HeroMessage_periodic)
 				call ReleaseTimer(GetExpiredTimer())
@@ -30208,12 +30097,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__HeroUIMessage_Alloc___recycle[(0)] == 0 ) then
-                set s__HeroUIMessage_Alloc___instanceCount=s__HeroUIMessage_Alloc___instanceCount + 1
-                set this=s__HeroUIMessage_Alloc___instanceCount
+            if ( s__HeroUIMessage_Alloc__recycle[(0)] == 0 ) then
+                set s__HeroUIMessage_Alloc__instanceCount=s__HeroUIMessage_Alloc__instanceCount + 1
+                set this=s__HeroUIMessage_Alloc__instanceCount
             else
-                set this=s__HeroUIMessage_Alloc___recycle[(0)]
-                set s__HeroUIMessage_Alloc___recycle[(0)]=s__HeroUIMessage_Alloc___recycle[s__HeroUIMessage_Alloc___recycle[(0)]]
+                set this=s__HeroUIMessage_Alloc__recycle[(0)]
+                set s__HeroUIMessage_Alloc__recycle[(0)]=s__HeroUIMessage_Alloc__recycle[s__HeroUIMessage_Alloc__recycle[(0)]]
             endif
 
     
@@ -30221,8 +30110,8 @@ endfunction
         endfunction
     
         function s__HeroUIMessage_deallocate takes integer this returns nothing
-            set s__HeroUIMessage_Alloc___recycle[this]=s__HeroUIMessage_Alloc___recycle[(0)]
-            set s__HeroUIMessage_Alloc___recycle[(0)]=this
+            set s__HeroUIMessage_Alloc__recycle[this]=s__HeroUIMessage_Alloc__recycle[(0)]
+            set s__HeroUIMessage_Alloc__recycle[(0)]=this
         endfunction
 
             function s__HeroUIMessage_disable takes nothing returns nothing
@@ -30231,7 +30120,7 @@ endfunction
             endfunction 
 
             function s__HeroUIMessage_periodic takes nothing returns nothing
-                local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+                local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
                 if not s__HeroUIMessage_enabled then
                     set s__HeroUIMessage_enabled=true
                     call s__HeroIcon_start(s__HeroUIMessage_iconKiller[s__HeroUIMessage_instance],s__HeroUIMessage_killer[this] , s__s__AHSS_Configurations_PLAYER_ICONS[GetPlayerId(GetOwningPlayer(s__HeroUIMessage_killer[this]))])
@@ -33737,7 +33626,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             set s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this]]=s__AHSS__Hero_create(name , id)
             set s__s__AHSS_Configurations_HERO_NAMES[s__AHSS_Heroes_count[this]]= name
             set s__s__AHSS_Configurations_HERO_IDS[s__AHSS_Heroes_count[this]]= id
-            call SaveInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (id), ( s__AHSS_Heroes_count[this])) // INLINED!!
+            call SaveInteger(Table__ht, (s__AHSS_Configurations_HERO_BY_ID), (id), ( s__AHSS_Heroes_count[this])) // INLINED!!
             set s__AHSS_Heroes_count[this]=s__AHSS_Heroes_count[this] + 1
         endfunction
         
@@ -34108,11 +33997,11 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                         if GetUnitTypeId(bj_lastCreatedUnit) == 'H00J' then
                             call MultiboardSetItemIconBJ(udg_multiboard01, 1, id + 4, "Icons\\Heroes\\BTNPreview_Kiba.blp")
                         else
-                            call MultiboardSetItemIconBJ(udg_multiboard01, 1, id + 4, s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(bj_lastCreatedUnit))))]) // INLINED!!
+                            call MultiboardSetItemIconBJ(udg_multiboard01, 1, id + 4, s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table__ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(bj_lastCreatedUnit))))]) // INLINED!!
                         endif
                         set udg_units33[id + 1]=bj_lastCreatedUnit
                         set udg_UnitUsed[GetUnitPointValue(bj_lastCreatedUnit)]=true
-						set s__s__AHSS_Configurations_PLAYER_ICONS[id]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(bj_lastCreatedUnit))))] // INLINED!!
+						set s__s__AHSS_Configurations_PLAYER_ICONS[id]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table__ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(bj_lastCreatedUnit))))] // INLINED!!
                         set s__s__AHSS_Graphics_availableHeroes[index]= false
                     endif
                     set j=j + 1
@@ -34371,7 +34260,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             local integer i
             local integer j
             local integer id
-            local integer mode= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            local integer mode= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             call TimerDialogDisplay(s__AHSS_Graphics_draftTimerDialog[this], false)
             set s__AHSS_Graphics_draftPick[this]=false
             if mode == 2 then
@@ -34866,7 +34755,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
         endfunction
         //"Lock" the camera so the player can't avoid it :)
         function s__AHSS_Graphics_loopCamera takes nothing returns nothing
-            local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local integer c= s__AHSS_Configurations__allocate()
             local integer i= 0
             loop
@@ -35486,7 +35375,7 @@ endfunction
                         endloop
                         call RemoveUnit(udg_units33[id + 1])
                         set udg_units33[id + 1]=u
-			set s__s__AHSS_Configurations_PLAYER_ICONS[id]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(udg_units33[id + 1]))))] // INLINED!!
+			set s__s__AHSS_Configurations_PLAYER_ICONS[id]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table__ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(udg_units33[id + 1]))))] // INLINED!!
                         set udg_UsedRepick[id]=true
                         if IsPlayerAlly(GetTriggerPlayer(), Player(3)) then
                             call SetUnitPositionLoc(u, GetRectCenter(gg_rct_fonte_konoha))
@@ -35499,7 +35388,7 @@ endfunction
                         //call UnitAddItemByIdSwapped( 'I02F', u )
                         call ForceAddPlayerSimple(GetTriggerPlayer(), udg_forces01[1])
                         call SetPlayerName(GetTriggerPlayer(), udg_strings02[GetConvertedPlayerId(GetTriggerPlayer())] + udg_DonatorNames[GetConvertedPlayerId(GetTriggerPlayer())] + udg_Repick_Names[GetConvertedPlayerId(GetTriggerPlayer())] + "|r[" + GetUnitName(u) + "]")
-                        call MultiboardSetItemIconBJ(udg_multiboard01, 1, ( ( 1 + GetPlayerId(GetTriggerPlayer()) ) + 3 ), s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(u))))]) // INLINED!!
+                        call MultiboardSetItemIconBJ(udg_multiboard01, 1, ( ( 1 + GetPlayerId(GetTriggerPlayer()) ) + 3 ), s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table__ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(u))))]) // INLINED!!
                         //call MultiboardSetItemValueBJ(udg_multiboard01,1,((1+GetPlayerId(GetTriggerPlayer()))+3),GetPlayerName(GetTriggerPlayer()))
                         else
             			call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You can only repick from your base.|r")
@@ -35578,11 +35467,11 @@ endfunction
         endif
         call SetPlayerName(p, udg_strings02[GetConvertedPlayerId(p)] + udg_DonatorNames[GetConvertedPlayerId(p)] + udg_Repick_Names[GetConvertedPlayerId(p)] + "|r[" + GetUnitName(u) + "]")
         //if udg_Survival_Bool then
-            call MultiboardSetItemIconBJ(udg_Survival_Multiboard, 1, ( ( 1 + GetPlayerId(p) ) + 2 ), s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(u))))]) // INLINED!!
+            call MultiboardSetItemIconBJ(udg_Survival_Multiboard, 1, ( ( 1 + GetPlayerId(p) ) + 2 ), s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table__ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(u))))]) // INLINED!!
         //    call MultiboardSetItemValueBJ(udg_Survival_Multiboard,1,((1+GetPlayerId(p))+2),SubString(udg_Repick_Names[GetPlayerId(p) + 1],0,10))
         //else
         //endif
-        call MultiboardSetItemIconBJ(udg_multiboard01, 1, ( ( 1 + GetPlayerId(p) ) + 3 ), s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(u))))]) // INLINED!!
+        call MultiboardSetItemIconBJ(udg_multiboard01, 1, ( ( 1 + GetPlayerId(p) ) + 3 ), s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table__ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(u))))]) // INLINED!!
         //call MultiboardSetItemValueBJ(udg_multiboard01,1,((1+GetPlayerId(p))+3),udg_Repick_Names[GetPlayerId(p) + 1])
     endfunction 
     
@@ -35607,8 +35496,8 @@ endfunction
                 set udg_units33[id1 + 1]=udg_units33[id2 + 1]
                 set udg_units33[id2 + 1]=u
 		
-		set s__s__AHSS_Configurations_PLAYER_ICONS[id1]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(udg_units33[id1 + 1]))))] // INLINED!!
-		set s__s__AHSS_Configurations_PLAYER_ICONS[id2]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(udg_units33[id2 + 1]))))] // INLINED!!
+		set s__s__AHSS_Configurations_PLAYER_ICONS[id1]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table__ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(udg_units33[id1 + 1]))))] // INLINED!!
+		set s__s__AHSS_Configurations_PLAYER_ICONS[id2]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table__ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(udg_units33[id2 + 1]))))] // INLINED!!
 
                 //set usedSwap[id1] = true 
                 //set usedSwap[id2] = true 
@@ -35827,12 +35716,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__FixTransformations_Alloc___recycle[(0)] == 0 ) then
-                set s__FixTransformations_Alloc___instanceCount=s__FixTransformations_Alloc___instanceCount + 1
-                set this=s__FixTransformations_Alloc___instanceCount
+            if ( s__FixTransformations_Alloc__recycle[(0)] == 0 ) then
+                set s__FixTransformations_Alloc__instanceCount=s__FixTransformations_Alloc__instanceCount + 1
+                set this=s__FixTransformations_Alloc__instanceCount
             else
-                set this=s__FixTransformations_Alloc___recycle[(0)]
-                set s__FixTransformations_Alloc___recycle[(0)]=s__FixTransformations_Alloc___recycle[s__FixTransformations_Alloc___recycle[(0)]]
+                set this=s__FixTransformations_Alloc__recycle[(0)]
+                set s__FixTransformations_Alloc__recycle[(0)]=s__FixTransformations_Alloc__recycle[s__FixTransformations_Alloc__recycle[(0)]]
             endif
 
     
@@ -35840,19 +35729,19 @@ endfunction
         endfunction
     
         function s__FixTransformations_deallocate takes integer this returns nothing
-            set s__FixTransformations_Alloc___recycle[this]=s__FixTransformations_Alloc___recycle[(0)]
-            set s__FixTransformations_Alloc___recycle[(0)]=this
+            set s__FixTransformations_Alloc__recycle[this]=s__FixTransformations_Alloc__recycle[(0)]
+            set s__FixTransformations_Alloc__recycle[(0)]=this
         endfunction
     
     function s__FixTransformations_unpause takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         call PauseUnit(s__FixTransformations_caster[this], false)
         call s__FixTransformations_deallocate(this)
         call ReleaseTimer(GetExpiredTimer())
     endfunction 
     
     function s__FixTransformations_removeInvul takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         call UnitMakeAbilityPermanent(s__FixTransformations_caster[this], false, 'Avul')
         call UnitRemoveAbility(s__FixTransformations_caster[this], 'Avul')
         call UnitRemoveBuffs(s__FixTransformations_caster[this], false, true)
@@ -36311,7 +36200,7 @@ endfunction
  endfunction
 
  function s__SetUnitVariables_onInit takes nothing returns nothing
-		call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter((function s__SetUnitVariables_leave))) // INLINED!!
+		call TriggerAddCondition(RegisterPlayerUnitEvent__leave_trigger, Filter((function s__SetUnitVariables_leave))) // INLINED!!
  endfunction
 
 //===========================================================================
@@ -37139,10 +37028,10 @@ endfunction
     
     
         
-        function s__AssistSystem___System_periodic takes nothing returns nothing
+        function s__AssistSystem__System_periodic takes nothing returns nothing
             local integer i
             local integer id
-            if s__AssistSystem___System_count_active == 0 then
+            if s__AssistSystem__System_count_active == 0 then
                 return
             endif
             set bj_lastCreatedGroup=CreateGroup()
@@ -37157,7 +37046,7 @@ endfunction
                     if sg__assisted_get((id)*(12)+i) > 0 then
                         call sg__assisted_set((id)*(12)+i,sg__assisted_get((id)*(12)+i) - 1)
                         if sg__assisted_get((id)*(12)+i) == 0 then
-                            set s__AssistSystem___System_count_active=s__AssistSystem___System_count_active - 1
+                            set s__AssistSystem__System_count_active=s__AssistSystem__System_count_active - 1
                         endif
                     endif
                     set i=i + 1
@@ -37178,20 +37067,20 @@ endfunction
             endloop
         endfunction
         
-        function s__AssistSystem___System_removeSai takes nothing returns nothing
-            local integer uid= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            set s__AssistSystem___sai[uid]= false
+        function s__AssistSystem__System_removeSai takes nothing returns nothing
+            local integer uid= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            set s__AssistSystem__sai[uid]= false
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__AssistSystem___System_removeInvul takes nothing returns nothing
-            call SetUnitInvulnerable((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), false) // INLINED!!
-            call UnitRemoveAbility((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), 'B039') // INLINED!!
-	        call UnitRemoveAbility((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), 'B000') // INLINED!!
+        function s__AssistSystem__System_removeInvul takes nothing returns nothing
+            call SetUnitInvulnerable((s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]), false) // INLINED!!
+            call UnitRemoveAbility((s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]), 'B039') // INLINED!!
+	        call UnitRemoveAbility((s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]), 'B000') // INLINED!!
             call ReleaseTimer(GetExpiredTimer())
         endfunction 
         
-        function s__AssistSystem___System_actions takes nothing returns nothing
+        function s__AssistSystem__System_actions takes nothing returns nothing
             // Guren passive
             local integer id
             local real damage= GetEventDamage()
@@ -37206,14 +37095,14 @@ endfunction
 			if GetEventDamage() >= 10 then
 				set id=GetPlayerId(GetOwningPlayer(GetEventDamageSource()))
 				// Sai mark
-				if GetUnitAbilityLevel(GetTriggerUnit(), 'B03E') > 0 and ( GetUnitTypeId(udg_units33[id + 1]) == 'O006' or GetUnitTypeId(udg_units33[id + 1]) == 'O008' ) and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if GetUnitAbilityLevel(GetTriggerUnit(), 'B03E') > 0 and ( GetUnitTypeId(udg_units33[id + 1]) == 'O006' or GetUnitTypeId(udg_units33[id + 1]) == 'O008' ) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.1, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
 				endif
 
 				// Dragon blade
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I06N'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07U'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07T'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07V'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07W'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07Z'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07Y'))) and GetRandomInt(0, 100) < ( ( 4000 - RMinBJ(4000, damage) ) / 150 ) and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I06N'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07U'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07T'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07V'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07W'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07Z'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07Y'))) and GetRandomInt(0, 100) < ( ( 4000 - RMinBJ(4000, damage) ) / 150 ) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
 					call CreateTextTagUnitBJ("Critical!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -37223,14 +37112,14 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage, true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
 				endif
 
 
 				// Wind Dragon blade
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07X'))) and GetRandomInt(0, 100) < ( ( 6000 - RMinBJ(6000, damage) ) / 150 ) and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07X'))) and GetRandomInt(0, 100) < ( ( 6000 - RMinBJ(6000, damage) ) / 150 ) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
 					call CreateTextTagUnitBJ("Critical!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -37240,14 +37129,14 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage, true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
 				endif
 
 
 				// Kazekage Robe 
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I03O'))) and GetRandomInt(0, 100) < 10 and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I03O'))) and GetRandomInt(0, 100) < 10 and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
 					call CreateTextTagUnitBJ("Critical!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -37257,13 +37146,13 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.2, true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
 				endif
 
 				// Deidara Ring
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I00Q'))) and GetRandomInt(0, 100) < 20 and damage < 4000 and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I00Q'))) and GetRandomInt(0, 100) < 20 and damage < 4000 and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
 					call CreateTextTagUnitBJ("Explosion!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -37273,97 +37162,97 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
 					call UnitDamageTarget(GetEventDamageSource(), GetEventDamageSource(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
 				endif
 
 				// Shisui sharingan
-				if GetTriggerUnit() == udg_ShisuiE and GetUnitTypeId(GetEventDamageSource()) == 'U00O' and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if GetTriggerUnit() == udg_ShisuiE and GetUnitTypeId(GetEventDamageSource()) == 'U00O' and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					if GetHeroLevel(GetEventDamageSource()) >= 35 then
 						call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
 					else
 						call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * ( 0.020 * GetUnitAbilityLevel(GetEventDamageSource(), 'A10Z') ), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
 					endif
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem___System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem__System_removeSai) // INLINED!!
 				endif
 
 				//Mei Lava D
-				if GetTriggerUnit() == udg_MeiLava and GetUnitTypeId(GetEventDamageSource()) == 'H008' and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if GetTriggerUnit() == udg_MeiLava and GetUnitTypeId(GetEventDamageSource()) == 'H008' and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.1, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem___System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem__System_removeSai) // INLINED!!
 				endif
 
 				// Zabuza T
-				if GetUnitAbilityLevel(GetTriggerUnit(), 'B012') > 0 and GetUnitTypeId(GetEventDamageSource()) == 'H05M' and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if GetUnitAbilityLevel(GetTriggerUnit(), 'B012') > 0 and GetUnitTypeId(GetEventDamageSource()) == 'H05M' and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem___System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem__System_removeSai) // INLINED!!
 				endif
 
 				// Pain's Ring
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I01X'))) and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I01X'))) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.10, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem___System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem__System_removeSai) // INLINED!!
 				endif
 
 				// Ichigo D
-				if ( GetUnitTypeId(GetEventDamageSource()) == 'H0A7' or GetUnitTypeId(GetEventDamageSource()) == 'U00G' or GetUnitTypeId(GetEventDamageSource()) == 'U00A' ) and udg_Farm[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] >= 2400 and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if ( GetUnitTypeId(GetEventDamageSource()) == 'H0A7' or GetUnitTypeId(GetEventDamageSource()) == 'U00G' or GetUnitTypeId(GetEventDamageSource()) == 'U00A' ) and udg_Farm[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] >= 2400 and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.10, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem___System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem__System_removeSai) // INLINED!!
 				endif
 
 
                 // Rikuudou Sword anti-army 
                 
-				if GetEventDamageSource() != null and GetPlayerController(GetOwningPlayer(GetEventDamageSource())) == MAP_CONTROL_USER and udg_units33[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] != null and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] and GetEventDamage() < 20000 then // INLINED!!
+				if GetEventDamageSource() != null and GetPlayerController(GetOwningPlayer(GetEventDamageSource())) == MAP_CONTROL_USER and udg_units33[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] != null and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] and GetEventDamage() < 20000 then // INLINED!!
 					// Yagura Mirror 
 					if GetUnitAbilityLevel(GetTriggerUnit(), 'B046') > 0 then
-						set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.05 * GetUnitAbilityLevel(GetTriggerUnit(), 'A0IQ'), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
                     			// Defense Pills  
 					elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B070') > 0 then
-						set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
 					// Guren E 
 					elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B02O') > 0 then
-						set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.01 * GetUnitAbilityLevel(GetTriggerUnit(), 'B02O'), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
 					// Sanbi's shell 
 					elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B038') > 0 and damage < 10000 then
-						set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.5, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
 					// Juubi's aura
 					elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B00B') > 0 and damage < 10000 then
-						set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.25, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
 
 					// Hidan's Ring
 					elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I01W'))) then // INLINED!!
-						set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.20, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
 
 					// Isobu aura
 					elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B01L') > 0 and damage < 10000 then
-						set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.25, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
                     			// Yata Mirror (Itachi)
                     			elseif udg_YataMirror == GetTriggerUnit() then
-                        			set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+                        			set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
                         			call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-                        			call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeSai) // INLINED!!
+                        			call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
                     			endif
 				endif
 				// Kisame unleash samehada
@@ -37474,19 +37363,19 @@ endfunction
             endif
             if id != 3 and id != 7 and id != 11 then
                 if sg__assisted_get(((GetUnitUserData((GetTriggerUnit()))))*(12)+id + 1) == 0 then // INLINED!!
-                    set s__AssistSystem___System_count_active=s__AssistSystem___System_count_active + 1
+                    set s__AssistSystem__System_count_active=s__AssistSystem__System_count_active + 1
                 endif
                 call sg__assisted_set(((GetUnitUserData((GetTriggerUnit()))))*(12)+id + 1,15) // INLINED!!
             endif
             // Gunbai 
             if GetUnitAbilityLevel(GetTriggerUnit(), 'B039') > 0 and damage > 500 then
                 call SetUnitInvulnerable(GetTriggerUnit(), true)
-                call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeInvul) // INLINED!!
+                call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeInvul) // INLINED!!
             endif
             // Pein gunbai 
             if GetUnitAbilityLevel(GetTriggerUnit(), 'B000') > 0 and damage > 500 then
                 call SetUnitInvulnerable(GetTriggerUnit(), true)
-                call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeInvul) // INLINED!!
+                call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeInvul) // INLINED!!
             endif
             if damage > 100 and GetOwningPlayer(GetEventDamageSource()) != Player(3) and GetOwningPlayer(GetEventDamageSource()) != Player(7) and GetOwningPlayer(GetEventDamageSource()) != Player(11) and GetOwningPlayer(GetEventDamageSource()) != Player(PLAYER_NEUTRAL_AGGRESSIVE) then
                 set udg_DamageDealt[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_DamageDealt[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + damage
@@ -37517,10 +37406,10 @@ endfunction
             endif
         endfunction
 
-        function s__AssistSystem___System_leave takes nothing returns nothing
+        function s__AssistSystem__System_leave takes nothing returns nothing
             local integer i
             if IsUnitType(GetLeavingUnit(), UNIT_TYPE_HERO) == true and not IsUnitInGroup(GetLeavingUnit(), udg_AssistHeroes) then
-                call TriggerRegisterUnitEvent(s__AssistSystem___System_assist_trigger, GetLeavingUnit(), EVENT_UNIT_DAMAGED)
+                call TriggerRegisterUnitEvent(s__AssistSystem__System_assist_trigger, GetLeavingUnit(), EVENT_UNIT_DAMAGED)
                 call GroupAddUnit(udg_AssistHeroes, GetLeavingUnit())
                 set i=1
                 loop
@@ -37531,12 +37420,12 @@ endfunction
             endif
         endfunction 
 
-        function s__AssistSystem___System_onInit takes nothing returns nothing
+        function s__AssistSystem__System_onInit takes nothing returns nothing
             local integer i
-            set s__AssistSystem___System_assist_trigger=CreateTrigger()
-            call TriggerRegisterUnitEvent(s__AssistSystem___System_assist_trigger, gg_unit_H0A9_0068, EVENT_UNIT_DAMAGED)
+            set s__AssistSystem__System_assist_trigger=CreateTrigger()
+            call TriggerRegisterUnitEvent(s__AssistSystem__System_assist_trigger, gg_unit_H0A9_0068, EVENT_UNIT_DAMAGED)
 			call GroupAddUnit(udg_AssistHeroes, gg_unit_H0A9_0068)
-	        call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter((function s__AssistSystem___System_leave))) // INLINED!!
+	        call TriggerAddCondition(RegisterPlayerUnitEvent__leave_trigger, Filter((function s__AssistSystem__System_leave))) // INLINED!!
             set i=1
             loop
                 exitwhen i > 12
@@ -37545,9 +37434,9 @@ endfunction
                 set i=i + 1
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            call TriggerAddAction(s__AssistSystem___System_assist_trigger, function s__AssistSystem___System_actions)
-            call TimerStartEx((NewTimerEx(0)) , 1.0 , true , function s__AssistSystem___System_periodic , "AssisSystem_periodic") // INLINED!!
-	        set s__AssistSystem___System_count_active=0
+            call TriggerAddAction(s__AssistSystem__System_assist_trigger, function s__AssistSystem__System_actions)
+            call TimerStartEx((NewTimerEx(0)) , 1.0 , true , function s__AssistSystem__System_periodic , "AssisSystem_periodic") // INLINED!!
+	        set s__AssistSystem__System_count_active=0
         endfunction
         
     
@@ -37831,12 +37720,12 @@ endfunction
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__SpawnBijuus_Alloc___recycle[(0)] == 0 ) then
-                set s__SpawnBijuus_Alloc___instanceCount=s__SpawnBijuus_Alloc___instanceCount + 1
-                set this=s__SpawnBijuus_Alloc___instanceCount
+            if ( s__SpawnBijuus_Alloc__recycle[(0)] == 0 ) then
+                set s__SpawnBijuus_Alloc__instanceCount=s__SpawnBijuus_Alloc__instanceCount + 1
+                set this=s__SpawnBijuus_Alloc__instanceCount
             else
-                set this=s__SpawnBijuus_Alloc___recycle[(0)]
-                set s__SpawnBijuus_Alloc___recycle[(0)]=s__SpawnBijuus_Alloc___recycle[s__SpawnBijuus_Alloc___recycle[(0)]]
+                set this=s__SpawnBijuus_Alloc__recycle[(0)]
+                set s__SpawnBijuus_Alloc__recycle[(0)]=s__SpawnBijuus_Alloc__recycle[s__SpawnBijuus_Alloc__recycle[(0)]]
             endif
 
     
@@ -37844,8 +37733,8 @@ endfunction
         endfunction
     
         function s__SpawnBijuus_deallocate takes integer this returns nothing
-            set s__SpawnBijuus_Alloc___recycle[this]=s__SpawnBijuus_Alloc___recycle[(0)]
-            set s__SpawnBijuus_Alloc___recycle[(0)]=this
+            set s__SpawnBijuus_Alloc__recycle[this]=s__SpawnBijuus_Alloc__recycle[(0)]
+            set s__SpawnBijuus_Alloc__recycle[(0)]=this
         endfunction
  function s__SpawnBijuus_equip takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I03T' and IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true then
@@ -38021,7 +37910,7 @@ endfunction
     endfunction 
     
     function s__SpawnBijuus_spellPeriodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         set s__SpawnBijuus_count[this]=s__SpawnBijuus_count[this] + 1
         if s__SpawnBijuus_count[this] >= 100 or GetWidgetLife(s__SpawnBijuus_u[this]) < 0.405 then
             call UnitRemoveAbility(s__SpawnBijuus_u[this], s__SpawnBijuus_spell[this])
@@ -38031,7 +37920,7 @@ endfunction
     endfunction 
 
     function s__SpawnBijuus_spellPeriodicSonGoku takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         set s__SpawnBijuus_count[this]=s__SpawnBijuus_count[this] + 1
         if s__SpawnBijuus_count[this] >= 100 or GetWidgetLife(s__SpawnBijuus_u[this]) < 0.405 then
             call UnitRemoveAbility(s__SpawnBijuus_u[this], s__SpawnBijuus_spell[this])
@@ -38053,7 +37942,7 @@ endfunction
     endfunction 
 
     function s__SpawnBijuus_spellPeriodicKokuo takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         set s__SpawnBijuus_count[this]=s__SpawnBijuus_count[this] + 1
         if s__SpawnBijuus_count[this] >= 1000 or GetWidgetLife(s__SpawnBijuus_u[this]) < 0.405 then
             call UnitRemoveAbility(s__SpawnBijuus_u[this], s__SpawnBijuus_spell[this])
@@ -38682,7 +38571,7 @@ function Trig_PlayerLeave_Func001A takes nothing returns nothing
 endfunction
 
 function Trig_PlayerLeave_Periodic takes nothing returns nothing
- local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+ local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
  local integer i= 0
  local boolean b= true
 	loop
@@ -42326,16 +42215,16 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs1016246484")
-call ExecuteFunc("BoundSentinel___init")
+call ExecuteFunc("jasshelper__initstructs316811437")
+call ExecuteFunc("BoundSentinel__init")
 call ExecuteFunc("ItemTable___init")
-call ExecuteFunc("PowerupSentinel___onInit")
-call ExecuteFunc("PreventSave___onInit")
-call ExecuteFunc("TimerUtils___init")
-call ExecuteFunc("UIMath___Init")
-call ExecuteFunc("AutoBuyS__init")
+call ExecuteFunc("PowerupSentinel__onInit")
+call ExecuteFunc("PreventSave__onInit")
+call ExecuteFunc("TimerUtils__init")
+call ExecuteFunc("UIMath__Init")
+call ExecuteFunc("AutoBuyS___init")
 call ExecuteFunc("RegisterPlayerUnitEvent_init")
-call ExecuteFunc("UnitUtils___init")
+call ExecuteFunc("UnitUtils__init")
 
     call InitGlobals()
     call InitCustomTriggers()
@@ -43087,7 +42976,7 @@ return true
             set s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this]]=s__AHSS__Hero_create(name , id)
             set s__s__AHSS_Configurations_HERO_NAMES[s__AHSS_Heroes_count[this]]= name
             set s__s__AHSS_Configurations_HERO_IDS[s__AHSS_Heroes_count[this]]= id
-            call SaveInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (id), ( s__AHSS_Heroes_count[this])) // INLINED!!
+            call SaveInteger(Table__ht, (s__AHSS_Configurations_HERO_BY_ID), (id), ( s__AHSS_Heroes_count[this])) // INLINED!!
             set s__AHSS_Heroes_count[this]=s__AHSS_Heroes_count[this] + 1
    return true
 endfunction
@@ -43345,30 +43234,30 @@ set f__result_player= Player(0)
 endfunction
 function sa__AkatukiSet_periodic takes nothing returns boolean
 
-  local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer id= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
   local unit u= (s__UnitDex_Unit[(id)]) // INLINED!!
         local integer elapsed
-		if (HaveSavedInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id))) then // INLINED!!
-			set elapsed=(LoadInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id))) // INLINED!!
+		if (HaveSavedInteger(Table__ht, (s__AkatukiSet_secondsElapsed), (id))) then // INLINED!!
+			set elapsed=(LoadInteger(Table__ht, (s__AkatukiSet_secondsElapsed), (id))) // INLINED!!
 			if elapsed < 15000 then
-				call SaveInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id), ( 100)) // INLINED!!
+				call SaveInteger(Table__ht, (s__AkatukiSet_secondsElapsed), (id), ( 100)) // INLINED!!
 				call ReleaseTimer(GetExpiredTimer())
 			else
 				call IssueImmediateOrder(u, "stop")
 				call ReleaseTimer(GetExpiredTimer())
 			endif
 		else
-			call SaveInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id), ( 1)) // INLINED!!
+			call SaveInteger(Table__ht, (s__AkatukiSet_secondsElapsed), (id), ( 1)) // INLINED!!
 		endif
 		set u=null
    return true
 endfunction
 function sa__KisameRing_periodic takes nothing returns boolean
 
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
   local integer i
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I00H') then
-			set s__s__KisameRing_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__KisameRing_t[(LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 return true
@@ -43392,10 +43281,10 @@ return true
 endfunction
 function sa__KyuubiImmolation_periodic takes nothing returns boolean
 
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
   local integer i
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I03W') then
-			set s__s__KyuubiImmolation_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__KyuubiImmolation_t[(LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 return true
@@ -43421,32 +43310,32 @@ function sa__UnitDex_Remove takes nothing returns boolean
     set f__result_boolean=s__UnitDex_Remove(f__arg_unit1,f__arg_boolean1)
    return true
 endfunction
-function sa___prototype5_TimerUtils___init takes nothing returns boolean
+function sa___prototype5_TimerUtils__init takes nothing returns boolean
 
      local integer i=0
      local integer o=- 1
      local boolean oops= false
-        if ( TimerUtils___didinit ) then
+        if ( TimerUtils__didinit ) then
     return true
         else
-            set TimerUtils___didinit=true
+            set TimerUtils__didinit=true
         endif
         set i=0
         loop
-        	exitwhen i >= TimerUtils___ARRAY_SIZE
+        	exitwhen i >= TimerUtils__ARRAY_SIZE
 		set s__runningTimersString[i]= ""
 		set i=i + 1
 	endloop
         set i=0
         set runningTimers=s__Table_create()
-            set TimerUtils___ht=InitHashtable()
+            set TimerUtils__ht=InitHashtable()
             loop
-                exitwhen ( i == TimerUtils___QUANTITY )
-                set s__TimerUtils___tT[i]= CreateTimer()
-                call SaveInteger(TimerUtils___ht, 0, GetHandleId((s__TimerUtils___tT[i] )), ( TimerUtils___HELD)) // INLINED!!
+                exitwhen ( i == TimerUtils__QUANTITY )
+                set s__TimerUtils__tT[i]= CreateTimer()
+                call SaveInteger(TimerUtils__ht, 0, GetHandleId((s__TimerUtils__tT[i] )), ( TimerUtils__HELD)) // INLINED!!
                 set i=i + 1
             endloop
-            set TimerUtils___tN=TimerUtils___QUANTITY
+            set TimerUtils__tN=TimerUtils__QUANTITY
     return true
 endfunction
 function sa___prototype73_SetUnitScalePercentEx takes nothing returns boolean
@@ -43458,7 +43347,7 @@ function sa___prototype85_SetUnitVertexColorBJEx takes nothing returns boolean
     return true
 endfunction
 
-function jasshelper__initstructs1016246484 takes nothing returns nothing
+function jasshelper__initstructs316811437 takes nothing returns nothing
     set st__AHSS_Graphics_create=CreateTrigger()
     call TriggerAddCondition(st__AHSS_Graphics_create,Condition( function sa__AHSS_Graphics_create))
     set st__AHSS_Graphics_selectHeroRandom=CreateTrigger()
@@ -43566,8 +43455,8 @@ function jasshelper__initstructs1016246484 takes nothing returns nothing
     set st__UnitDex_Remove=CreateTrigger()
     call TriggerAddCondition(st__UnitDex_Remove,Condition( function sa__UnitDex_Remove))
     set st___prototype5[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype5[1],function sa___prototype5_TimerUtils___init)
-    call TriggerAddCondition(st___prototype5[1],Condition(function sa___prototype5_TimerUtils___init))
+    call TriggerAddAction(st___prototype5[1],function sa___prototype5_TimerUtils__init)
+    call TriggerAddCondition(st___prototype5[1],Condition(function sa___prototype5_TimerUtils__init))
     set st___prototype73[1]=CreateTrigger()
     call TriggerAddAction(st___prototype73[1],function sa___prototype73_SetUnitScalePercentEx)
     call TriggerAddCondition(st___prototype73[1],Condition(function sa___prototype73_SetUnitScalePercentEx))
@@ -43589,10 +43478,10 @@ function jasshelper__initstructs1016246484 takes nothing returns nothing
 
 
 
-call ExecuteFunc("s__ArrowKey_ArrowKeyEvent___Init___onInit")
+call ExecuteFunc("s__ArrowKey_ArrowKeyEvent__Init__onInit")
 
 
-call ExecuteFunc("s__User_PlayerUtils___PlayerUtilsInit___onInit")
+call ExecuteFunc("s__User_PlayerUtils__PlayerUtilsInit__onInit")
 
 
 
@@ -43647,20 +43536,20 @@ call ExecuteFunc("s__User_PlayerUtils___PlayerUtilsInit___onInit")
 
 
 
-call ExecuteFunc("s__WorldBounds_WorldBounds___WorldBoundInit___onInit")
+call ExecuteFunc("s__WorldBounds_WorldBounds__WorldBoundInit__onInit")
 
 
 
-call ExecuteFunc("s__Camera___CamInit_Camera___CamInitModule___onInit")
+call ExecuteFunc("s__Camera__CamInit_Camera__CamInitModule__onInit")
 
-call ExecuteFunc("s__Dialog_Dialog___DialogInit___onInit")
+call ExecuteFunc("s__Dialog_Dialog___DialogInit__onInit")
 
 
-call ExecuteFunc("s__UnitDex_UnitDex___UnitDexCore___onInit")
+call ExecuteFunc("s__UnitDex_UnitDex__UnitDexCore__onInit")
 
 
 
-call ExecuteFunc("s__RegisterPlayerUnitEvent___S_RegisterPlayerUnitEvent___M___onInit")
+call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onInit")
 
 
 
@@ -43852,9 +43741,9 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent___S_RegisterPlayerUnitEvent___M___o
 
 
 
-    call ExecuteFunc("s__xepreload___init_onInit")
-    call ExecuteFunc("s__UnitUtils___InitASCIITable_onInit")
-    call ExecuteFunc("s__UnitUtils___UpdateMultiboardS_onInit")
+    call ExecuteFunc("s__xepreload__init_onInit")
+    call ExecuteFunc("s__UnitUtils__InitASCIITable_onInit")
+    call ExecuteFunc("s__UnitUtils__UpdateMultiboardS_onInit")
     call ExecuteFunc("s__PlayerName_onInit")
     call ExecuteFunc("s__HealthAboveHero_onInit")
     call ExecuteFunc("s__HokageArmor_onInit")
@@ -43955,7 +43844,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent___S_RegisterPlayerUnitEvent___M___o
     call ExecuteFunc("s__FixTeamDuelLocations_onInit")
     call ExecuteFunc("s__MissionARankReward_onInit")
     call ExecuteFunc("s__TeamDuel_onInit")
-    call ExecuteFunc("s__SendGoldAndCystal__Command_onInit")
+    call ExecuteFunc("s__SendGoldAndCystal___Command_onInit")
     call ExecuteFunc("s__BuyAttributes_onInit")
     call ExecuteFunc("s__Killme_onInit")
     call ExecuteFunc("s__MoveSpeedBug_onInit")
@@ -43980,7 +43869,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent___S_RegisterPlayerUnitEvent___M___o
     call ExecuteFunc("s__ChakraJump_onInit")
     call ExecuteFunc("s__FixTransformations_onInit")
     call ExecuteFunc("s__SetUnitVariables_onInit")
-    call ExecuteFunc("s__AssistSystem___System_onInit")
+    call ExecuteFunc("s__AssistSystem__System_onInit")
     call ExecuteFunc("s__BaseRemoveItems_onInit")
     call ExecuteFunc("s__SpawnBijuus_onInit")
     call ExecuteFunc("s__Spectator_onInit")
