@@ -24,7 +24,7 @@ real BoundSentinel__miny
 //endglobals from BoundSentinel
 //globals from Event:
 constant boolean LIBRARY_Event=true
-real Event___q=0
+real Event__q=0
 //endglobals from Event
 //globals from GetZ:
 constant boolean LIBRARY_GetZ=true
@@ -181,20 +181,20 @@ constant boolean LIBRARY_ItemUtils=true
 //globals from PlayerUtils:
 constant boolean LIBRARY_PlayerUtils=true
         // automatically change unit colors when changing player color
-constant boolean PlayerUtils___AUTO_COLOR_UNITS= true
+constant boolean PlayerUtils__AUTO_COLOR_UNITS= true
    
         // use an array for name / color lookups (instead of function calls)
-constant boolean PlayerUtils___ARRAY_LOOKUP= false
+constant boolean PlayerUtils__ARRAY_LOOKUP= false
    
         // this only applies if ARRAY_LOOKUP is true
-constant boolean PlayerUtils___HOOK_SAFETY= false
+constant boolean PlayerUtils__HOOK_SAFETY= false
    
 constant force FORCE_PLAYING= CreateForce()
    
-string array PlayerUtils___Name
-string array PlayerUtils___Hex
-string array PlayerUtils___OriginalHex
-playercolor array PlayerUtils___CurrentColor
+string array PlayerUtils__Name
+string array PlayerUtils__Hex
+string array PlayerUtils__OriginalHex
+playercolor array PlayerUtils__CurrentColor
 //endglobals from PlayerUtils
 //globals from PowerupSentinel:
 constant boolean LIBRARY_PowerupSentinel=true
@@ -208,13 +208,13 @@ player PreventSave__localplayer
 //endglobals from PreventSave
 //globals from Table:
 constant boolean LIBRARY_Table=true
-integer Table___less= 0
-integer Table___more= 8190
+integer Table__less= 0
+integer Table__more= 8190
     //Configure it if you use more than 8190 "key" variables in your map (this will never happen though).
     
-hashtable Table___ht= InitHashtable()
-constant integer Table___sizeK=10
-constant integer Table___listK=12
+hashtable Table__ht= InitHashtable()
+constant integer Table__sizeK=3
+constant integer Table__listK=5
 //endglobals from Table
 //globals from TimerUtils:
 constant boolean LIBRARY_TimerUtils=true
@@ -233,29 +233,29 @@ constant boolean LIBRARY_TimerUtils=true
         //  * THE LEAST SAFE ( you may have to tweak OFSSET manually for it to
         //                     work)
         //
-constant boolean TimerUtils___USE_HASH_TABLE= true
-constant boolean TimerUtils___USE_FLEXIBLE_OFFSET= false
+constant boolean TimerUtils__USE_HASH_TABLE= true
+constant boolean TimerUtils__USE_FLEXIBLE_OFFSET= false
 
-constant integer TimerUtils___OFFSET= 0x100000
-integer TimerUtils___VOFFSET= TimerUtils___OFFSET
+constant integer TimerUtils__OFFSET= 0x100000
+integer TimerUtils__VOFFSET= TimerUtils__OFFSET
               
         //Timers to preload at map init:
-constant integer TimerUtils___QUANTITY= 256
+constant integer TimerUtils__QUANTITY= 256
         
         //Changing this  to something big will allow you to keep recycling
         // timers even when there are already AN INCREDIBLE AMOUNT of timers in
         // the stack. But it will make things far slower so that's probably a bad idea...
-constant integer TimerUtils___ARRAY_SIZE= 8190
-// processed:         string array runningTimersString[TimerUtils___ARRAY_SIZE]
+constant integer TimerUtils__ARRAY_SIZE= 8190
+// processed:         string array runningTimersString[TimerUtils__ARRAY_SIZE]
 integer runningTimers
-// processed:         integer array TimerUtils___data[TimerUtils___ARRAY_SIZE]
-hashtable TimerUtils___ht
-// processed:         timer array TimerUtils___tT[TimerUtils___ARRAY_SIZE]
-integer TimerUtils___tN= 0
-constant integer TimerUtils___HELD=0x28829022
+// processed:         integer array TimerUtils__data[TimerUtils__ARRAY_SIZE]
+hashtable TimerUtils__ht
+// processed:         timer array TimerUtils__tT[TimerUtils__ARRAY_SIZE]
+integer TimerUtils__tN= 0
+constant integer TimerUtils__HELD=0x28829022
         //use a totally random number here, the more improbable someone uses it, the better.
         
-boolean TimerUtils___didinit= false
+boolean TimerUtils__didinit= false
 //endglobals from TimerUtils
 //globals from UIMath:
 constant boolean LIBRARY_UIMath=true
@@ -421,36 +421,36 @@ constant integer EVENT_UNIT_INDEX= 0
 constant integer EVENT_UNIT_DEINDEX= 1
         
         // System variables
-trigger array UnitDex___IndexTrig
-integer UnitDex___Index= 0
-real UnitDex___E=- 1
-boolexpr UnitDex___FilterEnter
+trigger array UnitDex__IndexTrig
+integer UnitDex__Index= 0
+real UnitDex__E=- 1
+boolexpr UnitDex__FilterEnter
 //endglobals from UnitDex
 //globals from xepreload:
 constant boolean LIBRARY_xepreload=true
-unit xepreload___dum=null
+unit xepreload__dum=null
 //endglobals from xepreload
 //globals from EffectUtils:
 constant boolean LIBRARY_EffectUtils=true
 //endglobals from EffectUtils
 //globals from RegisterPlayerUnitEvent:
 constant boolean LIBRARY_RegisterPlayerUnitEvent=true
-trigger array RegisterPlayerUnitEvent___t
-// processed: 	integer array RegisterPlayerUnitEvent___leave_ids[300]
-integer RegisterPlayerUnitEvent___leave_ids_count= 0
-// processed: 	boolexpr array RegisterPlayerUnitEvent___death_events[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___death_events_b[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___death_events_count[300]
-// processed: 	boolexpr array RegisterPlayerUnitEvent___attack_events[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___attack_events_b[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___attack_events_count[300]
-// processed: 	boolexpr array RegisterPlayerUnitEvent___spell_events[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___spell_events_id[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___spell_events_b[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___spell_events_count[300]
-// processed: 	trigger array RegisterPlayerUnitEvent___trigger_events[300][30]
-// processed: 	integer array RegisterPlayerUnitEvent___trigger_events_count[300]
-trigger RegisterPlayerUnitEvent___leave_trigger= CreateTrigger()
+trigger array RegisterPlayerUnitEvent__t
+// processed: 	integer array RegisterPlayerUnitEvent__leave_ids[300]
+integer RegisterPlayerUnitEvent__leave_ids_count= 0
+// processed: 	boolexpr array RegisterPlayerUnitEvent__death_events[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__death_events_b[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__death_events_count[300]
+// processed: 	boolexpr array RegisterPlayerUnitEvent__attack_events[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__attack_events_b[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__attack_events_count[300]
+// processed: 	boolexpr array RegisterPlayerUnitEvent__spell_events[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__spell_events_id[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__spell_events_b[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__spell_events_count[300]
+// processed: 	trigger array RegisterPlayerUnitEvent__trigger_events[300][30]
+// processed: 	integer array RegisterPlayerUnitEvent__trigger_events_count[300]
+trigger RegisterPlayerUnitEvent__leave_trigger= CreateTrigger()
 //endglobals from RegisterPlayerUnitEvent
 //globals from UnitRecycler2:
 constant boolean LIBRARY_UnitRecycler2=true
@@ -2353,20 +2353,23 @@ trigger gg_trg_HinataNewShoshiken= null
 trigger gg_trg_HinataKuutenNew= null
 trigger gg_trg_HinataUltimateChoice= null
 trigger gg_trg_HiruzenEnma= null
+trigger gg_trg_HiruzenCageNew= null
+trigger gg_trg_HiruzenEnmaSwap= null
+trigger gg_trg_EnmaGiveGold= null
 trigger gg_trg_HiruzenShikiFuujinINIT= null
 trigger gg_trg_HiruzenShikiFuujinLOOP= null
-trigger gg_trg_HiruzenEnmaSwap= null
+trigger gg_trg_HiruzenQ= null
 trigger gg_trg_HiruzenShuriken= null
+trigger gg_trg_HiruzenE= null
 trigger gg_trg_HiruzenNewUltimate= null
 trigger gg_trg_HiruzenUltimateChoice= null
 trigger gg_trg_HiruzenSemiChoice= null
 trigger gg_trg_HiruzenLevel= null
 trigger gg_trg_HiruzenKongoRohekiNew= null
-trigger gg_trg_EnmaGiveGold= null
-trigger gg_trg_HiruzenCageNew= null
 trigger gg_trg_IchigoQ= null
 trigger gg_trg_IchigoDies= null
 trigger gg_trg_IchigoW= null
+trigger gg_trg_IchigoCero= null
 trigger gg_trg_IchigoVastoLord= null
 trigger gg_trg_IchigoE= null
 trigger gg_trg_IchigoBankai= null
@@ -2605,6 +2608,7 @@ trigger gg_trg_KonohamaruShuriken= null
 trigger gg_trg_KonohamaruKatonHaisekisho= null
 trigger gg_trg_KonohamaruOodamaRasengan= null
 trigger gg_trg_KonohamaruGamakichi= null
+trigger gg_trg_KurenaiPassiveNew= null
 trigger gg_trg_KurenaiFlowerEscape= null
 trigger gg_trg_KurenaiFarming= null
 trigger gg_trg_KurenaiInvisibility= null
@@ -3230,9 +3234,6 @@ unit gg_unit_hcas_0193= null
 unit gg_unit_h00E_0194= null
 unit gg_unit_h00F_0195= null
 unit gg_unit_hspt_0202= null
-trigger gg_trg_HiruzenQ= null
-trigger gg_trg_HiruzenE= null
-trigger gg_trg_KurenaiPassiveNew= null
 group hideheroes
 group HideHeroesSystem__hidedummy
 // processed:     boolean array HideHeroesSystem__numbers[11]
@@ -3248,13 +3249,13 @@ group HideHeroesSystem__hidedummy
 // processed:         unit array ItemKunai__heroes[12]
 // processed:         unit array Bashosen__dummies[1][1]
 // processed:     unit array ScrollOfTeleportScope__anbus[1][1] 
-// processed: dialog array SendGoldAndCystal__gd[12]
-// processed: button array SendGoldAndCystal__gb[12][12] 
-// processed: dialog array SendGoldAndCystal__cd[12]
-// processed: button array SendGoldAndCystal__cb[12][12] 
-// processed: integer array SendGoldAndCystal__g[12] 
-// processed: integer array SendGoldAndCystal__c[12] 
-// processed: integer array SendGoldAndCystal__given[12]
+// processed: dialog array SendGoldAndCystal___gd[12]
+// processed: button array SendGoldAndCystal___gb[12][12] 
+// processed: dialog array SendGoldAndCystal___cd[12]
+// processed: button array SendGoldAndCystal___cb[12][12] 
+// processed: integer array SendGoldAndCystal___g[12] 
+// processed: integer array SendGoldAndCystal___c[12] 
+// processed: integer array SendGoldAndCystal___given[12]
 // processed:         boolean array AssistSystem__sai[8190]
 
 trigger l__library_init
@@ -3286,51 +3287,51 @@ playercolor array s__User_Color
 group s__User_ENUM_GROUP= CreateGroup()
 integer array s__User_PlayingPlayer
 integer array s__User_PlayingPlayerIndex
-constant integer si__Table___dex=18
-constant integer si__Table___handles=19
-constant integer si__Table___agents=20
-constant integer si__Table___reals=21
-constant integer si__Table___booleans=22
-constant integer si__Table___strings=23
-constant integer si__Table___integers=24
-constant integer si__Table___players=25
-constant integer si__Table___widgets=26
-constant integer si__Table___destructables=27
-constant integer si__Table___items=28
-constant integer si__Table___units=29
-constant integer si__Table___abilitys=30
-constant integer si__Table___timers=31
-constant integer si__Table___triggers=32
-constant integer si__Table___triggerconditions=33
-constant integer si__Table___triggeractions=34
-constant integer si__Table___events=35
-constant integer si__Table___forces=36
-constant integer si__Table___groups=37
-constant integer si__Table___locations=38
-constant integer si__Table___rects=39
-constant integer si__Table___boolexprs=40
-constant integer si__Table___sounds=41
-constant integer si__Table___effects=42
-constant integer si__Table___unitpools=43
-constant integer si__Table___itempools=44
-constant integer si__Table___quests=45
-constant integer si__Table___questitems=46
-constant integer si__Table___defeatconditions=47
-constant integer si__Table___timerdialogs=48
-constant integer si__Table___leaderboards=49
-constant integer si__Table___multiboards=50
-constant integer si__Table___multiboarditems=51
-constant integer si__Table___trackables=52
-constant integer si__Table___dialogs=53
-constant integer si__Table___buttons=54
-constant integer si__Table___texttags=55
-constant integer si__Table___lightnings=56
-constant integer si__Table___images=57
-constant integer si__Table___ubersplats=58
-constant integer si__Table___regions=59
-constant integer si__Table___fogstates=60
-constant integer si__Table___fogmodifiers=61
-constant integer si__Table___hashtables=62
+constant integer si__Table__dex=18
+constant integer si__Table__handles=19
+constant integer si__Table__agents=20
+constant integer si__Table__reals=21
+constant integer si__Table__booleans=22
+constant integer si__Table__strings=23
+constant integer si__Table__integers=24
+constant integer si__Table__players=25
+constant integer si__Table__widgets=26
+constant integer si__Table__destructables=27
+constant integer si__Table__items=28
+constant integer si__Table__units=29
+constant integer si__Table__abilitys=30
+constant integer si__Table__timers=31
+constant integer si__Table__triggers=32
+constant integer si__Table__triggerconditions=33
+constant integer si__Table__triggeractions=34
+constant integer si__Table__events=35
+constant integer si__Table__forces=36
+constant integer si__Table__groups=37
+constant integer si__Table__locations=38
+constant integer si__Table__rects=39
+constant integer si__Table__boolexprs=40
+constant integer si__Table__sounds=41
+constant integer si__Table__effects=42
+constant integer si__Table__unitpools=43
+constant integer si__Table__itempools=44
+constant integer si__Table__quests=45
+constant integer si__Table__questitems=46
+constant integer si__Table__defeatconditions=47
+constant integer si__Table__timerdialogs=48
+constant integer si__Table__leaderboards=49
+constant integer si__Table__multiboards=50
+constant integer si__Table__multiboarditems=51
+constant integer si__Table__trackables=52
+constant integer si__Table__dialogs=53
+constant integer si__Table__buttons=54
+constant integer si__Table__texttags=55
+constant integer si__Table__lightnings=56
+constant integer si__Table__images=57
+constant integer si__Table__ubersplats=58
+constant integer si__Table__regions=59
+constant integer si__Table__fogstates=60
+constant integer si__Table__fogmodifiers=61
+constant integer si__Table__hashtables=62
 constant integer si__Table=63
 constant integer si__HandleTable=64
 constant integer si__StringTable=65
@@ -3473,15 +3474,15 @@ integer array s__UnitDex_List
 constant integer s__UnitDex_DETECT_LEAVE_ABILITY= 'uDex'
 constant boolean s__UnitDex_ALLOW_DEBUGGING= true
 integer s__UnitDex_Counter= 0
-constant integer si__xepreload___init=78
+constant integer si__xepreload__init=78
 constant integer si__EffectUtils__EffectTimer=79
 integer si__EffectUtils__EffectTimer_F=0
 integer si__EffectUtils__EffectTimer_I=0
 integer array si__EffectUtils__EffectTimer_V
 effect array s__EffectUtils__EffectTimer_e
 boolean array s__EffectUtils__EffectTimer_remove
-constant integer si__RegisterPlayerUnitEvent___S=80
-integer s__RegisterPlayerUnitEvent___S_tb
+constant integer si__RegisterPlayerUnitEvent__S=80
+integer s__RegisterPlayerUnitEvent__S_tb
 constant integer si__UnitUtils__ReleaseDummy=81
 integer si__UnitUtils__ReleaseDummy_F=0
 integer si__UnitUtils__ReleaseDummy_I=0
@@ -3935,20 +3936,92 @@ constant integer s__ItachiRingActive_SPELL_ID= 'A1CT'
 unit array s__ItachiRingActive_caster
 unit array s__ItachiRingActive_target
 unit array s__ItachiRingActive_dummy
-constant integer si__AntiAFK=188
+constant integer si__IchigoQ=188
+integer s__IchigoQ_Alloc__instanceCount= 0
+integer array s__IchigoQ_Alloc__recycle
+constant integer s__IchigoQ_SPELL_ID= 'A1D3'
+unit array s__IchigoQ_caster
+unit array s__IchigoQ_slash
+group array s__IchigoQ_damaged
+integer array s__IchigoQ_count
+constant integer si__IchigoDies=189
+constant integer si__IchigoW=190
+integer s__IchigoW_Alloc__instanceCount= 0
+integer array s__IchigoW_Alloc__recycle
+constant integer s__IchigoW_SPELL_ID= 'A1DN'
+unit array s__IchigoW_caster
+unit array s__IchigoW_dummy
+integer array s__IchigoW_count
+real array s__IchigoW_angle
+real array s__IchigoW_p1x
+real array s__IchigoW_p1y
+real array s__IchigoW_p2x
+real array s__IchigoW_p2y
+real array s__IchigoW_p3x
+real array s__IchigoW_p3y
+real array s__IchigoW_p4x
+real array s__IchigoW_p4y
+real array s__IchigoW_cx
+real array s__IchigoW_cy
+integer array s__IchigoW_waves
+group array s__IchigoW_damaged
+integer array s__IchigoW_count2
+constant integer si__IchigoCero__Spell=191
+integer s__IchigoCero__Spell_Alloc__instanceCount= 0
+integer array s__IchigoCero__Spell_Alloc__recycle
+constant integer s__IchigoCero__Spell_SPELL_ID= 'A08M'
+integer s__IchigoCero__Spell_instance
+unit array s__IchigoCero__Spell_caster
+unit array s__IchigoCero__Spell_arrow
+real array s__IchigoCero__Spell_angle
+integer array s__IchigoCero__Spell_count
+constant integer si__IchigoE=192
+integer s__IchigoE_Alloc__instanceCount= 0
+integer array s__IchigoE_Alloc__recycle
+constant integer s__IchigoE_SPELL_ID= 'A1DQ'
+boolean s__IchigoE_active
+integer s__IchigoE_charges
+unit array s__IchigoE_caster
+integer array s__IchigoE_count
+real s__IchigoE_duration
+real array s__IchigoE_x
+real array s__IchigoE_y
+unit array s__IchigoE_dummy
+group array s__IchigoE_mists
+constant integer si__IchigoUnleash=193
+constant integer s__IchigoUnleash_SPELL_ID= 'A092'
+constant integer si__IchigoTLevel=194
+constant integer si__IchigoD=195
+constant integer si__IchigoSlash=196
+integer s__IchigoSlash_Alloc__instanceCount= 0
+integer array s__IchigoSlash_Alloc__recycle
+constant integer s__IchigoSlash_SPELL_ID= 'A1DU'
+unit array s__IchigoSlash_caster
+unit array s__IchigoSlash_slash
+group array s__IchigoSlash_damaged
+integer array s__IchigoSlash_count
+constant integer si__IchigoAttacks=197
+integer s__IchigoAttacks_Alloc__instanceCount= 0
+integer array s__IchigoAttacks_Alloc__recycle
+constant integer si__IchigoAbiltiies__Spell=198
+integer s__IchigoAbiltiies__Spell_Alloc__instanceCount= 0
+integer array s__IchigoAbiltiies__Spell_Alloc__recycle
+constant integer s__IchigoAbiltiies__Spell_SPELL_ID= 'A1DT'
+unit array s__IchigoAbiltiies__Spell_caster
+constant integer si__AntiAFK=199
 integer si__AntiAFK_F=0
 integer si__AntiAFK_I=0
 integer array si__AntiAFK_V
-constant integer si__ModeMinutesGold=189
-constant integer si__FixTeamDuelLocations=190
-constant integer si__MissionARankReward=191
+constant integer si__ModeMinutesGold=200
+constant integer si__FixTeamDuelLocations=201
+constant integer si__MissionARankReward=202
 integer s__MissionARankReward_Alloc__instanceCount= 0
 integer array s__MissionARankReward_Alloc__recycle
 unit s__MissionARankReward_u
 integer s__MissionARankReward_d
 button s__MissionARankReward_buttonSanninCloth
 button s__MissionARankReward_buttonWeapon
-constant integer si__TeamDuel=192
+constant integer si__TeamDuel=203
 integer si__TeamDuel_F=0
 integer si__TeamDuel_I=0
 integer array si__TeamDuel_V
@@ -3958,26 +4031,26 @@ timer s__TeamDuel_DUEL_TIMER
 timerdialog s__TeamDuel_DUEL_TIMER_DIALOG
 boolean s__TeamDuel_ENABLED
 boolean s__TeamDuel_STARTED
-constant integer si__SendGoldAndCystal__Command=193
-integer si__SendGoldAndCystal__Command_F=0
-integer si__SendGoldAndCystal__Command_I=0
-integer array si__SendGoldAndCystal__Command_V
-constant integer si__BuyAttributes=194
+constant integer si__SendGoldAndCystal___Command=204
+integer si__SendGoldAndCystal___Command_F=0
+integer si__SendGoldAndCystal___Command_I=0
+integer array si__SendGoldAndCystal___Command_V
+constant integer si__BuyAttributes=205
 integer si__BuyAttributes_F=0
 integer si__BuyAttributes_I=0
 integer array si__BuyAttributes_V
-constant integer si__Killme=195
+constant integer si__Killme=206
 integer s__Killme_Alloc__instanceCount= 0
 integer array s__Killme_Alloc__recycle
 integer array s__Killme_id
 integer array s__Killme_count
-constant integer si__MoveSpeedBug=196
-constant integer si__WindowCommand=197
-constant integer si__RangeCommand=198
+constant integer si__MoveSpeedBug=207
+constant integer si__WindowCommand=208
+constant integer si__RangeCommand=209
 integer si__RangeCommand_F=0
 integer si__RangeCommand_I=0
 integer array si__RangeCommand_V
-constant integer si__SwitchCommand=200
+constant integer si__SwitchCommand=211
 integer si__SwitchCommand_F=0
 integer si__SwitchCommand_I=0
 integer array si__SwitchCommand_V
@@ -3990,25 +4063,25 @@ timer s__SwitchCommand_timer1
 timer s__SwitchCommand_timer2
 timerdialog s__SwitchCommand_timerwindow1
 timerdialog s__SwitchCommand_timerwindow2
-constant integer si__LockCamera=201
+constant integer si__LockCamera=212
 integer si__LockCamera_F=0
 integer si__LockCamera_I=0
 integer array si__LockCamera_V
-constant integer si__StreamCommand=202
+constant integer si__StreamCommand=213
 integer si__StreamCommand_F=0
 integer si__StreamCommand_I=0
 integer array si__StreamCommand_V
-constant integer si__ShowTimers=203
+constant integer si__ShowTimers=214
 integer si__ShowTimers_F=0
 integer si__ShowTimers_I=0
 integer array si__ShowTimers_V
 integer s__ShowTimers_begin
-constant integer si__CreateMultiboard=204
-constant integer si__GPMMultiboard=205
-constant integer si__UndergroundDrainMana=206
-constant integer si__MusicS=207
+constant integer si__CreateMultiboard=215
+constant integer si__GPMMultiboard=216
+constant integer si__UndergroundDrainMana=217
+constant integer si__MusicS=218
 integer s__MusicS_offset
-constant integer si__HeroIcon=208
+constant integer si__HeroIcon=219
 integer s__HeroIcon_Alloc__instanceCount= 0
 integer array s__HeroIcon_Alloc__recycle
 framehandle array s__HeroIcon_mainbutton
@@ -4023,7 +4096,7 @@ real array s__HeroIcon_y
 real array s__HeroIcon_original_x
 real array s__HeroIcon_original_y
 boolean array s__HeroIcon_fade
-constant integer si__HeroMessage=209
+constant integer si__HeroMessage=220
 integer s__HeroMessage_Alloc__instanceCount= 0
 integer array s__HeroMessage_Alloc__recycle
 framehandle array s__HeroMessage_imgFrame
@@ -4034,7 +4107,7 @@ real array s__HeroMessage_x
 real array s__HeroMessage_y
 real array s__HeroMessage_original_x
 real array s__HeroMessage_original_y
-constant integer si__HeroUIMessage=210
+constant integer si__HeroUIMessage=221
 integer s__HeroUIMessage_Alloc__instanceCount= 0
 integer array s__HeroUIMessage_Alloc__recycle
 boolean s__HeroUIMessage_enabled
@@ -4048,7 +4121,7 @@ unit array s__HeroUIMessage_killer
 unit array s__HeroUIMessage_death
 unit array s__HeroUIMessage_assist1
 unit array s__HeroUIMessage_assist2
-constant integer si__ShopButton=211
+constant integer si__ShopButton=222
 integer si__ShopButton_F=0
 integer si__ShopButton_I=0
 integer array si__ShopButton_V
@@ -4057,7 +4130,7 @@ framehandle array s__ShopButton_imgFrame
 framehandle array s__ShopButton_tooltipBox
 framehandle array s__ShopButton_tooltip
 integer array s__ShopButton_index
-constant integer si__NinpouItem=212
+constant integer si__NinpouItem=223
 integer si__NinpouItem_F=0
 integer si__NinpouItem_I=0
 integer array si__NinpouItem_V
@@ -4075,7 +4148,7 @@ integer array s__NinpouItem_lumber
 boolean array s__NinpouItem_unique
 integer array s__NinpouItem_research
 integer array s__NinpouItem_level
-constant integer si__NinpouShop=214
+constant integer si__NinpouShop=225
 integer si__NinpouShop_F=0
 integer si__NinpouShop_I=0
 integer array si__NinpouShop_V
@@ -4130,7 +4203,7 @@ framehandle array s__NinpouShop_item_price_lumber
 integer array s__NinpouShop_total_gold
 integer array s__NinpouShop_total_lumber
 boolean array s__NinpouShop_autobuy
-constant integer si__NinpouUI=221
+constant integer si__NinpouUI=232
 integer si__NinpouUI_F=0
 integer si__NinpouUI_I=0
 integer array si__NinpouUI_V
@@ -4165,7 +4238,7 @@ framehandle s__NinpouUI_autobuy_button
 framehandle s__NinpouUI_autobuy_button_text
 boolean s__NinpouUI_initialized
 integer s__NinpouUI_cam
-constant integer si__AHSS_Configurations=224
+constant integer si__AHSS_Configurations=235
 integer si__AHSS_Configurations_F=0
 integer si__AHSS_Configurations_I=0
 integer array si__AHSS_Configurations_V
@@ -4179,7 +4252,7 @@ integer s__AHSS_Configurations_heroes
 integer s__AHSS_Configurations_options
 integer s__AHSS_Configurations_paths
 integer s__AHSS_Configurations_graphics
-constant integer si__AHSS___Team=225
+constant integer si__AHSS___Team=236
 integer si__AHSS___Team_F=0
 integer si__AHSS___Team_I=0
 integer array si__AHSS___Team_V
@@ -4189,7 +4262,7 @@ constant integer s___AHSS___Team_players_size=12
 integer array s__AHSS___Team_players
 integer array s__AHSS___Team_count
 rect array s__AHSS___Team_spawningSpot
-constant integer si__AHSS_Teams=227
+constant integer si__AHSS_Teams=238
 integer si__AHSS_Teams_F=0
 integer si__AHSS_Teams_I=0
 integer array si__AHSS_Teams_V
@@ -4197,7 +4270,7 @@ integer array s___AHSS_Teams_teams
 constant integer s___AHSS_Teams_teams_size=12
 integer array s__AHSS_Teams_teams
 integer array s__AHSS_Teams_count
-constant integer si__AHSS___Hero=229
+constant integer si__AHSS___Hero=240
 integer si__AHSS___Hero_F=0
 integer si__AHSS___Hero_I=0
 integer array si__AHSS___Hero_V
@@ -4215,7 +4288,7 @@ boolean array s__AHSS___Hero_modelAlternate
 real array s__AHSS___Hero_modelScale
 integer array s__AHSS___Hero_icon
 string array s__AHSS___Hero_iconPath
-constant integer si__AHSS_Heroes=230
+constant integer si__AHSS_Heroes=241
 integer si__AHSS_Heroes_F=0
 integer si__AHSS_Heroes_I=0
 integer array si__AHSS_Heroes_V
@@ -4223,7 +4296,7 @@ integer array s___AHSS_Heroes_heroes
 constant integer s___AHSS_Heroes_heroes_size=90
 integer array s__AHSS_Heroes_heroes
 integer array s__AHSS_Heroes_count
-constant integer si__AHSS_Options=232
+constant integer si__AHSS_Options=243
 integer si__AHSS_Options_F=0
 integer si__AHSS_Options_I=0
 integer array si__AHSS_Options_V
@@ -4235,7 +4308,7 @@ sound array s__AHSS_Options_click
 sound array s__AHSS_Options_error
 sound array s__AHSS_Options_ok
 boolean array s__AHSS_Options_bots
-constant integer si__AHSS_Paths=233
+constant integer si__AHSS_Paths=244
 integer si__AHSS_Paths_F=0
 integer si__AHSS_Paths_I=0
 integer array si__AHSS_Paths_V
@@ -4247,7 +4320,7 @@ integer array s__AHSS_Paths_selection
 integer array s__AHSS_Paths_strength
 integer array s__AHSS_Paths_agility
 integer array s__AHSS_Paths_intelligence
-constant integer si__AHSS___TeamIcon=234
+constant integer si__AHSS___TeamIcon=245
 integer si__AHSS___TeamIcon_F=0
 integer si__AHSS___TeamIcon_I=0
 integer array si__AHSS___TeamIcon_V
@@ -4257,7 +4330,7 @@ integer array s__AHSS___TeamIcon_icons
 integer array s___AHSS___TeamIcon_iconsId
 constant integer s___AHSS___TeamIcon_iconsId_size=12
 integer array s__AHSS___TeamIcon_iconsId
-constant integer si__AHSS___PlayerSelection=237
+constant integer si__AHSS___PlayerSelection=248
 integer si__AHSS___PlayerSelection_F=0
 integer si__AHSS___PlayerSelection_I=0
 integer array si__AHSS___PlayerSelection_V
@@ -4265,7 +4338,7 @@ integer array s__AHSS___PlayerSelection_whichPlayer
 unit array s__AHSS___PlayerSelection_selectionBox
 integer array s__AHSS___PlayerSelection_row
 integer array s__AHSS___PlayerSelection_column
-constant integer si__AHSS_Graphics=238
+constant integer si__AHSS_Graphics=249
 integer si__AHSS_Graphics_F=0
 integer si__AHSS_Graphics_I=0
 integer array si__AHSS_Graphics_V
@@ -4356,26 +4429,26 @@ boolean array s__AHSS_Graphics_draftPick
 boolean array s__AHSS_Graphics_allowPick
 boolean array s__AHSS_Graphics_allowRandom
 boolean array s__AHSS_Graphics_iconsCreated
-constant integer si__TowerDestruction=259
-constant integer si__NewRepick=260
-constant integer si__NewSwap=261
+constant integer si__TowerDestruction=270
+constant integer si__NewRepick=271
+constant integer si__NewSwap=272
 integer si__NewSwap_F=0
 integer si__NewSwap_I=0
 integer array si__NewSwap_V
-constant integer si__ChakraJump=263
-constant integer si__FixTransformations=264
+constant integer si__ChakraJump=274
+constant integer si__FixTransformations=275
 integer s__FixTransformations_Alloc__instanceCount= 0
 integer array s__FixTransformations_Alloc__recycle
 unit array s__FixTransformations_caster
-constant integer si__SetUnitVariables=265
-constant integer si__AssistSystem__System=266
+constant integer si__SetUnitVariables=276
+constant integer si__AssistSystem__System=277
 integer si__AssistSystem__System_F=0
 integer si__AssistSystem__System_I=0
 integer array si__AssistSystem__System_V
 trigger s__AssistSystem__System_assist_trigger
 integer s__AssistSystem__System_count_active
-constant integer si__BaseRemoveItems=267
-constant integer si__SpawnBijuus=268
+constant integer si__BaseRemoveItems=278
+constant integer si__SpawnBijuus=279
 integer s__SpawnBijuus_Alloc__instanceCount= 0
 integer array s__SpawnBijuus_Alloc__recycle
 constant integer s__SpawnBijuus_SHUKAKU= 'u01D'
@@ -4416,14 +4489,14 @@ integer s__SpawnBijuus_AKATSUKI_BIJUU_ATTACK= 350
 unit array s__SpawnBijuus_u
 integer array s__SpawnBijuus_spell
 integer array s__SpawnBijuus_count
-constant integer si__Spectator=269
+constant integer si__Spectator=280
 integer si__Spectator_F=0
 integer si__Spectator_I=0
 integer array si__Spectator_V
-constant integer si__PeriodicActions=270
+constant integer si__PeriodicActions=281
 string array s__runningTimersString
-integer array s__TimerUtils___data
-timer array s__TimerUtils___tT
+integer array s__TimerUtils__data
+timer array s__TimerUtils__tT
 integer array s__assisted
 integer array s__2assisted
 integer array s__3assisted
@@ -4440,27 +4513,27 @@ boolean array s__AutoBuyS___autobuy
 boolean array s__AutoBuyS___firstUse
 integer array s__AutoBuyS___buildId
 integer array s__AutoBuyS___lists
-integer array s__RegisterPlayerUnitEvent___leave_ids
-boolexpr array s__RegisterPlayerUnitEvent___death_events
-boolexpr array s__2RegisterPlayerUnitEvent___death_events
-integer array s__RegisterPlayerUnitEvent___death_events_b
-integer array s__2RegisterPlayerUnitEvent___death_events_b
-integer array s__RegisterPlayerUnitEvent___death_events_count
-boolexpr array s__RegisterPlayerUnitEvent___attack_events
-boolexpr array s__2RegisterPlayerUnitEvent___attack_events
-integer array s__RegisterPlayerUnitEvent___attack_events_b
-integer array s__2RegisterPlayerUnitEvent___attack_events_b
-integer array s__RegisterPlayerUnitEvent___attack_events_count
-boolexpr array s__RegisterPlayerUnitEvent___spell_events
-boolexpr array s__2RegisterPlayerUnitEvent___spell_events
-integer array s__RegisterPlayerUnitEvent___spell_events_id
-integer array s__2RegisterPlayerUnitEvent___spell_events_id
-integer array s__RegisterPlayerUnitEvent___spell_events_b
-integer array s__2RegisterPlayerUnitEvent___spell_events_b
-integer array s__RegisterPlayerUnitEvent___spell_events_count
-trigger array s__RegisterPlayerUnitEvent___trigger_events
-trigger array s__2RegisterPlayerUnitEvent___trigger_events
-integer array s__RegisterPlayerUnitEvent___trigger_events_count
+integer array s__RegisterPlayerUnitEvent__leave_ids
+boolexpr array s__RegisterPlayerUnitEvent__death_events
+boolexpr array s__2RegisterPlayerUnitEvent__death_events
+integer array s__RegisterPlayerUnitEvent__death_events_b
+integer array s__2RegisterPlayerUnitEvent__death_events_b
+integer array s__RegisterPlayerUnitEvent__death_events_count
+boolexpr array s__RegisterPlayerUnitEvent__attack_events
+boolexpr array s__2RegisterPlayerUnitEvent__attack_events
+integer array s__RegisterPlayerUnitEvent__attack_events_b
+integer array s__2RegisterPlayerUnitEvent__attack_events_b
+integer array s__RegisterPlayerUnitEvent__attack_events_count
+boolexpr array s__RegisterPlayerUnitEvent__spell_events
+boolexpr array s__2RegisterPlayerUnitEvent__spell_events
+integer array s__RegisterPlayerUnitEvent__spell_events_id
+integer array s__2RegisterPlayerUnitEvent__spell_events_id
+integer array s__RegisterPlayerUnitEvent__spell_events_b
+integer array s__2RegisterPlayerUnitEvent__spell_events_b
+integer array s__RegisterPlayerUnitEvent__spell_events_count
+trigger array s__RegisterPlayerUnitEvent__trigger_events
+trigger array s__2RegisterPlayerUnitEvent__trigger_events
+integer array s__RegisterPlayerUnitEvent__trigger_events_count
 group array s__UnitUtils__dummies
 string array s__UnitUtils__ASCII_TABLE
 integer array s__UnitUtils__PLAYER_ARRAY
@@ -4488,13 +4561,13 @@ boolean array s__12HideHeroesSystem__ishidden
 unit array s__ItemKunai__heroes
 unit array s__Bashosen__dummies
 unit array s__ScrollOfTeleportScope__anbus
-dialog array s__SendGoldAndCystal__gd
-button array s__SendGoldAndCystal__gb
-dialog array s__SendGoldAndCystal__cd
-button array s__SendGoldAndCystal__cb
-integer array s__SendGoldAndCystal__g
-integer array s__SendGoldAndCystal__c
-integer array s__SendGoldAndCystal__given
+dialog array s__SendGoldAndCystal___gd
+button array s__SendGoldAndCystal___gb
+dialog array s__SendGoldAndCystal___cd
+button array s__SendGoldAndCystal___cb
+integer array s__SendGoldAndCystal___g
+integer array s__SendGoldAndCystal___c
+integer array s__SendGoldAndCystal___given
 boolean array s__AssistSystem__sai
 integer array s__s__Recipes_recipes
 integer array s__s__Recipes_items
@@ -4741,131 +4814,131 @@ function sg__assisted_set takes integer i,integer v returns nothing
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___death_events_get takes integer i returns boolexpr
+function sg__RegisterPlayerUnitEvent__death_events_get takes integer i returns boolexpr
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___death_events[i]
+        return s__RegisterPlayerUnitEvent__death_events[i]
     else
-        return s__2RegisterPlayerUnitEvent___death_events[i-8191]
+        return s__2RegisterPlayerUnitEvent__death_events[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___death_events_set takes integer i,boolexpr v returns nothing
+function sg__RegisterPlayerUnitEvent__death_events_set takes integer i,boolexpr v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___death_events[i]=v
+        set s__RegisterPlayerUnitEvent__death_events[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___death_events[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__death_events[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___death_events_b_get takes integer i returns integer
+function sg__RegisterPlayerUnitEvent__death_events_b_get takes integer i returns integer
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___death_events_b[i]
+        return s__RegisterPlayerUnitEvent__death_events_b[i]
     else
-        return s__2RegisterPlayerUnitEvent___death_events_b[i-8191]
+        return s__2RegisterPlayerUnitEvent__death_events_b[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___death_events_b_set takes integer i,integer v returns nothing
+function sg__RegisterPlayerUnitEvent__death_events_b_set takes integer i,integer v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___death_events_b[i]=v
+        set s__RegisterPlayerUnitEvent__death_events_b[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___death_events_b[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__death_events_b[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___attack_events_get takes integer i returns boolexpr
+function sg__RegisterPlayerUnitEvent__attack_events_get takes integer i returns boolexpr
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___attack_events[i]
+        return s__RegisterPlayerUnitEvent__attack_events[i]
     else
-        return s__2RegisterPlayerUnitEvent___attack_events[i-8191]
+        return s__2RegisterPlayerUnitEvent__attack_events[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___attack_events_set takes integer i,boolexpr v returns nothing
+function sg__RegisterPlayerUnitEvent__attack_events_set takes integer i,boolexpr v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___attack_events[i]=v
+        set s__RegisterPlayerUnitEvent__attack_events[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___attack_events[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__attack_events[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___attack_events_b_get takes integer i returns integer
+function sg__RegisterPlayerUnitEvent__attack_events_b_get takes integer i returns integer
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___attack_events_b[i]
+        return s__RegisterPlayerUnitEvent__attack_events_b[i]
     else
-        return s__2RegisterPlayerUnitEvent___attack_events_b[i-8191]
+        return s__2RegisterPlayerUnitEvent__attack_events_b[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___attack_events_b_set takes integer i,integer v returns nothing
+function sg__RegisterPlayerUnitEvent__attack_events_b_set takes integer i,integer v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___attack_events_b[i]=v
+        set s__RegisterPlayerUnitEvent__attack_events_b[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___attack_events_b[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__attack_events_b[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_get takes integer i returns boolexpr
+function sg__RegisterPlayerUnitEvent__spell_events_get takes integer i returns boolexpr
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___spell_events[i]
+        return s__RegisterPlayerUnitEvent__spell_events[i]
     else
-        return s__2RegisterPlayerUnitEvent___spell_events[i-8191]
+        return s__2RegisterPlayerUnitEvent__spell_events[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_set takes integer i,boolexpr v returns nothing
+function sg__RegisterPlayerUnitEvent__spell_events_set takes integer i,boolexpr v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___spell_events[i]=v
+        set s__RegisterPlayerUnitEvent__spell_events[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___spell_events[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__spell_events[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_id_get takes integer i returns integer
+function sg__RegisterPlayerUnitEvent__spell_events_id_get takes integer i returns integer
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___spell_events_id[i]
+        return s__RegisterPlayerUnitEvent__spell_events_id[i]
     else
-        return s__2RegisterPlayerUnitEvent___spell_events_id[i-8191]
+        return s__2RegisterPlayerUnitEvent__spell_events_id[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_id_set takes integer i,integer v returns nothing
+function sg__RegisterPlayerUnitEvent__spell_events_id_set takes integer i,integer v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___spell_events_id[i]=v
+        set s__RegisterPlayerUnitEvent__spell_events_id[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___spell_events_id[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__spell_events_id[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_b_get takes integer i returns integer
+function sg__RegisterPlayerUnitEvent__spell_events_b_get takes integer i returns integer
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___spell_events_b[i]
+        return s__RegisterPlayerUnitEvent__spell_events_b[i]
     else
-        return s__2RegisterPlayerUnitEvent___spell_events_b[i-8191]
+        return s__2RegisterPlayerUnitEvent__spell_events_b[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___spell_events_b_set takes integer i,integer v returns nothing
+function sg__RegisterPlayerUnitEvent__spell_events_b_set takes integer i,integer v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___spell_events_b[i]=v
+        set s__RegisterPlayerUnitEvent__spell_events_b[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___spell_events_b[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__spell_events_b[i-8191]=v
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___trigger_events_get takes integer i returns trigger
+function sg__RegisterPlayerUnitEvent__trigger_events_get takes integer i returns trigger
     if(i<8191) then
-        return s__RegisterPlayerUnitEvent___trigger_events[i]
+        return s__RegisterPlayerUnitEvent__trigger_events[i]
     else
-        return s__2RegisterPlayerUnitEvent___trigger_events[i-8191]
+        return s__2RegisterPlayerUnitEvent__trigger_events[i-8191]
     endif
 endfunction
 
-function sg__RegisterPlayerUnitEvent___trigger_events_set takes integer i,trigger v returns nothing
+function sg__RegisterPlayerUnitEvent__trigger_events_set takes integer i,trigger v returns nothing
     if(i<8191) then
-        set s__RegisterPlayerUnitEvent___trigger_events[i]=v
+        set s__RegisterPlayerUnitEvent__trigger_events[i]=v
     else
-        set s__2RegisterPlayerUnitEvent___trigger_events[i-8191]=v
+        set s__2RegisterPlayerUnitEvent__trigger_events[i-8191]=v
     endif
 endfunction
 
@@ -5929,32 +6002,32 @@ function s__BuyAttributes_deallocate takes integer this returns nothing
     set si__BuyAttributes_F=this
 endfunction
 
-//Generated allocator of SendGoldAndCystal__Command
-function s__SendGoldAndCystal__Command__allocate takes nothing returns integer
- local integer this=si__SendGoldAndCystal__Command_F
+//Generated allocator of SendGoldAndCystal___Command
+function s__SendGoldAndCystal___Command__allocate takes nothing returns integer
+ local integer this=si__SendGoldAndCystal___Command_F
     if (this!=0) then
-        set si__SendGoldAndCystal__Command_F=si__SendGoldAndCystal__Command_V[this]
+        set si__SendGoldAndCystal___Command_F=si__SendGoldAndCystal___Command_V[this]
     else
-        set si__SendGoldAndCystal__Command_I=si__SendGoldAndCystal__Command_I+1
-        set this=si__SendGoldAndCystal__Command_I
+        set si__SendGoldAndCystal___Command_I=si__SendGoldAndCystal___Command_I+1
+        set this=si__SendGoldAndCystal___Command_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__SendGoldAndCystal__Command_V[this]=-1
+    set si__SendGoldAndCystal___Command_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of SendGoldAndCystal__Command
-function s__SendGoldAndCystal__Command_deallocate takes integer this returns nothing
+//Generated destructor of SendGoldAndCystal___Command
+function s__SendGoldAndCystal___Command_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__SendGoldAndCystal__Command_V[this]!=-1) then
+    elseif (si__SendGoldAndCystal___Command_V[this]!=-1) then
         return
     endif
-    set si__SendGoldAndCystal__Command_V[this]=si__SendGoldAndCystal__Command_F
-    set si__SendGoldAndCystal__Command_F=this
+    set si__SendGoldAndCystal___Command_V[this]=si__SendGoldAndCystal___Command_F
+    set si__SendGoldAndCystal___Command_F=this
 endfunction
 
 //Generated allocator of TeamDuel
@@ -6797,7 +6870,7 @@ endfunction
 
     //=======================================================================
     function IsArrowKeyPressed takes player whichPlayer,integer arrowKey returns boolean
-        return (s__ArrowKey_press[((GetPlayerId((whichPlayer)))) + (arrowKey) * bj_MAX_PLAYER_SLOTS]) // INLINED!!
+        return s__ArrowKey_isPressed(s__ArrowKey__staticgetindex(whichPlayer),arrowKey)
     endfunction
 
     //=======================================================================
@@ -6921,14 +6994,14 @@ endfunction
             return s__Event_w
         endfunction
         function s__Event_registerTrigger takes integer this,trigger t returns nothing
-            call TriggerRegisterVariableEvent(t, "Event___q", EQUAL, this)
+            call TriggerRegisterVariableEvent(t, "Event__q", EQUAL, this)
         endfunction
         function s__Event_register takes integer this,boolexpr c returns nothing
             call TriggerAddCondition(s__Event_e[this], c)
         endfunction
         function s__Event_fire takes integer this returns nothing
-            set Event___q=0
-            set Event___q=this
+            set Event__q=0
+            set Event__q=this
             call TriggerEvaluate(s__Event_e[this])
         endfunction
     function CreateEvent takes nothing returns integer
@@ -6938,7 +7011,7 @@ endfunction
         call s__Event_registerTrigger(ev,t)
     endfunction
     function RegisterEvent takes boolexpr c,integer ev returns nothing
-        call TriggerAddCondition(s__Event_e[(ev)], (c)) // INLINED!!
+        call s__Event_register(ev,c)
     endfunction
     function FireEvent takes integer ev returns nothing
         call s__Event_fire(ev)
@@ -7047,7 +7120,7 @@ endfunction
         endfunction
    
         function s__User__get_hex takes integer this returns string
-            return PlayerUtils___OriginalHex[GetHandleId((GetPlayerColor(s__User_handle[(this)])))] // INLINED!!
+            return PlayerUtils__OriginalHex[GetHandleId(s__User__get_color(this))]
         endfunction
    
         function s__User__set_color takes integer this,playercolor c returns nothing
@@ -7068,7 +7141,7 @@ endfunction
         endfunction
    
         function s__User__get_nameColored takes integer this returns string
-            return (PlayerUtils___OriginalHex[GetHandleId((GetPlayerColor(s__User_handle[((this))])))]) + (GetPlayerName(s__User_handle[(this)])) + "|r" // INLINED!!
+            return s__User__get_hex(this) + s__User__get_name(this) + "|r"
         endfunction
    
         function s__User_colorUnits takes integer this,playercolor c returns nothing
@@ -7085,11 +7158,11 @@ endfunction
         endfunction
    
         function s__User_onLeave takes nothing returns boolean
-            local integer p= (GetPlayerId((GetTriggerPlayer()))) // INLINED!!
+            local integer p= s__User__staticgetindex(GetTriggerPlayer())
             local integer i= s__User_PlayingPlayerIndex[s__User_id[p]]
        
             // clean up
-            call ForceRemovePlayer(FORCE_PLAYING, (s__User_handle[(p)])) // INLINED!!
+            call ForceRemovePlayer(FORCE_PLAYING, s__User_toPlayer(p))
        
             // recycle index
             set s__User_AmountPlaying=s__User_AmountPlaying - 1
@@ -7111,8 +7184,8 @@ endfunction
             return false
         endfunction
    
-//Implemented from module PlayerUtils___PlayerUtilsInit:
-        function s__User_PlayerUtils___PlayerUtilsInit__onInit takes nothing returns nothing
+//Implemented from module PlayerUtils__PlayerUtilsInit:
+        function s__User_PlayerUtils__PlayerUtilsInit__onInit takes nothing returns nothing
             local trigger t= CreateTrigger()
             local integer i= 0
             local integer p
@@ -7120,18 +7193,18 @@ endfunction
             set s__User_Local=GetLocalPlayer()
             set s__User_LocalId=GetPlayerId(s__User_Local)
        
-            set PlayerUtils___OriginalHex[0]="|cffff0303"
-            set PlayerUtils___OriginalHex[1]="|cff0042ff"
-            set PlayerUtils___OriginalHex[2]="|cff1ce6b9"
-            set PlayerUtils___OriginalHex[3]="|cff540081"
-            set PlayerUtils___OriginalHex[4]="|cfffffc01"
-            set PlayerUtils___OriginalHex[5]="|cfffe8a0e"
-            set PlayerUtils___OriginalHex[6]="|cff20c000"
-            set PlayerUtils___OriginalHex[7]="|cffe55bb0"
-            set PlayerUtils___OriginalHex[8]="|cff959697"
-            set PlayerUtils___OriginalHex[9]="|cff7ebff1"
-            set PlayerUtils___OriginalHex[10]="|cff106246"
-            set PlayerUtils___OriginalHex[11]="|cff4e2a04"
+            set PlayerUtils__OriginalHex[0]="|cffff0303"
+            set PlayerUtils__OriginalHex[1]="|cff0042ff"
+            set PlayerUtils__OriginalHex[2]="|cff1ce6b9"
+            set PlayerUtils__OriginalHex[3]="|cff540081"
+            set PlayerUtils__OriginalHex[4]="|cfffffc01"
+            set PlayerUtils__OriginalHex[5]="|cfffe8a0e"
+            set PlayerUtils__OriginalHex[6]="|cff20c000"
+            set PlayerUtils__OriginalHex[7]="|cffe55bb0"
+            set PlayerUtils__OriginalHex[8]="|cff959697"
+            set PlayerUtils__OriginalHex[9]="|cff7ebff1"
+            set PlayerUtils__OriginalHex[10]="|cff106246"
+            set PlayerUtils__OriginalHex[11]="|cff4e2a04"
          
             set s__User_first=s__User_NULL
 
@@ -7143,7 +7216,7 @@ endfunction
                 set s__User_id[p]=i
            
                 set s__User_Color[i]=GetPlayerColor(s__User_handle[p])
-                set PlayerUtils___CurrentColor[i]=s__User_Color[i]
+                set PlayerUtils__CurrentColor[i]=s__User_Color[i]
              
                 if ( GetPlayerController(s__User_handle[p]) == MAP_CONTROL_USER and GetPlayerSlotState(s__User_handle[p]) == PLAYER_SLOT_STATE_PLAYING ) then
 
@@ -7167,14 +7240,14 @@ endfunction
                     call TriggerRegisterPlayerEvent(t, s__User_handle[p], EVENT_PLAYER_LEAVE)
                     call ForceAddPlayer(FORCE_PLAYING, s__User_handle[p])
                
-                    set PlayerUtils___Hex[p]=PlayerUtils___OriginalHex[GetHandleId(s__User_Color[i])]
+                    set PlayerUtils__Hex[p]=PlayerUtils__OriginalHex[GetHandleId(s__User_Color[i])]
                
                     set s__User_AmountPlaying=s__User_AmountPlaying + 1
 
                 endif
            
-                set PlayerUtils___Name[p]=GetPlayerName(s__User_handle[p])
-                set s__User_originalName[p]=PlayerUtils___Name[p]
+                set PlayerUtils__Name[p]=GetPlayerName(s__User_handle[p])
+                set s__User_originalName[p]=PlayerUtils__Name[p]
            
                 set i=i + 1
             endloop
@@ -7288,22 +7361,22 @@ endfunction
 //library Table:
     
     
-    function s__Table___dex__get_size takes nothing returns integer
-        return Table___sizeK
+    function s__Table__dex__get_size takes nothing returns integer
+        return Table__sizeK
     endfunction
-    function s__Table___dex__get_list takes nothing returns integer
-        return Table___listK
-    endfunction
-    
-    function s__Table___handles_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
-    endfunction
-    function s__Table___handles_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__dex__get_list takes nothing returns integer
+        return Table__listK
     endfunction
     
-    function s__Table___agents__setindex takes integer this,integer key,agent value returns nothing
-        call SaveAgentHandle(Table___ht, this, key, value)
+    function s__Table__handles_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
+    endfunction
+    function s__Table__handles_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
+    endfunction
+    
+    function s__Table__agents__setindex takes integer this,integer key,agent value returns nothing
+        call SaveAgentHandle(Table__ht, this, key, value)
     endfunction
     
     
@@ -7312,763 +7385,763 @@ endfunction
 //Don't be intimidated by the number of macros - Vexorian's map optimizer is
 //supposed to kill functions which inline (all of these functions inline).
 //textmacro instance: NEW_ARRAY_BASIC("Real", "Real", "real")
-    function s__Table___reals__getindex takes integer this,integer key returns real
-        return LoadReal(Table___ht, this, key)
+    function s__Table__reals__getindex takes integer this,integer key returns real
+        return LoadReal(Table__ht, this, key)
     endfunction
-    function s__Table___reals__setindex takes integer this,integer key,real value returns nothing
-        call SaveReal(Table___ht, this, key, value)
+    function s__Table__reals__setindex takes integer this,integer key,real value returns nothing
+        call SaveReal(Table__ht, this, key, value)
     endfunction
-    function s__Table___reals_has takes integer this,integer key returns boolean
-        return HaveSavedReal(Table___ht, this, key)
+    function s__Table__reals_has takes integer this,integer key returns boolean
+        return HaveSavedReal(Table__ht, this, key)
     endfunction
-    function s__Table___reals_remove takes integer this,integer key returns nothing
-        call RemoveSavedReal(Table___ht, this, key)
+    function s__Table__reals_remove takes integer this,integer key returns nothing
+        call RemoveSavedReal(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY_BASIC("Real", "Real", "real")
 //textmacro instance: NEW_ARRAY_BASIC("Boolean", "Boolean", "boolean")
-    function s__Table___booleans__getindex takes integer this,integer key returns boolean
-        return LoadBoolean(Table___ht, this, key)
+    function s__Table__booleans__getindex takes integer this,integer key returns boolean
+        return LoadBoolean(Table__ht, this, key)
     endfunction
-    function s__Table___booleans__setindex takes integer this,integer key,boolean value returns nothing
-        call SaveBoolean(Table___ht, this, key, value)
+    function s__Table__booleans__setindex takes integer this,integer key,boolean value returns nothing
+        call SaveBoolean(Table__ht, this, key, value)
     endfunction
-    function s__Table___booleans_has takes integer this,integer key returns boolean
-        return HaveSavedBoolean(Table___ht, this, key)
+    function s__Table__booleans_has takes integer this,integer key returns boolean
+        return HaveSavedBoolean(Table__ht, this, key)
     endfunction
-    function s__Table___booleans_remove takes integer this,integer key returns nothing
-        call RemoveSavedBoolean(Table___ht, this, key)
+    function s__Table__booleans_remove takes integer this,integer key returns nothing
+        call RemoveSavedBoolean(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY_BASIC("Boolean", "Boolean", "boolean")
 //textmacro instance: NEW_ARRAY_BASIC("String", "Str", "string")
-    function s__Table___strings__getindex takes integer this,integer key returns string
-        return LoadStr(Table___ht, this, key)
+    function s__Table__strings__getindex takes integer this,integer key returns string
+        return LoadStr(Table__ht, this, key)
     endfunction
-    function s__Table___strings__setindex takes integer this,integer key,string value returns nothing
-        call SaveStr(Table___ht, this, key, value)
+    function s__Table__strings__setindex takes integer this,integer key,string value returns nothing
+        call SaveStr(Table__ht, this, key, value)
     endfunction
-    function s__Table___strings_has takes integer this,integer key returns boolean
-        return HaveSavedString(Table___ht, this, key)
+    function s__Table__strings_has takes integer this,integer key returns boolean
+        return HaveSavedString(Table__ht, this, key)
     endfunction
-    function s__Table___strings_remove takes integer this,integer key returns nothing
-        call RemoveSavedString(Table___ht, this, key)
+    function s__Table__strings_remove takes integer this,integer key returns nothing
+        call RemoveSavedString(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY_BASIC("String", "Str", "string")
 //New textmacro to allow table.integer[] syntax for compatibility with textmacros that might desire it.
 //textmacro instance: NEW_ARRAY_BASIC("Integer", "Integer", "integer")
-    function s__Table___integers__getindex takes integer this,integer key returns integer
-        return LoadInteger(Table___ht, this, key)
+    function s__Table__integers__getindex takes integer this,integer key returns integer
+        return LoadInteger(Table__ht, this, key)
     endfunction
-    function s__Table___integers__setindex takes integer this,integer key,integer value returns nothing
-        call SaveInteger(Table___ht, this, key, value)
+    function s__Table__integers__setindex takes integer this,integer key,integer value returns nothing
+        call SaveInteger(Table__ht, this, key, value)
     endfunction
-    function s__Table___integers_has takes integer this,integer key returns boolean
-        return HaveSavedInteger(Table___ht, this, key)
+    function s__Table__integers_has takes integer this,integer key returns boolean
+        return HaveSavedInteger(Table__ht, this, key)
     endfunction
-    function s__Table___integers_remove takes integer this,integer key returns nothing
-        call RemoveSavedInteger(Table___ht, this, key)
+    function s__Table__integers_remove takes integer this,integer key returns nothing
+        call RemoveSavedInteger(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY_BASIC("Integer", "Integer", "integer")
     
 //textmacro instance: NEW_ARRAY("Player", "player")
-    function s__Table___players__getindex takes integer this,integer key returns player
-        return LoadPlayerHandle(Table___ht, this, key)
+    function s__Table__players__getindex takes integer this,integer key returns player
+        return LoadPlayerHandle(Table__ht, this, key)
     endfunction
-    function s__Table___players__setindex takes integer this,integer key,player value returns nothing
-        call SavePlayerHandle(Table___ht, this, key, value)
+    function s__Table__players__setindex takes integer this,integer key,player value returns nothing
+        call SavePlayerHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___players_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__players_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___players_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__players_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Player", "player")
 //textmacro instance: NEW_ARRAY("Widget", "widget")
-    function s__Table___widgets__getindex takes integer this,integer key returns widget
-        return LoadWidgetHandle(Table___ht, this, key)
+    function s__Table__widgets__getindex takes integer this,integer key returns widget
+        return LoadWidgetHandle(Table__ht, this, key)
     endfunction
-    function s__Table___widgets__setindex takes integer this,integer key,widget value returns nothing
-        call SaveWidgetHandle(Table___ht, this, key, value)
+    function s__Table__widgets__setindex takes integer this,integer key,widget value returns nothing
+        call SaveWidgetHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___widgets_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__widgets_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___widgets_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__widgets_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Widget", "widget")
 //textmacro instance: NEW_ARRAY("Destructable", "destructable")
-    function s__Table___destructables__getindex takes integer this,integer key returns destructable
-        return LoadDestructableHandle(Table___ht, this, key)
+    function s__Table__destructables__getindex takes integer this,integer key returns destructable
+        return LoadDestructableHandle(Table__ht, this, key)
     endfunction
-    function s__Table___destructables__setindex takes integer this,integer key,destructable value returns nothing
-        call SaveDestructableHandle(Table___ht, this, key, value)
+    function s__Table__destructables__setindex takes integer this,integer key,destructable value returns nothing
+        call SaveDestructableHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___destructables_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__destructables_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___destructables_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__destructables_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Destructable", "destructable")
 //textmacro instance: NEW_ARRAY("Item", "item")
-    function s__Table___items__getindex takes integer this,integer key returns item
-        return LoadItemHandle(Table___ht, this, key)
+    function s__Table__items__getindex takes integer this,integer key returns item
+        return LoadItemHandle(Table__ht, this, key)
     endfunction
-    function s__Table___items__setindex takes integer this,integer key,item value returns nothing
-        call SaveItemHandle(Table___ht, this, key, value)
+    function s__Table__items__setindex takes integer this,integer key,item value returns nothing
+        call SaveItemHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___items_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__items_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___items_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__items_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Item", "item")
 //textmacro instance: NEW_ARRAY("Unit", "unit")
-    function s__Table___units__getindex takes integer this,integer key returns unit
-        return LoadUnitHandle(Table___ht, this, key)
+    function s__Table__units__getindex takes integer this,integer key returns unit
+        return LoadUnitHandle(Table__ht, this, key)
     endfunction
-    function s__Table___units__setindex takes integer this,integer key,unit value returns nothing
-        call SaveUnitHandle(Table___ht, this, key, value)
+    function s__Table__units__setindex takes integer this,integer key,unit value returns nothing
+        call SaveUnitHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___units_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__units_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___units_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__units_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Unit", "unit")
 //textmacro instance: NEW_ARRAY("Ability", "ability")
-    function s__Table___abilitys__getindex takes integer this,integer key returns ability
-        return LoadAbilityHandle(Table___ht, this, key)
+    function s__Table__abilitys__getindex takes integer this,integer key returns ability
+        return LoadAbilityHandle(Table__ht, this, key)
     endfunction
-    function s__Table___abilitys__setindex takes integer this,integer key,ability value returns nothing
-        call SaveAbilityHandle(Table___ht, this, key, value)
+    function s__Table__abilitys__setindex takes integer this,integer key,ability value returns nothing
+        call SaveAbilityHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___abilitys_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__abilitys_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___abilitys_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__abilitys_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Ability", "ability")
 //textmacro instance: NEW_ARRAY("Timer", "timer")
-    function s__Table___timers__getindex takes integer this,integer key returns timer
-        return LoadTimerHandle(Table___ht, this, key)
+    function s__Table__timers__getindex takes integer this,integer key returns timer
+        return LoadTimerHandle(Table__ht, this, key)
     endfunction
-    function s__Table___timers__setindex takes integer this,integer key,timer value returns nothing
-        call SaveTimerHandle(Table___ht, this, key, value)
+    function s__Table__timers__setindex takes integer this,integer key,timer value returns nothing
+        call SaveTimerHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___timers_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__timers_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___timers_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__timers_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Timer", "timer")
 //textmacro instance: NEW_ARRAY("Trigger", "trigger")
-    function s__Table___triggers__getindex takes integer this,integer key returns trigger
-        return LoadTriggerHandle(Table___ht, this, key)
+    function s__Table__triggers__getindex takes integer this,integer key returns trigger
+        return LoadTriggerHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggers__setindex takes integer this,integer key,trigger value returns nothing
-        call SaveTriggerHandle(Table___ht, this, key, value)
+    function s__Table__triggers__setindex takes integer this,integer key,trigger value returns nothing
+        call SaveTriggerHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___triggers_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__triggers_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggers_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__triggers_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Trigger", "trigger")
 //textmacro instance: NEW_ARRAY("TriggerCondition", "triggercondition")
-    function s__Table___triggerconditions__getindex takes integer this,integer key returns triggercondition
-        return LoadTriggerConditionHandle(Table___ht, this, key)
+    function s__Table__triggerconditions__getindex takes integer this,integer key returns triggercondition
+        return LoadTriggerConditionHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggerconditions__setindex takes integer this,integer key,triggercondition value returns nothing
-        call SaveTriggerConditionHandle(Table___ht, this, key, value)
+    function s__Table__triggerconditions__setindex takes integer this,integer key,triggercondition value returns nothing
+        call SaveTriggerConditionHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___triggerconditions_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__triggerconditions_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggerconditions_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__triggerconditions_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("TriggerCondition", "triggercondition")
 //textmacro instance: NEW_ARRAY("TriggerAction", "triggeraction")
-    function s__Table___triggeractions__getindex takes integer this,integer key returns triggeraction
-        return LoadTriggerActionHandle(Table___ht, this, key)
+    function s__Table__triggeractions__getindex takes integer this,integer key returns triggeraction
+        return LoadTriggerActionHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggeractions__setindex takes integer this,integer key,triggeraction value returns nothing
-        call SaveTriggerActionHandle(Table___ht, this, key, value)
+    function s__Table__triggeractions__setindex takes integer this,integer key,triggeraction value returns nothing
+        call SaveTriggerActionHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___triggeractions_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__triggeractions_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___triggeractions_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__triggeractions_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("TriggerAction", "triggeraction")
 //textmacro instance: NEW_ARRAY("TriggerEvent", "event")
-    function s__Table___events__getindex takes integer this,integer key returns event
-        return LoadTriggerEventHandle(Table___ht, this, key)
+    function s__Table__events__getindex takes integer this,integer key returns event
+        return LoadTriggerEventHandle(Table__ht, this, key)
     endfunction
-    function s__Table___events__setindex takes integer this,integer key,event value returns nothing
-        call SaveTriggerEventHandle(Table___ht, this, key, value)
+    function s__Table__events__setindex takes integer this,integer key,event value returns nothing
+        call SaveTriggerEventHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___events_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__events_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___events_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__events_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("TriggerEvent", "event")
 //textmacro instance: NEW_ARRAY("Force", "force")
-    function s__Table___forces__getindex takes integer this,integer key returns force
-        return LoadForceHandle(Table___ht, this, key)
+    function s__Table__forces__getindex takes integer this,integer key returns force
+        return LoadForceHandle(Table__ht, this, key)
     endfunction
-    function s__Table___forces__setindex takes integer this,integer key,force value returns nothing
-        call SaveForceHandle(Table___ht, this, key, value)
+    function s__Table__forces__setindex takes integer this,integer key,force value returns nothing
+        call SaveForceHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___forces_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__forces_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___forces_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__forces_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Force", "force")
 //textmacro instance: NEW_ARRAY("Group", "group")
-    function s__Table___groups__getindex takes integer this,integer key returns group
-        return LoadGroupHandle(Table___ht, this, key)
+    function s__Table__groups__getindex takes integer this,integer key returns group
+        return LoadGroupHandle(Table__ht, this, key)
     endfunction
-    function s__Table___groups__setindex takes integer this,integer key,group value returns nothing
-        call SaveGroupHandle(Table___ht, this, key, value)
+    function s__Table__groups__setindex takes integer this,integer key,group value returns nothing
+        call SaveGroupHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___groups_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__groups_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___groups_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__groups_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Group", "group")
 //textmacro instance: NEW_ARRAY("Location", "location")
-    function s__Table___locations__getindex takes integer this,integer key returns location
-        return LoadLocationHandle(Table___ht, this, key)
+    function s__Table__locations__getindex takes integer this,integer key returns location
+        return LoadLocationHandle(Table__ht, this, key)
     endfunction
-    function s__Table___locations__setindex takes integer this,integer key,location value returns nothing
-        call SaveLocationHandle(Table___ht, this, key, value)
+    function s__Table__locations__setindex takes integer this,integer key,location value returns nothing
+        call SaveLocationHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___locations_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__locations_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___locations_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__locations_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Location", "location")
 //textmacro instance: NEW_ARRAY("Rect", "rect")
-    function s__Table___rects__getindex takes integer this,integer key returns rect
-        return LoadRectHandle(Table___ht, this, key)
+    function s__Table__rects__getindex takes integer this,integer key returns rect
+        return LoadRectHandle(Table__ht, this, key)
     endfunction
-    function s__Table___rects__setindex takes integer this,integer key,rect value returns nothing
-        call SaveRectHandle(Table___ht, this, key, value)
+    function s__Table__rects__setindex takes integer this,integer key,rect value returns nothing
+        call SaveRectHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___rects_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__rects_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___rects_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__rects_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Rect", "rect")
 //textmacro instance: NEW_ARRAY("BooleanExpr", "boolexpr")
-    function s__Table___boolexprs__getindex takes integer this,integer key returns boolexpr
-        return LoadBooleanExprHandle(Table___ht, this, key)
+    function s__Table__boolexprs__getindex takes integer this,integer key returns boolexpr
+        return LoadBooleanExprHandle(Table__ht, this, key)
     endfunction
-    function s__Table___boolexprs__setindex takes integer this,integer key,boolexpr value returns nothing
-        call SaveBooleanExprHandle(Table___ht, this, key, value)
+    function s__Table__boolexprs__setindex takes integer this,integer key,boolexpr value returns nothing
+        call SaveBooleanExprHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___boolexprs_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__boolexprs_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___boolexprs_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__boolexprs_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("BooleanExpr", "boolexpr")
 //textmacro instance: NEW_ARRAY("Sound", "sound")
-    function s__Table___sounds__getindex takes integer this,integer key returns sound
-        return LoadSoundHandle(Table___ht, this, key)
+    function s__Table__sounds__getindex takes integer this,integer key returns sound
+        return LoadSoundHandle(Table__ht, this, key)
     endfunction
-    function s__Table___sounds__setindex takes integer this,integer key,sound value returns nothing
-        call SaveSoundHandle(Table___ht, this, key, value)
+    function s__Table__sounds__setindex takes integer this,integer key,sound value returns nothing
+        call SaveSoundHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___sounds_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__sounds_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___sounds_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__sounds_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Sound", "sound")
 //textmacro instance: NEW_ARRAY("Effect", "effect")
-    function s__Table___effects__getindex takes integer this,integer key returns effect
-        return LoadEffectHandle(Table___ht, this, key)
+    function s__Table__effects__getindex takes integer this,integer key returns effect
+        return LoadEffectHandle(Table__ht, this, key)
     endfunction
-    function s__Table___effects__setindex takes integer this,integer key,effect value returns nothing
-        call SaveEffectHandle(Table___ht, this, key, value)
+    function s__Table__effects__setindex takes integer this,integer key,effect value returns nothing
+        call SaveEffectHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___effects_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__effects_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___effects_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__effects_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Effect", "effect")
 //textmacro instance: NEW_ARRAY("UnitPool", "unitpool")
-    function s__Table___unitpools__getindex takes integer this,integer key returns unitpool
-        return LoadUnitPoolHandle(Table___ht, this, key)
+    function s__Table__unitpools__getindex takes integer this,integer key returns unitpool
+        return LoadUnitPoolHandle(Table__ht, this, key)
     endfunction
-    function s__Table___unitpools__setindex takes integer this,integer key,unitpool value returns nothing
-        call SaveUnitPoolHandle(Table___ht, this, key, value)
+    function s__Table__unitpools__setindex takes integer this,integer key,unitpool value returns nothing
+        call SaveUnitPoolHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___unitpools_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__unitpools_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___unitpools_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__unitpools_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("UnitPool", "unitpool")
 //textmacro instance: NEW_ARRAY("ItemPool", "itempool")
-    function s__Table___itempools__getindex takes integer this,integer key returns itempool
-        return LoadItemPoolHandle(Table___ht, this, key)
+    function s__Table__itempools__getindex takes integer this,integer key returns itempool
+        return LoadItemPoolHandle(Table__ht, this, key)
     endfunction
-    function s__Table___itempools__setindex takes integer this,integer key,itempool value returns nothing
-        call SaveItemPoolHandle(Table___ht, this, key, value)
+    function s__Table__itempools__setindex takes integer this,integer key,itempool value returns nothing
+        call SaveItemPoolHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___itempools_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__itempools_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___itempools_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__itempools_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("ItemPool", "itempool")
 //textmacro instance: NEW_ARRAY("Quest", "quest")
-    function s__Table___quests__getindex takes integer this,integer key returns quest
-        return LoadQuestHandle(Table___ht, this, key)
+    function s__Table__quests__getindex takes integer this,integer key returns quest
+        return LoadQuestHandle(Table__ht, this, key)
     endfunction
-    function s__Table___quests__setindex takes integer this,integer key,quest value returns nothing
-        call SaveQuestHandle(Table___ht, this, key, value)
+    function s__Table__quests__setindex takes integer this,integer key,quest value returns nothing
+        call SaveQuestHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___quests_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__quests_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___quests_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__quests_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Quest", "quest")
 //textmacro instance: NEW_ARRAY("QuestItem", "questitem")
-    function s__Table___questitems__getindex takes integer this,integer key returns questitem
-        return LoadQuestItemHandle(Table___ht, this, key)
+    function s__Table__questitems__getindex takes integer this,integer key returns questitem
+        return LoadQuestItemHandle(Table__ht, this, key)
     endfunction
-    function s__Table___questitems__setindex takes integer this,integer key,questitem value returns nothing
-        call SaveQuestItemHandle(Table___ht, this, key, value)
+    function s__Table__questitems__setindex takes integer this,integer key,questitem value returns nothing
+        call SaveQuestItemHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___questitems_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__questitems_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___questitems_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__questitems_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("QuestItem", "questitem")
 //textmacro instance: NEW_ARRAY("DefeatCondition", "defeatcondition")
-    function s__Table___defeatconditions__getindex takes integer this,integer key returns defeatcondition
-        return LoadDefeatConditionHandle(Table___ht, this, key)
+    function s__Table__defeatconditions__getindex takes integer this,integer key returns defeatcondition
+        return LoadDefeatConditionHandle(Table__ht, this, key)
     endfunction
-    function s__Table___defeatconditions__setindex takes integer this,integer key,defeatcondition value returns nothing
-        call SaveDefeatConditionHandle(Table___ht, this, key, value)
+    function s__Table__defeatconditions__setindex takes integer this,integer key,defeatcondition value returns nothing
+        call SaveDefeatConditionHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___defeatconditions_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__defeatconditions_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___defeatconditions_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__defeatconditions_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("DefeatCondition", "defeatcondition")
 //textmacro instance: NEW_ARRAY("TimerDialog", "timerdialog")
-    function s__Table___timerdialogs__getindex takes integer this,integer key returns timerdialog
-        return LoadTimerDialogHandle(Table___ht, this, key)
+    function s__Table__timerdialogs__getindex takes integer this,integer key returns timerdialog
+        return LoadTimerDialogHandle(Table__ht, this, key)
     endfunction
-    function s__Table___timerdialogs__setindex takes integer this,integer key,timerdialog value returns nothing
-        call SaveTimerDialogHandle(Table___ht, this, key, value)
+    function s__Table__timerdialogs__setindex takes integer this,integer key,timerdialog value returns nothing
+        call SaveTimerDialogHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___timerdialogs_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__timerdialogs_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___timerdialogs_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__timerdialogs_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("TimerDialog", "timerdialog")
 //textmacro instance: NEW_ARRAY("Leaderboard", "leaderboard")
-    function s__Table___leaderboards__getindex takes integer this,integer key returns leaderboard
-        return LoadLeaderboardHandle(Table___ht, this, key)
+    function s__Table__leaderboards__getindex takes integer this,integer key returns leaderboard
+        return LoadLeaderboardHandle(Table__ht, this, key)
     endfunction
-    function s__Table___leaderboards__setindex takes integer this,integer key,leaderboard value returns nothing
-        call SaveLeaderboardHandle(Table___ht, this, key, value)
+    function s__Table__leaderboards__setindex takes integer this,integer key,leaderboard value returns nothing
+        call SaveLeaderboardHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___leaderboards_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__leaderboards_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___leaderboards_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__leaderboards_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Leaderboard", "leaderboard")
 //textmacro instance: NEW_ARRAY("Multiboard", "multiboard")
-    function s__Table___multiboards__getindex takes integer this,integer key returns multiboard
-        return LoadMultiboardHandle(Table___ht, this, key)
+    function s__Table__multiboards__getindex takes integer this,integer key returns multiboard
+        return LoadMultiboardHandle(Table__ht, this, key)
     endfunction
-    function s__Table___multiboards__setindex takes integer this,integer key,multiboard value returns nothing
-        call SaveMultiboardHandle(Table___ht, this, key, value)
+    function s__Table__multiboards__setindex takes integer this,integer key,multiboard value returns nothing
+        call SaveMultiboardHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___multiboards_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__multiboards_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___multiboards_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__multiboards_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Multiboard", "multiboard")
 //textmacro instance: NEW_ARRAY("MultiboardItem", "multiboarditem")
-    function s__Table___multiboarditems__getindex takes integer this,integer key returns multiboarditem
-        return LoadMultiboardItemHandle(Table___ht, this, key)
+    function s__Table__multiboarditems__getindex takes integer this,integer key returns multiboarditem
+        return LoadMultiboardItemHandle(Table__ht, this, key)
     endfunction
-    function s__Table___multiboarditems__setindex takes integer this,integer key,multiboarditem value returns nothing
-        call SaveMultiboardItemHandle(Table___ht, this, key, value)
+    function s__Table__multiboarditems__setindex takes integer this,integer key,multiboarditem value returns nothing
+        call SaveMultiboardItemHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___multiboarditems_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__multiboarditems_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___multiboarditems_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__multiboarditems_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("MultiboardItem", "multiboarditem")
 //textmacro instance: NEW_ARRAY("Trackable", "trackable")
-    function s__Table___trackables__getindex takes integer this,integer key returns trackable
-        return LoadTrackableHandle(Table___ht, this, key)
+    function s__Table__trackables__getindex takes integer this,integer key returns trackable
+        return LoadTrackableHandle(Table__ht, this, key)
     endfunction
-    function s__Table___trackables__setindex takes integer this,integer key,trackable value returns nothing
-        call SaveTrackableHandle(Table___ht, this, key, value)
+    function s__Table__trackables__setindex takes integer this,integer key,trackable value returns nothing
+        call SaveTrackableHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___trackables_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__trackables_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___trackables_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__trackables_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Trackable", "trackable")
 //textmacro instance: NEW_ARRAY("Dialog", "dialog")
-    function s__Table___dialogs__getindex takes integer this,integer key returns dialog
-        return LoadDialogHandle(Table___ht, this, key)
+    function s__Table__dialogs__getindex takes integer this,integer key returns dialog
+        return LoadDialogHandle(Table__ht, this, key)
     endfunction
-    function s__Table___dialogs__setindex takes integer this,integer key,dialog value returns nothing
-        call SaveDialogHandle(Table___ht, this, key, value)
+    function s__Table__dialogs__setindex takes integer this,integer key,dialog value returns nothing
+        call SaveDialogHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___dialogs_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__dialogs_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___dialogs_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__dialogs_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Dialog", "dialog")
 //textmacro instance: NEW_ARRAY("Button", "button")
-    function s__Table___buttons__getindex takes integer this,integer key returns button
-        return LoadButtonHandle(Table___ht, this, key)
+    function s__Table__buttons__getindex takes integer this,integer key returns button
+        return LoadButtonHandle(Table__ht, this, key)
     endfunction
-    function s__Table___buttons__setindex takes integer this,integer key,button value returns nothing
-        call SaveButtonHandle(Table___ht, this, key, value)
+    function s__Table__buttons__setindex takes integer this,integer key,button value returns nothing
+        call SaveButtonHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___buttons_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__buttons_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___buttons_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__buttons_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Button", "button")
 //textmacro instance: NEW_ARRAY("TextTag", "texttag")
-    function s__Table___texttags__getindex takes integer this,integer key returns texttag
-        return LoadTextTagHandle(Table___ht, this, key)
+    function s__Table__texttags__getindex takes integer this,integer key returns texttag
+        return LoadTextTagHandle(Table__ht, this, key)
     endfunction
-    function s__Table___texttags__setindex takes integer this,integer key,texttag value returns nothing
-        call SaveTextTagHandle(Table___ht, this, key, value)
+    function s__Table__texttags__setindex takes integer this,integer key,texttag value returns nothing
+        call SaveTextTagHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___texttags_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__texttags_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___texttags_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__texttags_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("TextTag", "texttag")
 //textmacro instance: NEW_ARRAY("Lightning", "lightning")
-    function s__Table___lightnings__getindex takes integer this,integer key returns lightning
-        return LoadLightningHandle(Table___ht, this, key)
+    function s__Table__lightnings__getindex takes integer this,integer key returns lightning
+        return LoadLightningHandle(Table__ht, this, key)
     endfunction
-    function s__Table___lightnings__setindex takes integer this,integer key,lightning value returns nothing
-        call SaveLightningHandle(Table___ht, this, key, value)
+    function s__Table__lightnings__setindex takes integer this,integer key,lightning value returns nothing
+        call SaveLightningHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___lightnings_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__lightnings_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___lightnings_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__lightnings_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Lightning", "lightning")
 //textmacro instance: NEW_ARRAY("Image", "image")
-    function s__Table___images__getindex takes integer this,integer key returns image
-        return LoadImageHandle(Table___ht, this, key)
+    function s__Table__images__getindex takes integer this,integer key returns image
+        return LoadImageHandle(Table__ht, this, key)
     endfunction
-    function s__Table___images__setindex takes integer this,integer key,image value returns nothing
-        call SaveImageHandle(Table___ht, this, key, value)
+    function s__Table__images__setindex takes integer this,integer key,image value returns nothing
+        call SaveImageHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___images_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__images_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___images_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__images_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Image", "image")
 //textmacro instance: NEW_ARRAY("Ubersplat", "ubersplat")
-    function s__Table___ubersplats__getindex takes integer this,integer key returns ubersplat
-        return LoadUbersplatHandle(Table___ht, this, key)
+    function s__Table__ubersplats__getindex takes integer this,integer key returns ubersplat
+        return LoadUbersplatHandle(Table__ht, this, key)
     endfunction
-    function s__Table___ubersplats__setindex takes integer this,integer key,ubersplat value returns nothing
-        call SaveUbersplatHandle(Table___ht, this, key, value)
+    function s__Table__ubersplats__setindex takes integer this,integer key,ubersplat value returns nothing
+        call SaveUbersplatHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___ubersplats_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__ubersplats_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___ubersplats_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__ubersplats_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Ubersplat", "ubersplat")
 //textmacro instance: NEW_ARRAY("Region", "region")
-    function s__Table___regions__getindex takes integer this,integer key returns region
-        return LoadRegionHandle(Table___ht, this, key)
+    function s__Table__regions__getindex takes integer this,integer key returns region
+        return LoadRegionHandle(Table__ht, this, key)
     endfunction
-    function s__Table___regions__setindex takes integer this,integer key,region value returns nothing
-        call SaveRegionHandle(Table___ht, this, key, value)
+    function s__Table__regions__setindex takes integer this,integer key,region value returns nothing
+        call SaveRegionHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___regions_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__regions_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___regions_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__regions_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Region", "region")
 //textmacro instance: NEW_ARRAY("FogState", "fogstate")
-    function s__Table___fogstates__getindex takes integer this,integer key returns fogstate
-        return LoadFogStateHandle(Table___ht, this, key)
+    function s__Table__fogstates__getindex takes integer this,integer key returns fogstate
+        return LoadFogStateHandle(Table__ht, this, key)
     endfunction
-    function s__Table___fogstates__setindex takes integer this,integer key,fogstate value returns nothing
-        call SaveFogStateHandle(Table___ht, this, key, value)
+    function s__Table__fogstates__setindex takes integer this,integer key,fogstate value returns nothing
+        call SaveFogStateHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___fogstates_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__fogstates_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___fogstates_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__fogstates_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("FogState", "fogstate")
 //textmacro instance: NEW_ARRAY("FogModifier", "fogmodifier")
-    function s__Table___fogmodifiers__getindex takes integer this,integer key returns fogmodifier
-        return LoadFogModifierHandle(Table___ht, this, key)
+    function s__Table__fogmodifiers__getindex takes integer this,integer key returns fogmodifier
+        return LoadFogModifierHandle(Table__ht, this, key)
     endfunction
-    function s__Table___fogmodifiers__setindex takes integer this,integer key,fogmodifier value returns nothing
-        call SaveFogModifierHandle(Table___ht, this, key, value)
+    function s__Table__fogmodifiers__setindex takes integer this,integer key,fogmodifier value returns nothing
+        call SaveFogModifierHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___fogmodifiers_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__fogmodifiers_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___fogmodifiers_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__fogmodifiers_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("FogModifier", "fogmodifier")
 //textmacro instance: NEW_ARRAY("Hashtable", "hashtable")
-    function s__Table___hashtables__getindex takes integer this,integer key returns hashtable
-        return LoadHashtableHandle(Table___ht, this, key)
+    function s__Table__hashtables__getindex takes integer this,integer key returns hashtable
+        return LoadHashtableHandle(Table__ht, this, key)
     endfunction
-    function s__Table___hashtables__setindex takes integer this,integer key,hashtable value returns nothing
-        call SaveHashtableHandle(Table___ht, this, key, value)
+    function s__Table__hashtables__setindex takes integer this,integer key,hashtable value returns nothing
+        call SaveHashtableHandle(Table__ht, this, key, value)
     endfunction
-    function s__Table___hashtables_has takes integer this,integer key returns boolean
-        return HaveSavedHandle(Table___ht, this, key)
+    function s__Table__hashtables_has takes integer this,integer key returns boolean
+        return HaveSavedHandle(Table__ht, this, key)
     endfunction
-    function s__Table___hashtables_remove takes integer this,integer key returns nothing
-        call RemoveSavedHandle(Table___ht, this, key)
+    function s__Table__hashtables_remove takes integer this,integer key returns nothing
+        call RemoveSavedHandle(Table__ht, this, key)
     endfunction
 //end of: NEW_ARRAY("Hashtable", "hashtable")
     
     
     // Implement modules for intuitive syntax (tb.handle; tb.unit; etc.)
-//Implemented from module Table___realm:
+//Implemented from module Table__realm:
     function s__Table__get_real takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___integerm:
+//Implemented from module Table__integerm:
     function s__Table__get_integer takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___booleanm:
+//Implemented from module Table__booleanm:
     function s__Table__get_boolean takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___stringm:
+//Implemented from module Table__stringm:
     function s__Table__get_string takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___playerm:
+//Implemented from module Table__playerm:
     function s__Table__get_player takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___widgetm:
+//Implemented from module Table__widgetm:
     function s__Table__get_widget takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___destructablem:
+//Implemented from module Table__destructablem:
     function s__Table__get_destructable takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___itemm:
+//Implemented from module Table__itemm:
     function s__Table__get_item takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___unitm:
+//Implemented from module Table__unitm:
     function s__Table__get_unit takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___abilitym:
+//Implemented from module Table__abilitym:
     function s__Table__get_ability takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___timerm:
+//Implemented from module Table__timerm:
     function s__Table__get_timer takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___triggerm:
+//Implemented from module Table__triggerm:
     function s__Table__get_trigger takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___triggerconditionm:
+//Implemented from module Table__triggerconditionm:
     function s__Table__get_triggercondition takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___triggeractionm:
+//Implemented from module Table__triggeractionm:
     function s__Table__get_triggeraction takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___eventm:
+//Implemented from module Table__eventm:
     function s__Table__get_event takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___forcem:
+//Implemented from module Table__forcem:
     function s__Table__get_force takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___groupm:
+//Implemented from module Table__groupm:
     function s__Table__get_group takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___locationm:
+//Implemented from module Table__locationm:
     function s__Table__get_location takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___rectm:
+//Implemented from module Table__rectm:
     function s__Table__get_rect takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___boolexprm:
+//Implemented from module Table__boolexprm:
     function s__Table__get_boolexpr takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___soundm:
+//Implemented from module Table__soundm:
     function s__Table__get_sound takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___effectm:
+//Implemented from module Table__effectm:
     function s__Table__get_effect takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___unitpoolm:
+//Implemented from module Table__unitpoolm:
     function s__Table__get_unitpool takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___itempoolm:
+//Implemented from module Table__itempoolm:
     function s__Table__get_itempool takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___questm:
+//Implemented from module Table__questm:
     function s__Table__get_quest takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___questitemm:
+//Implemented from module Table__questitemm:
     function s__Table__get_questitem takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___defeatconditionm:
+//Implemented from module Table__defeatconditionm:
     function s__Table__get_defeatcondition takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___timerdialogm:
+//Implemented from module Table__timerdialogm:
     function s__Table__get_timerdialog takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___leaderboardm:
+//Implemented from module Table__leaderboardm:
     function s__Table__get_leaderboard takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___multiboardm:
+//Implemented from module Table__multiboardm:
     function s__Table__get_multiboard takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___multiboarditemm:
+//Implemented from module Table__multiboarditemm:
     function s__Table__get_multiboarditem takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___trackablem:
+//Implemented from module Table__trackablem:
     function s__Table__get_trackable takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___dialogm:
+//Implemented from module Table__dialogm:
     function s__Table__get_dialog takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___buttonm:
+//Implemented from module Table__buttonm:
     function s__Table__get_button takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___texttagm:
+//Implemented from module Table__texttagm:
     function s__Table__get_texttag takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___lightningm:
+//Implemented from module Table__lightningm:
     function s__Table__get_lightning takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___imagem:
+//Implemented from module Table__imagem:
     function s__Table__get_image takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___ubersplatm:
+//Implemented from module Table__ubersplatm:
     function s__Table__get_ubersplat takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___regionm:
+//Implemented from module Table__regionm:
     function s__Table__get_region takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___fogstatem:
+//Implemented from module Table__fogstatem:
     function s__Table__get_fogstate takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___fogmodifierm:
+//Implemented from module Table__fogmodifierm:
     function s__Table__get_fogmodifier takes integer this returns integer
         return this
     endfunction
-//Implemented from module Table___hashtablem:
+//Implemented from module Table__hashtablem:
     function s__Table__get_hashtable takes integer this returns integer
         return this
     endfunction
@@ -8083,39 +8156,39 @@ endfunction
     
     //set this = tb[GetSpellAbilityId()]
     function s__Table__getindex takes integer this,integer key returns integer
-        return LoadInteger(Table___ht, this, key) //return this.integer[key]
+        return LoadInteger(Table__ht, this, key) //return this.integer[key]
     endfunction
     
     //set tb[389034] = 8192
     function s__Table__setindex takes integer this,integer key,integer tb returns nothing
-        call SaveInteger(Table___ht, this, key, tb) //set this.integer[key] = tb
+        call SaveInteger(Table__ht, this, key, tb) //set this.integer[key] = tb
     endfunction
     
     //set b = tb.has(2493223)
     function s__Table_has takes integer this,integer key returns boolean
-        return HaveSavedInteger(Table___ht, this, key) //return this.integer.has(key)
+        return HaveSavedInteger(Table__ht, this, key) //return this.integer.has(key)
     endfunction
     
     //call tb.remove(294080)
     function s__Table_remove takes integer this,integer key returns nothing
-        call RemoveSavedInteger(Table___ht, this, key) //call this.integer.remove(key)
+        call RemoveSavedInteger(Table__ht, this, key) //call this.integer.remove(key)
     endfunction
     
     //Remove all data from a Table instance
     function s__Table_flush takes integer this returns nothing
-        call FlushChildHashtable(Table___ht, this)
+        call FlushChildHashtable(Table__ht, this)
     endfunction
     
     //local Table tb = Table.create()
     function s__Table_create takes nothing returns integer
-        local integer this= (LoadInteger(Table___ht, ((Table___listK)), (0))) // INLINED!!
+        local integer this= s__Table__getindex(s__Table__dex__get_list(),0)
         
         if this == 0 then
-            set this=Table___more + 1
-            set Table___more=this
+            set this=Table__more + 1
+            set Table__more=this
         else
-            call SaveInteger(Table___ht, ((Table___listK)), (0), ( (LoadInteger(Table___ht, ((Table___listK)), (this))))) // INLINED!!
-            call RemoveSavedInteger(Table___ht, ((Table___listK)), (this)) //Clear hashed memory // INLINED!!
+            call s__Table__setindex(s__Table__dex__get_list(),0, s__Table__getindex(s__Table__dex__get_list(),this))
+            call s__Table_remove(s__Table__dex__get_list(),this) //Clear hashed memory
         endif
         
         return this
@@ -8127,34 +8200,34 @@ endfunction
     //
     function s__Table_destroy takes integer this returns nothing
         
-        call FlushChildHashtable(Table___ht, (this)) // INLINED!!
+        call s__Table_flush(this)
         
-        call SaveInteger(Table___ht, ((Table___listK)), (this), ( (LoadInteger(Table___ht, ((Table___listK)), (0))))) // INLINED!!
-        call SaveInteger(Table___ht, ((Table___listK)), (0), ( this)) // INLINED!!
+        call s__Table__setindex(s__Table__dex__get_list(),this, s__Table__getindex(s__Table__dex__get_list(),0))
+        call s__Table__setindex(s__Table__dex__get_list(),0, this)
     endfunction
     
 //textmacro instance: TABLE_BC_METHODS()
     function s__Table_reset takes integer this returns nothing
-        call FlushChildHashtable(Table___ht, (this)) // INLINED!!
+        call s__Table_flush(this)
     endfunction
     function s__Table_exists takes integer this,integer key returns boolean
-        return (HaveSavedInteger(Table___ht, (this), (key))) // INLINED!!
+        return s__Table_has(this,key)
     endfunction
     function s__Table__staticgetindex takes string id returns integer
         local integer index= StringHash(id)
-        local integer t= (LoadInteger(Table___ht, ((si__Table)), (index))) // INLINED!!
+        local integer t= s__Table__getindex((si__Table),index)
         if t == 0 then
             set t=s__Table_create()
-            call SaveInteger(Table___ht, ((si__Table)), (index), ( t)) // INLINED!!
+            call s__Table__setindex((si__Table),index, t)
         endif
         return t
     endfunction
     function s__Table_flush2D takes string id returns nothing
         local integer index= StringHash(id)
-        local integer t= (LoadInteger(Table___ht, ((si__Table)), (index))) // INLINED!!
+        local integer t= s__Table__getindex((si__Table),index)
         if t != 0 then
             call s__Table_destroy(t)
-            call RemoveSavedInteger(Table___ht, ((si__Table)), (index)) // INLINED!!
+            call s__Table_remove((si__Table),index)
         endif
     endfunction
 //end of: TABLE_BC_METHODS()
@@ -8167,19 +8240,19 @@ endfunction
         call s__Table_flush2D(index)
     endfunction
     function s__HandleTable__getindex takes integer this,handle key returns integer
-        return (LoadInteger(Table___ht, ((this)), (GetHandleId(key)))) // INLINED!!
+        return s__Table__getindex((this),GetHandleId(key))
     endfunction
     function s__HandleTable__setindex takes integer this,handle key,integer value returns nothing
-        call SaveInteger(Table___ht, ((this)), (GetHandleId(key)), ( value)) // INLINED!!
+        call s__Table__setindex((this),GetHandleId(key), value)
     endfunction
     function s__HandleTable_flush takes integer this,handle key returns nothing
-        call RemoveSavedInteger(Table___ht, ((this)), (GetHandleId(key))) // INLINED!!
+        call s__Table_remove((this),GetHandleId(key))
     endfunction
     function s__HandleTable_exists takes integer this,handle key returns boolean
-        return (HaveSavedInteger(Table___ht, ((this)), (GetHandleId(key)))) // INLINED!!
+        return s__Table_has((this),GetHandleId(key))
     endfunction
     function s__HandleTable_reset takes integer this returns nothing
-        call FlushChildHashtable(Table___ht, ((this))) // INLINED!!
+        call s__Table_flush((this))
     endfunction
     function s__HandleTable_destroy takes integer this returns nothing
         call s__Table_destroy((this))
@@ -8195,19 +8268,19 @@ endfunction
         call s__Table_flush2D(index)
     endfunction
     function s__StringTable__getindex takes integer this,string key returns integer
-        return (LoadInteger(Table___ht, ((this)), (StringHash(key)))) // INLINED!!
+        return s__Table__getindex((this),StringHash(key))
     endfunction
     function s__StringTable__setindex takes integer this,string key,integer value returns nothing
-        call SaveInteger(Table___ht, ((this)), (StringHash(key)), ( value)) // INLINED!!
+        call s__Table__setindex((this),StringHash(key), value)
     endfunction
     function s__StringTable_flush takes integer this,string key returns nothing
-        call RemoveSavedInteger(Table___ht, ((this)), (StringHash(key))) // INLINED!!
+        call s__Table_remove((this),StringHash(key))
     endfunction
     function s__StringTable_exists takes integer this,string key returns boolean
-        return (HaveSavedInteger(Table___ht, ((this)), (StringHash(key)))) // INLINED!!
+        return s__Table_has((this),StringHash(key))
     endfunction
     function s__StringTable_reset takes integer this returns nothing
-        call FlushChildHashtable(Table___ht, ((this))) // INLINED!!
+        call s__Table_flush((this))
     endfunction
     function s__StringTable_destroy takes integer this returns nothing
         call s__Table_destroy((this))
@@ -8223,25 +8296,25 @@ endfunction
     //    local TableArray ta = TableArray[array_size]
     //
     function s__TableArray__staticgetindex takes integer array_size returns integer
-        local integer tb= (LoadInteger(Table___ht, ((Table___sizeK)), (array_size))) // INLINED!!
-        local integer this= (LoadInteger(Table___ht, (tb), (0))) // INLINED!!
+        local integer tb= s__Table__getindex(s__Table__dex__get_size(),array_size)
+        local integer this= s__Table__getindex(tb,0)
         
         
         if this == 0 then
-            set this=Table___less - array_size
-            set Table___less=this
+            set this=Table__less - array_size
+            set Table__less=this
         else
-            call SaveInteger(Table___ht, (tb), (0), ( (LoadInteger(Table___ht, (tb), (this))))) //Set the last destroyed to the last-last destroyed // INLINED!!
-            call RemoveSavedInteger(Table___ht, (tb), (this)) //Clear hashed memory // INLINED!!
+            call s__Table__setindex(tb,0, s__Table__getindex(tb,this)) //Set the last destroyed to the last-last destroyed
+            call s__Table_remove(tb,this) //Clear hashed memory
         endif
         
-        call SaveInteger(Table___ht, ((Table___sizeK)), (this), ( array_size)) //This remembers the array size // INLINED!!
+        call s__Table__setindex(s__Table__dex__get_size(),this, array_size) //This remembers the array size
         return this
     endfunction
     
     //Returns the size of the TableArray
     function s__TableArray__get_size takes integer this returns integer
-        return (LoadInteger(Table___ht, ((Table___sizeK)), (this))) // INLINED!!
+        return s__Table__getindex(s__Table__dex__get_size(),this)
     endfunction
     
     //This magic method enables two-dimensional[array][syntax] for Tables,
@@ -8273,19 +8346,19 @@ endfunction
     //need to (ie. if you were flushing all child-keys as you used them).
     //
     function s__TableArray_destroy takes integer this returns nothing
-        local integer tb= (LoadInteger(Table___ht, ((Table___sizeK)), ((LoadInteger(Table___ht, ((Table___sizeK)), ((this))))))) // INLINED!!
+        local integer tb= s__Table__getindex(s__Table__dex__get_size(),s__TableArray__get_size(this))
         
         
         if tb == 0 then
             //Create a Table to index recycled instances with their array size
             set tb=s__Table_create()
-            call SaveInteger(Table___ht, ((Table___sizeK)), ((LoadInteger(Table___ht, ((Table___sizeK)), ((this))))), ( tb)) // INLINED!!
+            call s__Table__setindex(s__Table__dex__get_size(),s__TableArray__get_size(this), tb)
         endif
         
-        call RemoveSavedInteger(Table___ht, ((Table___sizeK)), (this)) //Clear the array size from hash memory // INLINED!!
+        call s__Table_remove(s__Table__dex__get_size(),this) //Clear the array size from hash memory
         
-        call SaveInteger(Table___ht, (tb), (this), ( (LoadInteger(Table___ht, (tb), (0))))) // INLINED!!
-        call SaveInteger(Table___ht, (tb), (0), ( this)) // INLINED!!
+        call s__Table__setindex(tb,this, s__Table__getindex(tb,0))
+        call s__Table__setindex(tb,0, this)
     endfunction
     
     
@@ -8300,7 +8373,7 @@ endfunction
             set end=s__TableArray_tempEnd
         endif
         loop
-            call FlushChildHashtable(Table___ht, (tb)) // INLINED!!
+            call s__Table_flush(tb)
             set tb=tb + 1
             exitwhen tb == end
         endloop
@@ -8311,7 +8384,7 @@ endfunction
     //
     function s__TableArray_flush takes integer this returns nothing
         set s__TableArray_tempTable=this
-        set s__TableArray_tempEnd=this + (LoadInteger(Table___ht, ((Table___sizeK)), ((this)))) // INLINED!!
+        set s__TableArray_tempEnd=this + s__TableArray__get_size(this)
         call ForForce(bj_FORCE_PLAYER[0], function s__TableArray_clean)
         call s__TableArray_destroy(this)
     endfunction
@@ -8324,10 +8397,10 @@ endfunction
     //Basically, it creates a Table in the place of the parent key if
     //it didn't already get created earlier.
     function s__HashTable__getindex takes integer this,integer index returns integer
-        local integer t= (LoadInteger(Table___ht, ((this)), (index))) // INLINED!!
+        local integer t= s__Table__getindex((this),index)
         if t == 0 then
             set t=s__Table_create()
-            call SaveInteger(Table___ht, ((this)), (index), ( t)) //whoops! Forgot that line. I'm out of practice! // INLINED!!
+            call s__Table__setindex((this),index, t) //whoops! Forgot that line. I'm out of practice!
         endif
         return t
     endfunction
@@ -8335,16 +8408,16 @@ endfunction
     //You need to call this on each parent key that you used if you
     //intend to destroy the HashTable or simply no longer need that key.
     function s__HashTable_remove takes integer this,integer index returns nothing
-        local integer t= (LoadInteger(Table___ht, ((this)), (index))) // INLINED!!
+        local integer t= s__Table__getindex((this),index)
         if t != 0 then
             call s__Table_destroy(t)
-            call RemoveSavedInteger(Table___ht, ((this)), (index)) // INLINED!!
+            call s__Table_remove((this),index)
         endif
     endfunction
     
     //Added in version 4.1
     function s__HashTable_has takes integer this,integer index returns boolean
-        return (HaveSavedInteger(Table___ht, ((this)), (index))) // INLINED!!
+        return s__Table_has((this),index)
     endfunction
     
     //HashTables are just fancy Table indices.
@@ -8404,7 +8477,7 @@ endfunction
     function SetTimerData takes timer t,integer value returns nothing
 
             // new blue
-            call SaveInteger(TimerUtils___ht, 0, GetHandleId(t), value)
+            call SaveInteger(TimerUtils__ht, 0, GetHandleId(t), value)
             
 
 
@@ -8428,7 +8501,7 @@ endfunction
     function GetTimerData takes timer t returns integer
 
             // new blue
-            return LoadInteger(TimerUtils___ht, 0, GetHandleId(t))
+            return LoadInteger(TimerUtils__ht, 0, GetHandleId(t))
             
 
 
@@ -8457,16 +8530,16 @@ endfunction
     //
 
     function NewTimerEx takes integer value returns timer
-        if ( TimerUtils___tN == 0 ) then
-            if ( not TimerUtils___didinit ) then
+        if ( TimerUtils__tN == 0 ) then
+            if ( not TimerUtils__didinit ) then
                 //This extra if shouldn't represent a major performance drawback
                 //because QUANTITY rule is not supposed to be broken every day. 
-                call TriggerEvaluate(st___prototype5[(1)]) // INLINED!!
-                set TimerUtils___tN=TimerUtils___tN - 1
+                call sc___prototype5_evaluate(1)
+                set TimerUtils__tN=TimerUtils__tN - 1
             else
                 //If this happens then the QUANTITY rule has already been broken, try to fix the
                 // issue, else fail.
-                set s__TimerUtils___tT[0]= CreateTimer()
+                set s__TimerUtils__tT[0]= CreateTimer()
 
 
 
@@ -8484,10 +8557,10 @@ endfunction
 
             endif
         else
-            set TimerUtils___tN=TimerUtils___tN - 1
+            set TimerUtils__tN=TimerUtils__tN - 1
         endif
-        call SaveInteger(TimerUtils___ht, 0, GetHandleId((s__TimerUtils___tT[TimerUtils___tN] )), ( value)) // INLINED!!
-     return s__TimerUtils___tT[TimerUtils___tN]
+        call SetTimerData(s__TimerUtils__tT[TimerUtils__tN] , value)
+     return s__TimerUtils__tT[TimerUtils__tN]
     endfunction
     
     function NewTimer takes nothing returns timer
@@ -8500,28 +8573,28 @@ endfunction
         if ( t == null ) then
             return
         endif
-        if ( TimerUtils___tN == TimerUtils___ARRAY_SIZE ) then
+        if ( TimerUtils__tN == TimerUtils__ARRAY_SIZE ) then
             //stack is full, the map already has much more troubles than the chance of bug
             call DestroyTimer(t)
         else
-            set s__runningTimersString[(LoadInteger(Table___ht, (runningTimers), (GetHandleId(t))))]= "" // INLINED!!
-	    call RemoveSavedInteger(Table___ht, (runningTimers), (GetHandleId(t))) // INLINED!!
+            set s__runningTimersString[s__Table__getindex(runningTimers,GetHandleId(t))]= ""
+	    call s__Table_remove(runningTimers,GetHandleId(t))
             call PauseTimer(t)
-            if ( (LoadInteger(TimerUtils___ht, 0, GetHandleId((t)))) == TimerUtils___HELD ) then // INLINED!!
+            if ( GetTimerData(t) == TimerUtils__HELD ) then
                 return
             endif
-            call SaveInteger(TimerUtils___ht, 0, GetHandleId((t )), ( TimerUtils___HELD)) // INLINED!!
-            set s__TimerUtils___tT[TimerUtils___tN]= t
-            set TimerUtils___tN=TimerUtils___tN + 1
+            call SetTimerData(t , TimerUtils__HELD)
+            set s__TimerUtils__tT[TimerUtils__tN]= t
+            set TimerUtils__tN=TimerUtils__tN + 1
         endif
     endfunction
 
     function TimerStartEx takes timer whichTimer,real timeout,boolean periodic,code handlerFunc,string sHandlerFunc returns nothing
         local integer i= 0
         loop
-		exitwhen i >= TimerUtils___ARRAY_SIZE
+		exitwhen i >= TimerUtils__ARRAY_SIZE
 		if s__runningTimersString[i] == "" then
-			call SaveInteger(Table___ht, (runningTimers), (GetHandleId(whichTimer)), ( i)) // INLINED!!
+			call s__Table__setindex(runningTimers,GetHandleId(whichTimer), i)
 			set s__runningTimersString[i]= R2S(timeout) + ": " + sHandlerFunc
 			exitwhen true
 		endif
@@ -8530,33 +8603,33 @@ endfunction
 	call TimerStart(whichTimer, timeout, periodic, handlerFunc)
     endfunction
 
-    function TimerUtils___init takes nothing returns nothing
+    function TimerUtils__init takes nothing returns nothing
      local integer i=0
      local integer o=- 1
      local boolean oops= false
-        if ( TimerUtils___didinit ) then
+        if ( TimerUtils__didinit ) then
             return
         else
-            set TimerUtils___didinit=true
+            set TimerUtils__didinit=true
         endif
       
         set i=0
         loop
-        	exitwhen i >= TimerUtils___ARRAY_SIZE
+        	exitwhen i >= TimerUtils__ARRAY_SIZE
 		set s__runningTimersString[i]= ""
 		set i=i + 1
 	endloop
         set i=0
         set runningTimers=s__Table_create()
 
-            set TimerUtils___ht=InitHashtable()
+            set TimerUtils__ht=InitHashtable()
             loop
-                exitwhen ( i == TimerUtils___QUANTITY )
-                set s__TimerUtils___tT[i]= CreateTimer()
-                call SaveInteger(TimerUtils___ht, 0, GetHandleId((s__TimerUtils___tT[i] )), ( TimerUtils___HELD)) // INLINED!!
+                exitwhen ( i == TimerUtils__QUANTITY )
+                set s__TimerUtils__tT[i]= CreateTimer()
+                call SetTimerData(s__TimerUtils__tT[i] , TimerUtils__HELD)
                 set i=i + 1
             endloop
-            set TimerUtils___tN=TimerUtils___QUANTITY
+            set TimerUtils__tN=TimerUtils__QUANTITY
 
 
 
@@ -8947,7 +9020,7 @@ endfunction
         return s__MATRIX4_SetValues(Output,s__MATRIX4_m11[M1] * s__MATRIX4_m11[M2] + s__MATRIX4_m21[M1] * s__MATRIX4_m12[M2] + s__MATRIX4_m31[M1] * s__MATRIX4_m13[M2] + s__MATRIX4_m41[M1] * s__MATRIX4_m14[M2] , s__MATRIX4_m12[M1] * s__MATRIX4_m11[M2] + s__MATRIX4_m22[M1] * s__MATRIX4_m12[M2] + s__MATRIX4_m32[M1] * s__MATRIX4_m13[M2] + s__MATRIX4_m42[M1] * s__MATRIX4_m14[M2] , s__MATRIX4_m13[M1] * s__MATRIX4_m11[M2] + s__MATRIX4_m23[M1] * s__MATRIX4_m12[M2] + s__MATRIX4_m33[M1] * s__MATRIX4_m13[M2] + s__MATRIX4_m43[M1] * s__MATRIX4_m14[M2] , s__MATRIX4_m14[M1] * s__MATRIX4_m11[M2] + s__MATRIX4_m24[M1] * s__MATRIX4_m12[M2] + s__MATRIX4_m34[M1] * s__MATRIX4_m13[M2] + s__MATRIX4_m44[M1] * s__MATRIX4_m14[M2] , s__MATRIX4_m11[M1] * s__MATRIX4_m21[M2] + s__MATRIX4_m21[M1] * s__MATRIX4_m22[M2] + s__MATRIX4_m31[M1] * s__MATRIX4_m23[M2] + s__MATRIX4_m41[M1] * s__MATRIX4_m24[M2] , s__MATRIX4_m12[M1] * s__MATRIX4_m21[M2] + s__MATRIX4_m22[M1] * s__MATRIX4_m22[M2] + s__MATRIX4_m32[M1] * s__MATRIX4_m23[M2] + s__MATRIX4_m42[M1] * s__MATRIX4_m24[M2] , s__MATRIX4_m13[M1] * s__MATRIX4_m21[M2] + s__MATRIX4_m23[M1] * s__MATRIX4_m22[M2] + s__MATRIX4_m33[M1] * s__MATRIX4_m23[M2] + s__MATRIX4_m43[M1] * s__MATRIX4_m24[M2] , s__MATRIX4_m14[M1] * s__MATRIX4_m21[M2] + s__MATRIX4_m24[M1] * s__MATRIX4_m22[M2] + s__MATRIX4_m34[M1] * s__MATRIX4_m23[M2] + s__MATRIX4_m44[M1] * s__MATRIX4_m24[M2] , s__MATRIX4_m11[M1] * s__MATRIX4_m31[M2] + s__MATRIX4_m21[M1] * s__MATRIX4_m32[M2] + s__MATRIX4_m31[M1] * s__MATRIX4_m33[M2] + s__MATRIX4_m41[M1] * s__MATRIX4_m34[M2] , s__MATRIX4_m12[M1] * s__MATRIX4_m31[M2] + s__MATRIX4_m22[M1] * s__MATRIX4_m32[M2] + s__MATRIX4_m32[M1] * s__MATRIX4_m33[M2] + s__MATRIX4_m42[M1] * s__MATRIX4_m34[M2] , s__MATRIX4_m13[M1] * s__MATRIX4_m31[M2] + s__MATRIX4_m23[M1] * s__MATRIX4_m32[M2] + s__MATRIX4_m33[M1] * s__MATRIX4_m33[M2] + s__MATRIX4_m43[M1] * s__MATRIX4_m34[M2] , s__MATRIX4_m14[M1] * s__MATRIX4_m31[M2] + s__MATRIX4_m24[M1] * s__MATRIX4_m32[M2] + s__MATRIX4_m34[M1] * s__MATRIX4_m33[M2] + s__MATRIX4_m44[M1] * s__MATRIX4_m34[M2] , s__MATRIX4_m11[M1] * s__MATRIX4_m41[M2] + s__MATRIX4_m21[M1] * s__MATRIX4_m42[M2] + s__MATRIX4_m31[M1] * s__MATRIX4_m43[M2] + s__MATRIX4_m41[M1] * s__MATRIX4_m44[M2] , s__MATRIX4_m12[M1] * s__MATRIX4_m41[M2] + s__MATRIX4_m22[M1] * s__MATRIX4_m42[M2] + s__MATRIX4_m32[M1] * s__MATRIX4_m43[M2] + s__MATRIX4_m42[M1] * s__MATRIX4_m44[M2] , s__MATRIX4_m13[M1] * s__MATRIX4_m41[M2] + s__MATRIX4_m23[M1] * s__MATRIX4_m42[M2] + s__MATRIX4_m33[M1] * s__MATRIX4_m43[M2] + s__MATRIX4_m43[M1] * s__MATRIX4_m44[M2] , s__MATRIX4_m14[M1] * s__MATRIX4_m41[M2] + s__MATRIX4_m24[M1] * s__MATRIX4_m42[M2] + s__MATRIX4_m34[M1] * s__MATRIX4_m43[M2] + s__MATRIX4_m44[M1] * s__MATRIX4_m44[M2])
     endfunction
 
-    function UIMath___Init takes nothing returns nothing
+    function UIMath__Init takes nothing returns nothing
        set s__VECTOR3_Zero=s__VECTOR3_New_0()
        set s__VECTOR3_oneX=s__VECTOR3_New_1(1 , 0 , 0)
        set s__VECTOR3_oneY=s__VECTOR3_New_1(0 , 1 , 0)
@@ -8962,8 +9035,8 @@ endfunction
 //library UIMath ends
 //library WorldBounds:
     
-//Implemented from module WorldBounds___WorldBoundInit:
-        function s__WorldBounds_WorldBounds___WorldBoundInit__onInit takes nothing returns nothing
+//Implemented from module WorldBounds__WorldBoundInit:
+        function s__WorldBounds_WorldBounds__WorldBoundInit__onInit takes nothing returns nothing
             set s__WorldBounds_world=GetWorldBounds()
             set s__WorldBounds_maxX=R2I(GetRectMaxX(s__WorldBounds_world))
             set s__WorldBounds_maxY=R2I(GetRectMaxY(s__WorldBounds_world))
@@ -9053,19 +9126,19 @@ endfunction
         return this
     endfunction 
     function s__ItemList_addAction takes integer this,integer id,integer price,integer action returns nothing
-        call SaveInteger(Table___ht, (s__ItemList_items[this]), (s__ItemList_maxCount[this]), ( id)) // INLINED!!
+        call s__Table__setindex(s__ItemList_items[this],s__ItemList_maxCount[this], id)
 	if s__ItemList_maxCount[this] > 0 then
-        	call SaveInteger(Table___ht, (s__ItemList_itemsFrom[this]), (s__ItemList_maxCount[this]), ( (LoadInteger(Table___ht, (s__ItemList_items[this]), (s__ItemList_maxCount[this] - 1))))) // INLINED!!
+        	call s__Table__setindex(s__ItemList_itemsFrom[this],s__ItemList_maxCount[this], s__Table__getindex(s__ItemList_items[this],s__ItemList_maxCount[this] - 1))
 	endif
-        call SaveInteger(Table___ht, (s__ItemList_prices[this]), (s__ItemList_maxCount[this]), ( price)) // INLINED!!
-        call SaveInteger(Table___ht, (s__ItemList_actions[this]), (s__ItemList_maxCount[this]), ( action)) // INLINED!!
+        call s__Table__setindex(s__ItemList_prices[this],s__ItemList_maxCount[this], price)
+        call s__Table__setindex(s__ItemList_actions[this],s__ItemList_maxCount[this], action)
         set s__ItemList_maxCount[this]=s__ItemList_maxCount[this] + 1
     endfunction 
     function s__ItemList_addActionFrom takes integer this,integer id,integer price,integer from,integer action returns nothing
-        call SaveInteger(Table___ht, (s__ItemList_items[this]), (s__ItemList_maxCount[this]), ( id)) // INLINED!!
-        call SaveInteger(Table___ht, (s__ItemList_itemsFrom[this]), (s__ItemList_maxCount[this]), ( from)) // INLINED!!
-        call SaveInteger(Table___ht, (s__ItemList_prices[this]), (s__ItemList_maxCount[this]), ( price)) // INLINED!!
-        call SaveInteger(Table___ht, (s__ItemList_actions[this]), (s__ItemList_maxCount[this]), ( action)) // INLINED!!
+        call s__Table__setindex(s__ItemList_items[this],s__ItemList_maxCount[this], id)
+        call s__Table__setindex(s__ItemList_itemsFrom[this],s__ItemList_maxCount[this], from)
+        call s__Table__setindex(s__ItemList_prices[this],s__ItemList_maxCount[this], price)
+        call s__Table__setindex(s__ItemList_actions[this],s__ItemList_maxCount[this], action)
         set s__ItemList_maxCount[this]=s__ItemList_maxCount[this] + 1
     endfunction 
     function s__ItemList_buyItem takes integer this,integer id,integer price returns nothing
@@ -9088,11 +9161,11 @@ endfunction
         local integer gold= GetPlayerState(Player(s__ItemList_id[this]), PLAYER_STATE_RESOURCE_GOLD)
         local unit u= udg_units33[s__ItemList_id[this] + 1]
         if s__ItemList_count[this] < s__ItemList_maxCount[this] then
-            set id=(LoadInteger(Table___ht, (s__ItemList_items[this]), (s__ItemList_count[this]))) // INLINED!!
-            set price=(LoadInteger(Table___ht, (s__ItemList_prices[this]), (s__ItemList_count[this]))) // INLINED!!
-            set action=(LoadInteger(Table___ht, (s__ItemList_actions[this]), (s__ItemList_count[this]))) // INLINED!!
+            set id=s__Table__getindex(s__ItemList_items[this],s__ItemList_count[this])
+            set price=s__Table__getindex(s__ItemList_prices[this],s__ItemList_count[this])
+            set action=s__Table__getindex(s__ItemList_actions[this],s__ItemList_count[this])
             if action == 0 then
-                if (UnitHasItemOfTypeBJ((u ), ( id))) then // INLINED!!
+                if UnitHasItemEx(u , id) then
                     set s__ItemList_count[this]=s__ItemList_count[this] + 1
                     return true
                 elseif gold >= price then
@@ -9108,9 +9181,9 @@ endfunction
                     return false
                 endif
             elseif action == 1 then
-                 set id2=(LoadInteger(Table___ht, (s__ItemList_itemsFrom[this]), (s__ItemList_count[this]))) // INLINED!!
-                 if gold >= price and (UnitHasItemOfTypeBJ((u ), ( id2))) then // INLINED!!
-                    call RemoveItem(GetItemOfTypeFromUnitBJ((u ), ( id2))) // INLINED!!
+                 set id2=s__Table__getindex(s__ItemList_itemsFrom[this],s__ItemList_count[this])
+                 if gold >= price and UnitHasItemEx(u , id2) then
+                    call UnitRemoveItemEx(u , id2)
                     call UnitAddItemEx(u , id)
                     call SetPlayerState(Player(s__ItemList_id[this]), PLAYER_STATE_RESOURCE_GOLD, gold - price)
                     call DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "|cff87ceebYou upgraded |r" + GetItemName(GetItemOfTypeFromUnitBJ(u, id)) + " |cff87ceebfor |cffffcc00" + I2S(price) + "|r|cff87ceeb gold.|r")
@@ -9118,9 +9191,9 @@ endfunction
                     return true
                 endif
             elseif action == 2 then
-                if (UnitHasItemOfTypeBJ((u ), ( id))) then // INLINED!!
+                if UnitHasItemEx(u , id) then
                     call DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "|cff87ceebYou sold |r" + GetItemName(GetItemOfTypeFromUnitBJ(u, id)) + " |cff87ceebfor |cffffcc00" + I2S(price) + "|r|cff87ceeb gold.|r")
-                    call RemoveItem(GetItemOfTypeFromUnitBJ((u ), ( id))) // INLINED!!
+                    call UnitRemoveItemEx(u , id)
                     call SetPlayerState(Player(s__ItemList_id[this]), PLAYER_STATE_RESOURCE_GOLD, gold + price)
                 endif
                 set s__ItemList_count[this]=s__ItemList_count[this] + 1
@@ -9179,274 +9252,274 @@ endfunction
                     set nin=agi >= str and agi >= int
                     set gen=int >= str and int >= agi
                     set s__AutoBuyS___lists[id]= s__ItemList_create(id)
-                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CLOGS ) , ( 800) , 0) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I00B' ) , ( 900) , 1) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NINJA_BOOTS ) , ( 900) , 1) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 0) // INLINED!!
+                    call s__ItemList_buyItem(s__AutoBuyS___lists[id],CLOGS , 800)
+                    call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],'I00B' , 900)
+                    call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],NINJA_BOOTS , 900)
+                    call s__ItemList_buyItem(s__AutoBuyS___lists[id],OIL , 2250)
                     if s__AutoBuyS___buildId[id] == 2 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing offensive build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_BADGE ) , ( 2000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_MASK ) , ( 800 + 2500) , 1) // INLINED!!
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],ANBU_BADGE , 2000)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],ANBU_MASK , 800 + 2500)
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],EXPLOSIVE_KUNAI , 3000)
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],KUNAI_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KYUUBI_LOST_SPEAR , 9000)
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],FUUMA_SHURIKEN , 3000)
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SHURIKEN_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],YONDAIME_CROSSBOW , 9000)
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SENBONS_DANCE , 3000)
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SENBONS_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],NIDAIME_STAFF , 9000)
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(BAULK_OF_KAWARIMI ) , ( 2000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('fwss' ) , ( 800) , 2) // INLINED!!
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],BAULK_OF_KAWARIMI , 2000)
+                        call s__ItemList_sellItem(s__AutoBuyS___lists[id],OIL , 2250)
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],GENIN_CLOTH , 3700)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],CHUNNIN_CLOTH , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],JOUNIN_CLOTH , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],ANBU_ARMOR , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SANNIN_CLOTH , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KAGE_ROBE , 12800)
+                        call s__ItemList_sellItem(s__AutoBuyS___lists[id],'fwss' , 800)
 			if tai then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(HOKAGE_ROBE ) , ( 9500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],HOKAGE_ROBE , 9500 , KAGE_ROBE)
                         elseif nin then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(RAIKAGE_ROBE ) , ( 9500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],RAIKAGE_ROBE , 9500 , KAGE_ROBE)
                         elseif gen then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(MIZUKAGE_ROBE ) , ( 9500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],MIZUKAGE_ROBE , 9500 , KAGE_ROBE)
                         endif
 
 			if tai then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07A' ) , ( 14000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],'I07A' , 14000 , ANBU_MASK)
                         elseif nin then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07E' ) , ( 14000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],'I07E' , 14000 , ANBU_MASK)
                         elseif gen then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07B' ) , ( 14000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],'I07B' , 14000 , ANBU_MASK)
                         endif
                     elseif s__AutoBuyS___buildId[id] == 3 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing anti-stun build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('mcou' ) , ( 4000) , 0) // INLINED!!
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],'mcou' , 4000)
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],EXPLOSIVE_KUNAI , 3000)
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],KUNAI_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KYUUBI_LOST_SPEAR , 9000)
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],FUUMA_SHURIKEN , 3000)
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SHURIKEN_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],YONDAIME_CROSSBOW , 9000)
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SENBONS_DANCE , 3000)
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SENBONS_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],NIDAIME_STAFF , 9000)
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(BAULK_OF_KAWARIMI ) , ( 2000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OTOKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I006' ) , ( 10300 ) , ( 'mcou') , 1) // INLINED!!
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],BAULK_OF_KAWARIMI , 2000)
+                        call s__ItemList_sellItem(s__AutoBuyS___lists[id],OIL , 2250)
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],GENIN_CLOTH , 3700)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],CHUNNIN_CLOTH , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],JOUNIN_CLOTH , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],ANBU_ARMOR , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SANNIN_CLOTH , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KAGE_ROBE , 12800)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],OTOKAGE_ROBE , 9500)
+                        call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],'I006' , 10300 , 'mcou')
                     elseif s__AutoBuyS___buildId[id] == 4 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing anti-debuff build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('modt' ) , ( 2000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_MASK ) , ( 800 + 2500) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANBI_SKIN ) , ( 3300) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I054' ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I055' ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05Q' ) , ( 5000) , 1) // INLINED!!
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],'modt' , 2000)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],ANBU_MASK , 800 + 2500)
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],SANBI_SKIN , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],'I054' , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],'I055' , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],'I05Q' , 5000)
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],EXPLOSIVE_KUNAI , 3000)
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],FUUMA_SHURIKEN , 3000)
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SENBONS_DANCE , 3000)
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I033' ) , ( 2250) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],'I033' , 2250)
+                        call s__ItemList_sellItem(s__AutoBuyS___lists[id],OIL , 2250)
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],KUNAI_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KYUUBI_LOST_SPEAR , 9000)
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SHURIKEN_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],YONDAIME_CROSSBOW , 9000)
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SENBONS_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],NIDAIME_STAFF , 9000)
                         endif
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I006' ) , ( 9000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                        call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],'I006' , 9000 , ANBU_MASK)
                     elseif s__AutoBuyS___buildId[id] == 5 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing auto-attack build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I007' ) , ( 6000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(AKATSUKI_RING ) , ( 3500) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JADE_OF_SUSANOO ) , ( 8000) , 1) // INLINED!!
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],'I007' , 6000)
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],AKATSUKI_RING , 3500)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],JADE_OF_SUSANOO , 8000)
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],EXPLOSIVE_KUNAI , 3000)
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],FUUMA_SHURIKEN , 3000)
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SENBONS_DANCE , 3000)
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03X' ) , ( 2250) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAZEKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('rhth' ) , ( 5000 ) , ( JADE_OF_SUSANOO) , 1) // INLINED!!
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],'I03X' , 2250)
+                        call s__ItemList_sellItem(s__AutoBuyS___lists[id],OIL , 2250)
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],GENIN_CLOTH , 3700)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],CHUNNIN_CLOTH , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],JOUNIN_CLOTH , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],ANBU_ARMOR , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SANNIN_CLOTH , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KAGE_ROBE , 12800)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KAZEKAGE_ROBE , 9500)
+                        call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],'rhth' , 5000 , JADE_OF_SUSANOO)
                     else
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing defensive build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I00R' ) , ( 800) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],'I00R' , 800)
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],GENIN_CLOTH , 3700)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],CHUNNIN_CLOTH , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],JOUNIN_CLOTH , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],ANBU_ARMOR , 3300)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SANNIN_CLOTH , 3300)
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(EXPLOSIVE_KUNAI ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],EXPLOSIVE_KUNAI , 3000)
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(FUUMA_SHURIKEN ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],FUUMA_SHURIKEN , 3000)
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_DANCE ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SENBONS_DANCE , 3000)
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(BAULK_OF_KAWARIMI ) , ( 2000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 2) // INLINED!!
+                        call s__ItemList_buyItem(s__AutoBuyS___lists[id],BAULK_OF_KAWARIMI , 2000)
+                        call s__ItemList_sellItem(s__AutoBuyS___lists[id],OIL , 2250)
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KYUUBI_LOST_SPEAR ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],KUNAI_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KUNAI_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],KYUUBI_LOST_SPEAR , 9000)
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(YONDAIME_CROSSBOW ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SHURIKEN_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SHURIKEN_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],YONDAIME_CROSSBOW , 9000)
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_2 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_3 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_4 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_5 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_6 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_7 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_8 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_9 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_10 ) , ( 2500) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NIDAIME_STAFF ) , ( 9000) , 1) // INLINED!!
+                            call s__ItemList_buyItem(s__AutoBuyS___lists[id],SENBONS_1 , 3000)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_2 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_3 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_4 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_5 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_6 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_7 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_8 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_9 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],SENBONS_10 , 2500)
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],NIDAIME_STAFF , 9000)
                         endif
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800 ) , ( SANNIN_CLOTH) , 1) // INLINED!!
+                        call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],KAGE_ROBE , 12800 , SANNIN_CLOTH)
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(HOKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],HOKAGE_ROBE , 9500)
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(RAIKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],RAIKAGE_ROBE , 9500)
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(MIZUKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
+                            call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],MIZUKAGE_ROBE , 9500)
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03Y' ) , ( 2700) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03Z' ) , ( 2700) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I040' ) , ( 2700 ) , ( 'I03Z') , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I04T' ) , ( 9900 ) , ( 'I03Z') , 1) // INLINED!!
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],'I03Y' , 2700)
+                        call s__ItemList_upgradeItem(s__AutoBuyS___lists[id],'I03Z' , 2700)
+                        call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],'I040' , 2700 , 'I03Z')
+                        call s__ItemList_upgradeItemFrom(s__AutoBuyS___lists[id],'I04T' , 9900 , 'I03Z')
                     endif
                 endif
                 set s__AutoBuyS___firstUse[id]= false
@@ -9681,7 +9754,7 @@ endfunction
             loop
                 exitwhen i == s__User_AmountPlaying
                 
-                set user=(s__User_PlayingPlayer[(i)]) // INLINED!!
+                set user=s__User_fromPlaying(i)
                 
                 set Camera_DummyUnit[s__User_id[user]]=CreateUnit(CAMERA_DUMMY_PLAYER, CAMERA_DUMMY_TYPE, 0, 0, 0)
                 call ShowUnit(Camera_DummyUnit[s__User_id[user]], false)
@@ -9692,7 +9765,7 @@ endfunction
             
             // init delta z
 
-                call TimerStartEx((NewTimerEx(0)) , 0. , false , function Camera__InitDeltaZ , "InitDeltaZ") // INLINED!!
+                call TimerStartEx(NewTimer() , 0. , false , function Camera__InitDeltaZ , "InitDeltaZ")
 
 
 
@@ -9707,7 +9780,7 @@ endfunction
 
         
         function s__Dialog_getClickedDialog takes nothing returns integer
-            return (LoadInteger(Table___ht, (Dialog__instance), (GetHandleId(GetClickedDialog())))) // INLINED!!
+            return s__Table__getindex(Dialog__instance,GetHandleId(GetClickedDialog()))
         endfunction
         function s__Dialog_getClickedButton takes nothing returns button
             return GetClickedButton()
@@ -9741,7 +9814,7 @@ endfunction
         
         function s__Dialog_registerClickEvent takes integer this,boolexpr b returns nothing
             if s__Dialog_click[this] == null then
-                call SaveInteger(Table___ht, (Dialog__instance), (GetHandleId(s__Dialog_dg[this])), ( this)) // INLINED!!
+                call s__Table__setindex(Dialog__instance,GetHandleId(s__Dialog_dg[this]), this)
                 set s__Dialog_click[this]=CreateTrigger()
                 call TriggerRegisterDialogEvent(s__Dialog_click[this], s__Dialog_dg[this])
             endif
@@ -9752,7 +9825,7 @@ endfunction
             
             if s__Dialog_click[this] != null then
                 call DestroyTrigger(s__Dialog_click[this])
-                call RemoveSavedInteger(Table___ht, (Dialog__instance), (GetHandleId(s__Dialog_dg[this]))) // INLINED!!
+                call s__Table_remove(Dialog__instance,GetHandleId(s__Dialog_dg[this]))
                 set s__Dialog_click[this]=null
             endif
             
@@ -9874,7 +9947,7 @@ function GetRandomX takes nothing returns real
     set GeometryLibBase__SPACE_OFFSET=GetRandomReal(0, GeometryLibBase__SPACE_OFFSET)
     if GeometryLibBase__GEOMETRY == 1 or GeometryLibBase__GEOMETRY == 4 then
         set GeometryLibBase__SPACE_ANGLE=GetRandomReal(0, GeometryLibBase__SPACE_MAX_ANGLE)
-        return (((GeometryLibBase__SPACE_X )*1.0) + Cos((( GeometryLibBase__SPACE_ANGLE )*1.0)) * (( GeometryLibBase__SPACE_OFFSET)*1.0)) // INLINED!!
+        return GetPolarX(GeometryLibBase__SPACE_X , GeometryLibBase__SPACE_ANGLE , GeometryLibBase__SPACE_OFFSET)
     elseif GeometryLibBase__GEOMETRY == 2 or GeometryLibBase__GEOMETRY == 3 then
         return GetRandomReal(GeometryLibBase__SPACE_X - GeometryLibBase__SPACE_OFFSET / 2, GeometryLibBase__SPACE_X + GeometryLibBase__SPACE_OFFSET / 2)
     endif
@@ -9883,7 +9956,7 @@ endfunction
 
 function GetRandomY takes nothing returns real
     if GeometryLibBase__GEOMETRY == 1 or GeometryLibBase__GEOMETRY == 4 then
-        return (((GeometryLibBase__SPACE_Y )*1.0) + Sin((( GeometryLibBase__SPACE_ANGLE )*1.0)) * (( GeometryLibBase__SPACE_OFFSET)*1.0)) // INLINED!!
+        return GetPolarY(GeometryLibBase__SPACE_Y , GeometryLibBase__SPACE_ANGLE , GeometryLibBase__SPACE_OFFSET)
     elseif GeometryLibBase__GEOMETRY == 2 or GeometryLibBase__GEOMETRY == 3 then
         set GeometryLibBase__SPACE_OFFSET_2=GetRandomReal(0, GeometryLibBase__SPACE_OFFSET_2)
         return GetRandomReal(GeometryLibBase__SPACE_Y - GeometryLibBase__SPACE_OFFSET_2 / 2, GeometryLibBase__SPACE_Y + GeometryLibBase__SPACE_OFFSET_2 / 2)
@@ -10452,7 +10525,7 @@ endfunction
     endfunction
     
     function IsUnitIndexed takes unit u returns boolean
-        return ( (s__UnitDex_Unit[((GetUnitUserData((u))))]) != null ) // INLINED!!
+        return ( GetUnitById(GetUnitId(u)) != null )
     endfunction
     
     function UnitDexEnable takes boolean flag returns nothing
@@ -10464,23 +10537,23 @@ endfunction
     endfunction
     
     function RegisterUnitIndexEvent takes boolexpr func,integer eventtype returns triggercondition
-        return TriggerAddCondition(UnitDex___IndexTrig[eventtype], func)
+        return TriggerAddCondition(UnitDex__IndexTrig[eventtype], func)
     endfunction
     
     function RemoveUnitIndexEvent takes triggercondition c,integer eventtype returns nothing
-        call TriggerRemoveCondition(UnitDex___IndexTrig[eventtype], c)
+        call TriggerRemoveCondition(UnitDex__IndexTrig[eventtype], c)
     endfunction
     
     function TriggerRegisterUnitIndexEvent takes trigger t,integer eventtype returns nothing
-        call TriggerRegisterVariableEvent(t, "UnitDex___E", EQUAL, eventtype)
+        call TriggerRegisterVariableEvent(t, "UnitDex__E", EQUAL, eventtype)
     endfunction
     
     function OnUnitIndex takes code func returns triggercondition
-        return TriggerAddCondition(UnitDex___IndexTrig[EVENT_UNIT_INDEX], Filter(func))
+        return TriggerAddCondition(UnitDex__IndexTrig[EVENT_UNIT_INDEX], Filter(func))
     endfunction
 
     function OnUnitDeindex takes code func returns triggercondition
-        return TriggerAddCondition(UnitDex___IndexTrig[EVENT_UNIT_DEINDEX], Filter(func))
+        return TriggerAddCondition(UnitDex__IndexTrig[EVENT_UNIT_DEINDEX], Filter(func))
     endfunction
     
     function UnitDexRemove takes unit u,boolean runEvents returns boolean
@@ -10492,7 +10565,7 @@ endfunction
     
         
         
-//Implemented from module UnitDex___UnitDexConfig:
+//Implemented from module UnitDex__UnitDexConfig:
     
         // The raw code of the leave detection ability.
         
@@ -10504,24 +10577,24 @@ endfunction
         
         
         
-//Implemented from module UnitDex___UnitDexCore:
+//Implemented from module UnitDex__UnitDexCore:
     
         function s__UnitDex_Remove takes unit u,boolean runEvents returns boolean
             local integer i
             
-            if ( ((s__UnitDex_Unit[((GetUnitUserData(((u)))))]) != null) ) then // INLINED!!
-                set i=(GetUnitUserData((u))) // INLINED!!
-                set s__UnitDex_List[i]=UnitDex___Index
-                set UnitDex___Index=i
+            if ( IsUnitIndexed(u) ) then
+                set i=GetUnitId(u)
+                set s__UnitDex_List[i]=UnitDex__Index
+                set UnitDex__Index=i
                 
                 call GroupRemoveUnit(s__UnitDex_Group, u)
                 call SetUnitUserData(u, 0)
             
                 if ( runEvents ) then
                     set s__UnitDex_LastIndex=i
-                    set UnitDex___E=EVENT_UNIT_DEINDEX
-                    call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_DEINDEX])
-                    set UnitDex___E=- 1
+                    set UnitDex__E=EVENT_UNIT_DEINDEX
+                    call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_DEINDEX])
+                    set UnitDex__E=- 1
                 endif
                 
                 set s__UnitDex_Unit[i]=null
@@ -10533,7 +10606,7 @@ endfunction
             return false
         endfunction
         
-        function s__UnitDex_UnitDex___UnitDexCore__onGameStart takes nothing returns nothing
+        function s__UnitDex_UnitDex__UnitDexCore__onGameStart takes nothing returns nothing
             local integer i= 0
 
                 local group ENUM_GROUP= CreateGroup()
@@ -10541,7 +10614,7 @@ endfunction
             
             // Index preplaced units
             loop
-                call GroupEnumUnitsOfPlayer(ENUM_GROUP, Player(i), UnitDex___FilterEnter)
+                call GroupEnumUnitsOfPlayer(ENUM_GROUP, Player(i), UnitDex__FilterEnter)
                 
                 set i=i + 1
                 
@@ -10560,24 +10633,24 @@ endfunction
                 
                 set s__UnitDex_LastIndex=i
                 
-                call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_INDEX])
-                set UnitDex___E=EVENT_UNIT_INDEX
-                set UnitDex___E=- 1
+                call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_INDEX])
+                set UnitDex__E=EVENT_UNIT_INDEX
+                set UnitDex__E=- 1
                 
                 set i=i + 1
             endloop
 
             set s__UnitDex_LastIndex=s__UnitDex_Counter
             set s__UnitDex_Initialized=true
-            set UnitDex___FilterEnter=null
+            set UnitDex__FilterEnter=null
             
             call DestroyTimer(GetExpiredTimer())
         endfunction
         
-        function s__UnitDex_UnitDex___UnitDexCore__onEnter takes nothing returns boolean
+        function s__UnitDex_UnitDex__UnitDexCore__onEnter takes nothing returns boolean
             local unit u= GetFilterUnit()
-            local integer i= (GetUnitUserData((u))) // INLINED!!
-            local integer t= UnitDex___Index
+            local integer i= GetUnitId(u)
+            local integer t= UnitDex__Index
             
             if ( i == 0 and s__UnitDex_Enabled ) then
                 
@@ -10606,8 +10679,8 @@ endfunction
                 call UnitMakeAbilityPermanent(u, true, s__UnitDex_DETECT_LEAVE_ABILITY)
                 
                 // Allocate index
-                if ( UnitDex___Index != 0 ) then
-                    set UnitDex___Index=s__UnitDex_List[t]
+                if ( UnitDex__Index != 0 ) then
+                    set UnitDex__Index=s__UnitDex_List[t]
                 else
                     set s__UnitDex_Counter=s__UnitDex_Counter + 1
                     set t=s__UnitDex_Counter
@@ -10623,13 +10696,13 @@ endfunction
                 
                 if ( s__UnitDex_Initialized ) then
                     // Execute custom events registered with RegisterUnitIndexEvent
-                    call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_INDEX])
+                    call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_INDEX])
                     
                     // Handle TriggerRegisterUnitIndexEvent
-                    set UnitDex___E=EVENT_UNIT_INDEX
+                    set UnitDex__E=EVENT_UNIT_INDEX
 
                     // Reset so the event can occur again
-                    set UnitDex___E=- 1
+                    set UnitDex__E=- 1
                 endif
             endif
             
@@ -10638,7 +10711,7 @@ endfunction
             return false
         endfunction
 
-        function s__UnitDex_UnitDex___UnitDexCore__onLeave takes nothing returns boolean
+        function s__UnitDex_UnitDex__UnitDexCore__onLeave takes nothing returns boolean
             local unit u
             local integer i
             
@@ -10653,24 +10726,24 @@ endfunction
                     return false
                 endif
                 
-                set i=(GetUnitUserData((u))) // INLINED!!
+                set i=GetUnitId(u)
 
                 // If unit has been indexed then deindex it
-                if ( i > 0 and i <= s__UnitDex_Counter and u == (s__UnitDex_Unit[(i)]) ) then // INLINED!!
+                if ( i > 0 and i <= s__UnitDex_Counter and u == GetUnitById(i) ) then
                     
                     // Recycle the index
-                    set s__UnitDex_List[i]=UnitDex___Index
-                    set UnitDex___Index=i
+                    set s__UnitDex_List[i]=UnitDex__Index
+                    set UnitDex__Index=i
                     set s__UnitDex_LastIndex=i
                     
                     // Remove to group of indexed units
                     call GroupRemoveUnit(s__UnitDex_Group, u)
                 
                     // Execute custom events without any associated triggers
-                    call TriggerEvaluate(UnitDex___IndexTrig[EVENT_UNIT_DEINDEX])
+                    call TriggerEvaluate(UnitDex__IndexTrig[EVENT_UNIT_DEINDEX])
                     
                     // Handle TriggerRegisterUnitIndexEvent
-                    set UnitDex___E=EVENT_UNIT_DEINDEX
+                    set UnitDex__E=EVENT_UNIT_DEINDEX
                     
                     // Remove entry
                     call SetUnitUserData(u, 0)
@@ -10680,7 +10753,7 @@ endfunction
                     set s__UnitDex_Count=s__UnitDex_Count - 1
                
                     // Reset so the event can occur again
-                    set UnitDex___E=- 1
+                    set UnitDex__E=- 1
                 endif
                 
                 set u=null
@@ -10689,7 +10762,7 @@ endfunction
             return false
         endfunction
         
-        function s__UnitDex_UnitDex___UnitDexCore__onInit takes nothing returns nothing
+        function s__UnitDex_UnitDex__UnitDexCore__onInit takes nothing returns nothing
             local trigger t= CreateTrigger()
             local integer i= 0
             local player p
@@ -10700,11 +10773,11 @@ endfunction
 
 
             
-            set UnitDex___FilterEnter=Filter(function s__UnitDex_UnitDex___UnitDexCore__onEnter)
+            set UnitDex__FilterEnter=Filter(function s__UnitDex_UnitDex__UnitDexCore__onEnter)
             
             // Begin to index units when they enter the map
 
-                call TriggerRegisterEnterRegion(CreateTrigger(), s__WorldBounds_worldRegion, UnitDex___FilterEnter)
+                call TriggerRegisterEnterRegion(CreateTrigger(), s__WorldBounds_worldRegion, UnitDex__FilterEnter)
 
 
 
@@ -10712,10 +10785,10 @@ endfunction
 
 
             
-            call TriggerAddCondition(t, Filter(function s__UnitDex_UnitDex___UnitDexCore__onLeave))
+            call TriggerAddCondition(t, Filter(function s__UnitDex_UnitDex__UnitDexCore__onLeave))
             
-            set UnitDex___IndexTrig[EVENT_UNIT_INDEX]=CreateTrigger()
-            set UnitDex___IndexTrig[EVENT_UNIT_DEINDEX]=CreateTrigger()
+            set UnitDex__IndexTrig[EVENT_UNIT_INDEX]=CreateTrigger()
+            set UnitDex__IndexTrig[EVENT_UNIT_DEINDEX]=CreateTrigger()
             
             loop
                 set p=Player(i)
@@ -10730,7 +10803,7 @@ endfunction
                 exitwhen i == bj_MAX_PLAYER_SLOTS
             endloop
             
-            call TimerStart(CreateTimer(), 0, false, function s__UnitDex_UnitDex___UnitDexCore__onGameStart)
+            call TimerStart(CreateTimer(), 0, false, function s__UnitDex_UnitDex__UnitDexCore__onGameStart)
         endfunction
     
     
@@ -10755,7 +10828,7 @@ endfunction
 
     //inline friendly (when debug mode is off..)
     function XE_PreloadAbility takes integer abilid returns nothing
-        call UnitAddAbility(xepreload___dum, abilid)
+        call UnitAddAbility(xepreload__dum, abilid)
 
 
 
@@ -10775,7 +10848,7 @@ endfunction
     //   due to the infamous % bug. Then again, if you do that then you probably 
     // deserve it....
     //
-    function xepreload___DebugIdInteger2IdString takes integer value returns string
+    function xepreload__DebugIdInteger2IdString takes integer value returns string
      local string charMap= ".................................!.#$%&'()*+,-./0123456789:;<=>.@ABCDEFGHIJKLMNOPQRSTUVWXYZ[.]^_`abcdefghijklmnopqrstuvwxyz{|}~................................................................................................................................."
      local string result= ""
      local integer remainingValue= value
@@ -10795,9 +10868,9 @@ endfunction
     endfunction
 
     //--------------------------------
-    function xepreload___kill takes nothing returns nothing
-        call RemoveUnit(xepreload___dum)
-        set xepreload___dum=null
+    function xepreload__kill takes nothing returns nothing
+        call RemoveUnit(xepreload__dum)
+        set xepreload__dum=null
 
             call ReleaseTimer(GetExpiredTimer())
 
@@ -10805,17 +10878,17 @@ endfunction
 
     endfunction
     
-    function s__xepreload___init_onInit takes nothing returns nothing
+    function s__xepreload__init_onInit takes nothing returns nothing
      local timer t
-        set xepreload___dum=CreateUnit(Player(15), XE_DUMMY_UNITID, 0, 0, 0)
-        if ( xepreload___dum == null ) then
+        set xepreload__dum=CreateUnit(Player(15), XE_DUMMY_UNITID, 0, 0, 0)
+        if ( xepreload__dum == null ) then
         endif
 
-            set t=(NewTimerEx(0)) // INLINED!!
+            set t=NewTimer()
 
 
 
-        call TimerStart(t, 0.0, false, function xepreload___kill)
+        call TimerStart(t, 0.0, false, function xepreload__kill)
         set t=null
     endfunction
 
@@ -10854,11 +10927,11 @@ function AddSpecialEffectLocBJEX takes location l,string sfx returns effect
 endfunction
 
 function AddSpecialEffectLocEx takes string sfx,location l returns effect
-    return (AddSpecialEffectLocBJ((l ), ( sfx))) // INLINED!!
+    return AddSpecialEffectLocBJEX(l , sfx)
 endfunction
 
 function AddSpecialEffectLocBJEx takes location l,string sfx returns effect
-    return (AddSpecialEffectLocBJ((l ), ( sfx))) // INLINED!!
+    return AddSpecialEffectLocBJEX(l , sfx)
 endfunction
 
 function AddSpecialEffectTargetUnitBJEx takes string attachPoint,unit target,string sfx returns effect
@@ -10866,7 +10939,7 @@ function AddSpecialEffectTargetUnitBJEx takes string attachPoint,unit target,str
 endfunction 
 
 function AddSpecialEffectTargetUnitBJEX takes string attachPoint,unit target,string sfx returns effect
-    return (AddSpecialEffectTargetUnitBJ((attachPoint ), ( target ), ( sfx))) // INLINED!!
+    return AddSpecialEffectTargetUnitBJEx(attachPoint , target , sfx)
 endfunction 
 
 function AddSpecialEffectTargetEx takes string sfx,unit target,string attachPoint returns effect
@@ -10874,13 +10947,13 @@ function AddSpecialEffectTargetEx takes string sfx,unit target,string attachPoin
 endfunction
 
 function AddSpecialEffectTargetEX takes string sfx,unit target,string attachPoint returns effect
-    return (AddSpecialEffectTarget((sfx ), ( target ), ( attachPoint))) // INLINED!!
+    return AddSpecialEffectTargetEx(sfx , target , attachPoint)
 endfunction
 
 
 
  function s__EffectUtils__EffectTimer_finish takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
 		if s__EffectUtils__EffectTimer_remove[this] then
 			call BlzSetSpecialEffectScale(s__EffectUtils__EffectTimer_e[this], 0)
 		endif
@@ -10914,15 +10987,15 @@ endfunction
     function RegisterPlayerUnitEvent2 takes playerunitevent p,boolexpr c returns nothing
         local integer i= GetHandleId(p)
         local integer k= 15
-        if RegisterPlayerUnitEvent___t[i] == null then
-            set RegisterPlayerUnitEvent___t[i]=CreateTrigger()
+        if RegisterPlayerUnitEvent__t[i] == null then
+            set RegisterPlayerUnitEvent__t[i]=CreateTrigger()
             loop
-                call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent___t[i], Player(k), p, null)
+                call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent__t[i], Player(k), p, null)
                 exitwhen k == 0
                 set k=k - 1
             endloop
         endif
-        call TriggerAddCondition(RegisterPlayerUnitEvent___t[i], c)
+        call TriggerAddCondition(RegisterPlayerUnitEvent__t[i], c)
     endfunction
     
     function RegisterPlayerUnitEvent takes playerunitevent p,code c returns nothing
@@ -10931,47 +11004,47 @@ endfunction
     
     function RegisterPlayerUnitEventForPlayer takes playerunitevent p,code c,player pl returns nothing
         local integer i= 16 * GetHandleId(p) + GetPlayerId(pl)
-        if RegisterPlayerUnitEvent___t[i] == null then
-            set RegisterPlayerUnitEvent___t[i]=CreateTrigger()
-            call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent___t[i], pl, p, null)
+        if RegisterPlayerUnitEvent__t[i] == null then
+            set RegisterPlayerUnitEvent__t[i]=CreateTrigger()
+            call TriggerRegisterPlayerUnitEvent(RegisterPlayerUnitEvent__t[i], pl, p, null)
         endif
-        call TriggerAddCondition(RegisterPlayerUnitEvent___t[i], Filter(c))
+        call TriggerAddCondition(RegisterPlayerUnitEvent__t[i], Filter(c))
     endfunction
     
     function GetPlayerUnitEventTrigger takes playerunitevent p returns trigger
-        return RegisterPlayerUnitEvent___t[GetHandleId(p)]
+        return RegisterPlayerUnitEvent__t[GetHandleId(p)]
     endfunction
 
 //============================================================================
  
-//Implemented from module RegisterPlayerUnitEvent___M:
+//Implemented from module RegisterPlayerUnitEvent__M:
     
 
 
 
 
     
-    function s__RegisterPlayerUnitEvent___S_onCast takes nothing returns nothing
+    function s__RegisterPlayerUnitEvent__S_onCast takes nothing returns nothing
 
-            call TriggerEvaluate((LoadTriggerHandle(Table___ht, (((s__RegisterPlayerUnitEvent___S_tb))), (GetSpellAbilityId())))) // INLINED!!
+            call TriggerEvaluate(s__Table__triggers__getindex(s__Table__get_trigger(s__RegisterPlayerUnitEvent__S_tb),GetSpellAbilityId()))
 
 
 
     endfunction
  
-    function s__RegisterPlayerUnitEvent___S_RegisterPlayerUnitEvent___M__onInit takes nothing returns nothing
+    function s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onInit takes nothing returns nothing
 
-            set s__RegisterPlayerUnitEvent___S_tb=s__Table_create()
+            set s__RegisterPlayerUnitEvent__S_tb=s__Table_create()
 
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_EFFECT ) , Filter(( function s__RegisterPlayerUnitEvent___S_onCast))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_EFFECT , function s__RegisterPlayerUnitEvent__S_onCast)
     endfunction
  
 function RegisterSpellEffectEvent2 takes integer abil,boolexpr b returns nothing
 
-        if not (HaveSavedHandle(Table___ht, (((s__RegisterPlayerUnitEvent___S_tb))), (abil))) then // INLINED!!
-            call SaveTriggerHandle(Table___ht, (((s__RegisterPlayerUnitEvent___S_tb))), (abil), ( CreateTrigger())) // INLINED!!
+        if not s__Table__handles_has(s__Table__get_handle(s__RegisterPlayerUnitEvent__S_tb),abil) then
+            call s__Table__triggers__setindex(s__Table__get_trigger(s__RegisterPlayerUnitEvent__S_tb),abil, CreateTrigger())
         endif
-        call TriggerAddCondition((LoadTriggerHandle(Table___ht, (((s__RegisterPlayerUnitEvent___S_tb))), (abil))), b) // INLINED!!
+        call TriggerAddCondition(s__Table__triggers__getindex(s__Table__get_trigger(s__RegisterPlayerUnitEvent__S_tb),abil), b)
 
 
 
@@ -10992,47 +11065,47 @@ endfunction
 	//call BJDebugMsg("unit leaving fountain...")
 	set j=0
 	loop
-		exitwhen j == RegisterPlayerUnitEvent___leave_ids_count
+		exitwhen j == RegisterPlayerUnitEvent__leave_ids_count
 		//call BJDebugMsg("checking for " + I2S(leave_ids[j]) + "...")
-		if s__RegisterPlayerUnitEvent___leave_ids[j] == id then
+		if s__RegisterPlayerUnitEvent__leave_ids[j] == id then
 			//call BJDebugMsg("detected!!")
 			set i=0
 			loop
-				exitwhen i == s__RegisterPlayerUnitEvent___death_events_count[id]
-				if sg__RegisterPlayerUnitEvent___death_events_b_get((id)*(30)+i) == 0 then
-					call RegisterPlayerUnitEvent2(EVENT_PLAYER_UNIT_DEATH , sg__RegisterPlayerUnitEvent___death_events_get((id)*(30)+i))
+				exitwhen i == s__RegisterPlayerUnitEvent__death_events_count[id]
+				if sg__RegisterPlayerUnitEvent__death_events_b_get((id)*(30)+i) == 0 then
+					call RegisterPlayerUnitEvent2(EVENT_PLAYER_UNIT_DEATH , sg__RegisterPlayerUnitEvent__death_events_get((id)*(30)+i))
 				endif
-				call sg__RegisterPlayerUnitEvent___death_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent___death_events_b_get((id)*(30)+i) + 1)
+				call sg__RegisterPlayerUnitEvent__death_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent__death_events_b_get((id)*(30)+i) + 1)
 				set i=i + 1
 			endloop
-			set s__RegisterPlayerUnitEvent___death_events_count[id]= 0
+			set s__RegisterPlayerUnitEvent__death_events_count[id]= 0
 			set i=0
 			loop
-				exitwhen i == s__RegisterPlayerUnitEvent___attack_events_count[id]
-				if sg__RegisterPlayerUnitEvent___attack_events_b_get((id)*(30)+i) == 0 then
-					call RegisterPlayerUnitEvent2(EVENT_PLAYER_UNIT_ATTACKED , sg__RegisterPlayerUnitEvent___attack_events_get((id)*(30)+i))
+				exitwhen i == s__RegisterPlayerUnitEvent__attack_events_count[id]
+				if sg__RegisterPlayerUnitEvent__attack_events_b_get((id)*(30)+i) == 0 then
+					call RegisterPlayerUnitEvent2(EVENT_PLAYER_UNIT_ATTACKED , sg__RegisterPlayerUnitEvent__attack_events_get((id)*(30)+i))
 				endif
-				call sg__RegisterPlayerUnitEvent___attack_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent___attack_events_b_get((id)*(30)+i) + 1)
+				call sg__RegisterPlayerUnitEvent__attack_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent__attack_events_b_get((id)*(30)+i) + 1)
 				set i=i + 1
 			endloop
-			set s__RegisterPlayerUnitEvent___attack_events_count[id]= 0
+			set s__RegisterPlayerUnitEvent__attack_events_count[id]= 0
 			set i=0
 			loop
-				exitwhen i == s__RegisterPlayerUnitEvent___spell_events_count[id]
+				exitwhen i == s__RegisterPlayerUnitEvent__spell_events_count[id]
 				//call BJDebugMsg(I2S(spell_events_id[id][i]))
-				if sg__RegisterPlayerUnitEvent___spell_events_b_get((id)*(30)+i) == 0 then
-					call RegisterSpellEffectEvent2(sg__RegisterPlayerUnitEvent___spell_events_id_get((id)*(30)+i) , sg__RegisterPlayerUnitEvent___spell_events_get((id)*(30)+i))
+				if sg__RegisterPlayerUnitEvent__spell_events_b_get((id)*(30)+i) == 0 then
+					call RegisterSpellEffectEvent2(sg__RegisterPlayerUnitEvent__spell_events_id_get((id)*(30)+i) , sg__RegisterPlayerUnitEvent__spell_events_get((id)*(30)+i))
 				endif
-				call sg__RegisterPlayerUnitEvent___spell_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent___spell_events_b_get((id)*(30)+i) + 1)
+				call sg__RegisterPlayerUnitEvent__spell_events_b_set((id)*(30)+i,sg__RegisterPlayerUnitEvent__spell_events_b_get((id)*(30)+i) + 1)
 				set i=i + 1
 			endloop
 			set i=0
 			loop
-				exitwhen i == s__RegisterPlayerUnitEvent___trigger_events_count[id]
-				call EnableTrigger(sg__RegisterPlayerUnitEvent___trigger_events_get((id)*(30)+i))
+				exitwhen i == s__RegisterPlayerUnitEvent__trigger_events_count[id]
+				call EnableTrigger(sg__RegisterPlayerUnitEvent__trigger_events_get((id)*(30)+i))
 				set i=i + 1
 			endloop
-			set s__RegisterPlayerUnitEvent___trigger_events_count[id]= 0
+			set s__RegisterPlayerUnitEvent__trigger_events_count[id]= 0
 			exitwhen true
 		endif
 		set j=j + 1
@@ -11042,21 +11115,21 @@ endfunction
     function AddIdToLeaveGroup takes integer id returns nothing
  local integer i= 0
 	loop
-		exitwhen i == RegisterPlayerUnitEvent___leave_ids_count
-		if s__RegisterPlayerUnitEvent___leave_ids[i] == id then
+		exitwhen i == RegisterPlayerUnitEvent__leave_ids_count
+		if s__RegisterPlayerUnitEvent__leave_ids[i] == id then
 			return
 		endif
 		set i=i + 1
 	endloop
-	set s__RegisterPlayerUnitEvent___leave_ids[RegisterPlayerUnitEvent___leave_ids_count]= id
-	set RegisterPlayerUnitEvent___leave_ids_count=RegisterPlayerUnitEvent___leave_ids_count + 1
+	set s__RegisterPlayerUnitEvent__leave_ids[RegisterPlayerUnitEvent__leave_ids_count]= id
+	set RegisterPlayerUnitEvent__leave_ids_count=RegisterPlayerUnitEvent__leave_ids_count + 1
     endfunction
 
     function RegisterSpellEffectEventForId takes integer id,integer spellId,code c returns nothing
-	call sg__RegisterPlayerUnitEvent___spell_events_set((id)*(30)+s__RegisterPlayerUnitEvent___spell_events_count[id],Filter(c))
-	call sg__RegisterPlayerUnitEvent___spell_events_id_set((id)*(30)+s__RegisterPlayerUnitEvent___spell_events_count[id],spellId)
-	call sg__RegisterPlayerUnitEvent___spell_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent___spell_events_count[id],0)
-	set s__RegisterPlayerUnitEvent___spell_events_count[id]= s__RegisterPlayerUnitEvent___spell_events_count[id] + 1
+	call sg__RegisterPlayerUnitEvent__spell_events_set((id)*(30)+s__RegisterPlayerUnitEvent__spell_events_count[id],Filter(c))
+	call sg__RegisterPlayerUnitEvent__spell_events_id_set((id)*(30)+s__RegisterPlayerUnitEvent__spell_events_count[id],spellId)
+	call sg__RegisterPlayerUnitEvent__spell_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent__spell_events_count[id],0)
+	set s__RegisterPlayerUnitEvent__spell_events_count[id]= s__RegisterPlayerUnitEvent__spell_events_count[id] + 1
 	call AddIdToLeaveGroup(id)
     endfunction
  
@@ -11071,15 +11144,15 @@ endfunction
  
     function RegisterPlayerUnitEventForId takes integer id,playerunitevent p,code c returns nothing
 	if p == EVENT_PLAYER_UNIT_DEATH then
-		call sg__RegisterPlayerUnitEvent___death_events_set((id)*(30)+s__RegisterPlayerUnitEvent___death_events_count[id],Filter(c))
-		call sg__RegisterPlayerUnitEvent___death_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent___death_events_count[id],0)
-		set s__RegisterPlayerUnitEvent___death_events_count[id]= s__RegisterPlayerUnitEvent___death_events_count[id] + 1
+		call sg__RegisterPlayerUnitEvent__death_events_set((id)*(30)+s__RegisterPlayerUnitEvent__death_events_count[id],Filter(c))
+		call sg__RegisterPlayerUnitEvent__death_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent__death_events_count[id],0)
+		set s__RegisterPlayerUnitEvent__death_events_count[id]= s__RegisterPlayerUnitEvent__death_events_count[id] + 1
 	elseif p == EVENT_PLAYER_UNIT_ATTACKED then
-		call sg__RegisterPlayerUnitEvent___attack_events_set((id)*(30)+s__RegisterPlayerUnitEvent___attack_events_count[id],Filter(c))
-		call sg__RegisterPlayerUnitEvent___attack_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent___attack_events_count[id],0)
-		set s__RegisterPlayerUnitEvent___attack_events_count[id]= s__RegisterPlayerUnitEvent___attack_events_count[id] + 1
+		call sg__RegisterPlayerUnitEvent__attack_events_set((id)*(30)+s__RegisterPlayerUnitEvent__attack_events_count[id],Filter(c))
+		call sg__RegisterPlayerUnitEvent__attack_events_b_set((id)*(30)+s__RegisterPlayerUnitEvent__attack_events_count[id],0)
+		set s__RegisterPlayerUnitEvent__attack_events_count[id]= s__RegisterPlayerUnitEvent__attack_events_count[id] + 1
 	else
-		call RegisterPlayerUnitEvent2((p ) , Filter(( c))) // INLINED!!
+		call RegisterPlayerUnitEvent(p , c)
 	endif
 	call AddIdToLeaveGroup(id)
     endfunction
@@ -11093,31 +11166,31 @@ endfunction
 	call RegisterPlayerUnitEventForId(id , p , c)
     endfunction
 
-function EnableTriggerForId takes integer id,trigger l__RegisterPlayerUnitEvent___t returns nothing
-	call sg__RegisterPlayerUnitEvent___trigger_events_set((id)*(30)+s__RegisterPlayerUnitEvent___trigger_events_count[id],l__RegisterPlayerUnitEvent___t)
-	set s__RegisterPlayerUnitEvent___trigger_events_count[id]= s__RegisterPlayerUnitEvent___trigger_events_count[id] + 1
+function EnableTriggerForId takes integer id,trigger l__RegisterPlayerUnitEvent__t returns nothing
+	call sg__RegisterPlayerUnitEvent__trigger_events_set((id)*(30)+s__RegisterPlayerUnitEvent__trigger_events_count[id],l__RegisterPlayerUnitEvent__t)
+	set s__RegisterPlayerUnitEvent__trigger_events_count[id]= s__RegisterPlayerUnitEvent__trigger_events_count[id] + 1
 	call AddIdToLeaveGroup(id)
-	call DisableTrigger(l__RegisterPlayerUnitEvent___t)
+	call DisableTrigger(l__RegisterPlayerUnitEvent__t)
     endfunction
 
-function EnableTriggerForUnit takes unit u,trigger l__RegisterPlayerUnitEvent___t returns nothing
+function EnableTriggerForUnit takes unit u,trigger l__RegisterPlayerUnitEvent__t returns nothing
  local integer id
 	if u == null then
 		return
 	endif
 	set id=GetUnitPointValue(u)
-	call EnableTriggerForId(id , l__RegisterPlayerUnitEvent___t)
+	call EnableTriggerForId(id , l__RegisterPlayerUnitEvent__t)
     endfunction
 
     function RegisterLeaveFunction takes code c returns nothing
-	call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter(c))
+	call TriggerAddCondition(RegisterPlayerUnitEvent__leave_trigger, Filter(c))
     endfunction 
 
     function RegisterPlayerUnitEvent_init takes nothing returns nothing
- local trigger l__RegisterPlayerUnitEvent___t= CreateTrigger()
-	call TriggerRegisterLeaveRectSimple(l__RegisterPlayerUnitEvent___t, gg_rct_fonte)
-	call TriggerAddAction(l__RegisterPlayerUnitEvent___t, function RegisterPlayerUnitEventForUnit_actions)
-	call TriggerRegisterLeaveRectSimple(RegisterPlayerUnitEvent___leave_trigger, gg_rct_fonte)
+ local trigger l__RegisterPlayerUnitEvent__t= CreateTrigger()
+	call TriggerRegisterLeaveRectSimple(l__RegisterPlayerUnitEvent__t, gg_rct_fonte)
+	call TriggerAddAction(l__RegisterPlayerUnitEvent__t, function RegisterPlayerUnitEventForUnit_actions)
+	call TriggerRegisterLeaveRectSimple(RegisterPlayerUnitEvent__leave_trigger, gg_rct_fonte)
     endfunction
 
 
@@ -11150,13 +11223,13 @@ function EnableTriggerForUnit takes unit u,trigger l__RegisterPlayerUnitEvent___
     
     
     function UnitRecycler2__RecycleHide takes nothing returns nothing
-        call ShowUnit((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), false) // INLINED!!
+        call ShowUnit(GetUnitById(GetTimerData(GetExpiredTimer())), false)
         call ReleaseTimer(GetExpiredTimer())
     endfunction 
     
     function RecycleUnitDelayed takes unit u,real delay returns nothing
         call UnitApplyTimedLife(u, 'BTLF', delay)
-        call TimerStartEx(NewTimerEx((GetUnitUserData((u)))) , delay , false , function UnitRecycler2__RecycleHide , "RecycleHide") // INLINED!!
+        call TimerStartEx(NewTimerEx(GetUnitId(u)) , delay , false , function UnitRecycler2__RecycleHide , "RecycleHide")
     endfunction 
     
 
@@ -11167,7 +11240,7 @@ function EnableTriggerForUnit takes unit u,trigger l__RegisterPlayerUnitEvent___
 
 	
  function s__UnitUtils__ReleaseDummy_finish takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
 		call UnitRemoveAbility(s__UnitUtils__ReleaseDummy_u[this], s__UnitUtils__ReleaseDummy_i[this])
 		call SetUnitX(s__UnitUtils__ReleaseDummy_u[this], 5092)
 		call SetUnitY(s__UnitUtils__ReleaseDummy_u[this], - 6846)
@@ -11199,7 +11272,7 @@ function CreateAbilityDummy takes unit owner,integer spellId returns unit
 	endif
 	call SetUnitX(u, GetUnitX(owner))
 	call SetUnitY(u, GetUnitY(owner))
-call UnitAddAbility((u ), ( spellId)) // INLINED!!
+    	call UnitAddAbilityEx(u , spellId)
 	call s__UnitUtils__ReleaseDummy_create(u , spellId , 1.0)
     return u
 endfunction 
@@ -11265,9 +11338,9 @@ function UnitUtils__init takes nothing returns nothing
 		set s__UnitUtils__dummies[i]= CreateGroup()
 		set i=i + 1
 	endloop
-    call UnitAddAbility(xepreload___dum, ('A0NN')) // INLINED!!
-    call UnitAddAbility(xepreload___dum, ('A0VM')) // INLINED!!
-    call UnitAddAbility(xepreload___dum, ('A0VY')) // INLINED!!
+    call XE_PreloadAbility('A0NN')
+    call XE_PreloadAbility('A0VM')
+    call XE_PreloadAbility('A0VY')
     set UnitUtils__bars=s__Table_create()
 endfunction
 
@@ -11278,7 +11351,7 @@ function AddUnitStat takes unit whichUnit,unitstate whichStatus,real amount,stri
     if sfx != null then
         set x=GetUnitX(whichUnit)
         set y=GetUnitY(whichUnit)
-        call DestroyEffect(AddSpecialEffect((sfx ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+        call AddSpecialEffectEx(sfx , x , y)
     endif
 endfunction
 
@@ -11289,7 +11362,7 @@ endfunction
 
 function AddUnitLifePercent takes unit whichUnit,real percentage,string sfx returns nothing
     local real amount= GetUnitState(whichUnit, UNIT_STATE_MAX_LIFE) * percentage
-    call AddUnitStat((whichUnit ) , UNIT_STATE_LIFE , (( amount )*1.0) , ( sfx)) // INLINED!!
+    call AddUnitLife(whichUnit , amount , sfx)
 endfunction 
 //end of: AddUnitStat("Life", "LIFE")
 //textmacro instance: AddUnitStat("Mana", "MANA")
@@ -11299,14 +11372,14 @@ endfunction
 
 function AddUnitManaPercent takes unit whichUnit,real percentage,string sfx returns nothing
     local real amount= GetUnitState(whichUnit, UNIT_STATE_MAX_MANA) * percentage
-    call AddUnitStat((whichUnit ) , UNIT_STATE_MANA , (( amount )*1.0) , ( sfx)) // INLINED!!
+    call AddUnitMana(whichUnit , amount , sfx)
 endfunction 
 //end of: AddUnitStat("Mana", "MANA")
 
 function UnitUtils__LoadingBarMove takes nothing returns nothing
-    local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-    local unit bar= (s__UnitDex_Unit[(id)]) // INLINED!!
-    local unit caster= (s__UnitDex_Unit[((LoadInteger(Table___ht, (UnitUtils__bars), (id))))]) // INLINED!!
+    local integer id= GetTimerData(GetExpiredTimer())
+    local unit bar= GetUnitById(id)
+    local unit caster= GetUnitById(s__Table__getindex(UnitUtils__bars,id))
     local integer alpha
     if IsUnitInvisible(caster, GetLocalPlayer()) then
         set alpha=0
@@ -11542,12 +11615,12 @@ function GetCode takes nothing returns string
         endif
         set i=i + 1
     endloop
-    call CreateTextFile(((s)) , "NinpouRecords\\record_" + GetUnitName(udg_units33[GetPlayerId(GetLocalPlayer()) + 1]) + ".txt") // INLINED!!
+    call CreateTextFile(GenerateCodeToFile(s) , "NinpouRecords\\record_" + GetUnitName(udg_units33[GetPlayerId(GetLocalPlayer()) + 1]) + ".txt")
     return s
 endfunction 
 
 function TimedVictoryActions takes nothing returns nothing
- local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+ local integer id= GetTimerData(GetExpiredTimer())
 	call CustomVictoryBJ(Player(id), true, true)
 	call ReleaseTimer(GetExpiredTimer())
 endfunction
@@ -11565,7 +11638,7 @@ function TimedVictory takes player whichPlayer returns nothing
 endfunction
  
 function TimedDefeatActions takes nothing returns nothing
- local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+ local integer id= GetTimerData(GetExpiredTimer())
 	call CustomDefeatBJ(Player(id), "Defeated!")
 	call ReleaseTimer(GetExpiredTimer())
 endfunction
@@ -11583,7 +11656,7 @@ function TimedDefeat takes player whichPlayer returns nothing
 endfunction
 
 function TimedDrawActions takes nothing returns nothing
- local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+ local integer id= GetTimerData(GetExpiredTimer())
 	call CustomDefeatBJ(Player(id), "Draw!")
 	call ReleaseTimer(GetExpiredTimer())
 endfunction
@@ -11807,11 +11880,11 @@ endfunction
         if udg_multiboard01 != null then
             call UpdateMultiboard()
         endif
-        call TimerStartEx((NewTimerEx(0)) , RMaxBJ(5, 60 - udg_Minutes) , false , function s__UnitUtils__UpdateMultiboardS_update , "UpdateMultiboardS_update") // INLINED!!
+        call TimerStartEx(NewTimer() , RMaxBJ(5, 60 - udg_Minutes) , false , function s__UnitUtils__UpdateMultiboardS_update , "UpdateMultiboardS_update")
         call ReleaseTimer(GetExpiredTimer())
     endfunction 
     function s__UnitUtils__UpdateMultiboardS_onInit takes nothing returns nothing
-        call TimerStartEx((NewTimerEx(0)) , 60.0 , false , function s__UnitUtils__UpdateMultiboardS_update , "UpdateMultiboardS_update") // INLINED!!
+        call TimerStartEx(NewTimer() , 60.0 , false , function s__UnitUtils__UpdateMultiboardS_update , "UpdateMultiboardS_update")
     endfunction 
 
 
@@ -15515,7 +15588,7 @@ endfunction
         local integer i= 0
         loop
             exitwhen i == s__Tree_count_requirements[this]
-            call RemoveItem(GetItemOfTypeFromUnitBJ((u ), ( s___Tree_requirements[s__Tree_requirements[this]+i]))) // INLINED!!
+            call UnitRemoveItemEx(u , s___Tree_requirements[s__Tree_requirements[this]+i])
             //call this.removeItem(u, this.requirements[i])
             set i=i + 1
         endloop
@@ -15588,7 +15661,7 @@ function SetUnitScaleEx takes unit u,real x,real y,real z returns nothing
 endfunction
 
 function SetUnitScalePercentEx takes unit u,real x,real y,real z returns nothing
-    call SetUnitScale((u ), (( x / 100 )*1.0), (( y / 100 )*1.0), (( z / 100)*1.0)) // INLINED!!
+    call SetUnitScaleEx(u , x / 100 , y / 100 , z / 100)
 endfunction
 
 //processed hook: hook SetUnitScalePercent SetUnitScalePercentEx 
@@ -15598,26 +15671,26 @@ function SetUnitVertexColorEx takes unit u,integer red,integer green,integer blu
 endfunction
 
 function SetUnitVertexColorBJEx takes unit u,real red,real green,real blue,real transparency returns nothing
-    call SetUnitVertexColor((u ), ( PercentTo255(red) ), ( PercentTo255(green) ), ( PercentTo255(blue) ), ( PercentTo255(100.0 - transparency))) // INLINED!!
+    call SetUnitVertexColorEx(u , PercentTo255(red) , PercentTo255(green) , PercentTo255(blue) , PercentTo255(100.0 - transparency))
 endfunction
 
 //processed hook: hook SetUnitVertexColorBJ SetUnitVertexColorBJEx 
 
 function HideHeroesSystem__Exit takes nothing returns boolean
-    local integer id= (GetUnitUserData(((s__UnitDex_Unit[s__UnitDex_LastIndex])))) // INLINED!!
+    local integer id= GetUnitId(GetIndexedUnit())
     return true
 endfunction
 
 function HideHeroesSystem__Enter takes nothing returns boolean
-    local integer id= (GetUnitUserData(((s__UnitDex_Unit[s__UnitDex_LastIndex])))) // INLINED!!
-    if UnitAddAbility((s__UnitDex_Unit[s__UnitDex_LastIndex]), 'Arav') then // INLINED!!
-        call UnitRemoveAbility((s__UnitDex_Unit[s__UnitDex_LastIndex]), 'Arav') // INLINED!!
+    local integer id= GetUnitId(GetIndexedUnit())
+    if UnitAddAbility(GetIndexedUnit(), 'Arav') then
+        call UnitRemoveAbility(GetIndexedUnit(), 'Arav')
     endif
     if id == 'u00M' then
-        if IsPlayerAlly(GetLocalPlayer(), GetOwningPlayer((s__UnitDex_Unit[s__UnitDex_LastIndex]))) then // INLINED!!
-            call SetUnitVertexColor((s__UnitDex_Unit[s__UnitDex_LastIndex]), 255, 255, 255, 150) // INLINED!!
+        if IsPlayerAlly(GetLocalPlayer(), GetOwningPlayer(GetIndexedUnit())) then
+            call SetUnitVertexColor(GetIndexedUnit(), 255, 255, 255, 150)
         else
-            call SetUnitVertexColor((s__UnitDex_Unit[s__UnitDex_LastIndex]), 255, 255, 255, 0) // INLINED!!
+            call SetUnitVertexColor(GetIndexedUnit(), 255, 255, 255, 0)
         endif
     endif
     return true
@@ -15653,7 +15726,7 @@ endfunction
     function s__HealthAboveHero_newLevel takes nothing returns nothing
         local real x= GetUnitX(GetTriggerUnit())
         local real y= GetUnitY(GetTriggerUnit())
-        call DestroyEffect(AddSpecialEffect(("Effects\\s_Level_Up.mdx" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+        call AddSpecialEffectEx("Effects\\s_Level_Up.mdx" , x , y)
         call MultiboardSetItemValue(MultiboardGetItem(udg_multiboard01, GetPlayerId(GetOwningPlayer(GetTriggerUnit())) + 3, 5), I2S(GetHeroLevel(GetTriggerUnit())))
     endfunction
     
@@ -15755,10 +15828,10 @@ endfunction
         set s__herosize[142]= 2.0
         set s__HealthAboveHero_count=0
         call SetAltMinimapIcon("HGVGWEO4NV\\535983460.blp")
-        call TimerStartEx((NewTimerEx(0)) , 10.0 , true , function s__HealthAboveHero_periodic , "HideHeros_periodic") // INLINED!!
+        call TimerStartEx(NewTimer() , 10.0 , true , function s__HealthAboveHero_periodic , "HideHeros_periodic")
         call RegisterUnitIndexEvent(Filter(function HideHeroesSystem__Enter) , EVENT_UNIT_INDEX)
         call RegisterUnitIndexEvent(Filter(function HideHeroesSystem__Exit) , EVENT_UNIT_DEINDEX)
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_HERO_LEVEL ) , Filter(( function s__HealthAboveHero_newLevel))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_HERO_LEVEL , function s__HealthAboveHero_newLevel)
     endfunction 
     
 
@@ -15791,8 +15864,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0IZ', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__HokageArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__HokageArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__HokageArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__HokageArmor_disable)
     endfunction
     
 //end of: KagesArmor("Hokage", "I03K", "A0IZ") 
@@ -15821,8 +15894,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0J0', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__MizukageArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__MizukageArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__MizukageArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__MizukageArmor_disable)
     endfunction
     
 //end of: KagesArmor("Mizukage", "I03L", "A0J0") 
@@ -15851,8 +15924,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0J1', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__TsuchikageArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__TsuchikageArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__TsuchikageArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__TsuchikageArmor_disable)
     endfunction
     
 //end of: KagesArmor("Tsuchikage", "I03M", "A0J1") 
@@ -15881,8 +15954,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0J2', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__RaikageArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__RaikageArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__RaikageArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__RaikageArmor_disable)
     endfunction
     
 //end of: KagesArmor("Raikage", "I03N", "A0J2") 
@@ -15911,8 +15984,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0J4', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__KazekageArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__KazekageArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__KazekageArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__KazekageArmor_disable)
     endfunction
     
 //end of: KagesArmor("Kazekage", "I03O", "A0J4") 
@@ -15941,8 +16014,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0J3', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__OtokageArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__OtokageArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__OtokageArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__OtokageArmor_disable)
     endfunction
     
 //end of: KagesArmor("Otokage", "I03P", "A0J3") 
@@ -15971,8 +16044,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A07K', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__SageArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__SageArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__SageArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__SageArmor_disable)
     endfunction
     
 //end of: KagesArmor("Sage", "I02Z", "A07K") 
@@ -16001,8 +16074,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0CE', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__DarkKunaiArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__DarkKunaiArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__DarkKunaiArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__DarkKunaiArmor_disable)
     endfunction
     
 //end of: KagesArmor("DarkKunai", "I049", "A0CE") 
@@ -16031,8 +16104,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0CE', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__DarkShurikenArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__DarkShurikenArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__DarkShurikenArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__DarkShurikenArmor_disable)
     endfunction
     
 //end of: KagesArmor("DarkShuriken", "I04K", "A0CE") 
@@ -16061,8 +16134,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0CE', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__DarkSenbonsArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__DarkSenbonsArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__DarkSenbonsArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__DarkSenbonsArmor_disable)
     endfunction
     
 //end of: KagesArmor("DarkSenbons", "I04E", "A0CE") 
@@ -16091,8 +16164,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0CO', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__HeavenStoneArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__HeavenStoneArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__HeavenStoneArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__HeavenStoneArmor_disable)
     endfunction
     
 //end of: KagesArmor("HeavenStone", "I05U", "A0CO") 
@@ -16121,8 +16194,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0YV', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__KyuubiSpearArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__KyuubiSpearArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__KyuubiSpearArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__KyuubiSpearArmor_disable)
     endfunction
     
 //end of: KagesArmor("KyuubiSpear", "I03W", "A0YV") 
@@ -16151,8 +16224,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0YW', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__HeavenMirrorArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__HeavenMirrorArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__HeavenMirrorArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__HeavenMirrorArmor_disable)
     endfunction
     
 //end of: KagesArmor("HeavenMirror", "I006", "A0YW") 
@@ -16181,8 +16254,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A0ZE', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__JuubiSkinArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__JuubiSkinArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__JuubiSkinArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__JuubiSkinArmor_disable)
     endfunction
     
 //end of: KagesArmor("JuubiSkin", "I05Q", "A0ZE") 
@@ -16211,8 +16284,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A04O', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__AdamantineStaffArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__AdamantineStaffArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__AdamantineStaffArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__AdamantineStaffArmor_disable)
     endfunction
     
 //end of: KagesArmor("AdamantineStaff", "I06B", "A04O") 
@@ -16241,8 +16314,8 @@ endfunction
             call SetPlayerAbilityAvailable(Player(i), 'A05K', false)
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__IronFanArmor_enable))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__IronFanArmor_disable))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__IronFanArmor_enable)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__IronFanArmor_disable)
     endfunction
     
 //end of: KagesArmor("IronFan", "I06C", "A05K") 
@@ -16406,27 +16479,27 @@ endfunction
         call s__Recipes_registerRecipe(r , 'I06M')
         
         // Upgrade super shoes
-        set s=("You upgraded your |cff87ceeb" + ("Blink Shoes") + "|r sucessfully!") // INLINED!!
+        set s=s__Recipes_generateUpgrade("Blink Shoes")
         set r=s__Recipe_create(1500 , 'I04V' , s , 10)
         call s__Recipe_addRequirement(r,'I03F')
         call s__Recipe_addTree(r,'I04W' , s)
         call s__Recipe_addRequirement(r,'I04V')
-        set s=("You upgraded your |cff87ceeb" + ("Cloning Shoes") + "|r sucessfully!") // INLINED!!
+        set s=s__Recipes_generateUpgrade("Cloning Shoes")
         call s__Recipe_addTree(r,'I04X' , s)
         call s__Recipe_addRequirement(r,'I03G')
         call s__Recipe_addTree(r,'I04Y' , s)
         call s__Recipe_addRequirement(r,'I04X')
-        set s=("You upgraded your |cff87ceeb" + ("Invisibility Shoes") + "|r sucessfully!") // INLINED!!
+        set s=s__Recipes_generateUpgrade("Invisibility Shoes")
         call s__Recipe_addTree(r,'I04Z' , s)
         call s__Recipe_addRequirement(r,'I03E')
         call s__Recipe_addTree(r,'I050' , s)
         call s__Recipe_addRequirement(r,'I04Z')
-        set s=("You upgraded your |cff87ceeb" + ("Shoes of Teleportation") + "|r sucessfully!") // INLINED!!
+        set s=s__Recipes_generateUpgrade("Shoes of Teleportation")
         call s__Recipe_addTree(r,'I051' , s)
         call s__Recipe_addRequirement(r,'I03V')
         call s__Recipe_addTree(r,'I052' , s)
         call s__Recipe_addRequirement(r,'I051')
-        set s=("You upgraded your |cff87ceeb" + ("Healing Shoes") + "|r sucessfully!") // INLINED!!
+        set s=s__Recipes_generateUpgrade("Healing Shoes")
         call s__Recipe_addTree(r,'I063' , s)
         call s__Recipe_addRequirement(r,'I062')
         call s__Recipe_addTree(r,'I064' , s)
@@ -16501,28 +16574,28 @@ endfunction
         call s__Recipes_registerRecipe(r , 'I04N')
         
         // Kages Armor
-        set r=s__Recipe_create(2500 , HOKAGE_ROBE , ("You merged your |cff87ceeb" + ("Kage Robe" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_FIRE) + " successfully!") , 8) // INLINED!!
+        set r=s__Recipe_create(2500 , HOKAGE_ROBE , s__Recipes_generateMerge("Kage Robe" , s__Recipes_S_SPIRIT_OF_FIRE) , 8)
         call s__Recipe_addRequirement(r,SPIRIT_OF_FIRE)
-        call s__Recipe_addTree(r,MIZUKAGE_ROBE , ("You merged your |cff87ceeb" + ("Kage Robe" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WATER) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,MIZUKAGE_ROBE , s__Recipes_generateMerge("Kage Robe" , s__Recipes_S_SPIRIT_OF_WATER))
         call s__Recipe_addRequirement(r,SPIRIT_OF_WATER)
-        call s__Recipe_addTree(r,KAZEKAGE_ROBE , ("You merged your |cff87ceeb" + ("Kage Robe" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WIND) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,KAZEKAGE_ROBE , s__Recipes_generateMerge("Kage Robe" , s__Recipes_S_SPIRIT_OF_WIND))
         call s__Recipe_addRequirement(r,SPIRIT_OF_WIND)
-        call s__Recipe_addTree(r,RAIKAGE_ROBE , ("You merged your |cff87ceeb" + ("Kage Robe" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_THUNDER) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,RAIKAGE_ROBE , s__Recipes_generateMerge("Kage Robe" , s__Recipes_S_SPIRIT_OF_THUNDER))
         call s__Recipe_addRequirement(r,SPIRIT_OF_THUNDER)
-        call s__Recipe_addTree(r,TSUCHIKAGE_ROBE , ("You merged your |cff87ceeb" + ("Kage Robe" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_EARTH) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,TSUCHIKAGE_ROBE , s__Recipes_generateMerge("Kage Robe" , s__Recipes_S_SPIRIT_OF_EARTH))
         call s__Recipe_addRequirement(r,SPIRIT_OF_EARTH)
-        call s__Recipe_addTree(r,OTOKAGE_ROBE , ("You merged your |cff87ceeb" + ("Kage Robe" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_DARK) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,OTOKAGE_ROBE , s__Recipes_generateMerge("Kage Robe" , s__Recipes_S_SPIRIT_OF_DARK))
         call s__Recipe_addRequirement(r,SPIRIT_OF_DARK)
-        call s__Recipe_addTree(r,HOKAGE_ROBE , ("You merged your |cff87ceeb" + ("Kage Robe" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_FIRE) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,HOKAGE_ROBE , s__Recipes_generateMerge("Kage Robe" , s__Recipes_S_SPIRIT_OF_FIRE))
         call s__Recipe_addRequirement(r,SPIRIT_OF_FIRE)
-        call s__Recipe_addTree(r,'I02Z' , ("You merged your |cff87ceeb" + ("Kage Robe" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_LIGHT) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,'I02Z' , s__Recipes_generateMerge("Kage Robe" , s__Recipes_S_SPIRIT_OF_LIGHT))
         call s__Recipe_addRequirement(r,SPIRIT_OF_LIGHT)
         call s__Recipe_addRequirementAll(r,KAGE_ROBE)
         call s__Recipe_addRequirementAll(r,SOULABSORB_STONE)
         call s__Recipes_registerRecipe(r , 'I03Q')
         
         // Upgrade Sanbi's Skin
-        set s=("You upgraded your |cff87ceeb" + ("Sanbi's Skin") + "|r sucessfully!") // INLINED!!
+        set s=s__Recipes_generateUpgrade("Sanbi's Skin")
         set r=s__Recipe_create(3300 , 'I054' , s , 3)
         call s__Recipe_addRequirement(r,'I02U')
         call s__Recipe_addTree(r,'I055' , s)
@@ -16536,7 +16609,7 @@ endfunction
         call s__Recipes_registerRecipe(r , 'I03U')
         
         //Upgrade cloth
-        set s=("You upgraded your |cff87ceeb" + ("cloth") + "|r sucessfully!") // INLINED!!
+        set s=s__Recipes_generateUpgrade("cloth")
         set r=s__Recipe_create(3300 , CHUNNIN_CLOTH , s , 4)
         call s__Recipe_addRequirement(r,GENIN_CLOTH)
         call s__Recipe_addTree(r,JOUNIN_CLOTH , s)
@@ -16548,7 +16621,7 @@ endfunction
         call s__Recipes_registerRecipe(r , 'I009')
         
         //Upgrade shoes
-        set s=("You upgraded your |cff87ceeb" + ("shoes") + "|r sucessfully!") // INLINED!!
+        set s=s__Recipes_generateUpgrade("shoes")
         set r=s__Recipe_create(900 , FAST_BOOTS , s , 2)
         call s__Recipe_addRequirement(r,CLOGS)
         call s__Recipe_addTree(r,NINJA_BOOTS , s)
@@ -16556,14 +16629,14 @@ endfunction
         call s__Recipes_registerRecipe(r , 'I00P')
         
         // Upgrade stone
-        set s=("You upgraded your |cff87ceeb" + ("life stone") + "|r sucessfully!") // INLINED!!
+        set s=s__Recipes_generateUpgrade("life stone")
         set r=s__Recipe_create(2700 , 'I03Y' , s , 5)
         call s__Recipe_addRequirement(r,'I00R')
         call s__Recipe_addTree(r,'I03Z' , s)
         call s__Recipe_addRequirement(r,'I03Y')
         call s__Recipe_addTree(r,'I040' , s)
         call s__Recipe_addRequirement(r,'I03Z')
-        set s=("You upgraded your |cff87ceeb" + ("chakra stone") + "|r sucessfully!") // INLINED!!
+        set s=s__Recipes_generateUpgrade("chakra stone")
         call s__Recipe_addTree(r,'I041' , s)
         call s__Recipe_addRequirement(r,'pmna')
         call s__Recipe_addTree(r,'I042' , s)
@@ -16586,51 +16659,51 @@ endfunction
         call s__Recipes_registerRecipe(r , 'I05J')
         
         //Sword of Kusanagi
-        set r=s__Recipe_create(3000 , FIRE_KUSANAGI , ("You merged your |cff87ceeb" + ("Kusanagi Sword" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_FIRE) + " successfully!") , 7) // INLINED!!
+        set r=s__Recipe_create(3000 , FIRE_KUSANAGI , s__Recipes_generateMerge("Kusanagi Sword" , s__Recipes_S_SPIRIT_OF_FIRE) , 7)
         call s__Recipe_addRequirement(r,SPIRIT_OF_FIRE)
-        call s__Recipe_addTree(r,WATER_KUSANAGI , ("You merged your |cff87ceeb" + ("Kusanagi Sword" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WATER) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,WATER_KUSANAGI , s__Recipes_generateMerge("Kusanagi Sword" , s__Recipes_S_SPIRIT_OF_WATER))
         call s__Recipe_addRequirement(r,SPIRIT_OF_WATER)
-        call s__Recipe_addTree(r,EARTH_KUSANAGI , ("You merged your |cff87ceeb" + ("Kusanagi Sword" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_EARTH) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,EARTH_KUSANAGI , s__Recipes_generateMerge("Kusanagi Sword" , s__Recipes_S_SPIRIT_OF_EARTH))
         call s__Recipe_addRequirement(r,SPIRIT_OF_EARTH)
-        call s__Recipe_addTree(r,WIND_KUSANAGI , ("You merged your |cff87ceeb" + ("Kusanagi Sword" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WIND) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,WIND_KUSANAGI , s__Recipes_generateMerge("Kusanagi Sword" , s__Recipes_S_SPIRIT_OF_WIND))
         call s__Recipe_addRequirement(r,SPIRIT_OF_WIND)
-        call s__Recipe_addTree(r,THUNDER_KUSANAGI , ("You merged your |cff87ceeb" + ("Kusanagi Sword" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_THUNDER) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,THUNDER_KUSANAGI , s__Recipes_generateMerge("Kusanagi Sword" , s__Recipes_S_SPIRIT_OF_THUNDER))
         call s__Recipe_addRequirement(r,SPIRIT_OF_THUNDER)
-        call s__Recipe_addTree(r,DARK_KUSANAGI , ("You merged your |cff87ceeb" + ("Kusanagi Sword" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_DARK) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,DARK_KUSANAGI , s__Recipes_generateMerge("Kusanagi Sword" , s__Recipes_S_SPIRIT_OF_DARK))
         call s__Recipe_addRequirement(r,SPIRIT_OF_DARK)
-        call s__Recipe_addTree(r,LIGHT_KUSANAGI , ("You merged your |cff87ceeb" + ("Kusanagi Sword" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_LIGHT) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,LIGHT_KUSANAGI , s__Recipes_generateMerge("Kusanagi Sword" , s__Recipes_S_SPIRIT_OF_LIGHT))
         call s__Recipe_addRequirement(r,SPIRIT_OF_LIGHT)
         call s__Recipe_addRequirementAll(r,KUSANAGI_SWORD)
         call s__Recipe_addRequirementAll(r,SOULABSORB_STONE)
         call s__Recipes_registerRecipe(r , 'I000')
         
         //Sword of Totsuka
-        set r=s__Recipe_create(6000 , INFERNAL_TOTSUKA , ("You merged your |cff87ceeb" + ("Sword of Totsuka" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_FIRE) + " successfully!") , 4) // INLINED!!
+        set r=s__Recipe_create(6000 , INFERNAL_TOTSUKA , s__Recipes_generateMerge("Sword of Totsuka" , s__Recipes_S_SPIRIT_OF_FIRE) , 4)
         call s__Recipe_addRequirement(r,SPIRIT_OF_FIRE)
-        call s__Recipe_addTree(r,CHILLING_TOTSUKA , ("You merged your |cff87ceeb" + ("Sword of Totsuka" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WATER) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,CHILLING_TOTSUKA , s__Recipes_generateMerge("Sword of Totsuka" , s__Recipes_S_SPIRIT_OF_WATER))
         call s__Recipe_addRequirement(r,SPIRIT_OF_WATER)
-        call s__Recipe_addTree(r,DARK_TOTSUKA , ("You merged your |cff87ceeb" + ("Sword of Totsuka" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_DARK) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,DARK_TOTSUKA , s__Recipes_generateMerge("Sword of Totsuka" , s__Recipes_S_SPIRIT_OF_DARK))
         call s__Recipe_addRequirement(r,SPIRIT_OF_DARK)
-        call s__Recipe_addTree(r,THUNDERING_TOTSUKA , ("You merged your |cff87ceeb" + ("Sword of Totsuka" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_THUNDER) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,THUNDERING_TOTSUKA , s__Recipes_generateMerge("Sword of Totsuka" , s__Recipes_S_SPIRIT_OF_THUNDER))
         call s__Recipe_addRequirement(r,SPIRIT_OF_THUNDER)
         call s__Recipe_addRequirementAll(r,SWORD_OF_TOTSUKA)
         call s__Recipe_addRequirementAll(r,SOULABSORB_STONE)
         call s__Recipes_registerRecipe(r , 'I02X')
         
         //Elemental Chakra Blades
-        set r=s__Recipe_create(4000 , KONOHAGAKURE_CHAKRA_BLADES , ("You merged your |cff87ceeb" + ("Chakra Blades" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_FIRE) + " successfully!") , 7) // INLINED!!
+        set r=s__Recipe_create(4000 , KONOHAGAKURE_CHAKRA_BLADES , s__Recipes_generateMerge("Chakra Blades" , s__Recipes_S_SPIRIT_OF_FIRE) , 7)
         call s__Recipe_addRequirement(r,SPIRIT_OF_FIRE)
-        call s__Recipe_addTree(r,KIRIGAKURE_CHAKRA_BLADES , ("You merged your |cff87ceeb" + ("Chakra Blades" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WATER) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,KIRIGAKURE_CHAKRA_BLADES , s__Recipes_generateMerge("Chakra Blades" , s__Recipes_S_SPIRIT_OF_WATER))
         call s__Recipe_addRequirement(r,SPIRIT_OF_WATER)
-        call s__Recipe_addTree(r,OTOGAKURE_CHAKRA_BLADES , ("You merged your |cff87ceeb" + ("Chakra Blades" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_DARK) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,OTOGAKURE_CHAKRA_BLADES , s__Recipes_generateMerge("Chakra Blades" , s__Recipes_S_SPIRIT_OF_DARK))
         call s__Recipe_addRequirement(r,SPIRIT_OF_DARK)
-        call s__Recipe_addTree(r,KUMOGAKURE_CHAKRA_BLADES , ("You merged your |cff87ceeb" + ("Chakra Blades" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_THUNDER) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,KUMOGAKURE_CHAKRA_BLADES , s__Recipes_generateMerge("Chakra Blades" , s__Recipes_S_SPIRIT_OF_THUNDER))
         call s__Recipe_addRequirement(r,SPIRIT_OF_THUNDER)
-        call s__Recipe_addTree(r,SAGE_CHAKRA_BLADES , ("You merged your |cff87ceeb" + ("Chakra Blades" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_LIGHT) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SAGE_CHAKRA_BLADES , s__Recipes_generateMerge("Chakra Blades" , s__Recipes_S_SPIRIT_OF_LIGHT))
         call s__Recipe_addRequirement(r,SPIRIT_OF_LIGHT)
-        call s__Recipe_addTree(r,IWAGAKURE_CHAKRA_BLADES , ("You merged your |cff87ceeb" + ("Chakra Blades" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_EARTH) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,IWAGAKURE_CHAKRA_BLADES , s__Recipes_generateMerge("Chakra Blades" , s__Recipes_S_SPIRIT_OF_EARTH))
         call s__Recipe_addRequirement(r,SPIRIT_OF_EARTH)
-        call s__Recipe_addTree(r,SUNAGAKURE_CHAKRA_BLADES , ("You merged your |cff87ceeb" + ("Chakra Blades" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WIND) + " successfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SUNAGAKURE_CHAKRA_BLADES , s__Recipes_generateMerge("Chakra Blades" , s__Recipes_S_SPIRIT_OF_WIND))
         call s__Recipe_addRequirement(r,SPIRIT_OF_WIND)
         call s__Recipe_addRequirementAll(r,CHAKRA_BLADES)
         call s__Recipe_addRequirementAll(r,SOULABSORB_STONE)
@@ -16656,152 +16729,152 @@ endfunction
         call s__Recipes_registerRecipe(r , 'I00O')
         
         //Upgrade weapon
-        set s=("You upgraded your |cff87ceeb" + ("kunai") + "|r sucessfully!") // INLINED!!
+        set s=s__Recipes_generateUpgrade("kunai")
         set r=s__Recipe_create(2500 , KUNAI_2 , s , 31)
         call s__Recipe_addRequirement(r,KUNAI_1)
-        call s__Recipe_addTree(r,KUNAI_3 , ("You upgraded your |cff87ceeb" + ("kunai") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,KUNAI_3 , s__Recipes_generateUpgrade("kunai"))
         call s__Recipe_addRequirement(r,KUNAI_2)
-        call s__Recipe_addTree(r,KUNAI_4 , ("You upgraded your |cff87ceeb" + ("kunai") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,KUNAI_4 , s__Recipes_generateUpgrade("kunai"))
         call s__Recipe_addRequirement(r,KUNAI_3)
-        call s__Recipe_addTree(r,KUNAI_5 , ("You upgraded your |cff87ceeb" + ("kunai") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,KUNAI_5 , s__Recipes_generateUpgrade("kunai"))
         call s__Recipe_addRequirement(r,KUNAI_4)
-        call s__Recipe_addTree(r,KUNAI_6 , ("You upgraded your |cff87ceeb" + ("kunai") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,KUNAI_6 , s__Recipes_generateUpgrade("kunai"))
         call s__Recipe_addRequirement(r,KUNAI_5)
-        call s__Recipe_addTree(r,KUNAI_7 , ("You upgraded your |cff87ceeb" + ("kunai") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,KUNAI_7 , s__Recipes_generateUpgrade("kunai"))
         call s__Recipe_addRequirement(r,KUNAI_6)
-        call s__Recipe_addTree(r,KUNAI_8 , ("You upgraded your |cff87ceeb" + ("kunai") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,KUNAI_8 , s__Recipes_generateUpgrade("kunai"))
         call s__Recipe_addRequirement(r,KUNAI_7)
-        call s__Recipe_addTree(r,KUNAI_9 , ("You upgraded your |cff87ceeb" + ("kunai") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,KUNAI_9 , s__Recipes_generateUpgrade("kunai"))
         call s__Recipe_addRequirement(r,KUNAI_8)
-        call s__Recipe_addTree(r,KUNAI_10 , ("You upgraded your |cff87ceeb" + ("kunai") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,KUNAI_10 , s__Recipes_generateUpgrade("kunai"))
         call s__Recipe_addRequirement(r,KUNAI_9)
-        call s__Recipe_addTree(r,SHURIKEN_2 , ("You upgraded your |cff87ceeb" + ("shuriken") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SHURIKEN_2 , s__Recipes_generateUpgrade("shuriken"))
         call s__Recipe_addRequirement(r,SHURIKEN_1)
-        call s__Recipe_addTree(r,SHURIKEN_3 , ("You upgraded your |cff87ceeb" + ("shuriken") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SHURIKEN_3 , s__Recipes_generateUpgrade("shuriken"))
         call s__Recipe_addRequirement(r,SHURIKEN_2)
-        call s__Recipe_addTree(r,SHURIKEN_4 , ("You upgraded your |cff87ceeb" + ("shuriken") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SHURIKEN_4 , s__Recipes_generateUpgrade("shuriken"))
         call s__Recipe_addRequirement(r,SHURIKEN_3)
-        call s__Recipe_addTree(r,SHURIKEN_5 , ("You upgraded your |cff87ceeb" + ("shuriken") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SHURIKEN_5 , s__Recipes_generateUpgrade("shuriken"))
         call s__Recipe_addRequirement(r,SHURIKEN_4)
-        call s__Recipe_addTree(r,SHURIKEN_6 , ("You upgraded your |cff87ceeb" + ("shuriken") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SHURIKEN_6 , s__Recipes_generateUpgrade("shuriken"))
         call s__Recipe_addRequirement(r,SHURIKEN_5)
-        call s__Recipe_addTree(r,SHURIKEN_7 , ("You upgraded your |cff87ceeb" + ("shuriken") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SHURIKEN_7 , s__Recipes_generateUpgrade("shuriken"))
         call s__Recipe_addRequirement(r,SHURIKEN_6)
-        call s__Recipe_addTree(r,SHURIKEN_8 , ("You upgraded your |cff87ceeb" + ("shuriken") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SHURIKEN_8 , s__Recipes_generateUpgrade("shuriken"))
         call s__Recipe_addRequirement(r,SHURIKEN_7)
-        call s__Recipe_addTree(r,SHURIKEN_9 , ("You upgraded your |cff87ceeb" + ("shuriken") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SHURIKEN_9 , s__Recipes_generateUpgrade("shuriken"))
         call s__Recipe_addRequirement(r,SHURIKEN_8)
-        call s__Recipe_addTree(r,SHURIKEN_10 , ("You upgraded your |cff87ceeb" + ("shuriken") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SHURIKEN_10 , s__Recipes_generateUpgrade("shuriken"))
         call s__Recipe_addRequirement(r,SHURIKEN_9)
-        call s__Recipe_addTree(r,SENBONS_2 , ("You upgraded your |cff87ceeb" + ("senbons") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SENBONS_2 , s__Recipes_generateUpgrade("senbons"))
         call s__Recipe_addRequirement(r,SENBONS_1)
-        call s__Recipe_addTree(r,SENBONS_3 , ("You upgraded your |cff87ceeb" + ("senbons") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SENBONS_3 , s__Recipes_generateUpgrade("senbons"))
         call s__Recipe_addRequirement(r,SENBONS_2)
-        call s__Recipe_addTree(r,SENBONS_4 , ("You upgraded your |cff87ceeb" + ("senbons") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SENBONS_4 , s__Recipes_generateUpgrade("senbons"))
         call s__Recipe_addRequirement(r,SENBONS_3)
-        call s__Recipe_addTree(r,SENBONS_5 , ("You upgraded your |cff87ceeb" + ("senbons") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SENBONS_5 , s__Recipes_generateUpgrade("senbons"))
         call s__Recipe_addRequirement(r,SENBONS_4)
-        call s__Recipe_addTree(r,SENBONS_6 , ("You upgraded your |cff87ceeb" + ("senbons") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SENBONS_6 , s__Recipes_generateUpgrade("senbons"))
         call s__Recipe_addRequirement(r,SENBONS_5)
-        call s__Recipe_addTree(r,SENBONS_7 , ("You upgraded your |cff87ceeb" + ("senbons") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SENBONS_7 , s__Recipes_generateUpgrade("senbons"))
         call s__Recipe_addRequirement(r,SENBONS_6)
-        call s__Recipe_addTree(r,SENBONS_8 , ("You upgraded your |cff87ceeb" + ("senbons") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SENBONS_8 , s__Recipes_generateUpgrade("senbons"))
         call s__Recipe_addRequirement(r,SENBONS_7)
-        call s__Recipe_addTree(r,SENBONS_9 , ("You upgraded your |cff87ceeb" + ("senbons") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SENBONS_9 , s__Recipes_generateUpgrade("senbons"))
         call s__Recipe_addRequirement(r,SENBONS_8)
-        call s__Recipe_addTree(r,SENBONS_10 , ("You upgraded your |cff87ceeb" + ("senbons") + "|r sucessfully!")) // INLINED!!
+        call s__Recipe_addTree(r,SENBONS_10 , s__Recipes_generateUpgrade("senbons"))
         call s__Recipe_addRequirement(r,SENBONS_9)
         call s__Recipes_registerRecipe(r , 'I008')
         
         //Elemental weapon
             //Kunais
-            set r=s__Recipe_create(2000 , FIRE_KUNAI , ("You merged your |cff87ceeb" + ("kunai" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_FIRE) + " successfully!") , 21) // INLINED!!
+            set r=s__Recipe_create(2000 , FIRE_KUNAI , s__Recipes_generateMerge("kunai" , s__Recipes_S_SPIRIT_OF_FIRE) , 21)
             call s__Recipe_addRequirement(r,SPIRIT_OF_FIRE)
             call s__Recipe_addRequirement(r,KUNAI_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,FIRE_SHURIKEN , ("You merged your |cff87ceeb" + ("shuriken" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_FIRE) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,FIRE_SHURIKEN , s__Recipes_generateMerge("shuriken" , s__Recipes_S_SPIRIT_OF_FIRE))
             call s__Recipe_addRequirement(r,SPIRIT_OF_FIRE)
             call s__Recipe_addRequirement(r,SHURIKEN_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,FIRE_SENBONS , ("You merged your |cff87ceeb" + ("senbons" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_FIRE) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,FIRE_SENBONS , s__Recipes_generateMerge("senbons" , s__Recipes_S_SPIRIT_OF_FIRE))
             call s__Recipe_addRequirement(r,SPIRIT_OF_FIRE)
             call s__Recipe_addRequirement(r,SENBONS_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
 
-            call s__Recipe_addTree(r,WATER_KUNAI , ("You merged your |cff87ceeb" + ("kunai" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WATER) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,WATER_KUNAI , s__Recipes_generateMerge("kunai" , s__Recipes_S_SPIRIT_OF_WATER))
             call s__Recipe_addRequirement(r,SPIRIT_OF_WATER)
             call s__Recipe_addRequirement(r,KUNAI_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,WATER_SHURIKEN , ("You merged your |cff87ceeb" + ("shuriken" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WATER) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,WATER_SHURIKEN , s__Recipes_generateMerge("shuriken" , s__Recipes_S_SPIRIT_OF_WATER))
             call s__Recipe_addRequirement(r,SPIRIT_OF_WATER)
             call s__Recipe_addRequirement(r,SHURIKEN_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,WATER_SENBONS , ("You merged your |cff87ceeb" + ("senbons" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WATER) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,WATER_SENBONS , s__Recipes_generateMerge("senbons" , s__Recipes_S_SPIRIT_OF_WATER))
             call s__Recipe_addRequirement(r,SPIRIT_OF_WATER)
             call s__Recipe_addRequirement(r,SENBONS_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
 
-            call s__Recipe_addTree(r,THUNDER_KUNAI , ("You merged your |cff87ceeb" + ("kunai" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_THUNDER) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,THUNDER_KUNAI , s__Recipes_generateMerge("kunai" , s__Recipes_S_SPIRIT_OF_THUNDER))
             call s__Recipe_addRequirement(r,SPIRIT_OF_THUNDER)
             call s__Recipe_addRequirement(r,KUNAI_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,THUNDER_SHURIKEN , ("You merged your |cff87ceeb" + ("shuriken" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_THUNDER) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,THUNDER_SHURIKEN , s__Recipes_generateMerge("shuriken" , s__Recipes_S_SPIRIT_OF_THUNDER))
             call s__Recipe_addRequirement(r,SPIRIT_OF_THUNDER)
             call s__Recipe_addRequirement(r,SHURIKEN_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,THUNDER_SENBONS , ("You merged your |cff87ceeb" + ("senbons" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_THUNDER) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,THUNDER_SENBONS , s__Recipes_generateMerge("senbons" , s__Recipes_S_SPIRIT_OF_THUNDER))
             call s__Recipe_addRequirement(r,SPIRIT_OF_THUNDER)
             call s__Recipe_addRequirement(r,SENBONS_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
 
-            call s__Recipe_addTree(r,EARTH_KUNAI , ("You merged your |cff87ceeb" + ("kunai" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_EARTH) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,EARTH_KUNAI , s__Recipes_generateMerge("kunai" , s__Recipes_S_SPIRIT_OF_EARTH))
             call s__Recipe_addRequirement(r,SPIRIT_OF_EARTH)
             call s__Recipe_addRequirement(r,KUNAI_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,EARTH_SHURIKEN , ("You merged your |cff87ceeb" + ("shuriken" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_EARTH) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,EARTH_SHURIKEN , s__Recipes_generateMerge("shuriken" , s__Recipes_S_SPIRIT_OF_EARTH))
             call s__Recipe_addRequirement(r,SPIRIT_OF_EARTH)
             call s__Recipe_addRequirement(r,SHURIKEN_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,EARTH_SENBONS , ("You merged your |cff87ceeb" + ("senbons" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_EARTH) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,EARTH_SENBONS , s__Recipes_generateMerge("senbons" , s__Recipes_S_SPIRIT_OF_EARTH))
             call s__Recipe_addRequirement(r,SPIRIT_OF_EARTH)
             call s__Recipe_addRequirement(r,SENBONS_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
 
-            call s__Recipe_addTree(r,WIND_KUNAI , ("You merged your |cff87ceeb" + ("kunai" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WIND) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,WIND_KUNAI , s__Recipes_generateMerge("kunai" , s__Recipes_S_SPIRIT_OF_WIND))
             call s__Recipe_addRequirement(r,SPIRIT_OF_WIND)
             call s__Recipe_addRequirement(r,KUNAI_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,WIND_SHURIKEN , ("You merged your |cff87ceeb" + ("shuriken" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WIND) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,WIND_SHURIKEN , s__Recipes_generateMerge("shuriken" , s__Recipes_S_SPIRIT_OF_WIND))
             call s__Recipe_addRequirement(r,SPIRIT_OF_WIND)
             call s__Recipe_addRequirement(r,SHURIKEN_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,WIND_SENBONS , ("You merged your |cff87ceeb" + ("senbons" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_WIND) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,WIND_SENBONS , s__Recipes_generateMerge("senbons" , s__Recipes_S_SPIRIT_OF_WIND))
             call s__Recipe_addRequirement(r,SPIRIT_OF_WIND)
             call s__Recipe_addRequirement(r,SENBONS_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
 
-            call s__Recipe_addTree(r,DARK_KUNAI , ("You merged your |cff87ceeb" + ("kunai" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_DARK) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,DARK_KUNAI , s__Recipes_generateMerge("kunai" , s__Recipes_S_SPIRIT_OF_DARK))
             call s__Recipe_addRequirement(r,SPIRIT_OF_DARK)
             call s__Recipe_addRequirement(r,KUNAI_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,DARK_SHURIKEN , ("You merged your |cff87ceeb" + ("shuriken" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_DARK) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,DARK_SHURIKEN , s__Recipes_generateMerge("shuriken" , s__Recipes_S_SPIRIT_OF_DARK))
             call s__Recipe_addRequirement(r,SPIRIT_OF_DARK)
             call s__Recipe_addRequirement(r,SHURIKEN_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,DARK_SENBONS , ("You merged your |cff87ceeb" + ("senbons" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_DARK) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,DARK_SENBONS , s__Recipes_generateMerge("senbons" , s__Recipes_S_SPIRIT_OF_DARK))
             call s__Recipe_addRequirement(r,SPIRIT_OF_DARK)
             call s__Recipe_addRequirement(r,SENBONS_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
             
-            call s__Recipe_addTree(r,LIGHT_KUNAI , ("You merged your |cff87ceeb" + ("kunai" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_LIGHT) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,LIGHT_KUNAI , s__Recipes_generateMerge("kunai" , s__Recipes_S_SPIRIT_OF_LIGHT))
             call s__Recipe_addRequirement(r,SPIRIT_OF_LIGHT)
             call s__Recipe_addRequirement(r,KUNAI_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,LIGHT_SHURIKEN , ("You merged your |cff87ceeb" + ("shuriken" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_LIGHT) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,LIGHT_SHURIKEN , s__Recipes_generateMerge("shuriken" , s__Recipes_S_SPIRIT_OF_LIGHT))
             call s__Recipe_addRequirement(r,SPIRIT_OF_LIGHT)
             call s__Recipe_addRequirement(r,SHURIKEN_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
-            call s__Recipe_addTree(r,LIGHT_SENBONS , ("You merged your |cff87ceeb" + ("senbons" ) + "|r with " + ( s__Recipes_S_SPIRIT_OF_LIGHT) + " successfully!")) // INLINED!!
+            call s__Recipe_addTree(r,LIGHT_SENBONS , s__Recipes_generateMerge("senbons" , s__Recipes_S_SPIRIT_OF_LIGHT))
             call s__Recipe_addRequirement(r,SPIRIT_OF_LIGHT)
             call s__Recipe_addRequirement(r,SENBONS_1)
             call s__Recipe_addRequirement(r,SOULABSORB_STONE)
@@ -16811,8 +16884,8 @@ endfunction
     endfunction 
     
     function s__Recipes_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__Recipes_actions))) // INLINED!!
-        call TimerStart((NewTimerEx(0)), 1.0, false, function s__Recipes_delay) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__Recipes_actions)
+        call TimerStart(NewTimer(), 1.0, false, function s__Recipes_delay)
     endfunction
     
 //===========================================================================
@@ -16822,69 +16895,69 @@ endfunction
 function Trig_AkatsukiRings_Actions takes nothing returns nothing
     if GetItemTypeId(GetManipulatedItem()) == 'I002' then
         //Tobis ring
-         if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I081'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05Z'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I081'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05Z'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         if UnitHasItemEx(GetTriggerUnit() , 'I081') and UnitHasItemEx(GetTriggerUnit() , 'I05Z') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I081')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I05Z')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I00N')
         //Kisames ring
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I081'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05W'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I081'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05W'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I081') and UnitHasItemEx(GetTriggerUnit() , 'I05W') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I081')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I05W')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I00H')
         //Kakuzus ring
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I081'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I07L'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I081'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I07L'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I081') and UnitHasItemEx(GetTriggerUnit() , 'I07L') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I081')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I07L')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I010')
         //Zetsus ring
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I081'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05X'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I081'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05X'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I081') and UnitHasItemEx(GetTriggerUnit() , 'I05X') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I081')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I05X')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I00I')
         //Deidaras ring
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I081'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I036'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I081'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I036'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I081') and UnitHasItemEx(GetTriggerUnit() , 'I036') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I081')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I036')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I00Q')
         //Orochimarus ring
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I081'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05Y'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I081'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05Y'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I081') and UnitHasItemEx(GetTriggerUnit() , 'I05Y') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I081')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I05Y')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I00M')
         //Hidans ring
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I081'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I061'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I081'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I061'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I081') and UnitHasItemEx(GetTriggerUnit() , 'I061') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I081')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I061')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I01W')
         //Pains ring
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I081'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I037'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I081'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I037'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I081') and UnitHasItemEx(GetTriggerUnit() , 'I037') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I081')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I037')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I01X')
         //Itachis ring
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I081'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I084'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I081'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I084'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I081') and UnitHasItemEx(GetTriggerUnit() , 'I084') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I081')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I084')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I00F')
 	//Sasori's Ring
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I081'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05M'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I081'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05M'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I081') and UnitHasItemEx(GetTriggerUnit() , 'I085') and UnitHasItemEx(GetTriggerUnit() , 'I05M') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I081')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I05M')
              call UnitAddItemEx(GetTriggerUnit() , 'I02S')
         //Konans ring
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I081'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I081'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I081') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I081')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I02F')
          else
              call AdjustPlayerStateBJ(2500, GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD)
@@ -16894,7 +16967,7 @@ function Trig_AkatsukiRings_Actions takes nothing returns nothing
  
  //===========================================================================
  function InitTrig_AkatsukiRings takes nothing returns nothing
-     call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_AkatsukiRings_Actions))) // INLINED!!
+     call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_AkatsukiRings_Actions)
  endfunction
  
  
@@ -16905,46 +16978,46 @@ function Trig_AkatsukiRings_Actions takes nothing returns nothing
 function Trig_ElementalMask_Actions takes nothing returns nothing
     if GetItemTypeId(GetManipulatedItem()) == 'I07H' then
      // Fire
-         if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Q'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05Z'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Q'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05Z'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         if UnitHasItemEx(GetTriggerUnit() , 'I06Q') and UnitHasItemEx(GetTriggerUnit() , 'I05Z') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I06Q')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I05Z')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I07A')
      // Water
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Q'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05W'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Q'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05W'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I06Q') and UnitHasItemEx(GetTriggerUnit() , 'I05W') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I06Q')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I05W')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I07B')
      // Thunder
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Q'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I07L'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Q'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I07L'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I06Q') and UnitHasItemEx(GetTriggerUnit() , 'I07L') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I06Q')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I07L')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I07C')
      // Earth
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Q'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05X'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Q'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05X'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I06Q') and UnitHasItemEx(GetTriggerUnit() , 'I05X') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I06Q')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I05X')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I07D')
      // Wind
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Q'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I036'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Q'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I036'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I06Q') and UnitHasItemEx(GetTriggerUnit() , 'I036') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I06Q')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I036')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I07E')
      // Darkness
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Q'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05Y'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Q'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05Y'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I06Q') and UnitHasItemEx(GetTriggerUnit() , 'I05Y') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I06Q')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I05Y')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I07F')
      // Light
-         elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Q'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I061'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I085'))) then // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Q'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I061'))) // INLINED!!
-             call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I085'))) // INLINED!!
+         elseif UnitHasItemEx(GetTriggerUnit() , 'I06Q') and UnitHasItemEx(GetTriggerUnit() , 'I061') and UnitHasItemEx(GetTriggerUnit() , 'I085') then
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I06Q')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I061')
+             call UnitRemoveItemEx(GetTriggerUnit() , 'I085')
              call UnitAddItemEx(GetTriggerUnit() , 'I07G')
          else
              call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You don't have the required items.|r")
@@ -16955,7 +17028,7 @@ function Trig_ElementalMask_Actions takes nothing returns nothing
  
  //===========================================================================
  function InitTrig_ElementalMask takes nothing returns nothing
-     call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_ElementalMask_Actions))) // INLINED!!
+     call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_ElementalMask_Actions)
  endfunction
  
  
@@ -16965,9 +17038,9 @@ function Trig_ElementalMask_Actions takes nothing returns nothing
 
 function Trig_JuubiSkinSet_Actions takes nothing returns nothing
     if GetItemTypeId(GetManipulatedItem()) == 'I05R' then
-        if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05P'))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I055'))) then // INLINED!!
-            call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05P'))) // INLINED!!
-            call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I055'))) // INLINED!!
+        if UnitHasItemEx(GetTriggerUnit() , 'I05P') and UnitHasItemEx(GetTriggerUnit() , 'I055') then
+            call UnitRemoveItemEx(GetTriggerUnit() , 'I05P')
+            call UnitRemoveItemEx(GetTriggerUnit() , 'I055')
             call UnitAddItemEx(GetTriggerUnit() , 'I05Q')
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You made Juubi's skin successfully!|r")
         else
@@ -16979,7 +17052,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_JuubiSkin takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_JuubiSkinSet_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_JuubiSkinSet_Actions)
 endfunction
 
 
@@ -16988,19 +17061,19 @@ endfunction
 //===========================================================================
 function Trig_ChakraBlades_Actions takes nothing returns nothing
     if GetItemTypeId(GetManipulatedItem()) == 'I07P' then
-        if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I07M'))) then // INLINED!!
-            call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I07M'))) // INLINED!!
+        if UnitHasItemEx(GetTriggerUnit() , 'I07M') then
+            call UnitRemoveItemEx(GetTriggerUnit() , 'I07M')
             call UnitAddItemEx(GetTriggerUnit() , 'I07N')
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You upgraded Chakra Blades successfully!|r")
-        elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I07N'))) then // INLINED!!
-            call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I07N'))) // INLINED!!
+        elseif UnitHasItemEx(GetTriggerUnit() , 'I07N') then
+            call UnitRemoveItemEx(GetTriggerUnit() , 'I07N')
             call UnitAddItemEx(GetTriggerUnit() , 'I07O')
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You upgraded Chakra Blades successfully!|r")
-        elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I07O'))) then // INLINED!!
-            call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I07O'))) // INLINED!!
+        elseif UnitHasItemEx(GetTriggerUnit() , 'I07O') then
+            call UnitRemoveItemEx(GetTriggerUnit() , 'I07O')
             call UnitAddItemEx(GetTriggerUnit() , 'I06N')
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You upgraded Chakra Blades successfully!|r")
-    elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06N'))) then // INLINED!!
+    elseif UnitHasItemEx(GetTriggerUnit() , 'I06N') then
         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000Item is max upgrade.|r")
             call AdjustPlayerStateBJ(4000, GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD)
     else
@@ -17012,7 +17085,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_ChakraBlades takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_ChakraBlades_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_ChakraBlades_Actions)
 endfunction
 //===========================================================================
 // Trigger: UltimateWeapon
@@ -17020,10 +17093,10 @@ endfunction
 
 function Trig_UltimateWeapon_Actions takes nothing returns nothing
     if GetItemTypeId(GetManipulatedItem()) == 'I02O' then
-        if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( STONE_OF_THE_HEAVEN))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( HEAVEN_SWORD))) and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( EIGHT_HEAVENS_MIRROR))) then // INLINED!!
-            call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( STONE_OF_THE_HEAVEN))) // INLINED!!
-            call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( HEAVEN_SWORD))) // INLINED!!
-            call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( EIGHT_HEAVENS_MIRROR))) // INLINED!!
+        if UnitHasItemEx(GetTriggerUnit() , STONE_OF_THE_HEAVEN) and UnitHasItemEx(GetTriggerUnit() , HEAVEN_SWORD) and UnitHasItemEx(GetTriggerUnit() , EIGHT_HEAVENS_MIRROR) then
+            call UnitRemoveItemEx(GetTriggerUnit() , STONE_OF_THE_HEAVEN)
+            call UnitRemoveItemEx(GetTriggerUnit() , HEAVEN_SWORD)
+            call UnitRemoveItemEx(GetTriggerUnit() , EIGHT_HEAVENS_MIRROR)
             call UnitAddItemEx(GetTriggerUnit() , 'I034')
             call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, GetPlayerName(GetTriggerPlayer()) + " |cffff0000HAS MADE THE ULTIMATE WEAPON!!!!|r")
         else
@@ -17035,7 +17108,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_UltimateWeapon takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_UltimateWeapon_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_UltimateWeapon_Actions)
 endfunction
 
 
@@ -17060,7 +17133,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_FixUltraBoots takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_FixUltraBoots_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_FixUltraBoots_Actions)
 endfunction
 
 
@@ -17070,24 +17143,24 @@ endfunction
 
  function s__RecipeBashosen_actions takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I074' then
-            		if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05P'))) then // INLINED!!
-				call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05P'))) // INLINED!!
+            		if UnitHasItemEx(GetTriggerUnit() , 'I05P') then
+				call UnitRemoveItemEx(GetTriggerUnit() , 'I05P')
             			call UnitAddItemEx(GetTriggerUnit() , 'I03R')
 			else
             			call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You don't have the required items.|r")
             			call AdjustPlayerStateBJ(2500, GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD)
             		endif
 		elseif GetItemTypeId(GetManipulatedItem()) == 'I075' then
-            		if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05P'))) then // INLINED!!
-				call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05P'))) // INLINED!!
+            		if UnitHasItemEx(GetTriggerUnit() , 'I05P') then
+				call UnitRemoveItemEx(GetTriggerUnit() , 'I05P')
             			call UnitAddItemEx(GetTriggerUnit() , 'I073')
 			else
             			call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You don't have the required items.|r")
             			call AdjustPlayerStateBJ(4000, GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD)
             		endif
 		elseif GetItemTypeId(GetManipulatedItem()) == 'I07K' then
-            		if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I05P'))) then // INLINED!!
-				call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I05P'))) // INLINED!!
+            		if UnitHasItemEx(GetTriggerUnit() , 'I05P') then
+				call UnitRemoveItemEx(GetTriggerUnit() , 'I05P')
             			call UnitAddItemEx(GetTriggerUnit() , 'I07J')
 			else
             			call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You don't have the required items.|r")
@@ -17097,7 +17170,7 @@ endfunction
  endfunction 
 
  function s__RecipeBashosen_onInit takes nothing returns nothing
-    		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__RecipeBashosen_actions))) // INLINED!!
+    		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__RecipeBashosen_actions)
  endfunction 
 
 //===========================================================================
@@ -17109,7 +17182,7 @@ endfunction
   local integer i= 0
 		loop
 			exitwhen i > 11
-			if udg_ANBUTarget[i] != null and GetWidgetLife(udg_units33[i + 1]) > 0.405 and ( (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I06Q'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07C'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07A'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07F'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07G'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07E'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07D'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07B'))) ) and GetLocalPlayer() == Player(i) and GetWidgetLife(udg_ANBUTarget[i]) > 0.405 then // INLINED!!
+			if udg_ANBUTarget[i] != null and GetWidgetLife(udg_units33[i + 1]) > 0.405 and ( UnitHasItemEx(udg_units33[i + 1] , 'I06Q') or UnitHasItemEx(udg_units33[i + 1] , 'I07C') or UnitHasItemEx(udg_units33[i + 1] , 'I07A') or UnitHasItemEx(udg_units33[i + 1] , 'I07F') or UnitHasItemEx(udg_units33[i + 1] , 'I07G') or UnitHasItemEx(udg_units33[i + 1] , 'I07E') or UnitHasItemEx(udg_units33[i + 1] , 'I07D') or UnitHasItemEx(udg_units33[i + 1] , 'I07B') ) and GetLocalPlayer() == Player(i) and GetWidgetLife(udg_ANBUTarget[i]) > 0.405 then
 				call PingMinimap(GetUnitX(udg_ANBUTarget[i]), GetUnitY(udg_ANBUTarget[i]), 5.0)
                 if GetLocalPlayer() == Player(i) then
                     set s__HeroIcon_fade[s__s__BadgeOfAnbu_icon[i]]=false
@@ -17134,7 +17207,7 @@ endfunction
 		loop
 			exitwhen i > 11
 			set udg_ANBUTarget[i]=null
-			if udg_units33[i + 1] != null and GetWidgetLife(udg_units33[i + 1]) > 0.405 and ( (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I06Q'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07C'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07A'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07F'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07G'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07E'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07D'))) or (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07B'))) ) then // INLINED!!
+			if udg_units33[i + 1] != null and GetWidgetLife(udg_units33[i + 1]) > 0.405 and ( UnitHasItemEx(udg_units33[i + 1] , 'I06Q') or UnitHasItemEx(udg_units33[i + 1] , 'I07C') or UnitHasItemEx(udg_units33[i + 1] , 'I07A') or UnitHasItemEx(udg_units33[i + 1] , 'I07F') or UnitHasItemEx(udg_units33[i + 1] , 'I07G') or UnitHasItemEx(udg_units33[i + 1] , 'I07E') or UnitHasItemEx(udg_units33[i + 1] , 'I07D') or UnitHasItemEx(udg_units33[i + 1] , 'I07B') ) then
 				set k=0
 				set j=GetRandomInt(0, 11)
 				loop
@@ -17178,9 +17251,9 @@ endfunction
     
     function s__BadgeOfAnbu_init takes nothing returns nothing
 	    if GetItemTypeId(GetManipulatedItem()) == 'I04Q' and not s__BadgeOfAnbu_b then
-        	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__BadgeOfAnbu_actions))) // INLINED!!
+        	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__BadgeOfAnbu_actions)
 		//call TimerStartEx(NewTimer(), 120.0, true, function thistype.target, "ANBUBadge_target")
-		call TimerStartEx((NewTimerEx(0)) , 30.0 , true , function s__BadgeOfAnbu_ping , "ANBUBadge_ping") // INLINED!!
+		call TimerStartEx(NewTimer() , 30.0 , true , function s__BadgeOfAnbu_ping , "ANBUBadge_ping")
 		set s__BadgeOfAnbu_b=true
 	endif
     endfunction
@@ -17196,8 +17269,8 @@ endfunction
     endfunction 
 
     function s__BadgeOfAnbu_onInit takes nothing returns nothing
-	    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__BadgeOfAnbu_init))) // INLINED!!
-        call TimerStart((NewTimerEx(0)), 5.0, false, function s__BadgeOfAnbu_createIcon) // INLINED!!
+	    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__BadgeOfAnbu_init)
+        call TimerStart(NewTimer(), 5.0, false, function s__BadgeOfAnbu_createIcon)
     endfunction
     
 //===========================================================================
@@ -17220,7 +17293,7 @@ endfunction
                 if UnitHasItemOfTypeBJ(udg_units33[GetPlayerId(GetOwningPlayer(GetKillingUnit())) + 1], 'I034') then
                     set x=GetUnitX(GetTriggerUnit())
                     set y=GetUnitY(GetTriggerUnit())
-                    set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(GetKillingUnitBJ()) ), ( 'n01H' ), (( x )*1.0), (( y )*1.0), (( 270)*1.0))) // INLINED!!
+                    set bj_lastCreatedUnit=GetUnit(GetOwningPlayer(GetKillingUnitBJ()) , 'n01H' , x , y , 270)
                     call IssueTargetOrder(bj_lastCreatedUnit, "attack", udg_units33[GetPlayerId(GetOwningPlayer(GetKillingUnit())) + 1])
                     call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 5.0)
                     call SetUnitLifePercentBJ(GetKillingUnitBJ(), ( GetUnitLifePercent(GetKillingUnitBJ()) + 4.50 ))
@@ -17228,7 +17301,7 @@ endfunction
                 elseif UnitHasItemOfTypeBJ(udg_units33[GetPlayerId(GetOwningPlayer(GetKillingUnit())) + 1], 'I04S') or UnitHasItemOfTypeBJ(udg_units33[GetPlayerId(GetOwningPlayer(GetKillingUnit())) + 1], 'I05U') then
                     set x=GetUnitX(GetTriggerUnit())
                     set y=GetUnitY(GetTriggerUnit())
-                    set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(GetKillingUnitBJ()) ), ( 'n01F' ), (( x )*1.0), (( y )*1.0), (( 270)*1.0))) // INLINED!!
+                    set bj_lastCreatedUnit=GetUnit(GetOwningPlayer(GetKillingUnitBJ()) , 'n01F' , x , y , 270)
                     call IssueTargetOrder(bj_lastCreatedUnit, "attack", udg_units33[GetPlayerId(GetOwningPlayer(GetKillingUnit())) + 1])
                     call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 5.0)
                     if UnitHasItemOfTypeBJ(udg_units33[GetPlayerId(GetOwningPlayer(GetKillingUnit())) + 1], 'I05U') then
@@ -17244,14 +17317,14 @@ endfunction
         
  function s__JadePassive__Item_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I04S' and not s__JadePassive__Item_b then
-            		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__JadePassive__Item_dies))) // INLINED!!
-            		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__JadePassive__Item_attack))) // INLINED!!
+            		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__JadePassive__Item_dies)
+            		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__JadePassive__Item_attack)
 			set s__JadePassive__Item_b=true
 		endif
  endfunction
 
         function s__JadePassive__Item_onInit takes nothing returns nothing
-		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__JadePassive__Item_init))) // INLINED!!
+		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__JadePassive__Item_init)
         endfunction
         
     
@@ -17315,7 +17388,7 @@ endfunction
         if not IsUnitIllusion(GetAttacker()) and ( UnitHasItemOfTypeBJ(GetAttacker(), 'I061') or UnitHasItemOfTypeBJ(GetAttacker(), 'I06A') or UnitHasItemOfTypeBJ(GetAttacker(), 'I068') or UnitHasItemOfTypeBJ(GetAttacker(), 'I065') or UnitHasItemOfTypeBJ(GetAttacker(), 'I069') or UnitHasItemOfTypeBJ(GetAttacker(), 'I067') or UnitHasItemOfTypeBJ(GetAttacker(), 'I066') or UnitHasItemOfTypeBJ(GetAttacker(), 'I06E') or UnitHasItemOfTypeBJ(GetAttacker(), 'I06G') or UnitHasItemOfTypeBJ(GetAttacker(), 'I06F') ) then
 		if IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetAttacker())) and GetWidgetLife(GetTriggerUnit()) > 0.405 and GetRandomInt(1, 100) <= 15 then
             		call SilenceUnitLight(GetAttacker() , GetTriggerUnit())
-            		call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\DispelMagic\\DispelMagicTarget.mdl" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+            		call AddSpecialEffectEx("Abilities\\Spells\\Human\\DispelMagic\\DispelMagicTarget.mdl" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
 		endif
 	endif
 
@@ -17323,13 +17396,13 @@ endfunction
     
  function s__SpiritOrbs_init takes nothing returns nothing
 if ( GetItemTypeId(GetManipulatedItem()) == 'I05Z' or GetItemTypeId(GetManipulatedItem()) == 'I045' or GetItemTypeId(GetManipulatedItem()) == 'I04L' or GetItemTypeId(GetManipulatedItem()) == 'I01Z' or GetItemTypeId(GetManipulatedItem()) == 'I04F' or GetItemTypeId(GetManipulatedItem()) == 'I02D' or GetItemTypeId(GetManipulatedItem()) == 'I028' or GetItemTypeId(GetManipulatedItem()) == 'I03K' or GetItemTypeId(GetManipulatedItem()) == 'I02W' or GetItemTypeId(GetManipulatedItem()) == 'I05X' or GetItemTypeId(GetManipulatedItem()) == 'I04J' or GetItemTypeId(GetManipulatedItem()) == 'I022' or GetItemTypeId(GetManipulatedItem()) == 'I04D' or GetItemTypeId(GetManipulatedItem()) == 'I02B' or GetItemTypeId(GetManipulatedItem()) == 'I025' or GetItemTypeId(GetManipulatedItem()) == 'I048' or GetItemTypeId(GetManipulatedItem()) == 'I06B' or GetItemTypeId(GetManipulatedItem()) == 'I03M' or GetItemTypeId(GetManipulatedItem()) == 'I07L' or GetItemTypeId(GetManipulatedItem()) == 'I04A' or GetItemTypeId(GetManipulatedItem()) == 'I04M' or GetItemTypeId(GetManipulatedItem()) == 'I021' or GetItemTypeId(GetManipulatedItem()) == 'I04G' or GetItemTypeId(GetManipulatedItem()) == 'I029' or GetItemTypeId(GetManipulatedItem()) == 'I027' or GetItemTypeId(GetManipulatedItem()) == 'I03N' or GetItemTypeId(GetManipulatedItem()) == 'I058' or GetItemTypeId(GetManipulatedItem()) == 'I05W' or GetItemTypeId(GetManipulatedItem()) == 'I02Y' or GetItemTypeId(GetManipulatedItem()) == 'I047' or GetItemTypeId(GetManipulatedItem()) == 'I04I' or GetItemTypeId(GetManipulatedItem()) == 'I01Y' or GetItemTypeId(GetManipulatedItem()) == 'I04C' or GetItemTypeId(GetManipulatedItem()) == 'I02A' or GetItemTypeId(GetManipulatedItem()) == 'I024' or GetItemTypeId(GetManipulatedItem()) == 'I05F' or GetItemTypeId(GetManipulatedItem()) == 'I03L' or GetItemTypeId(GetManipulatedItem()) == 'I031' or GetItemTypeId(GetManipulatedItem()) == 'I05Y' or GetItemTypeId(GetManipulatedItem()) == 'I03P' or GetItemTypeId(GetManipulatedItem()) == 'I04K' or GetItemTypeId(GetManipulatedItem()) == 'I023' or GetItemTypeId(GetManipulatedItem()) == 'I04E' or GetItemTypeId(GetManipulatedItem()) == 'I02C' or GetItemTypeId(GetManipulatedItem()) == 'I026' or GetItemTypeId(GetManipulatedItem()) == 'I049' or GetItemTypeId(GetManipulatedItem()) == 'I06D' or GetItemTypeId(GetManipulatedItem()) == 'I032' or GetItemTypeId(GetManipulatedItem()) == 'I05U' or GetItemTypeId(GetManipulatedItem()) == 'I061' or GetItemTypeId(GetManipulatedItem()) == 'I06A' or GetItemTypeId(GetManipulatedItem()) == 'I068' or GetItemTypeId(GetManipulatedItem()) == 'I065' or GetItemTypeId(GetManipulatedItem()) == 'I069' or GetItemTypeId(GetManipulatedItem()) == 'I067' or GetItemTypeId(GetManipulatedItem()) == 'I066' or GetItemTypeId(GetManipulatedItem()) == 'I06E' or GetItemTypeId(GetManipulatedItem()) == 'I06G' or GetItemTypeId(GetManipulatedItem()) == 'I06F' ) and not s__SpiritOrbs_b then
-        		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__SpiritOrbs_actions))) // INLINED!!
+        		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__SpiritOrbs_actions)
 			set s__SpiritOrbs_b=true
 		endif
  endfunction
     
     function s__SpiritOrbs_onInit takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__SpiritOrbs_init))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__SpiritOrbs_init)
     endfunction 
     
 //===========================================================================
@@ -17411,7 +17484,7 @@ function Trig_PreventTeleportShoes_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_PreventTeleportShoes_Conditions takes nothing returns boolean
-    if ( not (( GetSpellAbilityId() == 'AImt' or GetSpellAbilityId() == 'A0RR' or GetSpellAbilityId() == 'A0RS' ) and ( RectContainsUnit(gg_rct_DuelArena2, GetTriggerUnit()) or RectContainsUnit(gg_rct_Cave, GetTriggerUnit()) or RectContainsUnit(gg_rct_MissionB, GetTriggerUnit()) or RectContainsUnit(gg_rct_MissionS, GetTriggerUnit()) or RectContainsUnit(gg_rct_TobiDimension, GetTriggerUnit()) or RectContainsUnit(gg_rct_MissionA, GetTriggerUnit()) or RectContainsUnit(gg_rct_DeathForest, GetTriggerUnit()) or RectContainsUnit(gg_rct_JiroboPrison, GetTriggerUnit()) )) ) then // INLINED!!
+    if ( not Trig_PreventTeleportShoes_Func001C() ) then
         return false
     endif
     return true
@@ -17443,13 +17516,13 @@ endfunction
     
     function s__SanbiSkinKillBunshin_init takes nothing returns nothing
 	if GetItemTypeId(GetManipulatedItem()) == 'I02U' and not s__SanbiSkinKillBunshin_b then
-    		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__SanbiSkinKillBunshin_actions))) // INLINED!!
+    		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__SanbiSkinKillBunshin_actions)
 		set s__SanbiSkinKillBunshin_b=true
 	endif
     endfunction
 
     function s__SanbiSkinKillBunshin_onInit takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__SanbiSkinKillBunshin_init))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__SanbiSkinKillBunshin_init)
     endfunction
     
 
@@ -17459,21 +17532,21 @@ endfunction
 
     
     function s__RikuudouNecklacePassive_finishCooldown takes nothing returns nothing
-        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
-        set s__s__RikuudouNecklacePassive_cooldown[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= false // INLINED!!
-        call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl" ), (( GetUnitX(u) )*1.0), (( GetUnitY(u))*1.0))) // INLINED!!
+        local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
+        set s__s__RikuudouNecklacePassive_cooldown[GetTimerData(GetExpiredTimer())]= false
+        call AddSpecialEffectEx("Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl" , GetUnitX(u) , GetUnitY(u))
         call ReleaseTimer(GetExpiredTimer())
 		set u=null
     endfunction
     
     function s__RikuudouNecklacePassive_finishInvul takes nothing returns nothing
-        call SetUnitInvulnerable((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), false) // INLINED!!
+        call SetUnitInvulnerable(GetUnitById(GetTimerData(GetExpiredTimer())), false)
         call ReleaseTimer(GetExpiredTimer())
     endfunction
     
     function s__RikuudouNecklacePassive_periodic takes nothing returns nothing
-  local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-  local unit u= (s__UnitDex_Unit[(id)]) // INLINED!!
+  local integer id= GetTimerData(GetExpiredTimer())
+  local unit u= GetUnitById(id)
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I04T') then
 			set s__s__RikuudouNecklacePassive_t[id]= null
 			call ReleaseTimer(GetExpiredTimer())
@@ -17481,7 +17554,7 @@ endfunction
 			return
 		endif
 		if GetWidgetLife(u) > 0.405 and ( GetUnitState(u, UNIT_STATE_LIFE) / GetUnitState(u, UNIT_STATE_MAX_LIFE) <= 0.2 ) and not s__s__RikuudouNecklacePassive_cooldown[id] then
-			call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\NightElf\\Taunt\\TauntCaster.mdl" ), (( GetUnitX(u) )*1.0), (( GetUnitY(u))*1.0))) // INLINED!!
+			call AddSpecialEffectEx("Abilities\\Spells\\NightElf\\Taunt\\TauntCaster.mdl" , GetUnitX(u) , GetUnitY(u))
 			call SetUnitInvulnerable(u, true)
 			call TimerStartEx(NewTimerEx(id) , 2.0 , false , function s__RikuudouNecklacePassive_finishInvul , "RikuudouNecklace_finishInvul")
 			set s__s__RikuudouNecklacePassive_cooldown[id]= true
@@ -17496,7 +17569,7 @@ endfunction
 		if GetItemTypeId(GetManipulatedItem()) != 'I04T' then
 			return
 		endif
-		set id=(GetUnitUserData((GetTriggerUnit()))) // INLINED!!
+		set id=GetUnitId(GetTriggerUnit())
 		if s__s__RikuudouNecklacePassive_t[id] == null then
 			set s__s__RikuudouNecklacePassive_t[id]= NewTimerEx(id)
 			call TimerStartEx(s__s__RikuudouNecklacePassive_t[id] , 0.1 , true , function s__RikuudouNecklacePassive_periodic , "RikuudouNecklace_periodic")
@@ -17504,7 +17577,7 @@ endfunction
     endfunction 
 
     function s__RikuudouNecklacePassive_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__RikuudouNecklacePassive_startTimer))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__RikuudouNecklacePassive_startTimer)
     endfunction
 
 //===========================================================================
@@ -17525,9 +17598,9 @@ endfunction
                 exitwhen i > 20
                 set angle=GetRandomReal(0, 2 * bj_PI)
                 set offset=GetRandomReal(0, 200)
-                set x=(((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-                set y=(((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-                call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Other\\NeutralBuildingExplosion\\NeutralBuildingExplosion.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                set x=GetPolarX(GetUnitX(GetTriggerUnit()) , angle , offset)
+                set y=GetPolarY(GetUnitY(GetTriggerUnit()) , angle , offset)
+                call AddSpecialEffectEx("Objects\\Spawnmodels\\Other\\NeutralBuildingExplosion\\NeutralBuildingExplosion.mdl" , x , y)
                 set i=i + 1
             endloop
             set damage=3 * ( GetHeroStr(GetAttacker(), true) + GetHeroAgi(GetAttacker(), true) + GetHeroInt(GetAttacker(), true) )
@@ -17547,13 +17620,13 @@ endfunction
     
  function s__EightHeadSwordCritical_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I030' and not s__EightHeadSwordCritical_b then
-        		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__EightHeadSwordCritical_actions))) // INLINED!!
+        		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__EightHeadSwordCritical_actions)
 			set s__EightHeadSwordCritical_b=true
 		endif
  endfunction
 
     function s__EightHeadSwordCritical_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__EightHeadSwordCritical_init))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__EightHeadSwordCritical_init)
     endfunction 
     
 //===========================================================================
@@ -17594,7 +17667,7 @@ endfunction
                 exitwhen bj_lastCreatedUnit == null
                 if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(GetAttacker())) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
                     call UnitDamageTarget(GetAttacker(), bj_lastCreatedUnit, damage, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                    call DestroyEffect(AddSpecialEffect(("Abilities\\Weapons\\Bolt\\BoltImpact.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Abilities\\Weapons\\Bolt\\BoltImpact.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                     call CreateTextTagUnitBJ(I2S(R2I(damage)) + "!", bj_lastCreatedUnit, 0, 8.00, 255, 252, 0.00, 0)
                     call SetTextTagVelocityBJ(bj_lastCreatedTextTag, 50.00, 90.00)
                     call SetTextTagPermanent(bj_lastCreatedTextTag, false)
@@ -17610,7 +17683,7 @@ endfunction
     endfunction 
     
     function s__ThunderKusanagiCritical_spellActions takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         if GetUnitAbilityLevel(s__ThunderKusanagiCritical_target[this], 'B04N') == 0 then
             set bj_lastCreatedUnit=CreateAbilityDummy(s__ThunderKusanagiCritical_caster[this] , 'A0TB')
             call IssueTargetOrder(bj_lastCreatedUnit, "soulburn", s__ThunderKusanagiCritical_target[this])
@@ -17635,8 +17708,8 @@ endfunction
     endfunction 
     
     function s__ThunderKusanagiCritical_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2(('A0YX' ) , Filter(( function s__ThunderKusanagiCritical_spell))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__ThunderKusanagiCritical_actions))) // INLINED!!
+        call RegisterSpellEffectEvent('A0YX' , function s__ThunderKusanagiCritical_spell)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__ThunderKusanagiCritical_actions)
     endfunction 
     
 //===========================================================================
@@ -17656,7 +17729,7 @@ endfunction
                 if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(GetAttacker())) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
                     call UnitDamageTarget(GetAttacker(), bj_lastCreatedUnit, damage, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
 		    call StunUnitTimed(GetAttacker() , bj_lastCreatedUnit , 0.5)
-                    call DestroyEffect(AddSpecialEffect(("Effects\\s_Earth_Smash.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Effects\\s_Earth_Smash.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                     call CreateTextTagUnitBJ(I2S(R2I(damage)) + "!", bj_lastCreatedUnit, 0, 8.00, 79, 42, 5, 0)
                     call SetTextTagVelocityBJ(bj_lastCreatedTextTag, 50.00, 90.00)
                     call SetTextTagPermanent(bj_lastCreatedTextTag, false)
@@ -17673,13 +17746,13 @@ endfunction
     
  function s__EarthKusanagiCritical_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I07R' and not s__EarthKusanagiCritical_b then
-        		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__EarthKusanagiCritical_actions))) // INLINED!!
+        		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__EarthKusanagiCritical_actions)
 			set s__EarthKusanagiCritical_b=true
 		endif
  endfunction
     
     function s__EarthKusanagiCritical_onInit takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__EarthKusanagiCritical_init))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__EarthKusanagiCritical_init)
     endfunction 
     
 //===========================================================================
@@ -17701,14 +17774,14 @@ endfunction
                 set i=i + 1
                 set angle=GetRandomReal(0, 2 * bj_PI)
                 set offset=GetRandomReal(0, 150)
-                set x=(((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-                set y=(((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
+                set x=GetPolarX(GetUnitX(GetTriggerUnit()) , angle , offset)
+                set y=GetPolarY(GetUnitY(GetTriggerUnit()) , angle , offset)
                 set bj_lastCreatedUnit=CreateAbilityDummy(GetAttacker() , 'A02S')
                 call SetUnitFlyHeight(bj_lastCreatedUnit, 60, 0)
                 set angle=Deg2Rad(GetUnitFacing(GetAttacker()))
                 set offset=GetDistanceUnits(bj_lastCreatedUnit , GetTriggerUnit())
-                set x=(((GetUnitX(bj_lastCreatedUnit) )*1.0) + Cos((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-                set y=(((GetUnitY(bj_lastCreatedUnit) )*1.0) + Sin((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
+                set x=GetPolarX(GetUnitX(bj_lastCreatedUnit) , angle , offset)
+                set y=GetPolarY(GetUnitY(bj_lastCreatedUnit) , angle , offset)
                 call IssuePointOrder(bj_lastCreatedUnit, "clusterrockets", x, y)
             endloop
             set damage=GetHeroStr(GetAttacker(), true) + 1.5 * GetHeroAgi(GetAttacker(), true) + 2 * GetHeroInt(GetAttacker(), true)
@@ -17728,13 +17801,13 @@ endfunction
     
  function s__HeavenSwordCritical_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'gcel' and not s__HeavenSwordCritical_b then
-        		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__HeavenSwordCritical_actions))) // INLINED!!
+        		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__HeavenSwordCritical_actions)
 			set s__HeavenSwordCritical_b=true
 		endif
  endfunction
 
     function s__HeavenSwordCritical_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__HeavenSwordCritical_init))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__HeavenSwordCritical_init)
     endfunction 
     
 //===========================================================================
@@ -17776,13 +17849,13 @@ endfunction
     
  function s__LightKusanagiCritical_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I02T' and not s__LightKusanagiCritical_b then
-        		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__LightKusanagiCritical_actions))) // INLINED!!
+        		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__LightKusanagiCritical_actions)
 			set s__LightKusanagiCritical_b=true
 		endif
  endfunction
     
     function s__LightKusanagiCritical_onInit takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__LightKusanagiCritical_init))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__LightKusanagiCritical_init)
     endfunction 
     
 //===========================================================================
@@ -17801,7 +17874,7 @@ endfunction
                 exitwhen bj_lastCreatedUnit == null
                 if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(GetAttacker())) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
                     call UnitDamageTarget(GetAttacker(), bj_lastCreatedUnit, damage, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                    call DestroyEffect(AddSpecialEffect(("Windcutter.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Windcutter.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                     call CreateTextTagUnitBJ(I2S(R2I(damage)) + "!", bj_lastCreatedUnit, 0, 8.00, 176, 176, 176, 0)
                     call SetTextTagVelocityBJ(bj_lastCreatedTextTag, 50.00, 90.00)
                     call SetTextTagPermanent(bj_lastCreatedTextTag, false)
@@ -17818,13 +17891,13 @@ endfunction
     
  function s__WindKusanagiCritical_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I07S' and not s__WindKusanagiCritical_b then
-        		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__WindKusanagiCritical_actions))) // INLINED!!
+        		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__WindKusanagiCritical_actions)
 			set s__WindKusanagiCritical_b=true
 		endif
  endfunction
     
     function s__WindKusanagiCritical_onInit takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__WindKusanagiCritical_init))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__WindKusanagiCritical_init)
     endfunction 
     
 //===========================================================================
@@ -17843,7 +17916,7 @@ endfunction
                 exitwhen bj_lastCreatedUnit == null
                 if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(GetAttacker())) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
                     call UnitDamageTarget(GetAttacker(), bj_lastCreatedUnit, damage, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                    call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                     call CreateTextTagUnitBJ(I2S(R2I(damage)) + "!", bj_lastCreatedUnit, 0, 8.00, 199, 0, 255, 0)
                     call SetTextTagVelocityBJ(bj_lastCreatedTextTag, 50.00, 90.00)
                     call SetTextTagPermanent(bj_lastCreatedTextTag, false)
@@ -17860,13 +17933,13 @@ endfunction
     
  function s__DarkKusanagiCritical_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I059' and not s__DarkKusanagiCritical_b then
-        		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__DarkKusanagiCritical_actions))) // INLINED!!
+        		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__DarkKusanagiCritical_actions)
 			set s__DarkKusanagiCritical_b=true
 		endif
  endfunction
 
     function s__DarkKusanagiCritical_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__DarkKusanagiCritical_init))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__DarkKusanagiCritical_init)
     endfunction 
     
 //===========================================================================
@@ -17885,7 +17958,7 @@ endfunction
                 exitwhen bj_lastCreatedUnit == null
                 if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(GetAttacker())) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
                     call UnitDamageTarget(GetAttacker(), bj_lastCreatedUnit, damage, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                    call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                     call CreateTextTagUnitBJ(I2S(R2I(damage)) + "!", bj_lastCreatedUnit, 0, 8.00, 255, 128, 0, 0)
                     call SetTextTagVelocityBJ(bj_lastCreatedTextTag, 50.00, 90.00)
                     call SetTextTagPermanent(bj_lastCreatedTextTag, false)
@@ -17902,13 +17975,13 @@ endfunction
 
  function s__FireKusanagiCritical_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I00E' and not s__FireKusanagiCritical_b then
-       			call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__FireKusanagiCritical_actions))) // INLINED!!
+       			call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__FireKusanagiCritical_actions)
 			set s__FireKusanagiCritical_b=true
 		endif
  endfunction
     
     function s__FireKusanagiCritical_onInit takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__FireKusanagiCritical_init))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__FireKusanagiCritical_init)
     endfunction 
     
 //===========================================================================
@@ -17929,7 +18002,7 @@ endfunction
                 exitwhen bj_lastCreatedUnit == null
                 if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(GetAttacker())) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
                     call UnitDamageTarget(GetAttacker(), bj_lastCreatedUnit, damage, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                    call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                     call CreateTextTagUnitBJ(I2S(R2I(damage)) + "!", bj_lastCreatedUnit, 0, 8.00, 83, 164, 255, 0)
                     call SetTextTagVelocityBJ(bj_lastCreatedTextTag, 50.00, 90.00)
                     call SetTextTagPermanent(bj_lastCreatedTextTag, false)
@@ -17946,13 +18019,13 @@ endfunction
     
  function s__IceKusanagiCritical_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I02H' and not s__IceKusanagiCritical_b then
-        		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__IceKusanagiCritical_actions))) // INLINED!!
+        		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__IceKusanagiCritical_actions)
 			set s__IceKusanagiCritical_b=true
 		endif
  endfunction
     
     function s__IceKusanagiCritical_onInit takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__IceKusanagiCritical_init))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__IceKusanagiCritical_init)
     endfunction 
     
 //===========================================================================
@@ -17983,13 +18056,13 @@ endfunction
     
  function s__BookCritical_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I02J' and not s__BookCritical_b then
-        		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__BookCritical_actions))) // INLINED!!
+        		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__BookCritical_actions)
 			set s__BookCritical_b=true
 		endif
  endfunction
     
     function s__BookCritical_onInit takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__BookCritical_init))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__BookCritical_init)
     endfunction 
     
 //===========================================================================
@@ -17998,11 +18071,11 @@ endfunction
 
 
     function s__MedicalNinjaCloth_periodic takes nothing returns nothing
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
   local integer id
                 local real newhp
 		if u == null or not ( UnitHasItemOfTypeBJ(u, 'I05H') or UnitHasItemOfTypeBJ(u, 'I05I') ) then
-			set s__s__MedicalNinjaCloth_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__MedicalNinjaCloth_t[GetTimerData(GetExpiredTimer())]= null
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 			return
@@ -18014,7 +18087,7 @@ endfunction
 				set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
 				exitwhen bj_lastCreatedUnit == null
 				if bj_lastCreatedUnit == u or ( IsUnitAlly(bj_lastCreatedUnit, GetOwningPlayer(u)) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and GetUnitAbilityLevel(bj_lastCreatedUnit, 'B04P') > 0 ) then
-					set id=(GetUnitUserData((bj_lastCreatedUnit))) // INLINED!!
+					set id=GetUnitId(bj_lastCreatedUnit)
 					set newhp=GetWidgetLife(bj_lastCreatedUnit) - s__s__MedicalNinjaCloth_hps[id]
 					if newhp > 0 then
 						call SetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE, GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE) + newhp / 2)
@@ -18033,14 +18106,14 @@ endfunction
 		if GetItemTypeId(GetManipulatedItem()) != 'I05H' and GetItemTypeId(GetManipulatedItem()) != 'I05I' then
 			return
 		endif
-		if s__s__MedicalNinjaCloth_t[(GetUnitUserData((GetTriggerUnit())))] == null then // INLINED!!
-			set s__s__MedicalNinjaCloth_t[(GetUnitUserData((GetTriggerUnit())))]= NewTimerEx((GetUnitUserData((GetTriggerUnit())))) // INLINED!!
-			call TimerStartEx(s__s__MedicalNinjaCloth_t[(GetUnitUserData((GetTriggerUnit())))] , 0.1 , true , function s__MedicalNinjaCloth_periodic , "MedicalNinjaCloth_periodic") // INLINED!!
+		if s__s__MedicalNinjaCloth_t[GetUnitId(GetTriggerUnit())] == null then
+			set s__s__MedicalNinjaCloth_t[GetUnitId(GetTriggerUnit())]= NewTimerEx(GetUnitId(GetTriggerUnit()))
+			call TimerStartEx(s__s__MedicalNinjaCloth_t[GetUnitId(GetTriggerUnit())] , 0.1 , true , function s__MedicalNinjaCloth_periodic , "MedicalNinjaCloth_periodic")
 		endif
     endfunction 
 
     function s__MedicalNinjaCloth_onInit takes nothing returns nothing
-    	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__MedicalNinjaCloth_startTimer))) // INLINED!!
+    	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__MedicalNinjaCloth_startTimer)
     endfunction 
     
 //===========================================================================
@@ -18049,7 +18122,7 @@ endfunction
 
 
     function s__SamehadaMana_actions takes nothing returns nothing
-        if IsUnitEnemy(GetAttacker(), GetOwningPlayer(GetTriggerUnit())) and (UnitHasItemOfTypeBJ((GetAttacker() ), ( 'I03J'))) then // INLINED!!
+        if IsUnitEnemy(GetAttacker(), GetOwningPlayer(GetTriggerUnit())) and UnitHasItemEx(GetAttacker() , 'I03J') then
         	call SetUnitState(GetAttacker(), UNIT_STATE_MANA, GetUnitState(GetAttacker(), UNIT_STATE_MANA) + 100 + GetUnitState(GetTriggerUnit(), UNIT_STATE_MAX_MANA) * 0.02)
 		call SetUnitState(GetTriggerUnit(), UNIT_STATE_MANA, GetUnitState(GetTriggerUnit(), UNIT_STATE_MANA) - 100 - GetUnitState(GetTriggerUnit(), UNIT_STATE_MAX_MANA) * 0.02)
     	endif
@@ -18057,13 +18130,13 @@ endfunction
     
  function s__SamehadaMana_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I03J' and not s__SamehadaMana_b then
-        		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__SamehadaMana_actions))) // INLINED!!
+        		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__SamehadaMana_actions)
 			set s__SamehadaMana_b=true
 		endif
  endfunction
 
     function s__SamehadaMana_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__SamehadaMana_init))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__SamehadaMana_init)
     endfunction 
     
 
@@ -18076,17 +18149,17 @@ endfunction
 	if GetItemTypeId(GetManipulatedItem()) != 'I03W' then
 		return
 	endif
-	if s__s__KyuubiImmolation_t[(GetUnitUserData((GetTriggerUnit())))] == null then // INLINED!!
-		set s__s__KyuubiImmolation_t[(GetUnitUserData((GetTriggerUnit())))]= NewTimerEx((GetUnitUserData((GetTriggerUnit())))) // INLINED!!
-		call TimerStartEx(s__s__KyuubiImmolation_t[(GetUnitUserData((GetTriggerUnit())))] , 1.0 , true , function sc__KyuubiImmolation_periodic , "KyuubiImmolation_periodic") // INLINED!!
+	if s__s__KyuubiImmolation_t[GetUnitId(GetTriggerUnit())] == null then
+		set s__s__KyuubiImmolation_t[GetUnitId(GetTriggerUnit())]= NewTimerEx(GetUnitId(GetTriggerUnit()))
+		call TimerStartEx(s__s__KyuubiImmolation_t[GetUnitId(GetTriggerUnit())] , 1.0 , true , function sc__KyuubiImmolation_periodic , "KyuubiImmolation_periodic")
 	endif
     endfunction 
 
  function s__KyuubiImmolation_periodic takes nothing returns nothing
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
   local integer i
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I03W') then
-			set s__s__KyuubiImmolation_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__KyuubiImmolation_t[GetTimerData(GetExpiredTimer())]= null
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 			return
@@ -18109,7 +18182,7 @@ endfunction
  endfunction 
 
  function s__KyuubiImmolation_onInit takes nothing returns nothing
-    		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__KyuubiImmolation_startTimer))) // INLINED!!
+    		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__KyuubiImmolation_startTimer)
  endfunction 
 
 //===========================================================================
@@ -18142,7 +18215,7 @@ endfunction
         endfunction
 
  function s__AntiEnergyStones_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
   local integer id2
   local integer hp
   local integer mp
@@ -18167,7 +18240,7 @@ endfunction
 					set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
 					exitwhen bj_lastCreatedUnit == null
 					if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__AntiEnergyStones_u[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and GetUnitAbilityLevel(bj_lastCreatedUnit, 'B00P') > 0 and not IsUnitInGroup(bj_lastCreatedUnit, s__AntiEnergyStones_yang_units[this]) then
-						call SaveInteger(Table___ht, (s__AntiEnergyStones_hps[this]), ((GetUnitUserData((bj_lastCreatedUnit)))), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE)))) // INLINED!!
+						call s__Table__setindex(s__AntiEnergyStones_hps[this],GetUnitId(bj_lastCreatedUnit), R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE)))
 						call GroupAddUnit(s__AntiEnergyStones_yang_units[this], bj_lastCreatedUnit)
 					endif
 					call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
@@ -18176,16 +18249,16 @@ endfunction
 				loop
 					set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
 					exitwhen bj_lastCreatedUnit == null
-					set id2=(GetUnitUserData((bj_lastCreatedUnit))) // INLINED!!
+					set id2=GetUnitId(bj_lastCreatedUnit)
 					if GetWidgetLife(bj_lastCreatedUnit) < 0.405 or GetUnitAbilityLevel(bj_lastCreatedUnit, 'B00P') == 0 then
-						call RemoveSavedInteger(Table___ht, (s__AntiEnergyStones_hps[this]), (id2)) // INLINED!!
+						call s__Table_remove(s__AntiEnergyStones_hps[this],id2)
 						call GroupRemoveUnit(s__AntiEnergyStones_yang_units[this], bj_lastCreatedUnit)
 					else
-						set hp=(LoadInteger(Table___ht, (s__AntiEnergyStones_hps[this]), (id2))) // INLINED!!
-						if GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE) > hp and not udg_EarthFinish[GetPlayerId(GetOwningPlayer(s__AntiEnergyStones_u[this]))] and not (UnitHasItemOfTypeBJ((bj_lastCreatedUnit ), ( 'I06J'))) and not (UnitHasItemOfTypeBJ((bj_lastCreatedUnit ), ( 'I06L'))) then // INLINED!!
-							call SetUnitState(s__AntiEnergyStones_u[this], UNIT_STATE_LIFE, GetUnitState(s__AntiEnergyStones_u[this], UNIT_STATE_LIFE) + GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE) - (LoadInteger(Table___ht, (s__AntiEnergyStones_hps[this]), (id2)))) // INLINED!!
+						set hp=s__Table__getindex(s__AntiEnergyStones_hps[this],id2)
+						if GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE) > hp and not udg_EarthFinish[GetPlayerId(GetOwningPlayer(s__AntiEnergyStones_u[this]))] and not UnitHasItemEx(bj_lastCreatedUnit , 'I06J') and not UnitHasItemEx(bj_lastCreatedUnit , 'I06L') then
+							call SetUnitState(s__AntiEnergyStones_u[this], UNIT_STATE_LIFE, GetUnitState(s__AntiEnergyStones_u[this], UNIT_STATE_LIFE) + GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE) - s__Table__getindex(s__AntiEnergyStones_hps[this],id2))
 						endif
-						call SaveInteger(Table___ht, (s__AntiEnergyStones_hps[this]), (id2), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE)))) // INLINED!!
+						call s__Table__setindex(s__AntiEnergyStones_hps[this],id2, R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE)))
 					endif
 					call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
 				endloop
@@ -18200,7 +18273,7 @@ endfunction
 					set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
 					exitwhen bj_lastCreatedUnit == null
 					if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__AntiEnergyStones_u[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and GetUnitAbilityLevel(bj_lastCreatedUnit, 'B00R') > 0 and not IsUnitInGroup(bj_lastCreatedUnit, s__AntiEnergyStones_yin_units[this]) then
-						call SaveInteger(Table___ht, (s__AntiEnergyStones_mps[this]), ((GetUnitUserData((bj_lastCreatedUnit)))), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA)))) // INLINED!!
+						call s__Table__setindex(s__AntiEnergyStones_mps[this],GetUnitId(bj_lastCreatedUnit), R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA)))
 						call GroupAddUnit(s__AntiEnergyStones_yin_units[this], bj_lastCreatedUnit)
 					endif
 					call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
@@ -18209,13 +18282,13 @@ endfunction
 				loop
 					set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
 					exitwhen bj_lastCreatedUnit == null
-					set id2=(GetUnitUserData((bj_lastCreatedUnit))) // INLINED!!
+					set id2=GetUnitId(bj_lastCreatedUnit)
 					if GetWidgetLife(bj_lastCreatedUnit) < 0.405 or GetUnitAbilityLevel(bj_lastCreatedUnit, 'B00R') == 0 then
-						call RemoveSavedInteger(Table___ht, (s__AntiEnergyStones_mps[this]), (id2)) // INLINED!!
+						call s__Table_remove(s__AntiEnergyStones_mps[this],id2)
 						call GroupRemoveUnit(s__AntiEnergyStones_yin_units[this], bj_lastCreatedUnit)
 					else
 						if not udg_FallenSky[GetPlayerId(GetOwningPlayer(s__AntiEnergyStones_u[this]))] then
-							set mp=(LoadInteger(Table___ht, (s__AntiEnergyStones_mps[this]), (id2))) // INLINED!!
+							set mp=s__Table__getindex(s__AntiEnergyStones_mps[this],id2)
 							if GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA) > mp then
 								call SetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA, mp)
 							elseif GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA) < mp then
@@ -18225,7 +18298,7 @@ endfunction
 								endif
 							endif
 						endif
-						call SaveInteger(Table___ht, (s__AntiEnergyStones_mps[this]), (id2), ( R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA)))) // INLINED!!
+						call s__Table__setindex(s__AntiEnergyStones_mps[this],id2, R2I(GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA)))
 					endif
 					call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
 				endloop
@@ -18241,12 +18314,12 @@ endfunction
 		if GetItemTypeId(GetManipulatedItem()) != 'I06J' and GetItemTypeId(GetManipulatedItem()) != 'I06K' and GetItemTypeId(GetManipulatedItem()) != 'I06L' then
 			return
 		endif
-		set id=(GetUnitUserData((GetTriggerUnit()))) // INLINED!!
+		set id=GetUnitId(GetTriggerUnit())
 		if s__s__AntiEnergyStones_t[id] == null then
 			set this=s__AntiEnergyStones_allocate()
 			set s__s__AntiEnergyStones_t[id]= NewTimerEx(this)
 			set s__AntiEnergyStones_u[this]=GetTriggerUnit()
-			set s__AntiEnergyStones_id[this]=(GetUnitUserData((s__AntiEnergyStones_u[this]))) // INLINED!!
+			set s__AntiEnergyStones_id[this]=GetUnitId(s__AntiEnergyStones_u[this])
 			set s__AntiEnergyStones_yang_units[this]=CreateGroup()
 			set s__AntiEnergyStones_yin_units[this]=CreateGroup()
 			set s__AntiEnergyStones_hps[this]=s__Table_create()
@@ -18256,7 +18329,7 @@ endfunction
     endfunction 
 
  function s__AntiEnergyStones_onInit takes nothing returns nothing
-		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__AntiEnergyStones_startTimer))) // INLINED!!
+		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__AntiEnergyStones_startTimer)
  endfunction 
 
 //===========================================================================
@@ -18267,7 +18340,7 @@ endfunction
 
 
  function s__HokageRobeAura_addStatsToNearbyAllies takes unit u returns nothing
-  local integer id= (GetUnitUserData((u))) // INLINED!!
+  local integer id= GetUnitId(u)
   local unit enumUnit
   local group g
 		if s__s__HokageRobeAura_affected[id] == null then
@@ -18314,14 +18387,14 @@ endfunction
  function s__HokageRobeAura_equip takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I03K' and IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true and not IsUnitIllusion(GetTriggerUnit()) then
 			call GroupAddUnit(s__HokageRobeAura_casters, GetTriggerUnit())
-			set s__s__HokageRobeAura_affected[(GetUnitUserData((GetTriggerUnit())))]= CreateGroup() // INLINED!!
+			set s__s__HokageRobeAura_affected[GetUnitId(GetTriggerUnit())]= CreateGroup()
 		endif
  endfunction 
 
  function s__HokageRobeAura_unequip takes nothing returns nothing
   local integer id
 		if GetItemTypeId(GetManipulatedItem()) == 'I03K' and IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true and not IsUnitIllusion(GetTriggerUnit()) then
-			set id=(GetUnitUserData((GetTriggerUnit()))) // INLINED!!
+			set id=GetUnitId(GetTriggerUnit())
 			call GroupRemoveUnit(s__HokageRobeAura_casters, GetTriggerUnit())
 			loop
 				set bj_lastCreatedUnit=FirstOfGroup(s__s__HokageRobeAura_affected[id])
@@ -18338,9 +18411,9 @@ endfunction
 
  function s__HokageRobeAura_onInit takes nothing returns nothing
 		set s__HokageRobeAura_casters=CreateGroup()
-		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__HokageRobeAura_equip))) // INLINED!!
-		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__HokageRobeAura_unequip))) // INLINED!!
-		call TimerStart((NewTimerEx(0)), 1.0, true, function s__HokageRobeAura_periodic) // INLINED!!
+		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__HokageRobeAura_equip)
+		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__HokageRobeAura_unequip)
+		call TimerStart(NewTimer(), 1.0, true, function s__HokageRobeAura_periodic)
  endfunction 
 
 
@@ -18352,7 +18425,7 @@ endfunction
 
 
  function s__KazekageRobeAura_addStatsToNearbyAllies takes unit u returns nothing
-  local integer id= (GetUnitUserData((u))) // INLINED!!
+  local integer id= GetUnitId(u)
   local unit enumUnit
   local group g
 		loop
@@ -18389,14 +18462,14 @@ endfunction
  function s__KazekageRobeAura_equip takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I03O' then
 			call GroupAddUnit(s__KazekageRobeAura_casters, GetTriggerUnit())
-			set s__s__KazekageRobeAura_affected[(GetUnitUserData((GetTriggerUnit())))]= CreateGroup() // INLINED!!
+			set s__s__KazekageRobeAura_affected[GetUnitId(GetTriggerUnit())]= CreateGroup()
 		endif
  endfunction 
 
  function s__KazekageRobeAura_unequip takes nothing returns nothing
   local integer id
 		if GetItemTypeId(GetManipulatedItem()) == 'I03O' then
-			set id=(GetUnitUserData((GetTriggerUnit()))) // INLINED!!
+			set id=GetUnitId(GetTriggerUnit())
 			call GroupRemoveUnit(s__KazekageRobeAura_casters, GetTriggerUnit())
 			loop
 				set bj_lastCreatedUnit=FirstOfGroup(s__s__KazekageRobeAura_affected[id])
@@ -18411,9 +18484,9 @@ endfunction
 
  function s__KazekageRobeAura_onInit takes nothing returns nothing
 		set s__KazekageRobeAura_casters=CreateGroup()
-		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__KazekageRobeAura_equip))) // INLINED!!
-		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__KazekageRobeAura_unequip))) // INLINED!!
-		call TimerStart((NewTimerEx(0)), 1.0, true, function s__KazekageRobeAura_periodic) // INLINED!!
+		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__KazekageRobeAura_equip)
+		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__KazekageRobeAura_unequip)
+		call TimerStart(NewTimer(), 1.0, true, function s__KazekageRobeAura_periodic)
  endfunction 
 
 
@@ -18445,13 +18518,13 @@ endfunction
         endfunction
 
     function s__ItachiRing_death takes nothing returns nothing
-	if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true and not IsUnitIllusion(GetTriggerUnit()) and GetUnitTypeId(GetTriggerUnit()) != 'H05O' and GetUnitTypeId(GetTriggerUnit()) != 'U009' and GetUnitTypeId(GetTriggerUnit()) != 'N00Q' and (UnitHasItemOfTypeBJ((GetKillingUnit() ), ( 'I00F'))) and IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO) == true then // INLINED!!
+	if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true and not IsUnitIllusion(GetTriggerUnit()) and GetUnitTypeId(GetTriggerUnit()) != 'H05O' and GetUnitTypeId(GetTriggerUnit()) != 'U009' and GetUnitTypeId(GetTriggerUnit()) != 'N00Q' and UnitHasItemEx(GetKillingUnit() , 'I00F') and IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO) == true then
 		call ModifyHeroStat(bj_HEROSTAT_INT, GetKillingUnit(), bj_MODIFYMETHOD_ADD, 2)
 	endif
     endfunction 
 
     function s__ItachiRing_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__ItachiRing_death))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__ItachiRing_death)
     endfunction 
     
 
@@ -18464,17 +18537,17 @@ endfunction
 	if GetItemTypeId(GetManipulatedItem()) != 'I00H' then
 		return
 	endif
-	if s__s__KisameRing_t[(GetUnitUserData((GetTriggerUnit())))] == null then // INLINED!!
-		set s__s__KisameRing_t[(GetUnitUserData((GetTriggerUnit())))]= NewTimerEx((GetUnitUserData((GetTriggerUnit())))) // INLINED!!
-		call TimerStartEx(s__s__KisameRing_t[(GetUnitUserData((GetTriggerUnit())))] , 1.0 , true , function sc__KisameRing_periodic , "KisameRing_periodic") // INLINED!!
+	if s__s__KisameRing_t[GetUnitId(GetTriggerUnit())] == null then
+		set s__s__KisameRing_t[GetUnitId(GetTriggerUnit())]= NewTimerEx(GetUnitId(GetTriggerUnit()))
+		call TimerStartEx(s__s__KisameRing_t[GetUnitId(GetTriggerUnit())] , 1.0 , true , function sc__KisameRing_periodic , "KisameRing_periodic")
 	endif
     endfunction 
 
  function s__KisameRing_periodic takes nothing returns nothing
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
   local integer i
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I00H') then
-			set s__s__KisameRing_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__KisameRing_t[GetTimerData(GetExpiredTimer())]= null
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 			return
@@ -18497,7 +18570,7 @@ endfunction
  endfunction 
 
  function s__KisameRing_onInit takes nothing returns nothing
-    		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__KisameRing_startTimer))) // INLINED!!
+    		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__KisameRing_startTimer)
  endfunction 
 
 //===========================================================================
@@ -18517,13 +18590,13 @@ endfunction
     
  function s__SasoriRingGold_init takes nothing returns nothing
 		if GetItemTypeId(GetManipulatedItem()) == 'I02S' and not s__SasoriRingGold_b then
-        		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__SasoriRingGold_actions))) // INLINED!!
+        		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__SasoriRingGold_actions)
 			set s__SasoriRingGold_b=true
 		endif
  endfunction
     
     function s__SasoriRingGold_onInit takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__SasoriRingGold_init))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__SasoriRingGold_init)
     endfunction 
     
 //===========================================================================
@@ -18553,7 +18626,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_RepairBase takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_RepairBase_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_RepairBase_Actions)
 endfunction
 
 
@@ -18585,12 +18658,12 @@ endfunction
         endfunction
     
     function s__Fireworks_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         local real angle= GetRandomReal(0, 2 * bj_PI)
         local real offset= GetRandomReal(0, 300)
-        local real x= (((s__Fireworks_target_x[this] )*1.0) + Cos((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-        local real y= (((s__Fireworks_target_y[this] )*1.0) + Sin((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-        set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__Fireworks_caster[this]) ), ( 'nsc3' ), (( x )*1.0), (( y )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
+        local real x= GetPolarX(s__Fireworks_target_x[this] , angle , offset)
+        local real y= GetPolarY(s__Fireworks_target_y[this] , angle , offset)
+        set bj_lastCreatedUnit=GetUnit(GetOwningPlayer(s__Fireworks_caster[this]) , 'nsc3' , x , y , GetRandomReal(0, 360))
         call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 0.3)
         set s__Fireworks_count[this]=s__Fireworks_count[this] + 1
         if s__Fireworks_count[this] > 30 then
@@ -18624,19 +18697,19 @@ endfunction
         if GetUnitTypeId(GetTriggerUnit()) == 'nsc3' then
             set r=GetRandomInt(1, 3)
             if r == 1 then
-                set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'ncnk' ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()) )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
+                set bj_lastCreatedUnit=GetUnit(GetTriggerPlayer() , 'ncnk' , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , GetRandomReal(0, 360))
             elseif r == 2 then
-                set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'nscb' ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()) )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
+                set bj_lastCreatedUnit=GetUnit(GetTriggerPlayer() , 'nscb' , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , GetRandomReal(0, 360))
             else
-                set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'nsc2' ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()) )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
+                set bj_lastCreatedUnit=GetUnit(GetTriggerPlayer() , 'nsc2' , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , GetRandomReal(0, 360))
             endif
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 1.0)
         endif
     endfunction 
     
     function s__Fireworks_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2(('A0JJ' ) , Filter(( function s__Fireworks_actions))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__Fireworks_death))) // INLINED!!
+        call RegisterSpellEffectEvent('A0JJ' , function s__Fireworks_actions)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__Fireworks_death)
     endfunction 
     
 
@@ -18672,7 +18745,7 @@ endfunction
 function Trig_FBP_Func006A takes nothing returns nothing
 	set udg_locations03[301]=GetUnitLoc(GetEnumUnit())
 	//call AddSpecialEffectLocBJEX(udg_locations03[301],"Abilities\\Weapons\\CannonTowerMissile\\CannonTowerMissile.mdl")
-call AddSpecialEffectLocBJ((udg_locations03[301] ), ( "AnimationExplosion.mdx")) // INLINED!!
+	call AddSpecialEffectLocBJEX(udg_locations03[301] , "AnimationExplosion.mdx")
 	call BlzSetSpecialEffectHeight(bj_lastCreatedEffect, 60 + GetPointZ(GetUnitX(GetEnumUnit()) , GetUnitY(GetEnumUnit())))
 	call BlzSetSpecialEffectTimeScale(bj_lastCreatedEffect, 0.5)
 	call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 1.3)
@@ -18689,7 +18762,7 @@ endfunction
 function Trig_FBP_Actions takes nothing returns nothing
 	set udg_locations07[40]=GetUnitLoc(GetTriggerUnit())
 	//call AddSpecialEffectLocBJEX(udg_locations03[300],"Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl")
-call AddSpecialEffectLocBJ((udg_locations03[300] ), ( "FireCrack.mdx")) // INLINED!!
+	call AddSpecialEffectLocBJEX(udg_locations03[300] , "FireCrack.mdx")
 	call DestroyEffect(bj_lastCreatedEffect)
 	set bj_forLoopAIndex=1
 	set bj_forLoopAIndexEnd=5
@@ -18721,12 +18794,12 @@ endfunction
 
     
     function s__BijuuEssence_actions takes nothing returns nothing
-        call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+        call AddSpecialEffectEx("Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
         call SetUnitState(GetTriggerUnit(), UNIT_STATE_MANA, GetUnitState(GetTriggerUnit(), UNIT_STATE_MANA) + 1000)
     endfunction 
     
     function s__BijuuEssence_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__BijuuEssence_SPELL_ID ) , Filter(( function s__BijuuEssence_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__BijuuEssence_SPELL_ID , function s__BijuuEssence_actions)
     endfunction 
     
 //===========================================================================
@@ -18757,7 +18830,7 @@ endfunction
         endfunction
     
     function s__WireStrings_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
   local real x
   local real y
   local real angle
@@ -18765,14 +18838,14 @@ endfunction
 		if IsUnitEnemy(s__WireStrings_target[this], GetOwningPlayer(s__WireStrings_caster[this])) and GetDistanceUnits(s__WireStrings_caster[this] , s__WireStrings_target[this]) > 600 and GetDistanceUnits(s__WireStrings_caster[this] , s__WireStrings_target[this]) < 3000 then
 			set angle=Atan3(GetUnitX(s__WireStrings_caster[this]) , GetUnitY(s__WireStrings_caster[this]) , GetUnitX(s__WireStrings_target[this]) , GetUnitY(s__WireStrings_target[this]))
 			call UnitDamageTarget(s__WireStrings_caster[this], s__WireStrings_target[this], 6.0, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-			set x=(((GetUnitX(s__WireStrings_caster[this]) )*1.0) + Cos((( angle )*1.0)) * (( 600)*1.0)) // INLINED!!
-			set y=(((GetUnitY(s__WireStrings_caster[this]) )*1.0) + Sin((( angle )*1.0)) * (( 600)*1.0)) // INLINED!!
+			set x=GetPolarX(GetUnitX(s__WireStrings_caster[this]) , angle , 600)
+			set y=GetPolarY(GetUnitY(s__WireStrings_caster[this]) , angle , 600)
 			call SetUnitX(s__WireStrings_target[this], x)
 			call SetUnitY(s__WireStrings_target[this], y)
 		endif
         if GetUnitAbilityLevel(s__WireStrings_target[this], 'B05H') == 0 then
 			if IsUnitAlly(s__WireStrings_target[this], GetOwningPlayer(s__WireStrings_caster[this])) then
-				call DestroyEffect(AddSpecialEffect(("blackblink.mdx" ), (( GetUnitX(s__WireStrings_target[this]) )*1.0), (( GetUnitY(s__WireStrings_target[this]))*1.0))) // INLINED!!
+				call AddSpecialEffectEx("blackblink.mdx" , GetUnitX(s__WireStrings_target[this]) , GetUnitY(s__WireStrings_target[this]))
 				call SetUnitX(s__WireStrings_target[this], s__WireStrings_x[this])
 				call SetUnitY(s__WireStrings_target[this], s__WireStrings_y[this])
 				call UnitRemoveAbility(s__WireStrings_target[this], 'B05H')
@@ -18798,7 +18871,7 @@ endfunction
     endfunction
     
     function s__WireStrings_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__WireStrings_SPELL_ID ) , Filter(( function s__WireStrings_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__WireStrings_SPELL_ID , function s__WireStrings_actions)
     endfunction
     
 //===========================================================================
@@ -18829,7 +18902,7 @@ endfunction
         endfunction
 
     function s__MedicalSphere_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         set bj_lastCreatedGroup=CreateGroup()
         call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__MedicalSphere_target_x[this], s__MedicalSphere_target_y[this], 600.0, null)
         loop
@@ -18837,7 +18910,7 @@ endfunction
             exitwhen bj_lastCreatedUnit == null
             if IsUnitAlly(bj_lastCreatedUnit, GetOwningPlayer(s__MedicalSphere_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
                 call SetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE, GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE) + GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MAX_LIFE) * 0.03)
-                call DestroyEffect(AddSpecialEffect(("war3mapImported\\Heal Green.mdx" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("war3mapImported\\Heal Green.mdx" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
             endif
             call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
         endloop
@@ -18854,14 +18927,14 @@ endfunction
         set s__MedicalSphere_caster[this]=GetTriggerUnit()
         set s__MedicalSphere_target_x[this]=GetUnitX(GetTriggerUnit())
         set s__MedicalSphere_target_y[this]=GetUnitY(GetTriggerUnit())
-        set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'n00I' ), (( s__MedicalSphere_target_x[this] )*1.0), (( s__MedicalSphere_target_y[this] )*1.0), (( 270)*1.0))) // INLINED!!
+        set bj_lastCreatedUnit=GetUnit(GetTriggerPlayer() , 'n00I' , s__MedicalSphere_target_x[this] , s__MedicalSphere_target_y[this] , 270)
         call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 10.0)
         set s__MedicalSphere_count[this]=0
         call TimerStartEx(NewTimerEx(this) , 1.0 , true , function s__MedicalSphere_periodic , "MedicalSphere_periodic")
     endfunction 
     
     function s__MedicalSphere_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__MedicalSphere_SPELL_ID ) , Filter(( function s__MedicalSphere_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__MedicalSphere_SPELL_ID , function s__MedicalSphere_actions)
     endfunction 
     
 //===========================================================================
@@ -18893,8 +18966,8 @@ endfunction
     
     
     function s__WoodOfSubstitution_remove takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-        call DestroyEffect(AddSpecialEffect(("s_Shadow_Smoke.mdx" ), (( GetUnitX(s__WoodOfSubstitution_dummy[this]) )*1.0), (( GetUnitY(s__WoodOfSubstitution_dummy[this]))*1.0))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
+        call AddSpecialEffectEx("s_Shadow_Smoke.mdx" , GetUnitX(s__WoodOfSubstitution_dummy[this]) , GetUnitY(s__WoodOfSubstitution_dummy[this]))
         call RecycleUnit(s__WoodOfSubstitution_dummy[this])
         call ReleaseTimer(GetExpiredTimer())
         call SelectUnitForPlayerSingle(s__WoodOfSubstitution_caster[this], GetOwningPlayer(s__WoodOfSubstitution_caster[this]))
@@ -18919,14 +18992,14 @@ endfunction
             exitwhen i > 3
             set angle=GetRandomReal(0, 2 * bj_PI)
             set offset=GetRandomReal(0, 200)
-            set x=(((GetUnitX(s__WoodOfSubstitution_caster[this]) )*1.0) + Cos((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-            set y=(((GetUnitY(s__WoodOfSubstitution_caster[this]) )*1.0) + Sin((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
+            set x=GetPolarX(GetUnitX(s__WoodOfSubstitution_caster[this]) , angle , offset)
+            set y=GetPolarY(GetUnitY(s__WoodOfSubstitution_caster[this]) , angle , offset)
             set s__WoodOfSubstitution_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e04G', x, y, 72 * i)
             //call SetUnitFlyHeight(bj_lastCreatedUnit, GetRandomReal(50, 200), 0)
             //call SetUnitScale(bj_lastCreatedUnit, 6.0, 6.0, 6.0)
             call SetUnitMoveSpeed(s__WoodOfSubstitution_dummy[this], 300)
-            set x=(((GetUnitX(s__WoodOfSubstitution_dummy[this]) )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__WoodOfSubstitution_dummy[this])) )*1.0)) * (( 800)*1.0)) // INLINED!!
-            set y=(((GetUnitY(s__WoodOfSubstitution_dummy[this]) )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__WoodOfSubstitution_dummy[this])) )*1.0)) * (( 800)*1.0)) // INLINED!!
+            set x=GetPolarX(GetUnitX(s__WoodOfSubstitution_dummy[this]) , Deg2Rad(GetUnitFacing(s__WoodOfSubstitution_dummy[this])) , 800)
+            set y=GetPolarY(GetUnitY(s__WoodOfSubstitution_dummy[this]) , Deg2Rad(GetUnitFacing(s__WoodOfSubstitution_dummy[this])) , 800)
             call IssuePointOrder(s__WoodOfSubstitution_dummy[this], "move", x, y)
             call SetUnitVertexColor(s__WoodOfSubstitution_dummy[this], 255, 255, 255, 100)
             call UnitApplyTimedLife(s__WoodOfSubstitution_dummy[this], 'BTLF', 5.0)
@@ -18944,7 +19017,7 @@ endfunction
     endfunction 
     
     function s__WoodOfSubstitution_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__WoodOfSubstitution_SPELL_ID ) , Filter(( function s__WoodOfSubstitution_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__WoodOfSubstitution_SPELL_ID , function s__WoodOfSubstitution_actions)
     endfunction 
     
 //===========================================================================
@@ -18975,7 +19048,7 @@ endfunction
         endfunction
     
     function s__SmokeBomb_removeInivis takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         local integer id= GetUnitPointValueByType(GetUnitTypeId(s__SmokeBomb_caster[this]))
         call UnitAddAbility(s__SmokeBomb_caster[this], 'Arav')
         call UnitRemoveAbility(s__SmokeBomb_caster[this], 'Arav')
@@ -19004,17 +19077,17 @@ endfunction
                 exitwhen i > 30
                 set angle=GetRandomReal(0, 2 * bj_PI)
                 set offset=GetRandomReal(0, 250)
-                set x=(((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-                set y=(((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
+                set x=GetPolarX(GetUnitX(GetTriggerUnit()) , angle , offset)
+                set y=GetPolarY(GetUnitY(GetTriggerUnit()) , angle , offset)
                 set bj_lastCreatedUnit=CreateUnit(GetTriggerPlayer(), 'z008', x, y, GetRandomReal(0, 360))
                 call SetUnitScale(bj_lastCreatedUnit, 6.0, 6.0, 6.0)
                 call SetUnitMoveSpeed(bj_lastCreatedUnit, 100)
                 call SetUnitVertexColor(bj_lastCreatedUnit, 175, 100, 255, 255)
-call UnitAddAbility((bj_lastCreatedUnit ), ( 'A03E')) // INLINED!!
+                call UnitAddAbilityEx(bj_lastCreatedUnit , 'A03E')
                 call SetUnitFlyHeight(bj_lastCreatedUnit, GetRandomReal(50, 200), 100)
                 set angle=Atan3(GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , x , y)
-                set x=(((GetUnitX(bj_lastCreatedUnit) )*1.0) + Cos((( angle )*1.0)) * (( 400)*1.0)) // INLINED!!
-                set y=(((GetUnitY(bj_lastCreatedUnit) )*1.0) + Sin((( angle )*1.0)) * (( 400)*1.0)) // INLINED!!
+                set x=GetPolarX(GetUnitX(bj_lastCreatedUnit) , angle , 400)
+                set y=GetPolarY(GetUnitY(bj_lastCreatedUnit) , angle , 400)
                 call IssuePointOrder(bj_lastCreatedUnit, "move", x, y)
                 call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 6.0)
                 set i=i + 1
@@ -19052,14 +19125,14 @@ call UnitAddAbility((bj_lastCreatedUnit ), ( 'A03E')) // INLINED!!
     endfunction 
     
     function s__SmokeBomb_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__SmokeBomb_death))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__SmokeBomb_death)
     endfunction 
     
 //===========================================================================
 // Trigger: FlashBomb
 //===========================================================================
 function Trig_FlashBomb_Actions2 takes nothing returns nothing
-    local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+    local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
     local unit uu
         set bj_lastCreatedGroup=CreateGroup()
         call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(u), GetUnitY(u), 800, null)
@@ -19090,13 +19163,13 @@ function Trig_FlashBomb_Actions takes nothing returns nothing
         set i=0
         loop
             exitwhen i > 10
-            set x=(((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( Deg2Rad(36 * i) )*1.0)) * (( 100)*1.0)) // INLINED!!
-            set y=(((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( Deg2Rad(36 * i) )*1.0)) * (( 100)*1.0)) // INLINED!!
+            set x=GetPolarX(GetUnitX(GetTriggerUnit()) , Deg2Rad(36 * i) , 100)
+            set y=GetPolarY(GetUnitY(GetTriggerUnit()) , Deg2Rad(36 * i) , 100)
             set bj_lastCreatedEffect=AddSpecialEffect("Abilities\\Spells\\Orc\\Purge\\PurgeBuffTarget.mdl", x, y)
         call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 1.3)
         call DestroyEffect(bj_lastCreatedEffect)
-            call DestroyEffect(AddSpecialEffect(("war3mapImported\\Fireworkswhite.mdx" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
-            call DestroyEffect(AddSpecialEffect(("SuperShinyThingy.mdx" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+            call AddSpecialEffectEx("war3mapImported\\Fireworkswhite.mdx" , x , y)
+            call AddSpecialEffectEx("SuperShinyThingy.mdx" , x , y)
             set i=i + 1
         endloop
         set bj_lastCreatedGroup=CreateGroup()
@@ -19112,7 +19185,7 @@ function Trig_FlashBomb_Actions takes nothing returns nothing
         endloop
         call DestroyGroup(bj_lastCreatedGroup)
     set bj_lastCreatedUnit=CreateUnit(GetTriggerPlayer(), 'e007', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 270)
-        call TimerStart(NewTimerEx((GetUnitUserData((bj_lastCreatedUnit)))), 0.5, false, function Trig_FlashBomb_Actions2) // INLINED!!
+        call TimerStart(NewTimerEx(GetUnitId(bj_lastCreatedUnit)), 0.5, false, function Trig_FlashBomb_Actions2)
     endif
 endfunction
 
@@ -19125,7 +19198,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_FlashBomb takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function Trig_FlashBomb_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function Trig_FlashBomb_Actions)
     //call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST, function Trig_FlashBomb_Evasion)
 endfunction
 //===========================================================================
@@ -19138,8 +19211,8 @@ function Trig_Body_Replacing_Doll_Actions takes nothing returns nothing
     local real target_y= GetUnitY(GetSpellTargetUnit())
     if not UnitHasItemOfTypeBJ(GetSpellTargetUnit(), 'I05S') and not UnitHasBuffBJ(GetSpellTargetUnit(), 'B038') and GetTriggerUnit() != udg_YaguraBodyswap then
     if GetUnitTypeId(GetTriggerUnit()) != 'ncop' then
-          call DestroyEffect(AddSpecialEffect(("blackblink.mdx" ), (( caster_x )*1.0), (( caster_y)*1.0))) // INLINED!!
-          call DestroyEffect(AddSpecialEffect(("blackblink.mdx" ), (( target_x )*1.0), (( target_y)*1.0))) // INLINED!!
+          call AddSpecialEffectEx("blackblink.mdx" , caster_x , caster_y)
+          call AddSpecialEffectEx("blackblink.mdx" , target_x , target_y)
       if not IsTerrainPathable(caster_x, caster_y, PATHING_TYPE_WALKABILITY) then
               call SetUnitPosition(GetSpellTargetUnit(), caster_x, caster_y)
       endif
@@ -19151,8 +19224,8 @@ endfunction
 
 //===========================================================================
 function InitTrig_Body_Replacing_Doll takes nothing returns nothing
-    call RegisterSpellEffectEvent2(('A08S' ) , Filter(( function Trig_Body_Replacing_Doll_Actions))) // INLINED!!
-    call RegisterSpellEffectEvent2(('A0IE' ) , Filter(( function Trig_Body_Replacing_Doll_Actions))) // INLINED!!
+    call RegisterSpellEffectEvent('A08S' , function Trig_Body_Replacing_Doll_Actions)
+    call RegisterSpellEffectEvent('A0IE' , function Trig_Body_Replacing_Doll_Actions)
     //call RegisterSpellEffectEvent('A042', function Trig_Body_Replacing_Doll_Actions)
 endfunction
 //===========================================================================
@@ -19184,7 +19257,7 @@ endfunction
     
     
     function s__YataMirror_finish takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         call PauseUnit(s__YataMirror_target[this], false)
         call SetUnitInvulnerable(s__YataMirror_target[this], false)
         call DestroyEffect(s__YataMirror_e[this])
@@ -19198,7 +19271,7 @@ endfunction
     endfunction
     
     function s__YataMirror_invul takes nothing returns nothing
- local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+ local integer this= GetTimerData(GetExpiredTimer())
         call SetUnitInvulnerable(s__YataMirror_target[this], true)
         //call UnitRemoveBuffs(this.target, false, true)
 	call ReleaseTimer(GetExpiredTimer())
@@ -19207,7 +19280,7 @@ endfunction
     function s__YataMirror_actions takes nothing returns nothing
         local integer this= s__YataMirror_allocate()
         set s__YataMirror_target[this]=GetSpellTargetUnit()
-        set s__YataMirror_e[this]=(AddSpecialEffectTarget(("Abilities\\Spells\\Orc\\Voodoo\\VoodooAuraTarget.mdl" ), ( s__YataMirror_target[this] ), ( "overhead"))) // INLINED!!
+        set s__YataMirror_e[this]=AddSpecialEffectTargetEx("Abilities\\Spells\\Orc\\Voodoo\\VoodooAuraTarget.mdl" , s__YataMirror_target[this] , "overhead")
         set s__YataMirror_speed[this]=GetUnitPropWindow(s__YataMirror_target[this])
         call SetUnitPropWindow(s__YataMirror_target[this], 0)
         if IsUnitAlly(s__YataMirror_target[this], GetTriggerPlayer()) and s__YataMirror_target[this] != GetTriggerUnit() then
@@ -19226,7 +19299,7 @@ endfunction
     endfunction
     
     function s__YataMirror_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2(('A0LV' ) , Filter(( function s__YataMirror_actions))) // INLINED!!
+        call RegisterSpellEffectEvent('A0LV' , function s__YataMirror_actions)
     endfunction
     
 //===========================================================================
@@ -19257,7 +19330,7 @@ endfunction
         endfunction
     
     function s__Oil_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         set s__Oil_count[this]=s__Oil_count[this] + 1
         set bj_lastCreatedGroup=CreateGroup()
         call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__Oil_target_x[this], s__Oil_target_y[this], 400, null)
@@ -19282,7 +19355,7 @@ endfunction
 
 
     function s__Oil_throw takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
  local real dist
  local real angle1
  local real x1
@@ -19291,8 +19364,8 @@ endfunction
  local real x= GetUnitX(s__Oil_projectile[this])
  local real y= GetUnitY(s__Oil_projectile[this])
  local real angle= Atan3(x , y , s__Oil_target_x[this] , s__Oil_target_y[this])
- local real new_x= (((x )*1.0) + Cos((( angle )*1.0)) * (( 25)*1.0)) // INLINED!!
- local real new_y= (((y )*1.0) + Sin((( angle )*1.0)) * (( 25)*1.0)) // INLINED!!
+ local real new_x= GetPolarX(x , angle , 25)
+ local real new_y= GetPolarY(y , angle , 25)
  local real h= ParabolaZ(400 , s__Oil_dist_caster[this] , s__Oil_dist_caster[this] - GetDistance(new_x , new_y , s__Oil_target_x[this] , s__Oil_target_y[this]))
 	call SetUnitFlyHeight(s__Oil_projectile[this], h, 0)
 	call SetUnitX(s__Oil_projectile[this], new_x)
@@ -19307,10 +19380,10 @@ endfunction
                 	exitwhen i > 30
 			set dist=GetRandomReal(0, 300)
 			set angle1=Deg2Rad(GetRandomReal(0, 360))
-			set x1=(((s__Oil_target_x[this] )*1.0) + Cos((( angle1 )*1.0)) * (( dist)*1.0)) // INLINED!!
-			set y1=(((s__Oil_target_y[this] )*1.0) + Sin((( angle1 )*1.0)) * (( dist)*1.0)) // INLINED!!
+			set x1=GetPolarX(s__Oil_target_x[this] , angle1 , dist)
+			set y1=GetPolarY(s__Oil_target_y[this] , angle1 , dist)
                 	set bj_lastCreatedEffect=AddSpecialEffect("Abilities\\Spells\\Orc\\LiquidFire\\Liquidfire.mdl", x1, y1)
-                	call s__EffectUtils__EffectTimer_create((bj_lastCreatedEffect ) , (( 4.0)*1.0) , false) // INLINED!!
+                	call DestroyEffectTimed(bj_lastCreatedEffect , 4.0)
            	 endloop
            set bj_lastCreatedGroup=CreateGroup()
            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__Oil_target_x[this], s__Oil_target_y[this], 400, null)
@@ -19347,7 +19420,7 @@ endfunction
     endfunction 
     
     function s__Oil_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__Oil_SPELL_ID ) , Filter(( function s__Oil_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__Oil_SPELL_ID , function s__Oil_actions)
     endfunction 
     
 //===========================================================================
@@ -19385,7 +19458,7 @@ endfunction
     endfunction
     
     function s__PoisonPill_poison takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         set s__PoisonPill_count2[this]=s__PoisonPill_count2[this] + 1
         if s__PoisonPill_target[this] != null and GetUnitState(s__PoisonPill_target[this], UNIT_STATE_LIFE) >= 250.0 then
             call UnitDamageTarget(s__PoisonPill_caster[this], s__PoisonPill_target[this], 220, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
@@ -19397,7 +19470,7 @@ endfunction
     endfunction 
     
     function s__PoisonPill_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         local integer this2
         local unit u
             set bj_lastCreatedGroup=CreateGroup()
@@ -19424,7 +19497,7 @@ endfunction
     
 
    function s__PoisonPill_throw takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
  local real dist
  local real angle1
  local real x1
@@ -19433,8 +19506,8 @@ endfunction
  local real x= GetUnitX(s__PoisonPill_projectile[this])
  local real y= GetUnitY(s__PoisonPill_projectile[this])
  local real angle= Atan3(x , y , s__PoisonPill_target_x[this] , s__PoisonPill_target_y[this])
- local real new_x= (((x )*1.0) + Cos((( angle )*1.0)) * (( 25)*1.0)) // INLINED!!
- local real new_y= (((y )*1.0) + Sin((( angle )*1.0)) * (( 25)*1.0)) // INLINED!!
+ local real new_x= GetPolarX(x , angle , 25)
+ local real new_y= GetPolarY(y , angle , 25)
  local real h= ParabolaZ(400 , s__PoisonPill_dist_caster[this] , s__PoisonPill_dist_caster[this] - GetDistance(new_x , new_y , s__PoisonPill_target_x[this] , s__PoisonPill_target_y[this]))
 	call SetUnitFlyHeight(s__PoisonPill_projectile[this], h, 0)
 	call SetUnitX(s__PoisonPill_projectile[this], new_x)
@@ -19451,8 +19524,8 @@ endfunction
                 	exitwhen i > 4
 			set dist=GetRandomReal(0, 200)
 			set angle1=Deg2Rad(GetRandomReal(0, 360))
-			set x1=(((s__PoisonPill_target_x[this] )*1.0) + Cos((( angle1 )*1.0)) * (( dist)*1.0)) // INLINED!!
-			set y1=(((s__PoisonPill_target_y[this] )*1.0) + Sin((( angle1 )*1.0)) * (( dist)*1.0)) // INLINED!!
+			set x1=GetPolarX(s__PoisonPill_target_x[this] , angle1 , dist)
+			set y1=GetPolarY(s__PoisonPill_target_y[this] , angle1 , dist)
                 	set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__PoisonPill_caster[this]), 'ntkw', x1, y1, 72 * i)
                 	call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 10.0)
            	 endloop
@@ -19481,7 +19554,7 @@ endfunction
     endfunction
     
     function s__PoisonPill_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__PoisonPill_SPELL_ID ) , Filter(( function s__PoisonPill_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__PoisonPill_SPELL_ID , function s__PoisonPill_actions)
     endfunction
     
 
@@ -19496,15 +19569,15 @@ endfunction
         local real x
         local real y
         if GetUnitTypeId(GetTriggerUnit()) == 'otot' or GetUnitTypeId(GetTriggerUnit()) == 'o009' then
-            call DestroyEffect(AddSpecialEffect(("war3mapImported\\FlameBomb.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+            call AddSpecialEffectEx("war3mapImported\\FlameBomb.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
             set i=0
             loop
                 exitwhen i > 30
                 set angle=GetRandomReal(0, 2 * bj_PI)
                 set offset=GetRandomReal(0, 250)
-                set x=(((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-                set y=(((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-                set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'n02R' ), (( x )*1.0), (( y )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
+                set x=GetPolarX(GetUnitX(GetTriggerUnit()) , angle , offset)
+                set y=GetPolarY(GetUnitY(GetTriggerUnit()) , angle , offset)
+                set bj_lastCreatedUnit=GetUnit(GetTriggerPlayer() , 'n02R' , x , y , GetRandomReal(0, 360))
                 //call SetUnitTimeScale(bj_lastCreatedUnit, 0.3)
                 call SetUnitFlyHeight(bj_lastCreatedUnit, GetRandomReal(0, 120), 0)
                 call KillUnit(bj_lastCreatedUnit)
@@ -19516,9 +19589,9 @@ endfunction
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
                 if GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitEnemy(bj_lastCreatedUnit, GetTriggerPlayer()) then
-                    call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                     if GetUnitTypeId(GetTriggerUnit()) == 'o009' then
-			if (UnitHasItemOfTypeBJ((udg_units33[GetPlayerId(GetOwningPlayer(GetTriggerUnit())) + 1] ), ( 'I00Q'))) then // INLINED!!
+			if UnitHasItemEx(udg_units33[GetPlayerId(GetOwningPlayer(GetTriggerUnit())) + 1] , 'I00Q') then
 				call UnitDamageTarget(udg_units33[GetPlayerId(GetOwningPlayer(GetTriggerUnit())) + 1], bj_lastCreatedUnit, GetHeroInt(udg_units33[GetPlayerId(GetTriggerPlayer()) + 1], true) * 3.0, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
 			else
                         	call UnitDamageTarget(udg_units33[GetPlayerId(GetOwningPlayer(GetTriggerUnit())) + 1], bj_lastCreatedUnit, GetHeroInt(udg_units33[GetPlayerId(GetTriggerPlayer()) + 1], true) * 2.0, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
@@ -19551,8 +19624,8 @@ endfunction
     endfunction 
 
     function s__Bomb_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__Bomb_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A01K' ) , Filter(( function s__Bomb_stop))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__Bomb_actions)
+        call RegisterSpellEffectEvent('A01K' , function s__Bomb_stop)
     endfunction 
     
 //===========================================================================
@@ -19569,7 +19642,7 @@ endfunction
     endfunction
 
     function s__NewChain_pull takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         if s__NewChain_count[this] > 0 then
 			call BlzSetSpecialEffectScale(s___NewChain_chains[s__NewChain_chains[this]+s__NewChain_count[this]], 0)
             call DestroyEffect(s___NewChain_chains[s__NewChain_chains[this]+s__NewChain_count[this]])
@@ -19597,11 +19670,11 @@ endfunction
     endfunction
     
     function s__NewChain_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         local real x= GetUnitX(s__NewChain_dummy[this])
         local real y= GetUnitY(s__NewChain_dummy[this])
-        local real new_x= (((x )*1.0) + Cos((( s__NewChain_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
-        local real new_y= (((y )*1.0) + Sin((( s__NewChain_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
+        local real new_x= GetPolarX(x , s__NewChain_angle[this] , 30)
+        local real new_y= GetPolarY(y , s__NewChain_angle[this] , 30)
         local unit u= null
         set s__NewChain_count[this]=s__NewChain_count[this] + 1
         set s___NewChain_chains[s__NewChain_chains[this]+s__NewChain_count[this]]=AddSpecialEffect("war3mapImported\\ChainElement.mdl", new_x, new_y)
@@ -19644,7 +19717,7 @@ endfunction
                 call PauseUnit(s__NewChain_caster[this], false)
                 call SetUnitAnimation(s__NewChain_caster[this], "stand")
                 loop
-                    call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl" ), (( s___NewChain_chains_x[s__NewChain_chains_x[this]+s__NewChain_count[this]] )*1.0), (( s___NewChain_chains_y[s__NewChain_chains_y[this]+s__NewChain_count[this]])*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl" , s___NewChain_chains_x[s__NewChain_chains_x[this]+s__NewChain_count[this]] , s___NewChain_chains_y[s__NewChain_chains_y[this]+s__NewChain_count[this]])
 		    call BlzSetSpecialEffectScale(s___NewChain_chains[s__NewChain_chains[this]+s__NewChain_count[this]], 0)
                     call DestroyEffect(s___NewChain_chains[s__NewChain_chains[this]+s__NewChain_count[this]])
                     set s___NewChain_chains[s__NewChain_chains[this]+s__NewChain_count[this]]=null
@@ -19675,7 +19748,7 @@ endfunction
     endfunction
     
     function s__NewChain_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__NewChain_SPELL_ID ) , Filter(( function s__NewChain_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__NewChain_SPELL_ID , function s__NewChain_actions)
     endfunction
     
 //===========================================================================
@@ -19684,7 +19757,7 @@ endfunction
 
     
     function s__BlastingSphere_destroy takes integer this returns nothing
-	call DestroyEffect(AddSpecialEffect(("Boom.mdx" ), (( GetUnitX(s__BlastingSphere_dummy[this]) )*1.0), (( GetUnitY(s__BlastingSphere_dummy[this]))*1.0))) // INLINED!!
+	call AddSpecialEffectEx("Boom.mdx" , GetUnitX(s__BlastingSphere_dummy[this]) , GetUnitY(s__BlastingSphere_dummy[this]))
         call KillUnit(s__BlastingSphere_dummy[this])
 		call ShowUnit(s__BlastingSphere_dummy[this], false)
 		//call UnitApplyTimedLife(CreateUnit(GetOwningPlayer(this.caster), 'h00J', GetUnitX(this.dummy), GetUnitY(this.dummy), 270), 'BTLF', 2.0)
@@ -19696,7 +19769,7 @@ endfunction
     endfunction
     
  function s__BlastingSphere_damage takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
 		//call AddSpecialEffectEx("Boom.mdx", GetUnitX(this.target), GetUnitY(this.target))
 		set bj_lastCreatedGroup=CreateGroup()
 		call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__BlastingSphere_target[this]), GetUnitY(s__BlastingSphere_target[this]), 200, null)
@@ -19716,16 +19789,16 @@ endfunction
  endfunction 
 	
     function s__BlastingSphere_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         local real x= GetUnitX(s__BlastingSphere_dummy[this])
         local real y= GetUnitY(s__BlastingSphere_dummy[this])
-        local real new_x= (((x )*1.0) + Cos((( s__BlastingSphere_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
-        local real new_y= (((y )*1.0) + Sin((( s__BlastingSphere_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
+        local real new_x= GetPolarX(x , s__BlastingSphere_angle[this] , 30)
+        local real new_y= GetPolarY(y , s__BlastingSphere_angle[this] , 30)
         local unit u= null
         set s__BlastingSphere_count[this]=s__BlastingSphere_count[this] + 1
         call SetUnitX(s__BlastingSphere_dummy[this], new_x)
         call SetUnitY(s__BlastingSphere_dummy[this], new_y)
-	call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\StrongDrink\\BrewmasterMissile.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
+	call AddSpecialEffectEx("Abilities\\Spells\\Other\\StrongDrink\\BrewmasterMissile.mdl" , new_x , new_y)
         set bj_lastCreatedGroup=CreateGroup()
         call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 210.0, null)
         loop
@@ -19775,7 +19848,7 @@ endfunction
     endfunction
     
     function s__BlastingSphere_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__BlastingSphere_SPELL_ID ) , Filter(( function s__BlastingSphere_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__BlastingSphere_SPELL_ID , function s__BlastingSphere_actions)
     endfunction
     
 //===========================================================================
@@ -19806,12 +19879,12 @@ endfunction
         endfunction
     
     function s__DragonBlast_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
  local unit u
         local real x= GetUnitX(s__DragonBlast_dummy[this])
         local real y= GetUnitY(s__DragonBlast_dummy[this])
-        local real new_x= (((x )*1.0) + Cos((( s__DragonBlast_angle[this] )*1.0)) * (( 35)*1.0)) // INLINED!!
-        local real new_y= (((y )*1.0) + Sin((( s__DragonBlast_angle[this] )*1.0)) * (( 35)*1.0)) // INLINED!!
+        local real new_x= GetPolarX(x , s__DragonBlast_angle[this] , 35)
+        local real new_y= GetPolarY(y , s__DragonBlast_angle[this] , 35)
         call SetUnitX(s__DragonBlast_dummy[this], new_x)
         call SetUnitY(s__DragonBlast_dummy[this], new_y)
         set s__DragonBlast_count[this]=s__DragonBlast_count[this] + 1
@@ -19823,34 +19896,34 @@ endfunction
             if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__DragonBlast_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
                 set x=GetUnitX(bj_lastCreatedUnit)
                 set y=GetUnitY(bj_lastCreatedUnit)
-                set new_x=(((x )*1.0) + Cos((( s__DragonBlast_angle[this] )*1.0)) * (( 35)*1.0)) // INLINED!!
-                set new_y=(((y )*1.0) + Sin((( s__DragonBlast_angle[this] )*1.0)) * (( 35)*1.0)) // INLINED!!
+                set new_x=GetPolarX(x , s__DragonBlast_angle[this] , 35)
+                set new_y=GetPolarY(y , s__DragonBlast_angle[this] , 35)
                 if not IsTerrainPathable(new_x, new_y, PATHING_TYPE_WALKABILITY) then
-		    if ( (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07U'))) or (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07Z'))) ) then // INLINED!!
+		    if ( UnitHasItemEx(s__DragonBlast_caster[this] , 'I07U') or UnitHasItemEx(s__DragonBlast_caster[this] , 'I07Z') ) then
 
 		    else
                       call SetUnitX(bj_lastCreatedUnit, new_x)
                       call SetUnitY(bj_lastCreatedUnit, new_y)
 		    endif
                     if ModuloInteger(s__DragonBlast_count[this], 5) == 0 then
-                        call DestroyEffect(AddSpecialEffect(("Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                     endif
                 endif
                 if not IsUnitInGroup(bj_lastCreatedUnit, s__DragonBlast_damaged[this]) then
                     call GroupAddUnit(s__DragonBlast_damaged[this], bj_lastCreatedUnit)
-		    if (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07T'))) then // INLINED!!
+		    if UnitHasItemEx(s__DragonBlast_caster[this] , 'I07T') then
 			call UnitDamageTarget(s__DragonBlast_caster[this], bj_lastCreatedUnit, ( GetHeroStr(s__DragonBlast_caster[this], true) + GetHeroAgi(s__DragonBlast_caster[this], true) + GetHeroInt(s__DragonBlast_caster[this], true) ) * 3, true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
 		    else
                     	call UnitDamageTarget(s__DragonBlast_caster[this], bj_lastCreatedUnit, ( GetHeroStr(s__DragonBlast_caster[this], true) + GetHeroAgi(s__DragonBlast_caster[this], true) + GetHeroInt(s__DragonBlast_caster[this], true) ) * 2, true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-			if (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07Z'))) then // INLINED!!
+			if UnitHasItemEx(s__DragonBlast_caster[this] , 'I07Z') then
 				call StunUnitTimed(s__DragonBlast_caster[this] , bj_lastCreatedUnit , 1.0)
-			elseif (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07U'))) then // INLINED!!
+			elseif UnitHasItemEx(s__DragonBlast_caster[this] , 'I07U') then
 				call EsnareUnitTimed(s__DragonBlast_caster[this] , bj_lastCreatedUnit , 2.0)
-			elseif (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07V'))) then // INLINED!!
+			elseif UnitHasItemEx(s__DragonBlast_caster[this] , 'I07V') then
                     		set u=CreateAbilityDummy(s__DragonBlast_caster[this] , 'A0QC')
                     		call IssueTargetOrder(u, "soulburn", bj_lastCreatedUnit)
                     		call UnitApplyTimedLife(u, 'BTLF', 1.5)
-			elseif (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07Y'))) then // INLINED!!
+			elseif UnitHasItemEx(s__DragonBlast_caster[this] , 'I07Y') then
                                 set u=CreateAbilityDummy(s__DragonBlast_caster[this] , 'A18D')
                                 call IssueTargetOrder(u, "slow", bj_lastCreatedUnit)
                                 call UnitApplyTimedLife(u, 'BTLF', 2.0)
@@ -19858,7 +19931,7 @@ endfunction
 		    endif
                 endif
 	    elseif IsUnitAlly(bj_lastCreatedUnit, GetOwningPlayer(s__DragonBlast_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
-		if (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07W'))) and not IsUnitInGroup(bj_lastCreatedUnit, s__DragonBlast_damaged[this]) then // INLINED!!
+		if UnitHasItemEx(s__DragonBlast_caster[this] , 'I07W') and not IsUnitInGroup(bj_lastCreatedUnit, s__DragonBlast_damaged[this]) then
                     	call GroupAddUnit(s__DragonBlast_damaged[this], bj_lastCreatedUnit)
 			call SetUnitLifeBJ(bj_lastCreatedUnit, GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE) + ( GetHeroStr(s__DragonBlast_caster[this], true) + GetHeroAgi(s__DragonBlast_caster[this], true) + GetHeroInt(s__DragonBlast_caster[this], true) ) * 2)
 		endif
@@ -19883,26 +19956,26 @@ endfunction
         set s__DragonBlast_angle[this]=Atan3(GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , GetSpellTargetX() , GetSpellTargetY())
         set s__DragonBlast_count[this]=0
         set s__DragonBlast_dummy[this]=CreateUnit(GetTriggerPlayer(), 'h060', GetUnitX(s__DragonBlast_caster[this]), GetUnitY(s__DragonBlast_caster[this]), Rad2Deg(Atan3(GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , GetSpellTargetX() , GetSpellTargetY())))
-	if (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07T'))) then // INLINED!!
-		call SetUnitVertexColor((s__DragonBlast_dummy[this] ), ( 255 ), ( 0 ), ( 0 ), ( 255)) // INLINED!!
-	elseif (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07Y'))) then // INLINED!!
-		call SetUnitVertexColor((s__DragonBlast_dummy[this] ), ( 83 ), ( 164 ), ( 255 ), ( 255)) // INLINED!!
-	elseif (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07V'))) then // INLINED!!
-		call SetUnitVertexColor((s__DragonBlast_dummy[this] ), ( 200 ), ( 0 ), ( 255 ), ( 255)) // INLINED!!
-	elseif (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07U'))) then // INLINED!!
-		call SetUnitVertexColor((s__DragonBlast_dummy[this] ), ( 255 ), ( 252 ), ( 0 ), ( 255)) // INLINED!!
-	elseif (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07Z'))) then // INLINED!!
-		call SetUnitVertexColor((s__DragonBlast_dummy[this] ), ( 140 ), ( 70 ), ( 0 ), ( 255)) // INLINED!!
-	elseif (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07W'))) then // INLINED!!
-		call SetUnitVertexColor((s__DragonBlast_dummy[this] ), ( 255 ), ( 255 ), ( 220 ), ( 255)) // INLINED!!
-	elseif (UnitHasItemOfTypeBJ((s__DragonBlast_caster[this] ), ( 'I07E'))) then // INLINED!!
-		call SetUnitVertexColor((s__DragonBlast_dummy[this] ), ( 255 ), ( 255 ), ( 255 ), ( 100)) // INLINED!!
+	if UnitHasItemEx(s__DragonBlast_caster[this] , 'I07T') then
+		call SetUnitVertexColorEx(s__DragonBlast_dummy[this] , 255 , 0 , 0 , 255)
+	elseif UnitHasItemEx(s__DragonBlast_caster[this] , 'I07Y') then
+		call SetUnitVertexColorEx(s__DragonBlast_dummy[this] , 83 , 164 , 255 , 255)
+	elseif UnitHasItemEx(s__DragonBlast_caster[this] , 'I07V') then
+		call SetUnitVertexColorEx(s__DragonBlast_dummy[this] , 200 , 0 , 255 , 255)
+	elseif UnitHasItemEx(s__DragonBlast_caster[this] , 'I07U') then
+		call SetUnitVertexColorEx(s__DragonBlast_dummy[this] , 255 , 252 , 0 , 255)
+	elseif UnitHasItemEx(s__DragonBlast_caster[this] , 'I07Z') then
+		call SetUnitVertexColorEx(s__DragonBlast_dummy[this] , 140 , 70 , 0 , 255)
+	elseif UnitHasItemEx(s__DragonBlast_caster[this] , 'I07W') then
+		call SetUnitVertexColorEx(s__DragonBlast_dummy[this] , 255 , 255 , 220 , 255)
+	elseif UnitHasItemEx(s__DragonBlast_caster[this] , 'I07E') then
+		call SetUnitVertexColorEx(s__DragonBlast_dummy[this] , 255 , 255 , 255 , 100)
 	endif
         call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__DragonBlast_periodic , "DragonBlast_periodic")
     endfunction 
     
     function s__DragonBlast_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__DragonBlast_SPELL_ID ) , Filter(( function s__DragonBlast_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__DragonBlast_SPELL_ID , function s__DragonBlast_actions)
     endfunction 
     
 //===========================================================================
@@ -19943,27 +20016,27 @@ endfunction
     endfunction 
     
     function s__ItemFuumaShuriken_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         local real x= GetUnitX(s__ItemFuumaShuriken_shuriken[this])
         local real y= GetUnitY(s__ItemFuumaShuriken_shuriken[this])
-        local real new_x= (((x )*1.0) + Cos((( s__ItemFuumaShuriken_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
-        local real new_y= (((y )*1.0) + Sin((( s__ItemFuumaShuriken_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
+        local real new_x= GetPolarX(x , s__ItemFuumaShuriken_angle[this] , 30)
+        local real new_y= GetPolarY(y , s__ItemFuumaShuriken_angle[this] , 30)
         local real enemy_x
         local real enemy_y
         local unit u
         local integer maxCount
-        call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\StrongDrink\\BrewmasterMissile.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+        call AddSpecialEffectEx("Abilities\\Spells\\Other\\StrongDrink\\BrewmasterMissile.mdl" , x , y)
         set bj_lastCreatedGroup=CreateGroup()
         if UnitHasItemOfTypeBJ(s__ItemFuumaShuriken_caster[this], 'I04H') then
             call GroupEnumUnitsInRange(bj_lastCreatedGroup, x, y, 220.0, null)
             set maxCount=35
         else
             if UnitHasItemOfTypeBJ(s__ItemFuumaShuriken_caster[this], 'I04I') then
-                call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                call AddSpecialEffectEx("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" , x , y)
             elseif UnitHasItemOfTypeBJ(s__ItemFuumaShuriken_caster[this], 'I04J') then
-                call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                call AddSpecialEffectEx("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl" , x , y)
             elseif UnitHasItemOfTypeBJ(s__ItemFuumaShuriken_caster[this], 'I068') then
-                call DestroyEffect(AddSpecialEffect(("war3mapImported\\Fireworkswhite.mdx" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                call AddSpecialEffectEx("war3mapImported\\Fireworkswhite.mdx" , x , y)
             endif
             call GroupEnumUnitsInRange(bj_lastCreatedGroup, x, y, 220.0, null)
             set maxCount=27
@@ -19974,13 +20047,13 @@ endfunction
             if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__ItemFuumaShuriken_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__ItemFuumaShuriken_damaged[this]) and ( IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false or s__ItemFuumaShuriken_building[this] ) then
                 set enemy_x=GetUnitX(bj_lastCreatedUnit)
                 set enemy_y=GetUnitY(bj_lastCreatedUnit)
-                call DestroyEffect(AddSpecialEffect(("war3mapImported\\wanhuajing.mdx" ), (( enemy_x )*1.0), (( enemy_y)*1.0))) // INLINED!!
+                call AddSpecialEffectEx("war3mapImported\\wanhuajing.mdx" , enemy_x , enemy_y)
                 if UnitHasItemOfTypeBJ(s__ItemFuumaShuriken_caster[this], 'I04I') then
                     set u=CreateAbilityDummy(s__ItemFuumaShuriken_caster[this] , 'A0OG')
                     call IssueTargetOrder(u, "frostnova", bj_lastCreatedUnit)
                 elseif UnitHasItemOfTypeBJ(s__ItemFuumaShuriken_caster[this], 'I04J') then
                     call StunUnitTimed(s__ItemFuumaShuriken_caster[this] , bj_lastCreatedUnit , 1.0)
-                    call DestroyEffect(AddSpecialEffect(("Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                 elseif UnitHasItemOfTypeBJ(s__ItemFuumaShuriken_caster[this], 'I068') then
                     call SilenceUnitLight2(s__ItemFuumaShuriken_caster[this] , bj_lastCreatedUnit)
                 endif
@@ -20027,13 +20100,13 @@ endfunction
     endfunction
     
     function s__ItemFuumaShuriken_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__ItemFuumaShuriken_SPELL_ID ) , Filter(( function s__ItemFuumaShuriken_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0ON' ) , Filter(( function s__ItemFuumaShuriken_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0OO' ) , Filter(( function s__ItemFuumaShuriken_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0OP' ) , Filter(( function s__ItemFuumaShuriken_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A134' ) , Filter(( function s__ItemFuumaShuriken_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A17I' ) , Filter(( function s__ItemFuumaShuriken_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A15E' ) , Filter(( function s__ItemFuumaShuriken_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__ItemFuumaShuriken_SPELL_ID , function s__ItemFuumaShuriken_actions)
+        call RegisterSpellEffectEvent('A0ON' , function s__ItemFuumaShuriken_actions)
+        call RegisterSpellEffectEvent('A0OO' , function s__ItemFuumaShuriken_actions)
+        call RegisterSpellEffectEvent('A0OP' , function s__ItemFuumaShuriken_actions)
+        call RegisterSpellEffectEvent('A134' , function s__ItemFuumaShuriken_actions)
+        call RegisterSpellEffectEvent('A17I' , function s__ItemFuumaShuriken_actions)
+        call RegisterSpellEffectEvent('A15E' , function s__ItemFuumaShuriken_actions)
     endfunction 
     
 //===========================================================================
@@ -20067,13 +20140,13 @@ endfunction
             endloop
             set x=GetUnitX(GetTriggerUnit())
             set y=GetUnitY(GetTriggerUnit())
-            call DestroyEffect(AddSpecialEffect(("war3mapImported\\FlameBomb.mdx" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
-            call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+            call AddSpecialEffectEx("war3mapImported\\FlameBomb.mdx" , x , y)
+            call AddSpecialEffectEx("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl" , x , y)
             set i=1
             loop
                 exitwhen i > 30
                 call GenerateRandomCircle(x , y , 250)
-                set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'n02R' ), (( GetRandomX() )*1.0), (( GetRandomY() )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
+                set bj_lastCreatedUnit=GetUnit(GetTriggerPlayer() , 'n02R' , GetRandomX() , GetRandomY() , GetRandomReal(0, 360))
                 //call SetUnitTimeScale(bj_lastCreatedUnit, 0.3)
                 call SetUnitFlyHeight(bj_lastCreatedUnit, GetRandomReal(0, 120), 0)
                 //call SetUnitScale(bj_lastCreatedUnit, 2.0, 0, 0)
@@ -20101,7 +20174,7 @@ endfunction
                 loop
                     exitwhen i > 5
                     call GenerateRandomCircle(x , y , 250)
-                    call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" , x , y)
                     set i=i + 1
                 endloop
             elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I04A') then
@@ -20109,7 +20182,7 @@ endfunction
                 loop
                     exitwhen i > 5
                     call GenerateRandomCircle(x , y , 250)
-                    call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl" , x , y)
                     set i=i + 1
                 endloop
             elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I046') then
@@ -20117,7 +20190,7 @@ endfunction
                 loop
                     exitwhen i > 5
                     call GenerateRandomCircle(x , y , 250)
-                    call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl" , x , y)
                     set i=i + 1
                 endloop
             elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I06A') then
@@ -20125,7 +20198,7 @@ endfunction
                 loop
                     exitwhen i > 5
                     call GenerateRandomCircle(x , y , 250)
-                    call DestroyEffect(AddSpecialEffect(("war3mapImported\\Fireworkswhite.mdx" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("war3mapImported\\Fireworkswhite.mdx" , x , y)
                     set i=i + 1
                 endloop
             endif
@@ -20150,7 +20223,7 @@ endfunction
                     elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I06A') then
                         call SilenceUnitLight2(s__ItemKunai__heroes[id] , bj_lastCreatedUnit)
                     else
-                        call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" ), (( enemy_x )*1.0), (( enemy_y)*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" , enemy_x , enemy_y)
                     endif
                     call UnitDamageTarget(s__ItemKunai__heroes[id], bj_lastCreatedUnit, 7.0 * GetHeroStr(s__ItemKunai__heroes[id], true), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
                 endif
@@ -20166,12 +20239,12 @@ endfunction
         endfunction 
         
         function s__ItemExplosiveKunai_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2((s__ItemExplosiveKunai_SPELL_ID ) , Filter(( function s__ItemExplosiveKunai_spell))) // INLINED!!
-            call RegisterSpellEffectEvent2(('A0OE' ) , Filter(( function s__ItemExplosiveKunai_spell))) // INLINED!!
-            call RegisterSpellEffectEvent2(('A0OH' ) , Filter(( function s__ItemExplosiveKunai_spell))) // INLINED!!
-            call RegisterSpellEffectEvent2(('A0OF' ) , Filter(( function s__ItemExplosiveKunai_spell))) // INLINED!!
-            call RegisterSpellEffectEvent2(('A135' ) , Filter(( function s__ItemExplosiveKunai_spell))) // INLINED!!
-            call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__ItemExplosiveKunai_actions))) // INLINED!!
+            call RegisterSpellEffectEvent(s__ItemExplosiveKunai_SPELL_ID , function s__ItemExplosiveKunai_spell)
+            call RegisterSpellEffectEvent('A0OE' , function s__ItemExplosiveKunai_spell)
+            call RegisterSpellEffectEvent('A0OH' , function s__ItemExplosiveKunai_spell)
+            call RegisterSpellEffectEvent('A0OF' , function s__ItemExplosiveKunai_spell)
+            call RegisterSpellEffectEvent('A135' , function s__ItemExplosiveKunai_spell)
+            call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__ItemExplosiveKunai_actions)
         endfunction
         
     
@@ -20196,7 +20269,7 @@ endfunction
         set i=0
         loop
             exitwhen i > 15
-            set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'ufro' ), (( GetSpellTargetX() )*1.0), (( GetSpellTargetY() )*1.0), (( 24 * i)*1.0))) // INLINED!!
+            set bj_lastCreatedUnit=GetUnit(GetTriggerPlayer() , 'ufro' , GetSpellTargetX() , GetSpellTargetY() , 24 * i)
             call SetUnitAnimation(bj_lastCreatedUnit, "birth")
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 3.0)
             set i=i + 1
@@ -20212,12 +20285,12 @@ endfunction
             set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
             exitwhen bj_lastCreatedUnit == null
             if GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitEnemy(bj_lastCreatedUnit, GetTriggerPlayer()) and ( IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false or building ) then
-                call DestroyEffect(AddSpecialEffect(("war3mapImported\\wanhuajing.mdx" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("war3mapImported\\wanhuajing.mdx" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                 if UnitHasItemOfTypeBJ(GetTriggerUnit(), 'I04D') then
                     call StunUnitTimed(GetTriggerUnit() , bj_lastCreatedUnit , 1.0)
-                    call DestroyEffect(AddSpecialEffect(("Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                 elseif UnitHasItemOfTypeBJ(GetTriggerUnit(), 'I04F') then
-                    call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                    call AddSpecialEffectEx("Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                 elseif UnitHasItemOfTypeBJ(GetTriggerUnit(), 'I069') then
                         call SilenceUnitLight2(GetTriggerUnit() , bj_lastCreatedUnit)
                 elseif UnitHasItemOfTypeBJ(GetTriggerUnit(), 'I04G') then
@@ -20233,14 +20306,14 @@ endfunction
     endfunction 
     
     function s__SenbonsDance_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2(('A00X' ) , Filter(( function s__SenbonsDance_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0OJ' ) , Filter(( function s__SenbonsDance_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0OK' ) , Filter(( function s__SenbonsDance_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0OL' ) , Filter(( function s__SenbonsDance_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0OM' ) , Filter(( function s__SenbonsDance_actions))) // INLINED!!
-	call RegisterSpellEffectEvent2(('A17N' ) , Filter(( function s__SenbonsDance_actions))) // INLINED!!
-	call RegisterSpellEffectEvent2(('A15C' ) , Filter(( function s__SenbonsDance_actions))) // INLINED!!
-	call RegisterSpellEffectEvent2(('A15D' ) , Filter(( function s__SenbonsDance_actions))) // INLINED!!
+        call RegisterSpellEffectEvent('A00X' , function s__SenbonsDance_actions)
+        call RegisterSpellEffectEvent('A0OJ' , function s__SenbonsDance_actions)
+        call RegisterSpellEffectEvent('A0OK' , function s__SenbonsDance_actions)
+        call RegisterSpellEffectEvent('A0OL' , function s__SenbonsDance_actions)
+        call RegisterSpellEffectEvent('A0OM' , function s__SenbonsDance_actions)
+	call RegisterSpellEffectEvent('A17N' , function s__SenbonsDance_actions)
+	call RegisterSpellEffectEvent('A15C' , function s__SenbonsDance_actions)
+	call RegisterSpellEffectEvent('A15D' , function s__SenbonsDance_actions)
     endfunction 
     
 //===========================================================================
@@ -20253,7 +20326,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_ExplosiveTagSkill takes nothing returns nothing
-    call RegisterSpellEffectEvent2(('A0DJ' ) , Filter(( function Trig_Explosive_Tag_Skill_Actions))) // INLINED!!
+    call RegisterSpellEffectEvent('A0DJ' , function Trig_Explosive_Tag_Skill_Actions)
 endfunction
 
 
@@ -20285,7 +20358,7 @@ endfunction
         endfunction
     
     function s__TimedExplosiveTag_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         if s__TimedExplosiveTag_count[this] > 0 then
             call CreateTextTagUnitBJ(( I2S(s__TimedExplosiveTag_count[this]) + "!" ), s__TimedExplosiveTag_note[this], 0, 9.00, 100, 20, 20.00, 0)
             call SetTextTagVelocityBJ(bj_lastCreatedTextTag, 40.00, 90.00)
@@ -20309,12 +20382,12 @@ endfunction
         local integer this= s__TimedExplosiveTag_allocate()
         set s__TimedExplosiveTag_caster[this]=GetTriggerUnit()
         set s__TimedExplosiveTag_count[this]=3
-        set s__TimedExplosiveTag_note[this]=(CreateUnit((GetTriggerPlayer() ), ( 'h042' ), (( GetSpellTargetX() )*1.0), (( GetSpellTargetY() )*1.0), (( 270)*1.0))) // INLINED!!
+        set s__TimedExplosiveTag_note[this]=GetUnit(GetTriggerPlayer() , 'h042' , GetSpellTargetX() , GetSpellTargetY() , 270)
         call TimerStartEx(NewTimerEx(this) , 1.0 , true , function s__TimedExplosiveTag_periodic , "TimedExplosiveTag_periodic")
     endfunction 
     
     function s__TimedExplosiveTag_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2(('A01H' ) , Filter(( function s__TimedExplosiveTag_actions))) // INLINED!!
+        call RegisterSpellEffectEvent('A01H' , function s__TimedExplosiveTag_actions)
     endfunction 
     
 //===========================================================================
@@ -20323,7 +20396,7 @@ endfunction
 
     function s__ExplosiveTagExplosion_dealDamage takes nothing returns boolean
         if GetWidgetLife(GetFilterUnit()) > 0.405 then
-            call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" ), (( GetUnitX(GetFilterUnit()) )*1.0), (( GetUnitY(GetFilterUnit()))*1.0))) // INLINED!!
+            call AddSpecialEffectEx("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" , GetUnitX(GetFilterUnit()) , GetUnitY(GetFilterUnit()))
             if GetUnitTypeId(GetTriggerUnit()) == 'o00D' then
                 if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(GetTriggerUnit())) then
                     call UnitDamageTarget(GetTriggerUnit(), GetFilterUnit(), GetUnitAbilityLevel(udg_units33[GetPlayerId(GetTriggerPlayer()) + 1], 'A17D') * GetHeroStr(udg_units33[GetPlayerId(GetTriggerPlayer()) + 1], true), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
@@ -20347,16 +20420,16 @@ endfunction
         local real x
         local real y
         if GetUnitTypeId(GetTriggerUnit()) == 'hmtm' or GetUnitTypeId(GetTriggerUnit()) == 'h07H' or GetUnitTypeId(GetTriggerUnit()) == 'h042' or GetUnitTypeId(GetTriggerUnit()) == 'o00D' then
-            call DestroyEffect(AddSpecialEffect(("war3mapImported\\FlameBomb.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
-            call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+            call AddSpecialEffectEx("war3mapImported\\FlameBomb.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
+            call AddSpecialEffectEx("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
             set i=0
             loop
                 exitwhen i > 15
                 set angle=GetRandomReal(0, 2 * bj_PI)
                 set offset=GetRandomReal(0, 300)
-                set x=(((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-                set y=(((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-                call DestroyEffect(AddSpecialEffect(("Boom.mdx" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                set x=GetPolarX(GetUnitX(GetTriggerUnit()) , angle , offset)
+                set y=GetPolarY(GetUnitY(GetTriggerUnit()) , angle , offset)
+                call AddSpecialEffectEx("Boom.mdx" , x , y)
                 set i=i + 1
             endloop
             set bj_lastCreatedGroup=CreateGroup()
@@ -20371,7 +20444,7 @@ endfunction
     endfunction 
     
     function s__ExplosiveTagExplosion_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__ExplosiveTagExplosion_actions))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__ExplosiveTagExplosion_actions)
     endfunction 
     
 //===========================================================================
@@ -20402,7 +20475,7 @@ endfunction
         endfunction
 
  function s__KohakuNoJohei_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
   local real angle
   local real new_x
   local real new_y
@@ -20433,9 +20506,9 @@ endfunction
 			endif
 			if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__KohakuNoJohei_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
                 		set angle=Atan3(GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit) , GetUnitX(s__KohakuNoJohei_caster[this]) , GetUnitY(s__KohakuNoJohei_caster[this]))
-                		set new_x=(((GetUnitX(bj_lastCreatedUnit) )*1.0) + Cos((( angle )*1.0)) * (( 7)*1.0)) // INLINED!!
-                		set new_y=(((GetUnitY(bj_lastCreatedUnit) )*1.0) + Sin((( angle )*1.0)) * (( 7)*1.0)) // INLINED!!
-                		call DestroyEffect(AddSpecialEffect(("Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                		set new_x=GetPolarX(GetUnitX(bj_lastCreatedUnit) , angle , 7)
+                		set new_y=GetPolarY(GetUnitY(bj_lastCreatedUnit) , angle , 7)
+                		call AddSpecialEffectEx("Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                 		call SetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA, GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MANA) - GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MAX_MANA) * 0.2 / ( 20 * 4 ))
                         	if not IsTerrainPathable(new_x, new_y, PATHING_TYPE_WALKABILITY) then
                     			call SetUnitX(bj_lastCreatedUnit, new_x)
@@ -20446,10 +20519,10 @@ endfunction
 				endif
 				if not IsUnitInGroup(bj_lastCreatedUnit, s__KohakuNoJohei_damaged[this]) then
 					call GroupAddUnit(s__KohakuNoJohei_damaged[this], bj_lastCreatedUnit)
-					set s__s__KohakuNoJohei_counts[(GetUnitUserData((bj_lastCreatedUnit)))]= 0 // INLINED!!
+					set s__s__KohakuNoJohei_counts[GetUnitId(bj_lastCreatedUnit)]= 0
 				else
-					set s__s__KohakuNoJohei_counts[(GetUnitUserData((bj_lastCreatedUnit)))]= s__s__KohakuNoJohei_counts[(GetUnitUserData((bj_lastCreatedUnit)))] + 1 // INLINED!!
-					if s__s__KohakuNoJohei_counts[(GetUnitUserData((bj_lastCreatedUnit)))] == 40 then // INLINED!!
+					set s__s__KohakuNoJohei_counts[GetUnitId(bj_lastCreatedUnit)]= s__s__KohakuNoJohei_counts[GetUnitId(bj_lastCreatedUnit)] + 1
+					if s__s__KohakuNoJohei_counts[GetUnitId(bj_lastCreatedUnit)] == 40 then
 						call EsnareUnitTimed(s__KohakuNoJohei_caster[this] , bj_lastCreatedUnit , 2.0)
 					endif
 				endif
@@ -20483,7 +20556,7 @@ endfunction
  endfunction 
 
  function s__KohakuNoJohei_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2((s__KohakuNoJohei_SPELL_ID ) , Filter(( function s__KohakuNoJohei_actions))) // INLINED!!
+		call RegisterSpellEffectEvent(s__KohakuNoJohei_SPELL_ID , function s__KohakuNoJohei_actions)
  endfunction
 
 //===========================================================================
@@ -20492,7 +20565,7 @@ endfunction
 
 
     function s__HiraishinKunai_setCooldown takes nothing returns nothing
-        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+        local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
         call BlzStartUnitAbilityCooldown(u, 'A198', 35.0)
         set s__s__HiraishinKunai_first_activation[GetPlayerId(GetOwningPlayer(u))]= true
         set u=null
@@ -20500,7 +20573,7 @@ endfunction
     endfunction 
 
     function s__HiraishinKunai_resetCooldown takes nothing returns nothing
-        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+        local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
         call BlzEndUnitAbilityCooldown(u, 'A198')
         set u=null
         call ReleaseTimer(GetExpiredTimer())
@@ -20508,16 +20581,16 @@ endfunction
 
     function s__HiraishinKunai_actions takes nothing returns nothing
         if s__s__HiraishinKunai_first_activation[GetPlayerId(GetTriggerPlayer())] then
-            call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__HiraishinKunai_resetCooldown) // INLINED!!
-            call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 15.0, false, function s__HiraishinKunai_setCooldown) // INLINED!!
+            call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__HiraishinKunai_resetCooldown)
+            call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 15.0, false, function s__HiraishinKunai_setCooldown)
             set s__s__HiraishinKunai_first_activation[GetPlayerId(GetTriggerPlayer())]= false
             set s__s__HiraishinKunai_kunai[GetPlayerId(GetTriggerPlayer())]= CreateUnit(GetTriggerPlayer(), 'h07G', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 270)
             call UnitApplyTimedLife(s__s__HiraishinKunai_kunai[GetPlayerId(GetTriggerPlayer())], 'BTLF', 15.0)
         elseif s__s__HiraishinKunai_kunai[GetPlayerId(GetTriggerPlayer())] != null and GetWidgetLife(s__s__HiraishinKunai_kunai[GetPlayerId(GetTriggerPlayer())]) > 0.405 then
-            call DestroyEffect(AddSpecialEffect(("MinatoFlash.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+            call AddSpecialEffectEx("MinatoFlash.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
             call SetUnitX(GetTriggerUnit(), GetUnitX(s__s__HiraishinKunai_kunai[GetPlayerId(GetTriggerPlayer())]))
             call SetUnitY(GetTriggerUnit(), GetUnitY(s__s__HiraishinKunai_kunai[GetPlayerId(GetTriggerPlayer())]))
-            call DestroyEffect(AddSpecialEffect(("MinatoFlash.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+            call AddSpecialEffectEx("MinatoFlash.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
             call KillUnit(s__s__HiraishinKunai_kunai[GetPlayerId(GetTriggerPlayer())])
         endif
     endfunction 
@@ -20530,7 +20603,7 @@ endfunction
             set s__s__HiraishinKunai_kunai[i]= null
             set i=i + 1
         endloop
-        call RegisterSpellEffectEvent2(('A198' ) , Filter(( function s__HiraishinKunai_actions))) // INLINED!!
+        call RegisterSpellEffectEvent('A198' , function s__HiraishinKunai_actions)
     endfunction 
 
 //===========================================================================
@@ -20579,7 +20652,7 @@ endfunction
         endfunction
         
         function s__Bashosen__Item_periodic takes nothing returns nothing
-            local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            local integer this= GetTimerData(GetExpiredTimer())
             local real unit_x
             local real unit_y
             local real unit_x_2
@@ -20599,15 +20672,15 @@ endfunction
                 call SetUnitY(s__Bashosen__dummies[(this)*(1)+i], new_y)
                 if ModuloInteger(s__Bashosen__Item_count[this], 4) == 0 then
                     if s__Bashosen__Item_element[this] == 1 then
-                        call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Other\\NeutralBuildingExplosion\\NeutralBuildingExplosion.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("Objects\\Spawnmodels\\Other\\NeutralBuildingExplosion\\NeutralBuildingExplosion.mdl" , new_x , new_y)
                     elseif s__Bashosen__Item_element[this] == 2 then
-                        call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" , new_x , new_y)
                     elseif s__Bashosen__Item_element[this] == 3 then
-                        call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl" , new_x , new_y)
                     elseif s__Bashosen__Item_element[this] == 4 then
-                        call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl" , new_x , new_y)
                     elseif s__Bashosen__Item_element[this] == 5 then
-                        call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl" , new_x , new_y)
                     endif
                 endif
                 set bj_lastCreatedGroup=CreateGroup()
@@ -20618,7 +20691,7 @@ endfunction
                     if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__Bashosen__Item_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__Bashosen__Item_damaged[this]) then
                         set unit_x_2=GetUnitX(bj_lastCreatedUnit)
                         set unit_y_2=GetUnitY(bj_lastCreatedUnit)
-                        call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" ), (( unit_x_2 )*1.0), (( unit_y_2)*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" , unit_x_2 , unit_y_2)
                         call UnitDamageTarget(s__Bashosen__Item_caster[this], bj_lastCreatedUnit, 3.0 * GetHeroStr(s__Bashosen__Item_caster[this], true) + 3.0 * GetHeroAgi(s__Bashosen__Item_caster[this], true) + 3.0 * GetHeroInt(s__Bashosen__Item_caster[this], true), true, false, ATTACK_TYPE_SIEGE, DAMAGE_TYPE_MAGIC, null)
                         call GroupAddUnit(s__Bashosen__Item_damaged[this], bj_lastCreatedUnit)
                     endif
@@ -20662,7 +20735,7 @@ endfunction
         endfunction
         
         function s__Bashosen__Item_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2((s__Bashosen__Item_SPELL_ID ) , Filter(( function s__Bashosen__Item_actions))) // INLINED!!
+            call RegisterSpellEffectEvent(s__Bashosen__Item_SPELL_ID , function s__Bashosen__Item_actions)
         endfunction
         
     
@@ -20696,7 +20769,7 @@ endfunction
         endfunction
     
     function s__Makibishi_periodic takes nothing returns nothing
- local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+ local integer this= GetTimerData(GetExpiredTimer())
 	set bj_lastCreatedGroup=CreateGroup()
 	call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__Makibishi_x[this], s__Makibishi_y[this], 350, null)
 	loop
@@ -20704,7 +20777,7 @@ endfunction
 		exitwhen bj_lastCreatedUnit == null
 		if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__Makibishi_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false and not IsUnitInGroup(bj_lastCreatedUnit, s__Makibishi_damaged[this]) then
 			call UnitDamageTarget(s__Makibishi_caster[this], bj_lastCreatedUnit, 3.0 * GetHeroInt(s__Makibishi_caster[this], true) + 3 * GetHeroStr(s__Makibishi_caster[this], true) + 2 * GetHeroAgi(s__Makibishi_caster[this], true), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-			call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Stampede\\StampedeMissileDeath.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+			call AddSpecialEffectEx("Abilities\\Spells\\Other\\Stampede\\StampedeMissileDeath.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
 			call GroupAddUnit(s__Makibishi_damaged[this], bj_lastCreatedUnit)
 		endif
 		call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
@@ -20735,14 +20808,14 @@ endfunction
                 exitwhen j > 11
                 set angle=GetRandomReal(0, 2 * bj_PI)
                 set offset=GetRandomReal(0, 350)
-                set x=(((GetSpellTargetX() )*1.0) + Cos((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-                set y=(((GetSpellTargetY() )*1.0) + Sin((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
+                set x=GetPolarX(GetSpellTargetX() , angle , offset)
+                set y=GetPolarY(GetSpellTargetY() , angle , offset)
 		set bj_lastCreatedEffect=AddSpecialEffect("Abilities\\Weapons\\WardenMissile\\WardenMissile.mdl", x, y)
 		call BlzSetSpecialEffectYaw(bj_lastCreatedEffect, Deg2Rad(GetRandomReal(0, 360)))
             	call BlzSetSpecialEffectPitch(bj_lastCreatedEffect, - 1.57)
 		call BlzSetSpecialEffectHeight(bj_lastCreatedEffect, GetPointZ(x , y))
 		call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 2.0)
-		call s__EffectUtils__EffectTimer_create((bj_lastCreatedEffect ) , (( 6.0)*1.0) , false) // INLINED!!
+		call DestroyEffectTimed(bj_lastCreatedEffect , 6.0)
                 set j=j + 1
             endloop
         endloop
@@ -20759,14 +20832,14 @@ endfunction
     
     function s__Makibishi_death takes nothing returns nothing
         if GetUnitTypeId(GetTriggerUnit()) == 'n024' then
-            call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+            call AddSpecialEffectEx("Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
             call ShowUnit(GetTriggerUnit(), false)
         endif
     endfunction 
     
     function s__Makibishi_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__Makibishi_death))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0XF' ) , Filter(( function s__Makibishi_actions))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__Makibishi_death)
+        call RegisterSpellEffectEvent('A0XF' , function s__Makibishi_actions)
     endfunction 
     
 //===========================================================================
@@ -20797,10 +20870,10 @@ endfunction
         endfunction
     
     function s__NinjaNet_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         local real angle= Atan3(GetUnitX(s__NinjaNet_projectile[this]) , GetUnitY(s__NinjaNet_projectile[this]) , GetUnitX(s__NinjaNet_target[this]) , GetUnitY(s__NinjaNet_target[this]))
-        local real x= (((GetUnitX(s__NinjaNet_projectile[this]) )*1.0) + Cos((( angle )*1.0)) * (( 40)*1.0)) // INLINED!!
-        local real y= (((GetUnitY(s__NinjaNet_projectile[this]) )*1.0) + Sin((( angle )*1.0)) * (( 40)*1.0)) // INLINED!!
+        local real x= GetPolarX(GetUnitX(s__NinjaNet_projectile[this]) , angle , 40)
+        local real y= GetPolarY(GetUnitY(s__NinjaNet_projectile[this]) , angle , 40)
  local unit u
         call SetUnitX(s__NinjaNet_projectile[this], x)
         call SetUnitY(s__NinjaNet_projectile[this], y)
@@ -20836,7 +20909,7 @@ endfunction
     endfunction 
     
     function s__NinjaNet_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__NinjaNet_SPELL_ID ) , Filter(( function s__NinjaNet_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__NinjaNet_SPELL_ID , function s__NinjaNet_actions)
     endfunction 
     
 //===========================================================================
@@ -20867,7 +20940,7 @@ endfunction
         endfunction
 
     function s__SanbiProtection_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         call UnitRemoveBuffs(s__SanbiProtection_caster[this], false, true)
         if GetUnitAbilityLevel(s__SanbiProtection_caster[this], 'B038') == 0 then
             set s__SanbiProtection_caster[this]=null
@@ -20883,8 +20956,8 @@ endfunction
     endfunction
     
     function s__SanbiProtection_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2(('A0MJ' ) , Filter(( function s__SanbiProtection_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0ZH' ) , Filter(( function s__SanbiProtection_actions))) // INLINED!!
+        call RegisterSpellEffectEvent('A0MJ' , function s__SanbiProtection_actions)
+        call RegisterSpellEffectEvent('A0ZH' , function s__SanbiProtection_actions)
     endfunction
 
 //===========================================================================
@@ -20906,9 +20979,9 @@ endfunction
 
 //===========================================================================
 function InitTrig_AkatsukiCloth takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_CHANNEL ) , Filter(( function Trig_AkatsukiClothON_Actions))) // INLINED!!
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_ENDCAST ) , Filter(( function Trig_AkatsukiClothOFF_Actions))) // INLINED!!
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_FINISH ) , Filter(( function Trig_AkatsukiClothOFF_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CHANNEL , function Trig_AkatsukiClothON_Actions)
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_ENDCAST , function Trig_AkatsukiClothOFF_Actions)
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_FINISH , function Trig_AkatsukiClothOFF_Actions)
 endfunction
 
 
@@ -20918,14 +20991,14 @@ endfunction
 
     
     function s__AkatukiSet_removeStats takes nothing returns nothing
-        local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-        local unit u= (s__UnitDex_Unit[(id)]) // INLINED!!
-        call SetHeroAgi(u, GetHeroAgi(u, false) - (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
-        call SetHeroInt(u, GetHeroInt(u, false) - (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
-        call SetHeroStr(u, GetHeroStr(u, false) - (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
+        local integer id= GetTimerData(GetExpiredTimer())
+        local unit u= GetUnitById(id)
+        call SetHeroAgi(u, GetHeroAgi(u, false) - s__Table__getindex(s__AkatukiSet_stats,id), false)
+        call SetHeroInt(u, GetHeroInt(u, false) - s__Table__getindex(s__AkatukiSet_stats,id), false)
+        call SetHeroStr(u, GetHeroStr(u, false) - s__Table__getindex(s__AkatukiSet_stats,id), false)
         call GroupRemoveUnit(s__AkatukiSet_cooldown, u)
-        call RemoveSavedInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id)) // INLINED!!
-        call RemoveSavedInteger(Table___ht, (s__AkatukiSet_stats), (id)) // INLINED!!
+        call s__Table_remove(s__AkatukiSet_secondsElapsed,id)
+        call s__Table_remove(s__AkatukiSet_stats,id)
         set u=null
         call ReleaseTimer(GetExpiredTimer())
     endfunction
@@ -20936,33 +21009,33 @@ endfunction
 	if GetSpellAbilityId() == 'A0NI' and not IsUnitInGroup(GetTriggerUnit(), s__AkatukiSet_invisibilityGroup) and not IsUnitInGroup(GetTriggerUnit(), s__AkatukiSet_cooldown) and GetUnitTypeId(GetTriggerUnit()) != 'H001' and GetUnitTypeId(GetTriggerUnit()) != 'H035' then
 		set bj_lastCreatedUnit=CreateAbilityDummy(GetTriggerUnit() , 'A0NJ')
 		call IssueTargetOrder(bj_lastCreatedUnit, "invisibility", GetTriggerUnit())
-		call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, true, function sc__AkatukiSet_periodic) // INLINED!!
+		call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, true, function sc__AkatukiSet_periodic)
 		call GroupAddUnit(s__AkatukiSet_invisibilityGroup, GetTriggerUnit())
 	endif
     endfunction 
 
     function s__AkatukiSet_periodic takes nothing returns nothing
-  local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-  local unit u= (s__UnitDex_Unit[(id)]) // INLINED!!
+  local integer id= GetTimerData(GetExpiredTimer())
+  local unit u= GetUnitById(id)
         local integer elapsed
 		//call UnitSetUsesAltIcon(u, true)
-		if (HaveSavedInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id))) then // INLINED!!
-			set elapsed=(LoadInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id))) // INLINED!!
+		if s__Table_has(s__AkatukiSet_secondsElapsed,id) then
+			set elapsed=s__Table__getindex(s__AkatukiSet_secondsElapsed,id)
 			if elapsed < 15000 then
-				call SaveInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id), ( 100)) // INLINED!!
+				call s__Table__setindex(s__AkatukiSet_secondsElapsed,id, 100)
 				call ReleaseTimer(GetExpiredTimer())
 			else
 				call IssueImmediateOrder(u, "stop")
 				call ReleaseTimer(GetExpiredTimer())
 			endif
 		else
-			call SaveInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id), ( 1)) // INLINED!!
+			call s__Table__setindex(s__AkatukiSet_secondsElapsed,id, 1)
 		endif
 		set u=null
     endfunction
     
     function s__AkatukiSet_removeInvisEffect takes nothing returns nothing
-        local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+        local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
         local integer id= GetUnitPointValueByType(GetUnitTypeId(u))
         call SetUnitFlyHeight(u, 0, 0)
         call UnitSetUsesAltIcon(u, false)
@@ -20979,12 +21052,12 @@ endfunction
             call UnitRemoveAbility(GetTriggerUnit(), 'Binv')
             call GroupRemoveUnit(s__AkatukiSet_invisibilityGroup, GetTriggerUnit())
             call GroupAddUnit(s__AkatukiSet_cooldown, GetTriggerUnit())
-            set id=(GetUnitUserData((GetTriggerUnit()))) // INLINED!!
-            set elapsed=(LoadInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id))) // INLINED!!
-            call SaveInteger(Table___ht, (s__AkatukiSet_stats), (id), ( R2I(elapsed * 0.15))) // INLINED!!
-            call SetHeroAgi(GetTriggerUnit(), GetHeroAgi(GetTriggerUnit(), false) + (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
-            call SetHeroInt(GetTriggerUnit(), GetHeroInt(GetTriggerUnit(), false) + (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
-            call SetHeroStr(GetTriggerUnit(), GetHeroStr(GetTriggerUnit(), false) + (LoadInteger(Table___ht, (s__AkatukiSet_stats), (id))), false) // INLINED!!
+            set id=GetUnitId(GetTriggerUnit())
+            set elapsed=s__Table__getindex(s__AkatukiSet_secondsElapsed,id)
+            call s__Table__setindex(s__AkatukiSet_stats,id, R2I(elapsed * 0.15))
+            call SetHeroAgi(GetTriggerUnit(), GetHeroAgi(GetTriggerUnit(), false) + s__Table__getindex(s__AkatukiSet_stats,id), false)
+            call SetHeroInt(GetTriggerUnit(), GetHeroInt(GetTriggerUnit(), false) + s__Table__getindex(s__AkatukiSet_stats,id), false)
+            call SetHeroStr(GetTriggerUnit(), GetHeroStr(GetTriggerUnit(), false) + s__Table__getindex(s__AkatukiSet_stats,id), false)
             if elapsed < 120 then
                 set u=CreateAbilityDummy(GetTriggerUnit() , 'A0S1')
                 call IssueTargetOrder(u, "bloodlust", GetTriggerUnit())
@@ -21001,9 +21074,9 @@ endfunction
     endfunction 
     
     function s__AkatukiSet_passive takes nothing returns nothing
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I03T') then
-			set s__s__AkatukiSet_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__AkatukiSet_t[GetTimerData(GetExpiredTimer())]= null
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 			return
@@ -21020,9 +21093,9 @@ endfunction
 		if GetItemTypeId(GetManipulatedItem()) != 'I03T' then
 			return
 		endif
-		if s__s__AkatukiSet_t[(GetUnitUserData((GetTriggerUnit())))] == null then // INLINED!!
-			set s__s__AkatukiSet_t[(GetUnitUserData((GetTriggerUnit())))]= NewTimerEx((GetUnitUserData((GetTriggerUnit())))) // INLINED!!
-			call TimerStartEx(s__s__AkatukiSet_t[(GetUnitUserData((GetTriggerUnit())))] , 2.0 , true , function s__AkatukiSet_periodic , "AkatsukiSet_passive") // INLINED!!
+		if s__s__AkatukiSet_t[GetUnitId(GetTriggerUnit())] == null then
+			set s__s__AkatukiSet_t[GetUnitId(GetTriggerUnit())]= NewTimerEx(GetUnitId(GetTriggerUnit()))
+			call TimerStartEx(s__s__AkatukiSet_t[GetUnitId(GetTriggerUnit())] , 2.0 , true , function s__AkatukiSet_periodic , "AkatsukiSet_passive")
 		endif
     endfunction 
 	
@@ -21031,10 +21104,10 @@ endfunction
         set s__AkatukiSet_invisibilityGroup=CreateGroup()
         set s__AkatukiSet_secondsElapsed=s__Table_create()
         set s__AkatukiSet_stats=s__Table_create()
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_CHANNEL ) , Filter(( function s__AkatukiSet_beginInvisibility))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_ENDCAST ) , Filter(( function s__AkatukiSet_endInvisibility))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_FINISH ) , Filter(( function s__AkatukiSet_endInvisibility))) // INLINED!!
-		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__AkatukiSet_startTimer))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CHANNEL , function s__AkatukiSet_beginInvisibility)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_ENDCAST , function s__AkatukiSet_endInvisibility)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_FINISH , function s__AkatukiSet_endInvisibility)
+		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__AkatukiSet_startTimer)
     endfunction
     
 //===========================================================================
@@ -21065,7 +21138,7 @@ endfunction
         endfunction
 
     function s__GreaterMedicalSphere_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         call GroupClear(udg_GreaterMedicalSphereGroup)
         set bj_lastCreatedGroup=CreateGroup()
         call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__GreaterMedicalSphere_target_x[this], s__GreaterMedicalSphere_target_y[this], 600.0, null)
@@ -21074,7 +21147,7 @@ endfunction
             exitwhen bj_lastCreatedUnit == null
             if IsUnitAlly(bj_lastCreatedUnit, GetOwningPlayer(s__GreaterMedicalSphere_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
                 call SetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE, GetUnitState(bj_lastCreatedUnit, UNIT_STATE_LIFE) + GetUnitState(bj_lastCreatedUnit, UNIT_STATE_MAX_LIFE) * 0.04)
-                call DestroyEffect(AddSpecialEffect(("war3mapImported\\Heal Green.mdx" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("war3mapImported\\Heal Green.mdx" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                 call GroupAddUnit(udg_GreaterMedicalSphereGroup, bj_lastCreatedUnit)
             endif
             call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
@@ -21093,9 +21166,9 @@ endfunction
         set s__GreaterMedicalSphere_caster[this]=GetTriggerUnit()
         set s__GreaterMedicalSphere_target_x[this]=GetSpellTargetX()
         set s__GreaterMedicalSphere_target_y[this]=GetSpellTargetY()
-        set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'n00I' ), (( s__GreaterMedicalSphere_target_x[this] )*1.0), (( s__GreaterMedicalSphere_target_y[this] )*1.0), (( 270)*1.0))) // INLINED!!
+        set bj_lastCreatedUnit=GetUnit(GetTriggerPlayer() , 'n00I' , s__GreaterMedicalSphere_target_x[this] , s__GreaterMedicalSphere_target_y[this] , 270)
         call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 15.0)
-        set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'n01U' ), (( s__GreaterMedicalSphere_target_x[this] )*1.0), (( s__GreaterMedicalSphere_target_y[this] )*1.0), (( 270)*1.0))) // INLINED!!
+        set bj_lastCreatedUnit=GetUnit(GetTriggerPlayer() , 'n01U' , s__GreaterMedicalSphere_target_x[this] , s__GreaterMedicalSphere_target_y[this] , 270)
         call SetUnitVertexColor(bj_lastCreatedUnit, 255, 255, 255, 175)
         call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 15.0)
         set s__GreaterMedicalSphere_count[this]=0
@@ -21103,7 +21176,7 @@ endfunction
     endfunction 
     
     function s__GreaterMedicalSphere_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__GreaterMedicalSphere_SPELL_ID ) , Filter(( function s__GreaterMedicalSphere_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__GreaterMedicalSphere_SPELL_ID , function s__GreaterMedicalSphere_actions)
     endfunction 
     
 //===========================================================================
@@ -21139,16 +21212,16 @@ endfunction
  function s__ReverseOfAllCreation_actions takes nothing returns nothing
   local real i
   local real j
-  local real x1= (((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( Deg2Rad(90) )*1.0)) * (( 600)*1.0)) // INLINED!!
-  local real y1= (((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( Deg2Rad(90) )*1.0)) * (( 600)*1.0)) // INLINED!!
-  local real x2= (((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( Deg2Rad(23) )*1.0)) * (( 600)*1.0)) // INLINED!!
-  local real y2= (((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( Deg2Rad(23) )*1.0)) * (( 600)*1.0)) // INLINED!!
-  local real x3= (((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( Deg2Rad(315) )*1.0)) * (( 600)*1.0)) // INLINED!!
-  local real y3= (((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( Deg2Rad(315) )*1.0)) * (( 600)*1.0)) // INLINED!!
-  local real x4= (((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( Deg2Rad(157) )*1.0)) * (( 600)*1.0)) // INLINED!!
-  local real y4= (((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( Deg2Rad(157) )*1.0)) * (( 600)*1.0)) // INLINED!!
-  local real x5= (((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( Deg2Rad(225) )*1.0)) * (( 600)*1.0)) // INLINED!!
-  local real y5= (((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( Deg2Rad(225) )*1.0)) * (( 600)*1.0)) // INLINED!!
+  local real x1= GetPolarX(GetUnitX(GetTriggerUnit()) , Deg2Rad(90) , 600)
+  local real y1= GetPolarY(GetUnitY(GetTriggerUnit()) , Deg2Rad(90) , 600)
+  local real x2= GetPolarX(GetUnitX(GetTriggerUnit()) , Deg2Rad(23) , 600)
+  local real y2= GetPolarY(GetUnitY(GetTriggerUnit()) , Deg2Rad(23) , 600)
+  local real x3= GetPolarX(GetUnitX(GetTriggerUnit()) , Deg2Rad(315) , 600)
+  local real y3= GetPolarY(GetUnitY(GetTriggerUnit()) , Deg2Rad(315) , 600)
+  local real x4= GetPolarX(GetUnitX(GetTriggerUnit()) , Deg2Rad(157) , 600)
+  local real y4= GetPolarY(GetUnitY(GetTriggerUnit()) , Deg2Rad(157) , 600)
+  local real x5= GetPolarX(GetUnitX(GetTriggerUnit()) , Deg2Rad(225) , 600)
+  local real y5= GetPolarY(GetUnitY(GetTriggerUnit()) , Deg2Rad(225) , 600)
   local integer l
 		set l=s__Lightning_create(LIGHTNING_CHAIN_LIGHTNING_PRIMARY , true , 0.1)
 		call s__Lightning_releaseDelayed(l,2.0 , 0.1)
@@ -21175,7 +21248,7 @@ endfunction
 		call s__Lightning_attachToPoint(l,true , x5 , y5 , 60 , true)
 		call s__Lightning_attachToPoint(l,false , x1 , y1 , 60 , true)
 
-		call DestroyEffect(AddSpecialEffect(("war3mapImported\\Divine Edict.mdl" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+		call AddSpecialEffectEx("war3mapImported\\Divine Edict.mdl" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
 		set udg_EarthFinish[GetPlayerId(GetTriggerPlayer())]=true
 		set udg_FallenSky2[GetPlayerId(GetTriggerPlayer())]=true
 		set bj_lastCreatedGroup=CreateGroup()
@@ -21188,7 +21261,7 @@ endfunction
 				set j=GetUnitManaPercent(bj_lastCreatedUnit)
 				call SetUnitLifePercentBJ(bj_lastCreatedUnit, j)
 				call SetUnitManaPercentBJ(bj_lastCreatedUnit, i)
-				call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+				call AddSpecialEffectEx("Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
 			endif
 			call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
 		endloop
@@ -21196,7 +21269,7 @@ endfunction
  endfunction 
 
  function s__ReverseOfAllCreation_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2((s__ReverseOfAllCreation_SPELL_ID ) , Filter(( function s__ReverseOfAllCreation_actions))) // INLINED!!
+		call RegisterSpellEffectEvent(s__ReverseOfAllCreation_SPELL_ID , function s__ReverseOfAllCreation_actions)
  endfunction 
 
 //===========================================================================
@@ -21229,13 +21302,13 @@ endfunction
         endfunction
 
  function s__SubjugationOfEarth_finish takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
   local real percent= GetUnitLifePercent(s__SubjugationOfEarth_target[this])
 		call BlzSetUnitMaxHP(s__SubjugationOfEarth_target[this], BlzGetUnitMaxHP(s__SubjugationOfEarth_target[this]) + s__SubjugationOfEarth_diff[this])
 		set udg_EarthFinish[GetPlayerId(GetOwningPlayer(s__SubjugationOfEarth_caster[this]))]=true
 		call SetUnitLifePercentBJ(s__SubjugationOfEarth_target[this], percent)
 		//call AddSpecialEffectEx("RedHarvest.mdx", GetUnitX(this.target), GetUnitY(this.target))
-		call DestroyEffect(AddSpecialEffect(("war3mapImported\\Pillar of Flame Orange.mdl" ), (( GetUnitX(s__SubjugationOfEarth_target[this]) )*1.0), (( GetUnitY(s__SubjugationOfEarth_target[this]))*1.0))) // INLINED!!
+		call AddSpecialEffectEx("war3mapImported\\Pillar of Flame Orange.mdl" , GetUnitX(s__SubjugationOfEarth_target[this]) , GetUnitY(s__SubjugationOfEarth_target[this]))
 		set s__SubjugationOfEarth_target[this]=null
 		call s__SubjugationOfEarth_deallocate(this)
 		call ReleaseTimer(GetExpiredTimer())
@@ -21252,13 +21325,13 @@ endfunction
 		set udg_EarthFinish[GetPlayerId(GetOwningPlayer(s__SubjugationOfEarth_caster[this]))]=true
 		call BlzSetUnitMaxHP(GetSpellTargetUnit(), BlzGetUnitMaxHP(GetSpellTargetUnit()) - s__SubjugationOfEarth_diff[this])
 		call SetUnitLifePercentBJ(GetSpellTargetUnit(), percent)
-		call DestroyEffect(AddSpecialEffect(("RedHarvest.mdx" ), (( GetUnitX(s__SubjugationOfEarth_target[this]) )*1.0), (( GetUnitY(s__SubjugationOfEarth_target[this]))*1.0))) // INLINED!!
-		call DestroyEffect(AddSpecialEffect(("war3mapImported\\Pillar of Flame Orange.mdl" ), (( GetUnitX(s__SubjugationOfEarth_target[this]) )*1.0), (( GetUnitY(s__SubjugationOfEarth_target[this]))*1.0))) // INLINED!!
+		call AddSpecialEffectEx("RedHarvest.mdx" , GetUnitX(s__SubjugationOfEarth_target[this]) , GetUnitY(s__SubjugationOfEarth_target[this]))
+		call AddSpecialEffectEx("war3mapImported\\Pillar of Flame Orange.mdl" , GetUnitX(s__SubjugationOfEarth_target[this]) , GetUnitY(s__SubjugationOfEarth_target[this]))
 		call TimerStartEx(NewTimerEx(this) , 10.0 , false , function s__SubjugationOfEarth_finish , "SubjugationOfEarth_finish")
  endfunction
 
  function s__SubjugationOfEarth_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2((s__SubjugationOfEarth_SPELL_ID ) , Filter(( function s__SubjugationOfEarth_actions))) // INLINED!!
+		call RegisterSpellEffectEvent(s__SubjugationOfEarth_SPELL_ID , function s__SubjugationOfEarth_actions)
  endfunction 
 
 
@@ -21293,7 +21366,7 @@ endfunction
         endfunction
 
  function s__SubjugationOfHeaven_finish takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
   local real percent
 		set udg_FallenSky[GetPlayerId(GetOwningPlayer(s__SubjugationOfHeaven_caster[this]))]=true
 		set udg_FallenSky2[GetPlayerId(GetOwningPlayer(s__SubjugationOfHeaven_caster[this]))]=false
@@ -21301,10 +21374,10 @@ endfunction
 			set bj_lastCreatedUnit=FirstOfGroup(s__SubjugationOfHeaven_damaged[this])
 			exitwhen bj_lastCreatedUnit == null
 			set percent=GetUnitManaPercent(bj_lastCreatedUnit)
-			call BlzSetUnitMaxMana(bj_lastCreatedUnit, s__s__SubjugationOfHeaven_mps[(GetUnitUserData((bj_lastCreatedUnit)))]) // INLINED!!
+			call BlzSetUnitMaxMana(bj_lastCreatedUnit, s__s__SubjugationOfHeaven_mps[GetUnitId(bj_lastCreatedUnit)])
 			call SetUnitManaPercentBJ(bj_lastCreatedUnit, percent)
 			//call AddSpecialEffectEx("HarvestMana.mdx", GetUnitX(bj_lastCreatedUnit), GetUnitY(bj_lastCreatedUnit))
-			call DestroyEffect(AddSpecialEffect(("war3mapImported\\Pillar of Flame Blue.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+			call AddSpecialEffectEx("war3mapImported\\Pillar of Flame Blue.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
 			call GroupRemoveUnit(s__SubjugationOfHeaven_damaged[this], bj_lastCreatedUnit)
 		endloop
 		call DestroyGroup(s__SubjugationOfHeaven_damaged[this])
@@ -21326,12 +21399,12 @@ endfunction
 			exitwhen bj_lastCreatedUnit == null
 			if GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitEnemy(bj_lastCreatedUnit, GetTriggerPlayer()) and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_HERO) == true then
 				set new_mp=GetHeroStr(bj_lastCreatedUnit, true) * 13
-				set s__s__SubjugationOfHeaven_mps[(GetUnitUserData((bj_lastCreatedUnit)))]= BlzGetUnitMaxMana(bj_lastCreatedUnit) // INLINED!!
+				set s__s__SubjugationOfHeaven_mps[GetUnitId(bj_lastCreatedUnit)]= BlzGetUnitMaxMana(bj_lastCreatedUnit)
 				set percent=GetUnitManaPercent(bj_lastCreatedUnit)
 				call BlzSetUnitMaxMana(bj_lastCreatedUnit, new_mp)
 				call SetUnitManaPercentBJ(bj_lastCreatedUnit, percent)
-				call DestroyEffect(AddSpecialEffect(("HarvestMana.mdx" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
-				call DestroyEffect(AddSpecialEffect(("war3mapImported\\Pillar of Flame Blue.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+				call AddSpecialEffectEx("HarvestMana.mdx" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
+				call AddSpecialEffectEx("war3mapImported\\Pillar of Flame Blue.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
 				call GroupAddUnit(s__SubjugationOfHeaven_damaged[this], bj_lastCreatedUnit)
 			endif
 			call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
@@ -21342,7 +21415,7 @@ endfunction
  endfunction
 
  function s__SubjugationOfHeaven_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2((s__SubjugationOfHeaven_SPELL_ID ) , Filter(( function s__SubjugationOfHeaven_actions))) // INLINED!!
+		call RegisterSpellEffectEvent(s__SubjugationOfHeaven_SPELL_ID , function s__SubjugationOfHeaven_actions)
  endfunction 
 
 
@@ -21357,7 +21430,7 @@ endfunction
 		loop
 			exitwhen i > 11
 			if udg_units33[i + 1] != null then
-				if GetWidgetLife(udg_units33[i + 1]) > 0.405 and udg_ANBUTarget[i] != null and GetWidgetLife(udg_ANBUTarget[i]) > 0.405 and (UnitHasItemOfTypeBJ((udg_units33[i + 1] ), ( 'I07B'))) then // INLINED!!
+				if GetWidgetLife(udg_units33[i + 1]) > 0.405 and udg_ANBUTarget[i] != null and GetWidgetLife(udg_ANBUTarget[i]) > 0.405 and UnitHasItemEx(udg_units33[i + 1] , 'I07B') then
 					set diff=s__s__ElementalANBUMask_mana[i] - GetUnitState(udg_units33[i + 1], UNIT_STATE_MANA)
 					if diff > 0 then
 						call UnitDamageTarget(udg_units33[i + 1], udg_ANBUTarget[i], diff, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
@@ -21377,16 +21450,16 @@ endfunction
 		if udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())] != null then
 		set bj_lastCreatedUnit=CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), 'e007', GetUnitX(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]), GetUnitY(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]), 270)
 			call EsnareUnitTimed(bj_lastCreatedUnit , udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())] , 4.0)
-			call DestroyEffect(AddSpecialEffect(("MinatoFlash.mdx" ), (( GetUnitX(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]) )*1.0), (( GetUnitY(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]))*1.0))) // INLINED!!
+			call AddSpecialEffectEx("MinatoFlash.mdx" , GetUnitX(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]) , GetUnitY(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]))
 		endif
  endfunction 
 
  function s__ElementalANBUMask_dark takes nothing returns nothing
 		if udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())] != null then
-			call DestroyEffect(AddSpecialEffect(("blackblink.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+			call AddSpecialEffectEx("blackblink.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
 			if GetDistanceUnits(GetTriggerUnit() , udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]) < 2000 and GetWidgetLife(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]) > 0.405 then
 				call StunUnitTimed(GetTriggerUnit() , udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())] , 1.0)
-				call DestroyEffect(AddSpecialEffect(("blackblink.mdx" ), (( GetUnitX(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]) )*1.0), (( GetUnitY(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]))*1.0))) // INLINED!!
+				call AddSpecialEffectEx("blackblink.mdx" , GetUnitX(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]) , GetUnitY(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]))
 				call SetUnitX(GetTriggerUnit(), GetUnitX(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]))
 				call SetUnitY(GetTriggerUnit(), GetUnitY(udg_ANBUTarget[GetPlayerId(GetTriggerPlayer())]))
 			endif
@@ -21394,7 +21467,7 @@ endfunction
  endfunction 
 
  function s__ElementalANBUMask_wind_off takes nothing returns nothing
-  local player trigger_player= Player((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))) // INLINED!!
+  local player trigger_player= Player(GetTimerData(GetExpiredTimer()))
   local integer i
   local integer j
 		set j=0
@@ -21439,22 +21512,22 @@ endfunction
  endfunction 
 
  function s__ElementalANBUMask_light_off takes nothing returns nothing
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
 		call SetUnitInvulnerable(u, false)
 		call ReleaseTimer(GetExpiredTimer())
  endfunction 
 
  function s__ElementalANBUMask_light takes nothing returns nothing
 		call SetUnitInvulnerable(GetTriggerUnit(), true)
-		call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 1.5, false, function s__ElementalANBUMask_light_off) // INLINED!!
+		call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 1.5, false, function s__ElementalANBUMask_light_off)
  endfunction 
 
  function s__ElementalANBUMask_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2(('A18H' ) , Filter(( function s__ElementalANBUMask_lightning))) // INLINED!!
-		call RegisterSpellEffectEvent2(('A18G' ) , Filter(( function s__ElementalANBUMask_dark))) // INLINED!!
-		call RegisterSpellEffectEvent2(('A18L' ) , Filter(( function s__ElementalANBUMask_wind))) // INLINED!!
-		call RegisterSpellEffectEvent2(('A19R' ) , Filter(( function s__ElementalANBUMask_light))) // INLINED!!
-		call TimerStart((NewTimerEx(0)), 0.01, true, function s__ElementalANBUMask_water) // INLINED!!
+		call RegisterSpellEffectEvent('A18H' , function s__ElementalANBUMask_lightning)
+		call RegisterSpellEffectEvent('A18G' , function s__ElementalANBUMask_dark)
+		call RegisterSpellEffectEvent('A18L' , function s__ElementalANBUMask_wind)
+		call RegisterSpellEffectEvent('A19R' , function s__ElementalANBUMask_light)
+		call TimerStart(NewTimer(), 0.01, true, function s__ElementalANBUMask_water)
  endfunction 
 
 //===========================================================================
@@ -21469,7 +21542,7 @@ endfunction
             set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
             exitwhen bj_lastCreatedUnit == null
             if GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
-                call DestroyEffect(AddSpecialEffect(("war3mapImported\\Soul Armor Scribe_opt.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("war3mapImported\\Soul Armor Scribe_opt.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
                 if IsUnitEnemy(bj_lastCreatedUnit, GetTriggerPlayer()) and GetUnitTypeId(bj_lastCreatedUnit) != 'H070' and GetUnitTypeId(bj_lastCreatedUnit) != 'U00P' and GetUnitTypeId(bj_lastCreatedUnit) != 'N01V' and GetUnitTypeId(bj_lastCreatedUnit) != 'H0B0' and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_HERO) == true then
                     if IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_HERO) == false and GetUnitLevel(bj_lastCreatedUnit) < 6 then
                         call SetUnitOwner(bj_lastCreatedUnit, GetTriggerPlayer(), true)
@@ -21486,7 +21559,7 @@ endfunction
     endfunction 
     
     function s__HeavenStone_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__HeavenStone_SPELL_ID ) , Filter(( function s__HeavenStone_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__HeavenStone_SPELL_ID , function s__HeavenStone_actions)
     endfunction 
     
 //===========================================================================
@@ -21517,7 +21590,7 @@ endfunction
         endfunction
 
  function s__HealingShoes_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
 		if GetUnitAbilityLevel(s__HealingShoes_caster[this], 'B05V') > 0 and s__HealingShoes_count[this] < 15 then
 			set s__HealingShoes_count[this]=s__HealingShoes_count[this] + 1
 			call SetUnitState(s__HealingShoes_caster[this], UNIT_STATE_LIFE, GetUnitState(s__HealingShoes_caster[this], UNIT_STATE_LIFE) + GetUnitState(s__HealingShoes_caster[this], UNIT_STATE_MAX_LIFE) * s__HealingShoes_percent[this] / 15)
@@ -21531,20 +21604,20 @@ endfunction
  function s__HealingShoes_actions takes nothing returns nothing
   local integer this= s__HealingShoes_allocate()
 		set s__HealingShoes_caster[this]=GetSpellTargetUnit()
-		if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I062'))) then // INLINED!!
+		if UnitHasItemEx(GetTriggerUnit() , 'I062') then
 			call SetUnitState(s__HealingShoes_caster[this], UNIT_STATE_LIFE, GetUnitState(s__HealingShoes_caster[this], UNIT_STATE_LIFE) + 500)
 			call SetUnitState(s__HealingShoes_caster[this], UNIT_STATE_MANA, GetUnitState(s__HealingShoes_caster[this], UNIT_STATE_MANA) + 500)
 			set s__HealingShoes_percent[this]=0.05
-		elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I063'))) then // INLINED!!
+		elseif UnitHasItemEx(GetTriggerUnit() , 'I063') then
 			call SetUnitState(s__HealingShoes_caster[this], UNIT_STATE_LIFE, GetUnitState(s__HealingShoes_caster[this], UNIT_STATE_LIFE) + 750)
 			call SetUnitState(s__HealingShoes_caster[this], UNIT_STATE_MANA, GetUnitState(s__HealingShoes_caster[this], UNIT_STATE_MANA) + 750)
 			set s__HealingShoes_percent[this]=0.1
-		elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I064'))) then // INLINED!!
+		elseif UnitHasItemEx(GetTriggerUnit() , 'I064') then
 			call SetUnitState(s__HealingShoes_caster[this], UNIT_STATE_LIFE, GetUnitState(s__HealingShoes_caster[this], UNIT_STATE_LIFE) + 1000)
 			call SetUnitState(s__HealingShoes_caster[this], UNIT_STATE_MANA, GetUnitState(s__HealingShoes_caster[this], UNIT_STATE_MANA) + 1000)
 			set s__HealingShoes_percent[this]=0.2
 		endif
-		call DestroyEffect(AddSpecialEffect(("war3mapImported\\Heal Green.mdx" ), (( GetUnitX(s__HealingShoes_caster[this]) )*1.0), (( GetUnitY(s__HealingShoes_caster[this]))*1.0))) // INLINED!!
+		call AddSpecialEffectEx("war3mapImported\\Heal Green.mdx" , GetUnitX(s__HealingShoes_caster[this]) , GetUnitY(s__HealingShoes_caster[this]))
 		set s__HealingShoes_count[this]=0
 		set bj_lastCreatedUnit=CreateAbilityDummy(s__HealingShoes_caster[this] , 'A132')
 		call IssueTargetOrder(bj_lastCreatedUnit, "rejuvination", s__HealingShoes_caster[this])
@@ -21552,7 +21625,7 @@ endfunction
  endfunction 
 
  function s__HealingShoes_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2(('A131' ) , Filter(( function s__HealingShoes_actions))) // INLINED!!
+		call RegisterSpellEffectEvent('A131' , function s__HealingShoes_actions)
  endfunction 
 
 //===========================================================================
@@ -21581,9 +21654,9 @@ endfunction
  endfunction 
 
  function s__InvisibilityShoes_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2(('A194' ) , Filter(( function s__InvisibilityShoes_actions))) // INLINED!!
-		call RegisterSpellEffectEvent2(('A195' ) , Filter(( function s__InvisibilityShoes_actions))) // INLINED!!
-		call RegisterSpellEffectEvent2(('A196' ) , Filter(( function s__InvisibilityShoes_actions))) // INLINED!!
+		call RegisterSpellEffectEvent('A194' , function s__InvisibilityShoes_actions)
+		call RegisterSpellEffectEvent('A195' , function s__InvisibilityShoes_actions)
+		call RegisterSpellEffectEvent('A196' , function s__InvisibilityShoes_actions)
  endfunction 
 
 //===========================================================================
@@ -21593,18 +21666,18 @@ endfunction
 
     
     function s__ScrollOfTeleport_actions takes nothing returns nothing
-        local integer id= (GetUnitUserData((GetTriggerUnit()))) // INLINED!!
+        local integer id= GetUnitId(GetTriggerUnit())
         local real x
         local real y
         local integer i= 0
         loop
             exitwhen i == 4
-            set x=(((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( Deg2Rad(90 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
-            set y=(((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( Deg2Rad(90 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
-            set s__ScrollOfTeleportScope__anbus[(id)*(1)+i]= (CreateUnit((GetTriggerPlayer() ), ( 'nfgl' ), (( x )*1.0), (( y )*1.0), (( i * 90 + 180)*1.0))) // INLINED!!
+            set x=GetPolarX(GetUnitX(GetTriggerUnit()) , Deg2Rad(90 * i) , 200)
+            set y=GetPolarY(GetUnitY(GetTriggerUnit()) , Deg2Rad(90 * i) , 200)
+            set s__ScrollOfTeleportScope__anbus[(id)*(1)+i]= GetUnit(GetTriggerPlayer() , 'nfgl' , x , y , i * 90 + 180)
             call SetUnitAnimation(s__ScrollOfTeleportScope__anbus[(id)*(1)+i], "spell")
-            call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Other\\ToonBoom\\ToonBoom.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
-            call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+            call AddSpecialEffectEx("Objects\\Spawnmodels\\Other\\ToonBoom\\ToonBoom.mdl" , x , y)
+            call AddSpecialEffectEx("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" , x , y)
             set i=i + 1
         endloop
     endfunction 
@@ -21613,12 +21686,12 @@ endfunction
         local integer id
         local integer i
         if GetSpellAbilityId() == s__ScrollOfTeleport_SPELL_ID then
-            set id=(GetUnitUserData((GetTriggerUnit()))) // INLINED!!
+            set id=GetUnitId(GetTriggerUnit())
             set i=0
             loop
                 exitwhen i == 4
-                call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Other\\ToonBoom\\ToonBoom.mdl" ), (( GetUnitX(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]) )*1.0), (( GetUnitY(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]))*1.0))) // INLINED!!
-                call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" ), (( GetUnitX(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]) )*1.0), (( GetUnitY(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("Objects\\Spawnmodels\\Other\\ToonBoom\\ToonBoom.mdl" , GetUnitX(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]) , GetUnitY(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]))
+                call AddSpecialEffectEx("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" , GetUnitX(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]) , GetUnitY(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]))
                 call RecycleUnit(s__ScrollOfTeleportScope__anbus[(id)*(1)+i])
                 set s__ScrollOfTeleportScope__anbus[(id)*(1)+i]= null
                 set i=i + 1
@@ -21627,9 +21700,9 @@ endfunction
     endfunction 
     
     function s__ScrollOfTeleport_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__ScrollOfTeleport_SPELL_ID ) , Filter(( function s__ScrollOfTeleport_actions))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_FINISH ) , Filter(( function s__ScrollOfTeleport_finish))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_ENDCAST ) , Filter(( function s__ScrollOfTeleport_finish))) // INLINED!!
+        call RegisterSpellEffectEvent(s__ScrollOfTeleport_SPELL_ID , function s__ScrollOfTeleport_actions)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_FINISH , function s__ScrollOfTeleport_finish)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_ENDCAST , function s__ScrollOfTeleport_finish)
     endfunction 
     
 // scope ScrollOfTeleportScope ends
@@ -21659,9 +21732,9 @@ endfunction
     endfunction 
 
     function s__BunshinStoneNew_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2(('AIfu' ) , Filter(( function s__BunshinStoneNew_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0RN' ) , Filter(( function s__BunshinStoneNew_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0RO' ) , Filter(( function s__BunshinStoneNew_actions))) // INLINED!!
+        call RegisterSpellEffectEvent('AIfu' , function s__BunshinStoneNew_actions)
+        call RegisterSpellEffectEvent('A0RN' , function s__BunshinStoneNew_actions)
+        call RegisterSpellEffectEvent('A0RO' , function s__BunshinStoneNew_actions)
     endfunction 
 
 //===========================================================================
@@ -21701,9 +21774,9 @@ endfunction
         call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 1.0)
             loop
                 exitwhen i > 1
-                set x=(((GetSpellTargetX() )*1.0) + Cos((( Deg2Rad(36 * i) )*1.0)) * (( 100.0)*1.0)) // INLINED!!
-                set y=(((GetSpellTargetY() )*1.0) + Sin((( Deg2Rad(36 * i) )*1.0)) * (( 100.0)*1.0)) // INLINED!!
-                call DestroyEffect(AddSpecialEffect(("ByakuganHitEffect.mdx" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                set x=GetPolarX(GetSpellTargetX() , Deg2Rad(36 * i) , 100.0)
+                set y=GetPolarY(GetSpellTargetY() , Deg2Rad(36 * i) , 100.0)
+                call AddSpecialEffectEx("ByakuganHitEffect.mdx" , x , y)
         set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(GetTriggerUnit()), 'z009', x, y, 24 * i)
         call SetUnitScale(bj_lastCreatedUnit, 3, 0, 0)
         call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 0.01)
@@ -21729,7 +21802,7 @@ endfunction
     endfunction 
     
     function s__ItemShikiFuujin_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__ItemShikiFuujin_SPELL_ID ) , Filter(( function s__ItemShikiFuujin_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__ItemShikiFuujin_SPELL_ID , function s__ItemShikiFuujin_actions)
     endfunction 
     
 //===========================================================================
@@ -21753,9 +21826,9 @@ function Trig_SuddenIceStorm_Actions takes nothing returns nothing
         set i=1
         loop
             exitwhen i > 7
-            set new_x=(((x )*1.0) + Cos((( angle )*1.0)) * (( 100 * i)*1.0)) // INLINED!!
-            set new_y=(((y )*1.0) + Sin((( angle )*1.0)) * (( 100 * i)*1.0)) // INLINED!!
-            call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
+            set new_x=GetPolarX(x , angle , 100 * i)
+            set new_y=GetPolarY(y , angle , 100 * i)
+            call AddSpecialEffectEx("Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl" , new_x , new_y)
             set bj_lastCreatedGroup=CreateGroup()
             call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 220.0, null)
             loop
@@ -21783,9 +21856,9 @@ function Trig_SuddenIceStorm_Actions takes nothing returns nothing
             set i=1
             loop
                 exitwhen i > 7
-                set new_x=(((x )*1.0) + Cos((( angle + Deg2Rad(- 60 + 12 * j) )*1.0)) * (( 100 * i)*1.0)) // INLINED!!
-                set new_y=(((y )*1.0) + Sin((( angle + Deg2Rad(- 60 + 12 * j) )*1.0)) * (( 100 * i)*1.0)) // INLINED!!
-                call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
+                set new_x=GetPolarX(x , angle + Deg2Rad(- 60 + 12 * j) , 100 * i)
+                set new_y=GetPolarY(y , angle + Deg2Rad(- 60 + 12 * j) , 100 * i)
+                call AddSpecialEffectEx("Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl" , new_x , new_y)
                 set bj_lastCreatedGroup=CreateGroup()
                 call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 220.0, null)
                 loop
@@ -21809,7 +21882,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_SuddenIceStorm takes nothing returns nothing
-    call RegisterSpellEffectEvent2(('A0GV' ) , Filter(( function Trig_SuddenIceStorm_Actions))) // INLINED!!
+    call RegisterSpellEffectEvent('A0GV' , function Trig_SuddenIceStorm_Actions)
 endfunction
 
 
@@ -21825,7 +21898,7 @@ endfunction
 			else
 				call BlzEndUnitAbilityCooldown(GetTriggerUnit(), s__s__HeavenSwordActive_spells[GetPlayerId(GetTriggerPlayer())])
 			endif
-			call DestroyEffect(AddSpecialEffect(("war3mapImported\\Heal.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+			call AddSpecialEffectEx("war3mapImported\\Heal.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
 			set bj_lastCreatedUnit=CreateUnit(GetTriggerPlayer(), 'e06N', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 270)
 			call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 1.0)
 		endif
@@ -21841,7 +21914,7 @@ endfunction
   local trigger t= CreateTrigger()
     		call TriggerRegisterAnyUnitEventBJ(t, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     		call TriggerAddAction(t, function s__HeavenSwordActive_spell)
-		call RegisterSpellEffectEvent2(('A190' ) , Filter(( function s__HeavenSwordActive_actions))) // INLINED!!
+		call RegisterSpellEffectEvent('A190' , function s__HeavenSwordActive_actions)
  endfunction 
 
 
@@ -21887,7 +21960,7 @@ endfunction
         endfunction
         
         function s__AdamantineStaffActive__Spell_delay2 takes nothing returns nothing
-            local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            local integer this= GetTimerData(GetExpiredTimer())
             local real new_x
             local real new_y
             local real angle
@@ -21901,7 +21974,7 @@ endfunction
                 set angle=6 * i
                 set new_x=s__AdamantineStaffActive__Spell_target_x[this] + Cos(angle) * 350
                 set new_y=s__AdamantineStaffActive__Spell_target_y[this] + Sin(angle) * 350
-                call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
+                call AddSpecialEffectEx("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl" , new_x , new_y)
             endloop
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(s__AdamantineStaffActive__Spell_g[this])
@@ -21918,7 +21991,7 @@ endfunction
         endfunction
         
         function s__AdamantineStaffActive__Spell_delay1 takes nothing returns nothing
-            local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            local integer this= GetTimerData(GetExpiredTimer())
             local real new_x
             local real new_y
             local real angle
@@ -21933,7 +22006,7 @@ endfunction
                 set angle=6 * i
                 set new_x=s__AdamantineStaffActive__Spell_target_x[this] + Cos(angle) * 350
                 set new_y=s__AdamantineStaffActive__Spell_target_y[this] + Sin(angle) * 350
-                call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
+                call AddSpecialEffectEx("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl" , new_x , new_y)
             endloop
             call TimerStartEx(NewTimerEx(this) , 2.0 , false , function s__AdamantineStaffActive__Spell_delay2 , "AdamantineStaff_delay2")
             call ReleaseTimer(GetExpiredTimer())
@@ -21969,7 +22042,7 @@ endfunction
         endfunction
         
         function s__AdamantineStaffActive__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2((s__AdamantineStaffActive__Spell_SPELL_ID ) , Filter(( function s__AdamantineStaffActive__Spell_actions))) // INLINED!!
+            call RegisterSpellEffectEvent(s__AdamantineStaffActive__Spell_SPELL_ID , function s__AdamantineStaffActive__Spell_actions)
         endfunction
         
     
@@ -22018,7 +22091,7 @@ endfunction
  endfunction
 
  function s__ExecutionBlade_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
 		set s__ExecutionBlade_count[this]=s__ExecutionBlade_count[this] + 0.03
 		if RectContainsUnit(gg_rct_duel_area, s__ExecutionBlade_target[this]) and not s__ExecutionBlade_duel[this] then
 			set s__ExecutionBlade_duel[this]=true
@@ -22036,7 +22109,7 @@ endfunction
  endfunction
 
     function s__ExecutionBlade_finish takes nothing returns nothing
-	set udg_Execution[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]=null // INLINED!!
+	set udg_Execution[GetTimerData(GetExpiredTimer())]=null
 	call ReleaseTimer(GetExpiredTimer())
     endfunction 
 
@@ -22052,26 +22125,26 @@ endfunction
     endfunction 
 
     function s__ExecutionBlade_death takes nothing returns nothing
-	if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true and not IsUnitIllusion(GetTriggerUnit()) and GetUnitTypeId(GetTriggerUnit()) != 'H05O' and GetUnitTypeId(GetTriggerUnit()) != 'U009' and GetUnitTypeId(GetTriggerUnit()) != 'N00Q' and (UnitHasItemOfTypeBJ((GetKillingUnit() ), ( 'I057'))) and IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO) == true then // INLINED!!
+	if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true and not IsUnitIllusion(GetTriggerUnit()) and GetUnitTypeId(GetTriggerUnit()) != 'H05O' and GetUnitTypeId(GetTriggerUnit()) != 'U009' and GetUnitTypeId(GetTriggerUnit()) != 'N00Q' and UnitHasItemEx(GetKillingUnit() , 'I057') and IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO) == true then
 		set s__s__ExecutionBlade_stats[GetPlayerId(GetOwningPlayer(GetKillingUnit()))]= s__s__ExecutionBlade_stats[GetPlayerId(GetOwningPlayer(GetKillingUnit()))] + 2
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetKillingUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetKillingUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_INT, GetKillingUnit(), bj_MODIFYMETHOD_ADD, 2)
-		call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl" ), (( GetUnitX(GetKillingUnit()) )*1.0), (( GetUnitY(GetKillingUnit()))*1.0))) // INLINED!!
+		call AddSpecialEffectEx("Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl" , GetUnitX(GetKillingUnit()) , GetUnitY(GetKillingUnit()))
 	endif
 	if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true and not IsUnitIllusion(GetTriggerUnit()) and GetTriggerUnit() == udg_Execution[GetPlayerId(GetOwningPlayer(GetKillingUnit()))] then
 		call SetUnitState(GetKillingUnit(), UNIT_STATE_LIFE, GetUnitState(GetKillingUnit(), UNIT_STATE_LIFE) + GetUnitState(GetKillingUnit(), UNIT_STATE_MAX_LIFE) * 0.3)
 		call SetUnitState(GetKillingUnit(), UNIT_STATE_MANA, GetUnitState(GetKillingUnit(), UNIT_STATE_MANA) + GetUnitState(GetKillingUnit(), UNIT_STATE_MAX_MANA) * 0.3)
-		call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Undead\\UndeadDissipate\\UndeadDissipate.mdl" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+		call AddSpecialEffectEx("Objects\\Spawnmodels\\Undead\\UndeadDissipate\\UndeadDissipate.mdl" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
 		set udg_Execution[GetPlayerId(GetOwningPlayer(GetKillingUnit()))]=null
 	endif
     endfunction 
 
     function s__ExecutionBlade_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__ExecutionBlade_death))) // INLINED!!
-	call RegisterSpellEffectEvent2(('A0SF' ) , Filter(( function s__ExecutionBlade_actions))) // INLINED!!
-    	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__ExecutionBlade_equip))) // INLINED!!
-    	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__ExecutionBlade_unequip))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__ExecutionBlade_death)
+	call RegisterSpellEffectEvent('A0SF' , function s__ExecutionBlade_actions)
+    	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__ExecutionBlade_equip)
+    	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__ExecutionBlade_unequip)
     endfunction 
     
 
@@ -22109,12 +22182,12 @@ function s__ThunderKusanagi_prevent takes nothing returns nothing
         call SetUnitAbilityLevel(bj_lastCreatedUnit, 'A0SI', 2)
         call IssueTargetOrder(bj_lastCreatedUnit, "entanglingroots", GetTriggerUnit())
         call UnitRemoveBuffs(GetSpellTargetUnit(), true, false)
-        call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Orc\\Purge\\PurgeBuffTarget.mdl" ), (( GetUnitX(GetSpellTargetUnit()) )*1.0), (( GetUnitY(GetSpellTargetUnit()))*1.0))) // INLINED!!
+        call AddSpecialEffectEx("Abilities\\Spells\\Orc\\Purge\\PurgeBuffTarget.mdl" , GetUnitX(GetSpellTargetUnit()) , GetUnitY(GetSpellTargetUnit()))
     endif
 endfunction
 
  function s__ThunderKusanagi_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
 		set s__ThunderKusanagi_count[this]=s__ThunderKusanagi_count[this] + 1
 		if s__ThunderKusanagi_count[this] == 7 then
 			call s__ThunderKusanagi_deallocate(this)
@@ -22136,8 +22209,8 @@ endfunction
  endfunction 
 
  function s__ThunderKusanagi_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2(('A0YX' ) , Filter(( function s__ThunderKusanagi_actions))) // INLINED!!
-    		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_SPELL_EFFECT ) , Filter(( function s__ThunderKusanagi_prevent))) // INLINED!!
+		call RegisterSpellEffectEvent('A0YX' , function s__ThunderKusanagi_actions)
+    		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_EFFECT , function s__ThunderKusanagi_prevent)
  endfunction 
 
 //===========================================================================
@@ -22168,15 +22241,15 @@ endfunction
         endfunction
 
  function s__NewKusanagiStrike_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
   local real x= GetUnitX(s__NewKusanagiStrike_kusanagi[this])
   local real y= GetUnitY(s__NewKusanagiStrike_kusanagi[this])
-  local real new_x= (((x )*1.0) + Cos((( s__NewKusanagiStrike_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
-  local real new_y= (((y )*1.0) + Sin((( s__NewKusanagiStrike_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
+  local real new_x= GetPolarX(x , s__NewKusanagiStrike_angle[this] , 25)
+  local real new_y= GetPolarY(y , s__NewKusanagiStrike_angle[this] , 25)
 		call SetUnitX(s__NewKusanagiStrike_kusanagi[this], new_x)
 		call SetUnitY(s__NewKusanagiStrike_kusanagi[this], new_y)
 		if ModuloInteger(s__NewKusanagiStrike_count[this], 3) == 0 then
-            		call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+            		call AddSpecialEffectEx("Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl" , x , y)
         	endif
 		set s__NewKusanagiStrike_count[this]=s__NewKusanagiStrike_count[this] + 1
 		set bj_lastCreatedGroup=CreateGroup()
@@ -22187,7 +22260,7 @@ endfunction
 			if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NewKusanagiStrike_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_HERO) == true then
 				call UnitDamageTarget(s__NewKusanagiStrike_caster[this], bj_lastCreatedUnit, 300, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
 				call StunUnitTimed(s__NewKusanagiStrike_caster[this] , bj_lastCreatedUnit , 2.0)
-				call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
+				call AddSpecialEffectEx("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
 				set s__NewKusanagiStrike_count[this]=33
 				exitwhen true
 			endif
@@ -22213,7 +22286,7 @@ endfunction
  endfunction 
 
  function s__NewKusanagiStrike_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2((s__NewKusanagiStrike_SPELL_ID ) , Filter(( function s__NewKusanagiStrike_actions))) // INLINED!!
+		call RegisterSpellEffectEvent(s__NewKusanagiStrike_SPELL_ID , function s__NewKusanagiStrike_actions)
  endfunction 
 
 //===========================================================================
@@ -22251,9 +22324,9 @@ endfunction
      local integer this= s__LightKusanagi_allocate()
             loop
                 exitwhen i > 1
-                set x=(((GetSpellTargetX() )*1.0) + Cos((( Deg2Rad(36 * i) )*1.0)) * (( 100.0)*1.0)) // INLINED!!
-                set y=(((GetSpellTargetY() )*1.0) + Sin((( Deg2Rad(36 * i) )*1.0)) * (( 100.0)*1.0)) // INLINED!!
-                call DestroyEffect(AddSpecialEffect(("war3mapImported\\LightNova.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                set x=GetPolarX(GetSpellTargetX() , Deg2Rad(36 * i) , 100.0)
+                set y=GetPolarY(GetSpellTargetY() , Deg2Rad(36 * i) , 100.0)
+                call AddSpecialEffectEx("war3mapImported\\LightNova.mdl" , x , y)
                 set i=i + 1
             endloop
             set bj_lastCreatedGroup=CreateGroup()
@@ -22273,7 +22346,7 @@ endfunction
  endfunction 
 	
  function s__LightKusanagi_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2((s__LightKusanagi_SPELL_ID ) , Filter(( function s__LightKusanagi_actions))) // INLINED!!
+		call RegisterSpellEffectEvent(s__LightKusanagi_SPELL_ID , function s__LightKusanagi_actions)
  endfunction 
 	
 
@@ -22292,17 +22365,17 @@ endfunction
             set i=0
             loop
                 exitwhen i >= R2I(distance / 30)
-                set x=(((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( angle )*1.0)) * (( 30 * i)*1.0)) // INLINED!!
-                set y=(((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( angle )*1.0)) * (( 30 * i)*1.0)) // INLINED!!
-                call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                set x=GetPolarX(GetUnitX(GetTriggerUnit()) , angle , 30 * i)
+                set y=GetPolarY(GetUnitY(GetTriggerUnit()) , angle , 30 * i)
+                call AddSpecialEffectEx("Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl" , x , y)
                 set i=i + 1
             endloop
             set i=0
             loop
                 exitwhen i > 18
-                set x=(((GetUnitX(GetSpellTargetUnit()) )*1.0) + Cos((( Deg2Rad(20 * i) )*1.0)) * (( 300)*1.0)) // INLINED!!
-                set y=(((GetUnitY(GetSpellTargetUnit()) )*1.0) + Sin((( Deg2Rad(20 * i) )*1.0)) * (( 300)*1.0)) // INLINED!!
-                call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                set x=GetPolarX(GetUnitX(GetSpellTargetUnit()) , Deg2Rad(20 * i) , 300)
+                set y=GetPolarY(GetUnitY(GetSpellTargetUnit()) , Deg2Rad(20 * i) , 300)
+                call AddSpecialEffectEx("Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl" , x , y)
                 set i=i + 1
             endloop
             set bj_lastCreatedGroup=CreateGroup()
@@ -22319,7 +22392,7 @@ endfunction
         endfunction 
         
         function s__FireKusanagi_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2(('A005' ) , Filter(( function s__FireKusanagi_actions))) // INLINED!!
+            call RegisterSpellEffectEvent('A005' , function s__FireKusanagi_actions)
         endfunction
         
     
@@ -22335,9 +22408,9 @@ endfunction
             local unit u
             loop
                 exitwhen i > 40
-                set x=(((GetSpellTargetX() )*1.0) + Cos((( Deg2Rad(36 * i) )*1.0)) * (( 1000.0)*1.0)) // INLINED!!
-                set y=(((GetSpellTargetY() )*1.0) + Sin((( Deg2Rad(36 * i) )*1.0)) * (( 1000.0)*1.0)) // INLINED!!
-                set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'n021' ), (( GetSpellTargetX() )*1.0), (( GetSpellTargetY() )*1.0), (( 36 * i)*1.0))) // INLINED!!
+                set x=GetPolarX(GetSpellTargetX() , Deg2Rad(36 * i) , 1000.0)
+                set y=GetPolarY(GetSpellTargetY() , Deg2Rad(36 * i) , 1000.0)
+                set bj_lastCreatedUnit=GetUnit(GetTriggerPlayer() , 'n021' , GetSpellTargetX() , GetSpellTargetY() , 36 * i)
                 call SetUnitFlyHeight(bj_lastCreatedUnit, 12 * i, 18 * i)
                 call SetUnitScale(bj_lastCreatedUnit, 1, 1, 1)
                 call IssuePointOrder(bj_lastCreatedUnit, "move", x, y)
@@ -22361,7 +22434,7 @@ endfunction
         endfunction 
         
         function s__IceKusanagi_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2(('Asta' ) , Filter(( function s__IceKusanagi_actions))) // INLINED!!
+            call RegisterSpellEffectEvent('Asta' , function s__IceKusanagi_actions)
         endfunction
         
     
@@ -22403,19 +22476,19 @@ endfunction
     endfunction 
     
     function s__EarthPierce_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         local real x= GetUnitX(s__EarthPierce_rock[this])
         local real y= GetUnitY(s__EarthPierce_rock[this])
-        local real new_x= (((x )*1.0) + Cos((( s__EarthPierce_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
-        local real new_y= (((y )*1.0) + Sin((( s__EarthPierce_angle[this] )*1.0)) * (( 30)*1.0)) // INLINED!!
+        local real new_x= GetPolarX(x , s__EarthPierce_angle[this] , 30)
+        local real new_y= GetPolarY(y , s__EarthPierce_angle[this] , 30)
         local real enemy_x
         local real enemy_y
  local integer maxCount
         local unit u
  local real xball= GetUnitX(s__EarthPierce_rock[this])
         local real yball= GetUnitY(s__EarthPierce_rock[this])
-        local real new_xball= (((x )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__EarthPierce_rock[this])) )*1.0)) * (( 30)*1.0)) // INLINED!!
-        local real new_yball= (((y )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__EarthPierce_rock[this])) )*1.0)) * (( 30)*1.0)) // INLINED!!
+        local real new_xball= GetPolarX(x , Deg2Rad(GetUnitFacing(s__EarthPierce_rock[this])) , 30)
+        local real new_yball= GetPolarY(y , Deg2Rad(GetUnitFacing(s__EarthPierce_rock[this])) , 30)
         call SetUnitX(s__EarthPierce_rock[this], new_xball)
         call SetUnitY(s__EarthPierce_rock[this], new_yball)
        //call AddSpecialEffectEx("Effects\\s_Earth_Smash.mdl", x, y)
@@ -22469,7 +22542,7 @@ endfunction
     endfunction
     
     function s__EarthPierce_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__EarthPierce_SPELL_ID ) , Filter(( function s__EarthPierce_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__EarthPierce_SPELL_ID , function s__EarthPierce_actions)
     endfunction 
     
 //===========================================================================
@@ -22482,12 +22555,12 @@ endfunction
             local real x
             local real y
             local unit u
-            call DestroyEffect(AddSpecialEffect(("war3mapImported\\DarkNova.mdx" ), (( GetSpellTargetX() )*1.0), (( GetSpellTargetY())*1.0))) // INLINED!!
+            call AddSpecialEffectEx("war3mapImported\\DarkNova.mdx" , GetSpellTargetX() , GetSpellTargetY())
             loop
                 exitwhen i > 12
-                set x=(((GetSpellTargetX() )*1.0) + Cos((( Deg2Rad(36 * i) )*1.0)) * (( 100.0)*1.0)) // INLINED!!
-                set y=(((GetSpellTargetY() )*1.0) + Sin((( Deg2Rad(36 * i) )*1.0)) * (( 100.0)*1.0)) // INLINED!!
-                call DestroyEffect(AddSpecialEffect(("war3mapImported\\DarkNova.mdx" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
+                set x=GetPolarX(GetSpellTargetX() , Deg2Rad(36 * i) , 100.0)
+                set y=GetPolarY(GetSpellTargetY() , Deg2Rad(36 * i) , 100.0)
+                call AddSpecialEffectEx("war3mapImported\\DarkNova.mdx" , x , y)
                 set i=i + 1
             endloop
             set bj_lastCreatedGroup=CreateGroup()
@@ -22507,7 +22580,7 @@ endfunction
         endfunction 
         
         function s__DarkKusanagi_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2(('A0TD' ) , Filter(( function s__DarkKusanagi_actions))) // INLINED!!
+            call RegisterSpellEffectEvent('A0TD' , function s__DarkKusanagi_actions)
         endfunction
         
     
@@ -22539,7 +22612,7 @@ endfunction
         endfunction
 
  function s__WindKusa_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
   local real angle
   local real new_x
   local real new_y
@@ -22570,9 +22643,9 @@ endfunction
                 		//call AddSpecialEffectEx("war3mapImported\\Windwalk.mdl", GetUnitX(bj_lastCreatedUnit), GetUnitY(bj_lastCreatedUnit)) 
 				if not IsUnitInGroup(bj_lastCreatedUnit, s__WindKusa_damaged[this]) then
 					call GroupAddUnit(s__WindKusa_damaged[this], bj_lastCreatedUnit)
-					set s__s__WindKusa_counts[(GetUnitUserData((bj_lastCreatedUnit)))]= 0 // INLINED!!
+					set s__s__WindKusa_counts[GetUnitId(bj_lastCreatedUnit)]= 0
 				else
-					set s__s__WindKusa_counts[(GetUnitUserData((bj_lastCreatedUnit)))]= s__s__WindKusa_counts[(GetUnitUserData((bj_lastCreatedUnit)))] + 1 // INLINED!!
+					set s__s__WindKusa_counts[GetUnitId(bj_lastCreatedUnit)]= s__s__WindKusa_counts[GetUnitId(bj_lastCreatedUnit)] + 1
 						//call EsnareUnitTimed(this.caster, bj_lastCreatedUnit, 2.0)
 				endif
 			endif
@@ -22606,7 +22679,7 @@ endfunction
  endfunction 
 
  function s__WindKusa_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2((s__WindKusa_SPELL_ID ) , Filter(( function s__WindKusa_actions))) // INLINED!!
+		call RegisterSpellEffectEvent(s__WindKusa_SPELL_ID , function s__WindKusa_actions)
  endfunction
 
 //===========================================================================
@@ -22655,7 +22728,7 @@ endfunction
  endfunction
 
     function s__Shichiseiken_death takes nothing returns nothing
-        if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true and not IsUnitIllusion(GetTriggerUnit()) and GetUnitTypeId(GetTriggerUnit()) != 'H05O' and GetUnitTypeId(GetTriggerUnit()) != 'U009' and GetUnitTypeId(GetTriggerUnit()) != 'N00Q' and (UnitHasItemOfTypeBJ((GetKillingUnit() ), ( 'I07J'))) and IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO) == true then // INLINED!!
+        if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true and not IsUnitIllusion(GetTriggerUnit()) and GetUnitTypeId(GetTriggerUnit()) != 'H05O' and GetUnitTypeId(GetTriggerUnit()) != 'U009' and GetUnitTypeId(GetTriggerUnit()) != 'N00Q' and UnitHasItemEx(GetKillingUnit() , 'I07J') and IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO) == true then
             if s__s__Shichiseiken_casters[GetPlayerId(GetOwningPlayer(GetKillingUnit()))] == GetKillingUnit() and s__s__Shichiseiken_targets[GetPlayerId(GetOwningPlayer(GetKillingUnit()))] == GetTriggerUnit() then
                 set s__s__Shichiseiken_stats[GetPlayerId(GetOwningPlayer(GetKillingUnit()))]= s__s__Shichiseiken_stats[GetPlayerId(GetOwningPlayer(GetKillingUnit()))] + 8
 		if GetHeroStr(GetKillingUnit(), true) > GetHeroAgi(GetKillingUnit(), true) and GetHeroStr(GetKillingUnit(), true) > GetHeroInt(GetKillingUnit(), true) then
@@ -22671,13 +22744,13 @@ endfunction
                 	call ModifyHeroStat(bj_HEROSTAT_AGI, GetKillingUnit(), bj_MODIFYMETHOD_ADD, 8)
                 	call ModifyHeroStat(bj_HEROSTAT_INT, GetKillingUnit(), bj_MODIFYMETHOD_ADD, 6)
 		endif
-                call DestroyEffect(AddSpecialEffect(("war3mapImported\\Heal.mdx" ), (( GetUnitX(GetKillingUnit()) )*1.0), (( GetUnitY(GetKillingUnit()))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("war3mapImported\\Heal.mdx" , GetUnitX(GetKillingUnit()) , GetUnitY(GetKillingUnit()))
             endif
         endif
     endfunction 
 
     function s__Shichiseiken_periodic takes nothing returns nothing
-        local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer id= GetTimerData(GetExpiredTimer())
 	set s__s__Shichiseiken_timers[id]= s__s__Shichiseiken_timers[id] + 0.1
 	if GetWidgetLife(s__s__Shichiseiken_targets[id]) < 0.405 or GetWidgetLife(s__s__Shichiseiken_casters[id]) < 0.405 or s__s__Shichiseiken_timers[id] == 3 or IsUnitIllusion(s__s__Shichiseiken_targets[id]) then
 	    call DestroyEffect(s__s__Shichiseiken_effect[id])
@@ -22721,10 +22794,10 @@ endfunction
             set s__s__Shichiseiken_targets[i]= null
             set i=i + 1
         endloop
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__Shichiseiken_death))) // INLINED!!
-	    call RegisterSpellEffectEvent2(('A199' ) , Filter(( function s__Shichiseiken_actions))) // INLINED!!
-    	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__Shichiseiken_equip))) // INLINED!!
-    	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__Shichiseiken_unequip))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__Shichiseiken_death)
+	    call RegisterSpellEffectEvent('A199' , function s__Shichiseiken_actions)
+    	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__Shichiseiken_equip)
+    	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__Shichiseiken_unequip)
     endfunction 
     
 //===========================================================================
@@ -22755,12 +22828,12 @@ endfunction
         endfunction
 
  function s__NewHidanScythe_pull takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
   local real x= GetUnitX(s__NewHidanScythe_scythe[this])
   local real y= GetUnitY(s__NewHidanScythe_scythe[this])
   local real new_angle= Atan3(x , y , GetUnitX(s__NewHidanScythe_caster[this]) , GetUnitY(s__NewHidanScythe_caster[this]))
-  local real new_x= (((x )*1.0) + Cos((( new_angle )*1.0)) * (( 25)*1.0)) // INLINED!!
-  local real new_y= (((y )*1.0) + Sin((( new_angle )*1.0)) * (( 25)*1.0)) // INLINED!!
+  local real new_x= GetPolarX(x , new_angle , 25)
+  local real new_y= GetPolarY(y , new_angle , 25)
 		call SetUnitX(s__NewHidanScythe_scythe[this], new_x)
 		call SetUnitY(s__NewHidanScythe_scythe[this], new_y)
 		if s__NewHidanScythe_target[this] != null then
@@ -22772,18 +22845,18 @@ endfunction
 			call ShowUnit(s__NewHidanScythe_scythe[this], false)
 			set s__NewHidanScythe_scythe[this]=null
 			set s__NewHidanScythe_target[this]=null
-			call s__Lightning_release((s__NewHidanScythe_l[this]),0.) // INLINED!!
+			call s__Lightning_destroy(s__NewHidanScythe_l[this])
 			call s__NewHidanScythe_deallocate(this)
 			call ReleaseTimer(GetExpiredTimer())
 		endif
  endfunction 
 
  function s__NewHidanScythe_periodic takes nothing returns nothing
-  local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer this= GetTimerData(GetExpiredTimer())
   local real x= GetUnitX(s__NewHidanScythe_scythe[this])
   local real y= GetUnitY(s__NewHidanScythe_scythe[this])
-  local real new_x= (((x )*1.0) + Cos((( s__NewHidanScythe_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
-  local real new_y= (((y )*1.0) + Sin((( s__NewHidanScythe_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
+  local real new_x= GetPolarX(x , s__NewHidanScythe_angle[this] , 25)
+  local real new_y= GetPolarY(y , s__NewHidanScythe_angle[this] , 25)
   local unit u
 		call SetUnitX(s__NewHidanScythe_scythe[this], new_x)
 		call SetUnitY(s__NewHidanScythe_scythe[this], new_y)
@@ -22827,7 +22900,7 @@ endfunction
  endfunction 
 
  function s__NewHidanScythe_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2((s__NewHidanScythe_SPELL_ID ) , Filter(( function s__NewHidanScythe_actions))) // INLINED!!
+		call RegisterSpellEffectEvent(s__NewHidanScythe_SPELL_ID , function s__NewHidanScythe_actions)
  endfunction 
 
 //===========================================================================
@@ -22859,7 +22932,7 @@ endfunction
     
 
     function s__ZetsuRing_finish takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
     	call s__ZetsuRing_deallocate(this)
         call ReleaseTimer(GetExpiredTimer())
     endfunction
@@ -22867,7 +22940,7 @@ endfunction
     
     function s__ZetsuRing_actions takes nothing returns nothing
         local integer this= s__ZetsuRing_allocate()
-    	set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(GetTriggerUnit()) ), ( 'n03E' ), (( GetSpellTargetX() )*1.0), (( GetSpellTargetY() )*1.0), (( 270.0)*1.0))) // INLINED!!
+    	set bj_lastCreatedUnit=GetUnit(GetOwningPlayer(GetTriggerUnit()) , 'n03E' , GetSpellTargetX() , GetSpellTargetY() , 270.0)
         call UnitAddAbility(bj_lastCreatedUnit, 'Apiv')
     	call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 30.0)
 	call SetUnitAnimation(bj_lastCreatedUnit, "Stand Alternate")
@@ -22875,7 +22948,7 @@ endfunction
     endfunction 
     
     function s__ZetsuRing_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__ZetsuRing_SPELL_ID ) , Filter(( function s__ZetsuRing_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__ZetsuRing_SPELL_ID , function s__ZetsuRing_actions)
     endfunction 
     
 //===========================================================================
@@ -22914,12 +22987,12 @@ endfunction
     endfunction
 
     function s__ItachiRingActive_delay takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         call s__ItachiRingActive_destroy(this)
     endfunction
     
     function s__ItachiRingActive_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         call TimerStart(NewTimerEx(this), 10.0, true, function s__ItachiRingActive_delay)
 	if GetWidgetLife(s__ItachiRingActive_target[this]) < 0.405 then
 		call s__ItachiRingActive_destroy(this)
@@ -22935,7 +23008,7 @@ endfunction
     endfunction
     
     function s__ItachiRingActive_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2((s__ItachiRingActive_SPELL_ID ) , Filter(( function s__ItachiRingActive_actions))) // INLINED!!
+        call RegisterSpellEffectEvent(s__ItachiRingActive_SPELL_ID , function s__ItachiRingActive_actions)
     endfunction
     
 //===========================================================================
@@ -22969,15 +23042,15 @@ endfunction
 function Trig_TobiramaItemLegendary_SpaceBarrier_Action takes nothing returns nothing
     set udg_Barrier_Count=0
     set udg_Barrier_Caster=GetTriggerUnit()
-    set udg_Barrier_Dummy=(CreateUnit((GetTriggerPlayer() ), ( 'h01O' ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()) )*1.0), (( 270)*1.0))) // INLINED!!
-    call TimerStartEx((NewTimerEx(0)) , 0.03 , true , function Trig_TobiramaItemLegendary_SpaceBarrier_Periodic , "Trig_TobiramaItemLegendary_SpaceBarrier_Periodic") // INLINED!!
+    set udg_Barrier_Dummy=GetUnit(GetTriggerPlayer() , 'h01O' , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , 270)
+    call TimerStartEx(NewTimer() , 0.03 , true , function Trig_TobiramaItemLegendary_SpaceBarrier_Periodic , "Trig_TobiramaItemLegendary_SpaceBarrier_Periodic")
 endfunction
 
 //===========================================================================
 function InitTrig_TobiramaItemLegendary takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_TobiramaItemLegendary_Actions))) // INLINED!!
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_TobiramaItemLegendary_Restriction))) // INLINED!!
-    call RegisterSpellEffectEvent2(('A0DX' ) , Filter(( function Trig_TobiramaItemLegendary_SpaceBarrier_Action))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_TobiramaItemLegendary_Actions)
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_TobiramaItemLegendary_Restriction)
+    call RegisterSpellEffectEvent('A0DX' , function Trig_TobiramaItemLegendary_SpaceBarrier_Action)
 endfunction
 
 
@@ -22999,8 +23072,8 @@ endfunction
 
 //===========================================================================
 function InitTrig_NarutoItemLegendary takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_NarutoItemLegendaryON_Actions))) // INLINED!!
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function Trig_NarutoItemLegendaryOFF_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_NarutoItemLegendaryON_Actions)
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function Trig_NarutoItemLegendaryOFF_Actions)
 endfunction
 
 
@@ -23027,8 +23100,8 @@ endfunction
 
 //===========================================================================
 function InitTrig_KillerBeeItem takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_KillerBeeItemON_Actions))) // INLINED!!
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function Trig_KillerBeeItemOFF_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_KillerBeeItemON_Actions)
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function Trig_KillerBeeItemOFF_Actions)
 endfunction
 
 
@@ -23053,7 +23126,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_UniqueYataMirror takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_UniqueYataMirror_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_UniqueYataMirror_Actions)
 endfunction
 
 
@@ -23078,7 +23151,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_UniqueMedicalNinjaSet takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_UniqueMedicalNinjaSet_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_UniqueMedicalNinjaSet_Actions)
 endfunction
 
 
@@ -23110,6 +23183,1026 @@ function InitTrig_RestrictANBUMaskToOne takes nothing returns nothing
 endfunction
 
 
+//===========================================================================
+// Trigger: IchigoQ
+//===========================================================================
+
+//Implemented from module Alloc:
+    
+        function s__IchigoQ_allocate takes nothing returns integer
+            local integer this
+    
+            //call BJDebugMsg("Alloc: " + I2S(instanceCount))
+            if ( s__IchigoQ_Alloc__recycle[(0)] == 0 ) then
+                set s__IchigoQ_Alloc__instanceCount=s__IchigoQ_Alloc__instanceCount + 1
+                set this=s__IchigoQ_Alloc__instanceCount
+            else
+                set this=s__IchigoQ_Alloc__recycle[(0)]
+                set s__IchigoQ_Alloc__recycle[(0)]=s__IchigoQ_Alloc__recycle[s__IchigoQ_Alloc__recycle[(0)]]
+            endif
+
+    
+            return this
+        endfunction
+    
+        function s__IchigoQ_deallocate takes integer this returns nothing
+            set s__IchigoQ_Alloc__recycle[this]=s__IchigoQ_Alloc__recycle[(0)]
+            set s__IchigoQ_Alloc__recycle[(0)]=this
+        endfunction
+
+    function s__IchigoQ_periodic takes nothing returns nothing
+        local integer this= GetTimerData(GetExpiredTimer())
+        local real x= GetUnitX(s__IchigoQ_slash[this])
+        local real y= GetUnitY(s__IchigoQ_slash[this])
+        local real new_x= GetPolarX(x , Deg2Rad(GetUnitFacing(s__IchigoQ_slash[this])) , 24)
+        local real new_y= GetPolarY(y , Deg2Rad(GetUnitFacing(s__IchigoQ_slash[this])) , 24)
+        call SetUnitX(s__IchigoQ_slash[this], new_x)
+        call SetUnitY(s__IchigoQ_slash[this], new_y)
+
+        //set bj_lastCreatedEffect = AddSpecialEffect("war3mapImported\\bossbirth.mdl", new_x, new_y)
+        //call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 0.5)
+        //call DestroyEffect(bj_lastCreatedEffect)
+
+        set bj_lastCreatedGroup=CreateGroup()
+        call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 250, null)
+        loop
+            set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
+            exitwhen bj_lastCreatedUnit == null
+            call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
+            if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__IchigoQ_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__IchigoQ_damaged[this]) then
+                call GroupAddUnit(s__IchigoQ_damaged[this], bj_lastCreatedUnit)
+                if ( GetUnitTypeId(s__IchigoQ_caster[this]) == 'U00A' or GetUnitAbilityLevel(s__IchigoQ_caster[this], 'B067') > 0 or GetUnitTypeId(s__IchigoQ_caster[this]) == 'U00G' ) then
+                    call UnitDamageTarget(s__IchigoQ_caster[this], bj_lastCreatedUnit, ( 0.3 * GetHeroInt(s__IchigoQ_caster[this], true) + 0.3 * GetHeroStr(s__IchigoQ_caster[this], true) + 0.8 * GetHeroAgi(s__IchigoQ_caster[this], true) ) * GetUnitAbilityLevel(s__IchigoQ_caster[this], s__IchigoQ_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                else
+                    call UnitDamageTarget(s__IchigoQ_caster[this], bj_lastCreatedUnit, ( 0.2 * GetHeroInt(s__IchigoQ_caster[this], true) + 0.2 * GetHeroStr(s__IchigoQ_caster[this], true) + 0.7 * GetHeroAgi(s__IchigoQ_caster[this], true) ) * GetUnitAbilityLevel(s__IchigoQ_caster[this], s__IchigoQ_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                endif
+                if udg_integers13[GetPlayerId(GetOwningPlayer(s__IchigoQ_caster[this])) + 1] >= 15 then
+                    call UnitDamageTarget(s__IchigoQ_caster[this], bj_lastCreatedUnit, ( 0.25 * GetHeroInt(s__IchigoQ_caster[this], true) + 0.25 * GetHeroStr(s__IchigoQ_caster[this], true) + 0.5 * GetHeroAgi(s__IchigoQ_caster[this], true) ), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                endif
+                call AddSpecialEffectEx("Abilities\\Spells\\Other\\Stampede\\StampedeMissileDeath.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
+            endif
+        endloop
+        call DestroyGroup(bj_lastCreatedGroup)
+        set s__IchigoQ_count[this]=s__IchigoQ_count[this] + 1
+        if s__IchigoQ_count[this] >= 25 then
+            call KillUnit(s__IchigoQ_slash[this])
+            call ShowUnit(s__IchigoQ_slash[this], false)
+            set s__IchigoQ_slash[this]=null
+            call DestroyGroup(s__IchigoQ_damaged[this])
+            set s__IchigoQ_damaged[this]=null
+            call s__IchigoQ_deallocate(this)
+            call ReleaseTimer(GetExpiredTimer())
+        endif
+    endfunction 
+
+    function s__IchigoQ_actions takes nothing returns nothing
+        local integer this= s__IchigoQ_allocate()
+        local real angle= Atan3(GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , GetSpellTargetX() , GetSpellTargetY())
+        set s__IchigoQ_caster[this]=GetTriggerUnit()
+		if ( GetUnitTypeId(s__IchigoQ_caster[this]) == 'U00A' or GetUnitAbilityLevel(s__IchigoQ_caster[this], 'B067') > 0 or GetUnitTypeId(s__IchigoQ_caster[this]) == 'U00G' ) then
+			set s__IchigoQ_slash[this]=CreateUnit(GetTriggerPlayer(), 'h023', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), Rad2Deg(angle))
+		else
+			set s__IchigoQ_slash[this]=CreateUnit(GetTriggerPlayer(), 'h0AU', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), Rad2Deg(angle))
+		endif
+        set s__IchigoQ_damaged[this]=CreateGroup()
+        set s__IchigoQ_count[this]=0
+        call SetUnitAnimation(s__IchigoQ_caster[this], "Attack")
+	if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) and ( GetUnitTypeId(s__IchigoQ_caster[this]) == 'U00A' or GetUnitAbilityLevel(s__IchigoQ_caster[this], 'B067') > 0 or GetUnitTypeId(s__IchigoQ_caster[this]) == 'U00G' ) then
+	call PlaySoundOnUnitBJ(gg_snd_Ichigo_Q, 100.0, GetTriggerUnit())
+    	endif
+        call TimerStart(NewTimerEx(this), 0.03, true, function s__IchigoQ_periodic)
+    endfunction 
+
+    function s__IchigoQ_onInit takes nothing returns nothing
+        call RegisterSpellEffectEventForId(49 , s__IchigoQ_SPELL_ID , function s__IchigoQ_actions)
+    endfunction
+
+//===========================================================================
+// Trigger: IchigoDies
+//===========================================================================
+
+    function s__IchigoDies_dies takes nothing returns nothing
+        if GetUnitTypeId(GetTriggerUnit()) == 'U00G' then
+            call SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), 'A092', true)
+        endif
+    endfunction
+
+    function s__IchigoDies_onInit takes nothing returns nothing
+        call RegisterPlayerUnitEventForId(49 , EVENT_PLAYER_UNIT_DEATH , function s__IchigoDies_dies)
+    endfunction
+
+
+//===========================================================================
+// Trigger: IchigoW
+//===========================================================================
+
+//Implemented from module Alloc:
+    
+        function s__IchigoW_allocate takes nothing returns integer
+            local integer this
+    
+            //call BJDebugMsg("Alloc: " + I2S(instanceCount))
+            if ( s__IchigoW_Alloc__recycle[(0)] == 0 ) then
+                set s__IchigoW_Alloc__instanceCount=s__IchigoW_Alloc__instanceCount + 1
+                set this=s__IchigoW_Alloc__instanceCount
+            else
+                set this=s__IchigoW_Alloc__recycle[(0)]
+                set s__IchigoW_Alloc__recycle[(0)]=s__IchigoW_Alloc__recycle[s__IchigoW_Alloc__recycle[(0)]]
+            endif
+
+    
+            return this
+        endfunction
+    
+        function s__IchigoW_deallocate takes integer this returns nothing
+            set s__IchigoW_Alloc__recycle[this]=s__IchigoW_Alloc__recycle[(0)]
+            set s__IchigoW_Alloc__recycle[(0)]=this
+        endfunction
+    
+    function s__IchigoW_periodic takes nothing returns nothing
+        local integer this= GetTimerData(GetExpiredTimer())
+        local real x= GetUnitX(s__IchigoW_caster[this])
+        local real y= GetUnitY(s__IchigoW_caster[this])
+        local real angle= Atan3(x , y , s__IchigoW_cx[this] , s__IchigoW_cy[this])
+        local real new_x= GetPolarX(x , angle , 60)
+        local real new_y= GetPolarY(y , angle , 60)
+        local real distance= GetDistance(new_x , new_y , s__IchigoW_cx[this] , s__IchigoW_cy[this])
+        call SetUnitX(s__IchigoW_caster[this], new_x)
+        call SetUnitY(s__IchigoW_caster[this], new_y)
+        call SetUnitFacing(s__IchigoW_caster[this], Rad2Deg(angle))
+        call SetUnitX(s__IchigoW_dummy[this], new_x)
+        call SetUnitY(s__IchigoW_dummy[this], new_y)
+        call SetUnitFacing(s__IchigoW_dummy[this], Rad2Deg(angle))
+	set s__IchigoW_count2[this]=s__IchigoW_count2[this] + 1
+
+	if distance <= 50 and distance >= 25 then
+	    call ShowUnit(s__IchigoW_caster[this], true)
+	    if GetUnitTypeId(s__IchigoW_caster[this]) == 'U00G' then
+		call AddSpecialEffectEx("blackblink.mdx" , GetUnitX(s__IchigoW_caster[this]) , GetUnitY(s__IchigoW_caster[this]))
+	    else
+	      set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__IchigoW_caster[this]), 'e085', x, y, Rad2Deg(s__IchigoW_angle[this]))
+	      call SetUnitX(bj_lastCreatedUnit, x)
+              call SetUnitY(bj_lastCreatedUnit, y)
+              call SetUnitVertexColor(bj_lastCreatedUnit, 255, 255, 255, 100)
+	      call SetUnitTimeScale(bj_lastCreatedUnit, 0.5)
+	      call SetUnitAnimation(bj_lastCreatedUnit, "spell three")
+              call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 0.3)
+	    endif
+	else
+	    call ShowUnit(s__IchigoW_caster[this], false)
+	endif
+
+	    set bj_lastCreatedGroup=CreateGroup()
+	    call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 300, null)
+	    loop
+		set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
+		exitwhen bj_lastCreatedUnit == null
+		call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
+		if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__IchigoW_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false and not IsUnitInGroup(bj_lastCreatedUnit, s__IchigoW_damaged[this]) then
+			call GroupAddUnit(s__IchigoW_damaged[this], bj_lastCreatedUnit)
+			call AddSpecialEffectEx("Abilities\\Spells\\Other\\Stampede\\StampedeMissileDeath.mdl" , GetUnitX(bj_lastCreatedUnit) , GetUnitY(bj_lastCreatedUnit))
+			if ( GetUnitTypeId(s__IchigoW_caster[this]) == 'U00G' ) then
+				call UnitDamageTarget(s__IchigoW_caster[this], bj_lastCreatedUnit, 80 * GetUnitAbilityLevel(s__IchigoW_caster[this], s__IchigoW_SPELL_ID) + 3 * GetHeroAgi(s__IchigoW_caster[this], true), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+			else
+				call UnitDamageTarget(s__IchigoW_caster[this], bj_lastCreatedUnit, 80 * GetUnitAbilityLevel(s__IchigoW_caster[this], s__IchigoW_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+			endif
+			if udg_integers13[GetPlayerId(GetOwningPlayer(s__IchigoW_caster[this])) + 1] >= 15 then
+				call UnitDamageTarget(s__IchigoW_caster[this], bj_lastCreatedUnit, ( 0.25 * GetHeroInt(s__IchigoW_caster[this], true) + 0.25 * GetHeroStr(s__IchigoW_caster[this], true) + 0.5 * GetHeroAgi(s__IchigoW_caster[this], true) ), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+			endif
+			//call SetUnitAnimation(bj_lastCreatedUnit, "death")
+			//call AddSpecialEffectEx("animeslashfinal.mdx", GetUnitX(bj_lastCreatedUnit), GetUnitY(bj_lastCreatedUnit))
+		endif
+	    endloop
+	    call DestroyGroup(bj_lastCreatedGroup)
+
+	if s__IchigoW_count2[this] >= 20 then
+        	call ShowUnit(s__IchigoW_caster[this], true)
+        	//call PauseUnit(this.caster, false)
+                call SetUnitTimeScale(s__IchigoW_caster[this], 1.0)
+                call SetUnitAnimation(s__IchigoW_caster[this], "Stand")
+                call SelectUnitForPlayerSingle(s__IchigoW_caster[this], GetOwningPlayer(s__IchigoW_caster[this]))
+                call RecycleUnit(s__IchigoW_dummy[this])
+                set s__IchigoW_dummy[this]=null
+                call s__IchigoW_deallocate(this)
+                call ReleaseTimer(GetExpiredTimer())
+   	endif
+
+        if distance <= 50 then
+	    //call AddSpecialEffectEx("animeslashfinal.mdx", GetUnitX(this.caster), GetUnitY(this.caster))
+            if s__IchigoW_waves[this] == 0 then
+                set s__IchigoW_cx[this]=s__IchigoW_p2x[this]
+                set s__IchigoW_cy[this]=s__IchigoW_p2y[this]
+                set s__IchigoW_waves[this]=s__IchigoW_waves[this] + 1
+            elseif s__IchigoW_waves[this] == 1 then
+                set s__IchigoW_cx[this]=s__IchigoW_p3x[this]
+                set s__IchigoW_cy[this]=s__IchigoW_p3y[this]
+                set s__IchigoW_waves[this]=s__IchigoW_waves[this] + 1
+            elseif s__IchigoW_waves[this] == 2 then
+                set s__IchigoW_cx[this]=s__IchigoW_p4x[this]
+                set s__IchigoW_cy[this]=s__IchigoW_p4y[this]
+                set s__IchigoW_waves[this]=s__IchigoW_waves[this] + 1
+            else
+		call ShowUnit(s__IchigoW_caster[this], true)
+		//call PauseUnit(this.caster, false)
+	    	call SetUnitTimeScale(s__IchigoW_caster[this], 1.0)
+	    	call SetUnitAnimation(s__IchigoW_caster[this], "Stand")
+            	call SelectUnitForPlayerSingle(s__IchigoW_caster[this], GetOwningPlayer(s__IchigoW_caster[this]))
+
+
+
+                call RecycleUnit(s__IchigoW_dummy[this])
+                set s__IchigoW_dummy[this]=null
+                call s__IchigoW_deallocate(this)
+                call ReleaseTimer(GetExpiredTimer())
+            endif
+        endif
+    endfunction 
+    
+    function s__IchigoW_actions takes nothing returns nothing
+        local integer this= s__IchigoW_allocate()
+ local real angle= Atan3(GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , GetSpellTargetX() , GetSpellTargetY())
+ local real new_x= GetUnitX(GetTriggerUnit()) + Cos(angle) * 100
+        local real new_y= GetUnitY(GetTriggerUnit()) + Sin(angle) * 100
+        local real distance_x= new_x - GetSpellTargetX()
+        local real distance_y= new_y - GetSpellTargetY()
+        local real distance= SquareRoot(distance_x * distance_x + distance_y * distance_y)
+        set s__IchigoW_caster[this]=GetTriggerUnit()
+        set s__IchigoW_count[this]=0
+        set s__IchigoW_waves[this]=0
+        set s__IchigoW_angle[this]=Atan3(GetUnitX(s__IchigoW_caster[this]) , GetUnitY(s__IchigoW_caster[this]) , GetSpellTargetX() , GetSpellTargetY())
+
+        set s__IchigoW_p1x[this]=GetPolarX(GetUnitX(s__IchigoW_caster[this]) , s__IchigoW_angle[this] , distance / 4)
+        set s__IchigoW_p1x[this]=GetPolarX(s__IchigoW_p1x[this] , s__IchigoW_angle[this] + Deg2Rad(90) , distance / 4)
+        set s__IchigoW_p1y[this]=GetPolarY(GetUnitY(s__IchigoW_caster[this]) , s__IchigoW_angle[this] , distance / 4)
+        set s__IchigoW_p1y[this]=GetPolarY(s__IchigoW_p1y[this] , s__IchigoW_angle[this] + Deg2Rad(90) , distance / 4)
+        
+        set s__IchigoW_p2x[this]=GetPolarX(GetUnitX(s__IchigoW_caster[this]) , s__IchigoW_angle[this] , distance / 2)
+        set s__IchigoW_p2x[this]=GetPolarX(s__IchigoW_p2x[this] , s__IchigoW_angle[this] + Deg2Rad(- 90) , distance / 4)
+        set s__IchigoW_p2y[this]=GetPolarY(GetUnitY(s__IchigoW_caster[this]) , s__IchigoW_angle[this] , distance / 2)
+        set s__IchigoW_p2y[this]=GetPolarY(s__IchigoW_p2y[this] , s__IchigoW_angle[this] + Deg2Rad(- 90) , distance / 4)
+        
+        set s__IchigoW_p3x[this]=GetPolarX(GetUnitX(s__IchigoW_caster[this]) , s__IchigoW_angle[this] , distance * 0.75)
+        set s__IchigoW_p3x[this]=GetPolarX(s__IchigoW_p3x[this] , s__IchigoW_angle[this] + Deg2Rad(90) , distance / 4)
+        set s__IchigoW_p3y[this]=GetPolarY(GetUnitY(s__IchigoW_caster[this]) , s__IchigoW_angle[this] , distance * 0.75)
+        set s__IchigoW_p3y[this]=GetPolarY(s__IchigoW_p3y[this] , s__IchigoW_angle[this] + Deg2Rad(90) , distance / 4)
+        
+        set s__IchigoW_p4x[this]=GetPolarX(GetUnitX(s__IchigoW_caster[this]) , s__IchigoW_angle[this] , distance)
+        set s__IchigoW_p4y[this]=GetPolarY(GetUnitY(s__IchigoW_caster[this]) , s__IchigoW_angle[this] , distance)
+        
+        set s__IchigoW_cx[this]=s__IchigoW_p1x[this]
+        set s__IchigoW_cy[this]=s__IchigoW_p1y[this]
+        
+        set s__IchigoW_damaged[this]=CreateGroup()
+        
+        //call PauseUnit(this.caster, true)
+        set s__IchigoW_dummy[this]=GetUnit(GetOwningPlayer(s__IchigoW_caster[this]) , 'e007' , GetUnitX(s__IchigoW_caster[this]) , GetUnitY(s__IchigoW_caster[this]) , GetUnitFacing(s__IchigoW_caster[this]))
+        call SetUnitAnimation(s__IchigoW_dummy[this], "spell three")
+        call SetUnitTimeScale(s__IchigoW_caster[this], 2.0)
+	set s__IchigoW_count2[this]=0
+        call TimerStart(NewTimerEx(this), 0.03, true, function s__IchigoW_periodic)
+    endfunction 
+    
+        function s__IchigoW_death takes nothing returns nothing
+		if GetUnitTypeId(GetTriggerUnit()) == 'e085' or GetUnitTypeId(GetTriggerUnit()) == 'nwlg' then
+			call ShowUnit(GetTriggerUnit(), false)
+		endif
+        endfunction 
+		
+  function s__IchigoW_death2 takes nothing returns nothing
+  local integer this2
+		if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true and not IsUnitIllusion(GetTriggerUnit()) and GetUnitTypeId(GetKillingUnit()) == 'U00G' and IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO) == true then
+		call BlzEndUnitAbilityCooldown(GetKillingUnit(), 'A1DN')
+		//call BlzStartUnitAbilityCooldown( GetTriggerUnit(), 'A1DN', 0.00 )
+		endif
+  endfunction
+
+    function s__IchigoW_onInit takes nothing returns nothing
+        call RegisterSpellEffectEvent(s__IchigoW_SPELL_ID , function s__IchigoW_actions)
+	call RegisterPlayerUnitEventForId(49 , EVENT_PLAYER_UNIT_DEATH , function s__IchigoW_death)
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__IchigoW_death2)
+    endfunction 
+    
+//===========================================================================
+// Trigger: IchigoCero
+//===========================================================================
+// scope IchigoCero begins
+
+        
+//Implemented from module Alloc:
+    
+        function s__IchigoCero__Spell_allocate takes nothing returns integer
+            local integer this
+    
+            //call BJDebugMsg("Alloc: " + I2S(instanceCount))
+            if ( s__IchigoCero__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__IchigoCero__Spell_Alloc__instanceCount=s__IchigoCero__Spell_Alloc__instanceCount + 1
+                set this=s__IchigoCero__Spell_Alloc__instanceCount
+            else
+                set this=s__IchigoCero__Spell_Alloc__recycle[(0)]
+                set s__IchigoCero__Spell_Alloc__recycle[(0)]=s__IchigoCero__Spell_Alloc__recycle[s__IchigoCero__Spell_Alloc__recycle[(0)]]
+            endif
+
+    
+            return this
+        endfunction
+    
+        function s__IchigoCero__Spell_deallocate takes integer this returns nothing
+            set s__IchigoCero__Spell_Alloc__recycle[this]=s__IchigoCero__Spell_Alloc__recycle[(0)]
+            set s__IchigoCero__Spell_Alloc__recycle[(0)]=this
+        endfunction
+    
+        function s__IchigoCero__Spell_destroy takes integer this returns nothing
+            call KillUnit(s__IchigoCero__Spell_arrow[this])
+            call ShowUnit(s__IchigoCero__Spell_arrow[this], false)
+            set s__IchigoCero__Spell_caster[this]=null
+            set s__IchigoCero__Spell_arrow[this]=null
+            call s__IchigoCero__Spell_deallocate(this)
+        endfunction
+        
+        function s__IchigoCero__Spell_dealDamage takes nothing returns boolean
+            local real new_x
+            local real new_y
+            if GetWidgetLife(GetFilterUnit()) > 0.405 and IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__IchigoCero__Spell_caster[s__IchigoCero__Spell_instance])) then
+                set new_x=GetUnitX(GetFilterUnit())
+                set new_y=GetUnitY(GetFilterUnit())
+                call AddSpecialEffectEx("Abilities\\Spells\\Orc\\Purge\\PurgeBuffTarget.mdl" , new_x , new_y)
+                call UnitDamageTarget(s__IchigoCero__Spell_caster[s__IchigoCero__Spell_instance], GetFilterUnit(), 8.0 * GetHeroAgi(s__IchigoCero__Spell_caster[s__IchigoCero__Spell_instance], true) + 3.0 * GetHeroInt(s__IchigoCero__Spell_caster[s__IchigoCero__Spell_instance], true) + 4.0 * GetHeroStr(s__IchigoCero__Spell_caster[s__IchigoCero__Spell_instance], true), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                call StunUnitTimed(s__IchigoCero__Spell_caster[s__IchigoCero__Spell_instance] , GetFilterUnit() , 2.0)
+            endif
+            return false
+        endfunction 
+
+        function s__IchigoCero__Spell_explode takes nothing returns nothing
+            local integer this= GetTimerData(GetExpiredTimer())
+            local integer i
+            local real arrow_x= GetUnitX(s__IchigoCero__Spell_arrow[this])
+            local real arrow_y= GetUnitY(s__IchigoCero__Spell_arrow[this])
+            local real new_x
+            local real new_y
+            set i=1
+            loop
+                exitwhen i > 10
+                set new_x=GetPolarX(arrow_x , Deg2Rad(36 * i) , 100.0)
+                set new_y=GetPolarY(arrow_y , Deg2Rad(36 * i) , 100.0)
+                set i=i + 1
+            endloop
+            call KillUnit(CreateUnit(GetOwningPlayer(s__IchigoCero__Spell_caster[this]), 'h07I', arrow_x, arrow_y, 270.0))
+			set bj_lastCreatedEffect=AddSpecialEffect("war3mapImported\\bossbirth.mdx", arrow_x, arrow_y)
+			call BlzSetSpecialEffectTimeScale(bj_lastCreatedEffect, 1)
+			call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 2)
+			call DestroyEffect(bj_lastCreatedEffect)
+            set bj_lastCreatedGroup=CreateGroup()
+            set s__IchigoCero__Spell_instance=this
+            call GroupEnumUnitsInRange(bj_lastCreatedGroup, arrow_x, arrow_y, 500.0, Filter(function s__IchigoCero__Spell_dealDamage))
+            call DestroyGroup(bj_lastCreatedGroup)
+            call s__IchigoCero__Spell_destroy(this)
+            call ReleaseTimer(GetExpiredTimer())
+        endfunction
+        
+        function s__IchigoCero__Spell_move takes nothing returns nothing
+            local integer this= GetTimerData(GetExpiredTimer())
+            local real arrow_x= GetUnitX(s__IchigoCero__Spell_arrow[this])
+            local real arrow_y= GetUnitY(s__IchigoCero__Spell_arrow[this])
+            local real new_x= GetPolarX(arrow_x , s__IchigoCero__Spell_angle[this] , 75.0)
+            local real new_y= GetPolarY(arrow_y , s__IchigoCero__Spell_angle[this] , 75.0)
+            local integer i
+            local boolean finish= false
+            set s__IchigoCero__Spell_count[this]=s__IchigoCero__Spell_count[this] + 1
+            if s__IchigoCero__Spell_count[this] > 26 then
+                set finish=true
+            else
+                call SetUnitX(s__IchigoCero__Spell_arrow[this], new_x)
+                call SetUnitY(s__IchigoCero__Spell_arrow[this], new_y)
+                if ModuloInteger(s__IchigoCero__Spell_count[this], 3) == 0 then
+                    call SetUnitFlyHeight(bj_lastCreatedUnit, GetUnitFlyHeight(s__IchigoCero__Spell_arrow[this]), 0)
+                    call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 2.0)
+                endif
+                set bj_lastCreatedGroup=CreateGroup()
+                call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 300.0, null)
+                loop
+                    set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
+                    exitwhen bj_lastCreatedUnit == null
+                    if GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__IchigoCero__Spell_caster[this])) and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_HERO) == true and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
+                        set finish=true
+                    endif
+                    call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
+                endloop
+                call DestroyGroup(bj_lastCreatedGroup)
+            endif
+            if finish then
+                call KillUnit(s__IchigoCero__Spell_arrow[this])
+                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__IchigoCero__Spell_caster[this]), 'h07I', new_x, new_y, GetRandomReal(0, 360))
+                call SetUnitTimeScale(bj_lastCreatedUnit, 2.0)
+                call SetUnitScale(bj_lastCreatedUnit, 2.0, 2.0, 2.0)
+                call KillUnit(bj_lastCreatedUnit)
+                call TimerStart(NewTimerEx(this), 0.3, false, function s__IchigoCero__Spell_explode)
+                call ReleaseTimer(GetExpiredTimer())
+            endif
+        endfunction
+        
+        function s__IchigoCero__Spell_delay takes nothing returns nothing
+            local integer this= GetTimerData(GetExpiredTimer())
+            call PauseUnit(s__IchigoCero__Spell_caster[this], false)
+            set s__IchigoCero__Spell_arrow[this]=CreateUnit(GetOwningPlayer(s__IchigoCero__Spell_caster[this]), 'h00Q', GetUnitX(s__IchigoCero__Spell_caster[this]), GetUnitY(s__IchigoCero__Spell_caster[this]), Rad2Deg(s__IchigoCero__Spell_angle[this]))
+			call SetUnitAnimation(GetTriggerUnit(), "spell three")
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__IchigoCero__Spell_move)
+            call ReleaseTimer(GetExpiredTimer())
+        endfunction
+        
+        function s__IchigoCero__Spell_actions takes nothing returns nothing
+            local integer this= s__IchigoCero__Spell_allocate()
+            set s__IchigoCero__Spell_caster[this]=GetTriggerUnit()
+            set s__IchigoCero__Spell_angle[this]=Atan3(GetUnitX(s__IchigoCero__Spell_caster[this]) , GetUnitY(s__IchigoCero__Spell_caster[this]) , GetSpellTargetX() , GetSpellTargetY())
+            call PauseUnit(s__IchigoCero__Spell_caster[this], true)
+            set s__IchigoCero__Spell_count[this]=0
+            call SetUnitAnimation(GetTriggerUnit(), "spell three")
+            call TimerStart(NewTimerEx(this), 0.6, false, function s__IchigoCero__Spell_delay)
+        endfunction
+        
+        function s__IchigoCero__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEvent(s__IchigoCero__Spell_SPELL_ID , function s__IchigoCero__Spell_actions)
+        endfunction
+        
+    
+// scope IchigoCero ends
+//===========================================================================
+// Trigger: IchigoVastoLord
+//===========================================================================
+
+function Trig_IchigoVastoLord_Actions takes nothing returns nothing
+
+    if GetUnitAbilityLevel(GetTriggerUnit(), 'B066') > 0 and GetEventDamage() > GetWidgetLife(GetTriggerUnit()) and GetRandomInt(0, 100) < 2 then
+		call SetUnitInvulnerable(GetTriggerUnit(), true)
+		call SetUnitAnimation(GetTriggerUnit(), "Stand Wounded")
+		call PauseUnit(GetTriggerUnit(), true)
+    		if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
+         		call PlaySoundOnUnitBJ(gg_snd_Ichigo_Vasto_Lorde, 110.0, GetTriggerUnit())
+    		endif
+		call PolledWait(2.0)
+		call BlzSetUnitSkin(GetTriggerUnit(), 'e087')
+		call CreateNUnitsAtLoc(1, 'h0AR', GetOwningPlayer(GetTriggerUnit()), GetUnitLoc(GetTriggerUnit()), 270)
+        	call UnitApplyTimedLifeBJ(3.00, 'BTLF', bj_lastCreatedUnit)
+		call SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), 'A1D3', false)
+        	call SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), 'A1DS', false)
+		call SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), 'A1DT', false)
+		call SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), 'A1DU', false)
+		call SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), 'A092', false)
+		call UnitAddAbility(GetTriggerUnit(), 'A08M')
+		set bj_lastCreatedUnit=CreateAbilityDummy(GetTriggerUnit() , 'A1AK')
+		call IssueTargetOrder(bj_lastCreatedUnit, "innerfire", GetTriggerUnit())
+		call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 1.0)
+		call BlzEndUnitAbilityCooldown(GetTriggerUnit(), 'A1DQ')
+		call PauseUnit(GetTriggerUnit(), false)
+		call PolledWait(10.0)
+		call UnitRemoveAbility(GetTriggerUnit(), 'A08M')
+		call SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), 'A1D3', true)
+		if GetHeroLevel(GetTriggerUnit()) < 35 then
+       			call SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), 'A1DS', true)
+		endif
+		call SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), 'A1DT', true)
+		call SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), 'A1DU', true)
+		call SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), 'A092', true)
+		if GetHeroLevel(GetTriggerUnit()) >= 35 then
+			call BlzSetUnitSkin(GetTriggerUnit(), 'U00A')
+		else
+			call BlzSetUnitSkin(GetTriggerUnit(), 'H0A7')
+		endif
+		call SetUnitInvulnerable(GetTriggerUnit(), false)
+		call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), 9999.00, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_UNIVERSAL, null)
+		
+
+    endif
+endfunction
+
+function Trig_IchigoVastoLord_AddBar takes nothing returns nothing
+    call AddLoadingBar(GetTriggerUnit() , 10.0)
+endfunction 
+
+function InitTrig_IchigoVastoLord_Leave takes nothing returns nothing
+	if ( GetUnitTypeId(GetLeavingUnit()) == 'U00A' or GetUnitTypeId(GetLeavingUnit()) == 'U00G' or GetUnitTypeId(GetLeavingUnit()) == 'H0A7' ) then
+    	    call TriggerRegisterUnitEvent(gg_trg_IchigoVastoLord, GetLeavingUnit(), EVENT_UNIT_DAMAGED)
+            call GroupAddUnit(udg_Gengetsus, GetLeavingUnit())
+	endif
+endfunction
+
+//===========================================================================
+function InitTrig_IchigoVastoLord takes nothing returns nothing
+    call RegisterLeaveFunction(function InitTrig_IchigoVastoLord_Leave)
+    call RegisterSpellEffectEventForId(49 , 'A1DQ' , function Trig_IchigoVastoLord_AddBar)
+    set gg_trg_IchigoVastoLord=CreateTrigger()
+    call TriggerAddAction(gg_trg_IchigoVastoLord, function Trig_IchigoVastoLord_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: IchigoE
+//===========================================================================
+
+//Implemented from module Alloc:
+    
+        function s__IchigoE_allocate takes nothing returns integer
+            local integer this
+    
+            //call BJDebugMsg("Alloc: " + I2S(instanceCount))
+            if ( s__IchigoE_Alloc__recycle[(0)] == 0 ) then
+                set s__IchigoE_Alloc__instanceCount=s__IchigoE_Alloc__instanceCount + 1
+                set this=s__IchigoE_Alloc__instanceCount
+            else
+                set this=s__IchigoE_Alloc__recycle[(0)]
+                set s__IchigoE_Alloc__recycle[(0)]=s__IchigoE_Alloc__recycle[s__IchigoE_Alloc__recycle[(0)]]
+            endif
+
+    
+            return this
+        endfunction
+    
+        function s__IchigoE_deallocate takes integer this returns nothing
+            set s__IchigoE_Alloc__recycle[this]=s__IchigoE_Alloc__recycle[(0)]
+            set s__IchigoE_Alloc__recycle[(0)]=this
+        endfunction
+
+ function s__IchigoE_periodic takes nothing returns nothing
+  local integer this= GetTimerData(GetExpiredTimer())
+		set s__IchigoE_count[this]=s__IchigoE_count[this] + 1
+		call SetUnitX(s__IchigoE_dummy[this], GetUnitX(s__IchigoE_dummy[this]))
+		call SetUnitY(s__IchigoE_dummy[this], GetUnitY(s__IchigoE_dummy[this]))
+		if s__IchigoE_count[this] > s__IchigoE_duration or GetWidgetLife(s__IchigoE_caster[this]) < 0.405 then
+			set s__IchigoE_active=false
+			set s__IchigoE_charges=0
+			call UnitRemoveAbility(s__IchigoE_caster[this], 'A1DR')
+			call SetPlayerAbilityAvailable(GetOwningPlayer(s__IchigoE_caster[this]), s__IchigoE_SPELL_ID, true)
+			call RemoveUnit(s__IchigoE_dummy[this])
+			set s__IchigoE_dummy[this]=null
+			call s__IchigoE_deallocate(this)
+			call ReleaseTimer(GetExpiredTimer())
+		endif
+ endfunction 
+	
+ function s__IchigoE_death takes nothing returns nothing
+  local integer this2
+		if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true and not IsUnitIllusion(GetTriggerUnit()) and GetUnitTypeId(GetKillingUnit()) == 'H0A7' or GetUnitTypeId(GetKillingUnit()) == 'U00A' or GetUnitTypeId(GetKillingUnit()) == 'U00G' and IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO) == true and GetUnitAbilityLevel(GetKillingUnit(), 'A1DR') > 0 then
+		set s__IchigoE_charges=s__IchigoE_charges + 1
+		set s__IchigoE_duration=s__IchigoE_duration + 4.44 * 30
+		endif
+ endfunction
+
+ function s__IchigoE_disable takes nothing returns nothing
+  local integer this= GetTimerData(GetExpiredTimer())
+		call SetPlayerAbilityAvailable(GetOwningPlayer(s__IchigoE_caster[this]), s__IchigoE_SPELL_ID, false)
+		call UnitAddAbility(s__IchigoE_caster[this], 'A1DR')
+		if ( GetUnitAbilityLevel(s__IchigoE_caster[this], 'B069') > 0 ) then
+			set s__IchigoE_charges=4
+		elseif ( GetUnitTypeId(s__IchigoE_caster[this]) == 'U00A' or GetUnitAbilityLevel(s__IchigoE_caster[this], 'B067') > 0 or GetUnitTypeId(s__IchigoE_caster[this]) == 'U00G' ) then
+			set s__IchigoE_charges=2
+		else
+			set s__IchigoE_charges=1
+		endif
+		call TimerStart(NewTimerEx(this), 0.03, true, function s__IchigoE_periodic)
+		call ReleaseTimer(GetExpiredTimer())
+ endfunction 
+
+ function s__IchigoE_actions takes nothing returns nothing
+  local integer this= s__IchigoE_allocate()
+  local integer this2
+		set s__IchigoE_duration=13.33 * 30
+		set s__IchigoE_caster[this]=GetTriggerUnit()
+		set s__IchigoE_count[this]=0
+		set s__IchigoE_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e007', GetUnitX(s__IchigoE_caster[this]), GetUnitY(s__IchigoE_caster[this]), 270)
+		call AddSpecialEffectEx("RedFlash.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
+		set s__IchigoE_active=true
+        	call TimerStart(NewTimerEx(this), 0.1, false, function s__IchigoE_disable)
+     endfunction 
+
+    function s__IchigoE_silentkill takes nothing returns nothing
+        local real x
+        local real y
+        local unit u
+        local unit uu
+        if s__IchigoE_charges > 0 then
+            set x=GetPolarX(GetUnitX(GetSpellTargetUnit()) , Deg2Rad(GetUnitFacing(GetSpellTargetUnit())) , 120)
+            set y=GetPolarY(GetUnitY(GetSpellTargetUnit()) , Deg2Rad(GetUnitFacing(GetSpellTargetUnit())) , 120)
+            call AddSpecialEffectEx("blackblink.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
+            call AddSpecialEffectEx("blackblink.mdx" , x , y)
+            call AddSpecialEffectEx("war3mapImported\\Blood.mdl" , GetUnitX(GetSpellTargetUnit()) , GetUnitY(GetSpellTargetUnit()))
+            call UnitDamageTarget(GetTriggerUnit(), GetSpellTargetUnit(), 0.4 * GetHeroAgi(GetTriggerUnit(), true) * GetUnitAbilityLevel(GetTriggerUnit(), s__IchigoE_SPELL_ID), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
+            if udg_integers13[GetPlayerId(GetOwningPlayer(GetTriggerUnit())) + 1] >= 15 then
+                call UnitDamageTarget(GetTriggerUnit(), GetSpellTargetUnit(), ( 0.25 * GetHeroInt(GetTriggerUnit(), true) + 0.25 * GetHeroStr(GetTriggerUnit(), true) + 0.5 * GetHeroAgi(GetTriggerUnit(), true) ), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+            endif
+            set s__IchigoE_charges=s__IchigoE_charges - 1
+
+            set bj_lastCreatedUnit=CreateAbilityDummy(GetTriggerUnit() , 'A1DP')
+	    call SetUnitAbilityLevel(bj_lastCreatedUnit, 'A1DP', GetUnitAbilityLevel(GetTriggerUnit(), s__IchigoE_SPELL_ID))
+            call IssueTargetOrder(bj_lastCreatedUnit, "innerfire", GetTriggerUnit())
+            call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 1.0)
+
+		set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(GetTriggerUnit()), 'n03F', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), GetUnitFacing(GetTriggerUnit()))
+		call UnitAddAbility(bj_lastCreatedUnit, 'A057')
+		call IssueTargetOrderBJ(bj_lastCreatedUnit, "attack", GetSpellTargetUnit())
+		call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 1.0)
+
+            
+            call SetUnitFacing(GetTriggerUnit(), Rad2Deg(Atan3(x , y , GetUnitX(GetSpellTargetUnit()) , GetUnitY(GetSpellTargetUnit()))))
+            set u=GetTriggerUnit()
+            set uu=GetSpellTargetUnit()
+            call SetUnitPosition(GetTriggerUnit(), x, y)
+            call IssueTargetOrder(u, "attack", uu)
+        endif
+    endfunction 
+
+    function s__IchigoE_onInit takes nothing returns nothing
+        set s__IchigoE_active=false
+        call RegisterSpellEffectEventForId(49 , s__IchigoE_SPELL_ID , function s__IchigoE_actions)
+        call RegisterSpellEffectEventForId(49 , 'A1DR' , function s__IchigoE_silentkill)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__IchigoE_death)
+    endfunction 
+
+
+//===========================================================================
+// Trigger: IchigoBankai
+//===========================================================================
+function Trig_IchigoBankai_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == ( 'A1DS' ) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_IchigoBankai_Actions takes nothing returns nothing
+    local real x= GetUnitX(GetTriggerUnit())
+    local real y= GetUnitY(GetTriggerUnit())
+    local real x2
+    local real y2
+    local integer i
+    if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) and GetUnitTypeId(GetTriggerUnit()) == 'H0A7' then
+         call PlaySoundOnUnitBJ(gg_snd_Ichigo_R, 100.0, GetTriggerUnit())
+    endif
+    set i=0
+    loop
+        exitwhen i > 10
+        set x2=GetPolarX(x , Deg2Rad(36 * i) , 100)
+        set y2=GetPolarY(y , Deg2Rad(36 * i) , 100)
+        set bj_lastCreatedUnit=CreateUnit(GetTriggerPlayer(), 'h07D', x2, y2, GetRandomReal(0, 360))
+        call SetUnitTimeScale(bj_lastCreatedUnit, 0.3)
+        call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 2.0)
+        set i=i + 1
+    endloop
+endfunction
+
+//===========================================================================
+function InitTrig_IchigoBankai takes nothing returns nothing
+    set gg_trg_IchigoBankai=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_IchigoBankai, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_IchigoBankai, Condition(function Trig_IchigoBankai_Conditions))
+    call TriggerAddAction(gg_trg_IchigoBankai, function Trig_IchigoBankai_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: IchigoMugetsu
+//===========================================================================
+function Trig_IchigoMugetsu_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == ( 'A1DT' ) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_IchigoMugetsu_Actions takes nothing returns nothing
+    local real x= GetUnitX(GetTriggerUnit())
+    local real y= GetUnitY(GetTriggerUnit())
+    local real x2
+    local real y2
+    local integer i
+    set i=0
+    if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) and GetUnitTypeId(GetTriggerUnit()) == 'H0A7' then
+         call PlaySoundOnUnitBJ(gg_snd_Ichigo_T, 100.0, GetTriggerUnit())
+    endif
+    loop
+        exitwhen i > 10
+        set x2=GetPolarX(x , Deg2Rad(36 * i) , 100)
+        set y2=GetPolarY(y , Deg2Rad(36 * i) , 100)
+        set bj_lastCreatedUnit=CreateUnit(GetTriggerPlayer(), 'h07D', x2, y2, GetRandomReal(0, 360))
+        call SetUnitTimeScale(bj_lastCreatedUnit, 0.3)
+        call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 2.0)
+        set i=i + 1
+    endloop
+endfunction
+
+//===========================================================================
+function InitTrig_IchigoMugetsu takes nothing returns nothing
+    set gg_trg_IchigoMugetsu=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_IchigoMugetsu, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_IchigoMugetsu, Condition(function Trig_IchigoMugetsu_Conditions))
+    call TriggerAddAction(gg_trg_IchigoMugetsu, function Trig_IchigoMugetsu_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: IchigoUnleash
+//===========================================================================
+ 
+
+    function s__IchigoUnleash_actions takes nothing returns nothing
+        local unit u
+    	if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
+                call PlaySoundOnUnitBJ(gg_snd_Ichigo_R_Active, 100.0, GetTriggerUnit())
+        endif
+        set u=CreateAbilityDummy(GetTriggerUnit() , 'A08V')
+        call IssueTargetOrder(u, "bloodlust", GetTriggerUnit())
+        set u=null
+    endfunction 
+
+    function s__IchigoUnleash_onInit takes nothing returns nothing
+        call RegisterSpellEffectEvent(s__IchigoUnleash_SPELL_ID , function s__IchigoUnleash_actions)
+    endfunction 
+
+//===========================================================================
+// Trigger: IchigoTLevel
+//===========================================================================
+
+ function s__IchigoTLevel_periodic takes nothing returns nothing
+  local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
+		if u == null then
+			call ReleaseTimer(GetExpiredTimer())
+		else
+			if GetHeroLevel(u) >= 35 and GetUnitTypeId(GetLeavingUnit()) != 'U00A' then
+				call BlzSetUnitSkin(u, 'U00A')
+				call UnitRemoveAbility(u, 'A1DS')
+				call SetPlayerAbilityAvailable(GetOwningPlayer(u), 'A1DS', false)
+
+				call UnitAddAbility(u, 'A092')
+				call UnitMakeAbilityPermanent(u, true, 'A092')
+
+				call ReleaseTimer(GetExpiredTimer())
+			endif
+		endif
+ endfunction 
+
+ function s__IchigoTLevel_leave takes nothing returns nothing
+		if GetUnitTypeId(GetLeavingUnit()) == 'H0A7' then
+			call TimerStart(NewTimerEx(GetUnitId(GetLeavingUnit())), 1.0, true, function s__IchigoTLevel_periodic)
+		endif
+ endfunction 
+
+ function s__IchigoTLevel_onInit takes nothing returns nothing
+		call RegisterLeaveFunction(function s__IchigoTLevel_leave)
+ endfunction 
+
+
+
+
+//===========================================================================
+// Trigger: IchigoD
+//===========================================================================
+
+ function s__IchigoD_periodic takes nothing returns nothing
+  local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
+		if u == null then
+			call ReleaseTimer(GetExpiredTimer())
+		else
+			if udg_assists[GetPlayerId(GetOwningPlayer(u)) + 1] >= 15 and udg_integers13[GetPlayerId(GetOwningPlayer(u)) + 1] >= 15 and udg_integers14[GetPlayerId(GetOwningPlayer(u)) + 1] >= 10 and udg_integers11[GetPlayerId(GetOwningPlayer(u)) + 1] >= 150 and udg_Farm[GetPlayerId(GetOwningPlayer(u)) + 1] >= 2400 then
+				
+			call ModifyHeroStat(bj_HEROSTAT_INT, u, bj_MODIFYMETHOD_ADD, 25)
+			call ModifyHeroStat(bj_HEROSTAT_STR, u, bj_MODIFYMETHOD_ADD, 25)
+			call ModifyHeroStat(bj_HEROSTAT_AGI, u, bj_MODIFYMETHOD_ADD, 25)
+
+			call ReleaseTimer(GetExpiredTimer())
+			endif
+		endif
+ endfunction 
+
+ function s__IchigoD_leave takes nothing returns nothing
+		if ( GetUnitTypeId(GetLeavingUnit()) == 'H0A7' or GetUnitTypeId(GetLeavingUnit()) == 'U00A' or GetUnitTypeId(GetLeavingUnit()) == 'U00G' ) then
+			call TimerStart(NewTimerEx(GetUnitId(GetLeavingUnit())), 1.0, true, function s__IchigoD_periodic)
+		endif
+ endfunction 
+
+ function s__IchigoD_onInit takes nothing returns nothing
+		call RegisterLeaveFunction(function s__IchigoD_leave)
+ endfunction 
+
+
+
+
+//===========================================================================
+// Trigger: IchigoSlash
+//===========================================================================
+
+//Implemented from module Alloc:
+    
+        function s__IchigoSlash_allocate takes nothing returns integer
+            local integer this
+    
+            //call BJDebugMsg("Alloc: " + I2S(instanceCount))
+            if ( s__IchigoSlash_Alloc__recycle[(0)] == 0 ) then
+                set s__IchigoSlash_Alloc__instanceCount=s__IchigoSlash_Alloc__instanceCount + 1
+                set this=s__IchigoSlash_Alloc__instanceCount
+            else
+                set this=s__IchigoSlash_Alloc__recycle[(0)]
+                set s__IchigoSlash_Alloc__recycle[(0)]=s__IchigoSlash_Alloc__recycle[s__IchigoSlash_Alloc__recycle[(0)]]
+            endif
+
+    
+            return this
+        endfunction
+    
+        function s__IchigoSlash_deallocate takes integer this returns nothing
+            set s__IchigoSlash_Alloc__recycle[this]=s__IchigoSlash_Alloc__recycle[(0)]
+            set s__IchigoSlash_Alloc__recycle[(0)]=this
+        endfunction
+
+ function s__IchigoSlash_periodic takes nothing returns nothing
+  local integer this= GetTimerData(GetExpiredTimer())
+  local real damage
+  local real damage2
+  local real x= GetUnitX(s__IchigoSlash_slash[this])
+  local real y= GetUnitY(s__IchigoSlash_slash[this])
+  local real new_x= GetPolarX(x , Deg2Rad(GetUnitFacing(s__IchigoSlash_slash[this])) , 50)
+  local real new_y= GetPolarY(y , Deg2Rad(GetUnitFacing(s__IchigoSlash_slash[this])) , 50)
+		if udg_Bounty[GetPlayerId(GetOwningPlayer(s__IchigoSlash_caster[this])) + 1] < 0 then
+			set udg_Bounty[GetPlayerId(GetOwningPlayer(s__IchigoSlash_caster[this])) + 1]=0
+		endif
+		set damage=8 * GetHeroAgi(s__IchigoSlash_caster[this], true) + udg_Bounty[GetPlayerId(GetOwningPlayer(s__IchigoSlash_caster[this])) + 1] * 400
+		set damage2=( 4 * GetHeroAgi(s__IchigoSlash_caster[this], true) + 3 * GetHeroStr(s__IchigoSlash_caster[this], true) + 3 * GetHeroInt(s__IchigoSlash_caster[this], true) ) + udg_Bounty[GetPlayerId(GetOwningPlayer(s__IchigoSlash_caster[this])) + 1] * 200
+		call SetUnitX(s__IchigoSlash_slash[this], new_x)
+		call SetUnitY(s__IchigoSlash_slash[this], new_y)
+
+		set bj_lastCreatedEffect=AddSpecialEffect("war3mapImported\\ShadowAssault.mdl", new_x, new_y)
+		call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 1.8)
+		call DestroyEffect(bj_lastCreatedEffect)
+
+		set bj_lastCreatedGroup=CreateGroup()
+		call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 200, null)
+		loop
+			set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
+			exitwhen bj_lastCreatedUnit == null
+			call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
+			if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__IchigoSlash_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__IchigoSlash_damaged[this]) then
+				call GroupAddUnit(s__IchigoSlash_damaged[this], bj_lastCreatedUnit)
+				if damage >= damage2 then
+					call UnitDamageTarget(s__IchigoSlash_caster[this], bj_lastCreatedUnit, damage, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+				else
+					call UnitDamageTarget(s__IchigoSlash_caster[this], bj_lastCreatedUnit, damage2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+				endif
+				//call AddSpecialEffectEx("Abilities\\Spells\\Other\\Stampede\\StampedeMissileDeath.mdl", GetUnitX(bj_lastCreatedUnit), GetUnitY(bj_lastCreatedUnit))
+			endif
+		endloop
+		call DestroyGroup(bj_lastCreatedGroup)
+		set s__IchigoSlash_count[this]=s__IchigoSlash_count[this] + 1
+		if s__IchigoSlash_count[this] >= 25 then
+			set udg_Bounty[GetPlayerId(GetOwningPlayer(s__IchigoSlash_caster[this])) + 1]=0
+			call KillUnit(s__IchigoSlash_slash[this])
+			call PauseUnit(s__IchigoSlash_caster[this], false)
+			set s__IchigoSlash_slash[this]=null
+			call DestroyGroup(s__IchigoSlash_damaged[this])
+			set s__IchigoSlash_damaged[this]=null
+			call s__IchigoSlash_deallocate(this)
+			call ReleaseTimer(GetExpiredTimer())
+		endif
+ endfunction 
+
+ function s__IchigoSlash_actions takes nothing returns nothing
+  local integer this= s__IchigoSlash_allocate()
+  local real angle= Atan3(GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , GetSpellTargetX() , GetSpellTargetY())
+		set s__IchigoSlash_caster[this]=GetTriggerUnit()
+		set s__IchigoSlash_slash[this]=CreateUnit(GetTriggerPlayer(), 'h0AE', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), Rad2Deg(angle))
+		set s__IchigoSlash_damaged[this]=CreateGroup()
+		set s__IchigoSlash_count[this]=0
+    		if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
+	 		call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff0000Ichigo: The Final Getsuga Tensho is when I become Getsuga itself!|r")
+         		call PlaySoundOnUnitBJ(gg_snd_Ichigo_R_Transform, 100.0, GetTriggerUnit())
+    		endif
+		call PauseUnit(s__IchigoSlash_caster[this], true)
+		call TimerStart(NewTimerEx(this), 0.03, true, function s__IchigoSlash_periodic)
+ endfunction 
+
+ function s__IchigoSlash_onInit takes nothing returns nothing
+		call RegisterSpellEffectEventForId(49 , s__IchigoSlash_SPELL_ID , function s__IchigoSlash_actions)
+ endfunction
+
+//===========================================================================
+// Trigger: IchigoAttacks
+//===========================================================================
+        
+//Implemented from module Alloc:
+    
+        function s__IchigoAttacks_allocate takes nothing returns integer
+            local integer this
+    
+            //call BJDebugMsg("Alloc: " + I2S(instanceCount))
+            if ( s__IchigoAttacks_Alloc__recycle[(0)] == 0 ) then
+                set s__IchigoAttacks_Alloc__instanceCount=s__IchigoAttacks_Alloc__instanceCount + 1
+                set this=s__IchigoAttacks_Alloc__instanceCount
+            else
+                set this=s__IchigoAttacks_Alloc__recycle[(0)]
+                set s__IchigoAttacks_Alloc__recycle[(0)]=s__IchigoAttacks_Alloc__recycle[s__IchigoAttacks_Alloc__recycle[(0)]]
+            endif
+
+    
+            return this
+        endfunction
+    
+        function s__IchigoAttacks_deallocate takes integer this returns nothing
+            set s__IchigoAttacks_Alloc__recycle[this]=s__IchigoAttacks_Alloc__recycle[(0)]
+            set s__IchigoAttacks_Alloc__recycle[(0)]=this
+        endfunction
+        
+        function s__IchigoAttacks_critical_actions takes unit caster,unit target returns nothing
+            local real caster_x= GetUnitX(caster)
+            local real caster_y= GetUnitY(caster)
+            local real target_x= GetUnitX(target)
+            local real target_y= GetUnitY(target)
+            local real angle= Atan2(( target_y - caster_y ), ( target_x - caster_x ))
+            local real distance_x= target_x - caster_x
+            local real distance_y= target_y - caster_y
+            local real distance= SquareRoot(distance_x * distance_x + distance_y * distance_y)
+            local real new_x= target_x + Cos(angle) * distance
+            local real new_y= target_y + Sin(angle) * distance
+	    if not IsTerrainPathable(new_x, new_y, PATHING_TYPE_WALKABILITY) then
+		call SetUnitX(caster, new_x)
+		call SetUnitY(caster, new_y)
+	    endif
+            call AddSpecialEffectEx("blackblink.mdx" , caster_x , caster_y)
+            call AddSpecialEffectEx("RedFlash.mdl" , target_x , target_y)
+            call UnitDamageTarget(caster, target, ( GetHeroStr(caster, true) + GetHeroAgi(caster, true) + GetHeroInt(caster, true) ), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
+        endfunction
+        
+        function s__IchigoAttacks_critical takes nothing returns nothing
+            local integer i= GetRandomInt(1, 100)
+            if GetUnitTypeId(GetAttacker()) == 'U00G' and IsUnitEnemy(GetAttacker(), GetTriggerPlayer()) and i <= 100 then
+                call s__IchigoAttacks_critical_actions(GetAttacker() , GetTriggerUnit())
+            endif
+        endfunction
+        
+        function s__IchigoAttacks_onInit takes nothing returns nothing
+            call RegisterPlayerUnitEventForId(49 , EVENT_PLAYER_UNIT_ATTACKED , function s__IchigoAttacks_critical)
+        endfunction
+        
+
+//===========================================================================
+// Trigger: IchigoAbillities
+//===========================================================================
+// scope IchigoAbiltiies begins
+
+    
+//Implemented from module Alloc:
+    
+        function s__IchigoAbiltiies__Spell_allocate takes nothing returns integer
+            local integer this
+    
+            //call BJDebugMsg("Alloc: " + I2S(instanceCount))
+            if ( s__IchigoAbiltiies__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__IchigoAbiltiies__Spell_Alloc__instanceCount=s__IchigoAbiltiies__Spell_Alloc__instanceCount + 1
+                set this=s__IchigoAbiltiies__Spell_Alloc__instanceCount
+            else
+                set this=s__IchigoAbiltiies__Spell_Alloc__recycle[(0)]
+                set s__IchigoAbiltiies__Spell_Alloc__recycle[(0)]=s__IchigoAbiltiies__Spell_Alloc__recycle[s__IchigoAbiltiies__Spell_Alloc__recycle[(0)]]
+            endif
+
+    
+            return this
+        endfunction
+    
+        function s__IchigoAbiltiies__Spell_deallocate takes integer this returns nothing
+            set s__IchigoAbiltiies__Spell_Alloc__recycle[this]=s__IchigoAbiltiies__Spell_Alloc__recycle[(0)]
+            set s__IchigoAbiltiies__Spell_Alloc__recycle[(0)]=this
+        endfunction
+        
+        
+        function s__IchigoAbiltiies__Spell_destroy takes integer this returns nothing
+            set s__IchigoAbiltiies__Spell_caster[this]=null
+            call s__IchigoAbiltiies__Spell_deallocate(this)
+        endfunction
+        
+        function s__IchigoAbiltiies__Spell_periodic takes nothing returns nothing
+            local integer this= GetTimerData(GetExpiredTimer())
+            if GetUnitTypeId(s__IchigoAbiltiies__Spell_caster[this]) != 'U00G' then
+            	call SetPlayerAbilityAvailable(GetOwningPlayer(s__IchigoAbiltiies__Spell_caster[this]), 'A092', true)
+                call s__IchigoAbiltiies__Spell_destroy(this)
+                call ReleaseTimer(GetExpiredTimer())
+            endif
+        endfunction
+        
+        function s__IchigoAbiltiies__Spell_delay takes nothing returns nothing
+            local integer this= GetTimerData(GetExpiredTimer())
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__IchigoAbiltiies__Spell_caster[this]), 'A092', false)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__IchigoAbiltiies__Spell_periodic)
+            call ReleaseTimer(GetExpiredTimer())
+        endfunction
+        
+        function s__IchigoAbiltiies__Spell_actions takes nothing returns nothing
+            local integer this= s__IchigoAbiltiies__Spell_allocate()
+            set s__IchigoAbiltiies__Spell_caster[this]=GetTriggerUnit()
+            if GetUnitTypeId(s__IchigoAbiltiies__Spell_caster[this]) == 'H0A7' then
+                call TimerStart(NewTimerEx(this), 1.5, false, function s__IchigoAbiltiies__Spell_delay)
+            endif
+        endfunction
+        
+        function s__IchigoAbiltiies__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEvent(s__IchigoAbiltiies__Spell_SPELL_ID , function s__IchigoAbiltiies__Spell_actions)
+        endfunction
+        
+    
+// scope IchigoAbiltiies ends
 //===========================================================================
 // Trigger: KisameSameodoriLOOP
 //===========================================================================
@@ -23230,7 +24323,7 @@ function Trig_shark_dance_loop_Func007002003001002 takes nothing returns boolean
 endfunction
 
 function Trig_shark_dance_loop_Func007002003001 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) == false), (IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_SHADANCE_Caster)) == true)) // INLINED!!
+    return GetBooleanAnd(Trig_shark_dance_loop_Func007002003001001(), Trig_shark_dance_loop_Func007002003001002())
 endfunction
 
 function Trig_shark_dance_loop_Func007002003002 takes nothing returns boolean
@@ -23238,7 +24331,7 @@ function Trig_shark_dance_loop_Func007002003002 takes nothing returns boolean
 endfunction
 
 function Trig_shark_dance_loop_Func007002003 takes nothing returns boolean
-    return GetBooleanAnd((GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) == false), (IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_SHADANCE_Caster)) == true))), (IsUnitInGroup(GetFilterUnit(), udg_SHADANCE_Group2) == false)) // INLINED!!
+    return GetBooleanAnd(Trig_shark_dance_loop_Func007002003001(), Trig_shark_dance_loop_Func007002003002())
 endfunction
 
 function Trig_shark_dance_loop_Func008A takes nothing returns nothing
@@ -23274,7 +24367,7 @@ function Trig_shark_dance_loop_Actions takes nothing returns nothing
         call SetUnitPositionLoc(udg_SHADANCE_Caster, udg_SHADANCE_Point[4])
     else
     endif
-call AddSpecialEffectLocBJ((udg_SHADANCE_Point[3] ), ( "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl")) // INLINED!!
+    call AddSpecialEffectLocBJEX(udg_SHADANCE_Point[3] , "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl")
     call DestroyEffect(GetLastCreatedEffectBJ())
     set udg_SHADANCE_Group1=GetUnitsInRangeOfLocMatching(180.00, udg_SHADANCE_Point[4], Condition(function Trig_shark_dance_loop_Func007002003))
     call ForGroupBJ(udg_SHADANCE_Group1, function Trig_shark_dance_loop_Func008A)
@@ -23316,7 +24409,7 @@ function Trig_KisameGreatSharkDanceLOOP_Func002Func008002003002 takes nothing re
 endfunction
 
 function Trig_KisameGreatSharkDanceLOOP_Func002Func008002003 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) == false), (IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_GSD_Caster)) == true)) // INLINED!!
+    return GetBooleanAnd(Trig_KisameGreatSharkDanceLOOP_Func002Func008002003001(), Trig_KisameGreatSharkDanceLOOP_Func002Func008002003002())
 endfunction
 
 function Trig_KisameGreatSharkDanceLOOP_Func002Func009A takes nothing returns nothing
@@ -23468,7 +24561,7 @@ endfunction
     
     function s__AntiAFK_onInit takes nothing returns nothing
         set udg_Host=Player(0)
-        call TimerStartEx((NewTimerEx(0)) , 1.0 , false , function s__AntiAFK_actions , "AntiHostAFK_actions") // INLINED!!
+        call TimerStartEx(NewTimer() , 1.0 , false , function s__AntiAFK_actions , "AntiHostAFK_actions")
     endfunction
         
 //===========================================================================
@@ -23510,7 +24603,7 @@ endfunction
     endfunction
     
     function s__ModeMinutesGold_onInit takes nothing returns nothing
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__ModeMinutesGold_actions))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__ModeMinutesGold_actions)
     endfunction
     
 //===========================================================================
@@ -24089,7 +25182,7 @@ endfunction
     endfunction 
     
     function s__FixTeamDuelLocations_onInit takes nothing returns nothing
-        call TimerStart((NewTimerEx(0)), 0.5, true, function s__FixTeamDuelLocations_check) // INLINED!!
+        call TimerStart(NewTimer(), 0.5, true, function s__FixTeamDuelLocations_check)
     endfunction 
     
 //===========================================================================
@@ -24643,7 +25736,7 @@ endfunction
         endfunction
 
  function s__MissionARankReward_pickReward takes nothing returns boolean
-		if (GetClickedButton()) == s__MissionARankReward_buttonSanninCloth then // INLINED!!
+		if s__Dialog_getClickedButton() == s__MissionARankReward_buttonSanninCloth then
             		call UnitAddItemEx(s__MissionARankReward_u , 'I01V')
         	else
 			if GetHeroStr(s__MissionARankReward_u, true) >= GetHeroAgi(s__MissionARankReward_u, true) and GetHeroStr(s__MissionARankReward_u, true) >= GetHeroInt(s__MissionARankReward_u, true) then
@@ -24662,15 +25755,15 @@ endfunction
 			set s__MissionARankReward_u=GetTriggerUnit()
 			set s__MissionARankReward_d=s__Dialog_create()
 			call s__Dialog__set_title(s__MissionARankReward_d,"Choose your reward")
-			set s__MissionARankReward_buttonSanninCloth=(DialogAddButton(s__Dialog_dg[(s__MissionARankReward_d)], ("Sannin Cloth" ), ( 0))) // INLINED!!
-			set s__MissionARankReward_buttonWeapon=(DialogAddButton(s__Dialog_dg[(s__MissionARankReward_d)], ("Level 5 Weapon" ), ( 1))) // INLINED!!
+			set s__MissionARankReward_buttonSanninCloth=s__Dialog_addButton(s__MissionARankReward_d,"Sannin Cloth" , 0)
+			set s__MissionARankReward_buttonWeapon=s__Dialog_addButton(s__MissionARankReward_d,"Level 5 Weapon" , 1)
 			call s__Dialog_display(s__MissionARankReward_d,GetTriggerPlayer() , true)
 			call s__Dialog_registerClickEvent(s__MissionARankReward_d,Condition(function s__MissionARankReward_pickReward))
-			call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I076'))) // INLINED!!
+			call UnitRemoveItemEx(GetTriggerUnit() , 'I076')
  endfunction 
 
  function s__MissionARankReward_onInit takes nothing returns nothing
-		call RegisterSpellEffectEvent2(('A0NE' ) , Filter(( function s__MissionARankReward_actions))) // INLINED!!
+		call RegisterSpellEffectEvent('A0NE' , function s__MissionARankReward_actions)
  endfunction 
 
 //===========================================================================
@@ -24811,13 +25904,13 @@ function InitTrig_MissionSRank takes nothing returns nothing
     local trigger t2
     local trigger t3= CreateTrigger()
 
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function Trig_MissionSRank_Dies))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function Trig_MissionSRank_Dies)
     
     set t2=CreateTrigger()
     call TriggerRegisterUnitEvent(t2, gg_unit_N01R_0081, EVENT_UNIT_DEATH)
     call TriggerAddAction(t2, function Trig_MissionSRank_Count)
     
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_MissionSRank_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_MissionSRank_Actions)
 
     call TriggerRegisterEnterRectSimple(t3, gg_rct_MissionS)
     call TriggerAddAction(t3, function Trig_MissionSRank_EnterRect)
@@ -25066,7 +26159,7 @@ function Trig_Duel_invite_actions_Func002Func010002001001002 takes nothing retur
 endfunction
 
 function Trig_Duel_invite_actions_Func002Func010002001001 takes nothing returns boolean
-    return GetBooleanAnd((GetPlayerController(GetFilterPlayer()) == MAP_CONTROL_USER), (GetPlayerSlotState(GetFilterPlayer()) == PLAYER_SLOT_STATE_PLAYING)) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_invite_actions_Func002Func010002001001001(), Trig_Duel_invite_actions_Func002Func010002001001002())
 endfunction
 
 function Trig_Duel_invite_actions_Func002Func010002001002 takes nothing returns boolean
@@ -25074,7 +26167,7 @@ function Trig_Duel_invite_actions_Func002Func010002001002 takes nothing returns 
 endfunction
 
 function Trig_Duel_invite_actions_Func002Func010002001 takes nothing returns boolean
-    return GetBooleanAnd((GetBooleanAnd((GetPlayerController(GetFilterPlayer()) == MAP_CONTROL_USER), (GetPlayerSlotState(GetFilterPlayer()) == PLAYER_SLOT_STATE_PLAYING))), (GetFilterPlayer() != GetTriggerPlayer())) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_invite_actions_Func002Func010002001001(), Trig_Duel_invite_actions_Func002Func010002001002())
 endfunction
 
 function Trig_Duel_invite_actions_Func002Func011Func001001001 takes nothing returns boolean
@@ -25320,35 +26413,35 @@ function Trig_Duel_receiver_answer_Copy_Func001Func00300200200200200200200200200
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002002002002 takes nothing returns boolean
-    return GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U009'), (GetUnitTypeId(GetFilterUnit()) != 'Huth')) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002002002 takes nothing returns boolean
-    return GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U009'), (GetUnitTypeId(GetFilterUnit()) != 'Huth')))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002002 takes nothing returns boolean
-    return GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U009'), (GetUnitTypeId(GetFilterUnit()) != 'Huth')))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002 takes nothing returns boolean
-    return GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U000'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U009'), (GetUnitTypeId(GetFilterUnit()) != 'Huth')))))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002 takes nothing returns boolean
-    return GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H04L'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U000'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U009'), (GetUnitTypeId(GetFilterUnit()) != 'Huth')))))))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func003002002002002 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitAliveBJ(GetFilterUnit()) == true), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H04L'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U000'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U009'), (GetUnitTypeId(GetFilterUnit()) != 'Huth')))))))))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func003002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func003002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func003002002002 takes nothing returns boolean
-    return GetBooleanAnd((GetOwningPlayer(GetFilterUnit()) == udg_Duel_Inviter), (GetBooleanAnd((IsUnitAliveBJ(GetFilterUnit()) == true), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H04L'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U000'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U009'), (GetUnitTypeId(GetFilterUnit()) != 'Huth')))))))))))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func003002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func003002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func003002002 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true), (GetBooleanAnd((GetOwningPlayer(GetFilterUnit()) == udg_Duel_Inviter), (GetBooleanAnd((IsUnitAliveBJ(GetFilterUnit()) == true), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H04L'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U000'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U009'), (GetUnitTypeId(GetFilterUnit()) != 'Huth')))))))))))))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func003002002001(), Trig_Duel_receiver_answer_Copy_Func001Func003002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func004002002001 takes nothing returns boolean
@@ -25388,35 +26481,35 @@ function Trig_Duel_receiver_answer_Copy_Func001Func00400200200200200200200200200
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002002002002 takes nothing returns boolean
-    return GetBooleanAnd((( GetUnitTypeId(GetFilterUnit()) != 'U009' ) and ( GetUnitTypeId(GetFilterUnit()) != 'H02O' )), (( GetUnitTypeId(GetFilterUnit()) != 'Huth' ) and ( GetUnitTypeId(GetFilterUnit()) != 'E04B' ))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002002002 takes nothing returns boolean
-    return GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((( GetUnitTypeId(GetFilterUnit()) != 'U009' ) and ( GetUnitTypeId(GetFilterUnit()) != 'H02O' )), (( GetUnitTypeId(GetFilterUnit()) != 'Huth' ) and ( GetUnitTypeId(GetFilterUnit()) != 'E04B' ))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002002 takes nothing returns boolean
-    return GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((( GetUnitTypeId(GetFilterUnit()) != 'U009' ) and ( GetUnitTypeId(GetFilterUnit()) != 'H02O' )), (( GetUnitTypeId(GetFilterUnit()) != 'Huth' ) and ( GetUnitTypeId(GetFilterUnit()) != 'E04B' ))))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002 takes nothing returns boolean
-    return GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U000'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((( GetUnitTypeId(GetFilterUnit()) != 'U009' ) and ( GetUnitTypeId(GetFilterUnit()) != 'H02O' )), (( GetUnitTypeId(GetFilterUnit()) != 'Huth' ) and ( GetUnitTypeId(GetFilterUnit()) != 'E04B' ))))))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002 takes nothing returns boolean
-    return GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H04L'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U000'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((( GetUnitTypeId(GetFilterUnit()) != 'U009' ) and ( GetUnitTypeId(GetFilterUnit()) != 'H02O' )), (( GetUnitTypeId(GetFilterUnit()) != 'Huth' ) and ( GetUnitTypeId(GetFilterUnit()) != 'E04B' ))))))))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func004002002002002 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitAliveBJ(GetFilterUnit()) == true), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H04L'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U000'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((( GetUnitTypeId(GetFilterUnit()) != 'U009' ) and ( GetUnitTypeId(GetFilterUnit()) != 'H02O' )), (( GetUnitTypeId(GetFilterUnit()) != 'Huth' ) and ( GetUnitTypeId(GetFilterUnit()) != 'E04B' ))))))))))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func004002002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func004002002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func004002002002 takes nothing returns boolean
-    return GetBooleanAnd((GetOwningPlayer(GetFilterUnit()) == udg_Duel_Receiver), (GetBooleanAnd((IsUnitAliveBJ(GetFilterUnit()) == true), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H04L'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U000'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((( GetUnitTypeId(GetFilterUnit()) != 'U009' ) and ( GetUnitTypeId(GetFilterUnit()) != 'H02O' )), (( GetUnitTypeId(GetFilterUnit()) != 'Huth' ) and ( GetUnitTypeId(GetFilterUnit()) != 'E04B' ))))))))))))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func004002002002001(), Trig_Duel_receiver_answer_Copy_Func001Func004002002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func004002002 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true), (GetBooleanAnd((GetOwningPlayer(GetFilterUnit()) == udg_Duel_Receiver), (GetBooleanAnd((IsUnitAliveBJ(GetFilterUnit()) == true), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H04L'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'U000'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'H05O'), (GetBooleanAnd((GetUnitTypeId(GetFilterUnit()) != 'Hjai'), (GetBooleanAnd((( GetUnitTypeId(GetFilterUnit()) != 'U009' ) and ( GetUnitTypeId(GetFilterUnit()) != 'H02O' )), (( GetUnitTypeId(GetFilterUnit()) != 'Huth' ) and ( GetUnitTypeId(GetFilterUnit()) != 'E04B' ))))))))))))))))) // INLINED!!
+    return GetBooleanAnd(Trig_Duel_receiver_answer_Copy_Func001Func004002002001(), Trig_Duel_receiver_answer_Copy_Func001Func004002002002())
 endfunction
 
 function Trig_Duel_receiver_answer_Copy_Func001Func005Func001C takes nothing returns boolean
@@ -26314,7 +27407,7 @@ endfunction
                 call DestroyTimerDialog(s__TeamDuel_DUEL_INVITE_TIMER_DIALOG)
                 set bj_lastCreatedUnit=CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'h04K', GetRectCenterX(gg_rct_DeathForest), GetRectCenterY(gg_rct_DeathForest), 0)
                 call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 2.0)
-                call TimerStart((NewTimerEx(0)), 2.0, false, function s__TeamDuel_startDuel) // INLINED!!
+                call TimerStart(NewTimer(), 2.0, false, function s__TeamDuel_startDuel)
             endif
         endif
     endfunction 
@@ -26382,7 +27475,7 @@ endfunction
         call DestroyGroup(bj_lastCreatedGroup)
         set bj_lastCreatedUnit=CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'h04M', GetRectCenterX(gg_rct_DeathForest), GetRectCenterY(gg_rct_DeathForest), 0)
         call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 3.0)
-        call TimerStart((NewTimerEx(0)), 3.0, false, function s__TeamDuel_moveUnits) // INLINED!!
+        call TimerStart(NewTimer(), 3.0, false, function s__TeamDuel_moveUnits)
     endfunction 
 
     function s__TeamDuel_duelExpires takes nothing returns nothing
@@ -26461,7 +27554,7 @@ endfunction
         call TriggerAddAction(t2, function s__TeamDuel_inviteExpires)
         call TriggerRegisterTimerExpireEventBJ(t5, s__TeamDuel_DUEL_TIMER)
         call TriggerAddAction(t5, function s__TeamDuel_duelExpires)
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__TeamDuel_death))) // INLINED!!
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__TeamDuel_death)
         call TriggerRegisterLeaveRectSimple(t6, gg_rct_DeathForest)
         call TriggerAddAction(t6, function s__TeamDuel_leave)
     endfunction 
@@ -26961,7 +28054,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_CircleStoraging takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_CircleStoraging_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function Trig_CircleStoraging_Actions)
 endfunction
 
 
@@ -27373,7 +28466,7 @@ function Trig_StartingZoom_Periodic takes nothing returns nothing
 endfunction 
 
 function Trig_StartingZoom_Delay takes nothing returns nothing
-    call TimerStartEx((NewTimerEx(0)) , 1.0 , true , function Trig_StartingZoom_Periodic , "Trig_StartingZoom_Periodic") // INLINED!!
+    call TimerStartEx(NewTimer() , 1.0 , true , function Trig_StartingZoom_Periodic , "Trig_StartingZoom_Periodic")
     call ReleaseTimer(GetExpiredTimer())
 endfunction
 
@@ -27388,7 +28481,7 @@ function Trig_StartingZoom_Actions takes nothing returns nothing
         set i=i + 1
     endloop
     call TriggerAddAction(t, function Trig_Zoom_System_Actions)
-    call TimerStartEx((NewTimerEx(0)) , 2.0 , false , function Trig_StartingZoom_Delay , "Trig_StartingZoom_Delay") // INLINED!!
+    call TimerStartEx(NewTimer() , 2.0 , false , function Trig_StartingZoom_Delay , "Trig_StartingZoom_Delay")
 endfunction
 
 //===========================================================================
@@ -27434,22 +28527,22 @@ endfunction
 
 
     
-    function s__SendGoldAndCystal__Command_receiveCrystal takes nothing returns nothing
+    function s__SendGoldAndCystal___Command_receiveCrystal takes nothing returns nothing
         local integer id= 0
         local integer i
         loop
             exitwhen id > 11
-            if GetClickedDialog() == s__SendGoldAndCystal__cd[id] then
+            if GetClickedDialog() == s__SendGoldAndCystal___cd[id] then
                 set i=0
                 loop
                     exitwhen i > 11
-                    if GetClickedButton() == s__SendGoldAndCystal__cb[(id)*(12)+i] then
-                        if s__SendGoldAndCystal__c[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) then
-                            set s__SendGoldAndCystal__c[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER)
+                    if GetClickedButton() == s__SendGoldAndCystal___cb[(id)*(12)+i] then
+                        if s__SendGoldAndCystal___c[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) then
+                            set s__SendGoldAndCystal___c[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER)
                         endif
-                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) - s__SendGoldAndCystal__c[id])
-                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER) + s__SendGoldAndCystal__c[id])
-                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal__c[id]) + "|r|cff87ceeb crystal.|r")
+                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) - s__SendGoldAndCystal___c[id])
+                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER) + s__SendGoldAndCystal___c[id])
+                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal___c[id]) + "|r|cff87ceeb crystal.|r")
                     endif
                     set i=i + 1
                 endloop
@@ -27458,26 +28551,26 @@ endfunction
         endloop
     endfunction 
     
-    function s__SendGoldAndCystal__Command_receiveGold takes nothing returns nothing
+    function s__SendGoldAndCystal___Command_receiveGold takes nothing returns nothing
         local integer id= 0
         local integer i
         loop
             exitwhen id > 11
-            if GetClickedDialog() == s__SendGoldAndCystal__gd[id] then
+            if GetClickedDialog() == s__SendGoldAndCystal___gd[id] then
                 set i=0
                 loop
                     exitwhen i > 11
-                    if GetClickedButton() == s__SendGoldAndCystal__gb[(id)*(12)+i] then
-                        if s__SendGoldAndCystal__g[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) then
-                            set s__SendGoldAndCystal__g[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD)
+                    if GetClickedButton() == s__SendGoldAndCystal___gb[(id)*(12)+i] then
+                        if s__SendGoldAndCystal___g[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) then
+                            set s__SendGoldAndCystal___g[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD)
                         endif
-			if s__SendGoldAndCystal__given[id] + s__SendGoldAndCystal__g[id] > 5000 then
-				set s__SendGoldAndCystal__g[id]= 5000 - s__SendGoldAndCystal__given[id]
+			if s__SendGoldAndCystal___given[id] + s__SendGoldAndCystal___g[id] > 5000 then
+				set s__SendGoldAndCystal___g[id]= 5000 - s__SendGoldAndCystal___given[id]
 			endif
-                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) - s__SendGoldAndCystal__g[id])
-                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD) + s__SendGoldAndCystal__g[id])
-                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal__g[id]) + "|r|cff87ceeb gold.|r")
-			set s__SendGoldAndCystal__given[id]= s__SendGoldAndCystal__given[id] + s__SendGoldAndCystal__g[id]
+                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) - s__SendGoldAndCystal___g[id])
+                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD) + s__SendGoldAndCystal___g[id])
+                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal___g[id]) + "|r|cff87ceeb gold.|r")
+			set s__SendGoldAndCystal___given[id]= s__SendGoldAndCystal___given[id] + s__SendGoldAndCystal___g[id]
                     endif
                     set i=i + 1
                 endloop
@@ -27486,18 +28579,18 @@ endfunction
         endloop
     endfunction 
     
-    function s__SendGoldAndCystal__Command_sendCrystal takes nothing returns nothing
+    function s__SendGoldAndCystal___Command_sendCrystal takes nothing returns nothing
         local integer amount= S2I(SubStringBJ(GetEventPlayerChatString(), 4, 10))
         local integer id= GetPlayerId(GetTriggerPlayer())
         local integer i= 0
         local integer count= 0
-        set s__SendGoldAndCystal__c[id]= amount
-        call DialogClear(s__SendGoldAndCystal__cd[id])
-        call DialogSetMessage(s__SendGoldAndCystal__cd[id], "Choose a player to send crystal")
+        set s__SendGoldAndCystal___c[id]= amount
+        call DialogClear(s__SendGoldAndCystal___cd[id])
+        call DialogSetMessage(s__SendGoldAndCystal___cd[id], "Choose a player to send crystal")
         loop
             exitwhen i > 11
             if i != 3 and i != 7 and i != 11 and GetPlayerController(Player(i)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING and IsPlayerAlly(Player(i), GetTriggerPlayer()) and i != id then
-                set s__SendGoldAndCystal__cb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal__cd[id], GetPlayerName(Player(i)), 0)
+                set s__SendGoldAndCystal___cb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal___cd[id], GetPlayerName(Player(i)), 0)
                 set count=count + 1
             endif
             set i=i + 1
@@ -27505,11 +28598,11 @@ endfunction
         if count == 0 then
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You don't have any ally to send crystal to.|r")
         else
-            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal__cd[id], true)
+            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal___cd[id], true)
         endif
     endfunction 
     
-    function s__SendGoldAndCystal__Command_sendGold takes nothing returns nothing
+    function s__SendGoldAndCystal___Command_sendGold takes nothing returns nothing
         local integer amount= S2I(SubStringBJ(GetEventPlayerChatString(), 4, 10))
         local integer id= GetPlayerId(GetTriggerPlayer())
         local integer i= 0
@@ -27517,13 +28610,13 @@ endfunction
 	if SubStringBJ(GetEventPlayerChatString(), 1, 4) == "-gen" then
 		return
 	endif
-        set s__SendGoldAndCystal__g[id]= amount
-        call DialogClear(s__SendGoldAndCystal__gd[id])
-        call DialogSetMessage(s__SendGoldAndCystal__gd[id], "Choose a player to send gold")
+        set s__SendGoldAndCystal___g[id]= amount
+        call DialogClear(s__SendGoldAndCystal___gd[id])
+        call DialogSetMessage(s__SendGoldAndCystal___gd[id], "Choose a player to send gold")
         loop
             exitwhen i > 11
             if i != 3 and i != 7 and i != 11 and GetPlayerController(Player(i)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING and IsPlayerAlly(Player(i), GetTriggerPlayer()) and i != id then
-                set s__SendGoldAndCystal__gb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal__gd[id], GetPlayerName(Player(i)), 0)
+                set s__SendGoldAndCystal___gb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal___gd[id], GetPlayerName(Player(i)), 0)
                 set count=count + 1
             endif
             set i=i + 1
@@ -27531,11 +28624,11 @@ endfunction
         if count == 0 then
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You don't have any ally to send gold to.|r")
         else
-            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal__gd[id], true)
+            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal___gd[id], true)
         endif
     endfunction 
     
-    function s__SendGoldAndCystal__Command_onInit takes nothing returns nothing
+    function s__SendGoldAndCystal___Command_onInit takes nothing returns nothing
         local trigger t1= CreateTrigger()
         local trigger t2= CreateTrigger()
         local trigger t3= CreateTrigger()
@@ -27547,18 +28640,18 @@ endfunction
             if i != 3 and i != 7 and i != 11 then
                 call TriggerRegisterPlayerChatEvent(t1, Player(i), "-g", false)
                 call TriggerRegisterPlayerChatEvent(t2, Player(i), "-c", false)
-                set s__SendGoldAndCystal__gd[i]= DialogCreate()
-                set s__SendGoldAndCystal__cd[i]= DialogCreate()
-                call TriggerRegisterDialogEventBJ(t3, s__SendGoldAndCystal__gd[i])
-                call TriggerRegisterDialogEventBJ(t4, s__SendGoldAndCystal__cd[i])
+                set s__SendGoldAndCystal___gd[i]= DialogCreate()
+                set s__SendGoldAndCystal___cd[i]= DialogCreate()
+                call TriggerRegisterDialogEventBJ(t3, s__SendGoldAndCystal___gd[i])
+                call TriggerRegisterDialogEventBJ(t4, s__SendGoldAndCystal___cd[i])
             endif
-	    set s__SendGoldAndCystal__given[i]= 0
+	    set s__SendGoldAndCystal___given[i]= 0
             set i=i + 1
         endloop
-        call TriggerAddAction(t1, function s__SendGoldAndCystal__Command_sendGold)
-        call TriggerAddAction(t2, function s__SendGoldAndCystal__Command_sendCrystal)
-        call TriggerAddAction(t3, function s__SendGoldAndCystal__Command_receiveGold)
-        call TriggerAddAction(t4, function s__SendGoldAndCystal__Command_receiveCrystal)
+        call TriggerAddAction(t1, function s__SendGoldAndCystal___Command_sendGold)
+        call TriggerAddAction(t2, function s__SendGoldAndCystal___Command_sendCrystal)
+        call TriggerAddAction(t3, function s__SendGoldAndCystal___Command_receiveGold)
+        call TriggerAddAction(t4, function s__SendGoldAndCystal___Command_receiveCrystal)
     endfunction 
     
 
@@ -27715,7 +28808,7 @@ endfunction
         endfunction
     
     function s__Killme_periodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         if s__Killme_count[this] > 0 then
             call DisplayTextToPlayer(Player(s__Killme_id[this]), 0, 0, "|cffff0000" + I2S(s__Killme_count[this]) + " second remaining!")
         endif
@@ -27888,7 +28981,7 @@ endfunction
         		set i=i + 1
     		endloop
     		call TriggerAddAction(tg, function s__MoveSpeedBug_resetMs)
-		call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter((function s__MoveSpeedBug_leave))) // INLINED!!
+		call RegisterLeaveFunction(function s__MoveSpeedBug_leave)
  endfunction 
 
 //===========================================================================
@@ -27914,7 +29007,7 @@ endfunction
 			set i=i + 1
 		endloop
     		call TriggerAddAction(t, function s__WindowCommand_actions)
-		call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter((function s__WindowCommand_leave))) // INLINED!!
+		call RegisterLeaveFunction(function s__WindowCommand_leave)
  endfunction 
 
 
@@ -27954,7 +29047,7 @@ endfunction
     endfunction
     
     function s__RangeCommand_periodic takes nothing returns nothing
-        local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer id= GetTimerData(GetExpiredTimer())
         local integer i= 0
         local real x= GetUnitX(s__s__RangeCommand_uu[id])
         local real y= GetUnitY(s__s__RangeCommand_uu[id])
@@ -27962,8 +29055,8 @@ endfunction
         local real new_y
         loop
             exitwhen i > 23
-            set new_x=(((x )*1.0) + Cos((( Deg2Rad(360 / 24 * i) )*1.0)) * (( s__s__RangeCommand_rr[id])*1.0)) // INLINED!!
-            set new_y=(((y )*1.0) + Sin((( Deg2Rad(360 / 24 * i) )*1.0)) * (( s__s__RangeCommand_rr[id])*1.0)) // INLINED!!
+            set new_x=GetPolarX(x , Deg2Rad(360 / 24 * i) , s__s__RangeCommand_rr[id])
+            set new_y=GetPolarY(y , Deg2Rad(360 / 24 * i) , s__s__RangeCommand_rr[id])
             call SetUnitX(s__s__RangeCommand_glow[(id)*(24)+i], new_x)
             call SetUnitY(s__s__RangeCommand_glow[(id)*(24)+i], new_y)
             set i=i + 1
@@ -27988,8 +29081,8 @@ endfunction
             set i=0
             loop
                 exitwhen i > 23
-                set new_x=(((x )*1.0) + Cos((( Deg2Rad(360 / 24 * i) )*1.0)) * (( s__s__RangeCommand_rr[id])*1.0)) // INLINED!!
-                set new_y=(((y )*1.0) + Sin((( Deg2Rad(360 / 24 * i) )*1.0)) * (( s__s__RangeCommand_rr[id])*1.0)) // INLINED!!
+                set new_x=GetPolarX(x , Deg2Rad(360 / 24 * i) , s__s__RangeCommand_rr[id])
+                set new_y=GetPolarY(y , Deg2Rad(360 / 24 * i) , s__s__RangeCommand_rr[id])
                 set bj_lastCreatedUnit=CreateUnit(Player(id), 'e02Q', new_x, new_y, 270.0)
                 if GetLocalPlayer() != Player(id) then
                     call SetUnitVertexColor(bj_lastCreatedUnit, 255, 255, 255, 0)
@@ -28176,7 +29269,7 @@ endfunction
         call DestroyGroup(g2)
         set s__s__SwitchCommand_blocked[GetPlayerId(s__SwitchCommand_inviter)]= true
         set s__s__SwitchCommand_blocked[s__SwitchCommand_slot]= true
-        call TriggerEvaluate(st__SwitchCommand_finish) // INLINED!!
+        call sc__SwitchCommand_finish()
         set color=null
         set b1=null
         set b2=null
@@ -28208,7 +29301,7 @@ endfunction
                     endif
                     set i=i + 1
                 endloop
-                call TriggerEvaluate(st__SwitchCommand_finish) // INLINED!!
+                call sc__SwitchCommand_finish()
             endif
         endif
     endfunction
@@ -28216,7 +29309,7 @@ endfunction
     function s__SwitchCommand_clickDialog takes nothing returns nothing
         local integer i= 0
         if GetClickedButton() == s__s__SwitchCommand_pickbutton[12] then
-            call TriggerEvaluate(st__SwitchCommand_finish) // INLINED!!
+            call sc__SwitchCommand_finish()
             return
         endif
         loop
@@ -28251,7 +29344,7 @@ endfunction
         call PauseTimer(s__SwitchCommand_timer1)
         call ReleaseTimer(s__SwitchCommand_timer1)
         set s__SwitchCommand_timer1=null
-        set s__SwitchCommand_timer2=(NewTimerEx(0)) // INLINED!!
+        set s__SwitchCommand_timer2=NewTimer()
         call CreateTimerDialogBJ(s__SwitchCommand_timer2, "Switch command")
         set s__SwitchCommand_timerwindow2=GetLastCreatedTimerDialogBJ()
         call TimerDialogDisplayBJ(true, s__SwitchCommand_timerwindow2)
@@ -28306,7 +29399,7 @@ endfunction
                             call DialogAddButtonBJ(s__SwitchCommand_pick, "XXX CANCEL XXX")
                             set s__s__SwitchCommand_pickbutton[12]= GetLastCreatedButtonBJ()
                             call DialogDisplayBJ(true, s__SwitchCommand_pick, GetTriggerPlayer())
-                            set s__SwitchCommand_timer1=(NewTimerEx(0)) // INLINED!!
+                            set s__SwitchCommand_timer1=NewTimer()
                             call CreateTimerDialogBJ(s__SwitchCommand_timer1, "Pick a slot")
                             set s__SwitchCommand_timerwindow1=GetLastCreatedTimerDialogBJ()
                             call TimerDialogDisplayBJ(true, s__SwitchCommand_timerwindow1)
@@ -28356,8 +29449,8 @@ endfunction
         endloop
         call TriggerAddAction(t3, function s__SwitchCommand_response)
         call TriggerAddAction(t, function s__SwitchCommand_actions)
-	call TimerStartEx((NewTimerEx(0)) , 10.0 , false , function s__SwitchCommand_enableSwitch , "SwitchCommand.enableSwitch") // INLINED!!
-        call TimerStartEx((NewTimerEx(0)) , 1500.0 , false , function s__SwitchCommand_disableSwitch , "SwitchCommand.disableSwitch") // INLINED!!
+	call TimerStartEx(NewTimer() , 10.0 , false , function s__SwitchCommand_enableSwitch , "SwitchCommand.enableSwitch")
+        call TimerStartEx(NewTimer() , 1500.0 , false , function s__SwitchCommand_disableSwitch , "SwitchCommand.disableSwitch")
     endfunction
 
 //===========================================================================
@@ -28366,7 +29459,7 @@ endfunction
 	
     
     function s__LockCamera_periodic takes nothing returns nothing
-  local integer i= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+  local integer i= GetTimerData(GetExpiredTimer())
         if s__s__LockCamera_targets[i] != null then
 			call PanCameraToTimedForPlayer(Player(i), GetUnitX(s__s__LockCamera_targets[i]), GetUnitY(s__s__LockCamera_targets[i]), 0)
 		endif
@@ -28536,9 +29629,9 @@ endfunction
 		endloop
 		call TriggerAddAction(t, function s__StreamCommand_enable)
 		//if GetPlayerController(Player(13)) == PLAYER_SLOT_STATE_PLAYING or GetPlayerController(Player(14)) == PLAYER_SLOT_STATE_PLAYING then 
-			call TimerStart((NewTimerEx(0)), 10.0, true, function s__StreamCommand_periodic) // INLINED!!
-			call TimerStart((NewTimerEx(0)), 0.03, true, function s__StreamCommand_camera) // INLINED!!
-			call TimerStart((NewTimerEx(0)), 300.0, true, function s__StreamCommand_stream) // INLINED!!
+			call TimerStart(NewTimer(), 10.0, true, function s__StreamCommand_periodic)
+			call TimerStart(NewTimer(), 0.03, true, function s__StreamCommand_camera)
+			call TimerStart(NewTimer(), 300.0, true, function s__StreamCommand_stream)
 		//endif
  endfunction  
 
@@ -28723,7 +29816,7 @@ function s__CreateMultiboard_actions takes nothing returns nothing
 endfunction 
 
 function s__CreateMultiboard_onInit takes nothing returns nothing
-	call TimerStart((NewTimerEx(0)), 0.1, false, function s__CreateMultiboard_actions) // INLINED!!
+	call TimerStart(NewTimer(), 0.1, false, function s__CreateMultiboard_actions)
 endfunction
 
 //===========================================================================
@@ -29052,7 +30145,7 @@ endfunction
  endfunction 
 
  function s__UndergroundDrainMana_onInit takes nothing returns nothing
-		call TimerStart((NewTimerEx(0)), 1.0, true, function s__UndergroundDrainMana_periodic) // INLINED!!
+		call TimerStart(NewTimer(), 1.0, true, function s__UndergroundDrainMana_periodic)
  endfunction 
 
 //===========================================================================
@@ -29198,7 +30291,7 @@ endfunction
     
 
     function s__MusicS_playSong takes nothing returns nothing
-        local integer i= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer i= GetTimerData(GetExpiredTimer())
         if s__s__MusicS_intervals[i] <= 0 then
             if GetLocalPlayer() == Player(i) then
                 call ClearMapMusicBJ()
@@ -29962,7 +31055,7 @@ endfunction
         endfunction
             
    function s__HeroIcon_periodic takes nothing returns nothing
-    local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+    local integer this= GetTimerData(GetExpiredTimer())
 				set s__HeroIcon_count[this]=s__HeroIcon_count[this] + 1
 				call BlzFrameSetAlpha(s__HeroIcon_mainbutton[this], R2I(255 - 7.72 * s__HeroIcon_count[this]))
 				//set this.y = this.y - 0.002
@@ -29974,7 +31067,7 @@ endfunction
    endfunction 
 
    function s__HeroIcon_delay takes nothing returns nothing
-    local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+    local integer this= GetTimerData(GetExpiredTimer())
 				set s__HeroIcon_count[this]=0
 				call TimerStart(NewTimerEx(this), 0.03, true, function s__HeroIcon_periodic)
 				call ReleaseTimer(GetExpiredTimer())
@@ -30041,7 +31134,7 @@ endfunction
         endfunction
             
    function s__HeroMessage_periodic takes nothing returns nothing
-    local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+    local integer this= GetTimerData(GetExpiredTimer())
 				set s__HeroMessage_count[this]=s__HeroMessage_count[this] + 1
 				//set this.y = this.y - 0.002 
 				call BlzFrameSetAlpha(s__HeroMessage_imgFrame[this], R2I(255 - 7.72 * s__HeroMessage_count[this]))
@@ -30053,7 +31146,7 @@ endfunction
    endfunction 
 
    function s__HeroMessage_delay takes nothing returns nothing
-    local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+    local integer this= GetTimerData(GetExpiredTimer())
 				set s__HeroMessage_count[this]=0
 				call TimerStart(NewTimerEx(this), 0.03, true, function s__HeroMessage_periodic)
 				call ReleaseTimer(GetExpiredTimer())
@@ -30119,7 +31212,7 @@ endfunction
             endfunction 
 
             function s__HeroUIMessage_periodic takes nothing returns nothing
-                local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+                local integer this= GetTimerData(GetExpiredTimer())
                 if not s__HeroUIMessage_enabled then
                     set s__HeroUIMessage_enabled=true
                     call s__HeroIcon_start(s__HeroUIMessage_iconKiller[s__HeroUIMessage_instance],s__HeroUIMessage_killer[this] , s__s__AHSS_Configurations_PLAYER_ICONS[GetPlayerId(GetOwningPlayer(s__HeroUIMessage_killer[this]))])
@@ -30131,7 +31224,7 @@ endfunction
                         call s__HeroIcon_start(s__HeroUIMessage_iconAssist2[s__HeroUIMessage_instance],s__HeroUIMessage_assist2[this] , s__s__AHSS_Configurations_PLAYER_ICONS[GetPlayerId(GetOwningPlayer(s__HeroUIMessage_assist2[this]))])
                     endif
                     call s__HeroMessage_start(s__HeroUIMessage_message[s__HeroUIMessage_instance],s__HeroUIMessage_death[this] , "DeathMessageKilled.blp")
-                    call TimerStart((NewTimerEx(0)), 3.5, false, function s__HeroUIMessage_disable) // INLINED!!
+                    call TimerStart(NewTimer(), 3.5, false, function s__HeroUIMessage_disable)
                     call s__HeroUIMessage_deallocate(this)
                     call ReleaseTimer(GetExpiredTimer())
                 endif
@@ -30163,7 +31256,7 @@ endfunction
 
             function s__HeroUIMessage_onInit takes nothing returns nothing
                 set s__HeroUIMessage_enabled=false
-                call TimerStart((NewTimerEx(0)), 5.0, false, function s__HeroUIMessage_delay) // INLINED!!
+                call TimerStart(NewTimer(), 5.0, false, function s__HeroUIMessage_delay)
             endfunction 
 
         
@@ -31408,7 +32501,7 @@ endfunction
             
             function s__NinpouUI_enableAutobuyClicked takes nothing returns boolean
                 local integer id= GetPlayerId(GetTriggerPlayer())
-                local button b= (GetClickedButton()) // INLINED!!
+                local button b= s__Dialog_getClickedButton()
                 local integer i= 1
                 if b != s__s__NinpouUI_autobuy_buttons[(id)*(6)+0] then
                     loop
@@ -31435,12 +32528,12 @@ endfunction
                     if s__s__NinpouUI_autobuy_count[GetPlayerId(GetTriggerPlayer())] == 0 then
                         set d=s__Dialog_create()
                         call s__Dialog__set_title(d,"Choose your build")
-                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+1]= (DialogAddButton(s__Dialog_dg[(d)], ("Defensive build (recommended)" ), ( 1))) // INLINED!!
-                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+2]= (DialogAddButton(s__Dialog_dg[(d)], ("Offensive build" ), ( 2))) // INLINED!!
-                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+3]= (DialogAddButton(s__Dialog_dg[(d)], ("Anti-stun build" ), ( 3))) // INLINED!!
-                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+4]= (DialogAddButton(s__Dialog_dg[(d)], ("Anti-debuff build" ), ( 4))) // INLINED!!
-                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+5]= (DialogAddButton(s__Dialog_dg[(d)], ("Auto-attack build" ), ( 5))) // INLINED!!
-                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+0]= (DialogAddButton(s__Dialog_dg[(d)], ("XXX CANCEL XXX" ), ( 0))) // INLINED!!
+                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+1]= s__Dialog_addButton(d,"Defensive build (recommended)" , 1)
+                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+2]= s__Dialog_addButton(d,"Offensive build" , 2)
+                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+3]= s__Dialog_addButton(d,"Anti-stun build" , 3)
+                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+4]= s__Dialog_addButton(d,"Anti-debuff build" , 4)
+                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+5]= s__Dialog_addButton(d,"Auto-attack build" , 5)
+                        set s__s__NinpouUI_autobuy_buttons[(id)*(6)+0]= s__Dialog_addButton(d,"XXX CANCEL XXX" , 0)
                         call s__Dialog_display(d,GetTriggerPlayer() , true)
                         call s__Dialog_registerClickEvent(d,Condition(function s__NinpouUI_enableAutobuyClicked))
                         set s__s__NinpouUI_autobuy_dialogs[GetPlayerId(GetTriggerPlayer())]= d
@@ -32528,7 +33621,7 @@ endfunction
                     call BlzFrameSetSize(BlzGetOriginFrame(ORIGIN_FRAME_UNIT_MSG, 0), 0.8, 0.6 - 0.23)
                 endif
 
-                call TimerStartEx((NewTimerEx(0)) , 1.0 , false , function s__NinpouUI_initializeElements , "UI_initializeElements") // INLINED!!
+                call TimerStartEx(NewTimer() , 1.0 , false , function s__NinpouUI_initializeElements , "UI_initializeElements")
             endfunction
 
 
@@ -33405,26 +34498,26 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             //---------------------------------------------------------------------------------
             //Here you configurate severals options of the system.
             call sc__AHSS_Options_timeLimit(s__AHSS_Configurations_options,true , 600.) //If "true", the players have a limited time to pick a hero. The time is given in seconds.
-            set s__AHSS_Options_bots[(s__AHSS_Configurations_options)]=(false) //Computer players pick heros too?  // INLINED!!
+            call sc__AHSS_Options_botsPick(s__AHSS_Configurations_options,false) //Computer players pick heros too? 
             
-            set s__AHSS_Options_iconScale[(s__AHSS_Configurations_options)]=((1.0)*1.0) //Size of heroes icons. Not recommended to change. // INLINED!!
-            set s__AHSS_Options_iconsByLine[(s__AHSS_Configurations_options)]=(12) //Set the amount of heroes icons by row // INLINED!!
+            call sc__AHSS_Options_setIconScale(s__AHSS_Configurations_options,1.0) //Size of heroes icons. Not recommended to change.
+            call sc__AHSS_Options_setIconsByLine(s__AHSS_Configurations_options,12) //Set the amount of heroes icons by row
             
-            set s__AHSS_Options_click[(s__AHSS_Configurations_options)]=(gg_snd_MouseClick1) //This sound is played when selection changes  // INLINED!!
-            set s__AHSS_Options_error[(s__AHSS_Configurations_options)]=(gg_snd_Error) //This sound is played when an invalid action is perfomed // INLINED!!
-            set s__AHSS_Options_ok[(s__AHSS_Configurations_options)]=(gg_snd_BigButtonClick) //This sound is played when you confirm a hero selection // INLINED!!
+            call sc__AHSS_Options_setSoundClick(s__AHSS_Configurations_options,gg_snd_MouseClick1) //This sound is played when selection changes 
+            call sc__AHSS_Options_setSoundError(s__AHSS_Configurations_options,gg_snd_Error) //This sound is played when an invalid action is perfomed
+            call sc__AHSS_Options_setSoundOk(s__AHSS_Configurations_options,gg_snd_BigButtonClick) //This sound is played when you confirm a hero selection
             
             //---------------------------------------------------------------------------------
             // FILE PATHS SECTION
             //---------------------------------------------------------------------------------
-            set s__AHSS_Paths_background[(s__AHSS_Configurations_paths)]=("war3mapImported\\AHSS_Background.blp") //Background of selection screen // INLINED!!
-            set s__AHSS_Paths_selection[(s__AHSS_Configurations_paths)]=('h01L') //The selection square above hero icon. It's the single one that it's an unit. // INLINED!!
-            set s__AHSS_Paths_emptyIcon[(s__AHSS_Configurations_paths)]=('B003') //Icon that is display in the absence of a hero. It's a destructable.  // INLINED!!
-            set s__AHSS_Paths_randomIcon[(s__AHSS_Configurations_paths)]=('B004') //Icon for random selection.  // INLINED!!
-            set s__AHSS_Paths_strength[(s__AHSS_Configurations_paths)]=('B006') //Icon to display beside the hero strength.  // INLINED!!
-            set s__AHSS_Paths_agility[(s__AHSS_Configurations_paths)]=('B007') // INLINED!!
-            set s__AHSS_Paths_intelligence[(s__AHSS_Configurations_paths)]=('B008') // INLINED!!
-            set s__AHSS_Paths_logo[(s__AHSS_Configurations_paths)]=('B009') //This is displayed on top-center // INLINED!!
+            call sc__AHSS_Paths_setBackground(s__AHSS_Configurations_paths,"war3mapImported\\AHSS_Background.blp") //Background of selection screen
+            call sc__AHSS_Paths_setSelection(s__AHSS_Configurations_paths,'h01L') //The selection square above hero icon. It's the single one that it's an unit.
+            call sc__AHSS_Paths_setEmptyIcon(s__AHSS_Configurations_paths,'B003') //Icon that is display in the absence of a hero. It's a destructable. 
+            call sc__AHSS_Paths_setRandomIcon(s__AHSS_Configurations_paths,'B004') //Icon for random selection. 
+            call sc__AHSS_Paths_setStrIcon(s__AHSS_Configurations_paths,'B006') //Icon to display beside the hero strength. 
+            call sc__AHSS_Paths_setAgiIcon(s__AHSS_Configurations_paths,'B007')
+            call sc__AHSS_Paths_setIntIcon(s__AHSS_Configurations_paths,'B008')
+            call sc__AHSS_Paths_setLogo(s__AHSS_Configurations_paths,'B009') //This is displayed on top-center
             
             //---------------------------------------------------------------------------------
             // OBJECT CREATION SECTION
@@ -33498,7 +34591,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             if s__AHSS_Teams_count[this] == 0 then
                 return
             endif
-            set s__AHSS___Team_spawningSpot[(s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this] - 1])]=(whichRect) // INLINED!!
+            call s__AHSS___Team_setSpawningSpot(s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this] - 1],whichRect)
         endfunction
         
         function s__AHSS_Teams_getTeam takes integer this,integer index returns integer
@@ -33611,7 +34704,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             set s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this]]=s__AHSS___Hero_create(name , id)
             set s__s__AHSS_Configurations_HERO_NAMES[s__AHSS_Heroes_count[this]]= name
             set s__s__AHSS_Configurations_HERO_IDS[s__AHSS_Heroes_count[this]]= id
-            call SaveInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (id), ( s__AHSS_Heroes_count[this])) // INLINED!!
+            call s__Table__setindex(s__AHSS_Configurations_HERO_BY_ID,id, s__AHSS_Heroes_count[this])
             set s__AHSS_Heroes_count[this]=s__AHSS_Heroes_count[this] + 1
         endfunction
         
@@ -33637,7 +34730,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            set s__AHSS___Hero_description[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichDescription) // INLINED!!
+            call s__AHSS___Hero_setDescription(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],whichDescription)
         endfunction
         function s__AHSS_Heroes_setModel takes integer this,string path,real scale returns nothing
             if s__AHSS_Heroes_count[this] == 0 then
@@ -33649,19 +34742,19 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            set s__AHSS___Hero_modelAlternate[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(b) // INLINED!!
+            call s__AHSS___Hero_setModelAlternate(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],b)
         endfunction
         function s__AHSS_Heroes_setIcon takes integer this,integer whichIcon returns nothing
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            set s__AHSS___Hero_icon[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichIcon) // INLINED!!
+            call s__AHSS___Hero_setIcon(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],whichIcon)
         endfunction
         function s__AHSS_Heroes_setIconPath takes integer this,string path returns nothing
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            set s__AHSS___Hero_iconPath[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(path) // INLINED!!
+            call s__AHSS___Hero_setIconPath(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],path)
             set s__s__AHSS_Configurations_HERO_ICONS[s__AHSS_Heroes_count[this] - 1]= path
         endfunction
         
@@ -33844,7 +34937,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
 //end of: CREATE_ATT_STAT("int")
         
  function s__AHSS_Graphics_delay takes nothing returns nothing
-    		call sc__AHSS_Graphics_draw(s__AHSS_Configurations_graphics,(false)) // INLINED!!
+    		call s__AHSS_Configurations_start(false)
 		call ReleaseTimer(GetExpiredTimer())
  endfunction
         function s__AHSS_Graphics_onInit takes nothing returns nothing
@@ -33875,8 +34968,8 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
 
             call TriggerAddCondition(t, Condition(function sc__AHSS_Graphics_pressEsc))
             set t=null
-            call s__ArrowKey_registerEvent((function sc__AHSS_Graphics_pressKey)) // INLINED!!
-	        call TimerStart((NewTimerEx(0)), 0.01, false, function s__AHSS_Graphics_delay) // INLINED!!
+            call RegisterArrowKeyEvent(function sc__AHSS_Graphics_pressKey)
+	        call TimerStart(NewTimer(), 0.01, false, function s__AHSS_Graphics_delay)
         endfunction
         function s__AHSS_Graphics_create takes integer teams,integer heroes,integer options,integer paths returns integer
             local integer this= 1
@@ -33912,12 +35005,12 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             set i=0
             set udg_SpawnCreeps=true
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
-                    if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and ( GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and (s__AHSS_Options_bots[(s__AHSS_Graphics_options[this])]) ) ) then // INLINED!!
+                    exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                    set id=s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)
+                    if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and ( GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and s__AHSS_Options_doesBotsPick(s__AHSS_Graphics_options[this]) ) ) then
                         if not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+id] then
                             call sc__AHSS_Graphics_selectHeroRandom(this , id)
                         endif
@@ -33940,21 +35033,21 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             call s__AHSS_Graphics_finishPickingHeroes(this)
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
-                    if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and ( GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and (s__AHSS_Options_bots[(s__AHSS_Graphics_options[this])]) ) ) then // INLINED!!
-                        set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) // INLINED!!
-                        set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=CreateDestructableZ((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]), GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), 500, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                    exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                    set id=s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)
+                    if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and ( GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and s__AHSS_Options_doesBotsPick(s__AHSS_Graphics_options[this]) ) ) then
+                        set index=s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id]) * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) + s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])
+                        set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=CreateDestructableZ(s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this]), GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), 500, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                         call RemoveDestructable(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
                         set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=null
                         set pickDonator=false
                         if udg_DonatorHeroesEnabled[id + 1] and udg_DonatorHeroes[id + 1] > 0 then
                             set k=0
                             loop
-                                exitwhen k > ( (s__AHSS_Heroes_count[(s__AHSS_Graphics_heroes[this])]) - 1 ) // INLINED!!
+                                exitwhen k > ( s__AHSS_Heroes_getSize(s__AHSS_Graphics_heroes[this]) - 1 )
                                 if udg_BaseHeroes[id + 1] == 0 or ( s__s__AHSS_Graphics_availableHeroesId[k] == udg_BaseHeroes[id + 1] and s__s__AHSS_Graphics_availableHeroes[k] ) then
                                     set pickDonator=true
                                 endif
@@ -33971,9 +35064,9 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                             set s__s__AHSS_Graphics_availableHeroesId[index]= 'N010'
                         endif
                         set bj_lastCreatedUnit=CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), s__s__AHSS_Graphics_availableHeroesId[index], GetRectCenterX(gg_rct_fonte), GetRectCenterY(gg_rct_fonte), 270)
-                        call SetUnitPosition(bj_lastCreatedUnit, GetRectCenterX((s__AHSS___Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))])), GetRectCenterY((s__AHSS___Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]))) // INLINED!!
+                        call SetUnitPosition(bj_lastCreatedUnit, GetRectCenterX(s__AHSS___Team_getSpawningSpot(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i))), GetRectCenterY(s__AHSS___Team_getSpawningSpot(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i))))
                         call ResetToGameCameraForPlayer(Player(id), 0)
-                        call PanCameraToTimedForPlayer(Player(id), GetRectCenterX((s__AHSS___Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))])), GetRectCenterY((s__AHSS___Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))])), 0) // INLINED!!
+                        call PanCameraToTimedForPlayer(Player(id), GetRectCenterX(s__AHSS___Team_getSpawningSpot(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i))), GetRectCenterY(s__AHSS___Team_getSpawningSpot(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i))), 0)
                         call SelectUnitForPlayerSingle(bj_lastCreatedUnit, Player(id))
                         call SetUnitOwner(bj_lastCreatedUnit, Player(id), true)
 		                call ForceAddPlayer(udg_forces01[1], Player(id))
@@ -33982,11 +35075,11 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                         if GetUnitTypeId(bj_lastCreatedUnit) == 'H00J' then
                             call MultiboardSetItemIconBJ(udg_multiboard01, 1, id + 4, "Icons\\Heroes\\BTNPreview_Kiba.blp")
                         else
-                            call MultiboardSetItemIconBJ(udg_multiboard01, 1, id + 4, s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(bj_lastCreatedUnit))))]) // INLINED!!
+                            call MultiboardSetItemIconBJ(udg_multiboard01, 1, id + 4, s__s__AHSS_Configurations_HERO_ICONS[s__Table__getindex(s__AHSS_Configurations_HERO_BY_ID,GetUnitTypeId(bj_lastCreatedUnit))])
                         endif
                         set udg_units33[id + 1]=bj_lastCreatedUnit
                         set udg_UnitUsed[GetUnitPointValue(bj_lastCreatedUnit)]=true
-						set s__s__AHSS_Configurations_PLAYER_ICONS[id]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(bj_lastCreatedUnit))))] // INLINED!!
+						set s__s__AHSS_Configurations_PLAYER_ICONS[id]= s__s__AHSS_Configurations_HERO_ICONS[s__Table__getindex(s__AHSS_Configurations_HERO_BY_ID,GetUnitTypeId(bj_lastCreatedUnit))]
                         set s__s__AHSS_Graphics_availableHeroes[index]= false
                     endif
                     set j=j + 1
@@ -33999,7 +35092,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
         //------------------------------------------------------------------
         function s__AHSS_Graphics_hideSelection takes integer this,integer playerid returns nothing
             local integer i= playerid
-            call SetUnitScale((s__AHSS___PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]), 0, 0, 0) // INLINED!!
+            call SetUnitScale(s__AHSS___PlayerSelection_getUnit(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]), 0, 0, 0)
             set s___AHSS_Graphics_isHidden[s__AHSS_Graphics_isHidden[this]+playerid]=true
 //textmacro instance: DESTROY_MODELS()
             if s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+i] != null then
@@ -34050,7 +35143,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
 //end of: DESTROY_STAT("int", "Int")
         endfunction 
         function s__AHSS_Graphics_showSelection takes integer this,integer playerid returns nothing
-            call SetUnitScale((s__AHSS___PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]), 0.66, 0.66, 0.66) // INLINED!!
+            call SetUnitScale(s__AHSS___PlayerSelection_getUnit(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]), 0.66, 0.66, 0.66)
             set s___AHSS_Graphics_isHidden[s__AHSS_Graphics_isHidden[this]+playerid]=false
         endfunction
         function s__AHSS_Graphics_createTeamIcon takes integer this,integer playerid,integer index,boolean remove returns nothing
@@ -34060,20 +35153,20 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             local real y
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    if (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == playerid then // INLINED!!
+                    exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                    if s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == playerid then
                         set x=GetDestructableX(s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j])
                         set y=GetDestructableY(s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j])
                         call RemoveDestructable(s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j])
                         if remove then
-                            set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=CreateDestructable((s__AHSS___Hero_icon[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), x, y, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
-                            set s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=(s__AHSS___Hero_icon[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) // INLINED!!
+                            set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=CreateDestructable(s__AHSS___Hero_getIcon(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)), x, y, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
+                            set s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=s__AHSS___Hero_getIcon(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index))
                         else
-                            set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=CreateDestructable((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]), x, y, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
-                            set s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=(s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) // INLINED!!
+                            set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=CreateDestructable(s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this]), x, y, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
+                            set s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this])
                         endif
                         return
                     endif
@@ -34186,7 +35279,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             endif
         endfunction 
         function s__AHSS_Graphics_createVersus takes integer this returns nothing
-            local real iconSize= s__AHSS_Graphics_ICON_SIZE * ( (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) ) // INLINED!!
+            local real iconSize= s__AHSS_Graphics_ICON_SIZE * ( s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) )
             local real x
             local real y= GetUnitY(s__AHSS_Graphics_dummy[this]) + 300
             local integer i
@@ -34195,14 +35288,14 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             local destructable d
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
-                set y=y - ( s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) * 4 ) - iconSize // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
+                set y=y - ( s__AHSS_Graphics_ICON_SIZE * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) * 4 ) - iconSize
                 set x=GetUnitX(s__AHSS_Graphics_dummy[this]) - 100
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
                     call RemoveDestructable(s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j])
-                    set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=CreateDestructable(s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j], x, y, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) * 2, 1) // INLINED!!
+                    set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=CreateDestructable(s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j], x, y, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) * 2, 1)
                     set x=x + iconSize * 2
                     set j=j + 1
                 endloop
@@ -34212,8 +35305,8 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             set y=GetUnitY(s__AHSS_Graphics_dummy[this]) + 400
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
-                set y=y - ( 128 * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) * 2.8 ) - iconSize + 100 // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
+                set y=y - ( 128 * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) * 2.8 ) - iconSize + 100
                 call SetTextTagPos(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], x, y, 0)
                 set i=i + 1
             endloop
@@ -34245,17 +35338,17 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             local integer i
             local integer j
             local integer id
-            local integer mode= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            local integer mode= GetTimerData(GetExpiredTimer())
             call TimerDialogDisplay(s__AHSS_Graphics_draftTimerDialog[this], false)
             set s__AHSS_Graphics_draftPick[this]=false
             if mode == 2 then
                 set i=0
                 loop
-                    exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                    exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                     set j=0
                     loop
-                        exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                        set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                        exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                        set id=s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)
                         if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(Player(id)) == MAP_CONTROL_USER then
                             call s__AHSS_Graphics_showSelection(this , id)
                         endif
@@ -34293,12 +35386,12 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             local integer j
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    if GetPlayerController(Player((s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == MAP_CONTROL_USER and GetPlayerSlotState(Player((s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == PLAYER_SLOT_STATE_PLAYING then // INLINED!!
-                        if not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])] then // INLINED!!
+                    exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                    if GetPlayerController(Player(s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j))) == MAP_CONTROL_USER and GetPlayerSlotState(Player(s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j))) == PLAYER_SLOT_STATE_PLAYING then
+                        if not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)] then
                             return false
                         endif
                     endif
@@ -34313,12 +35406,12 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             local integer j
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    if GetPlayerController(Player((s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == MAP_CONTROL_USER and GetPlayerSlotState(Player((s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == PLAYER_SLOT_STATE_PLAYING then // INLINED!!
-                        if not s___AHSS_Graphics_draftUsed[s__AHSS_Graphics_draftUsed[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])] then // INLINED!!
+                    exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                    if GetPlayerController(Player(s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j))) == MAP_CONTROL_USER and GetPlayerSlotState(Player(s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j))) == PLAYER_SLOT_STATE_PLAYING then
+                        if not s___AHSS_Graphics_draftUsed[s__AHSS_Graphics_draftUsed[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)] then
                             return false
                         endif
                     endif
@@ -34365,12 +35458,12 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                     exitwhen s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+random] != null and s__s__AHSS_Graphics_availableHeroesAttribute[random] == s__s__AHSS_Graphics_playersAttribute[id]
                 endloop
                 call sc__AHSS_Graphics_showHero(this , id , random)
-                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random / (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                call s__AHSS___PlayerSelection_setColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id],random / s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]))
                 loop
-                    exitwhen random < (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) // INLINED!!
-                    set random=random - (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) // INLINED!!
+                    exitwhen random < s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this])
+                    set random=random - s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this])
                 endloop
-                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random) // INLINED!!
+                call s__AHSS___PlayerSelection_setRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id],random)
                 call sc__AHSS_Graphics_updateCursor(this , id)
                 call sc__AHSS_Graphics_pressEscActions(this , id)
             endif
@@ -34379,24 +35472,24 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             local integer index
             if not s__AHSS_Graphics_gameStarted[this] then
                 if s__AHSS_Graphics_dummy[this] != null and IsPlayerInForce(Player(id), s__AHSS_Graphics_cameraForce) then
-                    if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) == - 1 then // INLINED!!
+                    if s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id]) == - 1 then
                         if s__AHSS_Graphics_allowPick[this] then
                             call s__AHSS_Graphics_selectHeroRandom(this , id)
                         endif
                     else
-                        set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) // INLINED!!
+                        set index=s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id]) * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) + s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])
                         if s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index] == null then
                             if GetLocalPlayer() == GetTriggerPlayer() then
-                                call PlaySoundBJ((s__AHSS_Options_error[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                call PlaySoundBJ(s__AHSS_Options_getSoundError(s__AHSS_Graphics_options[this]))
                             endif
                             return false
                         endif
                         if s__AHSS_Graphics_allowPick[this] or s__AHSS_Graphics_allowRandom[this] then
                             if not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+id] then
                                 if GetLocalPlayer() == GetTriggerPlayer() then
-                                    call PlaySoundBJ((s__AHSS_Options_ok[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call PlaySoundBJ(s__AHSS_Options_getSoundOk(s__AHSS_Graphics_options[this]))
                                 endif
-                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=CreateDestructableZ((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]), GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), 500, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=CreateDestructableZ(s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this]), GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), 500, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                                 call RemoveDestructable(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
                                 set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=null
                                 set s__s__AHSS_Graphics_availableHeroes[index]= false
@@ -34405,11 +35498,11 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                                 call s__AHSS_Graphics_createTeamIcon(this , id , index , true)
                             else
                                 if GetLocalPlayer() == GetTriggerPlayer() then
-                                    call PlaySoundBJ((s__AHSS_Options_ok[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call PlaySoundBJ(s__AHSS_Options_getSoundOk(s__AHSS_Graphics_options[this]))
                                 endif
                                 call s__AHSS_Graphics_showSelection(this , id)
                                 call s__AHSS_Graphics_createTeamIcon(this , id , index , false)
-                                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=CreateDestructableZ((s__AHSS___Hero_icon[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), GetDestructableX(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]), 500, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=CreateDestructableZ(s__AHSS___Hero_getIcon(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)), GetDestructableX(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]), 500, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                                 call RemoveDestructable(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index])
                                 set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=null
                                 set s__s__AHSS_Graphics_availableHeroes[index]= true
@@ -34419,16 +35512,16 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                         elseif s__AHSS_Graphics_draftPick[this] then
                             if not s___AHSS_Graphics_draftUsed[s__AHSS_Graphics_draftUsed[this]+id] then
                                 if GetLocalPlayer() == GetTriggerPlayer() then
-                                    call PlaySoundBJ((s__AHSS_Options_ok[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call PlaySoundBJ(s__AHSS_Options_getSoundOk(s__AHSS_Graphics_options[this]))
                                 endif
                                 set s___AHSS_Graphics_draftUsed[s__AHSS_Graphics_draftUsed[this]+id]=true
                                 
-                                set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=CreateDestructable((s__AHSS___Hero_icon[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), GetDestructableX(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]]), GetDestructableY(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]]), 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                                set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=CreateDestructable(s__AHSS___Hero_getIcon(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)), GetDestructableX(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]]), GetDestructableY(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]]), 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                                 call RemoveDestructable(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]])
                                 set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]]=null
                                 set s__AHSS_Graphics_countBanned[this]=s__AHSS_Graphics_countBanned[this] + 1
 
-                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=CreateDestructableZ((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]), GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), 500, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=CreateDestructableZ(s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this]), GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), 500, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                                 call RemoveDestructable(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
                                 set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=null
                                 set s__s__AHSS_Graphics_availableHeroes[index]= false
@@ -34454,91 +35547,91 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
         endfunction
         function s__AHSS_Graphics_pressKey takes nothing returns nothing
             local integer this= 1
-            local integer playerid= (s__ArrowKey_eventPlayerId) // INLINED!!
+            local integer playerid= GetEventArrowKeyPlayerId()
             local integer index
-            if s__AHSS_Graphics_dummy[this] != null and s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid] != 0 and IsPlayerInForce(Player(playerid), s__AHSS_Graphics_cameraForce) and (s__ArrowKey_eventKeyPressed) and not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+playerid] then // INLINED!!
+            if s__AHSS_Graphics_dummy[this] != null and s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid] != 0 and IsPlayerInForce(Player(playerid), s__AHSS_Graphics_cameraForce) and IsEventArrowKeyPressed() and not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+playerid] then
                 call sc__AHSS_Graphics_moveCursor(this , playerid)
-                set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
+                set index=s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) + s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])
                 call sc__AHSS_Graphics_showHero(this , playerid , index)
             endif
         endfunction 
         
         function s__AHSS_Graphics_moveLeft takes integer this,integer playerid,integer index returns nothing
             local integer i
-            if (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == 0 then // INLINED!!
+            if s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) == 0 then
                 set i=0
                 loop
-                    exitwhen i >= ( (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) - 1 ) or ( s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index + i] == null and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index + i] == null ) // INLINED!!
+                    exitwhen i >= ( s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) - 1 ) or ( s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index + i] == null and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index + i] == null )
                     set i=i + 1
                 endloop
-                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(i) // INLINED!!
+                call s__AHSS___PlayerSelection_setRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],i)
             else
-                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) - 1) // INLINED!!
+                call s__AHSS___PlayerSelection_setRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) - 1)
             endif
         endfunction
         
         function s__AHSS_Graphics_moveRight takes integer this,integer playerid,integer index returns nothing
             local integer i
-            if (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) >= ( (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) - 1 ) or ( s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index + 1] == null and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index + 1] == null ) then // INLINED!!
-                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(0) // INLINED!!
+            if s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) >= ( s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) - 1 ) or ( s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index + 1] == null and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index + 1] == null ) then
+                call s__AHSS___PlayerSelection_setRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],0)
             else
-                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) + 1) // INLINED!!
+                call s__AHSS___PlayerSelection_setRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) + 1)
             endif
         endfunction
         
         function s__AHSS_Graphics_moveDown takes integer this,integer playerid,integer index returns nothing
             local integer i
-            if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
-                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(0) // INLINED!!
+            if s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) == - 1 then
+                call s__AHSS___PlayerSelection_setColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],0)
                 set i=0
                 loop
-                    exitwhen i >= (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) or ( s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i] == null and s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i] == null ) // INLINED!!
+                    exitwhen i >= s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) or ( s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i] == null and s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i] == null )
                     set i=i + 1
                 endloop
-                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(( i - 1 ) / 2) // INLINED!!
-            elseif s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index + (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])] == null and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index + (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])] == null then // INLINED!!
-                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(- 1) // INLINED!!
+                call s__AHSS___PlayerSelection_setRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],( i - 1 ) / 2)
+            elseif s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index + s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this])] == null and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index + s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this])] == null then
+                call s__AHSS___PlayerSelection_setColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],- 1)
             else
-                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) + 1) // INLINED!!
+                call s__AHSS___PlayerSelection_setColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) + 1)
             endif
         endfunction
         
         function s__AHSS_Graphics_moveUp takes integer this,integer playerid,integer index returns nothing
             local integer i
-            if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == 0 then // INLINED!!
-                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(- 1) // INLINED!!
-            elseif (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
+            if s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) == 0 then
+                call s__AHSS___PlayerSelection_setColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],- 1)
+            elseif s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) == - 1 then
                 set i=0
                 loop
-                    exitwhen s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])] == null and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])] == null // INLINED!!
+                    exitwhen s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this])] == null and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this])] == null
                     set i=i + 1
                 endloop
-                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(i - 1) // INLINED!!
+                call s__AHSS___PlayerSelection_setColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],i - 1)
                 set i=0
                 loop
-                    exitwhen s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + i] == null and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + i] == null // INLINED!!
+                    exitwhen s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) + i] == null and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) + i] == null
                     set i=i + 1
                 endloop
-                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(( i - 1 ) / 2) // INLINED!!
+                call s__AHSS___PlayerSelection_setRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],( i - 1 ) / 2)
             else
-                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) - 1) // INLINED!!
+                call s__AHSS___PlayerSelection_setColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) - 1)
             endif
         endfunction
         
         function s__AHSS_Graphics_updateCursor takes integer this,integer playerid returns nothing
-            local integer index= (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
+            local integer index= s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) + s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])
             local integer i
-            if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
-                call SetUnitPosition(s__AHSS___PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])], ((GetDestructableX(s__AHSS_Graphics_randomIcon[this]) )*1.0), (( GetDestructableY(s__AHSS_Graphics_randomIcon[this]))*1.0)) // INLINED!!
+            if s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) == - 1 then
+                call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],GetDestructableX(s__AHSS_Graphics_randomIcon[this]) , GetDestructableY(s__AHSS_Graphics_randomIcon[this]))
             else
                 if s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index] != null then
-                    call SetUnitPosition(s__AHSS___PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])], ((GetDestructableX(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]) )*1.0), (( GetDestructableY(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]))*1.0)) // INLINED!!
+                    call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],GetDestructableX(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]) , GetDestructableY(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]))
                 else
-                    call SetUnitPosition(s__AHSS___PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])], ((GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]) )*1.0), (( GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]))*1.0)) // INLINED!!
+                    call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]) , GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]))
                 endif
             endif
             if GetLocalPlayer() == Player(playerid) then
-                call PlaySoundBJ((s__AHSS_Options_click[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                call PlaySoundBJ(s__AHSS_Options_getSoundClick(s__AHSS_Graphics_options[this]))
             endif
         endfunction 
         
@@ -34548,12 +35641,12 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             if s___AHSS_Graphics_isHidden[s__AHSS_Graphics_isHidden[this]+playerid] or ( not s__AHSS_Graphics_allowPick[this] and not s__AHSS_Graphics_draftPick[this] ) then
                 return
             endif
-            set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
-            if (s__ArrowKey_eventKey) == 0 then // INLINED!!
+            set index=s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) + s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])
+            if GetEventArrowKey() == 0 then
                 call s__AHSS_Graphics_moveLeft(this , playerid , index)
-            elseif (s__ArrowKey_eventKey) == 1 then // INLINED!!
+            elseif GetEventArrowKey() == 1 then
                 call s__AHSS_Graphics_moveRight(this , playerid , index)
-            elseif (s__ArrowKey_eventKey) == 2 then // INLINED!!
+            elseif GetEventArrowKey() == 2 then
                 call s__AHSS_Graphics_moveDown(this , playerid , index)
             else
                 call s__AHSS_Graphics_moveUp(this , playerid , index)
@@ -34634,15 +35727,15 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                 if GetLocalPlayer() != Player(playerid) then
                     set s=""
                 else
-                    set s=(s__AHSS___Hero_modelPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) // INLINED!!
+                    set s=s__AHSS___Hero_getModelPath(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index))
                 endif
                 set s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid]=AddSpecialEffect(s, x - 100, y)
                 call BlzSetSpecialEffectHeight(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], 100)
                 call BlzSetSpecialEffectPitch(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], Deg2Rad(- 90))
                 call BlzSetSpecialEffectYaw(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], Deg2Rad(270))
-                call BlzSetSpecialEffectScale(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], 2.0 + (s__AHSS___Hero_modelScale[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])) // INLINED!!
+                call BlzSetSpecialEffectScale(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], 2.0 + s__AHSS___Hero_getModelScale(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)))
                 //call BlzPlaySpecialEffect(this.heroesModels[playerid], ANIM_TYPE_SPELL)
-                if (s__AHSS___Hero_modelAlternate[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+                if s__AHSS___Hero_isModelAlternate(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) then
                     call BlzSpecialEffectAddSubAnimation(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], SUBANIM_TYPE_ALTERNATE_EX)
                     call BlzPlaySpecialEffect(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], ANIM_TYPE_STAND)
                 endif
@@ -34650,23 +35743,23 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                 set x=x + 600
                 set y=y + 500
                 set s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], (s__AHSS___Hero_name[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(16)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], s__AHSS___Hero_getName(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)), TextTagSize2Height(16))
                 call SetTextTagPos(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], 255, 255, 255, 255)
                 //CREATE STATS INFO
                 set y=y - 100
-                set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]=CreateDestructable((s__AHSS_Paths_strength[(s__AHSS_Graphics_paths[this])]), x, y, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
-                set y=y - s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) - 10 // INLINED!!
-                set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]=CreateDestructable((s__AHSS_Paths_agility[(s__AHSS_Graphics_paths[this])]), x, y, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
-                set y=y - s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) - 10 // INLINED!!
-                set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]=CreateDestructable((s__AHSS_Paths_intelligence[(s__AHSS_Graphics_paths[this])]), x, y, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]=CreateDestructable(s__AHSS_Paths_getStrIcon(s__AHSS_Graphics_paths[this]), x, y, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
+                set y=y - s__AHSS_Graphics_ICON_SIZE * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) - 10
+                set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]=CreateDestructable(s__AHSS_Paths_getAgiIcon(s__AHSS_Graphics_paths[this]), x, y, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
+                set y=y - s__AHSS_Graphics_ICON_SIZE * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) - 10
+                set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]=CreateDestructable(s__AHSS_Paths_getIntIcon(s__AHSS_Graphics_paths[this]), x, y, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
 //textmacro instance: STAT_TEXT("str", "Str")
             set x=GetDestructableX(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]) + 50
             set y=GetDestructableY(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]) - 15
             set s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], I2S(R2I((s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_strengthLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], I2S(R2I(s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)))) + " + " + SubString(R2S(s__AHSS___Hero_getStrLvl(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index))), 0, 3) + " x lvl", TextTagSize2Height(13))
             call SetTextTagPos(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], x, y, 0)
-            if (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) then
                 call SetTextTagColor(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], 255, 255, 255, 255)
@@ -34684,9 +35777,9 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             set x=GetDestructableX(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]) + 50
             set y=GetDestructableY(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]) - 15
             set s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], I2S(R2I((s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_agilityLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], I2S(R2I(s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)))) + " + " + SubString(R2S(s__AHSS___Hero_getAgiLvl(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index))), 0, 3) + " x lvl", TextTagSize2Height(13))
             call SetTextTagPos(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], x, y, 0)
-            if (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) then
                 call SetTextTagColor(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], 255, 255, 255, 255)
@@ -34704,9 +35797,9 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             set x=GetDestructableX(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]) + 50
             set y=GetDestructableY(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]) - 15
             set s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], I2S(R2I((s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_intelligenceLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], I2S(R2I(s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)))) + " + " + SubString(R2S(s__AHSS___Hero_getIntLvl(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index))), 0, 3) + " x lvl", TextTagSize2Height(13))
             call SetTextTagPos(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], x, y, 0)
-            if (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) then
                 call SetTextTagColor(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], 255, 255, 255, 255)
@@ -34722,9 +35815,9 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
 //end of: STAT_TEXT("int", "Int")
                 //CREATE HERO INFO 
                 set x=x - 100
-                set y=y - 200 - ( 20 * s__AHSS_Graphics_countLines((s__AHSS___Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])) ) // INLINED!!
+                set y=y - 200 - ( 20 * s__AHSS_Graphics_countLines(s__AHSS___Hero_getDescription(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index))) )
                 set s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], (s__AHSS___Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(9)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], s__AHSS___Hero_getDescription(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)), TextTagSize2Height(9))
                 call SetTextTagPos(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], 255, 255, 255, 255)
                 //HIDE INFO FROM OTHER PLAYERS
@@ -34740,7 +35833,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
         endfunction
         //"Lock" the camera so the player can't avoid it :)
         function s__AHSS_Graphics_loopCamera takes nothing returns nothing
-            local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            local integer this= GetTimerData(GetExpiredTimer())
             local integer c= s__AHSS_Configurations__allocate()
             local integer i= 0
             loop
@@ -34776,15 +35869,15 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             local integer i
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Heroes_count[(s__AHSS_Graphics_heroes[this])]) - 1 ) // INLINED!!
-                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i]=CreateDestructableZ((s__AHSS___Hero_icon[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]), GetDestructableX(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i]), GetDestructableY(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i]), 500, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                exitwhen i > ( s__AHSS_Heroes_getSize(s__AHSS_Graphics_heroes[this]) - 1 )
+                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i]=CreateDestructableZ(s__AHSS___Hero_getIcon(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],i)), GetDestructableX(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i]), GetDestructableY(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i]), 500, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                 call RemoveDestructable(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i])
                 set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i]=null
                 set s__s__AHSS_Graphics_availableHeroes[i]= true
-                set s__s__AHSS_Graphics_availableHeroesId[i]= (s__AHSS___Hero_heroid[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) // INLINED!!
-                if (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) and (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) then // INLINED!!
+                set s__s__AHSS_Graphics_availableHeroesId[i]= s__AHSS___Hero_getHeroid(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],i))
+                if s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],i)) >= s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],i)) and s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],i)) >= s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],i)) then
                     set s__s__AHSS_Graphics_availableHeroesAttribute[i]= 0
-                elseif (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) and (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) then // INLINED!!
+                elseif s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],i)) >= s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],i)) and s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],i)) >= s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],i)) then
                     set s__s__AHSS_Graphics_availableHeroesAttribute[i]= 1
                 else
                     set s__s__AHSS_Graphics_availableHeroesAttribute[i]= 2
@@ -34796,7 +35889,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             call SetTextTagPos(s__AHSS_Graphics_pressEscText[this], GetUnitX(s__AHSS_Graphics_dummy[this]) - 150, GetUnitY(s__AHSS_Graphics_dummy[this]) - 100, 0)
         endfunction 
         function s__AHSS_Graphics_createTeamsIcon takes integer this returns nothing
-            local real iconSize= s__AHSS_Graphics_ICON_SIZE * ( (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) ) // INLINED!!
+            local real iconSize= s__AHSS_Graphics_ICON_SIZE * ( s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) )
             local real x
             local real y= GetUnitY(s__AHSS_Graphics_dummy[this]) + 200
             local integer i
@@ -34804,31 +35897,31 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             local integer count
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 set s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]=s__AHSS___TeamIcon__allocate()
-                set y=y - ( s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) ) - iconSize // INLINED!!
+                set y=y - ( s__AHSS_Graphics_ICON_SIZE * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) ) - iconSize
                 set x=GetUnitX(s__AHSS_Graphics_dummy[this]) - 950
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=CreateDestructable((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]), x, y, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
-                    set s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=(s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) // INLINED!!
+                    exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                    set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=CreateDestructable(s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this]), x, y, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
+                    set s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this])
                     set x=x + iconSize
                     set j=j + 1
                 endloop
                 set i=i + 1
             endloop
-            set y=y - 295 - iconSize + s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) * 2 // INLINED!!
+            set y=y - 295 - iconSize + s__AHSS_Graphics_ICON_SIZE * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) * 2
             set i=0
             set count=0
             loop
                 exitwhen i > 2
                 set j=0
                 set x=GetUnitX(s__AHSS_Graphics_dummy[this]) - 950
-                set y=y - s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) // INLINED!!
+                set y=y - s__AHSS_Graphics_ICON_SIZE * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this])
                 loop
                     exitwhen j > 2
-                    set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+count]=CreateDestructable((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]), x, y, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                    set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+count]=CreateDestructable(s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this]), x, y, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                     set count=count + 1
                     set x=x + iconSize
                     set j=j + 1
@@ -34838,20 +35931,20 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
         endfunction
         function s__AHSS_Graphics_createEmptyIcons takes integer this returns nothing
             local integer count= s__AHSS_Configurations_MAX_SLOTS
-            local integer iconsByLine= (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) // INLINED!!
-            local real iconSize= s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) // INLINED!!
+            local integer iconsByLine= s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this])
+            local real iconSize= s__AHSS_Graphics_ICON_SIZE * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this])
             local real x
             local real y= GetUnitY(s__AHSS_Graphics_dummy[this]) - 100
             local integer row= 0
             local integer i
-            local real scale= (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) // INLINED!!
+            local real scale= s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this])
             loop
                 exitwhen count < iconsByLine
                 set x=GetUnitX(s__AHSS_Graphics_dummy[this]) - ( ( iconSize * iconsByLine ) / 2 )
                 set i=0
                 loop
                     exitwhen i > ( iconsByLine - 1 )
-                    set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+row * iconsByLine + i]=CreateDestructableZ((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]), x, y, 500, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                    set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+row * iconsByLine + i]=CreateDestructableZ(s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this]), x, y, 500, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                     set x=x + iconSize
                     set i=i + 1
                 endloop
@@ -34863,7 +35956,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             set i=0
             loop
                 exitwhen i > ( count - 1 )
-                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+row * iconsByLine + i]=CreateDestructableZ((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]), x, y, 500, 270, scale, 1) // INLINED!!
+                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+row * iconsByLine + i]=CreateDestructableZ(s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this]), x, y, 500, 270, scale, 1)
                 set x=x + iconSize
                 set i=i + 1
             endloop
@@ -34871,7 +35964,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                 set y=y - iconSize
             endif
             set x=GetUnitX(s__AHSS_Graphics_dummy[this]) - ( iconSize / 2 )
-            set s__AHSS_Graphics_randomIcon[this]=CreateDestructableZ((s__AHSS_Paths_randomIcon[(s__AHSS_Graphics_paths[this])]), x, y, 500, 270, scale, 1) // INLINED!!
+            set s__AHSS_Graphics_randomIcon[this]=CreateDestructableZ(s__AHSS_Paths_getRandomIcon(s__AHSS_Graphics_paths[this]), x, y, 500, 270, scale, 1)
         endfunction 
         function s__AHSS_Graphics_CreateImageEx takes integer this,string imagePath,real size,real x,real y,real z,boolean showImage returns image
             local image i= CreateImage(imagePath, size, size, 0, x - ( size / 2 ), y - ( size / 2 ), z, 0, 0, 0, 2)
@@ -34881,11 +35974,11 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
         endfunction
         function s__AHSS_Graphics_createImages takes integer this returns nothing
             if s__AHSS_Graphics_backgroundImg[this] == null then
-                set s__AHSS_Graphics_backgroundImg[this]=s__AHSS_Graphics_CreateImageEx(this,(s__AHSS_Paths_background[(s__AHSS_Graphics_paths[this])]) , 2500 , GetUnitX(s__AHSS_Graphics_dummy[this]) , GetUnitY(s__AHSS_Graphics_dummy[this]) , 400 , true) // INLINED!!
+                set s__AHSS_Graphics_backgroundImg[this]=s__AHSS_Graphics_CreateImageEx(this,s__AHSS_Paths_getBackground(s__AHSS_Graphics_paths[this]) , 2500 , GetUnitX(s__AHSS_Graphics_dummy[this]) , GetUnitY(s__AHSS_Graphics_dummy[this]) , 400 , true)
                 call SetImageColor(s__AHSS_Graphics_backgroundImg[this], 100, 100, 100, 255)
             endif
             if s__AHSS_Graphics_logoImg[this] == null then
-                set s__AHSS_Graphics_logoImg[this]=CreateDestructable((s__AHSS_Paths_logo[(s__AHSS_Graphics_paths[this])]), GetUnitX(s__AHSS_Graphics_dummy[this]), GetUnitY(s__AHSS_Graphics_dummy[this]) + 75, 270, 6.0, 1) // INLINED!!
+                set s__AHSS_Graphics_logoImg[this]=CreateDestructable(s__AHSS_Paths_getLogo(s__AHSS_Graphics_paths[this]), GetUnitX(s__AHSS_Graphics_dummy[this]), GetUnitY(s__AHSS_Graphics_dummy[this]) + 75, 270, 6.0, 1)
             endif
         endfunction
         function s__AHSS_Graphics_createIcons takes integer this returns nothing
@@ -34900,11 +35993,11 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                 call sc__AHSS_Graphics_createSelections(this)
                 set i=0
                 loop
-                    exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                    exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                     set j=0
                     loop
-                        exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                        set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                        exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                        set id=s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)
                         if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(Player(id)) == MAP_CONTROL_USER then
                             call s__AHSS_Graphics_showHero(this , i , 0)
                         endif
@@ -34919,10 +36012,10 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             local real y= GetUnitY(s__AHSS_Graphics_dummy[this]) + 270
             local integer i= 0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
-                set y=y - ( 128 * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) ) - 10 // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
+                set y=y - ( 128 * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) ) - 10
                 set s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], (s__AHSS___Team_name[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]), TextTagSize2Height(12)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], s__AHSS___Team_getName(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)), TextTagSize2Height(12))
                 call SetTextTagPos(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], 255, 255, 255, 255)
                 set i=i + 1
@@ -34948,58 +36041,58 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             endif
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                    exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                    set id=s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)
                     if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING then
-                        if GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and (s__AHSS_Options_bots[(s__AHSS_Graphics_options[this])]) ) then // INLINED!!
-                            if (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 0 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(0 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.01 , 0.01) // INLINED!!
+                        if GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and s__AHSS_Options_doesBotsPick(s__AHSS_Graphics_options[this]) ) then
+                            if s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 0 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(0 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 1.00 , 0.01 , 0.01)
 //textmacro instance: COND("1", "0.00","0.25","1.00")
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 1 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(1 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.00 , 0.25 , 1.00) // INLINED!!
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 1 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(1 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.00 , 0.25 , 1.00)
 //end of: COND("1", "0.00","0.25","1.00")
 //textmacro instance: COND("2", "0.09","0.90","0.70")
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 2 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(2 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.09 , 0.90 , 0.70) // INLINED!!
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 2 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(2 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.09 , 0.90 , 0.70)
 //end of: COND("2", "0.09","0.90","0.70")
 //textmacro instance: COND("3", "0.32","0.00","0.50")
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 3 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(3 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.32 , 0.00 , 0.50) // INLINED!!
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 3 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(3 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.32 , 0.00 , 0.50)
 //end of: COND("3", "0.32","0.00","0.50")
 //textmacro instance: COND("4", "1.00","0.98","0.40")
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 4 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(4 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.98 , 0.40) // INLINED!!
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 4 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(4 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 1.00 , 0.98 , 0.40)
 //end of: COND("4", "1.00","0.98","0.40")
 //textmacro instance: COND("5", "0.99","0.72","0.05")
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 5 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(5 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.99 , 0.72 , 0.05) // INLINED!!
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 5 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(5 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.99 , 0.72 , 0.05)
 //end of: COND("5", "0.99","0.72","0.05")
 //textmacro instance: COND("6", "0.12","0.75","0.00")
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 6 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(6 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.12 , 0.75 , 0.00) // INLINED!!
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 6 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(6 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.12 , 0.75 , 0.00)
 //end of: COND("6", "0.12","0.75","0.00")
 //textmacro instance: COND("7", "0.89","0.35","0.69")
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 7 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(7 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.89 , 0.35 , 0.69) // INLINED!!
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 7 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(7 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.89 , 0.35 , 0.69)
 //end of: COND("7", "0.89","0.35","0.69")
 //textmacro instance: COND("8", "0.58","0.58","0.58")
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 8 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(8 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.58 , 0.58 , 0.58) // INLINED!!
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 8 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(8 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.58 , 0.58 , 0.58)
 //end of: COND("8", "0.58","0.58","0.58")
 //textmacro instance: COND("9", "0.49","0.74","0.94")
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 9 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(9 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.49 , 0.74 , 0.94) // INLINED!!
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 9 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(9 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.49 , 0.74 , 0.94)
 //end of: COND("9", "0.49","0.74","0.94")
 //textmacro instance: COND("10","0.06","0.38","0.27")
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 10 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(10 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.06 , 0.38 , 0.27) // INLINED!!
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 10 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(10 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.06 , 0.38 , 0.27)
 //end of: COND("10","0.06","0.38","0.27")
 //textmacro instance: COND("11","0.30","0.16","0.01")
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 11 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(11 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.30 , 0.16 , 0.01) // INLINED!!
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 11 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(11 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.30 , 0.16 , 0.01)
 //end of: COND("11","0.30","0.16","0.01")
                             endif
                         endif
@@ -35018,11 +36111,11 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             call s__AHSS_Graphics_createImages(this)
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                    exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                    set id=s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)
                     if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING then
                         if GetPlayerController(Player(id)) == MAP_CONTROL_USER then
                             if allRandom then
@@ -35031,7 +36124,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                                 call s__AHSS_Graphics_showHero(this , i , 0)
                             endif
                         else
-                            if (s__AHSS_Options_bots[(s__AHSS_Graphics_options[this])]) then // INLINED!!
+                            if s__AHSS_Options_doesBotsPick(s__AHSS_Graphics_options[this]) then
                                 call s__AHSS_Graphics_selectHeroRandom(this , id)
                             endif
                         endif
@@ -35068,7 +36161,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             endif
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 call s__AHSS___TeamIcon_destroy(s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i])
                 call DestroyTextTag(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i])
                 set s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i]=null
@@ -35128,7 +36221,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             endloop
 
             if GetPlayerSlotState(Player(12)) == PLAYER_SLOT_STATE_EMPTY then
-                call TimerStartEx((NewTimerEx(0)) , 0.1 , true , function s__NinpouUI_periodic , "UI_periodic") // INLINED!!
+                call TimerStartEx(NewTimer() , 0.1 , true , function s__NinpouUI_periodic , "UI_periodic")
             endif
 
             set t1=CreateTrigger()
@@ -35150,7 +36243,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
                 set i=i + 1
             endloop
             call TriggerAddAction(t2, function Trig_Zoom_System_Actions)
-            call TimerStartEx((NewTimerEx(0)) , 2.0 , false , function Trig_StartingZoom_Delay , "Trig_StartingZoom_Delay") // INLINED!!
+            call TimerStartEx(NewTimer() , 2.0 , false , function Trig_StartingZoom_Delay , "Trig_StartingZoom_Delay")
 
             call MultiboardDisplayBJ(true, udg_multiboard01)
             call MultiboardMinimizeBJ(true, udg_multiboard01)
@@ -35216,7 +36309,7 @@ endfunction
  endfunction 
 	
  function s__TowerDestruction_onInit takes nothing returns nothing
-		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__TowerDestruction_death))) // INLINED!!
+		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__TowerDestruction_death)
  endfunction 
 	
 //===========================================================================
@@ -35232,7 +36325,7 @@ function Trig_HideUnitsDeathAnimation_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_HideUnitsDeathAnimation_Actions takes nothing returns nothing
-	if (( ( GetUnitTypeId(GetTriggerUnit()) == 'njgb' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'n027' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'nskg' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'nvdg' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'zhyd' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'ucs3' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'nwgs' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'edes' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'uktg' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'hgry' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'ntrh' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'hwat' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'noga' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'ndrn' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'ndsa' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'ncen' ) ) or ( ( GetUnitTypeId(GetTriggerUnit()) == 'ncim' ) )) then // INLINED!!
+	if Trig_HideUnitsDeathAnimation_Conditions() then
 		call RemoveLocation(GetUnitLoc(GetTriggerUnit()))
 		call RemoveUnit(GetTriggerUnit())
 	endif
@@ -35240,7 +36333,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_HideUnitsDeathAnimation takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function Trig_HideUnitsDeathAnimation_Actions))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function Trig_HideUnitsDeathAnimation_Actions)
 endfunction
 //===========================================================================
 // Trigger: TipMessage
@@ -35360,7 +36453,7 @@ endfunction
                         endloop
                         call RemoveUnit(udg_units33[id + 1])
                         set udg_units33[id + 1]=u
-			set s__s__AHSS_Configurations_PLAYER_ICONS[id]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(udg_units33[id + 1]))))] // INLINED!!
+			set s__s__AHSS_Configurations_PLAYER_ICONS[id]= s__s__AHSS_Configurations_HERO_ICONS[s__Table__getindex(s__AHSS_Configurations_HERO_BY_ID,GetUnitTypeId(udg_units33[id + 1]))]
                         set udg_UsedRepick[id]=true
                         if IsPlayerAlly(GetTriggerPlayer(), Player(3)) then
                             call SetUnitPositionLoc(u, GetRectCenter(gg_rct_fonte_konoha))
@@ -35373,7 +36466,7 @@ endfunction
                         //call UnitAddItemByIdSwapped( 'I02F', u )
                         call ForceAddPlayerSimple(GetTriggerPlayer(), udg_forces01[1])
                         call SetPlayerName(GetTriggerPlayer(), udg_strings02[GetConvertedPlayerId(GetTriggerPlayer())] + udg_DonatorNames[GetConvertedPlayerId(GetTriggerPlayer())] + udg_Repick_Names[GetConvertedPlayerId(GetTriggerPlayer())] + "|r[" + GetUnitName(u) + "]")
-                        call MultiboardSetItemIconBJ(udg_multiboard01, 1, ( ( 1 + GetPlayerId(GetTriggerPlayer()) ) + 3 ), s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(u))))]) // INLINED!!
+                        call MultiboardSetItemIconBJ(udg_multiboard01, 1, ( ( 1 + GetPlayerId(GetTriggerPlayer()) ) + 3 ), s__s__AHSS_Configurations_HERO_ICONS[s__Table__getindex(s__AHSS_Configurations_HERO_BY_ID,GetUnitTypeId(u))])
                         //call MultiboardSetItemValueBJ(udg_multiboard01,1,((1+GetPlayerId(GetTriggerPlayer()))+3),GetPlayerName(GetTriggerPlayer()))
                         else
             			call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You can only repick from your base.|r")
@@ -35452,11 +36545,11 @@ endfunction
         endif
         call SetPlayerName(p, udg_strings02[GetConvertedPlayerId(p)] + udg_DonatorNames[GetConvertedPlayerId(p)] + udg_Repick_Names[GetConvertedPlayerId(p)] + "|r[" + GetUnitName(u) + "]")
         //if udg_Survival_Bool then
-            call MultiboardSetItemIconBJ(udg_Survival_Multiboard, 1, ( ( 1 + GetPlayerId(p) ) + 2 ), s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(u))))]) // INLINED!!
+            call MultiboardSetItemIconBJ(udg_Survival_Multiboard, 1, ( ( 1 + GetPlayerId(p) ) + 2 ), s__s__AHSS_Configurations_HERO_ICONS[s__Table__getindex(s__AHSS_Configurations_HERO_BY_ID,GetUnitTypeId(u))])
         //    call MultiboardSetItemValueBJ(udg_Survival_Multiboard,1,((1+GetPlayerId(p))+2),SubString(udg_Repick_Names[GetPlayerId(p) + 1],0,10))
         //else
         //endif
-        call MultiboardSetItemIconBJ(udg_multiboard01, 1, ( ( 1 + GetPlayerId(p) ) + 3 ), s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(u))))]) // INLINED!!
+        call MultiboardSetItemIconBJ(udg_multiboard01, 1, ( ( 1 + GetPlayerId(p) ) + 3 ), s__s__AHSS_Configurations_HERO_ICONS[s__Table__getindex(s__AHSS_Configurations_HERO_BY_ID,GetUnitTypeId(u))])
         //call MultiboardSetItemValueBJ(udg_multiboard01,1,((1+GetPlayerId(p))+3),udg_Repick_Names[GetPlayerId(p) + 1])
     endfunction 
     
@@ -35481,8 +36574,8 @@ endfunction
                 set udg_units33[id1 + 1]=udg_units33[id2 + 1]
                 set udg_units33[id2 + 1]=u
 		
-		set s__s__AHSS_Configurations_PLAYER_ICONS[id1]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(udg_units33[id1 + 1]))))] // INLINED!!
-		set s__s__AHSS_Configurations_PLAYER_ICONS[id2]= s__s__AHSS_Configurations_HERO_ICONS[(LoadInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (GetUnitTypeId(udg_units33[id2 + 1]))))] // INLINED!!
+		set s__s__AHSS_Configurations_PLAYER_ICONS[id1]= s__s__AHSS_Configurations_HERO_ICONS[s__Table__getindex(s__AHSS_Configurations_HERO_BY_ID,GetUnitTypeId(udg_units33[id1 + 1]))]
+		set s__s__AHSS_Configurations_PLAYER_ICONS[id2]= s__s__AHSS_Configurations_HERO_ICONS[s__Table__getindex(s__AHSS_Configurations_HERO_BY_ID,GetUnitTypeId(udg_units33[id2 + 1]))]
 
                 //set usedSwap[id1] = true 
                 //set usedSwap[id2] = true 
@@ -35614,7 +36707,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_HeroLevelRestriction takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_HERO_LEVEL ) , Filter(( function Trig_Level1_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_HERO_LEVEL , function Trig_Level1_Actions)
 endfunction
 
 
@@ -35631,26 +36724,26 @@ endfunction
         if not IsTerrainPathable(GetSpellTargetX(), GetSpellTargetY(), PATHING_TYPE_WALKABILITY) then
             // minato special effect 
             if GetUnitTypeId(GetTriggerUnit()) == 'H086' or GetUnitTypeId(GetTriggerUnit()) == 'H082' or GetUnitTypeId(GetTriggerUnit()) == 'H072' then
-                call DestroyEffect(AddSpecialEffect(("war3mapImported\\Yellow Blink.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("war3mapImported\\Yellow Blink.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
 			else
 			// itachi special effect
 			if GetUnitTypeId(GetTriggerUnit()) == 'N001' or GetUnitTypeId(GetTriggerUnit()) == 'N025' then
-                call DestroyEffect(AddSpecialEffect(("ItachiE.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("ItachiE.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
             else
-                call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
             endif
 	endif
             call SetUnitX(GetTriggerUnit(), GetSpellTargetX())
             call SetUnitY(GetTriggerUnit(), GetSpellTargetY())
             // minato special effect 
             if GetUnitTypeId(GetTriggerUnit()) == 'H086' or GetUnitTypeId(GetTriggerUnit()) == 'H082' or GetUnitTypeId(GetTriggerUnit()) == 'H072' then
-                call DestroyEffect(AddSpecialEffect(("war3mapImported\\Yellow Blink.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("war3mapImported\\Yellow Blink.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
 			else
 			// itachi special effect
 			if GetUnitTypeId(GetTriggerUnit()) == 'N001' or GetUnitTypeId(GetTriggerUnit()) == 'N025' then
-                call DestroyEffect(AddSpecialEffect(("ItachiE.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("ItachiE.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
             else
-                call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+                call AddSpecialEffectEx("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
             endif
 	endif
         else
@@ -35659,27 +36752,27 @@ endfunction
             loop
                 exitwhen distance <= 0
                 set distance=distance - 50
-                set x=(((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( angle )*1.0)) * (( distance)*1.0)) // INLINED!!
-                set y=(((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( angle )*1.0)) * (( distance)*1.0)) // INLINED!!
+                set x=GetPolarX(GetUnitX(GetTriggerUnit()) , angle , distance)
+                set y=GetPolarY(GetUnitY(GetTriggerUnit()) , angle , distance)
                 if not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
                     // minato special effect 
                     if GetUnitTypeId(GetTriggerUnit()) == 'H086' or GetUnitTypeId(GetTriggerUnit()) == 'H082' or GetUnitTypeId(GetTriggerUnit()) == 'H072' then
-                        call DestroyEffect(AddSpecialEffect(("war3mapImported\\Yellow Blink.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("war3mapImported\\Yellow Blink.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
 					else
 				// itachi special effect
 					if GetUnitTypeId(GetTriggerUnit()) == 'N001' or GetUnitTypeId(GetTriggerUnit()) == 'N025' then
-						call DestroyEffect(AddSpecialEffect(("ItachiE.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+						call AddSpecialEffectEx("ItachiE.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
                     else
-                        call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
                     endif
 			endif
                     call SetUnitX(GetTriggerUnit(), x)
                     call SetUnitY(GetTriggerUnit(), y)
                     // minato special effect 
                     if GetUnitTypeId(GetTriggerUnit()) == 'H086' or GetUnitTypeId(GetTriggerUnit()) == 'H082' or GetUnitTypeId(GetTriggerUnit()) == 'H072' then
-                        call DestroyEffect(AddSpecialEffect(("war3mapImported\\Yellow Blink.mdx" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("war3mapImported\\Yellow Blink.mdx" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
                     else
-                        call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
                     endif
                     exitwhen true
                 endif
@@ -35688,7 +36781,7 @@ endfunction
     endfunction 
 
     function s__ChakraJump_onInit takes nothing returns nothing
-        call RegisterSpellEffectEvent2(('ANcl' ) , Filter(( function s__ChakraJump_jump))) // INLINED!!
+        call RegisterSpellEffectEvent('ANcl' , function s__ChakraJump_jump)
         endfunction 
 
 //===========================================================================
@@ -35719,14 +36812,14 @@ endfunction
         endfunction
     
     function s__FixTransformations_unpause takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         call PauseUnit(s__FixTransformations_caster[this], false)
         call s__FixTransformations_deallocate(this)
         call ReleaseTimer(GetExpiredTimer())
     endfunction 
     
     function s__FixTransformations_removeInvul takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         call UnitMakeAbilityPermanent(s__FixTransformations_caster[this], false, 'Avul')
         call UnitRemoveAbility(s__FixTransformations_caster[this], 'Avul')
         call UnitRemoveBuffs(s__FixTransformations_caster[this], false, true)
@@ -35752,29 +36845,29 @@ endfunction
     
     function s__FixTransformations_onInit takes nothing returns nothing
         //call RegisterSpellEffectEvent('A0QU', function thistype.actions)
-        call RegisterSpellEffectEvent2(('A0FJ' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0B6' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0KF' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0E3' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('ANg2' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0D2' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0WQ' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A03G' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0EA' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0B8' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0LB' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0O5' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0UV' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A054' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0P3' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0PL' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A19X' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A04Y' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A1AO' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A1BA' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A0I2' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A1DS' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
-        call RegisterSpellEffectEvent2(('A1DT' ) , Filter(( function s__FixTransformations_actions))) // INLINED!!
+        call RegisterSpellEffectEvent('A0FJ' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0B6' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0KF' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0E3' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('ANg2' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0D2' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0WQ' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A03G' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0EA' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0B8' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0LB' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0O5' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0UV' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A054' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0P3' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0PL' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A19X' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A04Y' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A1AO' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A1BA' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A0I2' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A1DS' , function s__FixTransformations_actions)
+        call RegisterSpellEffectEvent('A1DT' , function s__FixTransformations_actions)
     endfunction 
     
 //===========================================================================
@@ -36142,7 +37235,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_RivalsSystem takes nothing returns nothing
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function Trig_RivalsSystem_Copy_Actions))) // INLINED!!
+    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function Trig_RivalsSystem_Copy_Actions)
 endfunction
 //===========================================================================
 // Trigger: SetUnitVariables
@@ -36185,7 +37278,7 @@ endfunction
  endfunction
 
  function s__SetUnitVariables_onInit takes nothing returns nothing
-		call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter((function s__SetUnitVariables_leave))) // INLINED!!
+		call RegisterLeaveFunction(function s__SetUnitVariables_leave)
  endfunction
 
 //===========================================================================
@@ -36424,7 +37517,7 @@ function Trig_Cheats_Actions_Level_Func002001002002 takes nothing returns boolea
 endfunction
 
 function Trig_Cheats_Actions_Level_Func002001002 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true), (GetOwningPlayer(GetFilterUnit()) != Player(PLAYER_NEUTRAL_PASSIVE))) // INLINED!!
+    return GetBooleanAnd(Trig_Cheats_Actions_Level_Func002001002001(), Trig_Cheats_Actions_Level_Func002001002002())
 endfunction
 
 function Trig_Cheats_Actions_Level_Func002A takes nothing returns nothing
@@ -36472,7 +37565,7 @@ function Trig_Cheats_Actions_Items_Func002001002002 takes nothing returns boolea
 endfunction
 
 function Trig_Cheats_Actions_Items_Func002001002 takes nothing returns boolean
-    return GetBooleanAnd((GetOwningPlayer(GetFilterUnit()) != Player(PLAYER_NEUTRAL_PASSIVE)), (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)) // INLINED!!
+    return GetBooleanAnd(Trig_Cheats_Actions_Items_Func002001002001(), Trig_Cheats_Actions_Items_Func002001002002())
 endfunction
 
 function Trig_Cheats_Actions_Items_Func002Func005Func001C takes nothing returns boolean
@@ -36583,7 +37676,7 @@ function Trig_Cheats_Actions_Stats_Func002Func001001002002 takes nothing returns
 endfunction
 
 function Trig_Cheats_Actions_Stats_Func002Func001001002 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true), (GetOwningPlayer(GetFilterUnit()) != Player(PLAYER_NEUTRAL_PASSIVE))) // INLINED!!
+    return GetBooleanAnd(Trig_Cheats_Actions_Stats_Func002Func001001002001(), Trig_Cheats_Actions_Stats_Func002Func001001002002())
 endfunction
 
 function Trig_Cheats_Actions_Stats_Func002Func001Func001C takes nothing returns boolean
@@ -36616,7 +37709,7 @@ function Trig_Cheats_Actions_Stats_Func003Func001001002002 takes nothing returns
 endfunction
 
 function Trig_Cheats_Actions_Stats_Func003Func001001002 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true), (GetOwningPlayer(GetFilterUnit()) != Player(PLAYER_NEUTRAL_PASSIVE))) // INLINED!!
+    return GetBooleanAnd(Trig_Cheats_Actions_Stats_Func003Func001001002001(), Trig_Cheats_Actions_Stats_Func003Func001001002002())
 endfunction
 
 function Trig_Cheats_Actions_Stats_Func003Func001Func001C takes nothing returns boolean
@@ -36649,7 +37742,7 @@ function Trig_Cheats_Actions_Stats_Func004Func001001002002 takes nothing returns
 endfunction
 
 function Trig_Cheats_Actions_Stats_Func004Func001001002 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true), (GetOwningPlayer(GetFilterUnit()) != Player(PLAYER_NEUTRAL_PASSIVE))) // INLINED!!
+    return GetBooleanAnd(Trig_Cheats_Actions_Stats_Func004Func001001002001(), Trig_Cheats_Actions_Stats_Func004Func001001002002())
 endfunction
 
 function Trig_Cheats_Actions_Stats_Func004Func001Func001C takes nothing returns boolean
@@ -36950,7 +38043,7 @@ function Trig_PointSystem_Actions takes nothing returns nothing
  local player ku=GetOwningPlayer(killunit)
  local integer points
  local integer i
- local integer id= (GetUnitUserData((death))) // INLINED!!
+ local integer id= GetUnitId(death)
 	if GetUnitTypeId(GetTriggerUnit()) == 'N01M' and GetWidgetLife(GetTriggerUnit()) > 0.405 then
 		return
 	endif
@@ -37024,7 +38117,7 @@ endfunction
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
-                set id=(GetUnitUserData((bj_lastCreatedUnit))) // INLINED!!
+                set id=GetUnitId(bj_lastCreatedUnit)
                 set i=1
                 loop
                     exitwhen i > 12
@@ -37053,15 +38146,15 @@ endfunction
         endfunction
         
         function s__AssistSystem__System_removeSai takes nothing returns nothing
-            local integer uid= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+            local integer uid= GetTimerData(GetExpiredTimer())
             set s__AssistSystem__sai[uid]= false
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
         function s__AssistSystem__System_removeInvul takes nothing returns nothing
-            call SetUnitInvulnerable((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), false) // INLINED!!
-            call UnitRemoveAbility((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), 'B039') // INLINED!!
-	        call UnitRemoveAbility((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), 'B000') // INLINED!!
+            call SetUnitInvulnerable(GetUnitById(GetTimerData(GetExpiredTimer())), false)
+            call UnitRemoveAbility(GetUnitById(GetTimerData(GetExpiredTimer())), 'B039')
+	        call UnitRemoveAbility(GetUnitById(GetTimerData(GetExpiredTimer())), 'B000')
             call ReleaseTimer(GetExpiredTimer())
         endfunction 
         
@@ -37080,14 +38173,14 @@ endfunction
 			if GetEventDamage() >= 10 then
 				set id=GetPlayerId(GetOwningPlayer(GetEventDamageSource()))
 				// Sai mark
-				if GetUnitAbilityLevel(GetTriggerUnit(), 'B03E') > 0 and ( GetUnitTypeId(udg_units33[id + 1]) == 'O006' or GetUnitTypeId(udg_units33[id + 1]) == 'O008' ) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if GetUnitAbilityLevel(GetTriggerUnit(), 'B03E') > 0 and ( GetUnitTypeId(udg_units33[id + 1]) == 'O006' or GetUnitTypeId(udg_units33[id + 1]) == 'O008' ) and not s__AssistSystem__sai[GetUnitId(GetTriggerUnit())] then
+					set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.1, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
 				endif
 
 				// Dragon blade
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I06N'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07U'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07T'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07V'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07W'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07Z'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07Y'))) and GetRandomInt(0, 100) < ( ( 4000 - RMinBJ(4000, damage) ) / 150 ) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if UnitHasItemEx(GetEventDamageSource() , 'I06N') or UnitHasItemEx(GetEventDamageSource() , 'I07U') or UnitHasItemEx(GetEventDamageSource() , 'I07T') or UnitHasItemEx(GetEventDamageSource() , 'I07V') or UnitHasItemEx(GetEventDamageSource() , 'I07W') or UnitHasItemEx(GetEventDamageSource() , 'I07Z') or UnitHasItemEx(GetEventDamageSource() , 'I07Y') and GetRandomInt(0, 100) < ( ( 4000 - RMinBJ(4000, damage) ) / 150 ) and not s__AssistSystem__sai[GetUnitId(GetTriggerUnit())] then
 					call CreateTextTagUnitBJ("Critical!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -37097,14 +38190,14 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage, true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
 				endif
 
 
 				// Wind Dragon blade
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07X'))) and GetRandomInt(0, 100) < ( ( 6000 - RMinBJ(6000, damage) ) / 150 ) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if UnitHasItemEx(GetEventDamageSource() , 'I07X') and GetRandomInt(0, 100) < ( ( 6000 - RMinBJ(6000, damage) ) / 150 ) and not s__AssistSystem__sai[GetUnitId(GetTriggerUnit())] then
 					call CreateTextTagUnitBJ("Critical!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -37114,14 +38207,14 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage, true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
 				endif
 
 
 				// Kazekage Robe 
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I03O'))) and GetRandomInt(0, 100) < 10 and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if UnitHasItemEx(GetEventDamageSource() , 'I03O') and GetRandomInt(0, 100) < 10 and not s__AssistSystem__sai[GetUnitId(GetTriggerUnit())] then
 					call CreateTextTagUnitBJ("Critical!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -37131,13 +38224,13 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.2, true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
 				endif
 
 				// Deidara Ring
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I00Q'))) and GetRandomInt(0, 100) < 20 and damage < 4000 and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if UnitHasItemEx(GetEventDamageSource() , 'I00Q') and GetRandomInt(0, 100) < 20 and damage < 4000 and not s__AssistSystem__sai[GetUnitId(GetTriggerUnit())] then
 					call CreateTextTagUnitBJ("Explosion!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -37147,97 +38240,97 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
 					call UnitDamageTarget(GetEventDamageSource(), GetEventDamageSource(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
 				endif
 
 				// Shisui sharingan
-				if GetTriggerUnit() == udg_ShisuiE and GetUnitTypeId(GetEventDamageSource()) == 'U00O' and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if GetTriggerUnit() == udg_ShisuiE and GetUnitTypeId(GetEventDamageSource()) == 'U00O' and not s__AssistSystem__sai[GetUnitId(GetTriggerUnit())] then
+					set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 					if GetHeroLevel(GetEventDamageSource()) >= 35 then
 						call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
 					else
 						call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * ( 0.020 * GetUnitAbilityLevel(GetEventDamageSource(), 'A10Z') ), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
 					endif
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.01, false, function s__AssistSystem__System_removeSai)
 				endif
 
 				//Mei Lava D
-				if GetTriggerUnit() == udg_MeiLava and GetUnitTypeId(GetEventDamageSource()) == 'H008' and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if GetTriggerUnit() == udg_MeiLava and GetUnitTypeId(GetEventDamageSource()) == 'H008' and not s__AssistSystem__sai[GetUnitId(GetTriggerUnit())] then
+					set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.1, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.01, false, function s__AssistSystem__System_removeSai)
 				endif
 
 				// Zabuza T
-				if GetUnitAbilityLevel(GetTriggerUnit(), 'B012') > 0 and GetUnitTypeId(GetEventDamageSource()) == 'H05M' and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if GetUnitAbilityLevel(GetTriggerUnit(), 'B012') > 0 and GetUnitTypeId(GetEventDamageSource()) == 'H05M' and not s__AssistSystem__sai[GetUnitId(GetTriggerUnit())] then
+					set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.01, false, function s__AssistSystem__System_removeSai)
 				endif
 
 				// Pain's Ring
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I01X'))) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if UnitHasItemEx(GetEventDamageSource() , 'I01X') and not s__AssistSystem__sai[GetUnitId(GetTriggerUnit())] then
+					set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.10, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.01, false, function s__AssistSystem__System_removeSai)
 				endif
 
 				// Ichigo D
-				if ( GetUnitTypeId(GetEventDamageSource()) == 'H0A7' or GetUnitTypeId(GetEventDamageSource()) == 'U00G' or GetUnitTypeId(GetEventDamageSource()) == 'U00A' ) and udg_Farm[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] >= 2400 and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if ( GetUnitTypeId(GetEventDamageSource()) == 'H0A7' or GetUnitTypeId(GetEventDamageSource()) == 'U00G' or GetUnitTypeId(GetEventDamageSource()) == 'U00A' ) and udg_Farm[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] >= 2400 and not s__AssistSystem__sai[GetUnitId(GetTriggerUnit())] then
+					set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.10, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.01, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.01, false, function s__AssistSystem__System_removeSai)
 				endif
 
 
                 // Rikuudou Sword anti-army 
                 
-				if GetEventDamageSource() != null and GetPlayerController(GetOwningPlayer(GetEventDamageSource())) == MAP_CONTROL_USER and udg_units33[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] != null and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] and GetEventDamage() < 20000 then // INLINED!!
+				if GetEventDamageSource() != null and GetPlayerController(GetOwningPlayer(GetEventDamageSource())) == MAP_CONTROL_USER and udg_units33[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] != null and not s__AssistSystem__sai[GetUnitId(GetTriggerUnit())] and GetEventDamage() < 20000 then
 					// Yagura Mirror 
 					if GetUnitAbilityLevel(GetTriggerUnit(), 'B046') > 0 then
-						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.05 * GetUnitAbilityLevel(GetTriggerUnit(), 'A0IQ'), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
                     			// Defense Pills  
 					elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B070') > 0 then
-						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
 					// Guren E 
 					elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B02O') > 0 then
-						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.01 * GetUnitAbilityLevel(GetTriggerUnit(), 'B02O'), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
 					// Sanbi's shell 
 					elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B038') > 0 and damage < 10000 then
-						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.5, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
 					// Juubi's aura
 					elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B00B') > 0 and damage < 10000 then
-						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.25, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
 
 					// Hidan's Ring
-					elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I01W'))) then // INLINED!!
-						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					elseif UnitHasItemEx(GetTriggerUnit() , 'I01W') then
+						set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.20, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
 
 					// Isobu aura
 					elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B01L') > 0 and damage < 10000 then
-						set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
 						call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.25, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+						call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
                     			// Yata Mirror (Itachi)
                     			elseif udg_YataMirror == GetTriggerUnit() then
-                        			set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+                        			set s__AssistSystem__sai[GetUnitId(GetTriggerUnit())]= true
                         			call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-                        			call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeSai) // INLINED!!
+                        			call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeSai)
                     			endif
 				endif
 				// Kisame unleash samehada
@@ -37290,7 +38383,7 @@ endfunction
                     endif
                     // Chakra Healing Blessing 
                     if GetUnitAbilityLevel(GetTriggerUnit(), 'B055') > 0 and GetRandomInt(1, 100) <= 30 and damage > 500 then
-                        call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\Heal\\HealTarget.mdl" ), (( GetUnitX(GetTriggerUnit()) )*1.0), (( GetUnitY(GetTriggerUnit()))*1.0))) // INLINED!!
+                        call AddSpecialEffectEx("Abilities\\Spells\\Human\\Heal\\HealTarget.mdl" , GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()))
                         call SetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE, GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) + 20 * GetUnitAbilityLevel(GetTriggerUnit(), 'B055'))
                         set damage=damage - 20 * GetUnitAbilityLevel(GetTriggerUnit(), 'B055')
                     endif
@@ -37317,7 +38410,7 @@ endfunction
                         set damage=damage - damage * 0.4
                     endif
                     // Earth ANBU Mask
-                    if udg_ANBUTarget[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] != null and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I07D'))) and udg_ANBUTarget[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] != null then // INLINED!!
+                    if udg_ANBUTarget[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] != null and UnitHasItemEx(GetTriggerUnit() , 'I07D') and udg_ANBUTarget[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] != null then
                         //call SetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE, GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) + damage * 0.5)
                         //set damage = damage - damage * 0.5
                         call UnitDamageTarget(GetTriggerUnit(), udg_ANBUTarget[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))], damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
@@ -37334,12 +38427,12 @@ endfunction
                         set damage=damage - damage * 0.2
                     endif
                     // Jade of Susano'o
-                    if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'rde4'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'rhth'))) then // INLINED!!
+                    if UnitHasItemEx(GetEventDamageSource() , 'rde4') or UnitHasItemEx(GetEventDamageSource() , 'rhth') then
                         call SetUnitState(GetEventDamageSource(), UNIT_STATE_LIFE, GetUnitState(GetEventDamageSource(), UNIT_STATE_LIFE) + damage * 0.15)
                     endif
                     // Juugo passive
                     if GetUnitTypeId(GetTriggerUnit()) == 'E034' or GetUnitTypeId(GetTriggerUnit()) == 'E035' and damage < 5000 then
-                        set udg_JuugoDamages[(GetUnitUserData((GetTriggerUnit())))]=RMinBJ(5000, udg_JuugoDamages[(GetUnitUserData((GetTriggerUnit())))] + damage * 0.2) // INLINED!!
+                        set udg_JuugoDamages[GetUnitId(GetTriggerUnit())]=RMinBJ(5000, udg_JuugoDamages[GetUnitId(GetTriggerUnit())] + damage * 0.2)
                     endif
                 endif
 			endif
@@ -37347,20 +38440,20 @@ endfunction
                 call UnitRemoveAbility(GetTriggerUnit(), 'B05V')
             endif
             if id != 3 and id != 7 and id != 11 then
-                if sg__assisted_get(((GetUnitUserData((GetTriggerUnit()))))*(12)+id + 1) == 0 then // INLINED!!
+                if sg__assisted_get((GetUnitId(GetTriggerUnit()))*(12)+id + 1) == 0 then
                     set s__AssistSystem__System_count_active=s__AssistSystem__System_count_active + 1
                 endif
-                call sg__assisted_set(((GetUnitUserData((GetTriggerUnit()))))*(12)+id + 1,15) // INLINED!!
+                call sg__assisted_set((GetUnitId(GetTriggerUnit()))*(12)+id + 1,15)
             endif
             // Gunbai 
             if GetUnitAbilityLevel(GetTriggerUnit(), 'B039') > 0 and damage > 500 then
                 call SetUnitInvulnerable(GetTriggerUnit(), true)
-                call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeInvul) // INLINED!!
+                call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeInvul)
             endif
             // Pein gunbai 
             if GetUnitAbilityLevel(GetTriggerUnit(), 'B000') > 0 and damage > 500 then
                 call SetUnitInvulnerable(GetTriggerUnit(), true)
-                call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeInvul) // INLINED!!
+                call TimerStart(NewTimerEx(GetUnitId(GetTriggerUnit())), 0.1, false, function s__AssistSystem__System_removeInvul)
             endif
             if damage > 100 and GetOwningPlayer(GetEventDamageSource()) != Player(3) and GetOwningPlayer(GetEventDamageSource()) != Player(7) and GetOwningPlayer(GetEventDamageSource()) != Player(11) and GetOwningPlayer(GetEventDamageSource()) != Player(PLAYER_NEUTRAL_AGGRESSIVE) then
                 set udg_DamageDealt[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_DamageDealt[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + damage
@@ -37399,7 +38492,7 @@ endfunction
                 set i=1
                 loop
                     exitwhen i > 12
-                    call sg__assisted_set(((GetUnitUserData((GetLeavingUnit()))))*(12)+i,0) // INLINED!!
+                    call sg__assisted_set((GetUnitId(GetLeavingUnit()))*(12)+i,0)
                     set i=i + 1
                 endloop
             endif
@@ -37410,7 +38503,7 @@ endfunction
             set s__AssistSystem__System_assist_trigger=CreateTrigger()
             call TriggerRegisterUnitEvent(s__AssistSystem__System_assist_trigger, gg_unit_H0A9_0068, EVENT_UNIT_DAMAGED)
 			call GroupAddUnit(udg_AssistHeroes, gg_unit_H0A9_0068)
-	        call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter((function s__AssistSystem__System_leave))) // INLINED!!
+	        call RegisterLeaveFunction(function s__AssistSystem__System_leave)
             set i=1
             loop
                 exitwhen i > 12
@@ -37420,7 +38513,7 @@ endfunction
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
             call TriggerAddAction(s__AssistSystem__System_assist_trigger, function s__AssistSystem__System_actions)
-            call TimerStartEx((NewTimerEx(0)) , 1.0 , true , function s__AssistSystem__System_periodic , "AssisSystem_periodic") // INLINED!!
+            call TimerStartEx(NewTimer() , 1.0 , true , function s__AssistSystem__System_periodic , "AssisSystem_periodic")
 	        set s__AssistSystem__System_count_active=0
         endfunction
         
@@ -37510,7 +38603,7 @@ endfunction
 
 function Trig_BaseDestruction_Actions takes nothing returns nothing
  local integer i
-	if not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE)) then // INLINED!!
+	if not Trig_BaseDestruction_Conditions() then
 		return
 	endif
 	if ( ( GetOwningPlayer(GetTriggerUnit()) == Player(3) ) ) then
@@ -37672,7 +38765,7 @@ endfunction
 
 //===========================================================================
 function InitTrig_BaseDestruction takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function Trig_BaseDestruction_Actions))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function Trig_BaseDestruction_Actions)
 endfunction
 
 
@@ -37692,7 +38785,7 @@ endfunction
  endfunction 
 	
  function s__BaseRemoveItems_onInit takes nothing returns nothing
-		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__BaseRemoveItems_actions))) // INLINED!!
+		call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DEATH , function s__BaseRemoveItems_actions)
  endfunction 
 	
 //===========================================================================
@@ -37895,7 +38988,7 @@ endfunction
     endfunction 
     
     function s__SpawnBijuus_spellPeriodic takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         set s__SpawnBijuus_count[this]=s__SpawnBijuus_count[this] + 1
         if s__SpawnBijuus_count[this] >= 100 or GetWidgetLife(s__SpawnBijuus_u[this]) < 0.405 then
             call UnitRemoveAbility(s__SpawnBijuus_u[this], s__SpawnBijuus_spell[this])
@@ -37905,7 +38998,7 @@ endfunction
     endfunction 
 
     function s__SpawnBijuus_spellPeriodicSonGoku takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         set s__SpawnBijuus_count[this]=s__SpawnBijuus_count[this] + 1
         if s__SpawnBijuus_count[this] >= 100 or GetWidgetLife(s__SpawnBijuus_u[this]) < 0.405 then
             call UnitRemoveAbility(s__SpawnBijuus_u[this], s__SpawnBijuus_spell[this])
@@ -37927,7 +39020,7 @@ endfunction
     endfunction 
 
     function s__SpawnBijuus_spellPeriodicKokuo takes nothing returns nothing
-        local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
+        local integer this= GetTimerData(GetExpiredTimer())
         set s__SpawnBijuus_count[this]=s__SpawnBijuus_count[this] + 1
         if s__SpawnBijuus_count[this] >= 1000 or GetWidgetLife(s__SpawnBijuus_u[this]) < 0.405 then
             call UnitRemoveAbility(s__SpawnBijuus_u[this], s__SpawnBijuus_spell[this])
@@ -37952,27 +39045,27 @@ endfunction
 	        set s__SpawnBijuus_KONOHA_BIJUU_HP=s__SpawnBijuus_KONOHA_BIJUU_HP + R2I(s__SpawnBijuus_KONOHA_BIJUU_HP * 0.33)
 	        set s__SpawnBijuus_KONOHA_BIJUU_ATTACK=s__SpawnBijuus_KONOHA_BIJUU_ATTACK + R2I(s__SpawnBijuus_KONOHA_BIJUU_ATTACK * 0.33)
             if udg_DEBUG_INT <= 1 then
-                call TimerStartEx((NewTimerEx(0)) , 15.0 , false , function s__SpawnBijuus_spawnKonoha , "SpawnBijuus.spawnKonoha") // INLINED!!
+                call TimerStartEx(NewTimer() , 15.0 , false , function s__SpawnBijuus_spawnKonoha , "SpawnBijuus.spawnKonoha")
             else
-                call TimerStartEx((NewTimerEx(0)) , GetRandomReal(240, 360) , false , function s__SpawnBijuus_spawnKonoha , "SpawnBijuus.spawnKonoha") // INLINED!!
+                call TimerStartEx(NewTimer() , GetRandomReal(240, 360) , false , function s__SpawnBijuus_spawnKonoha , "SpawnBijuus.spawnKonoha")
             endif
         elseif GetTriggerUnit() == s__SpawnBijuus_OTO_BIJUU then
             set b=true
 	        set s__SpawnBijuus_OTO_BIJUU_HP=s__SpawnBijuus_OTO_BIJUU_HP + R2I(s__SpawnBijuus_OTO_BIJUU_HP * 0.33)
 	        set s__SpawnBijuus_OTO_BIJUU_ATTACK=s__SpawnBijuus_OTO_BIJUU_ATTACK + R2I(s__SpawnBijuus_OTO_BIJUU_ATTACK * 0.33)
             if udg_DEBUG_INT <= 1 then
-                call TimerStartEx((NewTimerEx(0)) , 15.0 , false , function s__SpawnBijuus_spawnOto , "SpawnBijuus.spawnOto") // INLINED!!
+                call TimerStartEx(NewTimer() , 15.0 , false , function s__SpawnBijuus_spawnOto , "SpawnBijuus.spawnOto")
             else
-                call TimerStartEx((NewTimerEx(0)) , GetRandomReal(240, 360) , false , function s__SpawnBijuus_spawnOto , "SpawnBijuus.spawnOto") // INLINED!!
+                call TimerStartEx(NewTimer() , GetRandomReal(240, 360) , false , function s__SpawnBijuus_spawnOto , "SpawnBijuus.spawnOto")
             endif
         elseif GetTriggerUnit() == s__SpawnBijuus_AKATSUKI_BIJUU then
             set b=true
 	        set s__SpawnBijuus_AKATSUKI_BIJUU_HP=s__SpawnBijuus_AKATSUKI_BIJUU_HP + R2I(s__SpawnBijuus_AKATSUKI_BIJUU_HP * 0.33)
 	        set s__SpawnBijuus_AKATSUKI_BIJUU_ATTACK=s__SpawnBijuus_AKATSUKI_BIJUU_ATTACK + R2I(s__SpawnBijuus_AKATSUKI_BIJUU_ATTACK * 0.33)
             if udg_DEBUG_INT <= 1 then
-                call TimerStartEx((NewTimerEx(0)) , 15.0 , false , function s__SpawnBijuus_spawnAkatsuki , "SpawnBijuus.spawnAkatsuki") // INLINED!!
+                call TimerStartEx(NewTimer() , 15.0 , false , function s__SpawnBijuus_spawnAkatsuki , "SpawnBijuus.spawnAkatsuki")
             else
-                call TimerStartEx((NewTimerEx(0)) , GetRandomReal(240, 360) , false , function s__SpawnBijuus_spawnAkatsuki , "SpawnBijuus.spawnAkatsuki") // INLINED!!
+                call TimerStartEx(NewTimer() , GetRandomReal(240, 360) , false , function s__SpawnBijuus_spawnAkatsuki , "SpawnBijuus.spawnAkatsuki")
             endif
         elseif id == s__SpawnBijuus_ANBU then
             call AdjustPlayerStateBJ(250, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
@@ -38151,9 +39244,9 @@ endfunction
 
     function s__SpawnBijuus_delay takes nothing returns nothing
         if udg_DEBUG_INT <= 1 then
-            call TimerStartEx((NewTimerEx(0)) , 15.0 , false , function s__SpawnBijuus_spawn , "SpawnBijuus.spawn") // INLINED!!
+            call TimerStartEx(NewTimer() , 15.0 , false , function s__SpawnBijuus_spawn , "SpawnBijuus.spawn")
         else
-            call TimerStartEx((NewTimerEx(0)) , 300.0 , false , function s__SpawnBijuus_spawn , "SpawnBijuus.spawn") // INLINED!!
+            call TimerStartEx(NewTimer() , 300.0 , false , function s__SpawnBijuus_spawn , "SpawnBijuus.spawn")
         endif
         call ReleaseTimer(GetExpiredTimer())
     endfunction 
@@ -38170,344 +39263,344 @@ endfunction
     endfunction 
 
      function s__SpawnBijuus_recipe takes nothing returns nothing
-        if GetItemTypeId(GetManipulatedItem()) == 'I070' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06R'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+        if GetItemTypeId(GetManipulatedItem()) == 'I070' and UnitHasItemEx(GetTriggerUnit() , 'I06R') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	   call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06R'))) // INLINED!!
+	   call UnitRemoveItemEx(GetTriggerUnit() , 'I06R')
 	   call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	  elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06S'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	  elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and UnitHasItemEx(GetTriggerUnit() , 'I06S') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06S'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06S')
 	  call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-         elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06T'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+         elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and UnitHasItemEx(GetTriggerUnit() , 'I06T') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	   call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06T'))) // INLINED!!
+	   call UnitRemoveItemEx(GetTriggerUnit() , 'I06T')
 	   call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-          elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06X'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+          elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and UnitHasItemEx(GetTriggerUnit() , 'I06X') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06X'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06X')
 	  call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Y'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and UnitHasItemEx(GetTriggerUnit() , 'I06Y') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Y'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06Y')
 	  call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Z'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and UnitHasItemEx(GetTriggerUnit() , 'I06Z') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Z'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06Z')
 	  call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-          elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06U'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+          elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and UnitHasItemEx(GetTriggerUnit() , 'I06U') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06U'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06U')
 	  call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-          elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06U'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+          elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and UnitHasItemEx(GetTriggerUnit() , 'I06U') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06U'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06U')
 	  call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06V'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and UnitHasItemEx(GetTriggerUnit() , 'I06V') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06V'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06V')
 	  call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06W'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I070' and UnitHasItemEx(GetTriggerUnit() , 'I06W') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats3[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06W'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06W')
 	  call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
          endif
-	if GetItemTypeId(GetManipulatedItem()) == 'I071' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06U'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	if GetItemTypeId(GetManipulatedItem()) == 'I071' and UnitHasItemEx(GetTriggerUnit() , 'I06U') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06U'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06U')
 	  call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06V'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and UnitHasItemEx(GetTriggerUnit() , 'I06V') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06V'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06V')
 	  call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06W'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and UnitHasItemEx(GetTriggerUnit() , 'I06W') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06W'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06W')
 	  call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-         elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06X'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+         elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and UnitHasItemEx(GetTriggerUnit() , 'I06X') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06X'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06X')
 	  call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Y'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and UnitHasItemEx(GetTriggerUnit() , 'I06Y') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Y'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06Y')
 	  call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Z'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and UnitHasItemEx(GetTriggerUnit() , 'I06Z') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Z'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06Z')
 	  call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-         elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06R'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+         elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and UnitHasItemEx(GetTriggerUnit() , 'I06R') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	   call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06R'))) // INLINED!!
+	   call UnitRemoveItemEx(GetTriggerUnit() , 'I06R')
 	   call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	  elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06S'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	  elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and UnitHasItemEx(GetTriggerUnit() , 'I06S') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06S'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06S')
 	  call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-         elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06T'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+         elseif GetItemTypeId(GetManipulatedItem()) == 'I071' and UnitHasItemEx(GetTriggerUnit() , 'I06T') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats2[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	   call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06T'))) // INLINED!!
+	   call UnitRemoveItemEx(GetTriggerUnit() , 'I06T')
 	   call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	 endif
-	 if GetItemTypeId(GetManipulatedItem()) == 'I072' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06X'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 if GetItemTypeId(GetManipulatedItem()) == 'I072' and UnitHasItemEx(GetTriggerUnit() , 'I06X') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06X'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06X')
 	  call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Y'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and UnitHasItemEx(GetTriggerUnit() , 'I06Y') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Y'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06Y')
 	  call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06Z'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and UnitHasItemEx(GetTriggerUnit() , 'I06Z') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
-		call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Z'))) // INLINED!!
+		call UnitRemoveItemEx(GetTriggerUnit() , 'I06Z')
                 call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06Z'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06Z')
 	  call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-          elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06U'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+          elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and UnitHasItemEx(GetTriggerUnit() , 'I06U') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
             endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06U'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06U')
 	  call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06V'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and UnitHasItemEx(GetTriggerUnit() , 'I06V') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
 	    endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06V'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06V')
 	  call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	 elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06W'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	 elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and UnitHasItemEx(GetTriggerUnit() , 'I06W') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
  	    endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	   call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06W'))) // INLINED!!
+	   call UnitRemoveItemEx(GetTriggerUnit() , 'I06W')
 	   call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-          elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06R'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+          elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and UnitHasItemEx(GetTriggerUnit() , 'I06R') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
 	    endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	   call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06R'))) // INLINED!!
+	   call UnitRemoveItemEx(GetTriggerUnit() , 'I06R')
 	   call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-	  elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06S'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+	  elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and UnitHasItemEx(GetTriggerUnit() , 'I06S') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
 	    endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	  call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06S'))) // INLINED!!
+	  call UnitRemoveItemEx(GetTriggerUnit() , 'I06S')
 	  call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
-         elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I06T'))) then // INLINED!!
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I03T'))) then // INLINED!!
+         elseif GetItemTypeId(GetManipulatedItem()) == 'I072' and UnitHasItemEx(GetTriggerUnit() , 'I06T') then
+	    if UnitHasItemEx(GetTriggerUnit() , 'I03T') then
 		set s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]= s__s__SpawnBijuus_stats1[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 4
                 call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 4)
 	    endif
-	    if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00N'))) then // INLINED!!
+	    if UnitHasItemEx(GetTriggerUnit() , 'I00N') then
 		call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 		call ModifyHeroStat(bj_HEROSTAT_AGI, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	  	call ModifyHeroStat(bj_HEROSTAT_INT, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
 	    endif
-	   call RemoveItem(GetItemOfTypeFromUnitBJ((GetTriggerUnit() ), ( 'I06T'))) // INLINED!!
+	   call UnitRemoveItemEx(GetTriggerUnit() , 'I06T')
 	   call ModifyHeroStat(bj_HEROSTAT_STR, GetTriggerUnit(), bj_MODIFYMETHOD_ADD, 2)
          endif
     endfunction 
@@ -38540,11 +39633,11 @@ endfunction
             set s__SpawnBijuus_ROTATION_AKATSUKI=s__SpawnBijuus_ROTATION_AKATSUKI - 9
         endif
         call TriggerAddAction(t, function s__SpawnBijuus_die)
-        call TimerStart((NewTimerEx(0)), 1.0, false, function s__SpawnBijuus_delay) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__SpawnBijuus_attack))) // INLINED!!
-        call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__SpawnBijuus_recipe))) // INLINED!!
-	    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__SpawnBijuus_equip))) // INLINED!!
-    	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DROP_ITEM ) , Filter(( function s__SpawnBijuus_unequip))) // INLINED!!
+        call TimerStart(NewTimer(), 1.0, false, function s__SpawnBijuus_delay)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function s__SpawnBijuus_attack)
+        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__SpawnBijuus_recipe)
+	    call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_PICKUP_ITEM , function s__SpawnBijuus_equip)
+    	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_DROP_ITEM , function s__SpawnBijuus_unequip)
     endfunction 
     
 //===========================================================================
@@ -38556,7 +39649,7 @@ function Trig_PlayerLeave_Func001A takes nothing returns nothing
 endfunction
 
 function Trig_PlayerLeave_Periodic takes nothing returns nothing
- local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+ local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
  local integer i= 0
  local boolean b= true
 	loop
@@ -38644,7 +39737,7 @@ function Trig_PlayerLeave_Func004A takes nothing returns nothing
 				endif
 				set i=i + 1
 			endloop
-			call TimerStart(NewTimerEx((GetUnitUserData((GetEnumUnit())))), 1.0, true, function Trig_PlayerLeave_Periodic) // INLINED!!
+			call TimerStart(NewTimerEx(GetUnitId(GetEnumUnit())), 1.0, true, function Trig_PlayerLeave_Periodic)
 		else
 			call RemoveUnit(GetEnumUnit())
 		endif
@@ -38696,12 +39789,12 @@ endfunction
     		call CreateFogModifierRectBJ(true, Player(12), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
     		call CreateFogModifierRectBJ(true, Player(13), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
     		call CreateFogModifierRectBJ(true, Player(14), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
-		call TimerStartEx((NewTimerEx(0)) , 2.0 , true , function s__Spectator_shake , "Spectator.shake") // INLINED!!
+		call TimerStartEx(NewTimer() , 2.0 , true , function s__Spectator_shake , "Spectator.shake")
 		call ReleaseTimer(GetExpiredTimer())
  endfunction
 
  function s__Spectator_onInit takes nothing returns nothing
-		call TimerStart((NewTimerEx(0)), 1.0, false, function s__Spectator_fog) // INLINED!!
+		call TimerStart(NewTimer(), 1.0, false, function s__Spectator_fog)
  endfunction 
 
 
@@ -38714,14 +39807,14 @@ function Trig_PreventDeny_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_PreventDeny_Actions takes nothing returns nothing
-	if (( ( GetUnitLifePercent(GetTriggerUnit()) >= 25.00 ) ) and ( ( IsPlayerAlly(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit())) ) ) and ( ( GetUnitTypeId(GetTriggerUnit()) != 'hmtm' ) ) and ( ( GetUnitTypeId(GetTriggerUnit()) != 'h07H' ) ) and ( ( GetUnitTypeId(GetTriggerUnit()) != 'otot' ) ) and ( ( GetUnitTypeId(GetTriggerUnit()) != 'o009' ) )) then // INLINED!!
+	if Trig_PreventDeny_Conditions() then
 		call IssueTargetOrder(GetAttacker(), "attack", GetAttacker())
 	endif
 endfunction
 
 //===========================================================================
 function InitTrig_PreventDeny takes nothing returns nothing
-	call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function Trig_PreventDeny_Actions))) // INLINED!!
+	call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ATTACKED , function Trig_PreventDeny_Actions)
 endfunction
 
 
@@ -38748,8 +39841,8 @@ endfunction
  endfunction 
 	
  function s__PeriodicActions_onInit takes nothing returns nothing
-		call TimerStartEx((NewTimerEx(0)) , 60.0 , true , function s__PeriodicActions_periodicActions , "PeriodicActions.periodicActions") // INLINED!!
-		call TimerStartEx((NewTimerEx(0)) , 5.0 , false , function s__PeriodicActions_gold , "PeriodicActions.gold") // INLINED!!
+		call TimerStartEx(NewTimer() , 60.0 , true , function s__PeriodicActions_periodicActions , "PeriodicActions.periodicActions")
+		call TimerStartEx(NewTimer() , 5.0 , false , function s__PeriodicActions_gold , "PeriodicActions.gold")
  endfunction 
 	
 //===========================================================================
@@ -38915,7 +40008,7 @@ function InitGlobals2 takes nothing returns nothing
 	set udg_boolean01=false
 	set udg_dialog03=DialogCreate()
 	set udg_boolean02=false
-	set udg_timer01=(NewTimerEx(0)) // INLINED!!
+	set udg_timer01=NewTimer()
 	set udg_integer04=0
 	set udg_integer05=0
 	set udg_integer06=0
@@ -38974,7 +40067,7 @@ function InitGlobals2 takes nothing returns nothing
 	set udg_real09=0
 	set udg_integer08=0
 	set udg_real10=0
-	set udg_timer02=(NewTimerEx(0)) // INLINED!!
+	set udg_timer02=NewTimer()
 	set i=0
 	loop
 		exitwhen ( i > 1 )
@@ -39023,7 +40116,7 @@ function InitGlobals2 takes nothing returns nothing
 	set i=0
 	loop
 		exitwhen ( i > 1 )
-		set udg_timers01[i]=(NewTimerEx(0)) // INLINED!!
+		set udg_timers01[i]=NewTimer()
 		set i=i + 1
 	endloop
 	set i=0
@@ -39144,7 +40237,7 @@ function InitGlobals2 takes nothing returns nothing
 	endloop
 	set udg_group06=CreateGroup()
 	set udg_group07=CreateGroup()
-	set udg_timer03=(NewTimerEx(0)) // INLINED!!
+	set udg_timer03=NewTimer()
 	set udg_integer13=0
 	set udg_real13=0
 	set i=0
@@ -39182,17 +40275,17 @@ function InitGlobals2 takes nothing returns nothing
 	set udg_group09=CreateGroup()
 	set udg_integer15=0
 	set udg_real14=0
-	set udg_timer04=(NewTimerEx(0)) // INLINED!!
+	set udg_timer04=NewTimer()
 	set udg_group10=CreateGroup()
-	set udg_timer05=(NewTimerEx(0)) // INLINED!!
+	set udg_timer05=NewTimer()
 	set i=0
 	loop
 		exitwhen ( i > 1 )
 		set udg_groups09[i]=CreateGroup()
 		set i=i + 1
 	endloop
-	set udg_timer06=(NewTimerEx(0)) // INLINED!!
-	set udg_timer07=(NewTimerEx(0)) // INLINED!!
+	set udg_timer06=NewTimer()
+	set udg_timer07=NewTimer()
 	set udg_integer16=0
 	set udg_real15=0
 	set i=0
@@ -39209,8 +40302,8 @@ function InitGlobals2 takes nothing returns nothing
 	endloop
 	set udg_integer17=0
 	set udg_real16=0
-	set udg_timer08=(NewTimerEx(0)) // INLINED!!
-	set udg_timer09=(NewTimerEx(0)) // INLINED!!
+	set udg_timer08=NewTimer()
+	set udg_timer09=NewTimer()
 	set udg_group11=CreateGroup()
 	set udg_group12=CreateGroup()
 	set udg_integer18=0
@@ -39228,8 +40321,8 @@ function InitGlobals2 takes nothing returns nothing
 		set udg_integers19[i]=0
 		set i=i + 1
 	endloop
-	set udg_timer10=(NewTimerEx(0)) // INLINED!!
-	set udg_timer11=(NewTimerEx(0)) // INLINED!!
+	set udg_timer10=NewTimer()
+	set udg_timer11=NewTimer()
 	set i=0
 	loop
 		exitwhen ( i > 1 )
@@ -40583,7 +41676,7 @@ endfunction
 
 function Trig_BPKW_Func007A takes nothing returns nothing
 	set udg_locations03[301]=GetUnitLoc(GetEnumUnit())
-call AddSpecialEffectLocBJ((udg_locations03[301] ), ( "Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl")) // INLINED!!
+	call AddSpecialEffectLocBJEX(udg_locations03[301] , "Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl")
 	call DestroyEffect(bj_lastCreatedEffect)
 	call UnitDamageTarget(GetTriggerUnit(), GetEnumUnit(), ( 8.00 * I2R(GetHeroStatBJ(0, udg_units33[( 1 + GetPlayerId(GetOwningPlayer(GetTriggerUnit())) )], true)) ), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
 	call RemoveLocation(udg_locations03[301])
@@ -40591,9 +41684,9 @@ endfunction
 
 function Trig_BPKW_Actions takes nothing returns nothing
 	set udg_locations03[300]=GetUnitLoc(GetTriggerUnit())
-call AddSpecialEffectLocBJ((udg_locations03[300] ), ( "war3mapImported\\FlameBomb.mdx")) // INLINED!!
+	call AddSpecialEffectLocBJEX(udg_locations03[300] , "war3mapImported\\FlameBomb.mdx")
 	call DestroyEffect(bj_lastCreatedEffect)
-call AddSpecialEffectLocBJ((udg_locations03[300] ), ( "Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl")) // INLINED!!
+	call AddSpecialEffectLocBJEX(udg_locations03[300] , "Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl")
 	call DestroyEffect(bj_lastCreatedEffect)
 	set bj_wantDestroyGroup=true
 	call ForGroupBJ(GetUnitsInRangeOfLocMatching(300.00, udg_locations03[300], Condition(function Trig_BPKW_Func007001003)), function Trig_BPKW_Func007A)
@@ -40631,7 +41724,7 @@ endfunction
 function Trig_CZ2_1________2_Func005Func012A takes nothing returns nothing
 	call UnitDamageTarget(GetTriggerUnit(), GetEnumUnit(), ( I2R(GetHeroStatBJ(1, GetTriggerUnit(), true)) * 1.50 ), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_LIGHTNING, WEAPON_TYPE_WHOKNOWS)
 	set udg_locations01[4]=GetUnitLoc(GetEnumUnit())
-call AddSpecialEffectLocBJ((udg_locations01[4] ), ( "Abilities\\Weapons\\Bolt\\BoltImpact.mdl")) // INLINED!!
+	call AddSpecialEffectLocBJEX(udg_locations01[4] , "Abilities\\Weapons\\Bolt\\BoltImpact.mdl")
 	call DestroyEffect(bj_lastCreatedEffect)
 	call RemoveLocation(udg_locations01[4])
 endfunction
@@ -40666,11 +41759,11 @@ function Trig_CZ2_1________2_Actions takes nothing returns nothing
 		set P3=PolarProjectionBJ(P, GetRandomReal(0, 350.00), GetRandomReal(0, 360))
 		set lightning2=AddLightningLoc("CLPB", P, P)
 		call MoveLightningEx(bj_lastCreatedLightning, false, GetLocationX(P2), GetLocationY(P2), GetRandomReal(700.00, 1000.00), GetLocationX(P3), GetLocationY(P3), 0)
-call AddSpecialEffectLocBJ((P3 ), ( "Abilities\\Weapons\\Bolt\\BoltImpact.mdl")) // INLINED!!
+		call AddSpecialEffectLocBJEX(P3 , "Abilities\\Weapons\\Bolt\\BoltImpact.mdl")
 		call DestroyEffect(bj_lastCreatedEffect)
-call AddSpecialEffectLocBJ((P3 ), ( "Abilities\\Weapons\\FragDriller\\FragDriller.mdl")) // INLINED!!
+		call AddSpecialEffectLocBJEX(P3 , "Abilities\\Weapons\\FragDriller\\FragDriller.mdl")
 		call DestroyEffect(bj_lastCreatedEffect)
-call AddSpecialEffectLocBJ((P3 ), ( "abilities\\weapons\\catapult\\catapultmissile.mdl")) // INLINED!!
+		call AddSpecialEffectLocBJEX(P3 , "abilities\\weapons\\catapult\\catapultmissile.mdl")
 		call DestroyEffect(bj_lastCreatedEffect)
 		call ForGroupBJ(GetUnitsInRangeOfLocMatching(250.00, P3, Condition(function Trig_CZ2_1________2_Func005Func012001003)), function Trig_CZ2_1________2_Func005Func012A)
 		call TriggerSleepAction(0.03)
@@ -40872,23 +41965,23 @@ function Trig_CB1_1_Actions takes nothing returns nothing
  local real y3= GetRectCenterY(udg_rect06)
  local integer i
 	if ( ( IsUnitAliveBJ(udg_unit45) ) ) then
-call CreateUnit((Player(3) ), ( 'h01A' ), (( x1 )*1.0), (( y1 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'h01A' ), (( x1 )*1.0), (( y1 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'h01A' ), (( x1 )*1.0), (( y1 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'e017' ), (( x1 )*1.0), (( y1 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'e017' ), (( x1 )*1.0), (( y1 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'ndth' ), (( x1 )*1.0), (( y1 )*1.0), (( 270.0)*1.0)) // INLINED!!
+		call GetUnit(Player(3) , 'h01A' , x1 , y1 , 270.0)
+		call GetUnit(Player(3) , 'h01A' , x1 , y1 , 270.0)
+		call GetUnit(Player(3) , 'h01A' , x1 , y1 , 270.0)
+		call GetUnit(Player(3) , 'e017' , x1 , y1 , 270.0)
+		call GetUnit(Player(3) , 'e017' , x1 , y1 , 270.0)
+		call GetUnit(Player(3) , 'ndth' , x1 , y1 , 270.0)
 		//call CreateNUnitsAtLoc(3,'h01A',Player(3),GetRectCenter(udg_rect11),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(2,'e017',Player(3),GetRectCenter(udg_rect11),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(1,'ndth',Player(3),GetRectCenter(udg_rect11),bj_UNIT_FACING)
 	endif
 	if ( ( IsUnitAliveBJ(udg_unit51) ) ) then
-call CreateUnit((Player(3) ), ( 'h01A' ), (( x2 )*1.0), (( y2 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'h01A' ), (( x2 )*1.0), (( y2 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'h01A' ), (( x2 )*1.0), (( y2 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'e017' ), (( x2 )*1.0), (( y2 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'e017' ), (( x2 )*1.0), (( y2 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'ndth' ), (( x2 )*1.0), (( y2 )*1.0), (( 270.0)*1.0)) // INLINED!!
+		call GetUnit(Player(3) , 'h01A' , x2 , y2 , 270.0)
+		call GetUnit(Player(3) , 'h01A' , x2 , y2 , 270.0)
+		call GetUnit(Player(3) , 'h01A' , x2 , y2 , 270.0)
+		call GetUnit(Player(3) , 'e017' , x2 , y2 , 270.0)
+		call GetUnit(Player(3) , 'e017' , x2 , y2 , 270.0)
+		call GetUnit(Player(3) , 'ndth' , x2 , y2 , 270.0)
 		//call CreateNUnitsAtLoc(3,'h01A',Player(3),GetRectCenter(udg_rect10),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(2,'e017',Player(3),GetRectCenter(udg_rect10),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(1,'ndth',Player(3),GetRectCenter(udg_rect10),bj_UNIT_FACING)
@@ -40897,13 +41990,13 @@ call CreateUnit((Player(3) ), ( 'ndth' ), (( x2 )*1.0), (( y2 )*1.0), (( 270.0)*
 	//call CreateNUnitsAtLoc(2,'h01A',Player(3),GetRectCenter(udg_rect06),bj_UNIT_FACING)
 	//call CreateNUnitsAtLoc(2,'e017',Player(3),GetRectCenter(udg_rect06),bj_UNIT_FACING)
 	//call CreateNUnitsAtLoc(1,'ndth',Player(3),GetRectCenter(udg_rect06),bj_UNIT_FACING)
-call CreateUnit((Player(3) ), ( 'hfoo' ), (( x3 )*1.0), (( y3 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'hfoo' ), (( x3 )*1.0), (( y3 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'h01A' ), (( x3 )*1.0), (( y3 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'h01A' ), (( x3 )*1.0), (( y3 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'e017' ), (( x3 )*1.0), (( y3 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'e017' ), (( x3 )*1.0), (( y3 )*1.0), (( 270.0)*1.0)) // INLINED!!
-call CreateUnit((Player(3) ), ( 'ndth' ), (( x3 )*1.0), (( y3 )*1.0), (( 270.0)*1.0)) // INLINED!!
+	call GetUnit(Player(3) , 'hfoo' , x3 , y3 , 270.0)
+	call GetUnit(Player(3) , 'hfoo' , x3 , y3 , 270.0)
+	call GetUnit(Player(3) , 'h01A' , x3 , y3 , 270.0)
+	call GetUnit(Player(3) , 'h01A' , x3 , y3 , 270.0)
+	call GetUnit(Player(3) , 'e017' , x3 , y3 , 270.0)
+	call GetUnit(Player(3) , 'e017' , x3 , y3 , 270.0)
+	call GetUnit(Player(3) , 'ndth' , x3 , y3 , 270.0)
 endfunction
 
 function Trig_CB1_2_Func002C takes nothing returns boolean
@@ -40921,14 +42014,14 @@ function Trig_CB1_2_Actions takes nothing returns nothing
  local real y2= GetRectCenterY(udg_rect10)
  local real x3= GetRectCenterX(udg_rect06)
  local real y3= GetRectCenterY(udg_rect06)
-call CreateUnit((Player(3) ), ( 'otau' ), (( x3 )*1.0), (( y3 )*1.0), (( 270.0)*1.0)) // INLINED!!
+	call GetUnit(Player(3) , 'otau' , x3 , y3 , 270.0)
 	//call CreateNUnitsAtLoc(1,'otau',Player(3),GetRectCenter(udg_rect06),bj_UNIT_FACING)
 	if ( ( IsUnitAliveBJ(udg_unit45) ) ) then
-call CreateUnit((Player(3) ), ( 'otau' ), (( x1 )*1.0), (( y1 )*1.0), (( 270.0)*1.0)) // INLINED!!
+		call GetUnit(Player(3) , 'otau' , x1 , y1 , 270.0)
 		//call CreateNUnitsAtLoc(1,'otau',Player(3),GetRectCenter(udg_rect11),bj_UNIT_FACING)
 	endif
 	if ( ( IsUnitAliveBJ(udg_unit51) ) ) then
-call CreateUnit((Player(3) ), ( 'otau' ), (( x2 )*1.0), (( y2 )*1.0), (( 270.0)*1.0)) // INLINED!!
+		call GetUnit(Player(3) , 'otau' , x2 , y2 , 270.0)
 		//call CreateNUnitsAtLoc(1,'otau',Player(3),GetRectCenter(udg_rect10),bj_UNIT_FACING)
 	endif
 endfunction
@@ -40948,35 +42041,35 @@ function Trig_CB2_1_Actions takes nothing returns nothing
  local real y2= GetRectCenterY(udg_rect12)
  local real x3= GetRectCenterX(udg_rect13)
  local real y3= GetRectCenterY(udg_rect13)
-call CreateUnit((Player(7) ), ( 'h01B' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'h01B' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'h01J' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'h01J' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'earc' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'earc' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'ndth' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
+	call GetUnit(Player(7) , 'h01B' , x1 , y1 , 270)
+	call GetUnit(Player(7) , 'h01B' , x1 , y1 , 270)
+	call GetUnit(Player(7) , 'h01J' , x1 , y1 , 270)
+	call GetUnit(Player(7) , 'h01J' , x1 , y1 , 270)
+	call GetUnit(Player(7) , 'earc' , x1 , y1 , 270)
+	call GetUnit(Player(7) , 'earc' , x1 , y1 , 270)
+	call GetUnit(Player(7) , 'ndth' , x1 , y1 , 270)
 	//call CreateNUnitsAtLoc(2,'h01B',Player(7),GetRectCenter(udg_rect07),bj_UNIT_FACING)
 	//call CreateNUnitsAtLoc(2,'h01J',Player(7),GetRectCenter(udg_rect07),bj_UNIT_FACING)
 	//call CreateNUnitsAtLoc(2,'earc',Player(7),GetRectCenter(udg_rect07),bj_UNIT_FACING)
 	//call CreateNUnitsAtLoc(1,'ndth',Player(7),GetRectCenter(udg_rect07),bj_UNIT_FACING)
 	if ( ( IsUnitAliveBJ(udg_unit42) ) ) then
-call CreateUnit((Player(7) ), ( 'h01J' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'h01J' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'h01J' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'earc' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'earc' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'ndth' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
+		call GetUnit(Player(7) , 'h01J' , x2 , y2 , 270)
+		call GetUnit(Player(7) , 'h01J' , x2 , y2 , 270)
+		call GetUnit(Player(7) , 'h01J' , x2 , y2 , 270)
+		call GetUnit(Player(7) , 'earc' , x2 , y2 , 270)
+		call GetUnit(Player(7) , 'earc' , x2 , y2 , 270)
+		call GetUnit(Player(7) , 'ndth' , x2 , y2 , 270)
 		//call CreateNUnitsAtLoc(2,'earc',Player(7),GetRectCenter(udg_rect12),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(1,'ndth',Player(7),GetRectCenter(udg_rect12),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(3,'h01J',Player(7),GetRectCenter(udg_rect12),bj_UNIT_FACING)
 	endif
 	if ( ( IsUnitAliveBJ(udg_unit37) ) ) then
-call CreateUnit((Player(7) ), ( 'h01J' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'h01J' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'h01J' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'earc' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'earc' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(7) ), ( 'ndth' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
+		call GetUnit(Player(7) , 'h01J' , x3 , y3 , 270)
+		call GetUnit(Player(7) , 'h01J' , x3 , y3 , 270)
+		call GetUnit(Player(7) , 'h01J' , x3 , y3 , 270)
+		call GetUnit(Player(7) , 'earc' , x3 , y3 , 270)
+		call GetUnit(Player(7) , 'earc' , x3 , y3 , 270)
+		call GetUnit(Player(7) , 'ndth' , x3 , y3 , 270)
 		//call CreateNUnitsAtLoc(3,'h01J',Player(7),GetRectCenter(udg_rect13),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(2,'earc',Player(7),GetRectCenter(udg_rect13),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(1,'ndth',Player(7),GetRectCenter(udg_rect13),bj_UNIT_FACING)
@@ -40998,14 +42091,14 @@ function Trig_CB2_2_Actions takes nothing returns nothing
  local real y2= GetRectCenterY(udg_rect12)
  local real x3= GetRectCenterX(udg_rect13)
  local real y3= GetRectCenterY(udg_rect13)
-call CreateUnit((Player(7) ), ( 'ogru' ), (( x1 )*1.0), (( y1 )*1.0), (( 270.0)*1.0)) // INLINED!!
+	call GetUnit(Player(7) , 'ogru' , x1 , y1 , 270.0)
 	//call CreateNUnitsAtLoc(1,'ogru',Player(7),GetRectCenter(udg_rect07),bj_UNIT_FACING)
 	if ( ( IsUnitAliveBJ(udg_unit42) ) ) then
-call CreateUnit((Player(7) ), ( 'ogru' ), (( x2 )*1.0), (( y2 )*1.0), (( 270.0)*1.0)) // INLINED!!
+		call GetUnit(Player(7) , 'ogru' , x2 , y2 , 270.0)
 		//call CreateNUnitsAtLoc(1,'ogru',Player(7),GetRectCenter(udg_rect12),bj_UNIT_FACING)
 	endif
 	if ( ( IsUnitAliveBJ(udg_unit37) ) ) then
-call CreateUnit((Player(7) ), ( 'ogru' ), (( x3 )*1.0), (( y3 )*1.0), (( 270.0)*1.0)) // INLINED!!
+		call GetUnit(Player(7) , 'ogru' , x3 , y3 , 270.0)
 		//call CreateNUnitsAtLoc(1,'ogru',Player(7),GetRectCenter(udg_rect13),bj_UNIT_FACING)
 	endif
 endfunction
@@ -41025,35 +42118,35 @@ function Trig_CB3_1_Actions takes nothing returns nothing
  local real y2= GetRectCenterY(udg_rect14)
  local real x3= GetRectCenterX(udg_rect09)
  local real y3= GetRectCenterY(udg_rect09)
-call CreateUnit((Player(11) ), ( 'h026' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'h026' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'h027' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'h027' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'e018' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'e018' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'ndth' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
+	call GetUnit(Player(11) , 'h026' , x1 , y1 , 270)
+	call GetUnit(Player(11) , 'h026' , x1 , y1 , 270)
+	call GetUnit(Player(11) , 'h027' , x1 , y1 , 270)
+	call GetUnit(Player(11) , 'h027' , x1 , y1 , 270)
+	call GetUnit(Player(11) , 'e018' , x1 , y1 , 270)
+	call GetUnit(Player(11) , 'e018' , x1 , y1 , 270)
+	call GetUnit(Player(11) , 'ndth' , x1 , y1 , 270)
 	//call CreateNUnitsAtLoc(2,'h026',Player(11),GetRectCenter(udg_rect08),bj_UNIT_FACING)
 	//call CreateNUnitsAtLoc(2,'h027',Player(11),GetRectCenter(udg_rect08),bj_UNIT_FACING)
 	//call CreateNUnitsAtLoc(2,'e018',Player(11),GetRectCenter(udg_rect08),bj_UNIT_FACING)
 	//call CreateNUnitsAtLoc(1,'ndth',Player(11),GetRectCenter(udg_rect08),bj_UNIT_FACING)
 	if ( ( IsUnitAliveBJ(udg_unit50) ) ) then
-call CreateUnit((Player(11) ), ( 'h027' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'h027' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'h027' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'e018' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'e018' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'ndth' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
+		call GetUnit(Player(11) , 'h027' , x2 , y2 , 270)
+		call GetUnit(Player(11) , 'h027' , x2 , y2 , 270)
+		call GetUnit(Player(11) , 'h027' , x2 , y2 , 270)
+		call GetUnit(Player(11) , 'e018' , x2 , y2 , 270)
+		call GetUnit(Player(11) , 'e018' , x2 , y2 , 270)
+		call GetUnit(Player(11) , 'ndth' , x2 , y2 , 270)
 		//call CreateNUnitsAtLoc(3,'h027',Player(11),GetRectCenter(udg_rect14),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(2,'e018',Player(11),GetRectCenter(udg_rect14),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(1,'ndth',Player(11),GetRectCenter(udg_rect14),bj_UNIT_FACING)
 	endif
 	if ( ( IsUnitAliveBJ(udg_unit53) ) ) then
-call CreateUnit((Player(11) ), ( 'h027' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'h027' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'h027' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'e018' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'e018' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
-call CreateUnit((Player(11) ), ( 'ndth' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
+		call GetUnit(Player(11) , 'h027' , x3 , y3 , 270)
+		call GetUnit(Player(11) , 'h027' , x3 , y3 , 270)
+		call GetUnit(Player(11) , 'h027' , x3 , y3 , 270)
+		call GetUnit(Player(11) , 'e018' , x3 , y3 , 270)
+		call GetUnit(Player(11) , 'e018' , x3 , y3 , 270)
+		call GetUnit(Player(11) , 'ndth' , x3 , y3 , 270)
 		//call CreateNUnitsAtLoc(3,'h027',Player(11),GetRectCenter(udg_rect09),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(2,'e018',Player(11),GetRectCenter(udg_rect09),bj_UNIT_FACING)
 		//call CreateNUnitsAtLoc(1,'ndth',Player(11),GetRectCenter(udg_rect09),bj_UNIT_FACING)
@@ -41075,25 +42168,25 @@ function Trig_CB3_2_Actions takes nothing returns nothing
  local real y2= GetRectCenterY(udg_rect14)
  local real x3= GetRectCenterX(udg_rect09)
  local real y3= GetRectCenterY(udg_rect09)
-call CreateUnit((Player(11) ), ( 'orai' ), (( x1 )*1.0), (( y1 )*1.0), (( 270)*1.0)) // INLINED!!
+	call GetUnit(Player(11) , 'orai' , x1 , y1 , 270)
 	//call CreateNUnitsAtLoc(1,'orai',Player(11),GetRectCenter(udg_rect08),bj_UNIT_FACING)
 	if ( ( IsUnitAliveBJ(udg_unit50) ) ) then
-call CreateUnit((Player(11) ), ( 'orai' ), (( x2 )*1.0), (( y2 )*1.0), (( 270)*1.0)) // INLINED!!
+		call GetUnit(Player(11) , 'orai' , x2 , y2 , 270)
 		//call CreateNUnitsAtLoc(1,'orai',Player(11),GetRectCenter(udg_rect14),bj_UNIT_FACING)
 	endif
 	if ( ( IsUnitAliveBJ(udg_unit53) ) ) then
-call CreateUnit((Player(11) ), ( 'orai' ), (( x3 )*1.0), (( y3 )*1.0), (( 270)*1.0)) // INLINED!!
+		call GetUnit(Player(11) , 'orai' , x3 , y3 , 270)
 		//call CreateNUnitsAtLoc(1,'orai',Player(11),GetRectCenter(udg_rect09),bj_UNIT_FACING)
 	endif
 endfunction
 
 function Trig_SpawnCreeps takes nothing returns nothing
-	call TimerStartEx((NewTimerEx(0)) , 30.0 , true , function Trig_CB1_1_Actions , "Trig_CB1_1_Actions") // INLINED!!
-	call TimerStartEx((NewTimerEx(0)) , 60.0 , true , function Trig_CB1_2_Actions , "Trig_CB1_2_Actions") // INLINED!!
-	call TimerStartEx((NewTimerEx(0)) , 30.0 , true , function Trig_CB2_1_Actions , "Trig_CB2_1_Actions") // INLINED!!
-	call TimerStartEx((NewTimerEx(0)) , 60.0 , true , function Trig_CB2_2_Actions , "Trig_CB2_2_Actions") // INLINED!!
-	call TimerStartEx((NewTimerEx(0)) , 30.0 , true , function Trig_CB3_1_Actions , "Trig_CB3_1_Actions") // INLINED!!
-	call TimerStartEx((NewTimerEx(0)) , 60.0 , true , function Trig_CB3_2_Actions , "Trig_CB3_2_Actions") // INLINED!!
+	call TimerStartEx(NewTimer() , 30.0 , true , function Trig_CB1_1_Actions , "Trig_CB1_1_Actions")
+	call TimerStartEx(NewTimer() , 60.0 , true , function Trig_CB1_2_Actions , "Trig_CB1_2_Actions")
+	call TimerStartEx(NewTimer() , 30.0 , true , function Trig_CB2_1_Actions , "Trig_CB2_1_Actions")
+	call TimerStartEx(NewTimer() , 60.0 , true , function Trig_CB2_2_Actions , "Trig_CB2_2_Actions")
+	call TimerStartEx(NewTimer() , 30.0 , true , function Trig_CB3_1_Actions , "Trig_CB3_1_Actions")
+	call TimerStartEx(NewTimer() , 60.0 , true , function Trig_CB3_2_Actions , "Trig_CB3_2_Actions")
 	call ReleaseTimer(GetExpiredTimer())
 endfunction 
 
@@ -41303,7 +42396,7 @@ function main2 takes nothing returns nothing
 	loop
 		exitwhen ( i > 12 )
 		set udg_integers11[i]=0
-		set udg_timers01[i]=(NewTimerEx(0)) // INLINED!!
+		set udg_timers01[i]=NewTimer()
 		set i=i + 1
 	endloop
 	set i=0
@@ -41370,7 +42463,7 @@ function main2 takes nothing returns nothing
 	
 	call executeFunc(function Trig_DestroyEmptyTeams)
 	call executeFunc(function Trig_ShowModeSelectionMenu)
-	call TimerStartEx((NewTimerEx(0)) , 400.0 , true , function Trig_Advertise , "Trig_Advertise") // INLINED!!
+	call TimerStartEx(NewTimer() , 400.0 , true , function Trig_Advertise , "Trig_Advertise")
 	call executeFunc(function Trig_Advertise1)
 	call executeFunc(function Trig_Advertise2)
 	call executeFunc(function Trig_Advertise4)
@@ -41469,8 +42562,8 @@ function main2 takes nothing returns nothing
 	call TriggerAddAction(udg_trigger452, function Trig_CZ2_1________2_Actions)
 
 	//SPAWN DUMMIES
-	call TimerStartEx((NewTimerEx(0)) , 1.0 , false , function Trig_SpawnCreeps , "Trig_SpawnCreeps") // INLINED!!
-	call TimerStartEx((NewTimerEx(0)) , 600.0 , true , function Trig_UpgradeCreeps , "Trig_UpgradeCreeps") // INLINED!!
+	call TimerStartEx(NewTimer() , 1.0 , false , function Trig_SpawnCreeps , "Trig_SpawnCreeps")
+	call TimerStartEx(NewTimer() , 600.0 , true , function Trig_UpgradeCreeps , "Trig_UpgradeCreeps")
 	//SPAWN DUMMIES
 	
 	//MOVE DUMIES 
@@ -41606,12 +42699,12 @@ function InitCustomTriggers takes nothing returns nothing
     //Function not found: call InitTrig_ItemsWithSpellbook()
     //Function not found: call InitTrig_ItemTable()
     //Function not found: call InitTrig_Recipes()
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_AkatsukiRings_Actions))) // INLINED!!
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_ElementalMask_Actions))) // INLINED!!
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_JuubiSkinSet_Actions))) // INLINED!!
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_ChakraBlades_Actions))) // INLINED!!
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_UltimateWeapon_Actions))) // INLINED!!
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_FixUltraBoots_Actions))) // INLINED!!
+    call InitTrig_AkatsukiRings()
+    call InitTrig_ElementalMask()
+    call InitTrig_JuubiSkin()
+    call InitTrig_ChakraBlades()
+    call InitTrig_UltimateWeapon()
+    call InitTrig_FixUltraBoots()
     //Function not found: call InitTrig_RecipeTreasures()
     //Function not found: call InitTrig_ANBUBadgePassive()
     //Function not found: call InitTrig_JadeOfSusanooPassive()
@@ -41639,7 +42732,7 @@ function InitCustomTriggers takes nothing returns nothing
     //Function not found: call InitTrig_ItachiRing()
     //Function not found: call InitTrig_KisameRing()
     //Function not found: call InitTrig_SasoriRingGold()
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_RepairBase_Actions))) // INLINED!!
+    call InitTrig_RepairBase()
     //Function not found: call InitTrig_Fireworks()
     call InitTrig_Firecrackers()
     //Function not found: call InitTrig_BijuuEssence()
@@ -41647,7 +42740,7 @@ function InitCustomTriggers takes nothing returns nothing
     //Function not found: call InitTrig_MedicalSphere()
     //Function not found: call InitTrig_WoodOfSubstitution()
     //Function not found: call InitTrig_SmokeBomb()
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function Trig_FlashBomb_Actions))) // INLINED!!
+    call InitTrig_FlashBomb()
     call InitTrig_Body_Replacing_Doll()
     //Function not found: call InitTrig_YataMirror()
     //Function not found: call InitTrig_Oil()
@@ -41659,7 +42752,7 @@ function InitCustomTriggers takes nothing returns nothing
     //Function not found: call InitTrig_FuumaShuriken()
     //Function not found: call InitTrig_ExplosiveKunai()
     //Function not found: call InitTrig_SenbonsDance()
-    call RegisterSpellEffectEvent2(('A0DJ' ) , Filter(( function Trig_Explosive_Tag_Skill_Actions))) // INLINED!!
+    call InitTrig_ExplosiveTagSkill()
     //Function not found: call InitTrig_TimedExplosiveTag()
     //Function not found: call InitTrig_ExplosiveTagExplosion()
     //Function not found: call InitTrig_NewKohakuNoJohei()
@@ -41681,7 +42774,7 @@ function InitCustomTriggers takes nothing returns nothing
     //Function not found: call InitTrig_ScrollOfTeleport()
     //Function not found: call InitTrig_BunshinStoneNew()
     //Function not found: call InitTrig_ItemShikiFuujin()
-    call RegisterSpellEffectEvent2(('A0GV' ) , Filter(( function Trig_SuddenIceStorm_Actions))) // INLINED!!
+    call InitTrig_SuddenIceStorm()
     //Function not found: call InitTrig_HeavenSwordActive()
     //Function not found: call InitTrig_AdamantineStaffActive()
     //Function not found: call InitTrig_ExecutionBladeBuff()
@@ -41700,9 +42793,23 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_TobiramaItemLegendary()
     call InitTrig_NarutoItemLegendary()
     call InitTrig_KillerBeeItem()
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_UniqueYataMirror_Actions))) // INLINED!!
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_UniqueMedicalNinjaSet_Actions))) // INLINED!!
+    call InitTrig_UniqueYataMirror()
+    call InitTrig_UniqueMedicalNinjaSet()
     call InitTrig_RestrictANBUMaskToOne()
+    //Function not found: call InitTrig_IchigoQ()
+    //Function not found: call InitTrig_IchigoDies()
+    //Function not found: call InitTrig_IchigoW()
+    //Function not found: call InitTrig_IchigoCero()
+    call InitTrig_IchigoVastoLord()
+    //Function not found: call InitTrig_IchigoE()
+    call InitTrig_IchigoBankai()
+    call InitTrig_IchigoMugetsu()
+    //Function not found: call InitTrig_IchigoUnleash()
+    //Function not found: call InitTrig_IchigoTLevel()
+    //Function not found: call InitTrig_IchigoD()
+    //Function not found: call InitTrig_IchigoSlash()
+    //Function not found: call InitTrig_IchigoAttacks()
+    //Function not found: call InitTrig_IchigoAbillities()
     call InitTrig_KisameSameodoriLOOP()
     call InitTrig_KisameSameodoriDMG()
     call InitTrig_KisameSharkDanceLOOP()
@@ -41745,7 +42852,7 @@ function InitCustomTriggers takes nothing returns nothing
     //Function not found: call InitTrig_TeamDuel()
     call InitTrig_Smart_Bank_Add()
     call InitTrig_CircleCreation()
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function Trig_CircleStoraging_Actions))) // INLINED!!
+    call InitTrig_CircleStoraging()
     call InitTrig_Colour_String()
     call InitTrig_Show_VoteKick_Menu()
     call InitTrig_VoteKick_System()
@@ -41788,16 +42895,16 @@ function InitCustomTriggers takes nothing returns nothing
     //Function not found: call InitTrig_PickScreen()
     call InitTrig_RemoveTrashyIcon()
     //Function not found: call InitTrig_TowerDestructionEffect()
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function Trig_HideUnitsDeathAnimation_Actions))) // INLINED!!
+    call InitTrig_HideUnitsDeathAnimation()
     call InitTrig_TipMessage()
     call InitTrig_Credits()
     call InitTrig_RepickName()
     //Function not found: call InitTrig_NewRepick()
     //Function not found: call InitTrig_NewSwap()
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_HERO_LEVEL ) , Filter(( function Trig_Level1_Actions))) // INLINED!!
+    call InitTrig_HeroLevelRestriction()
     //Function not found: call InitTrig_ChakraJump()
     //Function not found: call InitTrig_FixTransformations()
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function Trig_RivalsSystem_Copy_Actions))) // INLINED!!
+    call InitTrig_RivalsSystem()
     //Function not found: call InitTrig_SetUnitVariables()
     call InitTrig_ShowUI()
     call InitTrig_Cheats_Actions_001()
@@ -41818,12 +42925,12 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_PickHeroByName()
     call InitTrig_PointSystem()
     //Function not found: call InitTrig_AssistSystemAndDamageReduction()
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function Trig_BaseDestruction_Actions))) // INLINED!!
+    call InitTrig_BaseDestruction()
     //Function not found: call InitTrig_BaseRemoveItems()
     //Function not found: call InitTrig_SpawnBijuus()
     call InitTrig_PlayerLeave()
     //Function not found: call InitTrig_Spectators()
-    call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function Trig_PreventDeny_Actions))) // INLINED!!
+    call InitTrig_PreventDeny()
     //Function not found: call InitTrig_PeriodicActions()
     call InitTrig_Load_Variables()
     call InitTrig_Main_Source()
@@ -42200,13 +43307,13 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs1102055765")
+call ExecuteFunc("jasshelper__initstructs33938859")
 call ExecuteFunc("BoundSentinel__init")
 call ExecuteFunc("ItemTable__init")
 call ExecuteFunc("PowerupSentinel__onInit")
 call ExecuteFunc("PreventSave__onInit")
-call ExecuteFunc("TimerUtils___init")
-call ExecuteFunc("UIMath___Init")
+call ExecuteFunc("TimerUtils__init")
+call ExecuteFunc("UIMath__Init")
 call ExecuteFunc("AutoBuyS___init")
 call ExecuteFunc("RegisterPlayerUnitEvent_init")
 call ExecuteFunc("UnitUtils__init")
@@ -42306,12 +43413,12 @@ local integer id=f__arg_integer2
                     exitwhen s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+random] != null and s__s__AHSS_Graphics_availableHeroesAttribute[random] == s__s__AHSS_Graphics_playersAttribute[id]
                 endloop
                 call sc__AHSS_Graphics_showHero(this , id , random)
-                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random / (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                call s__AHSS___PlayerSelection_setColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id],random / s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]))
                 loop
-                    exitwhen random < (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) // INLINED!!
-                    set random=random - (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) // INLINED!!
+                    exitwhen random < s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this])
+                    set random=random - s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this])
                 endloop
-                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random) // INLINED!!
+                call s__AHSS___PlayerSelection_setRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id],random)
                 call sc__AHSS_Graphics_updateCursor(this , id)
                 call sc__AHSS_Graphics_pressEscActions(this , id)
             endif
@@ -42323,15 +43430,15 @@ local integer id=f__arg_integer2
             local integer index
             if not s__AHSS_Graphics_gameStarted[this] then
                 if s__AHSS_Graphics_dummy[this] != null and IsPlayerInForce(Player(id), s__AHSS_Graphics_cameraForce) then
-                    if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) == - 1 then // INLINED!!
+                    if s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id]) == - 1 then
                         if s__AHSS_Graphics_allowPick[this] then
                             call s__AHSS_Graphics_selectHeroRandom(this , id)
                         endif
                     else
-                        set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) // INLINED!!
+                        set index=s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id]) * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) + s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])
                         if s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index] == null then
                             if GetLocalPlayer() == GetTriggerPlayer() then
-                                call PlaySoundBJ((s__AHSS_Options_error[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                call PlaySoundBJ(s__AHSS_Options_getSoundError(s__AHSS_Graphics_options[this]))
                             endif
 set f__result_boolean= false
 return true
@@ -42339,9 +43446,9 @@ return true
                         if s__AHSS_Graphics_allowPick[this] or s__AHSS_Graphics_allowRandom[this] then
                             if not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+id] then
                                 if GetLocalPlayer() == GetTriggerPlayer() then
-                                    call PlaySoundBJ((s__AHSS_Options_ok[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call PlaySoundBJ(s__AHSS_Options_getSoundOk(s__AHSS_Graphics_options[this]))
                                 endif
-                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=CreateDestructableZ((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]), GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), 500, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=CreateDestructableZ(s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this]), GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), 500, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                                 call RemoveDestructable(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
                                 set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=null
                                 set s__s__AHSS_Graphics_availableHeroes[index]= false
@@ -42350,11 +43457,11 @@ return true
                                 call s__AHSS_Graphics_createTeamIcon(this , id , index , true)
                             else
                                 if GetLocalPlayer() == GetTriggerPlayer() then
-                                    call PlaySoundBJ((s__AHSS_Options_ok[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call PlaySoundBJ(s__AHSS_Options_getSoundOk(s__AHSS_Graphics_options[this]))
                                 endif
                                 call s__AHSS_Graphics_showSelection(this , id)
                                 call s__AHSS_Graphics_createTeamIcon(this , id , index , false)
-                                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=CreateDestructableZ((s__AHSS___Hero_icon[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), GetDestructableX(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]), 500, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=CreateDestructableZ(s__AHSS___Hero_getIcon(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)), GetDestructableX(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]), 500, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                                 call RemoveDestructable(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index])
                                 set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=null
                                 set s__s__AHSS_Graphics_availableHeroes[index]= true
@@ -42364,14 +43471,14 @@ return true
                         elseif s__AHSS_Graphics_draftPick[this] then
                             if not s___AHSS_Graphics_draftUsed[s__AHSS_Graphics_draftUsed[this]+id] then
                                 if GetLocalPlayer() == GetTriggerPlayer() then
-                                    call PlaySoundBJ((s__AHSS_Options_ok[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call PlaySoundBJ(s__AHSS_Options_getSoundOk(s__AHSS_Graphics_options[this]))
                                 endif
                                 set s___AHSS_Graphics_draftUsed[s__AHSS_Graphics_draftUsed[this]+id]=true
-                                set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=CreateDestructable((s__AHSS___Hero_icon[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), GetDestructableX(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]]), GetDestructableY(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]]), 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                                set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=CreateDestructable(s__AHSS___Hero_getIcon(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)), GetDestructableX(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]]), GetDestructableY(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]]), 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                                 call RemoveDestructable(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]])
                                 set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+s__AHSS_Graphics_countBanned[this]]=null
                                 set s__AHSS_Graphics_countBanned[this]=s__AHSS_Graphics_countBanned[this] + 1
-                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=CreateDestructableZ((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]), GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), 500, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=CreateDestructableZ(s__AHSS_Paths_getEmptyIcon(s__AHSS_Graphics_paths[this]), GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]), 500, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
                                 call RemoveDestructable(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
                                 set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=null
                                 set s__s__AHSS_Graphics_availableHeroes[index]= false
@@ -42401,11 +43508,11 @@ endfunction
 function sa__AHSS_Graphics_pressKey takes nothing returns boolean
 
             local integer this= 1
-            local integer playerid= (s__ArrowKey_eventPlayerId) // INLINED!!
+            local integer playerid= GetEventArrowKeyPlayerId()
             local integer index
-            if s__AHSS_Graphics_dummy[this] != null and s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid] != 0 and IsPlayerInForce(Player(playerid), s__AHSS_Graphics_cameraForce) and (s__ArrowKey_eventKeyPressed) and not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+playerid] then // INLINED!!
+            if s__AHSS_Graphics_dummy[this] != null and s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid] != 0 and IsPlayerInForce(Player(playerid), s__AHSS_Graphics_cameraForce) and IsEventArrowKeyPressed() and not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+playerid] then
                 call sc__AHSS_Graphics_moveCursor(this , playerid)
-                set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
+                set index=s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) + s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])
                 call sc__AHSS_Graphics_showHero(this , playerid , index)
             endif
    return true
@@ -42413,19 +43520,19 @@ endfunction
 function sa__AHSS_Graphics_updateCursor takes nothing returns boolean
 local integer this=f__arg_integer1
 local integer playerid=f__arg_integer2
-            local integer index= (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
+            local integer index= s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) + s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])
             local integer i
-            if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
-                call SetUnitPosition(s__AHSS___PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])], ((GetDestructableX(s__AHSS_Graphics_randomIcon[this]) )*1.0), (( GetDestructableY(s__AHSS_Graphics_randomIcon[this]))*1.0)) // INLINED!!
+            if s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) == - 1 then
+                call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],GetDestructableX(s__AHSS_Graphics_randomIcon[this]) , GetDestructableY(s__AHSS_Graphics_randomIcon[this]))
             else
                 if s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index] != null then
-                    call SetUnitPosition(s__AHSS___PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])], ((GetDestructableX(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]) )*1.0), (( GetDestructableY(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]))*1.0)) // INLINED!!
+                    call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],GetDestructableX(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]) , GetDestructableY(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]))
                 else
-                    call SetUnitPosition(s__AHSS___PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])], ((GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]) )*1.0), (( GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]))*1.0)) // INLINED!!
+                    call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],GetDestructableX(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]) , GetDestructableY(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]))
                 endif
             endif
             if GetLocalPlayer() == Player(playerid) then
-                call PlaySoundBJ((s__AHSS_Options_click[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                call PlaySoundBJ(s__AHSS_Options_getSoundClick(s__AHSS_Graphics_options[this]))
             endif
    return true
 endfunction
@@ -42437,12 +43544,12 @@ local integer playerid=f__arg_integer2
             if s___AHSS_Graphics_isHidden[s__AHSS_Graphics_isHidden[this]+playerid] or ( not s__AHSS_Graphics_allowPick[this] and not s__AHSS_Graphics_draftPick[this] ) then
 return true
             endif
-            set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
-            if (s__ArrowKey_eventKey) == 0 then // INLINED!!
+            set index=s__AHSS___PlayerSelection_getColumn(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid]) * s__AHSS_Options_getIconsByLine(s__AHSS_Graphics_options[this]) + s__AHSS___PlayerSelection_getRow(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])
+            if GetEventArrowKey() == 0 then
                 call s__AHSS_Graphics_moveLeft(this , playerid , index)
-            elseif (s__ArrowKey_eventKey) == 1 then // INLINED!!
+            elseif GetEventArrowKey() == 1 then
                 call s__AHSS_Graphics_moveRight(this , playerid , index)
-            elseif (s__ArrowKey_eventKey) == 2 then // INLINED!!
+            elseif GetEventArrowKey() == 2 then
                 call s__AHSS_Graphics_moveDown(this , playerid , index)
             else
                 call s__AHSS_Graphics_moveUp(this , playerid , index)
@@ -42503,35 +43610,35 @@ local integer index=f__arg_integer3
                 if GetLocalPlayer() != Player(playerid) then
                     set s=""
                 else
-                    set s=(s__AHSS___Hero_modelPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) // INLINED!!
+                    set s=s__AHSS___Hero_getModelPath(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index))
                 endif
                 set s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid]=AddSpecialEffect(s, x - 100, y)
                 call BlzSetSpecialEffectHeight(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], 100)
                 call BlzSetSpecialEffectPitch(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], Deg2Rad(- 90))
                 call BlzSetSpecialEffectYaw(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], Deg2Rad(270))
-                call BlzSetSpecialEffectScale(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], 2.0 + (s__AHSS___Hero_modelScale[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])) // INLINED!!
-                if (s__AHSS___Hero_modelAlternate[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+                call BlzSetSpecialEffectScale(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], 2.0 + s__AHSS___Hero_getModelScale(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)))
+                if s__AHSS___Hero_isModelAlternate(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) then
                     call BlzSpecialEffectAddSubAnimation(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], SUBANIM_TYPE_ALTERNATE_EX)
                     call BlzPlaySpecialEffect(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], ANIM_TYPE_STAND)
                 endif
                 set x=x + 600
                 set y=y + 500
                 set s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], (s__AHSS___Hero_name[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(16)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], s__AHSS___Hero_getName(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)), TextTagSize2Height(16))
                 call SetTextTagPos(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], 255, 255, 255, 255)
                 set y=y - 100
-                set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]=CreateDestructable((s__AHSS_Paths_strength[(s__AHSS_Graphics_paths[this])]), x, y, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
-                set y=y - s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) - 10 // INLINED!!
-                set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]=CreateDestructable((s__AHSS_Paths_agility[(s__AHSS_Graphics_paths[this])]), x, y, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
-                set y=y - s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) - 10 // INLINED!!
-                set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]=CreateDestructable((s__AHSS_Paths_intelligence[(s__AHSS_Graphics_paths[this])]), x, y, 270, (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]), 1) // INLINED!!
+                set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]=CreateDestructable(s__AHSS_Paths_getStrIcon(s__AHSS_Graphics_paths[this]), x, y, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
+                set y=y - s__AHSS_Graphics_ICON_SIZE * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) - 10
+                set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]=CreateDestructable(s__AHSS_Paths_getAgiIcon(s__AHSS_Graphics_paths[this]), x, y, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
+                set y=y - s__AHSS_Graphics_ICON_SIZE * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) - 10
+                set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]=CreateDestructable(s__AHSS_Paths_getIntIcon(s__AHSS_Graphics_paths[this]), x, y, 270, s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]), 1)
             set x=GetDestructableX(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]) + 50
             set y=GetDestructableY(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]) - 15
             set s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], I2S(R2I((s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_strengthLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], I2S(R2I(s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)))) + " + " + SubString(R2S(s__AHSS___Hero_getStrLvl(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index))), 0, 3) + " x lvl", TextTagSize2Height(13))
             call SetTextTagPos(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], x, y, 0)
-            if (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) then
                 call SetTextTagColor(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], 255, 255, 255, 255)
@@ -42547,9 +43654,9 @@ local integer index=f__arg_integer3
             set x=GetDestructableX(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]) + 50
             set y=GetDestructableY(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]) - 15
             set s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], I2S(R2I((s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_agilityLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], I2S(R2I(s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)))) + " + " + SubString(R2S(s__AHSS___Hero_getAgiLvl(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index))), 0, 3) + " x lvl", TextTagSize2Height(13))
             call SetTextTagPos(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], x, y, 0)
-            if (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) then
                 call SetTextTagColor(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], 255, 255, 255, 255)
@@ -42565,9 +43672,9 @@ local integer index=f__arg_integer3
             set x=GetDestructableX(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]) + 50
             set y=GetDestructableY(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]) - 15
             set s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], I2S(R2I((s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_intelligenceLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], I2S(R2I(s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)))) + " + " + SubString(R2S(s__AHSS___Hero_getIntLvl(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index))), 0, 3) + " x lvl", TextTagSize2Height(13))
             call SetTextTagPos(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], x, y, 0)
-            if (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getStr(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getAgi(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) and s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) >= s__AHSS___Hero_getInt(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)) then
                 call SetTextTagColor(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], 255, 255, 255, 255)
@@ -42581,9 +43688,9 @@ local integer index=f__arg_integer3
                 endif
             endif
                 set x=x - 100
-                set y=y - 200 - ( 20 * s__AHSS_Graphics_countLines((s__AHSS___Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])) ) // INLINED!!
+                set y=y - 200 - ( 20 * s__AHSS_Graphics_countLines(s__AHSS___Hero_getDescription(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index))) )
                 set s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], (s__AHSS___Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(9)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], s__AHSS___Hero_getDescription(s__AHSS_Heroes_getHero(s__AHSS_Graphics_heroes[this],index)), TextTagSize2Height(9))
                 call SetTextTagPos(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], 255, 255, 255, 255)
                 if GetLocalPlayer() != Player(playerid) then
@@ -42610,11 +43717,11 @@ local integer this=f__arg_this
                 call sc__AHSS_Graphics_createSelections(this)
                 set i=0
                 loop
-                    exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                    exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                     set j=0
                     loop
-                        exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                        set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                        exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                        set id=s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)
                         if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(Player(id)) == MAP_CONTROL_USER then
                             call s__AHSS_Graphics_showHero(this , i , 0)
                         endif
@@ -42631,10 +43738,10 @@ local integer this=f__arg_this
             local real y= GetUnitY(s__AHSS_Graphics_dummy[this]) + 270
             local integer i= 0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
-                set y=y - ( 128 * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) ) - 10 // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
+                set y=y - ( 128 * s__AHSS_Options_getIconScale(s__AHSS_Graphics_options[this]) ) - 10
                 set s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], (s__AHSS___Team_name[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]), TextTagSize2Height(12)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], s__AHSS___Team_getName(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)), TextTagSize2Height(12))
                 call SetTextTagPos(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], 255, 255, 255, 255)
                 set i=i + 1
@@ -42662,37 +43769,37 @@ local integer this=f__arg_this
             endif
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                    exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                    set id=s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)
                     if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING then
-                        if GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and (s__AHSS_Options_bots[(s__AHSS_Graphics_options[this])]) ) then // INLINED!!
-                            if (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 0 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(0 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.01 , 0.01) // INLINED!!
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 1 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(1 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.00 , 0.25 , 1.00) // INLINED!!
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 2 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(2 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.09 , 0.90 , 0.70) // INLINED!!
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 3 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(3 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.32 , 0.00 , 0.50) // INLINED!!
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 4 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(4 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.98 , 0.40) // INLINED!!
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 5 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(5 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.99 , 0.72 , 0.05) // INLINED!!
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 6 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(6 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.12 , 0.75 , 0.00) // INLINED!!
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 7 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(7 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.89 , 0.35 , 0.69) // INLINED!!
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 8 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(8 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.58 , 0.58 , 0.58) // INLINED!!
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 9 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(9 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.49 , 0.74 , 0.94) // INLINED!!
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 10 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(10 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.06 , 0.38 , 0.27) // INLINED!!
-                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 11 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(11 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.30 , 0.16 , 0.01) // INLINED!!
+                        if GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and s__AHSS_Options_doesBotsPick(s__AHSS_Graphics_options[this]) ) then
+                            if s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 0 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(0 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 1.00 , 0.01 , 0.01)
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 1 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(1 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.00 , 0.25 , 1.00)
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 2 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(2 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.09 , 0.90 , 0.70)
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 3 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(3 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.32 , 0.00 , 0.50)
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 4 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(4 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 1.00 , 0.98 , 0.40)
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 5 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(5 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.99 , 0.72 , 0.05)
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 6 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(6 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.12 , 0.75 , 0.00)
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 7 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(7 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.89 , 0.35 , 0.69)
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 8 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(8 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.58 , 0.58 , 0.58)
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 9 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(9 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.49 , 0.74 , 0.94)
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 10 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(10 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.06 , 0.38 , 0.27)
+                            elseif s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j) == 11 then
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)]=s__AHSS___PlayerSelection_create(11 , s__AHSS_Paths_getSelection(s__AHSS_Graphics_paths[this]) , x , y , 0.30 , 0.16 , 0.01)
                             endif
                         endif
                     endif
@@ -42713,11 +43820,11 @@ local boolean allRandom=f__arg_boolean1
             call s__AHSS_Graphics_createImages(this)
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                    exitwhen j > ( s__AHSS___Team_getSize(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i)) - 1 )
+                    set id=s__AHSS___Team_getPlayer(s__AHSS_Teams_getTeam(s__AHSS_Graphics_teams[this],i),j)
                     if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING then
                         if GetPlayerController(Player(id)) == MAP_CONTROL_USER then
                             if allRandom then
@@ -42726,7 +43833,7 @@ local boolean allRandom=f__arg_boolean1
                                 call s__AHSS_Graphics_showHero(this , i , 0)
                             endif
                         else
-                            if (s__AHSS_Options_bots[(s__AHSS_Graphics_options[this])]) then // INLINED!!
+                            if s__AHSS_Options_doesBotsPick(s__AHSS_Graphics_options[this]) then
                                 call s__AHSS_Graphics_selectHeroRandom(this , id)
                             endif
                         endif
@@ -42763,7 +43870,7 @@ local integer this=f__arg_this
             endif
             set i=0
             loop
-                exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
+                exitwhen i > ( s__AHSS_Teams_getSize(s__AHSS_Graphics_teams[this]) - 1 )
                 call s__AHSS___TeamIcon_destroy(s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i])
                 call DestroyTextTag(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i])
                 set s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i]=null
@@ -42820,7 +43927,7 @@ local integer this=f__arg_this
                 set i=i + 1
             endloop
             if GetPlayerSlotState(Player(12)) == PLAYER_SLOT_STATE_EMPTY then
-                call TimerStartEx((NewTimerEx(0)) , 0.1 , true , function s__NinpouUI_periodic , "UI_periodic") // INLINED!!
+                call TimerStartEx(NewTimer() , 0.1 , true , function s__NinpouUI_periodic , "UI_periodic")
             endif
             set t1=CreateTrigger()
             set i=0
@@ -42840,7 +43947,7 @@ local integer this=f__arg_this
                 set i=i + 1
             endloop
             call TriggerAddAction(t2, function Trig_Zoom_System_Actions)
-            call TimerStartEx((NewTimerEx(0)) , 2.0 , false , function Trig_StartingZoom_Delay , "Trig_StartingZoom_Delay") // INLINED!!
+            call TimerStartEx(NewTimer() , 2.0 , false , function Trig_StartingZoom_Delay , "Trig_StartingZoom_Delay")
             call MultiboardDisplayBJ(true, udg_multiboard01)
             call MultiboardMinimizeBJ(true, udg_multiboard01)
             call LeaderboardDisplayBJ(true, udg_Leaderbox)
@@ -42927,15 +44034,15 @@ local integer howMany=f__arg_integer1
    return true
 endfunction
 function sa__AHSS_Options_setSoundClick takes nothing returns boolean
-    set s__AHSS_Options_click[(f__arg_this)]=(f__arg_sound1) // INLINED!!
+    call s__AHSS_Options_setSoundClick(f__arg_this,f__arg_sound1)
    return true
 endfunction
 function sa__AHSS_Options_setSoundError takes nothing returns boolean
-    set s__AHSS_Options_error[(f__arg_this)]=(f__arg_sound1) // INLINED!!
+    call s__AHSS_Options_setSoundError(f__arg_this,f__arg_sound1)
    return true
 endfunction
 function sa__AHSS_Options_setSoundOk takes nothing returns boolean
-    set s__AHSS_Options_ok[(f__arg_this)]=(f__arg_sound1) // INLINED!!
+    call s__AHSS_Options_setSoundOk(f__arg_this,f__arg_sound1)
    return true
 endfunction
 function sa__AHSS_Options_botsPick takes nothing returns boolean
@@ -42961,7 +44068,7 @@ return true
             set s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this]]=s__AHSS___Hero_create(name , id)
             set s__s__AHSS_Configurations_HERO_NAMES[s__AHSS_Heroes_count[this]]= name
             set s__s__AHSS_Configurations_HERO_IDS[s__AHSS_Heroes_count[this]]= id
-            call SaveInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (id), ( s__AHSS_Heroes_count[this])) // INLINED!!
+            call s__Table__setindex(s__AHSS_Configurations_HERO_BY_ID,id, s__AHSS_Heroes_count[this])
             set s__AHSS_Heroes_count[this]=s__AHSS_Heroes_count[this] + 1
    return true
 endfunction
@@ -43001,7 +44108,7 @@ local string whichDescription=f__arg_string1
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            set s__AHSS___Hero_description[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichDescription) // INLINED!!
+            call s__AHSS___Hero_setDescription(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],whichDescription)
    return true
 endfunction
 function sa__AHSS_Heroes_setModel takes nothing returns boolean
@@ -43020,7 +44127,7 @@ local boolean b=f__arg_boolean1
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            set s__AHSS___Hero_modelAlternate[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(b) // INLINED!!
+            call s__AHSS___Hero_setModelAlternate(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],b)
    return true
 endfunction
 function sa__AHSS_Heroes_setIcon takes nothing returns boolean
@@ -43029,7 +44136,7 @@ local integer whichIcon=f__arg_integer1
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            set s__AHSS___Hero_icon[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichIcon) // INLINED!!
+            call s__AHSS___Hero_setIcon(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],whichIcon)
    return true
 endfunction
 function sa__AHSS_Heroes_setIconPath takes nothing returns boolean
@@ -43038,7 +44145,7 @@ local string path=f__arg_string1
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            set s__AHSS___Hero_iconPath[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(path) // INLINED!!
+            call s__AHSS___Hero_setIconPath(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],path)
             set s__s__AHSS_Configurations_HERO_ICONS[s__AHSS_Heroes_count[this] - 1]= path
    return true
 endfunction
@@ -43219,30 +44326,30 @@ set f__result_player= Player(0)
 endfunction
 function sa__AkatukiSet_periodic takes nothing returns boolean
 
-  local integer id= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-  local unit u= (s__UnitDex_Unit[(id)]) // INLINED!!
+  local integer id= GetTimerData(GetExpiredTimer())
+  local unit u= GetUnitById(id)
         local integer elapsed
-		if (HaveSavedInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id))) then // INLINED!!
-			set elapsed=(LoadInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id))) // INLINED!!
+		if s__Table_has(s__AkatukiSet_secondsElapsed,id) then
+			set elapsed=s__Table__getindex(s__AkatukiSet_secondsElapsed,id)
 			if elapsed < 15000 then
-				call SaveInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id), ( 100)) // INLINED!!
+				call s__Table__setindex(s__AkatukiSet_secondsElapsed,id, 100)
 				call ReleaseTimer(GetExpiredTimer())
 			else
 				call IssueImmediateOrder(u, "stop")
 				call ReleaseTimer(GetExpiredTimer())
 			endif
 		else
-			call SaveInteger(Table___ht, (s__AkatukiSet_secondsElapsed), (id), ( 1)) // INLINED!!
+			call s__Table__setindex(s__AkatukiSet_secondsElapsed,id, 1)
 		endif
 		set u=null
    return true
 endfunction
 function sa__KisameRing_periodic takes nothing returns boolean
 
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
   local integer i
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I00H') then
-			set s__s__KisameRing_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__KisameRing_t[GetTimerData(GetExpiredTimer())]= null
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 return true
@@ -43266,10 +44373,10 @@ return true
 endfunction
 function sa__KyuubiImmolation_periodic takes nothing returns boolean
 
-  local unit u= (s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]) // INLINED!!
+  local unit u= GetUnitById(GetTimerData(GetExpiredTimer()))
   local integer i
 		if u == null or not UnitHasItemOfTypeBJ(u, 'I03W') then
-			set s__s__KyuubiImmolation_t[(LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer()))))]= null // INLINED!!
+			set s__s__KyuubiImmolation_t[GetTimerData(GetExpiredTimer())]= null
 			call ReleaseTimer(GetExpiredTimer())
 			set u=null
 return true
@@ -43295,36 +44402,36 @@ function sa__UnitDex_Remove takes nothing returns boolean
     set f__result_boolean=s__UnitDex_Remove(f__arg_unit1,f__arg_boolean1)
    return true
 endfunction
-function sa___prototype5_TimerUtils___init takes nothing returns boolean
+function sa___prototype5_TimerUtils__init takes nothing returns boolean
 
      local integer i=0
      local integer o=- 1
      local boolean oops= false
-        if ( TimerUtils___didinit ) then
+        if ( TimerUtils__didinit ) then
     return true
         else
-            set TimerUtils___didinit=true
+            set TimerUtils__didinit=true
         endif
         set i=0
         loop
-        	exitwhen i >= TimerUtils___ARRAY_SIZE
+        	exitwhen i >= TimerUtils__ARRAY_SIZE
 		set s__runningTimersString[i]= ""
 		set i=i + 1
 	endloop
         set i=0
         set runningTimers=s__Table_create()
-            set TimerUtils___ht=InitHashtable()
+            set TimerUtils__ht=InitHashtable()
             loop
-                exitwhen ( i == TimerUtils___QUANTITY )
-                set s__TimerUtils___tT[i]= CreateTimer()
-                call SaveInteger(TimerUtils___ht, 0, GetHandleId((s__TimerUtils___tT[i] )), ( TimerUtils___HELD)) // INLINED!!
+                exitwhen ( i == TimerUtils__QUANTITY )
+                set s__TimerUtils__tT[i]= CreateTimer()
+                call SetTimerData(s__TimerUtils__tT[i] , TimerUtils__HELD)
                 set i=i + 1
             endloop
-            set TimerUtils___tN=TimerUtils___QUANTITY
+            set TimerUtils__tN=TimerUtils__QUANTITY
     return true
 endfunction
 function sa___prototype73_SetUnitScalePercentEx takes nothing returns boolean
-    call SetUnitScale(((f__arg_unit1) ), (( ((f__arg_real1)*1.0) / 100 )*1.0), (( ((f__arg_real2)*1.0) / 100 )*1.0), (( ((f__arg_real3)*1.0) / 100)*1.0)) // INLINED!!
+    call SetUnitScalePercentEx(f__arg_unit1,f__arg_real1,f__arg_real2,f__arg_real3)
     return true
 endfunction
 function sa___prototype85_SetUnitVertexColorBJEx takes nothing returns boolean
@@ -43332,7 +44439,7 @@ function sa___prototype85_SetUnitVertexColorBJEx takes nothing returns boolean
     return true
 endfunction
 
-function jasshelper__initstructs1102055765 takes nothing returns nothing
+function jasshelper__initstructs33938859 takes nothing returns nothing
     set st__AHSS_Graphics_create=CreateTrigger()
     call TriggerAddCondition(st__AHSS_Graphics_create,Condition( function sa__AHSS_Graphics_create))
     set st__AHSS_Graphics_selectHeroRandom=CreateTrigger()
@@ -43440,8 +44547,8 @@ function jasshelper__initstructs1102055765 takes nothing returns nothing
     set st__UnitDex_Remove=CreateTrigger()
     call TriggerAddCondition(st__UnitDex_Remove,Condition( function sa__UnitDex_Remove))
     set st___prototype5[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype5[1],function sa___prototype5_TimerUtils___init)
-    call TriggerAddCondition(st___prototype5[1],Condition(function sa___prototype5_TimerUtils___init))
+    call TriggerAddAction(st___prototype5[1],function sa___prototype5_TimerUtils__init)
+    call TriggerAddCondition(st___prototype5[1],Condition(function sa___prototype5_TimerUtils__init))
     set st___prototype73[1]=CreateTrigger()
     call TriggerAddAction(st___prototype73[1],function sa___prototype73_SetUnitScalePercentEx)
     call TriggerAddCondition(st___prototype73[1],Condition(function sa___prototype73_SetUnitScalePercentEx))
@@ -43466,7 +44573,7 @@ function jasshelper__initstructs1102055765 takes nothing returns nothing
 call ExecuteFunc("s__ArrowKey_ArrowKeyEvent__Init__onInit")
 
 
-call ExecuteFunc("s__User_PlayerUtils___PlayerUtilsInit__onInit")
+call ExecuteFunc("s__User_PlayerUtils__PlayerUtilsInit__onInit")
 
 
 
@@ -43521,7 +44628,7 @@ call ExecuteFunc("s__User_PlayerUtils___PlayerUtilsInit__onInit")
 
 
 
-call ExecuteFunc("s__WorldBounds_WorldBounds___WorldBoundInit__onInit")
+call ExecuteFunc("s__WorldBounds_WorldBounds__WorldBoundInit__onInit")
 
 
 
@@ -43530,11 +44637,11 @@ call ExecuteFunc("s__Camera__CamInit_Camera__CamInitModule__onInit")
 call ExecuteFunc("s__Dialog_Dialog__DialogInit__onInit")
 
 
-call ExecuteFunc("s__UnitDex_UnitDex___UnitDexCore__onInit")
+call ExecuteFunc("s__UnitDex_UnitDex__UnitDexCore__onInit")
 
 
 
-call ExecuteFunc("s__RegisterPlayerUnitEvent___S_RegisterPlayerUnitEvent___M__onInit")
+call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onInit")
 
 
 
@@ -43726,7 +44833,18 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent___S_RegisterPlayerUnitEvent___M__on
 
 
 
-    call ExecuteFunc("s__xepreload___init_onInit")
+
+
+
+
+
+
+
+
+
+
+
+    call ExecuteFunc("s__xepreload__init_onInit")
     call ExecuteFunc("s__UnitUtils__InitASCIITable_onInit")
     call ExecuteFunc("s__UnitUtils__UpdateMultiboardS_onInit")
     call ExecuteFunc("s__PlayerName_onInit")
@@ -43824,12 +44942,23 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent___S_RegisterPlayerUnitEvent___M__on
     call ExecuteFunc("s__NewHidanScythe_onInit")
     call ExecuteFunc("s__ZetsuRing_onInit")
     call ExecuteFunc("s__ItachiRingActive_onInit")
+    call ExecuteFunc("s__IchigoQ_onInit")
+    call ExecuteFunc("s__IchigoDies_onInit")
+    call ExecuteFunc("s__IchigoW_onInit")
+    call ExecuteFunc("s__IchigoCero__Spell_onInit")
+    call ExecuteFunc("s__IchigoE_onInit")
+    call ExecuteFunc("s__IchigoUnleash_onInit")
+    call ExecuteFunc("s__IchigoTLevel_onInit")
+    call ExecuteFunc("s__IchigoD_onInit")
+    call ExecuteFunc("s__IchigoSlash_onInit")
+    call ExecuteFunc("s__IchigoAttacks_onInit")
+    call ExecuteFunc("s__IchigoAbiltiies__Spell_onInit")
     call ExecuteFunc("s__AntiAFK_onInit")
     call ExecuteFunc("s__ModeMinutesGold_onInit")
     call ExecuteFunc("s__FixTeamDuelLocations_onInit")
     call ExecuteFunc("s__MissionARankReward_onInit")
     call ExecuteFunc("s__TeamDuel_onInit")
-    call ExecuteFunc("s__SendGoldAndCystal__Command_onInit")
+    call ExecuteFunc("s__SendGoldAndCystal___Command_onInit")
     call ExecuteFunc("s__BuyAttributes_onInit")
     call ExecuteFunc("s__Killme_onInit")
     call ExecuteFunc("s__MoveSpeedBug_onInit")
