@@ -213,8 +213,8 @@ integer Table__more= 8190
     //Configure it if you use more than 8190 "key" variables in your map (this will never happen though).
     
 hashtable Table__ht= InitHashtable()
-constant integer Table__sizeK=4
-constant integer Table__listK=6
+constant integer Table__sizeK=6
+constant integer Table__listK=8
 //endglobals from Table
 //globals from TimerUtils:
 constant boolean LIBRARY_TimerUtils=true
@@ -370,21 +370,21 @@ constant integer KEY_F9= 776
 constant integer KEY_F10= 777
 constant integer KEY_F11= 778
 constant integer KEY_F12= 779
-integer Dialog___instance= 0
+integer Dialog__instance= 0
 //endglobals from Dialog
 //globals from GeometryLibBase:
 constant boolean LIBRARY_GeometryLibBase=true
-real GeometryLibBase___SPACE_X
-real GeometryLibBase___SPACE_Y
-real GeometryLibBase___SPACE_ANGLE
-real GeometryLibBase___SPACE_MAX_ANGLE
-real GeometryLibBase___SPACE_OFFSET
-real GeometryLibBase___SPACE_OFFSET_2
-integer GeometryLibBase___GEOMETRY
+real GeometryLibBase__SPACE_X
+real GeometryLibBase__SPACE_Y
+real GeometryLibBase__SPACE_ANGLE
+real GeometryLibBase__SPACE_MAX_ANGLE
+real GeometryLibBase__SPACE_OFFSET
+real GeometryLibBase__SPACE_OFFSET_2
+integer GeometryLibBase__GEOMETRY
 //endglobals from GeometryLibBase
 //globals from Lightning:
 constant boolean LIBRARY_Lightning=true
-constant real Lightning___TIMEOUT= 0.03125
+constant real Lightning__TIMEOUT= 0.03125
     
     //* Do not edit below here
     
@@ -406,10 +406,10 @@ constant string LIGHTNING_SPIRIT_LINK= "SPLK"
 constant boolean LIGHTNING_START= true
 constant boolean LIGHTNING_END= false
     
-location Lightning___Loc= Location(0., 0.)
-integer array Lightning___Array
-integer Lightning___Index= 0
-timer Lightning___Timer= CreateTimer()
+location Lightning__Loc= Location(0., 0.)
+integer array Lightning__Array
+integer Lightning__Index= 0
+timer Lightning__Timer= CreateTimer()
 //endglobals from Lightning
 //globals from TableBC:
 constant boolean LIBRARY_TableBC=true
@@ -1622,12 +1622,203 @@ rect gg_rct_UndergroundExit2= null
 rect gg_rct_UndergroundExit3= null
 rect gg_rct_waterfall= null
 camerasetup gg_cam_Camera_001= null
+sound gg_snd_Ajisai_Animal_Path_R= null
+sound gg_snd_Ajisai_Animal_Path_T= null
+sound gg_snd_Anbu_Kakashi_Kill= null
+sound gg_snd_Anko_Kill= null
+sound gg_snd_Anko_R= null
+sound gg_snd_Anko_T= null
+sound gg_snd_Asuma_Kill= null
 sound gg_snd_BattleRoar= null
+sound gg_snd_Bee_Kill= null
 sound gg_snd_BigButtonClick= null
+sound gg_snd_Boruto_E= null
+sound gg_snd_Boruto_Kill= null
+sound gg_snd_Boruto_T= null
+sound gg_snd_Byakugan= null
+sound gg_snd_Chiyo_Kill= null
+sound gg_snd_Chiyo_R= null
+sound gg_snd_Chiyo_T= null
+sound gg_snd_Chouji_Kill= null
+sound gg_snd_Chouji_R= null
+sound gg_snd_Chouji_T= null
+sound gg_snd_Curse_Sasuke_Kill= null
+sound gg_snd_Danzo_Kill= null
+sound gg_snd_Danzo_R= null
+sound gg_snd_Danzo_T= null
+sound gg_snd_Darui_Kill= null
+sound gg_snd_Darui_R= null
+sound gg_snd_Darui_T= null
+sound gg_snd_Deidara_D= null
+sound gg_snd_Deidara_Kill= null
+sound gg_snd_Deidara_R= null
+sound gg_snd_Dosu_R= null
+sound gg_snd_Dosu_T= null
+sound gg_snd_Duel_Accept= null
 sound gg_snd_EntanglingRootsTarget1= null
 sound gg_snd_Error= null
 sound gg_snd_FrostArrowHit1= null
+sound gg_snd_Fuu_Kill= null
+sound gg_snd_Fuu_R= null
+sound gg_snd_Fuu_T= null
+sound gg_snd_Gaara_D= null
+sound gg_snd_Gaara_Kill= null
+sound gg_snd_Gaara_T2_Shukaku= null
+sound gg_snd_Gaara_T_Sabaku= null
+sound gg_snd_Gai_E_Sekizo= null
+sound gg_snd_Gai_Kill= null
+sound gg_snd_Gai_Q= null
+sound gg_snd_Gai_Q_Yagai= null
+sound gg_snd_Gai_R= null
+sound gg_snd_Gai_R1= null
+sound gg_snd_Gai_T= null
+sound gg_snd_Gengetsu_Kill= null
+sound gg_snd_Gengetsu_R= null
+sound gg_snd_Gengetsu_T= null
+sound gg_snd_Ginkaku_Q= null
+sound gg_snd_Guren_R= null
+sound gg_snd_Guren_T= null
+sound gg_snd_Haku_Kill= null
+sound gg_snd_Haku_R= null
+sound gg_snd_Haku_T= null
+sound gg_snd_Han_Kill= null
+sound gg_snd_Han_R= null
+sound gg_snd_Han_T= null
+sound gg_snd_Hanabi_Kill= null
+sound gg_snd_Hanabi_R= null
+sound gg_snd_Hanabi_T= null
+sound gg_snd_Hanzo_Kill= null
+sound gg_snd_Hanzo_R= null
+sound gg_snd_Hanzo_T_Ibuse= null
+sound gg_snd_Hashirama_Kill= null
+sound gg_snd_Hashirama_T2_Mokuton= null
+sound gg_snd_Hashirama_T_Senpou= null
+sound gg_snd_Hayate_R= null
+sound gg_snd_Hayate_T= null
 sound gg_snd_HeroDemonMissileLaunch2= null
+sound gg_snd_Hidan_Kill= null
+sound gg_snd_Hidan_R= null
+sound gg_snd_Hidan_T= null
+sound gg_snd_Hinata_Kill= null
+sound gg_snd_Hinata_R= null
+sound gg_snd_Hinata_T2_Kuuten= null
+sound gg_snd_Hinata_T_Juuho= null
+sound gg_snd_Hiruzen_Kill= null
+sound gg_snd_Hiruzen_R2_Enma= null
+sound gg_snd_Hiruzen_R_Kongo= null
+sound gg_snd_Hiruzen_T2_Shiki= null
+sound gg_snd_Hiruzen_T_Goton= null
+sound gg_snd_Hokage_Minato_Kill= null
+sound gg_snd_Ichigo_Kill= null
+sound gg_snd_Ichigo_Q= null
+sound gg_snd_Ichigo_R= null
+sound gg_snd_Ichigo_R_Active= null
+sound gg_snd_Ichigo_R_Transform= null
+sound gg_snd_Ichigo_T= null
+sound gg_snd_Ichigo_Vasto_Lorde= null
+sound gg_snd_Ino_Kill= null
+sound gg_snd_Ino_R= null
+sound gg_snd_Ino_T2_Mind_Control= null
+sound gg_snd_Ino_T_Cho_Shinka= null
+sound gg_snd_Iruka_Kill= null
+sound gg_snd_Itachi_Kill= null
+sound gg_snd_Itachi_Q= null
+sound gg_snd_Itachi_R= null
+sound gg_snd_Itachi_Susanoo_E= null
+sound gg_snd_Itachi_T2_Susanoo= null
+sound gg_snd_Itachi_T_Amaterasu= null
+sound gg_snd_Itachi_Yasaka_Q= null
+sound gg_snd_Jiraiya_Kill= null
+sound gg_snd_Jiraiya_Q= null
+sound gg_snd_Jiraiya_R= null
+sound gg_snd_Jiraiya_T= null
+sound gg_snd_Jirobo_D= null
+sound gg_snd_Jirobo_Kill= null
+sound gg_snd_Jirobo_R= null
+sound gg_snd_Jirobo_T= null
+sound gg_snd_Jounin_Kakashi_Kill= null
+sound gg_snd_Jounin_Minato_Kill= null
+sound gg_snd_Juugo_Kill= null
+sound gg_snd_Juugo_T= null
+sound gg_snd_Kabuto_R= null
+sound gg_snd_Kabuto_Sage_R= null
+sound gg_snd_Kabuto_Sage_W= null
+sound gg_snd_Kabuto_T_Transform= null
+sound gg_snd_Kabuto_Young_R= null
+sound gg_snd_Kabuto_Young_T= null
+sound gg_snd_Kaguya_Kill= null
+sound gg_snd_Kaguya_T_Gudoudama= null
+sound gg_snd_Kakashi_Anbu_R= null
+sound gg_snd_Kakashi_Anbu_T= null
+sound gg_snd_Kakashi_Jounin_Dimension_D= null
+sound gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q= null
+sound gg_snd_Kakashi_Jounin_R= null
+sound gg_snd_Kakashi_Jounin_T= null
+sound gg_snd_Kakuzu_Kill= null
+sound gg_snd_Kakuzu_R= null
+sound gg_snd_Kakuzu_T_Hearts= null
+sound gg_snd_Kakuzu_T_Zukokku= null
+sound gg_snd_Kankuro_Kill= null
+sound gg_snd_Kankuro_R= null
+sound gg_snd_Kankuro_T= null
+sound gg_snd_Karin_Kill= null
+sound gg_snd_Karin_R_Activation= null
+sound gg_snd_Karin_R_When_Hitting_An_Enemy= null
+sound gg_snd_Karin_R_When_Hitting_Sasuke= null
+sound gg_snd_Karin_T= null
+sound gg_snd_Kiba_Kill= null
+sound gg_snd_Kiba_R= null
+sound gg_snd_Kiba_T= null
+sound gg_snd_Kidomaru_D= null
+sound gg_snd_Kidomaru_Kill= null
+sound gg_snd_Kidomaru_T= null
+sound gg_snd_Killer_Bee_R= null
+sound gg_snd_Killer_Bee_T= null
+sound gg_snd_Killer_Bee_Transform= null
+sound gg_snd_Killer_Bee_Transform_Q= null
+sound gg_snd_Killer_Bee_Transformed_R= null
+sound gg_snd_Kimimaro_D= null
+sound gg_snd_Kimimaro_D_Resurrect= null
+sound gg_snd_Kimimaro_Kill= null
+sound gg_snd_Kimimaro_R= null
+sound gg_snd_Kimimaro_T= null
+sound gg_snd_Kinkaku_Q= null
+sound gg_snd_Kisame_D_Daikoudan= null
+sound gg_snd_Kisame_Kill= null
+sound gg_snd_Kisame_R= null
+sound gg_snd_Kisame_T= null
+sound gg_snd_Kisame_T_Muugen= null
+sound gg_snd_Konan_D= null
+sound gg_snd_Konan_Kill= null
+sound gg_snd_Konan_T_Aoe= null
+sound gg_snd_Konohamaru_Kill= null
+sound gg_snd_Konohamaru_R= null
+sound gg_snd_Konohamaru_T= null
+sound gg_snd_Kurenai_R= null
+sound gg_snd_Kurenai_T= null
+sound gg_snd_Lee_Kill= null
+sound gg_snd_Madara_Kill= null
+sound gg_snd_Madara_R= null
+sound gg_snd_Madara_T2_Susanoo= null
+sound gg_snd_Madara_T_Tengai= null
+sound gg_snd_Madara_T_Transform_Juubi= null
+sound gg_snd_Madara_T_Tsukuyomi= null
+sound gg_snd_Masked_Man_W_Space_Time= null
+sound gg_snd_Mecha_Naruto_Kill= null
+sound gg_snd_Mecha_Naruto_T= null
+sound gg_snd_Mei_Kill= null
+sound gg_snd_Mei_T= null
+sound gg_snd_Mifune_D_Reset= null
+sound gg_snd_Mifune_Kill= null
+sound gg_snd_Mifune_R= null
+sound gg_snd_Mifune_T= null
+sound gg_snd_Minato_Hokage_D= null
+sound gg_snd_Minato_Hokage_R= null
+sound gg_snd_Minato_Hokage_T_Shiki= null
+sound gg_snd_Minato_Jounin_T= null
+sound gg_snd_Mitsuki_Kill= null
+sound gg_snd_Mitsuki_Sage_Mode_W= null
+sound gg_snd_Mitsuki_W= null
 sound gg_snd_MouseClick1= null
 string gg_snd_Music01BeautifulWildGreenBeast
 string gg_snd_Music01Fang
@@ -1744,7 +1935,111 @@ string gg_snd_Music32HeavenshakingEvent
 string gg_snd_Music32MADARAvsNARUTO
 string gg_snd_Music33Flames
 string gg_snd_Music33MyName
+sound gg_snd_Muu_Kill= null
+sound gg_snd_Muu_R= null
+sound gg_snd_Muu_T_Bunretsu= null
+sound gg_snd_Nagato_Kill= null
+sound gg_snd_Nagato_Q= null
+sound gg_snd_Nagato_T_Chibaku= null
+sound gg_snd_Nagato_T_Shinra= null
+sound gg_snd_Naruto_Rikudou_R= null
+sound gg_snd_Naruto_Rikudou_T= null
+sound gg_snd_Naruto_Sage_R= null
+sound gg_snd_Naruto_Sage_T= null
+sound gg_snd_Neji_Kill= null
+sound gg_snd_Neji_R= null
+sound gg_snd_Neji_T= null
+sound gg_snd_Neji_T2_Hakke_Hyaku= null
+sound gg_snd_Neji_W= null
+sound gg_snd_Obito_Dimension_D= null
+sound gg_snd_Obito_Kill= null
+sound gg_snd_Obito_R= null
+sound gg_snd_Obito_T2_Transform= null
+sound gg_snd_Obito_T_Muugen= null
+sound gg_snd_Ohnoki_Kill= null
+sound gg_snd_Onooki_R= null
+sound gg_snd_Onooki_T= null
+sound gg_snd_Orochimaru_Kill= null
+sound gg_snd_Orochimaru_R= null
+sound gg_snd_Orochimaru_T2_Edo= null
+sound gg_snd_Orochimaru_T_Yamata= null
+sound gg_snd_Orochimaru_W= null
+sound gg_snd_Raikage_Kill= null
+sound gg_snd_Raikage_R= null
+sound gg_snd_Raikage_T= null
+sound gg_snd_Rikudou_Naruto_Kill= null
+sound gg_snd_Rikudou_Sasuke_Kill= null
+sound gg_snd_Ringo_Kill= null
+sound gg_snd_Ringo_R= null
+sound gg_snd_Rock_Lee_R= null
+sound gg_snd_Rock_Lee_T= null
+sound gg_snd_Roshi_Kill= null
+sound gg_snd_Roshi_R= null
+sound gg_snd_Roshi_T= null
+sound gg_snd_Sage_Kabuto_Kill= null
+sound gg_snd_Sage_Naruto_Kill= null
+sound gg_snd_Sai_Kill= null
+sound gg_snd_Sai_R= null
+sound gg_snd_Sai_T= null
+sound gg_snd_Sakura_Kill= null
+sound gg_snd_Sakura_T= null
+sound gg_snd_Sasori_Kill= null
+sound gg_snd_Sasori_R_Puppets= null
+sound gg_snd_Sasuke_Hebi_R= null
+sound gg_snd_Sasuke_Hebi_T= null
+sound gg_snd_Sasuke_Q= null
+sound gg_snd_Sasuke_R_Amaterasu= null
+sound gg_snd_Sasuke_Rikudou_T2_Susanoo= null
+sound gg_snd_Sasuke_Rikudou_T_Chibaku= null
+sound gg_snd_Shikamaru_Kill= null
+sound gg_snd_Shikamaru_Q= null
+sound gg_snd_Shikamaru_R= null
+sound gg_snd_Shikamaru_T2_Emnaku= null
+sound gg_snd_Shikamaru_T_Kagemane= null
+sound gg_snd_Shino_Kill= null
+sound gg_snd_Shino_R= null
+sound gg_snd_Shino_T_Mushikui= null
+sound gg_snd_Shisui_Kill= null
+sound gg_snd_Shisui_R= null
+sound gg_snd_Shisui_T= null
+sound gg_snd_Shizune_R= null
+sound gg_snd_Shizune_T= null
 sound gg_snd_StrongDrinkMissile1= null
+sound gg_snd_Suigetsu_Kill= null
+sound gg_snd_Suigetsu_R= null
+sound gg_snd_Suigetsu_T2_Bubble= null
+sound gg_snd_Suigetsu_T_Wave= null
+sound gg_snd_Temari_Kill= null
+sound gg_snd_Temari_R= null
+sound gg_snd_Temari_T= null
+sound gg_snd_Tenten_Kill= null
+sound gg_snd_Tenten_T= null
+sound gg_snd_Tobi_Kill= null
+sound gg_snd_Tobi_R= null
+sound gg_snd_Tobirama_Kill= null
+sound gg_snd_Tobirama_R= null
+sound gg_snd_Tobirama_T2_Suiton= null
+sound gg_snd_Tobirama_T_Gojou= null
+sound gg_snd_Torune_R= null
+sound gg_snd_Torune_T= null
+sound gg_snd_Tsunade_Kill= null
+sound gg_snd_Tsunade_R= null
+sound gg_snd_Tsunade_T= null
+sound gg_snd_Utakata_Kill= null
+sound gg_snd_Utakata_R= null
+sound gg_snd_Utakata_T= null
+sound gg_snd_Yagura_Kill= null
+sound gg_snd_Yagura_R= null
+sound gg_snd_Yagura_T= null
+sound gg_snd_Yamato_D= null
+sound gg_snd_Yamato_Kill= null
+sound gg_snd_Yamato_T= null
+sound gg_snd_Young_Kabuto_Kill= null
+sound gg_snd_Yugito_Kill= null
+sound gg_snd_Yugito_T= null
+sound gg_snd_Zabuza_Kill= null
+sound gg_snd_Zabuza_R= null
+sound gg_snd_Zabuza_T= null
 trigger gg_trg_xebasic= null
 trigger gg_trg_xepreload= null
 trigger gg_trg_Alloc= null
@@ -2104,8 +2399,6 @@ trigger gg_trg_IrukaFocusedShot= null
 trigger gg_trg_IrukaUpgrade= null
 trigger gg_trg_Itachi_Amaterasu_INIT= null
 trigger gg_trg_Itachi_Amaterasu_LOOP= null
-trigger gg_trg_Susano_Life_Reg= null
-trigger gg_trg_Susano_Yasaka= null
 trigger gg_trg_Susano_Yasaka_Spell= null
 trigger gg_trg_ItachiIzanami= null
 trigger gg_trg_KatonGoukakyuu= null
@@ -2113,7 +2406,6 @@ trigger gg_trg_ItachiBunshinDaibakuha= null
 trigger gg_trg_ItachiCrow= null
 trigger gg_trg_ItachiTsukuyomi= null
 trigger gg_trg_ItachiHideUnit= null
-trigger gg_trg_ItachiSusanoo= null
 trigger gg_trg_ItachiUltimateChoice= null
 trigger gg_trg_ItachiBonesPassive= null
 trigger gg_trg_ItachiTotsuka= null
@@ -2759,8 +3051,6 @@ trigger gg_trg_ZabuzaVortexNewest= null
 trigger gg_trg_ZabuzaNewWaterDragon= null
 trigger gg_trg_ZabuzaNewUltimate= null
 trigger gg_trg_ZetsuDevour= null
-trigger gg_trg_ZetsuMokutonTrap= null
-trigger gg_trg_ZetsuMokutonTrapTrue= null
 trigger gg_trg_ZetsuMokutonSashiki= null
 trigger gg_trg_ZetsuSpore= null
 trigger gg_trg_ZetsuNewMayfly= null
@@ -2939,316 +3229,23 @@ unit gg_unit_hcas_0193= null
 unit gg_unit_h00E_0194= null
 unit gg_unit_h00F_0195= null
 unit gg_unit_hspt_0202= null
-sound gg_snd_Anbu_Kakashi_Kill= null
-sound gg_snd_Asuma_Kill= null
-sound gg_snd_Bee_Kill= null
-sound gg_snd_Chiyo_Kill= null
-sound gg_snd_Chouji_Kill= null
-sound gg_snd_Curse_Sasuke_Kill= null
-sound gg_snd_Danzo_Kill= null
-sound gg_snd_Darui_Kill= null
-sound gg_snd_Deidara_Kill= null
-sound gg_snd_Fuu_Kill= null
-sound gg_snd_Gaara_Kill= null
-sound gg_snd_Gai_Kill= null
-sound gg_snd_Gengetsu_Kill= null
-sound gg_snd_Haku_Kill= null
-sound gg_snd_Hanzo_Kill= null
-sound gg_snd_Han_Kill= null
-sound gg_snd_Hashirama_Kill= null
-sound gg_snd_Hidan_Kill= null
-sound gg_snd_Hinata_Kill= null
-sound gg_snd_Hiruzen_Kill= null
-sound gg_snd_Hokage_Minato_Kill= null
-sound gg_snd_Ino_Kill= null
-sound gg_snd_Iruka_Kill= null
-sound gg_snd_Itachi_Kill= null
-sound gg_snd_Jiraiya_Kill= null
-sound gg_snd_Jirobo_Kill= null
-sound gg_snd_Jounin_Kakashi_Kill= null
-sound gg_snd_Jounin_Minato_Kill= null
-sound gg_snd_Juugo_Kill= null
-sound gg_snd_Kaguya_Kill= null
-sound gg_snd_Kakuzu_Kill= null
-sound gg_snd_Kankuro_Kill= null
-sound gg_snd_Karin_Kill= null
-sound gg_snd_Kiba_Kill= null
-sound gg_snd_Kidomaru_Kill= null
-sound gg_snd_Kimimaro_Kill= null
-sound gg_snd_Kisame_Kill= null
-sound gg_snd_Konan_Kill= null
-sound gg_snd_Konohamaru_Kill= null
-sound gg_snd_Lee_Kill= null
-sound gg_snd_Madara_Kill= null
-sound gg_snd_Mecha_Naruto_Kill= null
-sound gg_snd_Mei_Kill= null
-sound gg_snd_Mifune_Kill= null
-sound gg_snd_Muu_Kill= null
-sound gg_snd_Nagato_Kill= null
-sound gg_snd_Neji_Kill= null
-sound gg_snd_Obito_Kill= null
-sound gg_snd_Ohnoki_Kill= null
-sound gg_snd_Orochimaru_Kill= null
-sound gg_snd_Raikage_Kill= null
-sound gg_snd_Rikudou_Naruto_Kill= null
-sound gg_snd_Rikudou_Sasuke_Kill= null
-sound gg_snd_Roshi_Kill= null
-sound gg_snd_Sage_Kabuto_Kill= null
-sound gg_snd_Sage_Naruto_Kill= null
-sound gg_snd_Sai_Kill= null
-sound gg_snd_Sakura_Kill= null
-sound gg_snd_Sasori_Kill= null
-sound gg_snd_Shikamaru_Kill= null
-sound gg_snd_Shino_Kill= null
-sound gg_snd_Shisui_Kill= null
-sound gg_snd_Suigetsu_Kill= null
-sound gg_snd_Temari_Kill= null
-sound gg_snd_Tenten_Kill= null
-sound gg_snd_Tobi_Kill= null
-sound gg_snd_Tobirama_Kill= null
-sound gg_snd_Tsunade_Kill= null
-sound gg_snd_Utakata_Kill= null
-sound gg_snd_Yagura_Kill= null
-sound gg_snd_Yamato_Kill= null
-sound gg_snd_Young_Kabuto_Kill= null
-sound gg_snd_Yugito_Kill= null
-sound gg_snd_Zabuza_Kill= null
-sound gg_snd_Boruto_Kill= null
-sound gg_snd_Mitsuki_Kill= null
-sound gg_snd_Ringo_Kill= null
-sound gg_snd_Anko_Kill= null
-sound gg_snd_Ichigo_Kill= null
-sound gg_snd_Hanabi_Kill= null
 sound gg_snd_Asuma_R= null
 sound gg_snd_Asuma_T_Hien= null
 sound gg_snd_Asuma_T2_Katon= null
-sound gg_snd_Chiyo_R= null
-sound gg_snd_Chiyo_T= null
-sound gg_snd_Chouji_R= null
-sound gg_snd_Chouji_T= null
-sound gg_snd_Danzo_R= null
-sound gg_snd_Danzo_T= null
-sound gg_snd_Darui_R= null
-sound gg_snd_Darui_T= null
-sound gg_snd_Deidara_D= null
-sound gg_snd_Deidara_R= null
-sound gg_snd_Fuu_R= null
-sound gg_snd_Fuu_T= null
-sound gg_snd_Gaara_D= null
-sound gg_snd_Gaara_T_Sabaku= null
-sound gg_snd_Gaara_T2_Shukaku= null
-sound gg_snd_Gai_Q_Yagai= null
-sound gg_snd_Gai_R= null
-sound gg_snd_Gai_T= null
-sound gg_snd_Gengetsu_R= null
-sound gg_snd_Gengetsu_T= null
-sound gg_snd_Guren_R= null
-sound gg_snd_Guren_T= null
-sound gg_snd_Haku_R= null
-sound gg_snd_Haku_T= null
-sound gg_snd_Han_R= null
-sound gg_snd_Han_T= null
-sound gg_snd_Hanzo_R= null
-sound gg_snd_Hanzo_T_Ibuse= null
-sound gg_snd_Hashirama_T_Senpou= null
-sound gg_snd_Hashirama_T2_Mokuton= null
-sound gg_snd_Hayate_R= null
-sound gg_snd_Hayate_T= null
-sound gg_snd_Hidan_R= null
-sound gg_snd_Hidan_T= null
-sound gg_snd_Hinata_R= null
-sound gg_snd_Hinata_T_Juuho= null
-sound gg_snd_Hinata_T2_Kuuten= null
-sound gg_snd_Hiruzen_R_Kongo= null
-sound gg_snd_Hiruzen_R2_Enma= null
-sound gg_snd_Hiruzen_T_Goton= null
-sound gg_snd_Hiruzen_T2_Shiki= null
-sound gg_snd_Ino_R= null
-sound gg_snd_Ino_T_Cho_Shinka= null
-sound gg_snd_Ino_T2_Mind_Control= null
-sound gg_snd_Itachi_R= null
-sound gg_snd_Itachi_T_Amaterasu= null
-sound gg_snd_Itachi_T2_Susanoo= null
-sound gg_snd_Jiraiya_R= null
-sound gg_snd_Jiraiya_T= null
-sound gg_snd_Juugo_T= null
-sound gg_snd_Kabuto_R= null
-sound gg_snd_Kabuto_Sage_R= null
-sound gg_snd_Kabuto_Young_R= null
-sound gg_snd_Kaguya_T_Gudoudama= null
-sound gg_snd_Kakashi_Anbu_R= null
-sound gg_snd_Kakashi_Anbu_T= null
-sound gg_snd_Kakashi_Jounin_R= null
-sound gg_snd_Kakashi_Jounin_T= null
-sound gg_snd_Kakuzu_R= null
-sound gg_snd_Kakuzu_T_Hearts= null
-sound gg_snd_Kakuzu_T_Zukokku= null
-sound gg_snd_Kankuro_R= null
-sound gg_snd_Kankuro_T= null
-sound gg_snd_Karin_R_Activation= null
-sound gg_snd_Karin_R_When_Hitting_An_Enemy= null
-sound gg_snd_Karin_R_When_Hitting_Sasuke= null
-sound gg_snd_Karin_T= null
-sound gg_snd_Kiba_R= null
-sound gg_snd_Kiba_T= null
-sound gg_snd_Killer_Bee_R= null
-sound gg_snd_Killer_Bee_T= null
-sound gg_snd_Killer_Bee_Transformed_R= null
-sound gg_snd_Kimimaro_R= null
-sound gg_snd_Kimimaro_T= null
-sound gg_snd_Kisame_D_Daikoudan= null
-sound gg_snd_Kisame_R= null
-sound gg_snd_Kisame_T_Muugen= null
-sound gg_snd_Konan_D= null
-sound gg_snd_Konohamaru_R= null
-sound gg_snd_Konohamaru_T= null
-sound gg_snd_Kurenai_R= null
-sound gg_snd_Kurenai_T= null
-sound gg_snd_Madara_R= null
-sound gg_snd_Madara_T_Tengai= null
-sound gg_snd_Masked_Man_W_Space_Time= null
-sound gg_snd_Mei_T= null
-sound gg_snd_Minato_Hokage_D= null
-sound gg_snd_Minato_Hokage_R= null
-sound gg_snd_Minato_Hokage_T_Shiki= null
-sound gg_snd_Minato_Jounin_T= null
-sound gg_snd_Muu_R= null
-sound gg_snd_Muu_T_Bunretsu= null
-sound gg_snd_Nagato_T_Chibaku= null
-sound gg_snd_Nagato_T_Shinra= null
-sound gg_snd_Naruto_Rikudou_R= null
-sound gg_snd_Naruto_Rikudou_T= null
-sound gg_snd_Naruto_Sage_R= null
-sound gg_snd_Naruto_Sage_T= null
-sound gg_snd_Neji_R= null
-sound gg_snd_Neji_T= null
-sound gg_snd_Byakugan= null
-sound gg_snd_Anko_T= null
-sound gg_snd_Obito_T_Muugen= null
-sound gg_snd_Obito_T2_Transform= null
-sound gg_snd_Onooki_R= null
-sound gg_snd_Onooki_T= null
-sound gg_snd_Orochimaru_R= null
-sound gg_snd_Orochimaru_T_Yamata= null
-sound gg_snd_Orochimaru_T2_Edo= null
-sound gg_snd_Raikage_R= null
-sound gg_snd_Raikage_T= null
-sound gg_snd_Rock_Lee_R= null
-sound gg_snd_Rock_Lee_T= null
-sound gg_snd_Roshi_R= null
-sound gg_snd_Sai_R= null
-sound gg_snd_Sai_T= null
-sound gg_snd_Sakura_T= null
-sound gg_snd_Sasori_R_Puppets= null
-sound gg_snd_Sasuke_Hebi_R= null
-sound gg_snd_Sasuke_Hebi_T= null
-sound gg_snd_Sasuke_R_Amaterasu= null
-sound gg_snd_Sasuke_Rikudou_T_Chibaku= null
-sound gg_snd_Sasuke_Rikudou_T2_Susanoo= null
-sound gg_snd_Shikamaru_R= null
-sound gg_snd_Shikamaru_T_Kagemane= null
-sound gg_snd_Shikamaru_T2_Emnaku= null
-sound gg_snd_Shino_R= null
-sound gg_snd_Shino_T_Mushikui= null
-sound gg_snd_Shisui_R= null
-sound gg_snd_Shisui_T= null
-sound gg_snd_Shizune_R= null
-sound gg_snd_Shizune_T= null
-sound gg_snd_Suigetsu_R= null
-sound gg_snd_Suigetsu_T_Wave= null
-sound gg_snd_Suigetsu_T2_Bubble= null
-sound gg_snd_Temari_R= null
-sound gg_snd_Temari_T= null
-sound gg_snd_Tenten_T= null
-sound gg_snd_Tobi_R= null
-sound gg_snd_Tobirama_R= null
-sound gg_snd_Tobirama_T_Gojou= null
-sound gg_snd_Tobirama_T2_Suiton= null
-sound gg_snd_Torune_R= null
-sound gg_snd_Torune_T= null
-sound gg_snd_Tsunade_R= null
-sound gg_snd_Tsunade_T= null
-sound gg_snd_Utakata_R= null
-sound gg_snd_Utakata_T= null
-sound gg_snd_Yagura_R= null
-sound gg_snd_Yagura_T= null
-sound gg_snd_Yugito_T= null
-sound gg_snd_Zabuza_R= null
-sound gg_snd_Zabuza_T= null
-sound gg_snd_Ringo_R= null
-sound gg_snd_Gai_Q= null
-sound gg_snd_Gai_E_Sekizo= null
-sound gg_snd_Itachi_Q= null
-sound gg_snd_Mifune_R= null
-sound gg_snd_Mifune_T= null
-sound gg_snd_Orochimaru_W= null
-sound gg_snd_Sasuke_Q= null
-sound gg_snd_Shikamaru_Q= null
-sound gg_snd_Kabuto_Young_T= null
-sound gg_snd_Jiraiya_Q= null
-sound gg_snd_Kidomaru_D= null
-sound gg_snd_Kidomaru_T= null
-sound gg_snd_Kimimaro_D= null
-sound gg_snd_Kisame_T= null
-sound gg_snd_Madara_T2_Susanoo= null
-sound gg_snd_Roshi_T= null
-sound gg_snd_Yamato_T= null
-sound gg_snd_Neji_W= null
-sound gg_snd_Itachi_Yasaka_Q= null
-sound gg_snd_Kabuto_Sage_W= null
-sound gg_snd_Kakashi_Jounin_Kamui_Raikiri_Q= null
-sound gg_snd_Kakashi_Jounin_Dimension_D= null
-sound gg_snd_Obito_Dimension_D= null
-sound gg_snd_Mecha_Naruto_T= null
-sound gg_snd_Mitsuki_W= null
-sound gg_snd_Mitsuki_Sage_Mode_W= null
-sound gg_snd_Jirobo_R= null
-sound gg_snd_Jirobo_D= null
-sound gg_snd_Jirobo_T= null
-sound gg_snd_Madara_T_Transform_Juubi= null
-sound gg_snd_Kabuto_T_Transform= null
-sound gg_snd_Obito_R= null
-sound gg_snd_Madara_T_Tsukuyomi= null
-sound gg_snd_Killer_Bee_Transform= null
-sound gg_snd_Kimimaro_D_Resurrect= null
-sound gg_snd_Neji_T2_Hakke_Hyaku= null
-sound gg_snd_Yamato_D= null
-sound gg_snd_Nagato_Q= null
-sound gg_snd_Boruto_T= null
-sound gg_snd_Killer_Bee_Transform_Q= null
-sound gg_snd_Boruto_E= null
-sound gg_snd_Itachi_Susanoo_E= null
-sound gg_snd_Kinkaku_Q= null
-sound gg_snd_Ginkaku_Q= null
-sound gg_snd_Gai_R1= null
-sound gg_snd_Dosu_R= null
-sound gg_snd_Dosu_T= null
-sound gg_snd_Konan_T_Aoe= null
-sound gg_snd_Ajisai_Animal_Path_R= null
-sound gg_snd_Ajisai_Animal_Path_T= null
-sound gg_snd_Anko_R= null
-sound gg_snd_Mifune_D_Reset= null
-sound gg_snd_Ichigo_Q= null
-sound gg_snd_Ichigo_R= null
-sound gg_snd_Ichigo_R_Active= null
-sound gg_snd_Ichigo_R_Transform= null
-sound gg_snd_Ichigo_T= null
-sound gg_snd_Ichigo_Vasto_Lorde= null
-sound gg_snd_Hanabi_R= null
-sound gg_snd_Hanabi_T= null
-sound gg_snd_Duel_Accept= null
+trigger gg_trg_ZetsuTrap= null
+trigger gg_trg_ItachiNewSusanoo= null
 group hideheroes
-group HideHeroesSystem___hidedummy
-// processed:     boolean array HideHeroesSystem___numbers[11]
+group HideHeroesSystem__hidedummy
+// processed:     boolean array HideHeroesSystem__numbers[11]
 // processed:     real array herosize[8190]
-// processed:     integer array HideHeroesSystem___herored[8190]
-// processed:     integer array HideHeroesSystem___heroblue[8190]
-// processed:     integer array HideHeroesSystem___herogreen[8190]
-// processed:     integer array HideHeroesSystem___heroalpha[8190] 
+// processed:     integer array HideHeroesSystem__herored[8190]
+// processed:     integer array HideHeroesSystem__heroblue[8190]
+// processed:     integer array HideHeroesSystem__herogreen[8190]
+// processed:     integer array HideHeroesSystem__heroalpha[8190] 
 // processed:     real array heroscalex[8190]
 // processed:     real array heroscaley[8190]
 // processed:     real array heroscalez[8190]
-// processed:     boolean array HideHeroesSystem___ishidden[12][8190]
+// processed:     boolean array HideHeroesSystem__ishidden[12][8190]
 // processed:         unit array ItemKunai___heroes[12]
 // processed:         unit array Bashosen___dummies[1][1]
 // processed:     unit array ScrollOfTeleportScope___anbus[1][1] 
@@ -3518,11 +3515,11 @@ constant integer s___Recipe_trees_size=50
 integer array s__Recipe_trees
 integer array s__Recipe_price
 integer array s__Recipe_count_trees
-constant integer si__HideHeroesSystem___UnitDummy=90
-integer si__HideHeroesSystem___UnitDummy_F=0
-integer si__HideHeroesSystem___UnitDummy_I=0
-integer array si__HideHeroesSystem___UnitDummy_V
-unit array s__HideHeroesSystem___UnitDummy_u
+constant integer si__HideHeroesSystem__UnitDummy=90
+integer si__HideHeroesSystem__UnitDummy_F=0
+integer si__HideHeroesSystem__UnitDummy_I=0
+integer array si__HideHeroesSystem__UnitDummy_V
+unit array s__HideHeroesSystem__UnitDummy_u
 constant integer si__HealthAboveHero=91
 integer si__HealthAboveHero_F=0
 integer si__HealthAboveHero_I=0
@@ -4174,7 +4171,7 @@ integer si__AHSS_Configurations_F=0
 integer si__AHSS_Configurations_I=0
 integer array si__AHSS_Configurations_V
 constant integer s__AHSS_Configurations_DUMMY_ID= 'e00M'
-constant integer s__AHSS_Configurations_MAX_SLOTS= 92
+constant integer s__AHSS_Configurations_MAX_SLOTS= 90
 rect array s__AHSS_Configurations_INITIAL_AREA
 camerasetup array s__AHSS_Configurations_CAMERA
 integer s__AHSS_Configurations_HERO_BY_ID
@@ -4224,7 +4221,7 @@ integer si__AHSS_Heroes_F=0
 integer si__AHSS_Heroes_I=0
 integer array si__AHSS_Heroes_V
 integer array s___AHSS_Heroes_heroes
-constant integer s___AHSS_Heroes_heroes_size=92
+constant integer s___AHSS_Heroes_heroes_size=90
 integer array s__AHSS_Heroes_heroes
 integer array s__AHSS_Heroes_count
 constant integer si__AHSS_Options=232
@@ -4286,7 +4283,7 @@ destructable array s__AHSS_Graphics_versus1
 destructable array s__AHSS_Graphics_versus2
 destructable array s__AHSS_Graphics_logoImg
 destructable array s___AHSS_Graphics_emptyIcon
-constant integer s___AHSS_Graphics_emptyIcon_size=92
+constant integer s___AHSS_Graphics_emptyIcon_size=90
 integer array s__AHSS_Graphics_emptyIcon
 destructable array s__AHSS_Graphics_randomIcon
 integer array s___AHSS_Graphics_selections
@@ -4305,7 +4302,7 @@ texttag array s___AHSS_Graphics_heroesName
 constant integer s___AHSS_Graphics_heroesName_size=12
 integer array s__AHSS_Graphics_heroesName
 destructable array s___AHSS_Graphics_heroesIcon
-constant integer s___AHSS_Graphics_heroesIcon_size=92
+constant integer s___AHSS_Graphics_heroesIcon_size=90
 integer array s__AHSS_Graphics_heroesIcon
 destructable array s___AHSS_Graphics_bannedEmptyIcons
 constant integer s___AHSS_Graphics_bannedEmptyIcons_size=9
@@ -4468,27 +4465,27 @@ integer array s__RegisterPlayerUnitEvent__trigger_events_count
 group array s__UnitUtils__dummies
 string array s__UnitUtils__ASCII_TABLE
 integer array s__UnitUtils__PLAYER_ARRAY
-boolean array s__HideHeroesSystem___numbers
+boolean array s__HideHeroesSystem__numbers
 real array s__herosize
-integer array s__HideHeroesSystem___herored
-integer array s__HideHeroesSystem___heroblue
-integer array s__HideHeroesSystem___herogreen
-integer array s__HideHeroesSystem___heroalpha
+integer array s__HideHeroesSystem__herored
+integer array s__HideHeroesSystem__heroblue
+integer array s__HideHeroesSystem__herogreen
+integer array s__HideHeroesSystem__heroalpha
 real array s__heroscalex
 real array s__heroscaley
 real array s__heroscalez
-boolean array s__HideHeroesSystem___ishidden
-boolean array s__2HideHeroesSystem___ishidden
-boolean array s__3HideHeroesSystem___ishidden
-boolean array s__4HideHeroesSystem___ishidden
-boolean array s__5HideHeroesSystem___ishidden
-boolean array s__6HideHeroesSystem___ishidden
-boolean array s__7HideHeroesSystem___ishidden
-boolean array s__8HideHeroesSystem___ishidden
-boolean array s__9HideHeroesSystem___ishidden
-boolean array s__10HideHeroesSystem___ishidden
-boolean array s__11HideHeroesSystem___ishidden
-boolean array s__12HideHeroesSystem___ishidden
+boolean array s__HideHeroesSystem__ishidden
+boolean array s__2HideHeroesSystem__ishidden
+boolean array s__3HideHeroesSystem__ishidden
+boolean array s__4HideHeroesSystem__ishidden
+boolean array s__5HideHeroesSystem__ishidden
+boolean array s__6HideHeroesSystem__ishidden
+boolean array s__7HideHeroesSystem__ishidden
+boolean array s__8HideHeroesSystem__ishidden
+boolean array s__9HideHeroesSystem__ishidden
+boolean array s__10HideHeroesSystem__ishidden
+boolean array s__11HideHeroesSystem__ishidden
+boolean array s__12HideHeroesSystem__ishidden
 unit array s__ItemKunai___heroes
 unit array s__Bashosen___dummies
 unit array s__ScrollOfTeleportScope___anbus
@@ -4873,71 +4870,71 @@ function sg__RegisterPlayerUnitEvent__trigger_events_set takes integer i,trigger
     endif
 endfunction
 
-function sg__HideHeroesSystem___ishidden_get takes integer i returns boolean
+function sg__HideHeroesSystem__ishidden_get takes integer i returns boolean
     if(i<8191) then
-        return s__HideHeroesSystem___ishidden[i]
+        return s__HideHeroesSystem__ishidden[i]
     elseif(i<49146) then
         if(i<16382) then
-            return s__2HideHeroesSystem___ishidden[i-8191]
+            return s__2HideHeroesSystem__ishidden[i-8191]
         elseif(i<32764) then
             if(i<24573) then
-                return s__3HideHeroesSystem___ishidden[i-16382]
+                return s__3HideHeroesSystem__ishidden[i-16382]
             else
-                return s__4HideHeroesSystem___ishidden[i-24573]
+                return s__4HideHeroesSystem__ishidden[i-24573]
             endif
         elseif(i<40955) then
-            return s__5HideHeroesSystem___ishidden[i-32764]
+            return s__5HideHeroesSystem__ishidden[i-32764]
         else
-            return s__6HideHeroesSystem___ishidden[i-40955]
+            return s__6HideHeroesSystem__ishidden[i-40955]
         endif
     elseif(i<57337) then
-        return s__7HideHeroesSystem___ishidden[i-49146]
+        return s__7HideHeroesSystem__ishidden[i-49146]
     elseif(i<73719) then
         if(i<65528) then
-            return s__8HideHeroesSystem___ishidden[i-57337]
+            return s__8HideHeroesSystem__ishidden[i-57337]
         else
-            return s__9HideHeroesSystem___ishidden[i-65528]
+            return s__9HideHeroesSystem__ishidden[i-65528]
         endif
     elseif(i<81910) then
-        return s__10HideHeroesSystem___ishidden[i-73719]
+        return s__10HideHeroesSystem__ishidden[i-73719]
     elseif(i<90101) then
-        return s__11HideHeroesSystem___ishidden[i-81910]
+        return s__11HideHeroesSystem__ishidden[i-81910]
     else
-        return s__12HideHeroesSystem___ishidden[i-90101]
+        return s__12HideHeroesSystem__ishidden[i-90101]
     endif
 endfunction
 
-function sg__HideHeroesSystem___ishidden_set takes integer i,boolean v returns nothing
+function sg__HideHeroesSystem__ishidden_set takes integer i,boolean v returns nothing
     if(i<8191) then
-        set s__HideHeroesSystem___ishidden[i]=v
+        set s__HideHeroesSystem__ishidden[i]=v
     elseif(i<49146) then
         if(i<16382) then
-            set s__2HideHeroesSystem___ishidden[i-8191]=v
+            set s__2HideHeroesSystem__ishidden[i-8191]=v
         elseif(i<32764) then
             if(i<24573) then
-                set s__3HideHeroesSystem___ishidden[i-16382]=v
+                set s__3HideHeroesSystem__ishidden[i-16382]=v
             else
-                set s__4HideHeroesSystem___ishidden[i-24573]=v
+                set s__4HideHeroesSystem__ishidden[i-24573]=v
             endif
         elseif(i<40955) then
-            set s__5HideHeroesSystem___ishidden[i-32764]=v
+            set s__5HideHeroesSystem__ishidden[i-32764]=v
         else
-            set s__6HideHeroesSystem___ishidden[i-40955]=v
+            set s__6HideHeroesSystem__ishidden[i-40955]=v
         endif
     elseif(i<57337) then
-        set s__7HideHeroesSystem___ishidden[i-49146]=v
+        set s__7HideHeroesSystem__ishidden[i-49146]=v
     elseif(i<73719) then
         if(i<65528) then
-            set s__8HideHeroesSystem___ishidden[i-57337]=v
+            set s__8HideHeroesSystem__ishidden[i-57337]=v
         else
-            set s__9HideHeroesSystem___ishidden[i-65528]=v
+            set s__9HideHeroesSystem__ishidden[i-65528]=v
         endif
     elseif(i<81910) then
-        set s__10HideHeroesSystem___ishidden[i-73719]=v
+        set s__10HideHeroesSystem__ishidden[i-73719]=v
     elseif(i<90101) then
-        set s__11HideHeroesSystem___ishidden[i-81910]=v
+        set s__11HideHeroesSystem__ishidden[i-81910]=v
     else
-        set s__12HideHeroesSystem___ishidden[i-90101]=v
+        set s__12HideHeroesSystem__ishidden[i-90101]=v
     endif
 endfunction
 
@@ -5123,16 +5120,16 @@ function s__AHSS_Graphics__allocate takes nothing returns integer
         set si__AHSS_Graphics_I=si__AHSS_Graphics_I+1
         set this=si__AHSS_Graphics_I
     endif
-    if (this>88) then
+    if (this>90) then
         return 0
     endif
-    set s__AHSS_Graphics_emptyIcon[this]=(this-1)*92
+    set s__AHSS_Graphics_emptyIcon[this]=(this-1)*90
     set s__AHSS_Graphics_selections[this]=(this-1)*12
     set s__AHSS_Graphics_teamsIcon[this]=(this-1)*12
     set s__AHSS_Graphics_teamsText[this]=(this-1)*12
     set s__AHSS_Graphics_heroesModels[this]=(this-1)*12
     set s__AHSS_Graphics_heroesName[this]=(this-1)*12
-    set s__AHSS_Graphics_heroesIcon[this]=(this-1)*92
+    set s__AHSS_Graphics_heroesIcon[this]=(this-1)*90
     set s__AHSS_Graphics_bannedEmptyIcons[this]=(this-1)*9
     set s__AHSS_Graphics_bannedHeroIcons[this]=(this-1)*9
     set s__AHSS_Graphics_strIcon[this]=(this-1)*12
@@ -5433,10 +5430,10 @@ function s__AHSS_Heroes__allocate takes nothing returns integer
         set si__AHSS_Heroes_I=si__AHSS_Heroes_I+1
         set this=si__AHSS_Heroes_I
     endif
-    if (this>88) then
+    if (this>90) then
         return 0
     endif
-    set s__AHSS_Heroes_heroes[this]=(this-1)*92
+    set s__AHSS_Heroes_heroes[this]=(this-1)*90
     set si__AHSS_Heroes_V[this]=-1
  return this
 endfunction
@@ -6257,32 +6254,32 @@ function s__HealthAboveHero_deallocate takes integer this returns nothing
     set si__HealthAboveHero_F=this
 endfunction
 
-//Generated allocator of HideHeroesSystem___UnitDummy
-function s__HideHeroesSystem___UnitDummy__allocate takes nothing returns integer
- local integer this=si__HideHeroesSystem___UnitDummy_F
+//Generated allocator of HideHeroesSystem__UnitDummy
+function s__HideHeroesSystem__UnitDummy__allocate takes nothing returns integer
+ local integer this=si__HideHeroesSystem__UnitDummy_F
     if (this!=0) then
-        set si__HideHeroesSystem___UnitDummy_F=si__HideHeroesSystem___UnitDummy_V[this]
+        set si__HideHeroesSystem__UnitDummy_F=si__HideHeroesSystem__UnitDummy_V[this]
     else
-        set si__HideHeroesSystem___UnitDummy_I=si__HideHeroesSystem___UnitDummy_I+1
-        set this=si__HideHeroesSystem___UnitDummy_I
+        set si__HideHeroesSystem__UnitDummy_I=si__HideHeroesSystem__UnitDummy_I+1
+        set this=si__HideHeroesSystem__UnitDummy_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__HideHeroesSystem___UnitDummy_V[this]=-1
+    set si__HideHeroesSystem__UnitDummy_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of HideHeroesSystem___UnitDummy
-function s__HideHeroesSystem___UnitDummy_deallocate takes integer this returns nothing
+//Generated destructor of HideHeroesSystem__UnitDummy
+function s__HideHeroesSystem__UnitDummy_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__HideHeroesSystem___UnitDummy_V[this]!=-1) then
+    elseif (si__HideHeroesSystem__UnitDummy_V[this]!=-1) then
         return
     endif
-    set si__HideHeroesSystem___UnitDummy_V[this]=si__HideHeroesSystem___UnitDummy_F
-    set si__HideHeroesSystem___UnitDummy_F=this
+    set si__HideHeroesSystem__UnitDummy_V[this]=si__HideHeroesSystem__UnitDummy_F
+    set si__HideHeroesSystem__UnitDummy_F=this
 endfunction
 
 //Generated allocator of Recipe
@@ -6967,7 +6964,7 @@ endfunction
 //library ItemTable:
 
     
-    function ItemTable___init takes nothing returns nothing
+    function ItemTable__init takes nothing returns nothing
     endfunction
     
 
@@ -9711,7 +9708,7 @@ endfunction
 
         
         function s__Dialog_getClickedDialog takes nothing returns integer
-            return (LoadInteger(Table__ht, (Dialog___instance), (GetHandleId(GetClickedDialog())))) // INLINED!!
+            return (LoadInteger(Table__ht, (Dialog__instance), (GetHandleId(GetClickedDialog())))) // INLINED!!
         endfunction
         function s__Dialog_getClickedButton takes nothing returns button
             return GetClickedButton()
@@ -9745,7 +9742,7 @@ endfunction
         
         function s__Dialog_registerClickEvent takes integer this,boolexpr b returns nothing
             if s__Dialog_click[this] == null then
-                call SaveInteger(Table__ht, (Dialog___instance), (GetHandleId(s__Dialog_dg[this])), ( this)) // INLINED!!
+                call SaveInteger(Table__ht, (Dialog__instance), (GetHandleId(s__Dialog_dg[this])), ( this)) // INLINED!!
                 set s__Dialog_click[this]=CreateTrigger()
                 call TriggerRegisterDialogEvent(s__Dialog_click[this], s__Dialog_dg[this])
             endif
@@ -9756,7 +9753,7 @@ endfunction
             
             if s__Dialog_click[this] != null then
                 call DestroyTrigger(s__Dialog_click[this])
-                call RemoveSavedInteger(Table__ht, (Dialog___instance), (GetHandleId(s__Dialog_dg[this]))) // INLINED!!
+                call RemoveSavedInteger(Table__ht, (Dialog__instance), (GetHandleId(s__Dialog_dg[this]))) // INLINED!!
                 set s__Dialog_click[this]=null
             endif
             
@@ -9772,9 +9769,9 @@ endfunction
             return this
         endfunction
         
-//Implemented from module Dialog___DialogInit:
-        function s__Dialog_Dialog___DialogInit__onInit takes nothing returns nothing
-            set Dialog___instance=s__Table_create()
+//Implemented from module Dialog__DialogInit:
+        function s__Dialog_Dialog__DialogInit__onInit takes nothing returns nothing
+            set Dialog__instance=s__Table_create()
         endfunction
     
 
@@ -9849,48 +9846,48 @@ function GetPolarY takes real y,real radians,real d returns real
 endfunction
 
 function GenerateRandomArc takes real x,real y,real maxAngle,real offset returns nothing
-    set GeometryLibBase___SPACE_X=x
-    set GeometryLibBase___SPACE_Y=y
-    set GeometryLibBase___SPACE_OFFSET=offset
-    set GeometryLibBase___SPACE_MAX_ANGLE=maxAngle
-    set GeometryLibBase___GEOMETRY=4
+    set GeometryLibBase__SPACE_X=x
+    set GeometryLibBase__SPACE_Y=y
+    set GeometryLibBase__SPACE_OFFSET=offset
+    set GeometryLibBase__SPACE_MAX_ANGLE=maxAngle
+    set GeometryLibBase__GEOMETRY=4
 endfunction
 
 function GenerateRandomCircle takes real x,real y,real offset returns nothing
     call GenerateRandomArc(x , y , 2 * bj_PI , offset)
-    set GeometryLibBase___GEOMETRY=1
+    set GeometryLibBase__GEOMETRY=1
 endfunction
 
 function GenerateRandomRectangle takes real x,real y,real width,real height returns nothing
-    set GeometryLibBase___SPACE_X=x
-    set GeometryLibBase___SPACE_Y=y
-    set GeometryLibBase___SPACE_OFFSET=width
-    set GeometryLibBase___SPACE_OFFSET_2=height
-    set GeometryLibBase___GEOMETRY=3
+    set GeometryLibBase__SPACE_X=x
+    set GeometryLibBase__SPACE_Y=y
+    set GeometryLibBase__SPACE_OFFSET=width
+    set GeometryLibBase__SPACE_OFFSET_2=height
+    set GeometryLibBase__GEOMETRY=3
 endfunction
 
 function GenerateRandomRect takes real x,real y,real offset returns nothing
     call GenerateRandomRectangle(x , y , offset , offset)
-    set GeometryLibBase___GEOMETRY=2
+    set GeometryLibBase__GEOMETRY=2
 endfunction
 
 function GetRandomX takes nothing returns real
-    set GeometryLibBase___SPACE_OFFSET=GetRandomReal(0, GeometryLibBase___SPACE_OFFSET)
-    if GeometryLibBase___GEOMETRY == 1 or GeometryLibBase___GEOMETRY == 4 then
-        set GeometryLibBase___SPACE_ANGLE=GetRandomReal(0, GeometryLibBase___SPACE_MAX_ANGLE)
-        return (((GeometryLibBase___SPACE_X )*1.0) + Cos((( GeometryLibBase___SPACE_ANGLE )*1.0)) * (( GeometryLibBase___SPACE_OFFSET)*1.0)) // INLINED!!
-    elseif GeometryLibBase___GEOMETRY == 2 or GeometryLibBase___GEOMETRY == 3 then
-        return GetRandomReal(GeometryLibBase___SPACE_X - GeometryLibBase___SPACE_OFFSET / 2, GeometryLibBase___SPACE_X + GeometryLibBase___SPACE_OFFSET / 2)
+    set GeometryLibBase__SPACE_OFFSET=GetRandomReal(0, GeometryLibBase__SPACE_OFFSET)
+    if GeometryLibBase__GEOMETRY == 1 or GeometryLibBase__GEOMETRY == 4 then
+        set GeometryLibBase__SPACE_ANGLE=GetRandomReal(0, GeometryLibBase__SPACE_MAX_ANGLE)
+        return (((GeometryLibBase__SPACE_X )*1.0) + Cos((( GeometryLibBase__SPACE_ANGLE )*1.0)) * (( GeometryLibBase__SPACE_OFFSET)*1.0)) // INLINED!!
+    elseif GeometryLibBase__GEOMETRY == 2 or GeometryLibBase__GEOMETRY == 3 then
+        return GetRandomReal(GeometryLibBase__SPACE_X - GeometryLibBase__SPACE_OFFSET / 2, GeometryLibBase__SPACE_X + GeometryLibBase__SPACE_OFFSET / 2)
     endif
     return 0.0
 endfunction 
 
 function GetRandomY takes nothing returns real
-    if GeometryLibBase___GEOMETRY == 1 or GeometryLibBase___GEOMETRY == 4 then
-        return (((GeometryLibBase___SPACE_Y )*1.0) + Sin((( GeometryLibBase___SPACE_ANGLE )*1.0)) * (( GeometryLibBase___SPACE_OFFSET)*1.0)) // INLINED!!
-    elseif GeometryLibBase___GEOMETRY == 2 or GeometryLibBase___GEOMETRY == 3 then
-        set GeometryLibBase___SPACE_OFFSET_2=GetRandomReal(0, GeometryLibBase___SPACE_OFFSET_2)
-        return GetRandomReal(GeometryLibBase___SPACE_Y - GeometryLibBase___SPACE_OFFSET_2 / 2, GeometryLibBase___SPACE_Y + GeometryLibBase___SPACE_OFFSET_2 / 2)
+    if GeometryLibBase__GEOMETRY == 1 or GeometryLibBase__GEOMETRY == 4 then
+        return (((GeometryLibBase__SPACE_Y )*1.0) + Sin((( GeometryLibBase__SPACE_ANGLE )*1.0)) * (( GeometryLibBase__SPACE_OFFSET)*1.0)) // INLINED!!
+    elseif GeometryLibBase__GEOMETRY == 2 or GeometryLibBase__GEOMETRY == 3 then
+        set GeometryLibBase__SPACE_OFFSET_2=GetRandomReal(0, GeometryLibBase__SPACE_OFFSET_2)
+        return GetRandomReal(GeometryLibBase__SPACE_Y - GeometryLibBase__SPACE_OFFSET_2 / 2, GeometryLibBase__SPACE_Y + GeometryLibBase__SPACE_OFFSET_2 / 2)
     endif
     return 0.0
 endfunction 
@@ -10007,22 +10004,22 @@ endfunction
         local integer l
         
         loop
-          exitwhen i >= Lightning___Index
-            set l=Lightning___Array[i]
+          exitwhen i >= Lightning__Index
+            set l=Lightning__Array[i]
             
             if s__Lightning_updatePosition[l] then
                 //Update the lightning's position if it's attached to a unit
                 if s__Lightning_startUnit[l] != null and GetUnitTypeId(s__Lightning_startUnit[l]) != 0 then
                     set s__Lightning_startX[l]=GetUnitX(s__Lightning_startUnit[l])
                     set s__Lightning_startY[l]=GetUnitY(s__Lightning_startUnit[l])
-                    call MoveLocation(Lightning___Loc, s__Lightning_startX[l], s__Lightning_startY[l])
-                    set s__Lightning_startZ[l]=GetLocationZ(Lightning___Loc) + GetUnitFlyHeight(s__Lightning_startUnit[l]) + s__Lightning_startZOffset[l]
+                    call MoveLocation(Lightning__Loc, s__Lightning_startX[l], s__Lightning_startY[l])
+                    set s__Lightning_startZ[l]=GetLocationZ(Lightning__Loc) + GetUnitFlyHeight(s__Lightning_startUnit[l]) + s__Lightning_startZOffset[l]
                 endif
                 if s__Lightning_endUnit[l] != null and GetUnitTypeId(s__Lightning_endUnit[l]) != 0 then
                     set s__Lightning_endX[l]=GetUnitX(s__Lightning_endUnit[l])
                     set s__Lightning_endY[l]=GetUnitY(s__Lightning_endUnit[l])
-                    call MoveLocation(Lightning___Loc, s__Lightning_endX[l], s__Lightning_endY[l])
-                    set s__Lightning_endZ[l]=GetLocationZ(Lightning___Loc) + GetUnitFlyHeight(s__Lightning_endUnit[l]) + s__Lightning_endZOffset[l]
+                    call MoveLocation(Lightning__Loc, s__Lightning_endX[l], s__Lightning_endY[l])
+                    set s__Lightning_endZ[l]=GetLocationZ(Lightning__Loc) + GetUnitFlyHeight(s__Lightning_endUnit[l]) + s__Lightning_endZOffset[l]
                 endif
                 
                 //Check if the lightning can be seen (will locally change the variable for each player)
@@ -10039,7 +10036,7 @@ endfunction
                 //Check if the lightning has been delay released
                 if s__Lightning_releaseDelay[l] > 0. and not s__Lightning_released[l] then
                     //Count down the delay
-                    set s__Lightning_releaseDelay[l]=s__Lightning_releaseDelay[l] - Lightning___TIMEOUT
+                    set s__Lightning_releaseDelay[l]=s__Lightning_releaseDelay[l] - Lightning__TIMEOUT
                     if s__Lightning_releaseDelay[l] <= 0. then
                         //Time to release it
                         set s__Lightning_released[l]=true
@@ -10069,12 +10066,12 @@ endfunction
                         set s__Lightning_endUnit[l]=null
                         call s__Lightning_deallocate(l)
                         
-                        set Lightning___Index=Lightning___Index - 1
-                        if Lightning___Index > 0 then
-                            set Lightning___Array[i]=Lightning___Array[Lightning___Index]
+                        set Lightning__Index=Lightning__Index - 1
+                        if Lightning__Index > 0 then
+                            set Lightning__Array[i]=Lightning__Array[Lightning__Index]
                             set i=i - 1
                         else
-                            call PauseTimer(Lightning___Timer)
+                            call PauseTimer(Lightning__Timer)
                         endif
                     endif
                 elseif s__Lightning_fadingAlpha[l] < 1. then
@@ -10085,12 +10082,12 @@ endfunction
                         //Check if we need to keep updating the lightning
                         set s__Lightning_updatePosition[l]=s__Lightning_checkVisibility[l] or s__Lightning_startUnit[l] != null or s__Lightning_endUnit[l] != null or s__Lightning_releaseDelay[l] > 0.
                         if not s__Lightning_updatePosition[l] then
-                            set Lightning___Index=Lightning___Index - 1
-                            if Lightning___Index > 0 then
-                                set Lightning___Array[i]=Lightning___Array[Lightning___Index]
+                            set Lightning__Index=Lightning__Index - 1
+                            if Lightning__Index > 0 then
+                                set Lightning__Array[i]=Lightning__Array[Lightning__Index]
                                 set i=i - 1
                             else
-                                call PauseTimer(Lightning___Timer)
+                                call PauseTimer(Lightning__Timer)
                             endif
                         endif
                     endif
@@ -10105,11 +10102,11 @@ endfunction
                 
                 set i=i + 1
             else
-                set Lightning___Index=Lightning___Index - 1
-                if Lightning___Index > 0 then
-                    set Lightning___Array[i]=Lightning___Array[Lightning___Index]
+                set Lightning__Index=Lightning__Index - 1
+                if Lightning__Index > 0 then
+                    set Lightning__Array[i]=Lightning__Array[Lightning__Index]
                 else
-                    call PauseTimer(Lightning___Timer)
+                    call PauseTimer(Lightning__Timer)
                 endif
             endif
         endloop
@@ -10137,18 +10134,18 @@ endfunction
         
         if fadeTime > 0. then
             set s__Lightning_fadingAlpha[this]=0.
-            set s__Lightning_fadingAlphaInc[this]=Lightning___TIMEOUT / fadeTime
+            set s__Lightning_fadingAlphaInc[this]=Lightning__TIMEOUT / fadeTime
             call SetLightningColor(s__Lightning_lightning[this], s__Lightning_redColour[this], s__Lightning_greenColour[this], s__Lightning_blueColour[this], 0.)
         else
             set s__Lightning_fadingAlpha[this]=1.
         endif
         
         if s__Lightning_updatePosition[this] then
-            if Lightning___Index == 0 then
-                call TimerStartEx(Lightning___Timer , Lightning___TIMEOUT , true , function s__Lightning_Update , "Lightning.Update")
+            if Lightning__Index == 0 then
+                call TimerStartEx(Lightning__Timer , Lightning__TIMEOUT , true , function s__Lightning_Update , "Lightning.Update")
             endif
-            set Lightning___Array[Lightning___Index]=this
-            set Lightning___Index=Lightning___Index + 1
+            set Lightning__Array[Lightning__Index]=this
+            set Lightning__Index=Lightning__Index + 1
         endif
         
         return this
@@ -10161,13 +10158,13 @@ endfunction
     endif
 //end of: LightningDebugTextmacro("change the attached point of", "false")
         
-        call MoveLocation(Lightning___Loc, x, y)
+        call MoveLocation(Lightning__Loc, x, y)
         if atStart then
             set s__Lightning_startUnit[this]=null
             set s__Lightning_startX[this]=x
             set s__Lightning_startY[this]=y
             if considerTerrain then
-                set s__Lightning_startZ[this]=GetLocationZ(Lightning___Loc) + z
+                set s__Lightning_startZ[this]=GetLocationZ(Lightning__Loc) + z
             else
                 set s__Lightning_startZ[this]=z
             endif
@@ -10177,7 +10174,7 @@ endfunction
             set s__Lightning_endX[this]=x
             set s__Lightning_endY[this]=y
             if considerTerrain then
-                set s__Lightning_endZ[this]=GetLocationZ(Lightning___Loc) + z
+                set s__Lightning_endZ[this]=GetLocationZ(Lightning__Loc) + z
             else
                 set s__Lightning_endZ[this]=z
             endif
@@ -10209,8 +10206,8 @@ endfunction
             if u != null then
                 set s__Lightning_startX[this]=GetUnitX(u)
                 set s__Lightning_startY[this]=GetUnitY(u)
-                call MoveLocation(Lightning___Loc, s__Lightning_startX[this], s__Lightning_startY[this])
-                set s__Lightning_startZ[this]=GetLocationZ(Lightning___Loc) + GetUnitFlyHeight(u) + zOffset
+                call MoveLocation(Lightning__Loc, s__Lightning_startX[this], s__Lightning_startY[this])
+                set s__Lightning_startZ[this]=GetLocationZ(Lightning__Loc) + GetUnitFlyHeight(u) + zOffset
             endif
         else
             set s__Lightning_endUnit[this]=u
@@ -10219,8 +10216,8 @@ endfunction
             if u != null then
                 set s__Lightning_endX[this]=GetUnitX(u)
                 set s__Lightning_endY[this]=GetUnitY(u)
-                call MoveLocation(Lightning___Loc, s__Lightning_endX[this], s__Lightning_endY[this])
-                set s__Lightning_endZ[this]=GetLocationZ(Lightning___Loc) + GetUnitFlyHeight(s__Lightning_endUnit[this]) + zOffset
+                call MoveLocation(Lightning__Loc, s__Lightning_endX[this], s__Lightning_endY[this])
+                set s__Lightning_endZ[this]=GetLocationZ(Lightning__Loc) + GetUnitFlyHeight(s__Lightning_endUnit[this]) + zOffset
             endif
         endif
         
@@ -10229,11 +10226,11 @@ endfunction
         endif
         
         if s__Lightning_updatePosition[this] == false then
-            if Lightning___Index == 0 then
-                call TimerStartEx(Lightning___Timer , Lightning___TIMEOUT , true , function s__Lightning_Update , "Lightning.Update")
+            if Lightning__Index == 0 then
+                call TimerStartEx(Lightning__Timer , Lightning__TIMEOUT , true , function s__Lightning_Update , "Lightning.Update")
             endif
-            set Lightning___Array[Lightning___Index]=this
-            set Lightning___Index=Lightning___Index + 1
+            set Lightning__Array[Lightning__Index]=this
+            set Lightning__Index=Lightning__Index + 1
             set s__Lightning_updatePosition[this]=true
         endif
         
@@ -10362,15 +10359,15 @@ endfunction
         set s__Lightning_released[this]=true
         if fadeTime > 0. then
             set s__Lightning_fadingAlpha[this]=1.
-            set s__Lightning_fadingAlphaInc[this]=Lightning___TIMEOUT / fadeTime
+            set s__Lightning_fadingAlphaInc[this]=Lightning__TIMEOUT / fadeTime
             
             //Add it to the Update Loop if it's not already in there
             if not s__Lightning_updatePosition[this] then
-                if Lightning___Index == 0 then
-                    call TimerStartEx(Lightning___Timer , Lightning___TIMEOUT , true , function s__Lightning_Update , "Lightning.Update")
+                if Lightning__Index == 0 then
+                    call TimerStartEx(Lightning__Timer , Lightning__TIMEOUT , true , function s__Lightning_Update , "Lightning.Update")
                 endif
-                set Lightning___Array[Lightning___Index]=this
-                set Lightning___Index=Lightning___Index + 1
+                set Lightning__Array[Lightning__Index]=this
+                set Lightning__Index=Lightning__Index + 1
                 set s__Lightning_updatePosition[this]=true
             endif
         elseif s__Lightning_updatePosition[this] then
@@ -10406,7 +10403,7 @@ endfunction
         
         set s__Lightning_releaseDelay[this]=delay
         if fadeTime > 0. then
-            set s__Lightning_fadingAlphaInc[this]=Lightning___TIMEOUT / fadeTime
+            set s__Lightning_fadingAlphaInc[this]=Lightning__TIMEOUT / fadeTime
         else
             //Don't want to divide by 0! 
             set s__Lightning_fadingAlphaInc[this]=1.
@@ -10414,11 +10411,11 @@ endfunction
         
         //Add it to the Update Loop if it's not already in there
         if not s__Lightning_updatePosition[this] then
-            if Lightning___Index == 0 then
-                call TimerStartEx(Lightning___Timer , Lightning___TIMEOUT , true , function s__Lightning_Update , "Lightning.Update")
+            if Lightning__Index == 0 then
+                call TimerStartEx(Lightning__Timer , Lightning__TIMEOUT , true , function s__Lightning_Update , "Lightning.Update")
             endif
-            set Lightning___Array[Lightning___Index]=this
-            set Lightning___Index=Lightning___Index + 1
+            set Lightning__Array[Lightning__Index]=this
+            set Lightning__Index=Lightning__Index + 1
             set s__Lightning_updatePosition[this]=true
         endif
     endfunction
@@ -11228,6 +11225,7 @@ function SlowArea takes unit caster,real x,real y,real area returns nothing
     call SetUnitY(u, y)
     call SetUnitAbilityLevel(u, 'A0VY', R2I(area / 20))
     call IssueImmediateOrder(u, "thunderclap")
+    set u=null
 endfunction 
 
 function DisableUnitTimed takes unit caster,unit target,real duration returns nothing
@@ -11237,11 +11235,13 @@ endfunction
 function SilenceUnitLight takes unit caster,unit target returns nothing
     local unit u= CreateAbilityDummy(caster , 'A136')
     call IssuePointOrder(u, "silence", GetUnitX(target), GetUnitY(target))
+    set u=null
 endfunction
 
 function SilenceUnitLight2 takes unit caster,unit target returns nothing
     local unit u= CreateAbilityDummy(caster , 'A137')
     call IssuePointOrder(u, "silence", GetUnitX(target), GetUnitY(target))
+    set u=null
 endfunction
 
 
@@ -12970,7 +12970,7 @@ endfunction
 //***************************************************************************
 
 function InitSounds takes nothing returns nothing
-    set gg_snd_Ajisai_Animal_Path_R=CreateSound("Sounds/Abilities/Ajisai_Animal_Path_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    set gg_snd_Ajisai_Animal_Path_R=CreateSound("Sounds/Abilities/Ajisai_Animal_Path_R.mp3", false, false, false, 1, 1, "DefaultEAXON")
     call SetSoundDuration(gg_snd_Ajisai_Animal_Path_R, 1149)
     call SetSoundChannel(gg_snd_Ajisai_Animal_Path_R, 0)
     call SetSoundVolume(gg_snd_Ajisai_Animal_Path_R, 127)
@@ -12995,7 +12995,7 @@ function InitSounds takes nothing returns nothing
     call SetSoundChannel(gg_snd_Anko_R, 0)
     call SetSoundVolume(gg_snd_Anko_R, 127)
     call SetSoundPitch(gg_snd_Anko_R, 1.0)
-    set gg_snd_Anko_T=CreateSound("Sounds/Abilities/Anko_T.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    set gg_snd_Anko_T=CreateSound("Sounds/Abilities/Anko_T.mp3", false, false, false, 1, 1, "DefaultEAXON")
     call SetSoundDuration(gg_snd_Anko_T, 2507)
     call SetSoundChannel(gg_snd_Anko_T, 0)
     call SetSoundVolume(gg_snd_Anko_T, 127)
@@ -13005,21 +13005,6 @@ function InitSounds takes nothing returns nothing
     call SetSoundChannel(gg_snd_Asuma_Kill, 0)
     call SetSoundVolume(gg_snd_Asuma_Kill, 127)
     call SetSoundPitch(gg_snd_Asuma_Kill, 1.0)
-    set gg_snd_Asuma_R=CreateSound("Sounds/Abilities/Asuma_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Asuma_R, 2063)
-    call SetSoundChannel(gg_snd_Asuma_R, 0)
-    call SetSoundVolume(gg_snd_Asuma_R, 127)
-    call SetSoundPitch(gg_snd_Asuma_R, 1.0)
-    set gg_snd_Asuma_T2_Katon=CreateSound("Sounds/Abilities/Asuma_T2_Katon.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Asuma_T2_Katon, 1541)
-    call SetSoundChannel(gg_snd_Asuma_T2_Katon, 0)
-    call SetSoundVolume(gg_snd_Asuma_T2_Katon, 127)
-    call SetSoundPitch(gg_snd_Asuma_T2_Katon, 1.0)
-    set gg_snd_Asuma_T_Hien=CreateSound("Sounds/Abilities/Asuma_T_Hien.mp3", false, false, false, 0, 0, "DefaultEAXON")
-    call SetSoundDuration(gg_snd_Asuma_T_Hien, 2115)
-    call SetSoundChannel(gg_snd_Asuma_T_Hien, 0)
-    call SetSoundVolume(gg_snd_Asuma_T_Hien, 127)
-    call SetSoundPitch(gg_snd_Asuma_T_Hien, 1.0)
     set gg_snd_BattleRoar=CreateSound("Abilities/Spells/NightElf/BattleRoar/BattleRoar.flac", false, true, true, 0, 0, "SpellsEAX")
     call SetSoundParamsFromLabel(gg_snd_BattleRoar, "BattleRoar")
     call SetSoundDuration(gg_snd_BattleRoar, 1991)
@@ -13048,7 +13033,7 @@ function InitSounds takes nothing returns nothing
     call SetSoundChannel(gg_snd_Boruto_T, 0)
     call SetSoundVolume(gg_snd_Boruto_T, 127)
     call SetSoundPitch(gg_snd_Boruto_T, 1.0)
-    set gg_snd_Byakugan=CreateSound("Sounds/Abilities/Byakugan.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    set gg_snd_Byakugan=CreateSound("Sounds/Abilities/Byakugan.mp3", false, false, false, 1, 1, "DefaultEAXON")
     call SetSoundDuration(gg_snd_Byakugan, 2160)
     call SetSoundChannel(gg_snd_Byakugan, 0)
     call SetSoundVolume(gg_snd_Byakugan, 127)
@@ -14456,7 +14441,7 @@ function InitSounds takes nothing returns nothing
     call SetSoundChannel(gg_snd_Suigetsu_T_Wave, 0)
     call SetSoundVolume(gg_snd_Suigetsu_T_Wave, 127)
     call SetSoundPitch(gg_snd_Suigetsu_T_Wave, 1.0)
-    set gg_snd_Temari_Kill=CreateSound("Sounds/Kills/Temari_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    set gg_snd_Temari_Kill=CreateSound("Sounds/Kills/Temari_Kill.mp3", false, false, false, 1, 1, "DefaultEAXON")
     call SetSoundDuration(gg_snd_Temari_Kill, 4754)
     call SetSoundChannel(gg_snd_Temari_Kill, 0)
     call SetSoundVolume(gg_snd_Temari_Kill, 127)
@@ -14521,12 +14506,12 @@ function InitSounds takes nothing returns nothing
     call SetSoundChannel(gg_snd_Torune_T, 0)
     call SetSoundVolume(gg_snd_Torune_T, 127)
     call SetSoundPitch(gg_snd_Torune_T, 1.0)
-    set gg_snd_Tsunade_Kill=CreateSound("Sounds/Kills/Tsunade_Kill.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    set gg_snd_Tsunade_Kill=CreateSound("Sounds/Kills/Tsunade_Kill.mp3", false, false, false, 1, 1, "DefaultEAXON")
     call SetSoundDuration(gg_snd_Tsunade_Kill, 3918)
     call SetSoundChannel(gg_snd_Tsunade_Kill, 0)
     call SetSoundVolume(gg_snd_Tsunade_Kill, 127)
     call SetSoundPitch(gg_snd_Tsunade_Kill, 1.0)
-    set gg_snd_Tsunade_R=CreateSound("Sounds/Abilities/Tsunade_R.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    set gg_snd_Tsunade_R=CreateSound("Sounds/Abilities/Tsunade_R.mp3", false, false, false, 1, 1, "DefaultEAXON")
     call SetSoundDuration(gg_snd_Tsunade_R, 1253)
     call SetSoundChannel(gg_snd_Tsunade_R, 0)
     call SetSoundVolume(gg_snd_Tsunade_R, 127)
@@ -14611,6 +14596,21 @@ function InitSounds takes nothing returns nothing
     call SetSoundChannel(gg_snd_Zabuza_T, 0)
     call SetSoundVolume(gg_snd_Zabuza_T, 127)
     call SetSoundPitch(gg_snd_Zabuza_T, 1.0)
+    set gg_snd_Asuma_R=CreateSound("Sounds/Abilities/Asuma_R.mp3", false, false, false, 1, 1, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Asuma_R, 2063)
+    call SetSoundChannel(gg_snd_Asuma_R, 0)
+    call SetSoundVolume(gg_snd_Asuma_R, 127)
+    call SetSoundPitch(gg_snd_Asuma_R, 1.0)
+    set gg_snd_Asuma_T_Hien=CreateSound("Sounds/Abilities/Asuma_T_Hien.mp3", false, false, false, 1, 1, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Asuma_T_Hien, 2115)
+    call SetSoundChannel(gg_snd_Asuma_T_Hien, 0)
+    call SetSoundVolume(gg_snd_Asuma_T_Hien, 127)
+    call SetSoundPitch(gg_snd_Asuma_T_Hien, 1.0)
+    set gg_snd_Asuma_T2_Katon=CreateSound("Sounds/Abilities/Asuma_T2_Katon.mp3", false, false, false, 1, 1, "DefaultEAXON")
+    call SetSoundDuration(gg_snd_Asuma_T2_Katon, 1541)
+    call SetSoundChannel(gg_snd_Asuma_T2_Katon, 0)
+    call SetSoundVolume(gg_snd_Asuma_T2_Katon, 127)
+    call SetSoundPitch(gg_snd_Asuma_T2_Katon, 1.0)
 endfunction
 
 //***************************************************************************
@@ -15604,12 +15604,12 @@ endfunction
 
 //processed hook: hook SetUnitVertexColorBJ SetUnitVertexColorBJEx 
 
-function HideHeroesSystem___Exit takes nothing returns boolean
+function HideHeroesSystem__Exit takes nothing returns boolean
     local integer id= (GetUnitUserData(((s__UnitDex_Unit[s__UnitDex_LastIndex])))) // INLINED!!
     return true
 endfunction
 
-function HideHeroesSystem___Enter takes nothing returns boolean
+function HideHeroesSystem__Enter takes nothing returns boolean
     local integer id= (GetUnitUserData(((s__UnitDex_Unit[s__UnitDex_LastIndex])))) // INLINED!!
     if UnitAddAbility((s__UnitDex_Unit[s__UnitDex_LastIndex]), 'Arav') then // INLINED!!
         call UnitRemoveAbility((s__UnitDex_Unit[s__UnitDex_LastIndex]), 'Arav') // INLINED!!
@@ -15670,7 +15670,7 @@ endfunction
         local integer i
         local trigger t= CreateTrigger()
         set hideheroes=CreateGroup()
-        set HideHeroesSystem___hidedummy=CreateGroup()
+        set HideHeroesSystem__hidedummy=CreateGroup()
         set s__herosize[2]= 0.9
         set s__herosize[1]= 1.4
         set s__herosize[3]= 0.6
@@ -15757,8 +15757,8 @@ endfunction
         set s__HealthAboveHero_count=0
         call SetAltMinimapIcon("HGVGWEO4NV\\535983460.blp")
         call TimerStartEx((NewTimerEx(0)) , 10.0 , true , function s__HealthAboveHero_periodic , "HideHeros_periodic") // INLINED!!
-        call RegisterUnitIndexEvent(Filter(function HideHeroesSystem___Enter) , EVENT_UNIT_INDEX)
-        call RegisterUnitIndexEvent(Filter(function HideHeroesSystem___Exit) , EVENT_UNIT_DEINDEX)
+        call RegisterUnitIndexEvent(Filter(function HideHeroesSystem__Enter) , EVENT_UNIT_INDEX)
+        call RegisterUnitIndexEvent(Filter(function HideHeroesSystem__Exit) , EVENT_UNIT_DEINDEX)
         call RegisterPlayerUnitEvent2((EVENT_PLAYER_HERO_LEVEL ) , Filter(( function s__HealthAboveHero_newLevel))) // INLINED!!
     endfunction 
     
@@ -32836,9 +32836,9 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
 
             call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Hyuuga Hanabi, Heiress of the Hyuuga Clan" , 'H06Z')
             call sc__AHSS_Heroes_setModel(s__AHSS_Configurations_heroes,"Heroes\\Hanabi.mdl" , 1.0)
-            call sc__AHSS_Heroes_setStr(s__AHSS_Configurations_heroes,25.0 , 2.1)
-            call sc__AHSS_Heroes_setAgi(s__AHSS_Configurations_heroes,22.0 , 3.2)
-            call sc__AHSS_Heroes_setInt(s__AHSS_Configurations_heroes,20.0 , 2.7)
+            call sc__AHSS_Heroes_setStr(s__AHSS_Configurations_heroes,22.0 , 2.2)
+            call sc__AHSS_Heroes_setAgi(s__AHSS_Configurations_heroes,25.0 , 2.8)
+            call sc__AHSS_Heroes_setInt(s__AHSS_Configurations_heroes,20.0 , 2.2)
             call sc__AHSS_Heroes_setDescription(s__AHSS_Configurations_heroes,"|cff80ff80\nRole: Assassin (High Isolated Damage)\nDifficulty: Average \n\n[D]: Juuken\n[Q]: Shotei\n[W]: Hakke: Kusho\n[E]: Counter\n|cffff0000[R]: Hakkesho Kaiten\n[T]: Hakke: Rokujuyon Sho|r")
             call sc__AHSS_Heroes_setIcon(s__AHSS_Configurations_heroes,'B02W') //Icons are represented by a destructable
 			call sc__AHSS_Heroes_setIconPath(s__AHSS_Configurations_heroes,"Icons\\Heroes\\BTNPreview_Hanabi.blp")
@@ -32999,14 +32999,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             call sc__AHSS_Heroes_setIcon(s__AHSS_Configurations_heroes,'B01B') //Icons are represented by a destructable
 			call sc__AHSS_Heroes_setIconPath(s__AHSS_Configurations_heroes,"Icons\\Heroes\\BTNPreview_Orochimaru.blp")
 
-            call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Mitsuki, Clone for Orchimaru" , 'U00U')
-            call sc__AHSS_Heroes_setModel(s__AHSS_Configurations_heroes,"Heroes\\Mitsuki.mdl" , 0.67)
-            call sc__AHSS_Heroes_setStr(s__AHSS_Configurations_heroes,18.0 , 2.2)
-            call sc__AHSS_Heroes_setAgi(s__AHSS_Configurations_heroes,16.0 , 2.8)
-            call sc__AHSS_Heroes_setInt(s__AHSS_Configurations_heroes,21.0 , 3.0)
-            call sc__AHSS_Heroes_setDescription(s__AHSS_Configurations_heroes,"|cff80ff80\nRole: Assassin (High mobility/None)\nDifficulty: Average\n\n[D]: Rōrentsugan \n[Q]: Sen.ei Tajashu\n[W]: Raiton: Hebi Ikazuchi\n[E]: String Light Formation\n|cffff0000[R]: Uwabami\n[T]: Sage Mode|r")
-            call sc__AHSS_Heroes_setIcon(s__AHSS_Configurations_heroes,'B001') //Icons are represented by a destructable
-			call sc__AHSS_Heroes_setIconPath(s__AHSS_Configurations_heroes,"Icons\\Heroes\\BTNPreview_Mitsuki.blp")
+            
 
             call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Kabuto, the Orochimaru's Spy" , 'N02C')
             call sc__AHSS_Heroes_setModel(s__AHSS_Configurations_heroes,"Heroes\\Kabuto_Young.mdl" , 0.7)
@@ -33161,14 +33154,7 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
             call sc__AHSS_Heroes_setIcon(s__AHSS_Configurations_heroes,'B01P') //Icons are represented by a destructable
 			call sc__AHSS_Heroes_setIconPath(s__AHSS_Configurations_heroes,"Icons\\Heroes\\BTNPreview_Utakata.blp")
 			
-            call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Kinkaku & Ginkaku, Gold and Silver Brothers" , 'H06U')
-            call sc__AHSS_Heroes_setModel(s__AHSS_Configurations_heroes,"Heroes\\Kinkaku.mdl" , 1.6)
-            call sc__AHSS_Heroes_setStr(s__AHSS_Configurations_heroes,22.0 , 2.8)
-            call sc__AHSS_Heroes_setAgi(s__AHSS_Configurations_heroes,15.0 , 1.5)
-            call sc__AHSS_Heroes_setInt(s__AHSS_Configurations_heroes,13.0 , 2.0)
-            call sc__AHSS_Heroes_setDescription(s__AHSS_Configurations_heroes,"|cff80ff80\nRole: Hero destroyer (High area damage/Low single target damage)\nDifficulty: Difficult\n\n[D]: Kinkaku/Ginkaku\n[Q]: Bashosen/Shichiseiken\n[W]: Kingin Enbu: Hogu Ranbu\n[E]: Kokinjo/Benihisago\n|cffff0000[R]: Futatsu no Hikari\n[T]: Biju Roar|r")
-            call sc__AHSS_Heroes_setIcon(s__AHSS_Configurations_heroes,'B02Q') //Icons are represented by a destructable
-			call sc__AHSS_Heroes_setIconPath(s__AHSS_Configurations_heroes,"Icons\\Heroes\\BTNPreview_Kinkaku.blp")
+            			
 			
             call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Killer Bee, the Eight-tails' Jinchuuriki" , 'H055')
             call sc__AHSS_Heroes_setModel(s__AHSS_Configurations_heroes,"Heroes\\Killer_Bee.mdl" , 1.1)
@@ -42215,9 +42201,9 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs316811437")
+call ExecuteFunc("jasshelper__initstructs1082439687")
 call ExecuteFunc("BoundSentinel__init")
-call ExecuteFunc("ItemTable___init")
+call ExecuteFunc("ItemTable__init")
 call ExecuteFunc("PowerupSentinel__onInit")
 call ExecuteFunc("PreventSave__onInit")
 call ExecuteFunc("TimerUtils__init")
@@ -43347,7 +43333,7 @@ function sa___prototype85_SetUnitVertexColorBJEx takes nothing returns boolean
     return true
 endfunction
 
-function jasshelper__initstructs316811437 takes nothing returns nothing
+function jasshelper__initstructs1082439687 takes nothing returns nothing
     set st__AHSS_Graphics_create=CreateTrigger()
     call TriggerAddCondition(st__AHSS_Graphics_create,Condition( function sa__AHSS_Graphics_create))
     set st__AHSS_Graphics_selectHeroRandom=CreateTrigger()
@@ -43542,7 +43528,7 @@ call ExecuteFunc("s__WorldBounds_WorldBounds__WorldBoundInit__onInit")
 
 call ExecuteFunc("s__Camera__CamInit_Camera__CamInitModule__onInit")
 
-call ExecuteFunc("s__Dialog_Dialog___DialogInit__onInit")
+call ExecuteFunc("s__Dialog_Dialog__DialogInit__onInit")
 
 
 call ExecuteFunc("s__UnitDex_UnitDex__UnitDexCore__onInit")
