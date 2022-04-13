@@ -17,6 +17,7 @@ HeroExpRange=3000.0
 HeroFactorXP=50
 IntManaBonus=13.0
 MaxHeroLevel=50
+MaxLevelHeroesDrainExp=0
 MaxUnitSpeed=522.0
 PawnItemRange=800.0
 StrAttackBonus=1.0
