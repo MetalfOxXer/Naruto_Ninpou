@@ -21,7 +21,7 @@ MaxLevelHeroesDrainExp=0
 MaxUnitSpeed=522.0
 PawnItemRange=800.0
 StrAttackBonus=1.0
-StrHitPointBonus=27.0
+StrHitPointBonus=26.0
 TradingIncLarge=0
 TradingIncSmall=0
 
