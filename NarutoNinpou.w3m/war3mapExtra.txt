@@ -1,3 +1,4 @@
 [MapExtraInfo]
+EnableJassHelper=true
 SkyModel=2
 
