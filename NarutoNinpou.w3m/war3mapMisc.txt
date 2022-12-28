@@ -22,6 +22,7 @@ MaxUnitSpeed=522.0
 PawnItemRange=800.0
 StrAttackBonus=1.0
 StrHitPointBonus=26.0
+SummonedKillFactor=0.0
 TradingIncLarge=0
 TradingIncSmall=0
 
