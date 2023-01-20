@@ -4,7 +4,7 @@ DependencyOr=Hamg,Hmkg,Hblm,Otch,Udea,Hvwd,Hpal,Ucrl,E01Y,E00V,E000,H009,H002,H0
 [Misc]
 AgiAttackSpeedBonus=0.05
 AgiDefenseBase=2.0
-AgiDefenseBonus=0.1
+AgiDefenseBonus=0.15
 BoneDecayTime=2.0
 BuildingKillsGiveExp=1
 DamageBonusChaos=1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
