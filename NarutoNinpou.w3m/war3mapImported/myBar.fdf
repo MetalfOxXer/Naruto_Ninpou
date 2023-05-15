@@ -1,16 +1,28 @@
 
 // -- INCLUDE FILES ---------------------------------------------------------
 
-IncludeFile "UI\FrameDef\UI\replaypanel.fdf",
+//IncludeFile "UI\FrameDef\UI\replaypanel.fdf",
 
 // -- LOCAL TEMPLATES -------------------------------------------------------
+
+String "MyBarTextTemplate" {
+   //FontColor 0.99 0.427 0.0705 1.0, //Red Green Blue Alpha 0.0 to 1.0
+   FontColor 1.0 1.0 1.0 1.0,
+   FontShadowColor 0.0 0.0 0.0 0.9,
+   FontShadowOffset 0.001 -0.001,
+   Font "MasterFont", 0.01, //MasterFont is only valid with "DecorateFileNames,"
+}
+
 Frame "SIMPLESTATUSBAR" "MyStatusBarBordered" {
    DecorateFileNames,
    Width 0.158,
    Height 0.012,
-   BarTexture "SimpleBuildTimeIndicator",
-   //BarTexture "SimpleHpBarConsole",
-   //BarTexture "SimpleXpBarConsole",
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor00",
+       Layer "BACKGROUND" {
+       Texture "MyBarBackground" {
+           File "SimpleBuildTimeIndicatorBorder",
+       }
+    }
    Frame "SIMPLEFRAME" "MyStatusBarBorder" {
        SetAllPoints,
        DecorateFileNames,
@@ -20,19 +32,10 @@ Frame "SIMPLESTATUSBAR" "MyStatusBarBordered" {
                //File "SimpleBuildTimeIndicatorBorder",
                File "SimpleXpBarBorder",
            }
-           String "MyStatusBarText" INHERITS "ReplayPanelStringTemplate" {
+           String "MyStatusBarText" INHERITS "MyBarTextTemplate" {
                //FontJustificationH JUSTIFYLEFT,
                Text "Text",
            }
-
        }
    }
 }
-
-Frame "SIMPLESTATUSBAR" "MySimpleBar" {
-   //No Border, no default Texture, no overlay Text
-   Width 0.158,
-   Height 0.012,
-}
-
- 
