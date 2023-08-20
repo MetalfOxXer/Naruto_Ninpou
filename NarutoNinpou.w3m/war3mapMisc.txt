@@ -11,6 +11,7 @@ DamageBonusChaos=1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
 DecayTime=0.0
 DrainGivesBonusMana=1
 DrainTransfersMana=1
+GiveItemRange=300.0
 GrantHeroXP=100,120,160,220,300
 GrantNormalXP=50
 HeroExpRange=3000.0
