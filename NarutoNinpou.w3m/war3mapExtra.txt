@@ -1,4 +1,5 @@
 [MapExtraInfo]
 EnableJassHelper=true
 SkyModel=2
+TimeOfDay=0
 
