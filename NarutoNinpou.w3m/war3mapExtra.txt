@@ -1,5 +1,6 @@
 [MapExtraInfo]
 EnableJassHelper=true
+EnableJassHelperOptimizer=true
 SkyModel=2
 TimeOfDay=0
 
