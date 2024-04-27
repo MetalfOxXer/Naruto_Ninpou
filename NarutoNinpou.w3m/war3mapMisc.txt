@@ -9,7 +9,6 @@ BoneDecayTime=3.0
 BuildingKillsGiveExp=1
 DamageBonusChaos=1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
 DecayTime=0.0
-DefenseArmor=
 DissipateTime=0.5
 DrainGivesBonusMana=1
 DrainTransfersMana=1
