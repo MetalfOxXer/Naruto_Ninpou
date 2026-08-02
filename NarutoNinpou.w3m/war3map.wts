@@ -12482,12 +12482,6 @@ STRING 2081
 Hokage Head 3
 }
 
-STRING 2082
-// Abilities: A12Z (Body swap), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Damage:|r |cff87ceeb4 x Genjutsu|r each swap|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Casting Range:|r 800|n|cff32cd32Effects:|r Allow to swap position with enemy 3 times for 15s. Each swap has 1s cooldown.|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nAllow the user to swap position with the enemy for a certain amount of times, each time dealing damage.|n|cfff00000If either Fuu or the Target is in a base then it will randomly teleport both to a location on the map
-}
-
 STRING 2083
 // Abilities: A036 (Semi Choice), Ubertip (Tooltip - Normal - Extended)
 {
@@ -20538,12 +20532,6 @@ STRING 3426
 // Abilities: A02V (Mushi Kame no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Instant Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceeb50 x skill level|r|n|cff32cd32Damage Type:|r Spell|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Effects:|r Slow nearby enemies by 50% during 3 seconds and make the caster invulnerable for 2 seconds|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 18s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nShino summons several insects to protect him, making an invunerable barrier and dealing damage to nearby enemies.
-}
-
-STRING 3427
-// Abilities: A12Z (Body swap), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Damage:|r |cff87ceeb4 x Genjutsu|r each swap|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Casting Range:|r 800|n|cff32cd32Effects:|r Allow to swap position with enemy 3 times for 15s. Each swap has 1s cooldown.|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nAllow the user to swap position with the enemy for a certain amount of times, each time dealing damage.|n|cfff00000If either Fuu or the Target is in a base then it will randomly teleport both to a location on the map
 }
 
 STRING 3428
@@ -84792,6 +84780,18 @@ STRING 13898
 E
 }
 
+STRING 13899
+// Abilities: A12Z (Body swap), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Damage:|r |cff87ceeb4 x Genjutsu|r each swap|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Casting Range:|r 800|n|cff32cd32Effects:|r Allow to swap position with enemy 3 times for 15s. Each swap has 1s cooldown.|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nAllow the user to swap position with the enemy for a certain amount of times, each time dealing damage.|
+}
+
+STRING 13900
+// Abilities: A12Z (Body swap), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Damage:|r |cff87ceeb4 x Genjutsu|r each swap|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Casting Range:|r 800|n|cff32cd32Effects:|r Allow to swap position with enemy 3 times for 15s. Each swap has 1s cooldown.|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nAllow the user to swap position with the enemy for a certain amount of times, each time dealing damage.|
+}
+
 STRING 13901
 // Abilities: A0ER (|cffB0B0B0Futon: Toppa|r), Researchhotkey (Hotkey - Learn)
 {
@@ -84804,10 +84804,22 @@ STRING 13902
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb90 x skill level|r at max|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 800 length x 220 width|n|cff32cd32Chakra Cost:|r 90 + |cff87ceeb10 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32c32Description:|r|nKisame splits out a great volume of water, creating a huge wave to crush all enemies in line.
 }
 
+STRING 13903
+// Abilities: A13I (Body swap), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Damage:|r |cff87ceeb4 x Genjutsu|r each swap|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Casting Range:|r 800|n|cff32cd32Effects:|r Allow to swap position with enemy 3 times for 15s. Each swap has 2s cooldown.|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nAllow the user to swap position with the enemy for a certain amount of times, each time dealing damage.
+}
+
 STRING 13904
 // Units: H03K (Mecha-Naruto), Name (Name)
 {
 Mecha-Naruto
+}
+
+STRING 13905
+// Abilities: A13I (Body swap), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Damage:|r |cff87ceeb4 x Genjutsu|r each swap|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Casting Range:|r 800|n|cff32cd32Effects:|r Allow to swap position with enemy 3 times for 15s. Each swap has 2s cooldown.|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nAllow the user to swap position with the enemy for a certain amount of times, each time dealing damage.
 }
 
 STRING 13907
@@ -132710,18 +132722,6 @@ STRING 21730
 // Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill Level|r|n|cff32cd32Area of Effect:|r 160 width with 300 fan at the tip|n|cff32cd32Effects:|r Slows enemies hit for 1.5s|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r |cff87ceeb|r|cff87ceeb10 x skill Level|n|cff32cd32Cooldown:|r 8s + |cff87ceebskill Level|n|cff32cd32Description:|r|nKurotsuchi shoots out a stream of water that fans out like a trumpet. Her ability interacts with her Yoton: Sekkaigyo no Jutsu causing it to deal damage instantly and rooting the target.
-}
-
-STRING 21731
-// Abilities: A13I (Body swap), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Damage:|r |cff87ceeb4 x Genjutsu|r each swap|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Casting Range:|r 800|n|cff32cd32Effects:|r Allow to swap position with enemy 3 times for 15s. Each swap has 2s cooldown.|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nAllow the user to swap position with the enemy for a certain amount of times, each time dealing damage.|n|cfff00000If either Fuu or the Target is in a base then it will randomly teleport both to a location on the map
-}
-
-STRING 21732
-// Abilities: A13I (Body swap), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Damage:|r |cff87ceeb4 x Genjutsu|r each swap|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Casting Range:|r 800|n|cff32cd32Effects:|r Allow to swap position with enemy 3 times for 15s. Each swap has 2s cooldown.|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nAllow the user to swap position with the enemy for a certain amount of times, each time dealing damage.|n|cfff00000If either Fuu or the Target is in a base then it will randomly teleport both to a location on the map
 }
 
 STRING 21733
