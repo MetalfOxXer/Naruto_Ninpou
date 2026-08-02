@@ -26795,6 +26795,12 @@ STRING 4407
 Adamantine Stomp
 }
 
+STRING 4408
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units + (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
 STRING 4409
 // Abilities: A0KR (Jinton: Genkai Hakuri no Jutsu), Hotkey (Hotkey - Normal)
 {
@@ -44339,6 +44345,12 @@ STRING 7297
 E
 }
 
+STRING 7298
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units + (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
 STRING 7299
 // Abilities: A0ZV (|cffe36d50Lava Geyser|r), Hotkey (Hotkey - Normal)
 {
@@ -44349,6 +44361,12 @@ STRING 7300
 // Units: E02E (Sasori), Name (Name)
 {
 Sasori
+}
+
+STRING 7301
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units + (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 7302
@@ -44390,6 +44408,12 @@ STRING 7307
 STRING 7308
 {
 Role: Assassin
+}
+
+STRING 7309
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units + (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 7310
@@ -68944,6 +68968,12 @@ STRING 11259
 (Mitsuki)
 }
 
+STRING 11260
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units + (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
 STRING 11261
 // Abilities: A0EL (Senpou: Hakugeki no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
@@ -74630,6 +74660,12 @@ STRING 12210
 // Abilities: A00C (Tsunoori), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r |cff87ceeb(4 x Ninjutsu + 666) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 70 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 40s + |cff87ceeb10 s x skill level|n|cff32cd32Description:|r|nTenten uses her heavy-weight chain to immobilize the enemy while she throws several kunais and shurikens at the target, dealing massive damage and stunning them.
+}
+
+STRING 12211
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units + (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 12212
@@ -82410,6 +82446,12 @@ STRING 13507
 |cffB0B0B0Puppet Control: Secondary Ability|r [|cffffcc00W|r] - [|cffffcc00Level 9|r]
 }
 
+STRING 13508
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units + (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
 STRING 13509
 // Abilities: A0OI (|cffdeaf69Kumo Senkyuu: Suzaku|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -84492,6 +84534,12 @@ STRING 13855
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 300|n|cff32cd32Damage:|r |cff87ceeb(30 + Ninjutsu/2) x skill level |r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nHanabi teleports to the enemy doing a short kaiten.
 }
 
+STRING 13856
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units + (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
 STRING 13857
 // Items: I018 (Battle Kunai - |cffffcc00Level 7|r), Description (Description)
 {
@@ -84714,10 +84762,28 @@ STRING 13893
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
+STRING 13894
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units + (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
 STRING 13895
 // Abilities: A0EU (|cff5ace76Senpou: Jagei Jubaku|r), Tip (Tooltip - Normal)
 {
 Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 3|r]
+}
+
+STRING 13896
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units + (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
+STRING 13897
+// Abilities: A01N (|cff8080ffTsuuga|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units + (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 13898
@@ -134320,30 +134386,6 @@ STRING 22118
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceebGenjutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 60 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKankuro use his puppet Sanshouo to release a powerful stream of firel, dealing damage to enemies in line.
 }
 
-STRING 22120
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units (|cff87ceebNinjutsu x skill level / 2|r to buildings)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 22121
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units (|cff87ceebNinjutsu x skill level / 2|r to buildings)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 22122
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units (|cff87ceebNinjutsu x skill level / 2|r to buildings)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 22123
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units (|cff87ceebNinjutsu x skill level / 2|r to buildings)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
 STRING 22127
 // Units: N01Y (Nidaime Hokage), Name (Name)
 {
@@ -135596,18 +135638,6 @@ STRING 22678
 // Abilities: A1AO (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
 {
 |cff9d8d8dCursed Seal|r [|cffffcc00R|r] - [|cffffcc00Level 2|r]
-}
-
-STRING 22713
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units (|cff87ceebNinjutsu x skill level / 2|r to buildings)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 22714
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units (|cff87ceebNinjutsu x skill level / 2|r to buildings)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 22718
@@ -137074,18 +137104,6 @@ STRING 23290
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebGenjutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Effects:|r Stuns affected enemies for 2 seconds and knocks them back towards the direction Karasu  is facing|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb30 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb2 x skill level|r|n|cff32cd32Description:|r|nKankuro summons his Karasu puppet to release a barbed attack, stunning and knocking back enemies in line
 }
 
-STRING 23294
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units (|cff87ceebNinjutsu x skill level / 2|r to buildings)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 23295
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units (|cff87ceebNinjutsu x skill level / 2|r to buildings)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
 STRING 23296
 // Abilities: A0MH (|cff9d8d8dCursed Seal|r), Tip (Tooltip - Normal)
 {
@@ -137114,18 +137132,6 @@ STRING 23302
 // Abilities: A102 (|cff87ceebBakusai Hyosho|r), Tip (Tooltip - Normal)
 {
 |cff87ceebBakusai Hyosho|r [|cffffcc00E|r] - [|cffffcc00Level 7|r]
-}
-
-STRING 23314
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units (|cff87ceebNinjutsu x skill level / 2|r to buildings)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 23315
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units (|cff87ceebNinjutsu x skill level / 2|r to buildings)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 23316
@@ -137186,12 +137192,6 @@ STRING 23326
 // Abilities: A0FR (|cff800080Nano-bug mode|r), Tip (Tooltip - Normal)
 {
 |cff800080Nano-bug mode|r [|cffffcc00W|r] - [|cffffcc00Level 7|r]
-}
-
-STRING 23327
-// Abilities: A01N (|cff8080ffTsuuga|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units (|cff87ceebNinjutsu x skill level / 2|r to buildings)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 23328
