@@ -12482,6 +12482,12 @@ STRING 2081
 Hokage Head 3
 }
 
+STRING 2082
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stuns for 0.4s|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
+}
+
 STRING 2083
 // Abilities: A036 (Semi Choice), Ubertip (Tooltip - Normal - Extended)
 {
@@ -20532,6 +20538,12 @@ STRING 3426
 // Abilities: A02V (Mushi Kame no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Instant Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceeb50 x skill level|r|n|cff32cd32Damage Type:|r Spell|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Effects:|r Slow nearby enemies by 50% during 3 seconds and make the caster invulnerable for 2 seconds|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 18s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nShino summons several insects to protect him, making an invunerable barrier and dealing damage to nearby enemies.
+}
+
+STRING 3427
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stuns for 0.4s|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 3428
@@ -84822,6 +84834,12 @@ STRING 13905
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Damage:|r |cff87ceeb4 x Genjutsu|r each swap|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Casting Range:|r 800|n|cff32cd32Effects:|r Allow to swap position with enemy 3 times for 15s. Each swap has 2s cooldown.|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nAllow the user to swap position with the enemy for a certain amount of times, each time dealing damage.
 }
 
+STRING 13906
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stuns for 0.4s|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
+}
+
 STRING 13907
 // Abilities: A19V (Kumonendo), Ubertip (Tooltip - Normal - Extended)
 {
@@ -85108,6 +85126,12 @@ STRING 13954
 // Abilities: A1DN (|cffba0000Shunpo Combo|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceeb90 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 200 width x 800 length|n|cff32cd32Chakra Cost:|r |cff87ceeb|cff87ceeb20 x skill level|n|cff32cd32Cooldown:|r 10s + |cff87ceeb1 x skill level|n|cff32cd32Extra Effect:|r Deals |cff87ceeb3 x ninjutsu|r extra damage during the Final Getsuga Tensho and the cooldown is reseted on kills.|n|cff32cd32Description:|r|nHoho is an important skill for most Shinigami, which incorporates speed and agility. The skill level of Hohō can be enhanced and improved through concentration, training, and mastery of it.
+}
+
+STRING 13955
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stuns for 0.4s|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 13956
@@ -85416,6 +85440,12 @@ STRING 14006
 (Caster System?)
 }
 
+STRING 14007
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stuns for 0.4s|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
+}
+
 STRING 14008
 // Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Tip (Tooltip - Normal)
 {
@@ -85480,6 +85510,12 @@ STRING 14018
 // Buffs/Effects: B03P (), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Asura Essence; it has an increased hit point regeneration.
+}
+
+STRING 14019
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stuns for 0.4s|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 14020
@@ -85570,6 +85606,12 @@ STRING 14034
 // Abilities: A0SR (Six Paths of Pain), Tip (Tooltip - Normal)
 {
 Six Paths of Pain [|cffffcc00D|r]
+}
+
+STRING 14035
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stuns for 0.4s|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 14036
@@ -89151,6 +89193,12 @@ STRING 14623
 // Abilities: A17S (Naruto Missile), Tip (Tooltip - Normal)
 {
 Naruto Missile [|cffffcc00Q|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 14624
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stuns for 0.4s|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 14625
@@ -100113,6 +100161,12 @@ STRING 16317
 Learn |cffc7ad60Sabaku Kyu|r [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
+STRING 16318
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stuns for 0.4s|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
+}
+
 STRING 16319
 // Units: e00P (Son Goku), Name (Name)
 {
@@ -100185,6 +100239,12 @@ STRING 16330
 Ninpou: Choushin Giga [|cffffcc00R|r] - [|cffffcc00Level 2|r]
 }
 
+STRING 16331
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stuns for 0.4s|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
+}
+
 STRING 16332
 // Abilities: A17W (|cffff00ffNine-Tails Chakra Bomb|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -100201,6 +100261,12 @@ STRING 16334
 // Abilities: A17W (|cffff00ffNine-Tails Chakra Bomb|r), Ubertip (Tooltip - Normal - Extended)
 {
 Deals |cff40e0d080 X [Level 7] |r|cffff0000katon |rdamage in a fan-like area.|n|cffffcc00Cooldown:|r 15s
+}
+
+STRING 16335
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stuns for 0.4s|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 16336
@@ -106420,6 +106486,18 @@ STRING 17372
 // Abilities: A0CX (|cff800080Ningendou|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 525|n|cff32cd32Damage:|r |cff87ceeb50 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Pull the target and silences him for 1.5s. Also recovers |cff87ceeb50 x skill level|r hit points|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 18s|n|cff32cd32Description:|r|nThe Human Path grants a Rinnegan user the ability to read the mind of any target by placing his hand on the target's head or chest and yanking the soul out of the body.
+}
+
+STRING 17373
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb(Taijutsu + 800) x skill level|r|r |n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 60s |r|n|cff32cd32Description:|r|nThe user creates a multiple shadow clones from one shuriken, striking down the enemy.
+}
+
+STRING 17374
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
 STRING 17375
@@ -113005,6 +113083,18 @@ STRING 18469
 Kisame's Akatsuki Ring.|n|cff32cd32+Drain 4% of chakra per second from enemies in 600 radius|n(Hero Passive) Kisame's R final hit now drains 15% mana.
 }
 
+STRING 18470
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
+}
+
+STRING 18471
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
+}
+
 STRING 18472
 // Items: I00N (|cff7749baBall Ring|r), Ubertip (Tooltip - Extended)
 {
@@ -113159,6 +113249,12 @@ STRING 18497
 // Abilities: A10F (|cff000000Mushi Kame No Jutsu|r), Tip (Tooltip - Normal)
 {
 Mushi Kame No Jutsu [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 18498
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
 STRING 18499
@@ -117747,12 +117843,6 @@ STRING 19256
 (Pakura Second W)
 }
 
-STRING 19257
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stops early if it hits an enemy hero|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
-}
-
 STRING 19258
 // Abilities: A0I6 (|cff53a4ffSuika no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -117763,24 +117853,6 @@ STRING 19259
 // Abilities: A0I6 (|cff53a4ffSuika no Jutsu|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 350 + |cff87ceeb50 x skill level|r|n|cff32cd32Effects:|r Teleport instantly to the target location.|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s - |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nAllows the hero to turn into water and move to targerted position.
-}
-
-STRING 19260
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stops early if it hits an enemy hero|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
-}
-
-STRING 19261
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stops early if it hits an enemy hero|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
-}
-
-STRING 19262
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stops early if it hits an enemy hero|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 19263
@@ -117823,12 +117895,6 @@ STRING 19269
 // Abilities: A0NB (|cffb2d2dfSawarabi no Mai|r), Researchtip (Tooltip - Learn)
 {
 Learn |cffb2d2dfSawarabi no Mai|r [|cffffcc00T|r] - [|cffffcc00Level %d|r]
-}
-
-STRING 19270
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stops early if it hits an enemy hero|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 19271
@@ -117883,12 +117949,6 @@ STRING 19279
 // Abilities: A0PT (|cff000000Sumi Nagashi|r), Researchhotkey (Hotkey - Learn)
 {
 D
-}
-
-STRING 19280
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stops early if it hits an enemy hero|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 19281
@@ -117993,12 +118053,6 @@ STRING 19297
 Chiyo performs a variation of the technique by attaching threads generated for the Puppet Technique to the blades and suppressing her chakra as much as possible that they will be unnoticeable. In doing this, she is able to transfer the threads from one weapon to that of the enemies for an added surprise or advantage during battle.|n|cff87ceebPicks the kunais released during Soushujin and sends them to a target enemy, dealing Genjutsu X Ability-Level.|n|cffff0000Caution: It's necessary you cast Soushujin before to use this technique.|r
 }
 
-STRING 19298
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stops early if it hits an enemy hero|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
-}
-
 STRING 19299
 // Abilities: A0PA (Wind (R) + Water (W): Ice Release - Icicle Barrage), EditorSuffix (Editor Suffix)
 {
@@ -118075,12 +118129,6 @@ STRING 19311
 // Abilities: A0LJ (Explode!), Ubertip (Tooltip - Normal - Extended)
 {
 Chiyo performs a variation of the technique by attaching threads generated for the Puppet Technique to the blades and suppressing her chakra as much as possible that they will be unnoticeable. In doing this, she is able to transfer the threads from one weapon to that of the enemies for an added surprise or advantage during battle.|n|cff87ceebPicks the kunais released during Soushujin and sends them to a target enemy, dealing Genjutsu X Ability-Level.|n|cffff0000Caution: It's necessary you cast Soushujin before to use this technique.|r
-}
-
-STRING 19312
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stops early if it hits an enemy hero|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 19313
@@ -118601,12 +118649,6 @@ STRING 19397
 Earth Release was previously cast and is currently on cooldown.
 }
 
-STRING 19398
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stops early if it hits an enemy hero|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
-}
-
 STRING 19399
 // Buffs/Effects: B03T (Water Release), EditorName (Name (Editor Only))
 {
@@ -119031,12 +119073,6 @@ STRING 19469
 // Abilities: A0LA (|cff800080Kuchiyose: Edo Tensei|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb800 x skill level + Genjutsu|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Chakra Cost:|r 350 - |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nKabuto revives former Akatsuki members through the Edo Tensei technique and order them to attack the target simultaneously.
-}
-
-STRING 19470
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stops early if it hits an enemy hero|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 19471
@@ -120497,12 +120533,6 @@ STRING 19713
 Sasori infuses highly dangerous venom on Hiruko's tail, dealing |cff87ceeb3 x skill level|r damage per second during 10 seconds and slowing the target by |cff87ceeb2% x skill level|r.
 }
 
-STRING 19714
-// Abilities: A02T (Devour), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Ally|n|cff32cd32Casting Range:|r 200|n|cff32cd32Damage:|r |cff87ceeb3 x Genjutsu|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Make the target disappear from the map for three seconds, heals if an ally is eaten|n|cff32cd32Chakra Cost:|r 150|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nZetsu devours the target, making it disappear from the map for three seconds.
-}
-
 STRING 19715
 // Abilities: A0TZ (TayuyaSlow), Tip (Tooltip - Normal)
 {
@@ -120783,6 +120813,18 @@ STRING 19761
 // Abilities: A029 (Tail Strike), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 200 width x 700 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 12s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nThe Hiruko Puppet use his tail to strike all enemies in line.
+}
+
+STRING 19762
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
+}
+
+STRING 19763
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
 STRING 19764
@@ -121569,12 +121611,6 @@ STRING 19894
 // Abilities: A0QV (Debuff - Swift Release), Tip (Tooltip - Normal)
 {
 Debuff - Earth Release
-}
-
-STRING 19895
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|n|cff32cd32Effects:|r Slows, Stops early if it hits an enemy hero|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nRoshi coats himself in lava and rushes forward.
 }
 
 STRING 19896
@@ -124738,6 +124774,12 @@ STRING 20403
 Increases attack speed by |cff87ceeb5% x skill level|r and each attack throw |cff87ceebskill level|r additional shurikens. Also increases range of Fuuma Shuriken item by |cff87ceeb50 x skill level|r.
 }
 
+STRING 20404
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
+}
+
 STRING 20405
 // Abilities: A0O6 (Enma Stomp), Researchtip (Tooltip - Learn)
 {
@@ -124892,12 +124934,6 @@ STRING 20430
 // Abilities: A0F5 (Ninpou: Chouji Giga "Tigers"), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Buildings|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r 10 + Ninjutsu / 4.0 each tiger attack|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Effects:|r Summon 10 tigers that deal damage and slow the target by |cff87ceeb3% x skill level|r for 1s. Last |cff87ceeb5 +.2 x skill level|r seconds.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb20 x skill level|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nSai summons ten ink tigers to attack the target and slow them.
-}
-
-STRING 20431
-// Abilities: A0OD (|cff7f2c84M|cff40388ei|cff088490r|cff68bc5ca|cfff6f101g|cffe56524e|cffdb253c|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Effects:|r Every time Gengetsu attacks he summons a clone of himself to attack the target he was attacking which deals 15% of his attack damage and |cff87ceebGenjutsu/6|r in chaos damage. Last |cff87ceeb2.0s|r.
 }
 
 STRING 20432
@@ -127312,6 +127348,12 @@ STRING 20811
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceeb(50 + taijutsu / 2) x skill level (Taijutsu x skill level in Sage Mode)|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Effects:|r Slow affected enemies by 50% for three seconds|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nJiraiya summons Gama Bunta which falls out of the sky, smashing all enemies below.
 }
 
+STRING 20812
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
+}
+
 STRING 20813
 // Abilities: A0GN (Hachibi Chakra Form), Ubertip (Tooltip - Normal - Extended)
 {
@@ -127330,10 +127372,34 @@ STRING 20815
 Genjutsu Sharingan
 }
 
+STRING 20816
+// Abilities: A0XC (Kisei Bunshin), Tip (Tooltip - Normal)
+{
+Kisei Bunshin [|cffffcc00R|r] 
+}
+
 STRING 20817
 // Abilities: A1CU (|cff0fcaf7Kage Bunshin Rasengan|r), Tip (Tooltip - Normal)
 {
 |cff0fcaf7Kage Bunshin Rasengan|r [|cffffcc00E|r] - [|cffffcc00Level 6|r]
+}
+
+STRING 20818
+// Abilities: A0XC (Kisei Bunshin), Tip (Tooltip - Normal)
+{
+Shuriken Kage Bunshin no Jutsu [|cffffcc00R|r] - [|cffffcc00Level 2|r]
+}
+
+STRING 20819
+// Abilities: A0XC (Kisei Bunshin), Tip (Tooltip - Normal)
+{
+Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 3|r]
+}
+
+STRING 20820
+// Abilities: A0XC (Kisei Bunshin), Tip (Tooltip - Normal)
+{
+Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 20821
@@ -127352,6 +127418,12 @@ STRING 20823
 // Abilities: A16J (|cffff0000Katon: Bakufu Ranbu|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb100 x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300 width x 950 length|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nThe user kneads chakra inside their body and converts it into fire, which is then expelled from the mouth in a large stream. The blaze is drawn into a spiral when the user expands their stomach, which will engulf the opponent in a massive vortex, giving them no option to escape, leaving them to suffer and burn
+}
+
+STRING 20824
+// Abilities: A0XC (Kisei Bunshin), Tip (Tooltip - Normal)
+{
+Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 20825
@@ -128853,10 +128925,28 @@ STRING 21074
 |cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r|n|cff87ceeb+ Chaos Attack|n+ Max Movement Speed|n+ (Taijutsu + Ninjutsu + Genjutsu) Magic Damage Auto Attacks|n|cff32cd32Duration:|r 30s|n|cff32cd32Chakra Cost:|r 200|n|cff32cd32Cooldown:|r 120s|n|cff32cd32Description:|r|nBy using this technique, Ichigo becomes Getsuga itself.
 }
 
+STRING 21075
+// Abilities: A0XC (Kisei Bunshin), Tip (Tooltip - Normal)
+{
+Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
+}
+
+STRING 21076
+// Abilities: A0XC (Kisei Bunshin), Tip (Tooltip - Normal)
+{
+Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
+}
+
 STRING 21077
 // Abilities: A150 (|cffb90a2bLeap), Tip (Tooltip - Normal)
 {
 |cffb90a2bLeap|r [|cffffcc00Q|r]
+}
+
+STRING 21078
+// Abilities: A0XC (Kisei Bunshin), Tip (Tooltip - Normal)
+{
+Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 21079
@@ -128895,6 +128985,12 @@ STRING 21084
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Ensnare target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 35 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
+STRING 21085
+// Abilities: A0XC (Kisei Bunshin), Tip (Tooltip - Normal)
+{
+Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 9|r]
+}
+
 STRING 21086
 // Abilities: A150 (|cffb90a2bLeap), Tip (Tooltip - Normal)
 {
@@ -128919,10 +129015,34 @@ STRING 21089
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r 13 x Genjutsu at max|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Effects:|r Paralyze affected enemies for 5 seconds|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nTobi's ultimate plan, which consiste to use the moon to cover the world in an infinite illusion.
 }
 
+STRING 21090
+// Abilities: A0XC (Kisei Bunshin), Tip (Tooltip - Normal)
+{
+Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 21091
+// Abilities: A0XC (Kisei Bunshin), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
 STRING 21092
 // Abilities: A150 (|cffb90a2bLeap), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target type:|r Point target|n|cff32cd32Targets allowed:|r Enemy, Building|n|cff32cd32Casting range:|r 900|n|cff32cd32Damage:|r |cff87ceeb50 x skill level|r|r|n|cff32cd32Damage type:|r Chaos|n|cff32cd32Area of Effect:|r 500|n|cff32cd32Effects:|r Stuns enemies for 2 seconds |n|cff32cd32Description:|r|nThe dog jumps on his prey
+}
+
+STRING 21093
+// Abilities: A0XC (Kisei Bunshin), Name (Name)
+{
+Kisei Bunshin
+}
+
+STRING 21094
+// Abilities: A0XC (Kisei Bunshin), Researchtip (Tooltip - Learn)
+{
+Learn Shuriken Kage Bunshin no Jutsu [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 21095
@@ -128931,10 +129051,28 @@ STRING 21095
 |cff32cd32Target type:|r Point target|n|cff32cd32Targets allowed:|r Enemy, Building|n|cff32cd32Casting range:|r 900|n|cff32cd32Damage:|r |cff87ceeb50 x skill level|r|r|n|cff32cd32Damage type:|r Chaos|n|cff32cd32Area of Effect:|r 500|n|cff32cd32Effects:|r Stuns enemies for 2 seconds |n|cff32cd32Description:|r|nThe dog jumps on his prey
 }
 
+STRING 21096
+// Abilities: A0XC (Kisei Bunshin), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb(Taijutsu + 800) x skill level|r|r |n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 60s |r|n|cff32cd32Description:|r|nThe user creates a multiple shadow clones from one shuriken, striking down the enemy.
+}
+
 STRING 21097
 // Abilities: A150 (|cffb90a2bLeap), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target type:|r Point target|n|cff32cd32Targets allowed:|r Enemy, Building|n|cff32cd32Casting range:|r 900|n|cff32cd32Damage:|r |cff87ceeb50 x skill level|r|r|n|cff32cd32Damage type:|r Chaos|n|cff32cd32Area of Effect:|r 500|n|cff32cd32Effects:|r Stuns enemies for 2 seconds |n|cff32cd32Description:|r|nThe dog jumps on his prey
+}
+
+STRING 21098
+// Abilities: A0XC (Kisei Bunshin), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 21099
+// Abilities: A0OD (|cff7f2c84M|cff40388ei|cff088490r|cff68bc5ca|cfff6f101g|cffe56524e|cffdb253c|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Effects:|r Every time Gengetsu attacks he deals |cff87ceebGenjutsu/5|r in chaos damage and summons a clone of himself to attack the target he was attacking which deals 15% of his attack damage. Last |cff87ceeb2.0s|r.
 }
 
 STRING 21100
@@ -132722,6 +132860,18 @@ STRING 21730
 // Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill Level|r|n|cff32cd32Area of Effect:|r 160 width with 300 fan at the tip|n|cff32cd32Effects:|r Slows enemies hit for 1.5s|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r |cff87ceeb|r|cff87ceeb10 x skill Level|n|cff32cd32Cooldown:|r 8s + |cff87ceebskill Level|n|cff32cd32Description:|r|nKurotsuchi shoots out a stream of water that fans out like a trumpet. Her ability interacts with her Yoton: Sekkaigyo no Jutsu causing it to deal damage instantly and rooting the target.
+}
+
+STRING 21731
+// Abilities: A02T (Devour), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Ally|n|cff32cd32Casting Range:|r 200|n|cff32cd32Damage:|r |cff87ceeb3 x Genjutsu|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Make the target disappear from the map for three seconds, heals Zetsu, and if an ally is eaten then heal them as well.|n|cff32cd32Chakra Cost:|r 150|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nZetsu devours the target, making it disappear from the map for three seconds.
+}
+
+STRING 21732
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 800|n|cff32cd32Chakra Cost:|r 150|n|cff32cd32Cooldown:|r 60s |r|n|cff32cd32Description:|r|nZetsu summons |cff87ceeb6|r clones for |cff87ceeb5s|r which attack the primary target dealing |cff87ceeb30 x skill level|r chaos damage, if an enemy hero runs into the clones they explode dealing |cff87ceebGenjutsu/2
 }
 
 STRING 21733
