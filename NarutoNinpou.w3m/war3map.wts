@@ -5049,12 +5049,6 @@ STRING 841
 Senpou: Kebari Senbon [|cffffcc00D|r]
 }
 
-STRING 842
-// Abilities: A0EE (Shark Dance), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb5 x Taijutsu|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r 250|n|cff32cd32Cooldown:|r 20s
-}
-
 STRING 843
 // Abilities: A0KE (|cffba8b55Karura's Shield|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -5743,12 +5737,6 @@ STRING 957
 // Items: I02Q (Timed Explosive Tag), Hotkey (Hotkey)
 {
 F
-}
-
-STRING 958
-// Abilities: A0DA (|cffba0000Mugen Tsukuyomi|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r 13 x Genjutsu at max|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Effects:|r Paralyze affected enemies for 2.5 seconds|n|cff32cd32Chakra Cost:|r 800|n|cff32cd32Cooldown:|r 100s|n|cff32cd32Description:|r|nTobi's ultimate plan, which uses the moon to cover the world in an infinite illusion.
 }
 
 STRING 959
@@ -10381,7 +10369,7 @@ Q
 }
 
 STRING 1731
-// Abilities: A0EE (Shark Dance), Hotkey (Hotkey - Normal)
+// Abilities: A0EE (|cff87ceebShark Dance), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -10609,13 +10597,13 @@ Learn Bansho Ten'in [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 1769
-// Abilities: A0HE (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EE (|cff87ceebShark Dance), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 1770
-// Abilities: A0HE (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Hotkey (Hotkey - Normal)
+// Abilities: A0HE (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -11661,13 +11649,13 @@ STRING 1944
 }
 
 STRING 1945
-// Abilities: A00F (Senpou: Goemon), Hotkey (Hotkey - Normal)
+// Abilities: A0HE (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 1946
-// Abilities: A0AF (Perfume Spray), Researchhotkey (Hotkey - Learn)
+// Abilities: A00F (Senpou: Goemon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -12207,13 +12195,13 @@ Shinranshin no Jutsu
 }
 
 STRING 2036
-// Abilities: A0AF (Perfume Spray), Hotkey (Hotkey - Normal)
+// Abilities: A0AF (Perfume Spray), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2037
-// Abilities: A0TF (|cff000000Jiongu: Grab|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0AF (Perfume Spray), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -12321,13 +12309,13 @@ STRING 2054
 }
 
 STRING 2055
-// Abilities: A0TF (|cff000000Jiongu: Grab|r), Hotkey (Hotkey - Normal)
+// Abilities: A0TF (|cff000000Jiongu: Grab|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2056
-// Abilities: A01G (|cff5b85ffSuiton: Suikodan no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TF (|cff000000Jiongu: Grab|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -12657,7 +12645,7 @@ W
 }
 
 STRING 2111
-// Abilities: A01G (|cff5b85ffSuiton: Suikodan no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A01G (|cff5b85ffSuiton: Suikodan no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -12681,7 +12669,7 @@ STRING 2114
 }
 
 STRING 2115
-// Abilities: A0AG (Ether Spray), Researchhotkey (Hotkey - Learn)
+// Abilities: A01G (|cff5b85ffSuiton: Suikodan no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -12798,12 +12786,6 @@ STRING 2134
 // Abilities: A05T (Hachibi Chakra Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form
-}
-
-STRING 2135
-// Abilities: A1AX (|cff0000ffSuiton: Daikoudan no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r 5 x Taijutsu + target max chakra|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 70s|n|cff32cd32Description:|r|nThe user creates a gigantic shark out of water and, by thrusting both hands forward, sends it to attack the opponent.
 }
 
 STRING 2136
@@ -13125,13 +13107,13 @@ Armor made from the Sanbi's skin.|n|cff32cd32+50 Armor|n+35 All Stats|n- Reduce 
 }
 
 STRING 2189
-// Abilities: A0AG (Ether Spray), Hotkey (Hotkey - Normal)
+// Abilities: A0AG (Ether Spray), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2190
-// Abilities: A0RG (Shunshin no Jutsu: Silent Kill), Researchhotkey (Hotkey - Learn)
+// Abilities: A0AG (Ether Spray), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -13575,7 +13557,7 @@ Release the puppet, allowing Kankuro to cast spells under this puppet possession
 }
 
 STRING 2264
-// Abilities: A0RG (Shunshin no Jutsu: Silent Kill), Hotkey (Hotkey - Normal)
+// Abilities: A0RG (Shunshin no Jutsu: Silent Kill), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -14144,13 +14126,13 @@ Ether Spray
 }
 
 STRING 2359
-// Abilities: A0WG (|cff8080ffErubou|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RG (Shunshin no Jutsu: Silent Kill), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2360
-// Abilities: A0WG (|cff8080ffErubou|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WG (|cff8080ffErubou|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -14168,13 +14150,13 @@ Learn Tsukuyomi [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 2363
-// Abilities: A01H (Timed Explosive Tag), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WG (|cff8080ffErubou|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2364
-// Abilities: A02H (Explosion), Unhotkey (Hotkey - Turn Off)
+// Abilities: A01H (Timed Explosive Tag), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -14234,7 +14216,7 @@ STRING 2373
 }
 
 STRING 2374
-// Abilities: A02H (Explosion), Hotkey (Hotkey - Normal)
+// Abilities: A02H (Explosion), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -14276,7 +14258,7 @@ Raiton: Gian [|cffffcc00Q|r]
 }
 
 STRING 2381
-// Abilities: A04H (|cff39e30cPoison Pills|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A02H (Explosion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -14594,7 +14576,7 @@ STRING 2433
 }
 
 STRING 2434
-// Abilities: A08H (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A04H (|cff39e30cPoison Pills|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -15259,7 +15241,7 @@ STRING 2544
 }
 
 STRING 2545
-// Abilities: A08H (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A08H (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -15301,7 +15283,7 @@ STRING 2551
 }
 
 STRING 2552
-// Abilities: A0FH (Teshi Sendan), Researchhotkey (Hotkey - Learn)
+// Abilities: A08H (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -16207,7 +16189,7 @@ Rasengan [|cffffcc00Q|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 2703
-// Abilities: A0FH (Teshi Sendan), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Teshi Sendan), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -16237,7 +16219,7 @@ Suiton: Suiryuudan no Jutsu [|cffffcc00R|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 2708
-// Abilities: A0HH (|cffff8080Shoton: Suisho Ro no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FH (Teshi Sendan), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -16741,7 +16723,7 @@ T
 }
 
 STRING 2792
-// Abilities: A0HH (|cffff8080Shoton: Suisho Ro no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0HH (|cffff8080Shoton: Suisho Ro no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -16848,13 +16830,13 @@ HP
 }
 
 STRING 2810
-// Abilities: A0KH (|cff800080Curse of Jashin|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HH (|cffff8080Shoton: Suisho Ro no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2811
-// Abilities: A0KH (|cff800080Curse of Jashin|r), Hotkey (Hotkey - Normal)
+// Abilities: A0KH (|cff800080Curse of Jashin|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -17864,7 +17846,7 @@ STRING 2978
 }
 
 STRING 2979
-// Abilities: A0QH (Fungokyaku), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KH (|cff800080Curse of Jashin|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18153,7 +18135,7 @@ Puppet bomb (|cffffcc00Q |r) - [|cffffcc00 Level 7 |r]
 }
 
 STRING 3027
-// Abilities: A0QH (Fungokyaku), Hotkey (Hotkey - Normal)
+// Abilities: A0QH (Fungokyaku), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18183,13 +18165,13 @@ STRING 3031
 }
 
 STRING 3032
-// Abilities: A0TH (|cff8080ffRaiton: Gian), Hotkey (Hotkey - Normal)
+// Abilities: A0QH (Fungokyaku), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 3033
-// Abilities: A0WH (|cff8080ffRaitou Jutsu: Rakurai|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TH (|cff8080ffRaiton: Gian), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18405,13 +18387,13 @@ Z
 }
 
 STRING 3069
-// Abilities: A0WH (|cff8080ffRaitou Jutsu: Rakurai|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WH (|cff8080ffRaitou Jutsu: Rakurai|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 3070
-// Abilities: A02J (Smoke Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WH (|cff8080ffRaitou Jutsu: Rakurai|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18586,7 +18568,7 @@ Serial Gudoudamas [|cffffcc00R|r]
 }
 
 STRING 3100
-// Abilities: A04J (|cffb36d54Shichuurou no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A02J (Smoke Bomb), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18632,7 +18614,7 @@ STRING 3107
 }
 
 STRING 3108
-// Abilities: A04J (|cffb36d54Shichuurou no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A04J (|cffb36d54Shichuurou no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18670,7 +18652,7 @@ Truth Seeker Orb [|cffffcc00Q|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 3115
-// Abilities: A05J (|cffff0000Kugutsu no Jutsu: Sanshouo|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A04J (|cffb36d54Shichuurou no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18826,7 +18808,7 @@ STRING 3140
 }
 
 STRING 3141
-// Abilities: A0EF (Great Shark Dance), Hotkey (Hotkey - Normal)
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -18946,7 +18928,7 @@ STRING 3160
 }
 
 STRING 3161
-// Abilities: A05J (|cffff0000Kugutsu no Jutsu: Sanshouo|r), Hotkey (Hotkey - Normal)
+// Abilities: A05J (|cffff0000Kugutsu no Jutsu: Sanshouo|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -19383,7 +19365,7 @@ Truth Seeker Orb [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 3234
-// Abilities: A0DJ (Explode), Hotkey (Hotkey - Normal)
+// Abilities: A05J (|cffff0000Kugutsu no Jutsu: Sanshouo|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -19629,7 +19611,7 @@ STRING 3274
 }
 
 STRING 3275
-// Abilities: A0PK (|cffff8080Shoton: Suisho Meikyu no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DJ (Explode), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -19785,7 +19767,7 @@ Truth Seeker Orb [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 3301
-// Abilities: A07L (|cff9d6c56Nikudan Sensha|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PK (|cffff8080Shoton: Suisho Meikyu no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -19809,7 +19791,7 @@ STRING 3304
 }
 
 STRING 3305
-// Abilities: A07L (|cff9d6c56Nikudan Sensha|r), Hotkey (Hotkey - Normal)
+// Abilities: A07L (|cff9d6c56Nikudan Sensha|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -20130,12 +20112,6 @@ STRING 3358
 // Items: I03B (|cffB0B0B0Wind Shuriken|r), Ubertip (Tooltip - Extended)
 {
 Shuriken infused with the wind. The carrier feels lighter with this weapon in their possession.|n|cff32cd32+600 HP|n+70 Ninjutsu|n- Critical Strike (passive, 100% to deal 2 x Highest Stat normal damage, 2s cd)|n|cffff0000Item Type: Weapon|r
-}
-
-STRING 3359
-// Abilities: A0JQ (|cff5b85ffSuiton: Mugensame|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb4000 + 4 x Tai|r Normal Damage over 3.5s|n|cff32cd32Area of Effect:|r 650|n|cff32cd32Chakra Cost:|r 550|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nKisame creates one thousand sharks out of water that enter into a wall formation and rain down to attack the enemies.
 }
 
 STRING 3360
@@ -20655,13 +20631,13 @@ STRING 3445
 }
 
 STRING 3446
-// Abilities: A0GL (Explosive Kunai), Researchhotkey (Hotkey - Learn)
+// Abilities: A07L (|cff9d6c56Nikudan Sensha|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 3447
-// Abilities: A0IL (Flash Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GL (Explosive Kunai), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21387,7 +21363,7 @@ Explode! [|cffffcc00Q|r]
 }
 
 STRING 3568
-// Abilities: A0LL (|cffff0000Roar), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0IL (Flash Bomb), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21501,13 +21477,13 @@ STRING 3586
 }
 
 STRING 3587
-// Abilities: A0LL (|cffff0000Roar), Hotkey (Hotkey - Normal)
+// Abilities: A0LL (|cffff0000Roar), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
 
 STRING 3588
-// Abilities: A0GM (Six Swords Dance), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LL (|cffff0000Roar), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21651,7 +21627,7 @@ STRING 3611
 }
 
 STRING 3612
-// Abilities: A0GM (Six Swords Dance), Hotkey (Hotkey - Normal)
+// Abilities: A0GM (Six Swords Dance), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22426,7 +22402,7 @@ R
 }
 
 STRING 3741
-// Abilities: A0NM (Beauty of Destruction), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GM (Six Swords Dance), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -22564,13 +22540,13 @@ STRING 3763
 }
 
 STRING 3764
-// Abilities: A0NM (Beauty of Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0NM (Beauty of Destruction), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 3765
-// Abilities: A0TM (|cff20b1aaCoral Wave|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NM (Beauty of Destruction), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23038,7 +23014,7 @@ STRING 3842
 }
 
 STRING 3843
-// Abilities: A0TM (|cff20b1aaCoral Wave|r), Hotkey (Hotkey - Normal)
+// Abilities: A0TM (|cff20b1aaCoral Wave|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -23533,7 +23509,7 @@ STRING 3905
 }
 
 STRING 3906
-// Abilities: A0WN (|cff8080ffRaikiri|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TM (|cff20b1aaCoral Wave|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23557,7 +23533,7 @@ Sasuke get pills from the serpent's days of Sigil, the curse can be greatly enha
 }
 
 STRING 3910
-// Abilities: A0WN (|cff8080ffRaikiri|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WN (|cff8080ffRaikiri|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -23779,7 +23755,7 @@ Wind Assault [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 3947
-// Abilities: A09O (Shinranshin no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WN (|cff8080ffRaikiri|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23803,7 +23779,7 @@ STRING 3950
 }
 
 STRING 3951
-// Abilities: A09O (Shinranshin no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A09O (Shinranshin no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -24112,21 +24088,9 @@ STRING 3982
 }
 
 STRING 3983
-// Abilities: A0SO (|cff0fcaf7Chakra Enhanced Strength|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A09O (Shinranshin no Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
-}
-
-STRING 3984
-// Abilities: A0EE (Shark Dance), Name (Name)
-{
-Shark Dance
-}
-
-STRING 3985
-// Abilities: A0EE (Shark Dance), Tip (Tooltip - Normal)
-{
-Shark Dance [|cffffcc00Q|r]
 }
 
 STRING 3986
@@ -24534,18 +24498,6 @@ STRING 4033
 E
 }
 
-STRING 4034
-// Abilities: A0EF (Great Shark Dance), Name (Name)
-{
-Great Shark Dance
-}
-
-STRING 4035
-// Abilities: A0EF (Great Shark Dance), Tip (Tooltip - Normal)
-{
-Great Shark Dance [|cffffcc00E|r]
-}
-
 STRING 4036
 // Abilities: A0TG (Release Masks), Hotkey (Hotkey - Normal)
 {
@@ -24829,13 +24781,13 @@ STRING 4082
 }
 
 STRING 4083
-// Abilities: A0PP (|cff008000Mokuton: Kajukai Korin|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SO (|cff0fcaf7Chakra Enhanced Strength|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 4084
-// Abilities: A00Q (Shadow binding technique), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PP (|cff008000Mokuton: Kajukai Korin|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -25129,7 +25081,7 @@ STRING 4132
 }
 
 STRING 4133
-// Abilities: A00Q (Shadow binding technique), Hotkey (Hotkey - Normal)
+// Abilities: A00Q (Shadow binding technique), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -26010,13 +25962,13 @@ Jinton: Genkai Hakuri no Jutsu [|cffffcc00R|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 4277
-// Abilities: A0BQ (|cfffffc00Hiraishingiri|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Q (Shadow binding technique), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 4278
-// Abilities: A0BQ (|cfffffc00Hiraishingiri|r), Hotkey (Hotkey - Normal)
+// Abilities: A0BQ (|cfffffc00Hiraishingiri|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -26268,7 +26220,7 @@ STRING 4319
 }
 
 STRING 4320
-// Abilities: A0TQ ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BQ (|cfffffc00Hiraishingiri|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -26436,13 +26388,13 @@ STRING 4347
 }
 
 STRING 4348
-// Abilities: A0TQ ( ), Hotkey (Hotkey - Normal)
+// Abilities: A0TQ ( ), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 4349
-// Abilities: A0KR (Jinton: Genkai Hakuri no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TQ ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -26802,7 +26754,7 @@ STRING 4408
 }
 
 STRING 4409
-// Abilities: A0KR (Jinton: Genkai Hakuri no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Jinton: Genkai Hakuri no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -26868,7 +26820,7 @@ Adamantine Stomp [|cffffcc00Q|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 4420
-// Abilities: A0WR (|cffc7ad60Sabaku Kyu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KR (Jinton: Genkai Hakuri no Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -27091,13 +27043,13 @@ Shiki_Silence2
 }
 
 STRING 4457
-// Abilities: A0WR (|cffc7ad60Sabaku Kyu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WR (|cffc7ad60Sabaku Kyu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 4458
-// Abilities: A00S (Satetsu Kesshu), Hotkey (Hotkey - Normal)
+// Abilities: A0WR (|cffc7ad60Sabaku Kyu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -27457,7 +27409,7 @@ STRING 4517
 }
 
 STRING 4518
-// Abilities: A0CS (Indra's Arrow), Hotkey (Hotkey - Normal)
+// Abilities: A00S (Satetsu Kesshu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -27789,7 +27741,7 @@ E
 }
 
 STRING 4556
-// Abilities: A0ST (Asura Path), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CS (Indra's Arrow), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -27873,7 +27825,7 @@ Learn |cff32cd32Byakugou|r [|cffffcc00T|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 4570
-// Abilities: A0ST (Asura Path), Hotkey (Hotkey - Normal)
+// Abilities: A0ST (Asura Path), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28125,7 +28077,7 @@ STRING 4611
 }
 
 STRING 4612
-// Abilities: A00U (Shikyaku no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ST (Asura Path), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -28377,13 +28329,13 @@ I need your blood
 }
 
 STRING 4654
-// Abilities: A00U (Shikyaku no Jutsu), Unhotkey (Hotkey - Turn Off)
+// Abilities: A00U (Shikyaku no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 4655
-// Abilities: A00U (Shikyaku no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A00U (Shikyaku no Jutsu), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -28596,12 +28548,6 @@ STRING 4690
 // Abilities: A0KQ (|cffa52a2aEarth Slam|r), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 4691
-// Abilities: A1ER (Hakke: Rokujuyon Sho), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Heroes|n|cff32cd32Damage:|r Hanabi's Bonus/ 24 (Max can strike 320 times, Does not round up)|n|cff32Dd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Effects:|r Slow nearby enemies by 40%|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nHanabi's special Eight Trigrams Sixty-Four Palms which spins the enemies she hits.
 }
 
 STRING 4692
@@ -29211,13 +29157,13 @@ Mujin Meisai [|cffffcc00E|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 4793
-// Abilities: A02U (Kikaichuu Tsumoji no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A00U (Shikyaku no Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 4794
-// Abilities: A02U (Kikaichuu Tsumoji no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A02U (Kikaichuu Tsumoji no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -30464,7 +30410,7 @@ Pipe
 }
 
 STRING 5002
-// Abilities: A07U (|cffec6200Oil|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A02U (Kikaichuu Tsumoji no Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30518,13 +30464,13 @@ STRING 5010
 }
 
 STRING 5011
-// Abilities: A00V (Off smoke), Researchhotkey (Hotkey - Learn)
+// Abilities: A07U (|cffec6200Oil|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 5012
-// Abilities: A00V (Off smoke), Hotkey (Hotkey - Normal)
+// Abilities: A00V (Off smoke), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31736,7 +31682,7 @@ STRING 5213
 }
 
 STRING 5214
-// Abilities: A0KV (|cff8080ffChidori|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A00V (Off smoke), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32137,12 +32083,6 @@ STRING 5280
 Sameodori no Jutsu
 }
 
-STRING 5281
-// Abilities: A1ER (Hakke: Rokujuyon Sho), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Heroes|n|cff32cd32Damage:|r Hanabi's Bonus/ 24 (Max can strike 320 times, Does not round up)|n|cff32Dd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Effects:|r Slow nearby enemies by 40%|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nHanabi's special Eight Trigrams Sixty-Four Palms which spins the enemies she hits.
-}
-
 STRING 5282
 // Units: e01U (Blink), Ubertip (Tooltip - Extended)
 {
@@ -32210,7 +32150,7 @@ This unit is under effects of Bone Aura; meele units that attack it will take da
 }
 
 STRING 5293
-// Abilities: A0KV (|cff8080ffChidori|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KV (|cff8080ffChidori|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33745,7 +33685,7 @@ Hiraishingiri
 }
 
 STRING 5552
-// Abilities: A0KV (|cff8080ffChidori|r), Hotkey (Hotkey - Normal)
+// Abilities: A0KV (|cff8080ffChidori|r), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -34021,7 +33961,7 @@ STRING 5597
 }
 
 STRING 5598
-// Abilities: A0VV (|cff53a4ffMizudeppou no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KV (|cff8080ffChidori|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34045,7 +33985,7 @@ STRING 5601
 }
 
 STRING 5602
-// Abilities: A0VV (|cff53a4ffMizudeppou no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0VV (|cff53a4ffMizudeppou no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34607,7 +34547,7 @@ Cero
 }
 
 STRING 5696
-// Abilities: A0GW (|cffad3f45Demon Slash|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VV (|cff53a4ffMizudeppou no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34673,7 +34613,7 @@ STRING 5706
 }
 
 STRING 5707
-// Abilities: A0GW (|cffad3f45Demon Slash|r), Hotkey (Hotkey - Normal)
+// Abilities: A0GW (|cffad3f45Demon Slash|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34922,7 +34862,7 @@ STRING 5748
 }
 
 STRING 5749
-// Abilities: A0UW (Bijuu Hachimaki), Hotkey (Hotkey - Normal)
+// Abilities: A0GW (|cffad3f45Demon Slash|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35223,7 +35163,7 @@ STRING 5797
 }
 
 STRING 5798
-// Abilities: A09X (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UW (Bijuu Hachimaki), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35247,7 +35187,7 @@ STRING 5801
 }
 
 STRING 5802
-// Abilities: A09X (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A09X (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35336,7 +35276,7 @@ STRING 5816
 }
 
 STRING 5817
-// Abilities: A0AX (|cffff0000Flamethrower), Hotkey (Hotkey - Normal)
+// Abilities: A09X (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35360,7 +35300,7 @@ STRING 5820
 }
 
 STRING 5821
-// Abilities: A0UY (Bijuu Lariat), Researchhotkey (Hotkey - Learn)
+// Abilities: A0AX (|cffff0000Flamethrower), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35999,7 +35939,7 @@ STRING 5928
 }
 
 STRING 5929
-// Abilities: A0DZ (Paper Chakram), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UY (Bijuu Lariat), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -36233,7 +36173,7 @@ Deals |cff40e0d080 X [Ability Level] |r|cff800080non-elemental |rdamage in line.
 }
 
 STRING 5968
-// Abilities: A0DZ (Paper Chakram), Hotkey (Hotkey - Normal)
+// Abilities: A0DZ (Paper Chakram), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -37213,7 +37153,7 @@ STRING 6130
 }
 
 STRING 6131
-// Abilities: A0X3 (I need your blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DZ (Paper Chakram), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -37765,7 +37705,7 @@ R
 }
 
 STRING 6223
-// Abilities: A0X3 (I need your blood), Hotkey (Hotkey - Normal)
+// Abilities: A0X3 (I need your blood), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -37981,7 +37921,7 @@ Drag
 }
 
 STRING 6259
-// Abilities: A0XJ (Assassination Technique), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X3 (I need your blood), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -38137,7 +38077,7 @@ STRING 6284
 }
 
 STRING 6285
-// Abilities: A0XJ (Assassination Technique), Hotkey (Hotkey - Normal)
+// Abilities: A0XJ (Assassination Technique), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -39338,7 +39278,7 @@ Mokuton: Mokuryu no Jutsu [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 6485
-// Abilities: A0Z0 (|cff800080Poison Senbons|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XJ (Assassination Technique), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -39362,7 +39302,7 @@ Learn Mokuton: Mokuryu no Jutsu [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 6489
-// Abilities: A0Z0 (|cff800080Poison Senbons|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0Z0 (|cff800080Poison Senbons|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -39596,7 +39536,7 @@ STRING 6527
 }
 
 STRING 6528
-// Abilities: A0Z0 (|cff800080Poison Senbons|r), Hotkey (Hotkey - Normal)
+// Abilities: A0Z0 (|cff800080Poison Senbons|r), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -40357,7 +40297,7 @@ STRING 6654
 }
 
 STRING 6655
-// Abilities: A0ZT (|cffff0000Sen'en Gouka|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z0 (|cff800080Poison Senbons|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40579,7 +40519,7 @@ STRING 6691
 }
 
 STRING 6692
-// Abilities: A0ZT (|cffff0000Sen'en Gouka|r), Hotkey (Hotkey - Normal)
+// Abilities: A0ZT (|cffff0000Sen'en Gouka|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40609,7 +40549,7 @@ STRING 6696
 }
 
 STRING 6697
-// Abilities: A10F (|cff000000Mushi Kame No Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZT (|cffff0000Sen'en Gouka|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40699,7 +40639,7 @@ Throw Kunai [|cffffcc00W|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 6712
-// Abilities: A10F (|cff000000Mushi Kame No Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A10F (|cff000000Mushi Kame No Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40825,7 +40765,7 @@ STRING 6732
 }
 
 STRING 6733
-// Abilities: A11P (|cff8dc3fcDrowning Bubble Technique|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10F (|cff000000Mushi Kame No Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40885,7 +40825,7 @@ STRING 6742
 }
 
 STRING 6743
-// Abilities: A11P (|cff8dc3fcDrowning Bubble Technique|r), Hotkey (Hotkey - Normal)
+// Abilities: A11P (|cff8dc3fcDrowning Bubble Technique|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40951,7 +40891,7 @@ S
 }
 
 STRING 6754
-// Abilities: A11W (|cff8dc3fcBubble Dome|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A11P (|cff8dc3fcDrowning Bubble Technique|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40975,7 +40915,7 @@ A powerful A-rank developed by Fourth Hokage. Naruto concrentate chakra on palm 
 }
 
 STRING 6758
-// Abilities: A125 (Roar), Unhotkey (Hotkey - Turn Off)
+// Abilities: A11W (|cff8dc3fcBubble Dome|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -41119,7 +41059,7 @@ Webs
 }
 
 STRING 6782
-// Abilities: A125 (Roar), Hotkey (Hotkey - Normal)
+// Abilities: A125 (Roar), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -41365,7 +41305,7 @@ STRING 6822
 }
 
 STRING 6823
-// Abilities: A12V (Multiple slashes combo), Researchhotkey (Hotkey - Learn)
+// Abilities: A125 (Roar), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41431,7 +41371,7 @@ STRING 6833
 }
 
 STRING 6834
-// Abilities: A12V (Multiple slashes combo), Hotkey (Hotkey - Normal)
+// Abilities: A12V (Multiple slashes combo), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42181,7 +42121,7 @@ http://wc3campaigns.net/vexorian
 }
 
 STRING 6959
-// Abilities: A048 (Strong Floating Blade), Researchhotkey (Hotkey - Learn)
+// Abilities: A12V (Multiple slashes combo), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42270,13 +42210,13 @@ Suiton: Suidanha [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 6974
-// Abilities: A05Z ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A048 (Strong Floating Blade), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 6975
-// Abilities: A05Z ( ), Hotkey (Hotkey - Normal)
+// Abilities: A05Z ( ), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42372,7 +42312,7 @@ Amenominaka [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 6991
-// Abilities: A0C2 (Hiraishingiri), Researchhotkey (Hotkey - Learn)
+// Abilities: A05Z ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42402,7 +42342,7 @@ Learn Suiton: Suidanha [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 6996
-// Abilities: A0C2 (Hiraishingiri), Hotkey (Hotkey - Normal)
+// Abilities: A0C2 (Hiraishingiri), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42662,13 +42602,13 @@ STRING 7038
 }
 
 STRING 7039
-// Abilities: A0N0 (Bone Crush), Hotkey (Hotkey - Normal)
+// Abilities: A0C2 (Hiraishingiri), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7040
-// Abilities: A0N5 (Bone Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0N0 (Bone Crush), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43247,7 +43187,7 @@ Channeling|r
 }
 
 STRING 7130
-// Abilities: A0N8 (Sameodori no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0N5 (Bone Spear), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43482,7 +43422,7 @@ Learn Jinton: Bunretsu Genkai Hakuri no Jutsu [|cffffcc00T|r] - [|cffffcc00Level
 }
 
 STRING 7154
-// Abilities: A0ND (Cat Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0N8 (Sameodori no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43548,7 +43488,7 @@ Mushi Kame no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 7165
-// Abilities: A0ND (Cat Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0ND (Cat Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43650,7 +43590,7 @@ STRING 7181
 }
 
 STRING 7182
-// Abilities: A0TO (|cff37458cSword Strike|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ND (Cat Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44040,7 +43980,7 @@ A
 }
 
 STRING 7247
-// Abilities: A0TO (|cff37458cSword Strike|r), Hotkey (Hotkey - Normal)
+// Abilities: A0TO (|cff37458cSword Strike|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44070,7 +44010,7 @@ Specially designed for assassination.|n|cff32cd32+120 Movement Speed|n+300 HP|n+
 }
 
 STRING 7252
-// Abilities: A0UO (Toton Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A0TO (|cff37458cSword Strike|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44268,7 +44208,7 @@ Upgrade Sword of Totsuka
 }
 
 STRING 7285
-// Abilities: A0ZV (|cffe36d50Lava Geyser|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UO (Toton Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44352,7 +44292,7 @@ STRING 7298
 }
 
 STRING 7299
-// Abilities: A0ZV (|cffe36d50Lava Geyser|r), Hotkey (Hotkey - Normal)
+// Abilities: A0ZV (|cffe36d50Lava Geyser|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44864,13 +44804,13 @@ Purchase Bingo Book [|cffffcc00Q|r]
 }
 
 STRING 7384
-// Abilities: A14S (|cff000000Truth-Seeking Ball|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZV (|cffe36d50Lava Geyser|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7385
-// Abilities: A14S (|cff000000Truth-Seeking Ball|r), Hotkey (Hotkey - Normal)
+// Abilities: A14S (|cff000000Truth-Seeking Ball|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45558,13 +45498,13 @@ STRING 7499
 }
 
 STRING 7500
-// Abilities: A14W (|cff000000Serial Gudoudamas|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A14S (|cff000000Truth-Seeking Ball|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7501
-// Abilities: A178 ( ), Hotkey (Hotkey - Normal)
+// Abilities: A14W (|cff000000Serial Gudoudamas|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45678,7 +45618,7 @@ Wait eight minutes!
 }
 
 STRING 7520
-// Abilities: A17A (|cff8080ffChidori Eiso), Hotkey (Hotkey - Normal)
+// Abilities: A178 ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45738,7 +45678,7 @@ STRING 7529
 }
 
 STRING 7530
-// Abilities: A17S (Naruto Missile), Researchhotkey (Hotkey - Learn)
+// Abilities: A17A (|cff8080ffChidori Eiso), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45996,13 +45936,13 @@ STRING 7572
 }
 
 STRING 7573
-// Abilities: A17S (Naruto Missile), Hotkey (Hotkey - Normal)
+// Abilities: A17S (Naruto Missile), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7574
-// Abilities: A17Y (|cffba0000Reverse Kamui|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A17S (Naruto Missile), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46158,13 +46098,13 @@ R
 }
 
 STRING 7600
-// Abilities: A17Y (|cffba0000Reverse Kamui|r), Hotkey (Hotkey - Normal)
+// Abilities: A17Y (|cffba0000Reverse Kamui|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7601
-// Abilities: A182 (Karasu's Barbed Attack), Hotkey (Hotkey - Normal)
+// Abilities: A17Y (|cffba0000Reverse Kamui|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46218,7 +46158,7 @@ Assault Blade [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 7610
-// Abilities: A188 (|cff8080ffScythe Combo|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A182 (Karasu's Barbed Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46440,7 +46380,7 @@ Animal Realm: Summoning: Chamaleon [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 7647
-// Abilities: A188 (|cff8080ffScythe Combo|r), Hotkey (Hotkey - Normal)
+// Abilities: A188 (|cff8080ffScythe Combo|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46482,7 +46422,7 @@ Deals 80 X Level normal damage in line.|n|cffffcc00Cooldown:|r 11-15s
 }
 
 STRING 7654
-// Abilities: A189 ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A188 (|cff8080ffScythe Combo|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46860,13 +46800,13 @@ Amenominaka [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 7717
-// Abilities: A189 ( ), Hotkey (Hotkey - Normal)
+// Abilities: A189 ( ), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7718
-// Abilities: A19T (|cffdeaf69Kumo Nenkin|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A189 ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47112,13 +47052,13 @@ Animal Realm: Summoning: Chamaleon [|cffffcc00W|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 7759
-// Abilities: A19T (|cffdeaf69Kumo Nenkin|r), Hotkey (Hotkey - Normal)
+// Abilities: A19T (|cffdeaf69Kumo Nenkin|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7760
-// Abilities: A19Y (|cffdeaf69Nenkin no Yoroi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A19T (|cffdeaf69Kumo Nenkin|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47622,7 +47562,7 @@ Sandaime Kazekage Puppet
 }
 
 STRING 7844
-// Abilities: A1A3 (|cffff8000Get Lost!|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A19Y (|cffdeaf69Nenkin no Yoroi|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47969,13 +47909,13 @@ STRING 7901
 }
 
 STRING 7902
-// Abilities: A1A3 (|cffff8000Get Lost!|r), Hotkey (Hotkey - Normal)
+// Abilities: A1A3 (|cffff8000Get Lost!|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7903
-// Abilities: A1A4 ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A1A3 (|cffff8000Get Lost!|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48359,13 +48299,13 @@ STRING 7966
 }
 
 STRING 7967
-// Abilities: A1A4 ( ), Hotkey (Hotkey - Normal)
+// Abilities: A1A4 ( ), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7968
-// Abilities: A1A6 (|cff0fcaf7Rasenrengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1A4 ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49025,7 +48965,7 @@ E
 }
 
 STRING 8078
-// Abilities: A1A6 (|cff0fcaf7Rasenrengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A1A6 (|cff0fcaf7Rasenrengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49313,7 +49253,7 @@ STRING 8120
 }
 
 STRING 8121
-// Abilities: A1A8 (|cff00bfffJikuukan Rasenrengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1A6 (|cff0fcaf7Rasenrengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49337,7 +49277,7 @@ STRING 8124
 }
 
 STRING 8125
-// Abilities: A1A8 (|cff00bfffJikuukan Rasenrengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A1A8 (|cff00bfffJikuukan Rasenrengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49961,13 +49901,13 @@ STRING 8225
 }
 
 STRING 8226
-// Abilities: A1A9 (|cff8080ffRaiton: Kangekiha|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1A8 (|cff00bfffJikuukan Rasenrengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 8227
-// Abilities: A1A9 (|cff8080ffRaiton: Kangekiha|r), Hotkey (Hotkey - Normal)
+// Abilities: A1A9 (|cff8080ffRaiton: Kangekiha|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50225,7 +50165,7 @@ Suiton: Suijinheki [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 8270
-// Abilities: A08I (Net-shaped Prison), Researchhotkey (Hotkey - Learn)
+// Abilities: A1A9 (|cff8080ffRaiton: Kangekiha|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50346,7 +50286,7 @@ Fuuton: Atsugai [|cffffcc00Q|r]
 }
 
 STRING 8292
-// Abilities: A0FZ (Sen'eijashu), Researchhotkey (Hotkey - Learn)
+// Abilities: A08I (Net-shaped Prison), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50529,7 +50469,7 @@ STRING 8318
 }
 
 STRING 8319
-// Abilities: A0FZ (Sen'eijashu), Hotkey (Hotkey - Normal)
+// Abilities: A0FZ (Sen'eijashu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50680,7 +50620,7 @@ Sanbi's Shell
 }
 
 STRING 8342
-// Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FZ (Sen'eijashu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50869,7 +50809,7 @@ Crystal is taken from killed enemy heroes.
 }
 
 STRING 8365
-// Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Hotkey (Hotkey - Normal)
+// Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -51027,7 +50967,7 @@ The legendary Kusanagi infused with water|n|cff32cd32+550 HP|n+150 Damage|n+40 G
 }
 
 STRING 8387
-// Abilities: A0Q3 (Sen'eijashu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51069,7 +51009,7 @@ STRING 8393
 }
 
 STRING 8394
-// Abilities: A0Q3 (Sen'eijashu), Hotkey (Hotkey - Normal)
+// Abilities: A0Q3 (Sen'eijashu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -51934,7 +51874,7 @@ Channeling|r
 }
 
 STRING 8523
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q3 (Sen'eijashu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51958,7 +51898,7 @@ STRING 8526
 }
 
 STRING 8527
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Hotkey (Hotkey - Normal)
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52062,7 +52002,7 @@ STRING 8539
 }
 
 STRING 8540
-// Abilities: A16I (Heal Bite), Researchhotkey (Hotkey - Learn)
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52140,7 +52080,7 @@ M
 }
 
 STRING 8553
-// Abilities: A15U ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A16I (Heal Bite), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52407,7 +52347,7 @@ STRING 8577
 }
 
 STRING 8578
-// Abilities: A15V (|cff000000Serial Gudoudamas|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A15U ( ), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52431,7 +52371,7 @@ STRING 8581
 }
 
 STRING 8582
-// Abilities: A16Y (Kyoumeisen), Researchhotkey (Hotkey - Learn)
+// Abilities: A15V (|cff000000Serial Gudoudamas|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52593,13 +52533,13 @@ R
 }
 
 STRING 8609
-// Abilities: A16Y (Kyoumeisen), Hotkey (Hotkey - Normal)
+// Abilities: A16Y (Kyoumeisen), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 8610
-// Abilities: A1BQ (|cffffc2c0Boruto Stream|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A16Y (Kyoumeisen), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52723,7 +52663,7 @@ Senbons infused with yang. The carrier feels a holy aura coming from it.|n|cff32
 }
 
 STRING 8631
-// Abilities: A1BQ (|cffffc2c0Boruto Stream|r), Hotkey (Hotkey - Normal)
+// Abilities: A1BQ (|cffffc2c0Boruto Stream|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53036,13 +52976,13 @@ Item Edo Tensei
 }
 
 STRING 8668
-// Abilities: A1CO (|cff53a4ffSuiton: Suiryuudan no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1BQ (|cffffc2c0Boruto Stream|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 8669
-// Abilities: A1CO (|cff53a4ffSuiton: Suiryuudan no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A1CO (|cff53a4ffSuiton: Suiryuudan no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53212,7 +53152,7 @@ Claws Combo [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 8693
-// Abilities: A03Z (|cff90ee90Omote Renge|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1CO (|cff53a4ffSuiton: Suiryuudan no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53230,13 +53170,13 @@ STRING 8695
 }
 
 STRING 8696
-// Abilities: A03Z (|cff90ee90Omote Renge|r), Hotkey (Hotkey - Normal)
+// Abilities: A03Z (|cff90ee90Omote Renge|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 8697
-// Abilities: A07J (|cff09520eKuchiyose no Jutsu: Hebi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A03Z (|cff90ee90Omote Renge|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53458,7 +53398,7 @@ STRING 8733
 }
 
 STRING 8734
-// Abilities: A07J (|cff09520eKuchiyose no Jutsu: Hebi|r), Hotkey (Hotkey - Normal)
+// Abilities: A07J (|cff09520eKuchiyose no Jutsu: Hebi|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53584,13 +53524,13 @@ STRING 8754
 }
 
 STRING 8755
-// Abilities: A10Z (|cffba0000Genjutsu: Sharingan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A07J (|cff09520eKuchiyose no Jutsu: Hebi|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 8756
-// Abilities: A10Z (|cffba0000Genjutsu: Sharingan|r), Hotkey (Hotkey - Normal)
+// Abilities: A10Z (|cffba0000Genjutsu: Sharingan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53928,7 +53868,7 @@ M
 }
 
 STRING 8812
-// Abilities: A19H (|cff867092Kuchiyose no Jutsu: Ushi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10Z (|cffba0000Genjutsu: Sharingan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53958,7 +53898,7 @@ Mei turns into Youton Mode, making her attack have a chance to deal |cff87ceeb10
 }
 
 STRING 8817
-// Abilities: A19H (|cff867092Kuchiyose no Jutsu: Ushi|r), Hotkey (Hotkey - Normal)
+// Abilities: A19H (|cff867092Kuchiyose no Jutsu: Ushi|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -54144,7 +54084,7 @@ STRING 8847
 }
 
 STRING 8848
-// Abilities: A19K (|cff5d6f2bChameleon Cloak), Hotkey (Hotkey - Normal)
+// Abilities: A19H (|cff867092Kuchiyose no Jutsu: Ushi|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54246,13 +54186,13 @@ Fuuton: Shinkuu Taigyoku [|cffffcc00R|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 8865
-// Abilities: A1D3 (|cffba0000Getsuga Tensho|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A19K (|cff5d6f2bChameleon Cloak), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 8866
-// Abilities: A1D3 (|cffba0000Getsuga Tensho|r), Hotkey (Hotkey - Normal)
+// Abilities: A1D3 (|cffba0000Getsuga Tensho|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -54444,7 +54384,7 @@ STRING 8897
 }
 
 STRING 8898
-// Abilities: A1DA (Adamantine Stomp), Hotkey (Hotkey - Normal)
+// Abilities: A1D3 (|cffba0000Getsuga Tensho|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54480,7 +54420,7 @@ Learn Kikaichuu Tsumoji no Jutsu [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 8904
-// Abilities: A1DI (|cff8080ffRaikiri|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DA (Adamantine Stomp), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54619,13 +54559,13 @@ STRING 8924
 }
 
 STRING 8925
-// Abilities: A1DI (|cff8080ffRaikiri|r), Hotkey (Hotkey - Normal)
+// Abilities: A1DI (|cff8080ffRaikiri|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 8926
-// Abilities: A1DX (Fuinjutsu: Shishi Heiko), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DI (|cff8080ffRaikiri|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55209,13 +55149,13 @@ M
 }
 
 STRING 9006
-// Abilities: A1DX (Fuinjutsu: Shishi Heiko), Hotkey (Hotkey - Normal)
+// Abilities: A1DX (Fuinjutsu: Shishi Heiko), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9007
-// Abilities: A1E3 (Kongo Roheki), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DX (Fuinjutsu: Shishi Heiko), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55395,7 +55335,7 @@ Kyuubi Aura
 }
 
 STRING 9037
-// Abilities: A1AJ (Sen'ei Tajashu), Researchhotkey (Hotkey - Learn)
+// Abilities: A1E3 (Kongo Roheki), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56247,13 +56187,13 @@ Senei Jashu [|cffffcc00Q|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 9153
-// Abilities: A1AJ (Sen'ei Tajashu), Hotkey (Hotkey - Normal)
+// Abilities: A1AJ (Sen'ei Tajashu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9154
-// Abilities: A04W (|cff0fcaf7Shotei|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1AJ (Sen'ei Tajashu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56271,7 +56211,7 @@ Senei Jashu [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 9157
-// Abilities: A04W (|cff0fcaf7Shotei|r), Hotkey (Hotkey - Normal)
+// Abilities: A04W (|cff0fcaf7Shotei|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56571,13 +56511,13 @@ Satetsu Kesshu
 }
 
 STRING 9207
-// Abilities: A1EU (Wind Tornado), Researchhotkey (Hotkey - Learn)
+// Abilities: A04W (|cff0fcaf7Shotei|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9208
-// Abilities: A1EU (Wind Tornado), Hotkey (Hotkey - Normal)
+// Abilities: A1EU (Wind Tornado), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56691,7 +56631,7 @@ STRING 9226
 }
 
 STRING 9227
-// Abilities: A1EV (Infinite Sandstorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EU (Wind Tornado), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56997,13 +56937,13 @@ Fungokyaku [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
 }
 
 STRING 9278
-// Abilities: A1EX (Air Bullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EV (Infinite Sandstorm), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9279
-// Abilities: A02Z (|cffff0000Yasaka Magatama), Hotkey (Hotkey - Normal)
+// Abilities: A1EX (Air Bullet), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57071,7 +57011,7 @@ STRING 9285
 }
 
 STRING 9286
-// Abilities: A08M (Cero), Hotkey (Hotkey - Normal)
+// Abilities: A02Z (|cffff0000Yasaka Magatama), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -57405,7 +57345,7 @@ R
 }
 
 STRING 9333
-// Abilities: A01O (|cff000000Kagemane no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A08M (Cero), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -57717,13 +57657,13 @@ STRING 9384
 }
 
 STRING 9385
-// Abilities: A01O (|cff000000Kagemane no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A01O (|cff000000Kagemane no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9386
-// Abilities: A035 (|cffff0000Katon: Karyu Endan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A01O (|cff000000Kagemane no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -58005,13 +57945,13 @@ Learn |cffff0000Katon: Gamayu Endan|r [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 9433
-// Abilities: A035 (|cffff0000Katon: Karyu Endan|r), Hotkey (Hotkey - Normal)
+// Abilities: A035 (|cffff0000Katon: Karyu Endan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9434
-// Abilities: A064 (Fuuton: Atsugai), Hotkey (Hotkey - Normal)
+// Abilities: A035 (|cffff0000Katon: Karyu Endan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -58335,7 +58275,7 @@ STRING 9487
 }
 
 STRING 9488
-// Abilities: A066 (|cffff0000Flamethrower), Unhotkey (Hotkey - Turn Off)
+// Abilities: A064 (Fuuton: Atsugai), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -58539,13 +58479,13 @@ STRING 9521
 }
 
 STRING 9522
-// Abilities: A066 (|cffff0000Flamethrower), Hotkey (Hotkey - Normal)
+// Abilities: A066 (|cffff0000Flamethrower), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
 
 STRING 9523
-// Abilities: A06H (Kuchiyose: Karasu), Hotkey (Hotkey - Normal)
+// Abilities: A066 (|cffff0000Flamethrower), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -58563,7 +58503,7 @@ STRING 9525
 }
 
 STRING 9526
-// Abilities: A0AB (Explosive Kunai), Researchhotkey (Hotkey - Learn)
+// Abilities: A06H (Kuchiyose: Karasu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -59091,7 +59031,7 @@ STRING 9613
 }
 
 STRING 9614
-// Abilities: A0C4 (|cff0000ffYasaka no Magatama|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0AB (Explosive Kunai), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -60388,12 +60328,6 @@ STRING 9830
 |cff8080ffChidori Nagashi|r [|cffffcc00W|r] - [|cffffcc00Level 2|r]
 }
 
-STRING 9831
-// Abilities: A0JQ (|cff5b85ffSuiton: Mugensame|r), Researchtip (Tooltip - Learn)
-{
-Learn Shiki Fuujin [|cffffcc00T|r] - [|cffffcc00Level %d|r]
-}
-
 STRING 9832
 // Abilities: A1CF (Tengai Shinsei), Name (Name)
 {
@@ -60845,7 +60779,7 @@ E
 }
 
 STRING 9907
-// Abilities: A0CF (|cff53a4ffKusari|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C4 (|cff0000ffYasaka no Magatama|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -60869,7 +60803,7 @@ STRING 9910
 }
 
 STRING 9911
-// Abilities: A0CF (|cff53a4ffKusari|r), Hotkey (Hotkey - Normal)
+// Abilities: A0CF (|cff53a4ffKusari|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -61241,7 +61175,7 @@ STRING 9972
 }
 
 STRING 9973
-// Abilities: A0DK (|cff53a4ffTsuiseki|r), Hotkey (Hotkey - Normal)
+// Abilities: A0CF (|cff53a4ffKusari|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61349,7 +61283,7 @@ Funsuiken [|cffffcc00W|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 9991
-// Abilities: A0DQ (Shuriken Kage Bunshin no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DK (|cff53a4ffTsuiseki|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61511,7 +61445,7 @@ E
 }
 
 STRING 10018
-// Abilities: A0DQ (Shuriken Kage Bunshin no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A0DQ (Shuriken Kage Bunshin no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -61541,7 +61475,7 @@ STRING 10022
 }
 
 STRING 10023
-// Abilities: A14E (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DQ (Shuriken Kage Bunshin no Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61571,7 +61505,7 @@ One of the three legendary items, which bolsters user's defenses.|n|cff32cd32+40
 }
 
 STRING 10028
-// Abilities: A14E (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A14E (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -62243,7 +62177,7 @@ STRING 10139
 }
 
 STRING 10140
-// Abilities: A0VG (Adamantine Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A14E (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -62339,7 +62273,7 @@ STRING 10155
 }
 
 STRING 10156
-// Abilities: A0VG (Adamantine Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0VG (Adamantine Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -62369,7 +62303,7 @@ STRING 10160
 }
 
 STRING 10161
-// Abilities: A0VI (Instant Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VG (Adamantine Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -62387,7 +62321,7 @@ EntBirth
 }
 
 STRING 10164
-// Abilities: A0VI (Instant Water), Hotkey (Hotkey - Normal)
+// Abilities: A0VI (Instant Water), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -62579,7 +62513,7 @@ STRING 10195
 }
 
 STRING 10196
-// Abilities: A0DV (Blink), Hotkey (Hotkey - Normal)
+// Abilities: A0VI (Instant Water), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -63197,7 +63131,7 @@ R
 }
 
 STRING 10299
-// Abilities: A0E1 (|cfffffc00Rorentsugan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DV (Blink), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -63284,12 +63218,6 @@ STRING 10313
 // Abilities: A1C5 (Switch Mode), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Instant Target|n|cff32cd32Effects:|r Increase attack speed by |cff87ceeb20% x skill level|r, movement speed by |cff87ceeb10% x skill level|r and armor by |cff87ceeb3 x skill level.|n|cff32cd32Chakra Cost:|r Drains 10 chakra per second|n|cff32cd32Description:|r|nThe user wraps their body in a layer of raiton chakra which, instead of being used offensively, is used to eletrically stimulate the user's nervous system.
-}
-
-STRING 10314
-// Abilities: A0JQ (|cff5b85ffSuiton: Mugensame|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 300|n|cff32cd32Damage:|r 6 x Taijutsu + 2200|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Silence the target for 10 seconds.|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nHiruzen summons the Shinigami to consume the enemy's soul in exchange of his own life, sealing the enemy's soul in his belly.|n|cffff0000Care: It takes 20% of the user life.|r
 }
 
 STRING 10315
@@ -64597,7 +64525,7 @@ STRING 10531
 }
 
 STRING 10532
-// Abilities: A0E7 (Senei Jashu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E1 (|cfffffc00Rorentsugan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -65151,7 +65079,7 @@ STRING 10623
 }
 
 STRING 10624
-// Abilities: A0E7 (Senei Jashu), Hotkey (Hotkey - Normal)
+// Abilities: A0E7 (Senei Jashu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -66470,7 +66398,7 @@ Ground Smack [|cffffcc00W|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 10844
-// Abilities: A0EP (|cff5ace76Senpou: Orochi Mikazuchi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E7 (Senei Jashu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66494,7 +66422,7 @@ STRING 10847
 }
 
 STRING 10848
-// Abilities: A0EP (|cff5ace76Senpou: Orochi Mikazuchi|r), Hotkey (Hotkey - Normal)
+// Abilities: A0EP (|cff5ace76Senpou: Orochi Mikazuchi|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -66524,7 +66452,7 @@ STRING 10852
 }
 
 STRING 10853
-// Abilities: A0F5 (Ninpou: Chouji Giga "Tigers"), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EP (|cff5ace76Senpou: Orochi Mikazuchi|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -67670,7 +67598,7 @@ STRING 11043
 }
 
 STRING 11044
-// Abilities: A0F5 (Ninpou: Chouji Giga "Tigers"), Hotkey (Hotkey - Normal)
+// Abilities: A0F5 (Ninpou: Chouji Giga "Tigers"), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68182,7 +68110,7 @@ STRING 11128
 }
 
 STRING 11129
-// Abilities: A04Z (|cff8b4600Kongo Roheki|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0F5 (Ninpou: Chouji Giga "Tigers"), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68981,7 +68909,7 @@ Deals 80 X Level normal damage in line.|n|cffffcc00Cooldown:|r 11-15s
 }
 
 STRING 11262
-// Abilities: A0FO (|cffa5fde2Truth-Seeking Balls|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A04Z (|cff8b4600Kongo Roheki|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69065,7 +68993,7 @@ Senpou: Hakugeki no Jutsu [|cffffcc00R|r]
 }
 
 STRING 11276
-// Abilities: A0FO (|cffa5fde2Truth-Seeking Balls|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FO (|cffa5fde2Truth-Seeking Balls|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69089,7 +69017,7 @@ Animal Realm: Summoning: Chamaleon [|cffffcc00W|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 11280
-// Abilities: A0FN (|cffa5fde2Unleashed|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FO (|cffa5fde2Truth-Seeking Balls|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69101,7 +69029,7 @@ Animal Realm: Summoning: Chamaleon [|cffffcc00W|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 11282
-// Abilities: A0GY (|cff000000Pan Slam|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FN (|cffa5fde2Unleashed|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69498,7 +69426,7 @@ STRING 11347
 }
 
 STRING 11348
-// Abilities: A0GY (|cff000000Pan Slam|r), Hotkey (Hotkey - Normal)
+// Abilities: A0GY (|cff000000Pan Slam|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70288,7 +70216,7 @@ E
 }
 
 STRING 11481
-// Abilities: A0HD (Chakra Chains), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GY (|cff000000Pan Slam|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70312,7 +70240,7 @@ STRING 11484
 }
 
 STRING 11485
-// Abilities: A0I9 (Deadly Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HD (Chakra Chains), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70342,7 +70270,7 @@ STRING 11489
 }
 
 STRING 11490
-// Abilities: A0I9 (Deadly Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0I9 (Deadly Kick), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70943,7 +70871,7 @@ Chakra Shield
 }
 
 STRING 11590
-// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I9 (Deadly Kick), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71009,7 +70937,7 @@ Jinton: Genkai Hakuri no Jutsu [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 11601
-// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71033,7 +70961,7 @@ STRING 11604
 }
 
 STRING 11605
-// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Hotkey (Hotkey - Normal)
+// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -71249,7 +71177,7 @@ STRING 11640
 }
 
 STRING 11641
-// Abilities: A0J1 (|cffff0000Fox Slam|r), Hotkey (Hotkey - Normal)
+// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71520,7 +71448,7 @@ STRING 11685
 }
 
 STRING 11686
-// Abilities: A0J4 (|cff091515Shisho Fuin|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J1 (|cffff0000Fox Slam|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71766,13 +71694,13 @@ STRING 11726
 }
 
 STRING 11727
-// Abilities: A0J7 (Shotei), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J4 (|cff091515Shisho Fuin|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11728
-// Abilities: A0J7 (Shotei), Hotkey (Hotkey - Normal)
+// Abilities: A0J7 (Shotei), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71796,7 +71724,7 @@ STRING 11731
 }
 
 STRING 11732
-// Abilities: A010 (|cffffc0cbAnshosui|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J7 (Shotei), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71850,7 +71778,7 @@ STRING 11740
 }
 
 STRING 11741
-// Abilities: A010 (|cffffc0cbAnshosui|r), Hotkey (Hotkey - Normal)
+// Abilities: A010 (|cffffc0cbAnshosui|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -72030,7 +71958,7 @@ E
 }
 
 STRING 11771
-// Abilities: A0BZ (Wind Assault), Researchhotkey (Hotkey - Learn)
+// Abilities: A010 (|cffffc0cbAnshosui|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -72546,7 +72474,7 @@ STRING 11856
 }
 
 STRING 11857
-// Abilities: A0BZ (Wind Assault), Hotkey (Hotkey - Normal)
+// Abilities: A0BZ (Wind Assault), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -73116,7 +73044,7 @@ Learn Doki Control: Madness [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 11952
-// Abilities: A0JI (|cff38625bDynamic Entry|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BZ (Wind Assault), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73128,7 +73056,7 @@ STRING 11953
 }
 
 STRING 11954
-// Abilities: A0JI (|cff38625bDynamic Entry|r), Hotkey (Hotkey - Normal)
+// Abilities: A0JI (|cff38625bDynamic Entry|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -73398,7 +73326,7 @@ ShopBoardHighLevelCombine
 }
 
 STRING 11999
-// Abilities: A0DS (|cff8080ffChidori|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (|cff38625bDynamic Entry|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73446,7 +73374,7 @@ W
 }
 
 STRING 12007
-// Abilities: A0DS (|cff8080ffChidori|r), Hotkey (Hotkey - Normal)
+// Abilities: A0DS (|cff8080ffChidori|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -73969,7 +73897,7 @@ Ninja
 }
 
 STRING 12095
-// Abilities: A0L8 (Net Shaped Prison), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DS (|cff8080ffChidori|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73985,7 +73913,7 @@ Ninjas
 }
 
 STRING 12098
-// Abilities: A0L8 (Net Shaped Prison), Hotkey (Hotkey - Normal)
+// Abilities: A0L8 (Net Shaped Prison), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -74201,7 +74129,7 @@ STRING 12133
 }
 
 STRING 12134
-// Abilities: A0LW (Club), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L8 (Net Shaped Prison), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -76787,7 +76715,7 @@ STRING 12564
 }
 
 STRING 12565
-// Abilities: A0LW (Club), Hotkey (Hotkey - Normal)
+// Abilities: A0LW (Club), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -76997,7 +76925,7 @@ STRING 12599
 }
 
 STRING 12600
-// Abilities: A0LX (|cffB0B0B0Doki Control: Primary Attack|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LW (Club), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -78978,7 +78906,7 @@ Iaigiri Dancing Blade [|cffffcc00W|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 12930
-// Abilities: A0LX (|cffB0B0B0Doki Control: Primary Attack|r), Hotkey (Hotkey - Normal)
+// Abilities: A0LX (|cffB0B0B0Doki Control: Primary Attack|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -80545,7 +80473,7 @@ STRING 13190
 }
 
 STRING 13191
-// Abilities: A0NK (|cffc71585Bashosen|r), Hotkey (Hotkey - Normal)
+// Abilities: A0LX (|cffB0B0B0Doki Control: Primary Attack|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -83143,7 +83071,7 @@ STRING 13623
 }
 
 STRING 13624
-// Abilities: A0NK (|cffc71585Bashosen|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NK (|cffc71585Bashosen|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -83683,7 +83611,7 @@ E
 }
 
 STRING 13714
-// Abilities: A0OF (|cffd9d6d9Shichiseiken|r), Hotkey (Hotkey - Normal)
+// Abilities: A0NK (|cffc71585Bashosen|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -94818,7 +94746,7 @@ STRING 15427
 }
 
 STRING 15428
-// Abilities: A0OH ( ), Hotkey (Hotkey - Normal)
+// Abilities: A0OF (|cffd9d6d9Shichiseiken|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -94890,7 +94818,7 @@ Learn |cffff8080Shoton: Isshi Komyou|r [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 15440
-// Abilities: A0SA (Sekizo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OH ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -96150,7 +96078,7 @@ Scorched Earth Aura
 }
 
 STRING 15650
-// Abilities: A0TB (Throw Fuuma Shuriken), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SA (Sekizo), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -98870,7 +98798,7 @@ Rock Wall
 }
 
 STRING 16103
-// Abilities: A0TB (Throw Fuuma Shuriken), Hotkey (Hotkey - Normal)
+// Abilities: A0TB (Throw Fuuma Shuriken), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -98918,7 +98846,7 @@ STRING 16110
 }
 
 STRING 16111
-// Abilities: A0UE (Release Chakra), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TB (Throw Fuuma Shuriken), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -106242,6 +106170,12 @@ STRING 17330
 Assault Blade [|cffffcc00Q|r] - [|cffffcc00Level 4|r]
 }
 
+STRING 17331
+// Abilities: A0PY (|cff00bfffRasengan: Ren no Dan|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 150|n|cff32cd32Damage:|r |cff87ceeb(300 + 6 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|r|n|cff32cd32Cooldown:|r 30s + |cff87ceeb20 x skill level|r|n|cff32cd32Description:|r Minato casts rasengan and then throws a Hiraishin Kunai towards the target, teleporting to his back and hitting him with rasengan.
+}
+
 STRING 17332
 // Abilities: A0MX (|cffB0B0B0Doki Control: Secondary Attack|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -106489,13 +106423,13 @@ STRING 17372
 }
 
 STRING 17373
-// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb(Taijutsu + 800) x skill level|r|r |n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 60s |r|n|cff32cd32Description:|r|nThe user creates a multiple shadow clones from one shuriken, striking down the enemy.
 }
 
 STRING 17374
-// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
@@ -106860,18 +106794,6 @@ STRING 17434
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceebGen x 0.8 x skill level|r and each knocked orb does|cff87ceeb Gen / 2 + 30|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Knocks orbs from Pakura E & D back|n|cff32cd32Arc Span:|r 24 to 180 based on distance |n|cff32cd32Chakra cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nPakura throws out a wave of embers in an arc knocking all scorch orbs back.
 }
 
-STRING 17435
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 1s 
-}
-
-STRING 17436
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 1s 
-}
-
 STRING 17437
 // Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Tip (Tooltip - Normal)
 {
@@ -106912,12 +106834,6 @@ STRING 17443
 // Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Tip (Tooltip - Normal)
 {
 |cff0fcaf7Chakra Blast|r [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
-}
-
-STRING 17444
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 1s 
 }
 
 STRING 17445
@@ -107466,12 +107382,6 @@ STRING 17535
 E
 }
 
-STRING 17536
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 1s 
-}
-
 STRING 17537
 // Abilities: A003 (|cff000000Karasu Bunshin no Jutsu|r), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -107806,12 +107716,6 @@ STRING 17592
 // Abilities: A1B4 (|cffff0000Yata Mirror|r), Tip (Tooltip - Normal)
 {
 Karasu Bunshin no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 10|r]
-}
-
-STRING 17593
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 1s 
 }
 
 STRING 17594
@@ -108499,12 +108403,6 @@ STRING 17707
 Kuchyose: Enma [|cffffcc00R|r]
 }
 
-STRING 17708
-// Items: I07R (|cff8b4600Earthen Kusanagi|r), Ubertip (Tooltip - Extended)
-{
-The legendary Kusanagi infused with earth|n|cff32cd32+500 HP|n+100 Damage|n+35 Taijutsu|n- Elemental Strike (passive, 25% chance to deal 500 + Taijutsu Normal Damage to enemies in 350 AoE and stun for 0.5s|n|cff87ceeb- Earth Pierce (active, rng: 750, aoe: 280, cd: 40s):|n  - Deals 900 Normal Damage in a line and stuns for 1s|n|cffff0000Item-Type: Weapon|r
-}
-
 STRING 17709
 // Abilities: A1A5 (|cff004000Okasho|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -108643,12 +108541,6 @@ STRING 17731
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Ally, Hero|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage/Heal:|r |cff87ceeb(10 + skill level/2) x Taijutsu|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Effects:|r If used on an enemy chains them at the distance casted, can be reactivated to end the spell early pulling them to your location. Slows at level 10.|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|n|cff32cd32Cooldown:|r 30s|n|cff32cd32Description:|r|nBy supreme mastering of the Adamantine Chain technique, Karin is able to send her Chakra out to either heal an Alley or damage an Opponent.
 }
 
-STRING 17732
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 1s 
-}
-
 STRING 17733
 // Abilities: A0SM (UPGRADE!), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -108665,18 +108557,6 @@ STRING 17735
 // Abilities: A0V2 (|cffFC6022Shakuton: Enko no Jutsu|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Knocks enemies & allies back|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra cost:|r 40 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 18s|n|cff32cd32Description:|r|nPakura throws out an explosive orb for 3s which she can explode early to knock back enemies or allies
-}
-
-STRING 17736
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 1s 
-}
-
-STRING 17737
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 1s 
 }
 
 STRING 17738
@@ -109055,12 +108935,6 @@ STRING 17800
 // Items: I076 (Mission Reward), Name (Name)
 {
 Mission Reward
-}
-
-STRING 17801
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 1s 
 }
 
 STRING 17802
@@ -110118,12 +109992,6 @@ STRING 17977
 // Abilities: A0QK (Steam Punch), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r 100 + |cff87ceeb90 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Chakra Cost:|r 15 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 14s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nHan gathers Koukou's Boil Release power to create a great amount of steam around him, dealing damage and knocking back all surrounding enemies.
-}
-
-STRING 17978
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 1s 
 }
 
 STRING 17979
@@ -111219,7 +111087,7 @@ STRING 18160
 }
 
 STRING 18161
-// Abilities: A0UE (Release Chakra), Hotkey (Hotkey - Normal)
+// Abilities: A0UE (Release Chakra), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -111462,12 +111330,6 @@ STRING 18201
 // Abilities: A00L (Red Secret Technique: Perfomance of a Hundred Puppets), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r Each puppet attack deals 75 normal damage, if you pick this as your T and are in Sandaime Kazekage form then the puppets deal Tai/6 Chaos damage.|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Summon 20 puppets to attack surrounded enemies. Last 40 seconds.|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 120s|n|cff32cd32Description:|r|nTo begin this technique, Sasori removes one summoning scroll from his back. He then opens his right chest compartment to emit more than a hundred chakra strings, which reach into the scroll. From the scroll, more than a hundred puppets wearing red cloaks emerge.
-}
-
-STRING 18202
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 1s 
 }
 
 STRING 18203
@@ -111942,24 +111804,6 @@ STRING 18281
 // Abilities: A0XJ (Assassination Technique), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb(Genjutsu / 2 + 25) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stuns target for one second|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nItachi backstabs the enemy with his ANBU sword.
-}
-
-STRING 18282
-// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 10 seconds. If an unit is targeted, deals area damage. If none unit is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
-}
-
-STRING 18283
-// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 10 seconds. If an unit is targeted, deals area damage. If none unit is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
-}
-
-STRING 18284
-// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 10 seconds. If an unit is targeted, deals area damage. If none unit is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
 }
 
 STRING 18285
@@ -113029,12 +112873,6 @@ STRING 18460
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceebTaijutsu / 2 x skill level|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Effects:|r |cff87ceebEnsnares target for 3.0 seconds. Also if Benihisago is used on a target under Kokinjo it will deal (|cff87ceeb30 x skill level x Taijutsu) |cff87ceeb/ 25 at max|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKinkaku uses the Kokinjo to immbolize the target.
 }
 
-STRING 18461
-// Items: I07R (|cff8b4600Earthen Kusanagi|r), Description (Description)
-{
-The legendary Kusanagi infused with earth|n|cff32cd32+500 HP|n+100 Damage|n+35 Taijutsu|n- Elemental Strike (passive, 25% chance to deal 500 + Taijutsu Normal Damage to enemies in 350 AoE and stun for 0.5s|n|cff87ceeb- Earth Pierce (active, rng: 750, aoe: 280, cd: 40s):|n  - Deals 900 Normal Damage in a line and stuns for 1s|n|cffff0000Item-Type: Weapon|r
-}
-
 STRING 18462
 // Items: I07S (|cffB0B0B0Wind Kusanagi|r), Ubertip (Tooltip - Extended)
 {
@@ -113084,13 +112922,13 @@ Kisame's Akatsuki Ring.|n|cff32cd32+Drain 4% of chakra per second from enemies i
 }
 
 STRING 18470
-// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
 STRING 18471
-// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
@@ -113252,7 +113090,7 @@ Mushi Kame No Jutsu [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 18498
-// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
@@ -113279,12 +113117,6 @@ STRING 18502
 // Abilities: A0Q4 (|cffab695fKuchiyose: Yatai Kuzushi no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceeb(50 + taijutsu / 2) x skill level (Taijutsu x skill level in Sage Mode)|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Effects:|r Slow affected enemies by 50% for three seconds|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nJiraiya summons Gama Bunta which falls out of the sky, smashing all enemies below.
-}
-
-STRING 18503
-// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 10 seconds. If an unit is targeted, deals area damage. If none unit is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
 }
 
 STRING 18504
@@ -113321,12 +113153,6 @@ STRING 18509
 // Abilities: A0V2 (|cffFC6022Shakuton: Enko no Jutsu|r), Tip (Tooltip - Normal)
 {
 |cffFC6022Shakuton: Hai Torappu|r [|cffffcc00W|r] - [|cffffcc00Level 3|r]
-}
-
-STRING 18510
-// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 10 seconds. If an unit is targeted, deals area damage. If none unit is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
 }
 
 STRING 18511
@@ -113530,12 +113356,6 @@ STRING 18543
 // Items: I07V (|cffc600ffYin Chakra Blades|r), Name (Name)
 {
 |cffc600ffYin Chakra Blades|r
-}
-
-STRING 18544
-// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 10 seconds. If an unit is targeted, deals area damage. If none unit is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
 }
 
 STRING 18545
@@ -117327,12 +117147,6 @@ STRING 19170
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|r|n|cff32cd32Damage:|cff87ceeb Genjutsu x skill level|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Pushes the target back.|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 5s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nAnimal Path summons a Giant Ox to push all enemies away
 }
 
-STRING 19171
-// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 10 seconds. If an unit is targeted, deals area damage. If none unit is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
-}
-
 STRING 19172
 // Abilities: A19H (|cff867092Kuchiyose no Jutsu: Ushi|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -117843,6 +117657,12 @@ STRING 19256
 (Pakura Second W)
 }
 
+STRING 19257
+// Abilities: A0PY (|cff00bfffRasengan: Ren no Dan|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 150|n|cff32cd32Damage:|r |cff87ceeb(300 + 6 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|r|n|cff32cd32Cooldown:|r 30s + |cff87ceeb20 x skill level|r|n|cff32cd32Description:|r Minato casts rasengan and then throws a Hiraishin Kunai towards the target, teleporting to his back and hitting him with rasengan.
+}
+
 STRING 19258
 // Abilities: A0I6 (|cff53a4ffSuika no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -117855,10 +117675,22 @@ STRING 19259
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 350 + |cff87ceeb50 x skill level|r|n|cff32cd32Effects:|r Teleport instantly to the target location.|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s - |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nAllows the hero to turn into water and move to targerted position.
 }
 
-STRING 19263
-// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+STRING 19260
+// Abilities: A0PY (|cff00bfffRasengan: Ren no Dan|r), Researchubertip (Tooltip - Learn - Extended)
 {
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 10 seconds. If an unit is targeted, deals area damage. If none unit is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 150|n|cff32cd32Damage:|r |cff87ceeb(300 + 6 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|r|n|cff32cd32Cooldown:|r 30s + |cff87ceeb20 x skill level|r|n|cff32cd32Description:|r Minato casts rasengan and then throws a Hiraishin Kunai towards the target, teleporting to his back and hitting him with rasengan.
+}
+
+STRING 19261
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 5s 
+}
+
+STRING 19262
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 5s 
 }
 
 STRING 19264
@@ -117895,6 +117727,12 @@ STRING 19269
 // Abilities: A0NB (|cffb2d2dfSawarabi no Mai|r), Researchtip (Tooltip - Learn)
 {
 Learn |cffb2d2dfSawarabi no Mai|r [|cffffcc00T|r] - [|cffffcc00Level %d|r]
+}
+
+STRING 19270
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 5s 
 }
 
 STRING 19271
@@ -117951,16 +117789,16 @@ STRING 19279
 D
 }
 
+STRING 19280
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 5s 
+}
+
 STRING 19281
 // Abilities: A1AD (|cff55697bKamui Dimension|r), Tip (Tooltip - Normal)
 {
 Kamui [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
-}
-
-STRING 19282
-// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 10 seconds. If an unit is targeted, deals area damage. If none unit is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
 }
 
 STRING 19283
@@ -118053,6 +117891,12 @@ STRING 19297
 Chiyo performs a variation of the technique by attaching threads generated for the Puppet Technique to the blades and suppressing her chakra as much as possible that they will be unnoticeable. In doing this, she is able to transfer the threads from one weapon to that of the enemies for an added surprise or advantage during battle.|n|cff87ceebPicks the kunais released during Soushujin and sends them to a target enemy, dealing Genjutsu X Ability-Level.|n|cffff0000Caution: It's necessary you cast Soushujin before to use this technique.|r
 }
 
+STRING 19298
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 5s 
+}
+
 STRING 19299
 // Abilities: A0PA (Wind (R) + Water (W): Ice Release - Icicle Barrage), EditorSuffix (Editor Suffix)
 {
@@ -118129,6 +117973,12 @@ STRING 19311
 // Abilities: A0LJ (Explode!), Ubertip (Tooltip - Normal - Extended)
 {
 Chiyo performs a variation of the technique by attaching threads generated for the Puppet Technique to the blades and suppressing her chakra as much as possible that they will be unnoticeable. In doing this, she is able to transfer the threads from one weapon to that of the enemies for an added surprise or advantage during battle.|n|cff87ceebPicks the kunais released during Soushujin and sends them to a target enemy, dealing Genjutsu X Ability-Level.|n|cffff0000Caution: It's necessary you cast Soushujin before to use this technique.|r
+}
+
+STRING 19312
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 5s 
 }
 
 STRING 19313
@@ -118311,12 +118161,6 @@ STRING 19342
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb100 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Make the caster invisible for a short duration and teleport instantly to the location|n|cff32cd32Chakra Cost:|r 40 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nTobi create a fissure in space-time, sending all enemies around him to Kamui dimension.
 }
 
-STRING 19343
-// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 10 seconds. If an unit is targeted, deals area damage. If none unit is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
-}
-
 STRING 19344
 // Abilities: A16W (|cffff0000Lava Dimension|r), Tip (Tooltip - Normal)
 {
@@ -118469,12 +118313,6 @@ STRING 19368
 // Abilities: A0PR (HagoromoD), Untip (Tooltip - Turn Off)
 {
 Truth Seeking Orbs
-}
-
-STRING 19369
-// Abilities: A0AV (Hiraishin no Jutsu), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 10 seconds. If an unit is targeted, deals area damage. If none unit is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
 }
 
 STRING 19370
@@ -118647,6 +118485,12 @@ STRING 19397
 // Buffs/Effects: B03S (Earth Release), Buffubertip (Tooltip - Extended)
 {
 Earth Release was previously cast and is currently on cooldown.
+}
+
+STRING 19398
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 5s 
 }
 
 STRING 19399
@@ -119073,6 +118917,12 @@ STRING 19469
 // Abilities: A0LA (|cff800080Kuchiyose: Edo Tensei|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb800 x skill level + Genjutsu|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Chakra Cost:|r 350 - |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nKabuto revives former Akatsuki members through the Edo Tensei technique and order them to attack the target simultaneously.
+}
+
+STRING 19470
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 5s 
 }
 
 STRING 19471
@@ -120533,6 +120383,12 @@ STRING 19713
 Sasori infuses highly dangerous venom on Hiruko's tail, dealing |cff87ceeb3 x skill level|r damage per second during 10 seconds and slowing the target by |cff87ceeb2% x skill level|r.
 }
 
+STRING 19714
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 5s 
+}
+
 STRING 19715
 // Abilities: A0TZ (TayuyaSlow), Tip (Tooltip - Normal)
 {
@@ -120816,13 +120672,13 @@ STRING 19761
 }
 
 STRING 19762
-// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
 STRING 19763
-// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
@@ -121611,6 +121467,12 @@ STRING 19894
 // Abilities: A0QV (Debuff - Swift Release), Tip (Tooltip - Normal)
 {
 Debuff - Earth Release
+}
+
+STRING 19895
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 5s 
 }
 
 STRING 19896
@@ -124775,7 +124637,7 @@ Increases attack speed by |cff87ceeb5% x skill level|r and each attack throw |cf
 }
 
 STRING 20404
-// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
@@ -124936,6 +124798,12 @@ STRING 20430
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Buildings|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r 10 + Ninjutsu / 4.0 each tiger attack|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Effects:|r Summon 10 tigers that deal damage and slow the target by |cff87ceeb3% x skill level|r for 1s. Last |cff87ceeb5 +.2 x skill level|r seconds.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb20 x skill level|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nSai summons ten ink tigers to attack the target and slow them.
 }
 
+STRING 20431
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Damage:|r|cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Deals damage to the unit tagged by Hiraishin no Jutsu and stuns for |cff87ceeb0.5s|r or teleport instantly to the Marked Kunai location if Hiraishin no Jutsu was targeted on a point.|n|cff32cd32Chakra Cost:|r |cff87ceeb10 x skil level|n|cff32cd32Cooldown:|r 5s 
+}
+
 STRING 20432
 // Abilities: A019 (|cff00ffffSeishun Furu Pawa|r), Tip (Tooltip - Normal)
 {
@@ -124952,12 +124820,6 @@ STRING 20434
 // Abilities: A0W6 (Iruka - Shuriken Jutsu), Hotkey (Hotkey - Normal)
 {
 T
-}
-
-STRING 20435
-// Abilities: A0W6 (Iruka - Shuriken Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r |cff87ceebNinjutsu x 6|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 350|r|n|cff32cd32Cooldown:|r 60s|r|n|cff32cd32Description:|r|nIruka Hurls Two Fuma Shurikens at the target point in paralell arcs, which then return to them, damaging enemies who come into contact with them. Enemies can be hit by both shurikens, on either the initial or returning path. 
 }
 
 STRING 20436
@@ -124988,12 +124850,6 @@ STRING 20440
 // Abilities: A0W6 (Iruka - Shuriken Jutsu), Researchtip (Tooltip - Learn)
 {
 Learn Shuriken Jutsu [|cffffcc00T|r] - [|cffffcc00Level %d|r]
-}
-
-STRING 20441
-// Abilities: A0W6 (Iruka - Shuriken Jutsu), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r |cff87ceebNinjutsu x 6|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 350|r|n|cff32cd32Cooldown:|r 60s|r|n|cff32cd32Description:|r|nIruka Hurls Two Fuma Shurikens at the target point in paralell arcs, which then return to them, damaging enemies who come into contact with them. Enemies can be hit by both shurikens, on either the initial or returning path. 
 }
 
 STRING 20442
@@ -125268,43 +125124,43 @@ STRING 20484
 }
 
 STRING 20485
-// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
 STRING 20486
-// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
 STRING 20487
-// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
 STRING 20488
-// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
 STRING 20489
-// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
 STRING 20490
-// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
 STRING 20491
-// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
@@ -126035,7 +125891,7 @@ STRING 20612
 }
 
 STRING 20613
-// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UE (Release Chakra), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -126059,7 +125915,7 @@ Toneri Gathers Chakra
 }
 
 STRING 20617
-// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Hotkey (Hotkey - Normal)
+// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -126653,13 +126509,13 @@ Release Chakra [|cffffcc00Q|r]
 }
 
 STRING 20696
-// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb(Taijutsu + 800) x skill level|r|r |n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 60s |r|n|cff32cd32Description:|r|nThe user creates a multiple shadow clones from one shuriken, striking down the enemy.
 }
 
 STRING 20697
-// Abilities: A0TN (Shuriken Kage Bunshin no Jutsu), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb(Taijutsu + 800) x skill level|r|r |n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 60s |r|n|cff32cd32Description:|r|nThe user creates a multiple shadow clones from one shuriken, striking down the enemy.
 }
@@ -127229,7 +127085,7 @@ Space-time Jutsu [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 20792
-// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Hotkey (Hotkey - Normal)
+// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -127247,7 +127103,7 @@ STRING 20794
 }
 
 STRING 20795
-// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -129022,7 +128878,7 @@ Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 21091
-// Abilities: A0XC (Kisei Bunshin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X2 (Yōton: Kaisekifū no Jutsu), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -129064,7 +128920,7 @@ STRING 21097
 }
 
 STRING 21098
-// Abilities: A0XC (Kisei Bunshin), Hotkey (Hotkey - Normal)
+// Abilities: A0X2 (Yōton: Kaisekifū no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -131359,12 +131215,6 @@ STRING 21480
 Scroll of Kage Bunshin
 }
 
-STRING 21481
-// Abilities: A0EF (Great Shark Dance), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r |cff87ceeb10 x Taijutsu + 1100 at max|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 1200|n|cff32cd32Chakra Cost:|r 250|n|cff32cd32Cooldown:|r 18s|n|cff32cd32Description:|r|nKisame moves all around his Suiton: Sameodori, dealing damage to all enemies inside it.|n|cffff0000Care: Sameodori need to be active.|r
-}
-
 STRING 21482
 // Items: I05N (Scroll of Invisibility), Name (Name)
 {
@@ -131558,7 +131408,7 @@ STRING 21513
 }
 
 STRING 21514
-// Abilities: A0X2 (Yōton: Kaisekifū no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A0XC (Kisei Bunshin), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -131624,7 +131474,7 @@ STRING 21524
 }
 
 STRING 21525
-// Abilities: A0X2 (Yōton: Kaisekifū no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XC (Kisei Bunshin), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -132086,7 +131936,7 @@ Yanagi no Mai [|cffffcc00E|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 21602
-// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -132176,7 +132026,7 @@ STRING 21616
 }
 
 STRING 21617
-// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -133571,7 +133421,7 @@ STRING 21848
 }
 
 STRING 21849
-// Abilities: A0XA (|cffff8080Kessho: Kyodai Rokkaku Shuriken|r), Hotkey (Hotkey - Normal)
+// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -134026,28 +133876,10 @@ STRING 21924
 Learn Karasu Bunshin no Jutus [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
 
-STRING 21925
-// Abilities: A0PY (|cff00bfffRasengan: Ren no Dan|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 150|n|cff32cd32Damage:|r |cff87ceeb(400 + 6 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|r|n|cff32cd32Cooldown:|r 30s + |cff87ceeb20 x skill level|r|n|cff32cd32Description:|r Minato casts rasengan and then throws a Hiraishin Kunai towards the target, teleporting to his back and hitting him with rasengan.
-}
-
 STRING 21926
 // Abilities: A007 (ItachiInvisibility), Name (Name)
 {
 ItachiInvisibility
-}
-
-STRING 21927
-// Abilities: A0PY (|cff00bfffRasengan: Ren no Dan|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 150|n|cff32cd32Damage:|r |cff87ceeb(400 + 6 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|r|n|cff32cd32Cooldown:|r 30s + |cff87ceeb20 x skill level|r|n|cff32cd32Description:|r Minato casts rasengan and then throws a Hiraishin Kunai towards the target, teleporting to his back and hitting him with rasengan.
-}
-
-STRING 21928
-// Abilities: A0PY (|cff00bfffRasengan: Ren no Dan|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 150|n|cff32cd32Damage:|r |cff87ceeb(400 + 6 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|r|n|cff32cd32Cooldown:|r 30s + |cff87ceeb20 x skill level|r|n|cff32cd32Description:|r Minato casts rasengan and then throws a Hiraishin Kunai towards the target, teleporting to his back and hitting him with rasengan.
 }
 
 STRING 21929
@@ -134104,10 +133936,82 @@ STRING 21941
 ItachiShuriken2
 }
 
+STRING 21950
+// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 4s. If a unit is targeted, deals area damage. If a point is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+}
+
+STRING 21951
+// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 4s. If a unit is targeted, deals area damage. If a point is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+}
+
+STRING 21952
+// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 4s. If a unit is targeted, deals area damage. If a point is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+}
+
+STRING 21953
+// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 4s. If a unit is targeted, deals area damage. If a point is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+}
+
+STRING 21954
+// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 4s. If a unit is targeted, deals area damage. If a point is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+}
+
+STRING 21955
+// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 4s. If a unit is targeted, deals area damage. If a point is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+}
+
+STRING 21956
+// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 4s. If a unit is targeted, deals area damage. If a point is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+}
+
+STRING 21957
+// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 4s. If a unit is targeted, deals area damage. If a point is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+}
+
+STRING 21958
+// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 4s. If a unit is targeted, deals area damage. If a point is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+}
+
 STRING 21959
 // Abilities: A0DF (|cff000000Throw Ink|r), Tip (Tooltip - Normal)
 {
 Coral Wave [|cffffcc00Q|r] - [|cffffcc00Level 2|r]
+}
+
+STRING 21960
+// Abilities: A0AV (Hiraishin no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 4s. If a unit is targeted, deals area damage. If a point is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+}
+
+STRING 21961
+// Abilities: A0AV (Hiraishin no Jutsu), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400 (maximum 12 targets)|n|cff32cd32Effects:|r If a hero is targetered, marks him for 4s. If a unit is targeted, deals area damage. If a point is targeted, throws a kunai at the point location.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s |n|cff32cd32Description:|r|nJutsu first developed by the Nidaime Hokage and enhanced by Minato, which combines tagged kunais and space-time jutsu.
+}
+
+STRING 21962
+// Abilities: A0W6 (Iruka - Shuriken Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r |cff87ceeb6 x Ninjutsu|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Chakra Cost:|r 350|r|n|cff32cd32Cooldown:|r 60s|r|n|cff32cd32Description:|r|nIruka Hurls Two Fuma Shurikens at the target point in paralell arcs, which then return to them, damaging enemies who come into contact with them. Enemies can be hit by both shurikens, on either the initial or returning path. 
 }
 
 STRING 21963
@@ -134162,6 +134066,18 @@ STRING 21971
 // Abilities: A189 ( ), Tip (Tooltip - Normal)
 {
 Scythe Combo [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 21972
+// Abilities: A0W6 (Iruka - Shuriken Jutsu), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r |cff87ceeb6 x Ninjutsu|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Chakra Cost:|r 350|r|n|cff32cd32Cooldown:|r 60s|r|n|cff32cd32Description:|r|nIruka Hurls Two Fuma Shurikens at the target point in paralell arcs, which then return to them, damaging enemies who come into contact with them. Enemies can be hit by both shurikens, on either the initial or returning path. 
+}
+
+STRING 21973
+// Items: I07R (|cff8b4600Earthen Kusanagi|r), Ubertip (Tooltip - Extended)
+{
+The legendary Kusanagi infused with earth|n|cff32cd32+500 HP|n+100 Damage|n+35 Taijutsu|n- Elemental Strike (passive, 25% chance to deal 200 + Taijutsu * 2 Normal Damage to enemies in 300 AoE and slows by 50%|n|cff87ceeb- Earth Pierce (active, rng: 750, aoe: 280, cd: 40s):|n  - Deals 900 Normal Damage in a line and stuns for 1.5s|n|cffff0000Item-Type: Weapon|r
 }
 
 STRING 21974
@@ -134248,10 +134164,40 @@ STRING 21987
 KabutoDummy
 }
 
+STRING 21988
+// Items: I07R (|cff8b4600Earthen Kusanagi|r), Description (Description)
+{
+The legendary Kusanagi infused with earth|n|cff32cd32+500 HP|n+100 Damage|n+35 Taijutsu|n- Elemental Strike (passive, 25% chance to deal 200 + Taijutsu * 2 Normal Damage to enemies in 300 AoE and slows by 50%|n|cff87ceeb- Earth Pierce (active, rng: 750, aoe: 280, cd: 40s):|n  - Deals 900 Normal Damage in a line and stuns for 1.5s|n|cffff0000Item-Type: Weapon|r
+}
+
+STRING 21989
+// Abilities: A0DA (|cffba0000Mugen Tsukuyomi|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r 13 x Genjutsu at max|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Effects:|r Paralyze affected enemies for 2.5 seconds|n|cff32cd32Chakra Cost:|r 800|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nTobi's ultimate plan, which uses the moon to cover the world in an infinite illusion.
+}
+
+STRING 21990
+// Abilities: A1ER (Hakke: Rokujuyon Sho), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Heroes|n|cff32cd32Damage:|r |cff87ceeb5 + Hanabi's Bonus/ 25 (Max can strike 320 times, Does not round up)|n|cff32Dd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Effects:|r Slow nearby enemies by 40%|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nHanabi's special Eight Trigrams Sixty-Four Palms which spins the enemies she hits.
+}
+
 STRING 21991
 // Abilities: A189 ( ), Researchtip (Tooltip - Learn)
 {
 Learn Scythe Combo [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
+}
+
+STRING 21992
+// Abilities: A1ER (Hakke: Rokujuyon Sho), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Heroes|n|cff32cd32Damage:|r |cff87ceeb5 + Hanabi's Bonus/ 25 (Max can strike 320 times, Does not round up)|n|cff32Dd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Effects:|r Slow nearby enemies by 40%|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nHanabi's special Eight Trigrams Sixty-Four Palms which spins the enemies she hits.
+}
+
+STRING 21993
+// Abilities: A0EE (|cff87ceebShark Dance), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
 }
 
 STRING 21995
@@ -134260,10 +134206,76 @@ STRING 21995
 HanzoPoison
 }
 
+STRING 21996
+// Abilities: A0EE (|cff87ceebShark Dance), Researchtip (Tooltip - Learn)
+{
+Learn Shark Dance [|cffffcc00Q|r]  - [|cffffcc00Level %d|r]
+}
+
 STRING 21997
 // Units: h0B6 (MitsukiEDummy), Name (Name)
 {
 MitsukiEDummy
+}
+
+STRING 21998
+// Abilities: A0EE (|cff87ceebShark Dance), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 21999
+// Abilities: A0EE (|cff87ceebShark Dance), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22000
+// Abilities: A0EE (|cff87ceebShark Dance), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22001
+// Abilities: A0EE (|cff87ceebShark Dance), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22002
+// Abilities: A0EE (|cff87ceebShark Dance), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22003
+// Abilities: A0EE (|cff87ceebShark Dance), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22004
+// Abilities: A0EE (|cff87ceebShark Dance), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22005
+// Abilities: A0EE (|cff87ceebShark Dance), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22006
+// Abilities: A0EE (|cff87ceebShark Dance), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22007
+// Abilities: A0EE (|cff87ceebShark Dance), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
 }
 
 STRING 22013
@@ -134296,6 +134308,42 @@ STRING 22027
 ItachiRingInvis
 }
 
+STRING 22034
+// Abilities: A0JQ (|cff5b85ffSuiton: Mugensame|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb13 x Tai|r over 2.5s|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 650|n|cff32cd32Chakra Cost:|r 550|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nKisame creates one thousand sharks out of water that enter into a wall formation and rain down to attack the enemies.
+}
+
+STRING 22035
+// Abilities: A0JQ (|cff5b85ffSuiton: Mugensame|r), Researchtip (Tooltip - Learn)
+{
+Learn |cff5b85ffSuiton: Mugensame|r [|cffffcc00T|r] - [|cffffcc00Level %d|r]
+}
+
+STRING 22036
+// Abilities: A0JQ (|cff5b85ffSuiton: Mugensame|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb13 x Tai|r over 2.5s|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 650|n|cff32cd32Chakra Cost:|r 550|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nKisame creates one thousand sharks out of water that enter into a wall formation and rain down to attack the enemies.
+}
+
+STRING 22037
+// Abilities: A0EE (|cff87ceebShark Dance), Tip (Tooltip - Normal)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 22038
+// Abilities: A0EE (|cff87ceebShark Dance), Name (Name)
+{
+|cff87ceebShark Dance
+}
+
+STRING 22039
+// Abilities: A0EE (|cff87ceebShark Dance), Tip (Tooltip - Normal)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 2|r]
+}
+
 STRING 22040
 // Abilities: A0TW (Ultimate Choice), Ubertip (Tooltip - Normal - Extended)
 {
@@ -134308,16 +134356,94 @@ STRING 22041
 Choose between Juuho Soshiken and Hakkesho Kuuten as your ultimate.|n|cff87ceebJuuho Soshiken:|r|n|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r 1000 + 18 x Ninjutsu|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Increases user damage by 100% for 10 seconds|n|cff32cd32Chakra Cost:|r 450|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nHinata concentrates chakra on the palm of her hands until it seem like two lions. After that, she moves towards the target at high-speed, giving them a fatal blow.|n|cff87ceebHakkesho Kuuten:|r|n|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceeb11 x Ninjutsu|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Effects:|r Makes the user invulnerable and then push and paralyze affected enemies during spell execution.|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nHinata jumps toward the sky and uses her hands to perform a massive rotating sphere of chakra that crushes the enemies into the ground.|n|cffff0000Requires:|n- Level 35.|r
 }
 
+STRING 22042
+// Abilities: A0EE (|cff87ceebShark Dance), Tip (Tooltip - Normal)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 3|r]
+}
+
 STRING 22043
 // Abilities: A0DF (|cff000000Throw Ink|r), Tip (Tooltip - Normal)
 {
 Coral Wave [|cffffcc00Q|r] - [|cffffcc00Level 4|r]
 }
 
+STRING 22044
+// Abilities: A0EE (|cff87ceebShark Dance), Tip (Tooltip - Normal)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 4|r]
+}
+
+STRING 22045
+// Abilities: A0EE (|cff87ceebShark Dance), Tip (Tooltip - Normal)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 5|r]
+}
+
+STRING 22046
+// Abilities: A0EE (|cff87ceebShark Dance), Tip (Tooltip - Normal)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
+}
+
+STRING 22047
+// Abilities: A0EE (|cff87ceebShark Dance), Tip (Tooltip - Normal)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
+}
+
 STRING 22048
 // Abilities: A05J (|cffff0000Kugutsu no Jutsu: Sanshouo|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceebGenjutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 60 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKankuro use his puppet Sanshouo to release a powerful stream of firel, dealing damage to enemies in line.
+}
+
+STRING 22049
+// Abilities: A0EE (|cff87ceebShark Dance), Tip (Tooltip - Normal)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
+}
+
+STRING 22050
+// Abilities: A0EE (|cff87ceebShark Dance), Tip (Tooltip - Normal)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 9|r]
+}
+
+STRING 22051
+// Abilities: A0EE (|cff87ceebShark Dance), Tip (Tooltip - Normal)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 22052
+// Abilities: A0EE (|cff87ceebShark Dance), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22053
+// Abilities: A0EE (|cff87ceebShark Dance), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22054
+// Abilities: A0EE (|cff87ceebShark Dance), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22055
+// Abilities: A0EE (|cff87ceebShark Dance), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22056
+// Abilities: A0EE (|cff87ceebShark Dance), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
 }
 
 STRING 22057
@@ -134330,6 +134456,138 @@ STRING 22058
 // Abilities: A13W (Ultimate Choice), Researchubertip (Tooltip - Learn - Extended)
 {
 Choose between Hakke: Hasangeki and Hakke: Hyaku Nijuhassho as your ultimate.|n|cff87ceebHakke: Hasangeki:|r|n|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r 10 x Ninjutsu + 500|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 200 width x 860 length|n|cff32cd32Chakra Cost:|r 450|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nA more powerful version of Hakke: Kuusho where the user concentrates so much chakra that it creates a powerful blast, throwing the target meters away.|n|cff87ceebHakke: Hyaku Nijuhassho:|r|n|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r 13 x Ninjutsu|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Effects:|r Slow nearby enemies|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nThe Eight Trigrams One Hundred Twenty-Eight Palms is a technique of the Gentle Fist fighting style. It is a doubled version of the Eight Trigrams Sixty-Four Palms performed at twice the speed.  |n|cffff0000Requires:|n- Level 35.|r
+}
+
+STRING 22059
+// Abilities: A0EE (|cff87ceebShark Dance), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22060
+// Abilities: A0EE (|cff87ceebShark Dance), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22061
+// Abilities: A0EE (|cff87ceebShark Dance), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22062
+// Abilities: A0EE (|cff87ceebShark Dance), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22063
+// Abilities: A0EE (|cff87ceebShark Dance), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s
+}
+
+STRING 22064
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
+{
+|cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 22065
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
+{
+|cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 2|r]
+}
+
+STRING 22066
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
+{
+|cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 3|r]
+}
+
+STRING 22067
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
+{
+|cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 4|r]
+}
+
+STRING 22068
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
+{
+|cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 5|r]
+}
+
+STRING 22069
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
+{
+|cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 6|r]
+}
+
+STRING 22070
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
+{
+|cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 7|r]
+}
+
+STRING 22071
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
+{
+|cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 8|r]
+}
+
+STRING 22072
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
+{
+|cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 9|r]
+}
+
+STRING 22073
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
+{
+|cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 22074
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Researchtip (Tooltip - Learn)
+{
+Learn |cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level %d|r]
+}
+
+STRING 22075
+// Abilities: A0XA (|cffff8080Kessho: Kyodai Rokkaku Shuriken|r), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 22076
+// Abilities: A0EE (|cff87ceebShark Dance), Untip (Tooltip - Turn Off)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 22077
+// Abilities: A0EE (|cff87ceebShark Dance), Untip (Tooltip - Turn Off)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 2|r]
+}
+
+STRING 22078
+// Abilities: A0EE (|cff87ceebShark Dance), Untip (Tooltip - Turn Off)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 3|r]
+}
+
+STRING 22079
+// Abilities: A0EE (|cff87ceebShark Dance), Untip (Tooltip - Turn Off)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 4|r]
+}
+
+STRING 22080
+// Abilities: A0EE (|cff87ceebShark Dance), Untip (Tooltip - Turn Off)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 22081
@@ -134404,6 +134662,12 @@ STRING 22092
 Learn |cff87ceebSuiton: Daibafuku no Jutsu|r [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
+STRING 22093
+// Abilities: A0EE (|cff87ceebShark Dance), Untip (Tooltip - Turn Off)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
+}
+
 STRING 22094
 // Abilities: A0K3 (|cff53a4ffMakyo Hyosho: Backslash|r), Tip (Tooltip - Normal)
 {
@@ -134456,6 +134720,24 @@ STRING 22102
 // Abilities: A0K3 (|cff53a4ffMakyo Hyosho: Backslash|r), Tip (Tooltip - Normal)
 {
 |cff53a4ffMakyo Hyosho: Backslash|r [|cffffcc00Q|r] - [|cffffcc00Level 9|r]
+}
+
+STRING 22103
+// Abilities: A0EE (|cff87ceebShark Dance), Untip (Tooltip - Turn Off)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
+}
+
+STRING 22104
+// Abilities: A0EE (|cff87ceebShark Dance), Untip (Tooltip - Turn Off)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
+}
+
+STRING 22105
+// Abilities: A0EE (|cff87ceebShark Dance), Untip (Tooltip - Turn Off)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 22106
@@ -134536,6 +134818,48 @@ STRING 22118
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceebGenjutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 60 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKankuro use his puppet Sanshouo to release a powerful stream of firel, dealing damage to enemies in line.
 }
 
+STRING 22119
+// Abilities: A0EE (|cff87ceebShark Dance), Untip (Tooltip - Turn Off)
+{
+|cff87ceebShark Dance|r [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 22120
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22121
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 22122
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Name (Name)
+{
+|cff8b4600Doton: Dochu Senko|r
+}
+
+STRING 22124
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Researchtip (Tooltip - Learn)
+{
+Learn |cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r]  - [|cffffcc00Level %d|r]
+}
+
+STRING 22125
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22126
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
 STRING 22127
 // Units: N01Y (Nidaime Hokage), Name (Name)
 {
@@ -134552,6 +134876,12 @@ STRING 22129
 // Units: H02O (Yondaime Hokage), Name (Name)
 {
 Yondaime Hokage
+}
+
+STRING 22130
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
 }
 
 STRING 22131
@@ -134578,6 +134908,12 @@ STRING 22134
 Coral Wave [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
 }
 
+STRING 22135
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
 STRING 22136
 // Abilities: A0DF (|cff000000Throw Ink|r), Tip (Tooltip - Normal)
 {
@@ -134590,10 +134926,88 @@ STRING 22137
 Coral Wave [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
+STRING 22138
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22139
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22140
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22141
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22142
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22143
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22144
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 2|r]
+}
+
+STRING 22145
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 3|r]
+}
+
+STRING 22146
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 4|r]
+}
+
+STRING 22147
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 5|r]
+}
+
 STRING 22148
 // Abilities: A16X (!), Tip (Tooltip - Normal)
 {
 Kamui [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
+}
+
+STRING 22149
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
+}
+
+STRING 22150
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
+}
+
+STRING 22151
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 22152
@@ -134614,10 +135028,22 @@ STRING 22154
 |cffba0000Reverse Kamui|r [|cffffcc00Q|r] - [|cffffcc00Level 3|r]
 }
 
+STRING 22155
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 9|r]
+}
+
 STRING 22156
 // Items: I03H (|cfffffc00True Raijin No Ken|r), Ubertip (Tooltip - Extended)
 {
 The legendary Raijin no Ken, created by Senju Tobirama. It has the ability to cut space-time.|n|cff32cd32+1500 HP|n+200 Damage|n+130 Ninjutsu|n|cff87ceeb- Space-Time Barrier (active, cd: 30s):|n   - Slows enemy movespeed by 50% for 20s in 600 AoE|n|cffff0000Item Type: Weapon|r
+}
+
+STRING 22157
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 22168
@@ -134686,16 +135112,88 @@ STRING 22178
 |cffba0000Reverse Kamui|r [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
 }
 
+STRING 22180
+// Abilities: A0EE (|cff87ceebShark Dance), EditorSuffix (Editor Suffix)
+{
+(Bugged)
+}
+
+STRING 22181
+// Abilities: A0EF (|cff8b4600Doton: Dochu Senko|r), EditorSuffix (Editor Suffix)
+{
+(Bugged)
+}
+
+STRING 22182
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22183
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
 STRING 22184
 // Abilities: A1AO (|cff9d8d8dCursed Seal|r), Tip (Tooltip - Normal)
 {
 |cff9d8d8dCursed Seal|r [|cffffcc00R|r] - [|cffffcc00Level 2|r]
 }
 
+STRING 22185
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22186
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22187
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22188
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22189
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22190
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22191
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
 STRING 22192
 // Abilities: A1E5 (Semi Choice), EditorSuffix (Editor Suffix)
 {
 (Fuu)
+}
+
+STRING 22193
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
 }
 
 STRING 22194
@@ -134716,6 +135214,12 @@ STRING 22196
 |cffba0000Reverse Kamui|r [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
+STRING 22197
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 1|r]
+}
+
 STRING 22198
 // Abilities: A17Y (|cffba0000Reverse Kamui|r), Name (Name)
 {
@@ -134728,10 +135232,100 @@ STRING 22199
 |cffba0000Reverse Kamui|r [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
+STRING 22200
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 2|r]
+}
+
+STRING 22201
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 3|r]
+}
+
+STRING 22202
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 4|r]
+}
+
 STRING 22203
 // Upgrades: R008 (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
 Level 15
+}
+
+STRING 22204
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 5|r]
+}
+
+STRING 22205
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
+}
+
+STRING 22206
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
+}
+
+STRING 22207
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
+}
+
+STRING 22208
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 9|r]
+}
+
+STRING 22209
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Tip (Tooltip - Normal)
+{
+|cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 22210
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 22211
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Name (Name)
+{
+|cff8b4600Doton: Dochu Senko|r
+}
+
+STRING 22212
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Researchtip (Tooltip - Learn)
+{
+Learn |cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r]  - [|cffffcc00Level %d|r]
+}
+
+STRING 22213
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 180 width x 900 length|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nA technique that transforms the earth surrounding the user into a fluid, allowing them to close in on the enemy with high speed by swimming underground.
+}
+
+STRING 22214
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 22215
+// Abilities: A0XG (Bubble), Name (Name)
+{
+Bubble
 }
 
 STRING 22216
@@ -134752,10 +135346,70 @@ STRING 22218
 Learn |cffff0000Flamethrower|r [|cffffcc00T|r] - [|cffffcc00Level %d|r]
 }
 
+STRING 22219
+// Abilities: A0XG (Bubble), EditorSuffix (Editor Suffix)
+{
+(Kisame)
+}
+
+STRING 22220
+// Abilities: A1AX (|cff0000ffSuiton: Daikoudan no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceebTarget's Max Chakra|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Chakra Cost:|r 150|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nThe user creates a gigantic shark out of water and, by thrusting both hands forward, sends it to attack the opponent.
+}
+
+STRING 22221
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(50 + Taijutsu)/2 x skill level|r over 3s|n|cff32cd32Damage Type:|r Normal|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb2s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
+}
+
 STRING 22222
 // Abilities: A04Z (|cff8b4600Kongo Roheki|r), Tip (Tooltip - Normal)
 {
 |cffff8080Shoton: Suisho Ro no Jutsu|r [|cffffcc00Q|r] - [|cffffcc00Level 2|r]
+}
+
+STRING 22223
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(50 + Taijutsu)/2 x skill level|r over 3s|n|cff32cd32Damage Type:|r Normal|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb2s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
+}
+
+STRING 22224
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(50 + Taijutsu)/2 x skill level|r over 3s|n|cff32cd32Damage Type:|r Normal|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb2s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
+}
+
+STRING 22225
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(50 + Taijutsu)/2 x skill level|r over 3s|n|cff32cd32Damage Type:|r Normal|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb2s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
+}
+
+STRING 22226
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(50 + Taijutsu)/2 x skill level|r over 3s|n|cff32cd32Damage Type:|r Normal|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb2s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
+}
+
+STRING 22227
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(50 + Taijutsu)/2 x skill level|r over 3s|n|cff32cd32Damage Type:|r Normal|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb2s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
+}
+
+STRING 22228
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(50 + Taijutsu)/2 x skill level|r over 3s|n|cff32cd32Damage Type:|r Normal|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb2s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
+}
+
+STRING 22229
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(50 + Taijutsu)/2 x skill level|r over 3s|n|cff32cd32Damage Type:|r Normal|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb2s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
 }
 
 STRING 22230
@@ -134824,6 +135478,12 @@ STRING 22240
 |cffab695fKuchiyose: Yatai Kuzushi no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 8|r]
 }
 
+STRING 22241
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(50 + Taijutsu)/2 x skill level|r over 3s|n|cff32cd32Damage Type:|r Normal|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb2s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
+}
+
 STRING 22242
 // Abilities: A1E2 (|cff000000Tsukuyomi|r), Tip (Tooltip - Normal)
 {
@@ -134834,6 +135494,12 @@ STRING 22243
 // Abilities: A1E2 (|cff000000Tsukuyomi|r), Tip (Tooltip - Normal)
 {
 |cffab695fKuchiyose: Yatai Kuzushi no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 22244
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(50 + Taijutsu)/2 x skill level|r over 3s|n|cff32cd32Damage Type:|r Normal|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb2s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
 }
 
 STRING 22245
@@ -134906,6 +135572,12 @@ STRING 22256
 // Abilities: A0MA (|cff53a4ffMizu Fuusen no Jutsu|r), Tip (Tooltip - Normal)
 {
 |cff53a4ffMizu Fuusen no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 22257
+// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(50 + Taijutsu)/2 x skill level|r over 3s|n|cff32cd32Damage Type:|r Normal|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb2s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
 }
 
 STRING 22259
@@ -144022,42 +144694,6 @@ STRING 26761
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r 13 x Ninjutsu at max|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 400 width x 900 length|n|cff32cd32Effects:|r Turns the caster invulnerable during spell execution. Last 3 seconds.|n|cff32cd32Chakra Cost:|r 520|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nAfter summoning Susano'o, Shisui manifests his Susano'o upper-body, exposing its chest before throwing countless chakra needles.
 }
 
-STRING 26770
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb1.5 x Taijutsu + (30 x skill level)|n|cff32cd32Damage Type:|r Magic|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb3s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
-}
-
-STRING 26771
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb1.5 x Taijutsu + (30 x skill level)|n|cff32cd32Damage Type:|r Magic|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb3s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
-}
-
-STRING 26772
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb1.5 x Taijutsu + (30 x skill level)|n|cff32cd32Damage Type:|r Magic|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb3s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
-}
-
-STRING 26777
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb1.5 x Taijutsu + (30 x skill level)|n|cff32cd32Damage Type:|r Magic|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb3s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
-}
-
-STRING 26778
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb1.5 x Taijutsu + (30 x skill level)|n|cff32cd32Damage Type:|r Magic|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb3s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
-}
-
-STRING 26779
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb1.5 x Taijutsu + (30 x skill level)|n|cff32cd32Damage Type:|r Magic|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb3s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
-}
-
 STRING 26786
 // Units: h07P (Ginkaku Farm), Name (Name)
 {
@@ -144100,40 +144736,10 @@ STRING 26796
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r 10 x Taijutsu on first strike to units (15 x Taijutsu to buildings|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 400 width x 700 length on first strike, 400 radius on explosion|n|cff32cd32Chakra Cost:|r 500|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nNaruto gathers both positive black chakra and negative white chakra, shaping it into a sphere. Then he throws it, destroying everything on its pathway.
 }
 
-STRING 26797
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb1.5 x Taijutsu + (30 x skill level)|n|cff32cd32Damage Type:|r Magic|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb3s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
-}
-
-STRING 26805
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb1.5 x Taijutsu + (30 x skill level)|n|cff32cd32Damage Type:|r Magic|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb3s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
-}
-
-STRING 26806
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb1.5 x Taijutsu + (30 x skill level)|n|cff32cd32Damage Type:|r Magic|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb3s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
-}
-
 STRING 26807
 // Abilities: A1CG (Chakura no Mesu: Big Cut), Tip (Tooltip - Normal)
 {
 Chakura no Mesu: Big Cut [|cffffcc00R|r] 
-}
-
-STRING 26809
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb1.5 x Taijutsu + (30 x skill level)|n|cff32cd32Damage Type:|r Magic|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb3s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
-}
-
-STRING 26812
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb1.5 x Taijutsu + (30 x skill level)|n|cff32cd32Damage Type:|r Magic|r|n|cff32cd32Effects:|r Esnare enemy for |cff87ceeb3s|r|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s - |cff87ceebskill level|n|cff32cd32Description:|r|nKisame uses water to make a clone of himself, that has the ability to bind an enemy in a water prision.
 }
 
 STRING 26827
@@ -144184,76 +144790,10 @@ STRING 26845
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceebNinjutsu / 2 x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Effects:|r Becomes invisible for 5 + |cff87ceeb.5 seconds x skill level|r. After activating again, deals damage and esnare units for .5s.|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 30s|n|cff32cd32Description:|r|nWhile lurking underground, the user grabs a target and drags them into the earth, leaving only their head above the surface. Because victims are rendered unable to move in this state, they are easily subjected to torture or decapitation. 
 }
 
-STRING 26846
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
-{
-|cff87ceebSuiro no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 1|r]
-}
-
-STRING 26847
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
-{
-|cff87ceebSuiro no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 2|r]
-}
-
-STRING 26848
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
-{
-|cff87ceebSuiro no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 3|r]
-}
-
-STRING 26849
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
-{
-|cff87ceebSuiro no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 4|r]
-}
-
-STRING 26850
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
-{
-|cff87ceebSuiro no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 5|r]
-}
-
-STRING 26851
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
-{
-|cff87ceebSuiro no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 6|r]
-}
-
-STRING 26852
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
-{
-|cff87ceebSuiro no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 7|r]
-}
-
-STRING 26853
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
-{
-|cff87ceebSuiro no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 8|r]
-}
-
-STRING 26854
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
-{
-|cff87ceebSuiro no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 9|r]
-}
-
-STRING 26855
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Tip (Tooltip - Normal)
-{
-|cff87ceebSuiro no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 10|r]
-}
-
 STRING 26858
 // Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Name (Name)
 {
 |cff87ceebSuiro no Jutsu|r
-}
-
-STRING 26859
-// Abilities: A1CM (|cff87ceebSuiro no Jutsu|r), Researchtip (Tooltip - Learn)
-{
-Learn |cff87ceebSuiro no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 26860
