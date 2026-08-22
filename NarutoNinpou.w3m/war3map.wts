@@ -5049,6 +5049,12 @@ STRING 841
 Senpou: Kebari Senbon [|cffffcc00D|r]
 }
 
+STRING 842
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Stuns for 1s.|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.5s later damaging all targets in an area.
+}
+
 STRING 843
 // Abilities: A0KE (|cffba8b55Karura's Shield|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -5737,6 +5743,12 @@ STRING 957
 // Items: I02Q (Timed Explosive Tag), Hotkey (Hotkey)
 {
 F
+}
+
+STRING 958
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Stuns for 1s.|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.5s later damaging all targets in an area.
 }
 
 STRING 959
@@ -12786,6 +12798,12 @@ STRING 2134
 // Abilities: A05T (Hachibi Chakra Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form
+}
+
+STRING 2135
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Stuns for 1s.|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.5s later damaging all targets in an area.
 }
 
 STRING 2136
@@ -20114,6 +20132,12 @@ STRING 3358
 Shuriken infused with the wind. The carrier feels lighter with this weapon in their possession.|n|cff32cd32+600 HP|n+70 Ninjutsu|n- Critical Strike (passive, 100% to deal 2 x Highest Stat normal damage, 2s cd)|n|cffff0000Item Type: Weapon|r
 }
 
+STRING 3359
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Stuns for 1s.|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.5s later damaging all targets in an area.
+}
+
 STRING 3360
 // Abilities: A0EG (|cff8b4600Doton: Tsuiga no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -24093,6 +24117,18 @@ STRING 3983
 Q
 }
 
+STRING 3984
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Stuns for 1s.|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.5s later damaging all targets in an area.
+}
+
+STRING 3985
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Stuns for 1s.|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.5s later damaging all targets in an area.
+}
+
 STRING 3986
 // Abilities: A0FF (|cffb1e5faShiki Fuujin|r), Hotkey (Hotkey - Normal)
 {
@@ -24496,6 +24532,18 @@ STRING 4033
 // Abilities: A0MP (|cff0fcaf7Souen: Hitomi Goku|r), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 4034
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Stuns for 1s.|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.5s later damaging all targets in an area.
+}
+
+STRING 4035
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Stuns for 1s.|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.5s later damaging all targets in an area.
 }
 
 STRING 4036
@@ -28550,6 +28598,12 @@ STRING 4690
 W
 }
 
+STRING 4691
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Stuns for 1s.|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.5s later damaging all targets in an area.
+}
+
 STRING 4692
 // Items: I03B (|cffB0B0B0Wind Shuriken|r), Description (Description)
 {
@@ -32081,6 +32135,12 @@ STRING 5280
 // Abilities: A0N8 (Sameodori no Jutsu), Name (Name)
 {
 Sameodori no Jutsu
+}
+
+STRING 5281
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Stuns for 1s.|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.5s later damaging all targets in an area.
 }
 
 STRING 5282
@@ -60328,6 +60388,12 @@ STRING 9830
 |cff8080ffChidori Nagashi|r [|cffffcc00W|r] - [|cffffcc00Level 2|r]
 }
 
+STRING 9831
+// Abilities: A0XM (Silent Killing), Tip (Tooltip - Normal)
+{
+Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 1|r]
+}
+
 STRING 9832
 // Abilities: A1CF (Tengai Shinsei), Name (Name)
 {
@@ -63218,6 +63284,12 @@ STRING 10313
 // Abilities: A1C5 (Switch Mode), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Instant Target|n|cff32cd32Effects:|r Increase attack speed by |cff87ceeb20% x skill level|r, movement speed by |cff87ceeb10% x skill level|r and armor by |cff87ceeb3 x skill level.|n|cff32cd32Chakra Cost:|r Drains 10 chakra per second|n|cff32cd32Description:|r|nThe user wraps their body in a layer of raiton chakra which, instead of being used offensively, is used to eletrically stimulate the user's nervous system.
+}
+
+STRING 10314
+// Abilities: A0XM (Silent Killing), Tip (Tooltip - Normal)
+{
+Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 10315
@@ -106794,6 +106866,18 @@ STRING 17434
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceebGen x 0.8 x skill level|r and each knocked orb does|cff87ceeb Gen / 2 + 30|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Knocks orbs from Pakura E & D back|n|cff32cd32Arc Span:|r 24 to 180 based on distance |n|cff32cd32Chakra cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nPakura throws out a wave of embers in an arc knocking all scorch orbs back.
 }
 
+STRING 17435
+// Abilities: A0XM (Silent Killing), Tip (Tooltip - Normal)
+{
+Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 3|r]
+}
+
+STRING 17436
+// Abilities: A0XM (Silent Killing), Tip (Tooltip - Normal)
+{
+Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 4|r]
+}
+
 STRING 17437
 // Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Tip (Tooltip - Normal)
 {
@@ -106834,6 +106918,12 @@ STRING 17443
 // Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Tip (Tooltip - Normal)
 {
 |cff0fcaf7Chakra Blast|r [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
+}
+
+STRING 17444
+// Abilities: A0XM (Silent Killing), Tip (Tooltip - Normal)
+{
+Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 17445
@@ -107382,6 +107472,12 @@ STRING 17535
 E
 }
 
+STRING 17536
+// Abilities: A0XM (Silent Killing), Tip (Tooltip - Normal)
+{
+Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 6|r]
+}
+
 STRING 17537
 // Abilities: A003 (|cff000000Karasu Bunshin no Jutsu|r), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -107716,6 +107812,12 @@ STRING 17592
 // Abilities: A1B4 (|cffff0000Yata Mirror|r), Tip (Tooltip - Normal)
 {
 Karasu Bunshin no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 17593
+// Abilities: A0XM (Silent Killing), Tip (Tooltip - Normal)
+{
+Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 7|r]
 }
 
 STRING 17594
@@ -108403,6 +108505,12 @@ STRING 17707
 Kuchyose: Enma [|cffffcc00R|r]
 }
 
+STRING 17708
+// Abilities: A0XM (Silent Killing), Tip (Tooltip - Normal)
+{
+Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 8|r]
+}
+
 STRING 17709
 // Abilities: A1A5 (|cff004000Okasho|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -108541,6 +108649,12 @@ STRING 17731
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Ally, Hero|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage/Heal:|r |cff87ceeb(10 + skill level/2) x Taijutsu|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Effects:|r If used on an enemy chains them at the distance casted, can be reactivated to end the spell early pulling them to your location. Slows at level 10.|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|n|cff32cd32Cooldown:|r 30s|n|cff32cd32Description:|r|nBy supreme mastering of the Adamantine Chain technique, Karin is able to send her Chakra out to either heal an Alley or damage an Opponent.
 }
 
+STRING 17732
+// Abilities: A0XM (Silent Killing), Tip (Tooltip - Normal)
+{
+Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 9|r]
+}
+
 STRING 17733
 // Abilities: A0SM (UPGRADE!), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -108557,6 +108671,18 @@ STRING 17735
 // Abilities: A0V2 (|cffFC6022Shakuton: Enko no Jutsu|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Knocks enemies & allies back|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra cost:|r 40 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 18s|n|cff32cd32Description:|r|nPakura throws out an explosive orb for 3s which she can explode early to knock back enemies or allies
+}
+
+STRING 17736
+// Abilities: A0XM (Silent Killing), Tip (Tooltip - Normal)
+{
+Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 17737
+// Abilities: A0XM (Silent Killing), Researchhotkey (Hotkey - Learn)
+{
+E
 }
 
 STRING 17738
@@ -108935,6 +109061,12 @@ STRING 17800
 // Items: I076 (Mission Reward), Name (Name)
 {
 Mission Reward
+}
+
+STRING 17801
+// Abilities: A0XM (Silent Killing), Name (Name)
+{
+Silent Killing
 }
 
 STRING 17802
@@ -109992,6 +110124,12 @@ STRING 17977
 // Abilities: A0QK (Steam Punch), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r 100 + |cff87ceeb90 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Chakra Cost:|r 15 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 14s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nHan gathers Koukou's Boil Release power to create a great amount of steam around him, dealing damage and knocking back all surrounding enemies.
+}
+
+STRING 17978
+// Abilities: A0XM (Silent Killing), Researchtip (Tooltip - Learn)
+{
+Learn Silent Killing [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 17979
@@ -111332,6 +111470,12 @@ STRING 18201
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r Each puppet attack deals 75 normal damage, if you pick this as your T and are in Sandaime Kazekage form then the puppets deal Tai/6 Chaos damage.|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Summon 20 puppets to attack surrounded enemies. Last 40 seconds.|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 120s|n|cff32cd32Description:|r|nTo begin this technique, Sasori removes one summoning scroll from his back. He then opens his right chest compartment to emit more than a hundred chakra strings, which reach into the scroll. From the scroll, more than a hundred puppets wearing red cloaks emerge.
 }
 
+STRING 18202
+// Abilities: A0XM (Silent Killing), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Effects:|r Stuns for 1s.|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.5s later damaging all targets in an area.
+}
+
 STRING 18203
 // Abilities: A0T8 (Bashosen: |cffff0000Five waves of destruction|r), Tip (Tooltip - Normal)
 {
@@ -111804,6 +111948,24 @@ STRING 18281
 // Abilities: A0XJ (Assassination Technique), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb(Genjutsu / 2 + 25) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stuns target for one second|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nItachi backstabs the enemy with his ANBU sword.
+}
+
+STRING 18282
+// Abilities: A0XM (Silent Killing), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 18283
+// Abilities: A1AX (|cff0000ffSuiton: Daikoudan no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceebTarget's Max Chakra|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Chakra Cost:|r 150|n|cff32cd32Cooldown:|r 150s|n|cff32cd32Description:|r|nThe user creates a gigantic shark out of water and, by thrusting both hands forward, sends it to attack the opponent.
+}
+
+STRING 18284
+// Abilities: A0XN (KisameEReveal), Name (Name)
+{
+KisameEReveal
 }
 
 STRING 18285
@@ -135350,12 +135512,6 @@ STRING 22219
 // Abilities: A0XG (Bubble), EditorSuffix (Editor Suffix)
 {
 (Kisame)
-}
-
-STRING 22220
-// Abilities: A1AX (|cff0000ffSuiton: Daikoudan no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceebTarget's Max Chakra|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Chakra Cost:|r 150|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nThe user creates a gigantic shark out of water and, by thrusting both hands forward, sends it to attack the opponent.
 }
 
 STRING 22221
