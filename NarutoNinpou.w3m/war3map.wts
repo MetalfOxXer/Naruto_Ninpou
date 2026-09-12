@@ -26795,6 +26795,12 @@ STRING 4407
 Adamantine Stomp
 }
 
+STRING 4408
+// Items: I06L (Stone of Creation), Ubertip (Tooltip - Extended)
+{
+By fusing Yin and Yang Chakra the Rikuudou Sennin was able to obtain the Stone of Creation.|n|cff32cd32+60 All Stats|n- Scorched Earth Aura: (900 AoE) Any enemy healing is converted as HP to you (passive)|n- Fallen Sky Aura: (900 AoE) Prevent nearby enemies from recovering chakra; any chakra recovered is converted to you, and any chakra spent is converted into HP to you (passive)|n|cff87ceeb- Reverse of All Creation (active, cd: 120s):|n  - Reverses HP and MP percentages for all units in a 600 AoE|n|cffff0000Item Type: Support|r
+}
+
 STRING 4409
 // Abilities: A0KR (Jinton: Genkai Hakuri no Jutsu), Researchhotkey (Hotkey - Learn)
 {
@@ -30937,18 +30943,6 @@ STRING 5081
 ShopBoardMerchant
 }
 
-STRING 5082
-// Abilities: A184 (Futton: Kairiki Muso), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceeb(750 + 3 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nHan uses his incredible strength to make all enemies around him fly, making them fall two seconds after, dealing damage and stunning them.
-}
-
-STRING 5083
-// Abilities: A184 (Futton: Kairiki Muso), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceeb(750 + 3 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nHan uses his incredible strength to make all enemies around him fly, making them fall two seconds after, dealing damage and stunning them.
-}
-
 STRING 5084
 // Abilities: A0N6 (|cff0fcaf7Control Human Puppet|r), Tip (Tooltip - Normal)
 {
@@ -34658,12 +34652,6 @@ STRING 5705
 // Abilities: A036 (Semi Choice), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 5706
-// Abilities: A184 (Futton: Kairiki Muso), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceeb(750 + 3 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nHan uses his incredible strength to make all enemies around him fly, making them fall two seconds after, dealing damage and stunning them.
 }
 
 STRING 5707
@@ -44338,6 +44326,12 @@ STRING 7297
 E
 }
 
+STRING 7298
+// Items: I06L (Stone of Creation), Description (Description)
+{
+By fusing Yin and Yang Chakra the Rikuudou Sennin was able to obtain the Stone of Creation.|n|cff32cd32+60 All Stats|n- Scorched Earth Aura: (900 AoE) Any enemy healing is converted as HP to you (passive)|n- Fallen Sky Aura: (900 AoE) Prevent nearby enemies from recovering chakra; any chakra recovered is converted to you, and any chakra spent is converted into HP to you (passive)|n|cff87ceeb- Reverse of All Creation (active, cd: 120s):|n  - Reverses HP and MP percentages for all units in a 600 AoE|n|cffff0000Item Type: Support|r
+}
+
 STRING 7299
 // Abilities: A0ZV (|cffe36d50Lava Geyser|r), Researchhotkey (Hotkey - Learn)
 {
@@ -44348,6 +44342,12 @@ STRING 7300
 // Units: E02E (Sasori), Name (Name)
 {
 Sasori
+}
+
+STRING 7301
+// Abilities: A017 (|cff008000Underground Roots Technique|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r 13 x Genjutsu over time (20 x Genjutsu to Buildings)|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect: |r1000|n|cff32cd32Chakra Cost:|r 450|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nZetsu buries his own body in the ground and makes giant roots grow out of it, attacking all enemies around him.
 }
 
 STRING 7302
@@ -44389,6 +44389,12 @@ STRING 7307
 STRING 7308
 {
 Role: Assassin
+}
+
+STRING 7309
+// Abilities: A017 (|cff008000Underground Roots Technique|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r 13 x Genjutsu over time (20 x Genjutsu to Buildings)|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect: |r1000|n|cff32cd32Chakra Cost:|r 450|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nZetsu buries his own body in the ground and makes giant roots grow out of it, attacking all enemies around him.
 }
 
 STRING 7310
@@ -63897,6 +63903,12 @@ STRING 10419
 Battle Shuriken - |cffffcc00Level 6|r
 }
 
+STRING 10420
+// Abilities: A184 (Futton: Kairiki Muso), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb(750 + 3 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nHan uses his incredible strength to make all enemies around him fly, making them fall two seconds after, dealing damage and stunning them.
+}
+
 STRING 10421
 // Abilities: A16Z (Echo Chamber), Ubertip (Tooltip - Normal - Extended)
 {
@@ -68936,6 +68948,12 @@ STRING 11259
 (Mitsuki)
 }
 
+STRING 11260
+// Abilities: A184 (Futton: Kairiki Muso), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb(750 + 3 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nHan uses his incredible strength to make all enemies around him fly, making them fall two seconds after, dealing damage and stunning them.
+}
+
 STRING 11261
 // Abilities: A0EL (Senpou: Hakugeki no Jutsu), Ubertip (Tooltip - Normal - Extended)
 {
@@ -69523,6 +69541,12 @@ STRING 11358
 // Abilities: A0GM (Six Swords Dance), Researchtip (Tooltip - Learn)
 {
 Learn Six Sword Dance [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
+}
+
+STRING 11359
+// Abilities: A184 (Futton: Kairiki Muso), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb(750 + 3 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nHan uses his incredible strength to make all enemies around him fly, making them fall two seconds after, dealing damage and stunning them.
 }
 
 STRING 11360
@@ -115855,18 +115879,6 @@ STRING 18951
 Kamui [|cffffcc00Q|r] - [|cffffcc00Level 9|r]
 }
 
-STRING 18952
-// Items: I06L (Stone of Creation), Ubertip (Tooltip - Extended)
-{
-By fusing Yin and Yang Chakra the Rikuudou Sennin was able to obtain the Stone of Creation.|n|cff32cd32+60 All Stats|n- Scorched Earth Aura: Any enemy healing is converted as HP to you (passive)|n- Fallen Sky Aura: Prevent nearby enemies from recovering chakra; any chakra recovered is converted to you, and any chakra spent is converted into HP to you (passive)|n|cff87ceeb- Reverse of All Creation (active, cd: 120s):|n  - Revert HP and MP percentages for all units around you|n|cffff0000Item Type: Support|r
-}
-
-STRING 18953
-// Items: I06L (Stone of Creation), Description (Description)
-{
-By fusing Yin and Yang Chakra the Rikuudou Sennin was able to obtain the Stone of Creation.|n|cff32cd32+60 All Stats|n- Scorched Earth Aura: Any enemy healing is converted as HP to you (passive)|n- Fallen Sky Aura: Prevent nearby enemies from recovering chakra; any chakra recovered is converted to you, and any chakra spent is converted into HP to you (passive)|n|cff87ceeb- Reverse of All Creation (active, cd: 120s):|n  - Revert HP and MP percentages for all units around you|n|cffff0000Item Type: Support|r
-}
-
 STRING 18954
 // Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
@@ -121873,18 +121885,6 @@ STRING 19963
 // Abilities: A0R4 (|cff0fcaf7Chakra Katana|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r If a hero is killed while Chakra Katana is activated, the cooldown of all user skills are reset. Also increases the user speed by 25% for 10 seconds.|n|cff32cd32Chakra Cost:|r 100|n|cff32cd32Cooldown:|r 160s|n|cff32cd32Description:|r|nMifune infuses chakra on his Katana, increasing his speed.
-}
-
-STRING 19964
-// Abilities: A017 (|cff008000Underground Roots Technique|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r 11 x Genjutsu over time (15 x Genjutsu to Buildings)|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect: |r1000|n|cff32cd32Chakra Cost:|r 450|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nZetsu buries his own body in the ground and makes giant roots grow out of it, attacking all enemies around him.
-}
-
-STRING 19965
-// Abilities: A017 (|cff008000Underground Roots Technique|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r 11 x Genjutsu over time (15 x Genjutsu to Buildings)|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect: |r1000|n|cff32cd32Chakra Cost:|r 450|n|cff32cd32Cooldown:|r 90s|n|cff32cd32Description:|r|nZetsu buries his own body in the ground and makes giant roots grow out of it, attacking all enemies around him.
 }
 
 STRING 19966
