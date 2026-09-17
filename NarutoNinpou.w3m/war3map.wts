@@ -30943,6 +30943,12 @@ STRING 5081
 ShopBoardMerchant
 }
 
+STRING 5082
+// Abilities: A02T (Devour), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Ally|n|cff32cd32Casting Range:|r 200|n|cff32cd32Damage:|r |cff87ceeb3 x Genjutsu|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Make the target disappear from the map for three seconds.|n|cff32cd32Chakra Cost:|r 150|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nZetsu devours the target, making it disappear from the map for three seconds.
+}
+
 STRING 5084
 // Abilities: A0N6 (|cff0fcaf7Control Human Puppet|r), Tip (Tooltip - Normal)
 {
@@ -33268,7 +33274,7 @@ Learn Bijuu Dama [|cffffcc00T|r] - [|cffffcc00Level %d|r]
 
 STRING 5474
 {
-|cffff0000Naruto Ninpou RE 14.5a
+|cffff0000Naruto Ninpou RE 14.5c
 }
 
 STRING 5475
@@ -34670,12 +34676,6 @@ STRING 5709
 // Abilities: A0GW (|cffad3f45Demon Slash|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 350|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for 1.5s|n|cff32cd32Chakra Cost:|r |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nZabuza uses his assassin instinct to terrify his enemy, immobilizing him scared while he fiercely strike him deadly.
-}
-
-STRING 5710
-// Abilities: A02T (Devour), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Ally|n|cff32cd32Casting Range:|r 200|n|cff32cd32Damage:|r |cff87ceeb3 x Genjutsu|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Make the target disappear from the map for three seconds, and if an ally is eaten then heal them as well.|n|cff32cd32Chakra Cost:|r 150|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nZetsu devours the target, making it disappear from the map for three seconds.
 }
 
 STRING 5711
