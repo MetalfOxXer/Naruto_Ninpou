@@ -84532,6 +84532,12 @@ STRING 13855
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 300|n|cff32cd32Damage:|r |cff87ceeb(30 + Ninjutsu/2) x skill level |r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nHanabi teleports to the enemy doing a short kaiten.
 }
 
+STRING 13856
+// Abilities: A1AX (|cff0000ffSuiton: Daikoudan no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceebTarget's Max Chakra|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 80s|n|cff32cd32Description:|r|nThe user creates a gigantic shark out of water and, by thrusting both hands forward, sends it to attack the opponent.
+}
+
 STRING 13857
 // Items: I018 (Battle Kunai - |cffffcc00Level 7|r), Description (Description)
 {
@@ -84754,10 +84760,24 @@ STRING 13893
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
 }
 
+STRING 13894
+// Abilities: A0B6 (|cffff0000Six-Tails mode!!|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r |cff87ceeb|n+ Chaos Attack|n+ 80 Movement Speed|n+ Inifinite Chakra|n+ New Abilities|n|cff32cd32Duration:|r 40s|r|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 110s|n|cff32cd32Description:|r|nNaruto lets Kyuubi chakra take over his body, transforming himself into the Six-Tails form and entering a berserker like mode.
+
+}
+
 STRING 13895
 // Abilities: A0EU (|cff5ace76Senpou: Jagei Jubaku|r), Tip (Tooltip - Normal)
 {
 Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 3|r]
+}
+
+STRING 13896
+// Abilities: A0B6 (|cffff0000Six-Tails mode!!|r), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r |cff87ceeb|n+ Chaos Attack|n+ 80 Movement Speed|n+ Inifinite Chakra|n+ New Abilities|n|cff32cd32Duration:|r 40s|r|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 110s|n|cff32cd32Description:|r|nNaruto lets Kyuubi chakra take over his body, transforming himself into the Six-Tails form and entering a berserker like mode.
+
 }
 
 STRING 13898
@@ -114971,20 +114991,6 @@ STRING 18794
 }
 
 STRING 18795
-// Abilities: A0B6 (|cffff0000Six-Tails mode!!|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r |cff87ceeb|n+ Chaos Attack|n+ 80 Movement Speed|n+ Inifinite Chakra|n+ New Abilities|n|cff32cd32Duration:|r 40s|r|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 130s|n|cff32cd32Description:|r|nNaruto lets Kyuubi chakra take over his body, transforming himself into the Six-Tails form and entering a berserker like mode.
-
-}
-
-STRING 18796
-// Abilities: A0B6 (|cffff0000Six-Tails mode!!|r), Unubertip (Tooltip - Turn Off - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r |cff87ceeb|n+ Chaos Attack|n+ 80 Movement Speed|n+ Inifinite Chakra|n+ New Abilities|n|cff32cd32Duration:|r 40s|r|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 130s|n|cff32cd32Description:|r|nNaruto lets Kyuubi chakra take over his body, transforming himself into the Six-Tails form and entering a berserker like mode.
-
-}
-
-STRING 18797
 // Abilities: A0B6 (|cffff0000Six-Tails mode!!|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r |cff87ceeb|n+ Chaos Attack|n+ 80 Movement Speed|n+ Inifinite Chakra|n+ New Abilities|n|cff32cd32Duration:|r 40s|r|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 130s|n|cff32cd32Description:|r|nNaruto lets Kyuubi chakra take over his body, transforming himself into the Six-Tails form and entering a berserker like mode.
@@ -132768,12 +132774,6 @@ STRING 21731
 // Abilities: A01N (|cff8080ffTsuuga|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 21732
-// Abilities: A1AX (|cff0000ffSuiton: Daikoudan no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceebTarget's Max Chakra|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Chakra Cost:|r 400|n|cff32cd32Cooldown:|r 150s|n|cff32cd32Description:|r|nThe user creates a gigantic shark out of water and, by thrusting both hands forward, sends it to attack the opponent.
 }
 
 STRING 21733
