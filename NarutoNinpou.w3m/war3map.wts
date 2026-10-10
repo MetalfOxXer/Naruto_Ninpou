@@ -33250,7 +33250,7 @@ Learn Bijuu Dama [|cffffcc00T|r] - [|cffffcc00Level %d|r]
 
 STRING 5474
 {
-|cffff0000Naruto Ninpou RE 14.5d
+|cffff0000Naruto Ninpou RE 14.6
 }
 
 STRING 5475
@@ -86354,7 +86354,7 @@ STRING 14168
 }
 
 STRING 14169
-// Abilities: A0XQ (Release Rashomon), Hotkey (Hotkey - Normal)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -86804,7 +86804,7 @@ STRING 14243
 }
 
 STRING 14244
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -88384,7 +88384,7 @@ Isobu Aura
 }
 
 STRING 14505
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -88800,7 +88800,7 @@ STRING 14569
 }
 
 STRING 14570
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0GP (|cff000000Kuchiyose no Jutsu: Pan|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89279,7 +89279,7 @@ Throw Kunai [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 14650
-// Abilities: A0GP (|cff000000Kuchiyose no Jutsu: Pan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GP (|cff000000Kuchiyose no Jutsu: Pan|r), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89699,7 +89699,7 @@ STRING 14719
 }
 
 STRING 14720
-// Abilities: A0GP (|cff000000Kuchiyose no Jutsu: Pan|r), Hotkey (Hotkey - Normal)
+// Abilities: A0H2 (|cffe9576aKyuubi's Influence!!|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89789,7 +89789,7 @@ STRING 14734
 }
 
 STRING 14735
-// Abilities: A0H2 (|cffe9576aKyuubi's Influence!!|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J2 (|cffebee8bChain Pillar|r), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89813,7 +89813,7 @@ STRING 14738
 }
 
 STRING 14739
-// Abilities: A0J2 (|cffebee8bChain Pillar|r), Hotkey (Hotkey - Normal)
+// Abilities: A04X (|cff87ceebHissatsu Hyosho|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -89897,7 +89897,7 @@ STRING 14752
 }
 
 STRING 14753
-// Abilities: A04X (|cff87ceebHissatsu Hyosho|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A04X (|cff87ceebHissatsu Hyosho|r), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -89993,7 +89993,7 @@ Paper Bunshin [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 14769
-// Abilities: A04X (|cff87ceebHissatsu Hyosho|r), Hotkey (Hotkey - Normal)
+// Abilities: A0KL (|cfff00000Crazy Slash|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -90305,7 +90305,7 @@ Learn |cff8b4600Doton: Doryou Dango|r [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 14821
-// Abilities: A0KL (|cfff00000Crazy Slash|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KL (|cfff00000Crazy Slash|r), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -90569,7 +90569,7 @@ STRING 14864
 }
 
 STRING 14865
-// Abilities: A0KL (|cfff00000Crazy Slash|r), Hotkey (Hotkey - Normal)
+// Abilities: A0LE (Takigakure no Senpuu), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -92033,7 +92033,7 @@ Pein switches to Asura Path
 }
 
 STRING 15084
-// Abilities: A0LE (Takigakure no Senpuu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LE (Takigakure no Senpuu), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -92327,13 +92327,13 @@ Eight-Tails
 }
 
 STRING 15133
-// Abilities: A0LE (Takigakure no Senpuu), Hotkey (Hotkey - Normal)
+// Abilities: A0LG (|cff0000ffSuiton: Suijinheki|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 15134
-// Abilities: A0LG (|cff0000ffSuiton: Suijinheki|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LG (|cff0000ffSuiton: Suijinheki|r), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -92405,7 +92405,7 @@ STRING 15145
 }
 
 STRING 15146
-// Abilities: A0LG (|cff0000ffSuiton: Suijinheki|r), Hotkey (Hotkey - Normal)
+// Abilities: A0LR (Puppet Hidden Smoke), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -92441,13 +92441,13 @@ STRING 15151
 }
 
 STRING 15152
-// Abilities: A0LR (Puppet Hidden Smoke), Hotkey (Hotkey - Normal)
+// Abilities: A0LU (|cff000000Satetsu Boru|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 15153
-// Abilities: A0LU (|cff000000Satetsu Boru|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LV (Kugutsu Shoyu), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -92657,7 +92657,7 @@ STRING 15187
 }
 
 STRING 15188
-// Abilities: A0LV (Kugutsu Shoyu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M0 (Claw), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -94554,7 +94554,7 @@ STRING 15395
 }
 
 STRING 15396
-// Abilities: A0M0 (Claw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M0 (Claw), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -94578,7 +94578,7 @@ Ninpou: Chouju Giga "Rats" [|cffffcc00E|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 15400
-// Abilities: A0M0 (Claw), Hotkey (Hotkey - Normal)
+// Abilities: A0MX (|cffB0B0B0Doki Control: Secondary Attack|r), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -94770,7 +94770,7 @@ Harem no Jutsu
 }
 
 STRING 15432
-// Abilities: A0MX (|cffB0B0B0Doki Control: Secondary Attack|r), Hotkey (Hotkey - Normal)
+// Abilities: A0MX (|cffB0B0B0Doki Control: Secondary Attack|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -95082,7 +95082,7 @@ STRING 15483
 }
 
 STRING 15484
-// Abilities: A0MX (|cffB0B0B0Doki Control: Secondary Attack|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NO (|cffc4ad6dKingin Enbu: |cffa4a5afHogu Ranbu|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -96162,7 +96162,7 @@ AHHS_SHISUI_ICON
 }
 
 STRING 15664
-// Abilities: A0NO (|cffc4ad6dKingin Enbu: |cffa4a5afHogu Ranbu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NO (|cffc4ad6dKingin Enbu: |cffa4a5afHogu Ranbu|r), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -96474,7 +96474,7 @@ AHSS_YAGURA_ICON
 }
 
 STRING 15716
-// Abilities: A0NO (|cffc4ad6dKingin Enbu: |cffa4a5afHogu Ranbu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0OF (|cffd9d6d9Shichiseiken|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -101080,7 +101080,7 @@ Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 16483
-// Abilities: A0OF (|cffd9d6d9Shichiseiken|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OH ( ), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -101758,7 +101758,7 @@ STRING 16595
 }
 
 STRING 16596
-// Abilities: A0OH ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S4 (Tessenka no Mai: Yanagi), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -104357,7 +104357,7 @@ STRING 17028
 }
 
 STRING 17029
-// Abilities: A0S4 (Tessenka no Mai: Yanagi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S8 (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -104399,7 +104399,7 @@ STRING 17035
 }
 
 STRING 17036
-// Abilities: A0S8 (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S8 (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -104903,7 +104903,7 @@ Learn Paper Chakram [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 17120
-// Abilities: A0S8 (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Hotkey (Hotkey - Normal)
+// Abilities: A0O6 (Enma Stomp), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -106861,7 +106861,7 @@ STRING 17445
 }
 
 STRING 17446
-// Abilities: A0O6 (Enma Stomp), Hotkey (Hotkey - Normal)
+// Abilities: A0O6 (Enma Stomp), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -106885,7 +106885,7 @@ STRING 17449
 }
 
 STRING 17450
-// Abilities: A0O6 (Enma Stomp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M3 (|cff000000Gudodama:|cffFFFFE0Saving Light|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -108668,7 +108668,7 @@ STRING 17746
 }
 
 STRING 17747
-// Abilities: A0M3 (|cff000000Gudodama:|cffFFFFE0Saving Light|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U5 (Shadow Combo), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -108752,7 +108752,7 @@ Rasenshuriken
 }
 
 STRING 17761
-// Abilities: A0U5 (Shadow Combo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U5 (Shadow Combo), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -109959,7 +109959,7 @@ Throw Kunai [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 17962
-// Abilities: A0U5 (Shadow Combo), Hotkey (Hotkey - Normal)
+// Abilities: A0US (|cffFC6022Shakuton: Hai Torappu|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -115628,13 +115628,13 @@ STRING 18898
 }
 
 STRING 18899
-// Abilities: A0US (|cffFC6022Shakuton: Hai Torappu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0US (|cffFC6022Shakuton: Hai Torappu|r), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 18900
-// Abilities: A0US (|cffFC6022Shakuton: Hai Torappu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0UT ( ), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -116186,7 +116186,7 @@ UPGRADE! [|cffffcc00T|r]
 }
 
 STRING 18993
-// Abilities: A0UT ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UT ( ), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -117668,7 +117668,7 @@ STRING 19239
 }
 
 STRING 19240
-// Abilities: A0UT ( ), Hotkey (Hotkey - Normal)
+// Abilities: A0VK ( ), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -117746,7 +117746,7 @@ STRING 19252
 }
 
 STRING 19253
-// Abilities: A0VK ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VW (Shugohakke Rokujuuyon Sho), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -119314,7 +119314,7 @@ HagoromoWE
 }
 
 STRING 19521
-// Abilities: A0VW (Shugohakke Rokujuuyon Sho), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VW (Shugohakke Rokujuuyon Sho), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -125494,7 +125494,7 @@ Weapon Mastery - [|cffffcc00Level 6|r]
 }
 
 STRING 20535
-// Abilities: A0VW (Shugohakke Rokujuuyon Sho), Hotkey (Hotkey - Normal)
+// Abilities: A0WJ (|cff8b4600Doton: Kaido Shōkutsu|r), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -125769,7 +125769,7 @@ Shadow Combo [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 20581
-// Abilities: A0WJ (|cff8b4600Doton: Kaido Shōkutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WJ (|cff8b4600Doton: Kaido Shōkutsu|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -125793,7 +125793,7 @@ STRING 20584
 }
 
 STRING 20585
-// Abilities: A0WJ (|cff8b4600Doton: Kaido Shōkutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X9 (|cffebee8bChain Pillar|r), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -127581,7 +127581,7 @@ STRING 20862
 }
 
 STRING 20863
-// Abilities: A0X9 (|cffebee8bChain Pillar|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X9 (|cffebee8bChain Pillar|r), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -133155,7 +133155,7 @@ Learn Body swap [|cffffcc00T|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 21792
-// Abilities: A0X9 (|cffebee8bChain Pillar|r), Hotkey (Hotkey - Normal)
+// Abilities: A0XQ (Release Rashomon), Hotkey (Hotkey - Normal)
 {
 W
 }
