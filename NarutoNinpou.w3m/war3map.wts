@@ -7634,7 +7634,7 @@ STRING 1272
 }
 
 STRING 1273
-// Abilities: A0E6 (Release Mask), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Release Mask), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(50 +Taijutsu/2) x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Fire Mask: Additional |cff87ceeb50 x skill level|r, Wind Mask: Slow enemies, Lightning Mask: Esnare enemies for 2s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKakuzu releases one of his masks to attack his enemies.
 }
@@ -7658,7 +7658,7 @@ Gaara uses his own sand to make an armor around his skin, reducing the damage he
 }
 
 STRING 1277
-// Abilities: A0E6 (Release Mask), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Release Mask), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(50 +Taijutsu/2) x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Fire Mask: Additional |cff87ceeb50 x skill level|r, Wind Mask: Slow enemies, Lightning Mask: Esnare enemies for 2s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKakuzu releases one of his masks to attack his enemies.
 }
@@ -7766,7 +7766,7 @@ Learn Ultimate Choice [|cffffcc00T|r]
 }
 
 STRING 1295
-// Abilities: A0E6 (Release Mask), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Release Mask), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(50 +Taijutsu/2) x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Fire Mask: Additional |cff87ceeb50 x skill level|r, Wind Mask: Slow enemies, Lightning Mask: Esnare enemies for 2s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKakuzu releases one of his masks to attack his enemies.
 }
@@ -7844,7 +7844,7 @@ Secret Treasure Shop - Ginkaku
 }
 
 STRING 1308
-// Abilities: A0E6 (Release Mask), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Release Mask), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(50 +Taijutsu/2) x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Fire Mask: Additional |cff87ceeb50 x skill level|r, Wind Mask: Slow enemies, Lightning Mask: Esnare enemies for 2s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKakuzu releases one of his masks to attack his enemies.
 }
@@ -7856,7 +7856,7 @@ STRING 1309
 }
 
 STRING 1310
-// Abilities: A0E6 (Release Mask), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Release Mask), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(50 +Taijutsu/2) x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Fire Mask: Additional |cff87ceeb50 x skill level|r, Wind Mask: Slow enemies, Lightning Mask: Esnare enemies for 2s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKakuzu releases one of his masks to attack his enemies.
 }
@@ -8150,7 +8150,7 @@ Konan's Akatsuki Ring.|n|cff32cd32+25 All Stats|nPaper Link (active, cooldown: 6
 }
 
 STRING 1359
-// Abilities: A0E6 (Release Mask), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Release Mask), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(50 +Taijutsu/2) x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Fire Mask: Additional |cff87ceeb50 x skill level|r, Wind Mask: Slow enemies, Lightning Mask: Esnare enemies for 2s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKakuzu releases one of his masks to attack his enemies.
 }
@@ -8456,7 +8456,7 @@ Q
 }
 
 STRING 1410
-// Abilities: A0E6 (Release Mask), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Release Mask), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(50 +Taijutsu/2) x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Fire Mask: Additional |cff87ceeb50 x skill level|r, Wind Mask: Slow enemies, Lightning Mask: Esnare enemies for 2s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKakuzu releases one of his masks to attack his enemies.
 }
@@ -9301,7 +9301,7 @@ Type -ranked to force ELO ranked mode.
 }
 
 STRING 1551
-// Abilities: A0E6 (Release Mask), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Release Mask), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(50 +Taijutsu/2) x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Fire Mask: Additional |cff87ceeb50 x skill level|r, Wind Mask: Slow enemies, Lightning Mask: Esnare enemies for 2s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKakuzu releases one of his masks to attack his enemies.
 }
@@ -9331,7 +9331,7 @@ STRING 1555
 }
 
 STRING 1556
-// Abilities: A0E6 (Release Mask), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Release Mask), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(50 +Taijutsu/2) x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Fire Mask: Additional |cff87ceeb50 x skill level|r, Wind Mask: Slow enemies, Lightning Mask: Esnare enemies for 2s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKakuzu releases one of his masks to attack his enemies.
 }
@@ -9481,7 +9481,7 @@ STRING 1580
 }
 
 STRING 1581
-// Abilities: A0E6 (Release Mask), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Release Mask), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(50 +Taijutsu/2) x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Fire Mask: Additional |cff87ceeb50 x skill level|r, Wind Mask: Slow enemies, Lightning Mask: Esnare enemies for 2s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKakuzu releases one of his masks to attack his enemies.
 }
@@ -10704,6 +10704,13 @@ STRING 1784
 (+300)
 }
 
+STRING 1785
+// Items: I073 (Kohaku no Johei), Description (Description)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Area of Effect:|r 800|n|cff32cd32Chakra Cost:|r 200|n|cff32cd32Effect:|r Pull enemies for |cff87ceeb4s|r, sucking |cff87ceeb5%|r of chakra/second. If they get pulled for more than |cff87ceeb2s|r, they get esnared for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb50s|r|n|cffff0000Classification: None|r
+
+}
+
 STRING 1786
 // Abilities: A16M (Rinne Sharingan), Name (Name)
 {
@@ -10933,7 +10940,7 @@ STRING 1823
 }
 
 STRING 1824
-// Abilities: A0E6 (Release Mask), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0XW (Release Mask), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(50 +Taijutsu/2) x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Fire Mask: Additional |cff87ceeb50 x skill level|r, Wind Mask: Slow enemies, Lightning Mask: Esnare enemies for 2s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 20s|n|cff32cd32Description:|r|nKakuzu releases one of his masks to attack his enemies.
 }
@@ -20018,6 +20025,13 @@ STRING 3340
 Amenotejikara [|cffffcc00E|r] - [|cffffcc00Level 5|r]
 }
 
+STRING 3341
+// Items: I073 (Kohaku no Johei), Ubertip (Tooltip - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Area of Effect:|r 800|n|cff32cd32Chakra Cost:|r 200|n|cff32cd32Effect:|r Pull enemies for |cff87ceeb4s|r, sucking |cff87ceeb5%|r of chakra/second. If they get pulled for more than |cff87ceeb2s|r, they get esnared for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb50s|r|n|cffff0000Classification: None|r
+
+}
+
 STRING 3342
 // Abilities: A0EG (|cff8b4600Doton: Tsuiga no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -21528,6 +21542,12 @@ STRING 3593
 // Abilities: A06B (Magen: Gama Rinsho), Tip (Tooltip - Normal)
 {
 |cffffc0cbMagen: Gama Rinsho|r [|cffffcc00T|r]
+}
+
+STRING 3594
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.6|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 3595
@@ -25875,6 +25895,12 @@ STRING 4257
 // Items: I088 (Medical Aid Kit), Tip (Tooltip - Basic)
 {
 Purchase Medical Aid Kit [|cffffcc00Z|r]
+}
+
+STRING 4258
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.6|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 4259
@@ -32017,6 +32043,12 @@ STRING 5264
 Wind Assault [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
 }
 
+STRING 5265
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.6|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
 STRING 5266
 // Abilities: A0BZ (Wind Assault), Tip (Tooltip - Normal)
 {
@@ -34216,6 +34248,12 @@ STRING 5635
 // Units: e028 (EarthSphere), Name (Name)
 {
 EarthSphere
+}
+
+STRING 5636
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.6|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 5637
@@ -41712,7 +41750,7 @@ STRING 6886
 }
 
 STRING 6887
-// Abilities: A0E6 (Release Mask), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42203,7 +42241,7 @@ Suiton: Suidanha [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 6969
-// Abilities: A0E6 (Release Mask), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -42511,7 +42549,7 @@ STRING 7019
 }
 
 STRING 7020
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BK (Yanagi no Mai), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43034,7 +43072,7 @@ STRING 7104
 }
 
 STRING 7105
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Hotkey (Hotkey - Normal)
+// Abilities: A0BK (Yanagi no Mai), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43160,7 +43198,7 @@ A
 }
 
 STRING 7126
-// Abilities: A0BK (Yanagi no Mai), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MS (Tessenka no Mai: Hana), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43667,7 +43705,7 @@ STRING 7190
 }
 
 STRING 7191
-// Abilities: A0BK (Yanagi no Mai), Hotkey (Hotkey - Normal)
+// Abilities: A0NC (|cff215dbfClaws Strike|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44057,7 +44095,7 @@ STRING 7255
 }
 
 STRING 7256
-// Abilities: A0MS (Tessenka no Mai: Hana), Hotkey (Hotkey - Normal)
+// Abilities: A0NC (|cff215dbfClaws Strike|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44171,7 +44209,7 @@ R
 }
 
 STRING 7275
-// Abilities: A0NC (|cff215dbfClaws Strike|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SK (|cffff0000Katon: Endan|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44303,7 +44341,7 @@ STRING 7296
 }
 
 STRING 7297
-// Abilities: A0NC (|cff215dbfClaws Strike|r), Hotkey (Hotkey - Normal)
+// Abilities: A0SK (|cffff0000Katon: Endan|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -45371,13 +45409,13 @@ STRING 7474
 }
 
 STRING 7475
-// Abilities: A0SK (|cffff0000Katon: Endan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TJ (Toton Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7476
-// Abilities: A0SK (|cffff0000Katon: Endan|r), Hotkey (Hotkey - Normal)
+// Abilities: A0TJ (Toton Jutsu), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -45671,13 +45709,13 @@ Learning multiple water body of the operation (|cffffcc00E |r) - [|cffffcc00 Lev
 }
 
 STRING 7525
-// Abilities: A0TJ (Toton Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UO (Toton Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7526
-// Abilities: A0TJ (Toton Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A13Z (|cff8ff6bcShosen Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -46001,7 +46039,7 @@ STRING 7579
 }
 
 STRING 7580
-// Abilities: A0UO (Toton Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A13Z (|cff8ff6bcShosen Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -46025,7 +46063,7 @@ Ultimate Choice
 }
 
 STRING 7584
-// Abilities: A13Z (|cff8ff6bcShosen Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -46949,7 +46987,7 @@ Lightning Arrow
 }
 
 STRING 7738
-// Abilities: A13Z (|cff8ff6bcShosen Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A14Y (Kori Shinchuu no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47315,7 +47353,7 @@ STRING 7798
 }
 
 STRING 7799
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A14Y (Kori Shinchuu no Jutsu), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47363,7 +47401,7 @@ STRING 7806
 }
 
 STRING 7807
-// Abilities: A14Y (Kori Shinchuu no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A154 (|cffdabd91Suna no Yoroi|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47549,13 +47587,13 @@ Shuradou [|cffffcc00W|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 7838
-// Abilities: A14Y (Kori Shinchuu no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A154 (|cffdabd91Suna no Yoroi|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 7839
-// Abilities: A154 (|cffdabd91Suna no Yoroi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A158 (|cff09520eSnake Skin Change|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47597,13 +47635,13 @@ Learn Sandaime Kazekage Puppet [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 7846
-// Abilities: A154 (|cffdabd91Suna no Yoroi|r), Hotkey (Hotkey - Normal)
+// Abilities: A179 (|cff800080Amenotejikara|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 7847
-// Abilities: A158 (|cff09520eSnake Skin Change|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A179 (|cff800080Amenotejikara|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47626,13 +47664,13 @@ Role: Destroyer
 }
 
 STRING 7851
-// Abilities: A179 (|cff800080Amenotejikara|r), Hotkey (Hotkey - Normal)
+// Abilities: A17A (|cff8080ffChidori Eiso), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7852
-// Abilities: A179 (|cff800080Amenotejikara|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A17B (Feel the Pain!), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47740,7 +47778,7 @@ STRING 7869
 }
 
 STRING 7870
-// Abilities: A17A (|cff8080ffChidori Eiso), Researchhotkey (Hotkey - Learn)
+// Abilities: A17B (Feel the Pain!), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48142,13 +48180,13 @@ STRING 7936
 }
 
 STRING 7937
-// Abilities: A17B (Feel the Pain!), Researchhotkey (Hotkey - Learn)
+// Abilities: A17F (|cff008000Hokage-Shiki Jijun Jutsu: Kakuan Nitten Suishu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7938
-// Abilities: A17B (Feel the Pain!), Hotkey (Hotkey - Normal)
+// Abilities: A17F (|cff008000Hokage-Shiki Jijun Jutsu: Kakuan Nitten Suishu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48352,7 +48390,7 @@ Mokuton: Mokujin no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 7972
-// Abilities: A17F (|cff008000Hokage-Shiki Jijun Jutsu: Kakuan Nitten Suishu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A17U (Naruto Beam), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48574,7 +48612,7 @@ Mokuton: Mokujin no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 8009
-// Abilities: A17F (|cff008000Hokage-Shiki Jijun Jutsu: Kakuan Nitten Suishu|r), Hotkey (Hotkey - Normal)
+// Abilities: A17U (Naruto Beam), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48598,7 +48636,7 @@ STRING 8012
 }
 
 STRING 8013
-// Abilities: A17U (Naruto Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A18B (Uppercut), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48693,13 +48731,13 @@ Spectator 2
 }
 
 STRING 8029
-// Abilities: A17U (Naruto Beam), Hotkey (Hotkey - Normal)
+// Abilities: A18B (Uppercut), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8030
-// Abilities: A18B (Uppercut), Researchhotkey (Hotkey - Learn)
+// Abilities: A19C (Assassination Technique), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48897,19 +48935,19 @@ STRING 8062
 }
 
 STRING 8063
-// Abilities: A18B (Uppercut), Hotkey (Hotkey - Normal)
+// Abilities: A19C (Assassination Technique), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8064
-// Abilities: A19C (Assassination Technique), Researchhotkey (Hotkey - Learn)
+// Abilities: A19V (Kumonendo), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8065
-// Abilities: A19C (Assassination Technique), Hotkey (Hotkey - Normal)
+// Abilities: A19V (Kumonendo), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48982,7 +49020,7 @@ STRING 8076
 }
 
 STRING 8077
-// Abilities: A19V (Kumonendo), Researchhotkey (Hotkey - Learn)
+// Abilities: A19W ( ), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49010,7 +49048,7 @@ The second subcategory is called hero destroyer and the second most favorite rol
 }
 
 STRING 8081
-// Abilities: A19V (Kumonendo), Hotkey (Hotkey - Normal)
+// Abilities: A19W ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -49252,7 +49290,7 @@ STRING 8116
 }
 
 STRING 8117
-// Abilities: A19W ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A1AC (|cff000000Black Lightning|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49515,7 +49553,7 @@ Instant Water [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 8158
-// Abilities: A19W ( ), Hotkey (Hotkey - Normal)
+// Abilities: A097 (|cffe95e01Katon: Gouryuuka no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49563,7 +49601,7 @@ Rikudou Sennin Staff
 }
 
 STRING 8166
-// Abilities: A1AC (|cff000000Black Lightning|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A097 (|cffe95e01Katon: Gouryuuka no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50557,13 +50595,13 @@ STRING 8329
 }
 
 STRING 8330
-// Abilities: A097 (|cffe95e01Katon: Gouryuuka no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8331
-// Abilities: A097 (|cffe95e01Katon: Gouryuuka no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50837,19 +50875,19 @@ Q
 }
 
 STRING 8366
-// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
 
 STRING 8367
-// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A1AN (Headbutt), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8368
-// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1AN (Headbutt), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51103,13 +51141,13 @@ STRING 8405
 }
 
 STRING 8406
-// Abilities: A1AN (Headbutt), Researchhotkey (Hotkey - Learn)
+// Abilities: A1AS (|cff8b4600Doton: Doryou Dango|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8407
-// Abilities: A1AN (Headbutt), Hotkey (Hotkey - Normal)
+// Abilities: A1AV ( ), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51373,7 +51411,7 @@ Darui Suiton
 }
 
 STRING 8451
-// Abilities: A1AS (|cff8b4600Doton: Doryou Dango|r), Hotkey (Hotkey - Normal)
+// Abilities: A1AV ( ), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -51385,13 +51423,13 @@ Chiyo performs a variation of the technique by attaching threads generated for t
 }
 
 STRING 8453
-// Abilities: A1AV ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A1AV ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8454
-// Abilities: A1AV ( ), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1B3 (|cffff0000Sword of Totsuka|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51529,7 +51567,7 @@ STRING 8476
 }
 
 STRING 8477
-// Abilities: A1AV ( ), Hotkey (Hotkey - Normal)
+// Abilities: A1B3 (|cffff0000Sword of Totsuka|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51643,7 +51681,7 @@ STRING 8495
 }
 
 STRING 8496
-// Abilities: A1B3 (|cffff0000Sword of Totsuka|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1B4 (|cffff0000Yata Mirror|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51655,7 +51693,7 @@ STRING 8497
 }
 
 STRING 8498
-// Abilities: A1B3 (|cffff0000Sword of Totsuka|r), Hotkey (Hotkey - Normal)
+// Abilities: A1B5 (|cff87ceebChakra Healing Shield|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -53752,7 +53790,7 @@ Sky-Eagle Art [|cffffcc00E|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 8789
-// Abilities: A1B4 (|cffff0000Yata Mirror|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1B5 (|cff87ceebChakra Healing Shield|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53776,7 +53814,7 @@ Learn Sky-Eagle Art [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 8793
-// Abilities: A1B5 (|cff87ceebChakra Healing Shield|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A16H (Adamantine Chakra Transfer Chain), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54058,7 +54096,7 @@ Art of Creation [|cffffcc00W|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 8840
-// Abilities: A1B5 (|cff87ceebChakra Healing Shield|r), Hotkey (Hotkey - Normal)
+// Abilities: A16H (Adamantine Chakra Transfer Chain), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54094,7 +54132,7 @@ STRING 8845
 }
 
 STRING 8846
-// Abilities: A16H (Adamantine Chakra Transfer Chain), Researchhotkey (Hotkey - Learn)
+// Abilities: A16K (Drunken Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54250,13 +54288,13 @@ Dance of Chains [|cffffcc00Q|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 8872
-// Abilities: A16H (Adamantine Chakra Transfer Chain), Hotkey (Hotkey - Normal)
+// Abilities: A170 (|cff8b4600Doton: Shinjuu Zanshu no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8873
-// Abilities: A16K (Drunken Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A170 (|cff8b4600Doton: Shinjuu Zanshu no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54424,7 +54462,7 @@ Bashosen
 }
 
 STRING 8901
-// Abilities: A170 (|cff8b4600Doton: Shinjuu Zanshu no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A171 ( ), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54725,13 +54763,13 @@ Mushi Kame no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 8949
-// Abilities: A170 (|cff8b4600Doton: Shinjuu Zanshu no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A171 ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8950
-// Abilities: A171 ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A166 (Mini Rasenshuriken), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -55273,7 +55311,7 @@ Turn Futton Mode [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 9023
-// Abilities: A171 ( ), Hotkey (Hotkey - Normal)
+// Abilities: A166 (Mini Rasenshuriken), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55297,7 +55335,7 @@ AHSS_KINKAKU_ICON
 }
 
 STRING 9027
-// Abilities: A166 (Mini Rasenshuriken), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -55327,13 +55365,13 @@ Senei Jashu [|cffffcc00Q|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 9032
-// Abilities: A166 (Mini Rasenshuriken), Hotkey (Hotkey - Normal)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 9033
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -56197,7 +56235,7 @@ STRING 9150
 }
 
 STRING 9151
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Hotkey (Hotkey - Normal)
+// Abilities: A15V (|cff000000Serial Gudoudamas|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56239,7 +56277,7 @@ Q
 }
 
 STRING 9158
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A15V (|cff000000Serial Gudoudamas|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -56383,13 +56421,13 @@ Kuchiyose: Kusanagi
 }
 
 STRING 9182
-// Abilities: A15V (|cff000000Serial Gudoudamas|r), Hotkey (Hotkey - Normal)
+// Abilities: A185 (Sound Barrier), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 9183
-// Abilities: A15V (|cff000000Serial Gudoudamas|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A185 (Sound Barrier), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56683,19 +56721,19 @@ Shotei [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 9232
-// Abilities: A185 (Sound Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A1C2 (Kirigakure no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 9233
-// Abilities: A185 (Sound Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A1C2 (Kirigakure no Jutsu), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 9234
-// Abilities: A1C2 (Kirigakure no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A1C5 (Switch Mode), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -57463,7 +57501,7 @@ Cloth worn by members of Anbu.|n|cff32cd32+40 All Stats|n+40 Damage|n+10 Armor|n
 }
 
 STRING 9349
-// Abilities: A1C2 (Kirigakure no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A0DG (|cff8080ffChidori Senbons|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -57829,7 +57867,7 @@ Mei turns into Youton Mode, making her attack have a chance to deal |cff87ceeb10
 }
 
 STRING 9410
-// Abilities: A1C5 (Switch Mode), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DG (|cff8080ffChidori Senbons|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -57949,7 +57987,7 @@ STRING 9429
 }
 
 STRING 9430
-// Abilities: A0DG (|cff8080ffChidori Senbons|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q6 (|cff87ceebSuiton: Suiryuudan no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -58327,7 +58365,7 @@ STRING 9492
 }
 
 STRING 9493
-// Abilities: A0DG (|cff8080ffChidori Senbons|r), Hotkey (Hotkey - Normal)
+// Abilities: A0Q6 (|cff87ceebSuiton: Suiryuudan no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60063,7 +60101,7 @@ Hokage's Building
 }
 
 STRING 9783
-// Abilities: A0Q6 (|cff87ceebSuiton: Suiryuudan no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A19N (|cff867092Kuchiyose no Jutsu: Kamereon |r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -60189,7 +60227,7 @@ STRING 9803
 }
 
 STRING 9804
-// Abilities: A0Q6 (|cff87ceebSuiton: Suiryuudan no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A19N (|cff867092Kuchiyose no Jutsu: Kamereon |r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60435,7 +60473,7 @@ Mei turns into Youton Mode, making her attack have a chance to deal |cff87ceeb28
 }
 
 STRING 9845
-// Abilities: A19N (|cff867092Kuchiyose no Jutsu: Kamereon |r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1CU (|cff0fcaf7Kage Bunshin Rasengan|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -60801,7 +60839,7 @@ STRING 9905
 }
 
 STRING 9906
-// Abilities: A19N (|cff867092Kuchiyose no Jutsu: Kamereon |r), Hotkey (Hotkey - Normal)
+// Abilities: A1CU (|cff0fcaf7Kage Bunshin Rasengan|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61293,7 +61331,7 @@ STRING 9987
 }
 
 STRING 9988
-// Abilities: A1CU (|cff0fcaf7Kage Bunshin Rasengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M5 (|cff800080Poisoned Gas|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61314,6 +61352,18 @@ STRING 9991
 // Abilities: A0DK (|cff53a4ffTsuiseki|r), Hotkey (Hotkey - Normal)
 {
 Q
+}
+
+STRING 9992
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.6|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
+STRING 9993
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.6|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 9994
@@ -61455,7 +61505,7 @@ Throw Ink [|cffffcc00D|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 10017
-// Abilities: A1CU (|cff0fcaf7Kage Bunshin Rasengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A0M5 (|cff800080Poisoned Gas|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61748,12 +61798,6 @@ STRING 10065
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceeb90 x skill level|r + 100 normal|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Paralyze nearby enemies and increases users armor to the maximum during spell execution.|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 14s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nA technique developed by Hinata where she releases a constant stream of chakra from the palm of her hands and then moves them in high-speed, creating a protective barrier that also deals damage to nearby enemies.
 }
 
-STRING 10066
-// Abilities: A13N (|cffff0000Kotoamatsukami|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceeb(200 + Ninjutsu) x skill level|r per second. Last 3 seconds.|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stuns affected enemies for 3s.|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 150 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nUsing the power of his Mangekyou Sharingan, Shisui invades the mind of the target and implants fake memories, making them not realize that they are being controled by this jutsu.
-}
-
 STRING 10067
 // Abilities: A0KV (|cff8080ffChidori|r), Tip (Tooltip - Normal)
 {
@@ -61839,7 +61883,7 @@ STRING 10080
 }
 
 STRING 10081
-// Abilities: A0M5 (|cff800080Poisoned Gas|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1CT (|cffb64444Sharingan|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61863,7 +61907,7 @@ STRING 10084
 }
 
 STRING 10085
-// Abilities: A0M5 (|cff800080Poisoned Gas|r), Hotkey (Hotkey - Normal)
+// Abilities: A1D6 (|cff000000Crow Clone|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61878,18 +61922,6 @@ STRING 10087
 // Buffs/Effects: B02X (), Buffubertip (Tooltip - Extended)
 {
 This unit is being covered by a lightning armor; it has increased speed.
-}
-
-STRING 10088
-// Abilities: A13N (|cffff0000Kotoamatsukami|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceeb(200 + Ninjutsu) x skill level|r per second. Last 3 seconds.|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stuns affected enemies for 3s.|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 150 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nUsing the power of his Mangekyou Sharingan, Shisui invades the mind of the target and implants fake memories, making them not realize that they are being controled by this jutsu.
-}
-
-STRING 10089
-// Abilities: A13N (|cffff0000Kotoamatsukami|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceeb(200 + Ninjutsu) x skill level|r per second. Last 3 seconds.|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stuns affected enemies for 3s.|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 150 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nUsing the power of his Mangekyou Sharingan, Shisui invades the mind of the target and implants fake memories, making them not realize that they are being controled by this jutsu.
 }
 
 STRING 10090
@@ -62625,7 +62657,7 @@ STRING 10211
 }
 
 STRING 10212
-// Abilities: A1CT (|cffb64444Sharingan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DL (|cff0fcaf7Chakra Transfer Technique|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62649,7 +62681,7 @@ STRING 10215
 }
 
 STRING 10216
-// Abilities: A1D6 (|cff000000Crow Clone|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DQ (|cffba0000Hollow Mask|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62721,7 +62753,7 @@ Same with The Heaven Sword and Heaven 8 Mirror, it is one of the three strongest
 }
 
 STRING 10228
-// Abilities: A1DL (|cff0fcaf7Chakra Transfer Technique|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DQ (|cffba0000Hollow Mask|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62736,6 +62768,12 @@ STRING 10230
 // Abilities: A0PY (|cff00bfffRasengan: Ren no Dan|r), Ubertip (Tooltip - Normal - Extended)
 {
 Deals Agility X Level magic damage and paralyzes the target by 1 second.|n|cffffcc00Cooldown:|r 13-16s
+}
+
+STRING 10231
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.6|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 10232
@@ -63165,7 +63203,7 @@ STRING 10302
 }
 
 STRING 10303
-// Abilities: A1DQ (|cffba0000Hollow Mask|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DR ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63653,13 +63691,13 @@ Battle Kunai - |cffffcc00Level 3|r
 }
 
 STRING 10384
-// Abilities: A1DQ (|cffba0000Hollow Mask|r), Hotkey (Hotkey - Normal)
+// Abilities: A1E7 (Ninpou: Choushin Giga), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 10385
-// Abilities: A1DR ( ), Hotkey (Hotkey - Normal)
+// Abilities: A1EK (|cffba8b55Shukaku Perfect Shield|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64732,7 +64770,7 @@ T
 }
 
 STRING 10564
-// Abilities: A1E7 (Ninpou: Choushin Giga), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EP (|cffff0000Frenzy Mode|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65809,7 +65847,7 @@ STRING 10742
 }
 
 STRING 10743
-// Abilities: A1EK (|cffba8b55Shukaku Perfect Shield|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EP (|cffff0000Frenzy Mode|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65851,7 +65889,7 @@ Sarutobi Hiruzen
 }
 
 STRING 10750
-// Abilities: A1EP (|cffff0000Frenzy Mode|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EP (|cffff0000Frenzy Mode|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -65887,7 +65925,7 @@ STRING 10755
 }
 
 STRING 10756
-// Abilities: A1EP (|cffff0000Frenzy Mode|r), Hotkey (Hotkey - Normal)
+// Abilities: A16R (|cffB0B0B0Fuuton: Senpuuken|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65994,7 +66032,7 @@ STRING 10773
 }
 
 STRING 10774
-// Abilities: A1EP (|cffff0000Frenzy Mode|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A16R (|cffB0B0B0Fuuton: Senpuuken|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66581,18 +66619,6 @@ STRING 10871
 Iron Dome [|cffffcc00D|r]
 }
 
-STRING 10872
-// Items: I073 (Kohaku no Johei), Description (Description)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Area of Effect:|r 800|n|cff32cd32Chakra Cost:|r 200|n|cff32cd32Effect:|r Pull enemies for |cff87ceeb4s|r, sucking |cff87ceeb5%|r of chakra/second. If they get pulled for more than |cff87ceeb2s|r, they get esnared for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb50s|r|n|cffff0000Classification: Ninja Weapon|r
-}
-
-STRING 10873
-// Items: I073 (Kohaku no Johei), Ubertip (Tooltip - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Area of Effect:|r 800|n|cff32cd32Chakra Cost:|r 200|n|cff32cd32Effect:|r Pull enemies for |cff87ceeb4s|r, sucking |cff87ceeb5%|r of chakra/second. If they get pulled for more than |cff87ceeb2s|r, they get esnared for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb50s|r|n|cffff0000Classification: Ninja Weapon|r
-}
-
 STRING 10874
 // Abilities: A0KA (|cffc600ffTrap Soul|r), EditorSuffix (Editor Suffix)
 {
@@ -66948,7 +66974,7 @@ STRING 10932
 }
 
 STRING 10933
-// Abilities: A16R (|cffB0B0B0Fuuton: Senpuuken|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EF (|cff8080ffLightning Strike|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67620,7 +67646,7 @@ Q
 }
 
 STRING 11045
-// Abilities: A16R (|cffB0B0B0Fuuton: Senpuuken|r), Hotkey (Hotkey - Normal)
+// Abilities: A1EF (|cff8080ffLightning Strike|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67903,7 +67929,7 @@ STRING 11091
 }
 
 STRING 11092
-// Abilities: A1EF (|cff8080ffLightning Strike|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DY (|cffc7ad60Sand Drizzle|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67915,7 +67941,7 @@ STRING 11093
 }
 
 STRING 11094
-// Abilities: A1EF (|cff8080ffLightning Strike|r), Hotkey (Hotkey - Normal)
+// Abilities: A0DY (|cffc7ad60Sand Drizzle|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67963,7 +67989,7 @@ R
 }
 
 STRING 11102
-// Abilities: A0DY (|cffc7ad60Sand Drizzle|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EX (Air Bullet), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67994,7 +68020,7 @@ Purchase |cffe9a144South Ring|r [|cffffcc00Z|r]
 }
 
 STRING 11107
-// Abilities: A0DY (|cffc7ad60Sand Drizzle|r), Hotkey (Hotkey - Normal)
+// Abilities: A0BH (|cffff8000Hari Jizo|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68114,7 +68140,7 @@ The user fuse wind chakra into a shuriken and throws it at high speed, dealing d
 }
 
 STRING 11127
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
@@ -68395,6 +68421,12 @@ STRING 11173
 http://wc3campaigns.net/vexorian
 }
 
+STRING 11174
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.6|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
 STRING 11175
 // Abilities: A1BL (Waves of Destruction), Researchhotkey (Hotkey - Learn)
 {
@@ -68462,7 +68494,7 @@ STRING 11185
 }
 
 STRING 11186
-// Abilities: A1EX (Air Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A02K (|cff0fcaf7Hakkeshō Kaiten|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68576,7 +68608,7 @@ Perfume Spray
 }
 
 STRING 11205
-// Abilities: A0BH (|cffff8000Hari Jizo|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A02K (|cff0fcaf7Hakkeshō Kaiten|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68588,7 +68620,7 @@ Shikomi Kugutsu: Shinshin Happa
 }
 
 STRING 11207
-// Abilities: A02K (|cff0fcaf7Hakkeshō Kaiten|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A01B (|cffff0000Mangekyou Sharingan!|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68798,7 +68830,7 @@ Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
 }
 
 STRING 11242
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
@@ -68823,7 +68855,7 @@ R
 }
 
 STRING 11246
-// Abilities: A02K (|cff0fcaf7Hakkeshō Kaiten|r), Hotkey (Hotkey - Normal)
+// Abilities: A01B (|cffff0000Mangekyou Sharingan!|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68895,7 +68927,7 @@ STRING 11257
 }
 
 STRING 11258
-// Abilities: A01B (|cffff0000Mangekyou Sharingan!|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A01F (Senpou: Kebari Senbon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -69932,7 +69964,7 @@ Kenjutsu Flash [|cffffcc00E|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 11432
-// Abilities: A01B (|cffff0000Mangekyou Sharingan!|r), Hotkey (Hotkey - Normal)
+// Abilities: A02I (Kawarimi no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -70220,7 +70252,7 @@ Kage Bunshin no Jutsu [|cffffcc00W|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 11480
-// Abilities: A01F (Senpou: Kebari Senbon), Researchhotkey (Hotkey - Learn)
+// Abilities: A05W (|cff5b85ffSuiton: Bakusui Shoha|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -71872,7 +71904,7 @@ STRING 11754
 }
 
 STRING 11755
-// Abilities: A02I (Kawarimi no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A05W (|cff5b85ffSuiton: Bakusui Shoha|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -71938,7 +71970,7 @@ STRING 11765
 }
 
 STRING 11766
-// Abilities: A05W (|cff5b85ffSuiton: Bakusui Shoha|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A067 (|cff7f2c84M|cff40388ei|cff088490r|cff68bc5ca|cfff6f101g|cffe56524e|cffdb253c|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -71962,7 +71994,7 @@ STRING 11769
 }
 
 STRING 11770
-// Abilities: A05W (|cff5b85ffSuiton: Bakusui Shoha|r), Hotkey (Hotkey - Normal)
+// Abilities: A06I (Kuchiyose: Scorpion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72010,7 +72042,7 @@ T
 }
 
 STRING 11778
-// Abilities: A067 (|cff7f2c84M|cff40388ei|cff088490r|cff68bc5ca|cfff6f101g|cffe56524e|cffdb253c|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C4 (|cff0000ffYasaka no Magatama|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72094,7 +72126,7 @@ STRING 11791
 }
 
 STRING 11792
-// Abilities: A06I (Kuchiyose: Scorpion), Hotkey (Hotkey - Normal)
+// Abilities: A0CX (|cff800080Ningendou|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72130,7 +72162,7 @@ D
 }
 
 STRING 11798
-// Abilities: A0C4 (|cff0000ffYasaka no Magatama|r), Hotkey (Hotkey - Normal)
+// Abilities: A0CX (|cff800080Ningendou|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -72172,7 +72204,7 @@ Futton: Kairiki Muso [|cffffcc00R|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 11805
-// Abilities: A0CX (|cff800080Ningendou|r), Hotkey (Hotkey - Normal)
+// Abilities: A0D0 (|cffa52a2aDoton: Doroku Gaeshi|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72184,7 +72216,7 @@ D
 }
 
 STRING 11807
-// Abilities: A0CX (|cff800080Ningendou|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DL (Goton Dairendan no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -73077,6 +73109,12 @@ STRING 11955
 TsunadeSkinDummy
 }
 
+STRING 11956
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.6|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
 STRING 11957
 // Units: e074 (HidanScythe), Ubertip (Tooltip - Extended)
 {
@@ -73105,6 +73143,12 @@ STRING 11961
 // Abilities: A0I2 (|cffff0000Nine-Tails Mode|r), Researchhotkey (Hotkey - Learn)
 {
 R
+}
+
+STRING 11962
+// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.6|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 11963
@@ -73282,7 +73326,7 @@ STRING 11991
 }
 
 STRING 11992
-// Abilities: A0D0 (|cffa52a2aDoton: Doroku Gaeshi|r), Hotkey (Hotkey - Normal)
+// Abilities: A0DL (Goton Dairendan no Jutsu), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -73474,7 +73518,7 @@ W
 }
 
 STRING 12024
-// Abilities: A0DL (Goton Dairendan no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A14G (|cffffff00The Yellow Flash|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -74601,7 +74645,7 @@ http://wc3campaigns.net/vexorian
 }
 
 STRING 12213
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
@@ -74613,19 +74657,19 @@ Juugo enhance his physical capabilities with his arm-boosters.
 }
 
 STRING 12215
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
 
 STRING 12216
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
 
 STRING 12217
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
@@ -74643,19 +74687,19 @@ Tayuya Melody
 }
 
 STRING 12220
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
 
 STRING 12221
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
 
 STRING 12222
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
@@ -75135,7 +75179,7 @@ T
 }
 
 STRING 12302
-// Abilities: A0DL (Goton Dairendan no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A14G (|cffffff00The Yellow Flash|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -76449,7 +76493,7 @@ D
 }
 
 STRING 12521
-// Abilities: A14G (|cffffff00The Yellow Flash|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10U (|cff00ff00Senpou: Mokuton: Shin Susenju|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -76869,13 +76913,13 @@ STRING 12590
 }
 
 STRING 12591
-// Abilities: A14G (|cffffff00The Yellow Flash|r), Hotkey (Hotkey - Normal)
+// Abilities: A10U (|cff00ff00Senpou: Mokuton: Shin Susenju|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 12592
-// Abilities: A10U (|cff00ff00Senpou: Mokuton: Shin Susenju|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1C0 (Gojou Kibaku Fuda), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -76887,7 +76931,7 @@ STRING 12593
 }
 
 STRING 12594
-// Abilities: A10U (|cff00ff00Senpou: Mokuton: Shin Susenju|r), Hotkey (Hotkey - Normal)
+// Abilities: A1C0 (Gojou Kibaku Fuda), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -76989,7 +77033,7 @@ You gain taijutsu when you lose hit points. Formula: |cff87ceeb(100 - percentage
 }
 
 STRING 12611
-// Abilities: A1C0 (Gojou Kibaku Fuda), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CI (|cfff38f41Tenbin |cff9F7038no|cff44392C Jūgo), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -77013,7 +77057,7 @@ Learn |cffa5fde2Truth-Seeking Balls|r [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 12615
-// Abilities: A1C0 (Gojou Kibaku Fuda), Hotkey (Hotkey - Normal)
+// Abilities: A0CI (|cfff38f41Tenbin |cff9F7038no|cff44392C Jūgo), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77061,7 +77105,7 @@ Ninpou: Chouji Giga "Tigers"
 }
 
 STRING 12623
-// Abilities: A0CI (|cfff38f41Tenbin |cff9F7038no|cff44392C Jūgo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E9 (|cffB0B0B0Futon: Reppusho|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -77091,7 +77135,7 @@ R
 }
 
 STRING 12628
-// Abilities: A0CI (|cfff38f41Tenbin |cff9F7038no|cff44392C Jūgo), Hotkey (Hotkey - Normal)
+// Abilities: A0E9 (|cffB0B0B0Futon: Reppusho|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77157,7 +77201,7 @@ Weapon Mastery - [|cffffcc00Level 5|r]
 }
 
 STRING 12639
-// Abilities: A0E9 (|cffB0B0B0Futon: Reppusho|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EC (|cffba0000Kamui Dimension: Teleport Ally|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -77211,7 +77255,7 @@ STRING 12647
 }
 
 STRING 12648
-// Abilities: A0E9 (|cffB0B0B0Futon: Reppusho|r), Hotkey (Hotkey - Normal)
+// Abilities: A0EC (|cffba0000Kamui Dimension: Teleport Ally|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77421,13 +77465,13 @@ Anshosui [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 12683
-// Abilities: A0EC (|cffba0000Kamui Dimension: Teleport Ally|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EI (|cffa52a2aDoton: Doroku Gaeshi|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 12684
-// Abilities: A0EC (|cffba0000Kamui Dimension: Teleport Ally|r), Hotkey (Hotkey - Normal)
+// Abilities: A04Z (|cff8b4600Kongo Roheki|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77451,7 +77495,7 @@ Rasengan [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 12688
-// Abilities: A0EI (|cffa52a2aDoton: Doroku Gaeshi|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FK (|cffa5fde2Projection Technique|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -77793,7 +77837,7 @@ Kyoumeisen [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 12745
-// Abilities: A04Z (|cff8b4600Kongo Roheki|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FK (|cffa5fde2Projection Technique|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77937,7 +77981,7 @@ T
 }
 
 STRING 12769
-// Abilities: A0FK (|cffa5fde2Projection Technique|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FY (|cffff0000Fox Rush|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -78519,7 +78563,7 @@ Learn Iaidou Chiratsuki Kusa [|cffffcc00T|r]
 }
 
 STRING 12866
-// Abilities: A0FK (|cffa5fde2Projection Technique|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FY (|cffff0000Fox Rush|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -79570,7 +79614,7 @@ STRING 13040
 }
 
 STRING 13041
-// Abilities: A0FY (|cffff0000Fox Rush|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0H3 (Chakra Chains), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -79582,7 +79626,7 @@ STRING 13042
 }
 
 STRING 13043
-// Abilities: A0FY (|cffff0000Fox Rush|r), Hotkey (Hotkey - Normal)
+// Abilities: A0H3 (Chakra Chains), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -79912,7 +79956,7 @@ R
 }
 
 STRING 13098
-// Abilities: A0H3 (Chakra Chains), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HD (Chakra Chains), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -79930,7 +79974,7 @@ Rasengan [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 13101
-// Abilities: A0H3 (Chakra Chains), Hotkey (Hotkey - Normal)
+// Abilities: A0IE (|cffffc0cbMagen: Miryoku|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -80189,7 +80233,7 @@ STRING 13143
 }
 
 STRING 13144
-// Abilities: A0HD (Chakra Chains), Hotkey (Hotkey - Normal)
+// Abilities: A0IE (|cffffc0cbMagen: Miryoku|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -80261,7 +80305,7 @@ STRING 13155
 }
 
 STRING 13156
-// Abilities: A0IE (|cffffc0cbMagen: Miryoku|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J0 (|cffff0000Fox Rush|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -80285,7 +80329,7 @@ STRING 13159
 }
 
 STRING 13160
-// Abilities: A0IE (|cffffc0cbMagen: Miryoku|r), Hotkey (Hotkey - Normal)
+// Abilities: A0J0 (|cffff0000Fox Rush|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -80609,7 +80653,7 @@ Battle Shuriken used by Ninjutsu Heroes|n|cff32cd32+150 HP x Level|n+50 Damage|n
 }
 
 STRING 13214
-// Abilities: A0J0 (|cffff0000Fox Rush|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0J3 (|cffebee8bChain Spears|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -81023,7 +81067,7 @@ Battle Shuriken used by Ninjutsu Heroes|n|cff32cd32+150 HP x Level|n+50 Damage|n
 }
 
 STRING 13283
-// Abilities: A0J0 (|cffff0000Fox Rush|r), Hotkey (Hotkey - Normal)
+// Abilities: A0J3 (|cffebee8bChain Spears|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -81323,13 +81367,13 @@ Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 13333
-// Abilities: A0J3 (|cffebee8bChain Spears|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J2 (|cffebee8bChain Pillar|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 13334
-// Abilities: A0J3 (|cffebee8bChain Spears|r), Hotkey (Hotkey - Normal)
+// Abilities: A0JD (Sky-Eagle Art), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -83291,13 +83335,13 @@ The legendary Shinigami Mask, which is able to conjure the god of death.|n|cff32
 }
 
 STRING 13661
-// Abilities: A0E6 (Release Mask), Tip (Tooltip - Normal)
+// Abilities: A0XW (Release Mask), Tip (Tooltip - Normal)
 {
 Release Mask [|cffffcc00E|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 13662
-// Abilities: A0E6 (Release Mask), Tip (Tooltip - Normal)
+// Abilities: A0XW (Release Mask), Tip (Tooltip - Normal)
 {
 Release Mask [|cffffcc00E|r] - [|cffffcc00Level 2|r]
 }
@@ -83603,7 +83647,7 @@ STRING 13712
 }
 
 STRING 13713
-// Abilities: A0J2 (|cffebee8bChain Pillar|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JD (Sky-Eagle Art), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -83663,7 +83707,7 @@ Mei actives Futton Mode, making her attacks deal |cff87ceeb(0.15 X Ninjutsu) X A
 }
 
 STRING 13723
-// Abilities: A0E6 (Release Mask), Tip (Tooltip - Normal)
+// Abilities: A0XW (Release Mask), Tip (Tooltip - Normal)
 {
 Release Mask [|cffffcc00E|r] - [|cffffcc00Level 3|r]
 }
@@ -83837,19 +83881,19 @@ By controlling his own weight, Ohnoki is able to levitate, passing through objec
 }
 
 STRING 13752
-// Abilities: A0E6 (Release Mask), Tip (Tooltip - Normal)
+// Abilities: A0XW (Release Mask), Tip (Tooltip - Normal)
 {
 Release Mask [|cffffcc00E|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 13753
-// Abilities: A0E6 (Release Mask), Tip (Tooltip - Normal)
+// Abilities: A0XW (Release Mask), Tip (Tooltip - Normal)
 {
 Release Mask [|cffffcc00E|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 13754
-// Abilities: A0E6 (Release Mask), Tip (Tooltip - Normal)
+// Abilities: A0XW (Release Mask), Tip (Tooltip - Normal)
 {
 Release Mask [|cffffcc00E|r] - [|cffffcc00Level 6|r]
 }
@@ -83951,7 +83995,7 @@ T
 }
 
 STRING 13771
-// Abilities: A0E6 (Release Mask), Tip (Tooltip - Normal)
+// Abilities: A0XW (Release Mask), Tip (Tooltip - Normal)
 {
 Release Mask [|cffffcc00E|r] - [|cffffcc00Level 7|r]
 }
@@ -83969,13 +84013,13 @@ T
 }
 
 STRING 13774
-// Abilities: A0JD (Sky-Eagle Art), Researchhotkey (Hotkey - Learn)
+// Abilities: A02D (Kuchiyose: Kusanagi), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 13775
-// Abilities: A0E6 (Release Mask), Tip (Tooltip - Normal)
+// Abilities: A0XW (Release Mask), Tip (Tooltip - Normal)
 {
 Release Mask [|cffffcc00E|r] - [|cffffcc00Level 8|r]
 }
@@ -84053,7 +84097,7 @@ STRING 13787
 }
 
 STRING 13788
-// Abilities: A0E6 (Release Mask), Tip (Tooltip - Normal)
+// Abilities: A0XW (Release Mask), Tip (Tooltip - Normal)
 {
 Release Mask [|cffffcc00E|r] - [|cffffcc00Level 9|r]
 }
@@ -84101,19 +84145,19 @@ Lion Fists
 }
 
 STRING 13796
-// Abilities: A0E6 (Release Mask), Tip (Tooltip - Normal)
+// Abilities: A0XW (Release Mask), Tip (Tooltip - Normal)
 {
 Release Mask [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 13797
-// Abilities: A0E6 (Release Mask), Name (Name)
+// Abilities: A0XW (Release Mask), Name (Name)
 {
 Release Mask
 }
 
 STRING 13798
-// Abilities: A0E6 (Release Mask), Researchtip (Tooltip - Learn)
+// Abilities: A0XW (Release Mask), Researchtip (Tooltip - Learn)
 {
 Learn Release Mask [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
@@ -84317,7 +84361,7 @@ Explosive Tag [|cffffcc00R|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 13832
-// Abilities: A0JD (Sky-Eagle Art), Hotkey (Hotkey - Normal)
+// Abilities: A02D (Kuchiyose: Kusanagi), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -84665,7 +84709,7 @@ STRING 13889
 }
 
 STRING 13890
-// Abilities: A02D (Kuchiyose: Kusanagi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KK (|cfffe0000Throw Scythe|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -84715,7 +84759,7 @@ Release Rashomon
 }
 
 STRING 13898
-// Abilities: A02D (Kuchiyose: Kusanagi), Hotkey (Hotkey - Normal)
+// Abilities: A0KK (|cfffe0000Throw Scythe|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -84955,7 +84999,7 @@ This unit has increased damage.
 }
 
 STRING 13938
-// Abilities: A0KK (|cfffe0000Throw Scythe|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KM (|cfffe0000Throw Scythe|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -85045,7 +85089,7 @@ D
 }
 
 STRING 13953
-// Abilities: A0KK (|cfffe0000Throw Scythe|r), Hotkey (Hotkey - Normal)
+// Abilities: A0KM (|cfffe0000Throw Scythe|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -85988,7 +86032,7 @@ Yoton: Shakugaryuugan no Jutsu [|cffffcc00W|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 14108
-// Abilities: A0KM (|cfffe0000Throw Scythe|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KZ ( ), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -86528,7 +86572,7 @@ STRING 14197
 }
 
 STRING 14198
-// Abilities: A0KM (|cfffe0000Throw Scythe|r), Hotkey (Hotkey - Normal)
+// Abilities: A0KZ ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -86540,7 +86584,7 @@ Single-target skill [|cffffcc00Q|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 14200
-// Abilities: A0KZ ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L0 (Claws Combo), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -86618,7 +86662,7 @@ Sogu: Fuujin Heki [|cffffcc00R|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 14213
-// Abilities: A0KZ ( ), Hotkey (Hotkey - Normal)
+// Abilities: A0L0 (Claws Combo), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -86816,7 +86860,7 @@ STRING 14245
 }
 
 STRING 14246
-// Abilities: A0L0 (Claws Combo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L2 (|cff008000Hachimon|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -87026,7 +87070,7 @@ Toton Jutsu [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 14281
-// Abilities: A0L0 (Claws Combo), Hotkey (Hotkey - Normal)
+// Abilities: A0L2 (|cff008000Hachimon|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87050,7 +87094,7 @@ STRING 14284
 }
 
 STRING 14285
-// Abilities: A0L2 (|cff008000Hachimon|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -87074,7 +87118,7 @@ Kori Shinchuu no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 14289
-// Abilities: A0L2 (|cff008000Hachimon|r), Hotkey (Hotkey - Normal)
+// Abilities: A0LU (|cff000000Satetsu Boru|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87357,7 +87401,7 @@ Increases attack speed by |cff87ceeb5% x skill level|r and each attack throw |cf
 }
 
 STRING 14334
-// Abilities: A0L2 (|cff008000Hachimon|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0M1 (Bandage), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -87878,7 +87922,7 @@ STRING 14420
 }
 
 STRING 14421
-// Abilities: A0LU (|cff000000Satetsu Boru|r), Hotkey (Hotkey - Normal)
+// Abilities: A0M1 (Bandage), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -88570,7 +88614,7 @@ STRING 14535
 }
 
 STRING 14536
-// Abilities: A0M1 (Bandage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MC (!), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -89303,7 +89347,7 @@ STRING 14653
 }
 
 STRING 14654
-// Abilities: A0M1 (Bandage), Hotkey (Hotkey - Normal)
+// Abilities: A0MC (!), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -89639,7 +89683,7 @@ Recipe: Bashosen
 }
 
 STRING 14710
-// Abilities: A0MC (!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MC (!), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -90185,7 +90229,7 @@ Learn |cffc7ad60Sand Drizzle|r [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 14801
-// Abilities: A0MC (!), Hotkey (Hotkey - Normal)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -90779,7 +90823,7 @@ MultipleShurikens
 }
 
 STRING 14900
-// Abilities: A0MC (!), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -90905,7 +90949,7 @@ STRING 14920
 }
 
 STRING 14921
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -95616,7 +95660,7 @@ Chakra Chains [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 15573
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Hotkey (Hotkey - Normal)
+// Abilities: A0NT (|cfff4f5acKokinjo|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -95718,7 +95762,7 @@ STRING 15589
 }
 
 STRING 15590
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0NT (|cfff4f5acKokinjo|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -96120,7 +96164,7 @@ Release Masks
 }
 
 STRING 15657
-// Abilities: A0NT (|cfff4f5acKokinjo|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OE (|cffd07723Benihisago|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -97482,7 +97526,7 @@ STRING 15883
 }
 
 STRING 15884
-// Abilities: A0NT (|cfff4f5acKokinjo|r), Hotkey (Hotkey - Normal)
+// Abilities: A0OE (|cffd07723Benihisago|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -97590,7 +97634,7 @@ STRING 15901
 }
 
 STRING 15902
-// Abilities: A0OE (|cffd07723Benihisago|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PI (Sai Lions Slow), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -98232,13 +98276,13 @@ STRING 16008
 }
 
 STRING 16009
-// Abilities: A0OE (|cffd07723Benihisago|r), Hotkey (Hotkey - Normal)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 16010
-// Abilities: A0PI (Sai Lions Slow), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PV (|cfff4f5acKokinjo|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -99056,7 +99100,7 @@ Kikaichuu Yajiri no Jutsu [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 16146
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PV (|cfff4f5acKokinjo|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -100366,7 +100410,7 @@ STRING 16363
 }
 
 STRING 16364
-// Abilities: A0PV (|cfff4f5acKokinjo|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S5 (Hebi Chakura no Mesu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -100798,13 +100842,13 @@ Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 16436
-// Abilities: A0PV (|cfff4f5acKokinjo|r), Hotkey (Hotkey - Normal)
+// Abilities: A0S5 (Hebi Chakura no Mesu), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 16437
-// Abilities: A0S5 (Hebi Chakura no Mesu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SA (Sekizo), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -100822,7 +100866,7 @@ Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 16440
-// Abilities: A0S5 (Hebi Chakura no Mesu), Hotkey (Hotkey - Normal)
+// Abilities: A0SN (|cffe95e01Katon: Kurosu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -104501,7 +104545,7 @@ Point
 }
 
 STRING 17053
-// Abilities: A0SA (Sekizo), Hotkey (Hotkey - Normal)
+// Abilities: A0SN (|cffe95e01Katon: Kurosu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -106320,12 +106364,6 @@ STRING 17355
 Kamui [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
 }
 
-STRING 17356
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
-}
-
 STRING 17357
 // Abilities: A0FK (|cffa5fde2Projection Technique|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -107371,7 +107409,7 @@ STRING 17530
 }
 
 STRING 17531
-// Abilities: A0SN (|cffe95e01Katon: Kurosu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TA (|cffff8080Shoton: Crystal Wheel|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -107395,7 +107433,7 @@ STRING 17534
 }
 
 STRING 17535
-// Abilities: A0SN (|cffe95e01Katon: Kurosu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0TA (|cffff8080Shoton: Crystal Wheel|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -108608,7 +108646,7 @@ Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 17737
-// Abilities: A0TA (|cffff8080Shoton: Crystal Wheel|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TZ (TayuyaSlow), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -109064,7 +109102,7 @@ STRING 17812
 }
 
 STRING 17813
-// Abilities: A0TA (|cffff8080Shoton: Crystal Wheel|r), Hotkey (Hotkey - Normal)
+// Abilities: A0VH (|cffFC6022Shakuton: Kajosatsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -110894,12 +110932,6 @@ STRING 18117
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nDosu generates sound waves to attack enemies in a fan-like area.
 }
 
-STRING 18118
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
-}
-
 STRING 18119
 // Abilities: A0FM (|cffa5fde2Sage Chakra|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -111879,7 +111911,7 @@ STRING 18281
 }
 
 STRING 18282
-// Abilities: A0TZ (TayuyaSlow), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VH (|cffFC6022Shakuton: Kajosatsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -115951,6 +115983,12 @@ STRING 18952
 Same with The Heaven Sword and Heaven 8 Mirror, it is one of the three strongest items. Legend says it can steal enemy souls.|n|cff32cd32+200 Damage|n+40 All Stats|n+300 HP|n- Get 2% HP and MP for each killed unit|n- Life Steal 50% Auto Attacks|n- Corrosive Attack (passive, -15 armor)|n|cffff0000Doesn't stack with Book of Gelel|nItem Type: Support|r
 }
 
+STRING 18953
+// Abilities: A01N (|cff8080ffTsuuga|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.6|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+}
+
 STRING 18954
 // Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
@@ -117793,6 +117831,18 @@ STRING 19260
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 150|n|cff32cd32Damage:|r |cff87ceeb(300 + 6 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|r|n|cff32cd32Cooldown:|r 30s + |cff87ceeb20 x skill level|r|n|cff32cd32Description:|r Minato casts rasengan and then throws a Hiraishin Kunai towards the target, teleporting to his back and hitting him with rasengan.
 }
 
+STRING 19261
+// Abilities: A13N (|cffff0000Kotoamatsukami|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(200 + Ninjutsu) x skill level|r per second. Last 3 seconds.|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stuns affected enemies for 3s.|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 150 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nUsing the power of his Mangekyou Sharingan, Shisui invades the mind of the target and implants fake memories, making them not realize that they are being controled by this jutsu.
+}
+
+STRING 19262
+// Abilities: A13N (|cffff0000Kotoamatsukami|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(200 + Ninjutsu) x skill level|r per second. Last 3 seconds.|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stuns affected enemies for 3s.|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 150 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nUsing the power of his Mangekyou Sharingan, Shisui invades the mind of the target and implants fake memories, making them not realize that they are being controled by this jutsu.
+}
+
 STRING 19263
 // Abilities: A0N9 (|cffe36d50Yoton: Shakugaryuugan no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -117833,6 +117883,12 @@ STRING 19269
 // Abilities: A0NB (|cffb2d2dfSawarabi no Mai|r), Researchtip (Tooltip - Learn)
 {
 Learn |cffb2d2dfSawarabi no Mai|r [|cffffcc00T|r] - [|cffffcc00Level %d|r]
+}
+
+STRING 19270
+// Abilities: A13N (|cffff0000Kotoamatsukami|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 600|n|cff32cd32Damage:|r |cff87ceeb(200 + Ninjutsu) x skill level|r per second. Last 3 seconds.|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stuns affected enemies for 3s.|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Chakra Cost:|r 150 + |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nUsing the power of his Mangekyou Sharingan, Shisui invades the mind of the target and implants fake memories, making them not realize that they are being controled by this jutsu.
 }
 
 STRING 19271
@@ -118587,6 +118643,12 @@ STRING 19397
 Earth Release was previously cast and is currently on cooldown.
 }
 
+STRING 19398
+// Abilities: A0LF (Senpou: Hakugeki no Jutsu), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r 8 x Genjutsu + 500 at max|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Effects:|r Stuns affected enemies during spell execution. Last 2.5s.|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nAfter forming the necessary hand seals, the user expels a dragon-like entity from their mouth that carries an orb in its left front claw. As the dragon tightly coils itself around the orb, it releases both blinding light and deafening sound
+}
+
 STRING 19399
 // Buffs/Effects: B03T (Water Release), EditorName (Name (Editor Only))
 {
@@ -119011,6 +119073,12 @@ STRING 19469
 // Abilities: A0LA (|cff800080Kuchiyose: Edo Tensei|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb800 x skill level + Genjutsu|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Chakra Cost:|r 350 - |cff87ceeb100 x skill level|r|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nKabuto revives former Akatsuki members through the Edo Tensei technique and order them to attack the target simultaneously.
+}
+
+STRING 19470
+// Abilities: A15Y (|cff8080ffRaiton: Raiju Tsuiga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb(700 + 4 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|n|cff32cd32Cooldown:|r 55s|n|cff32cd32Description:|r|nBy manipulating raiton chakra into his hand, Kakashi can make the lightning expand to create the form a hound, that cause the target and deals huge damage when in contact with it.
 }
 
 STRING 19471
@@ -120471,6 +120539,12 @@ STRING 19713
 Sasori infuses highly dangerous venom on Hiruko's tail, dealing |cff87ceeb3 x skill level|r damage per second during 10 seconds and slowing the target by |cff87ceeb2% x skill level|r.
 }
 
+STRING 19714
+// Abilities: A15Y (|cff8080ffRaiton: Raiju Tsuiga|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb(700 + 4 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|n|cff32cd32Cooldown:|r 55s|n|cff32cd32Description:|r|nBy manipulating raiton chakra into his hand, Kakashi can make the lightning expand to create the form a hound, that cause the target and deals huge damage when in contact with it.
+}
+
 STRING 19715
 // Abilities: A0TZ (TayuyaSlow), Tip (Tooltip - Normal)
 {
@@ -121551,6 +121625,12 @@ STRING 19894
 Debuff - Earth Release
 }
 
+STRING 19895
+// Abilities: A15Y (|cff8080ffRaiton: Raiju Tsuiga|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb(700 + 4 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|n|cff32cd32Cooldown:|r 55s|n|cff32cd32Description:|r|nBy manipulating raiton chakra into his hand, Kakashi can make the lightning expand to create the form a hound, that cause the target and deals huge damage when in contact with it.
+}
+
 STRING 19896
 // Abilities: A10Z (|cffba0000Genjutsu: Sharingan|r), Tip (Tooltip - Normal)
 {
@@ -121654,7 +121734,7 @@ STRING 19912
 }
 
 STRING 19913
-// Abilities: A0VH (|cffFC6022Shakuton: Kajosatsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VK ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -121858,7 +121938,7 @@ STRING 19946
 }
 
 STRING 19947
-// Abilities: A0VH (|cffFC6022Shakuton: Kajosatsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WE (Tayuya Bandage Doki Slow), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -121959,6 +122039,18 @@ STRING 19963
 |cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r If a hero is killed while Chakra Katana is activated, the cooldown of all user skills are reset. Also increases the user speed by 25% for 10 seconds.|n|cff32cd32Chakra Cost:|r 100|n|cff32cd32Cooldown:|r 160s|n|cff32cd32Description:|r|nMifune infuses chakra on his Katana, increasing his speed.
 }
 
+STRING 19964
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
+}
+
+STRING 19965
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
+}
+
 STRING 19966
 // Abilities: A0RA (Kenjutsu Flash), Ubertip (Tooltip - Normal - Extended)
 {
@@ -122020,7 +122112,7 @@ STRING 19975
 }
 
 STRING 19976
-// Abilities: A0VK ( ), Hotkey (Hotkey - Normal)
+// Abilities: A0X1 (Yōton: Sekkaigyō no Jutsu), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -123198,7 +123290,7 @@ STRING 20153
 }
 
 STRING 20154
-// Abilities: A0WE (Tayuya Bandage Doki Slow), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X1 (Yōton: Sekkaigyō no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -124149,7 +124241,7 @@ Iron Fan Mastery [|cffffcc00Level 10|r]
 }
 
 STRING 20312
-// Abilities: A0X1 (Yōton: Sekkaigyō no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A0XM (Silent Killing), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -124860,6 +124952,12 @@ STRING 20430
 // Abilities: A0F5 (Ninpou: Chouji Giga "Tigers"), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy, Buildings|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r 10 + Ninjutsu / 4.0 each tiger attack|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Effects:|r Summon 10 tigers that deal damage and slow the target by |cff87ceeb3% x skill level|r for 1s. Last |cff87ceeb5 +.2 x skill level|r seconds.|n|cff32cd32Chakra Cost:|r 5 + |cff87ceeb20 x skill level|n|cff32cd32Cooldown:|r 15s|r|n|cff32cd32Description:|r|nSai summons ten ink tigers to attack the target and slow them.
+}
+
+STRING 20431
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
 
 STRING 20432
@@ -126434,60 +126532,6 @@ The arc widens based on the distance from the caster, reaching up to a 180° spr
 Orbs last for 7 seconds and stay stationary giving off a burning aura.
 }
 
-STRING 20672
-// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
-}
-
-STRING 20673
-// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
-}
-
-STRING 20674
-// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
-}
-
-STRING 20675
-// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
-}
-
-STRING 20676
-// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
-}
-
-STRING 20677
-// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
-}
-
-STRING 20678
-// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
-}
-
-STRING 20679
-// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
-}
-
-STRING 20680
-// Abilities: A16Q (|cffe9be69Shukaku Spear|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Slow enemy for 3s|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
-}
-
 STRING 20681
 // Abilities: A0I9 (Deadly Kick), Ubertip (Tooltip - Normal - Extended)
 {
@@ -127064,12 +127108,6 @@ STRING 20776
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 240 width x 875 length|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Effects:|r|nEsnare affected enemies for 2s.|n|cff32cd32Description:|r|nYagura is able to create many corals which immobilize the enemies in line, while dealing damage.
 }
 
-STRING 20777
-// Abilities: A0LF (Senpou: Hakugeki no Jutsu), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r 8 x Genjutsu + 500 at max|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Effects:|r Stuns affected enemies during spell execution. Last 3 seconds.|n|cff32cd32Chakra Cost:|r 300|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nAfter forming the necessary hand seals, the user expels a dragon-like entity from their mouth that carries an orb in its left front claw. As the dragon tightly coils itself around the orb, it releases both blinding light and deafening sound
-}
-
 STRING 20778
 // Abilities: A0ZR (Space-time Jutsu), Tip (Tooltip - Normal)
 {
@@ -127191,7 +127229,7 @@ STRING 20797
 }
 
 STRING 20798
-// Abilities: A0X1 (Yōton: Sekkaigyō no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XM (Silent Killing), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -129547,30 +129585,6 @@ STRING 21190
 A special made metal infused with earth|n|cff32cd32+50 All Stats|n+40 Taijutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Earth Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line that stuns for 1s and does not push|n|cffff0000Item Type: Weapon|r
 }
 
-STRING 21191
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 21192
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 21193
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 21194
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
 STRING 21195
 // Abilities: A0U5 (Shadow Combo), EditorSuffix (Editor Suffix)
 {
@@ -130819,12 +130833,6 @@ STRING 21402
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb(Taijutsu / 2) x Skill Level|r|n|cff32cd32Area of Effect:|r 160|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Chakra Cost:|r |cff87ceeb|r10 x Skill Level|n|cff32cd32Cooldown:|r |cff87ceeb10s + Skill Level|n|cff32cd32Description:|r|nKurotsuchi shoots out a blob of hot quicklime that connects with the first hero found creating a tether and lowering their armor - |cff87ceeb they can escape from if they continue to run.|r
 }
 
-STRING 21403
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
 STRING 21404
 // Abilities: A0VH (|cffFC6022Shakuton: Kajosatsu|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -131460,13 +131468,13 @@ STRING 21508
 }
 
 STRING 21509
-// Abilities: A0XM (Silent Killing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XW (Release Mask), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 21510
-// Abilities: A0XM (Silent Killing), Hotkey (Hotkey - Normal)
+// Abilities: A0XW (Release Mask), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -131535,36 +131543,6 @@ STRING 21521
 // Abilities: A0J7 (Shotei), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 300|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal (Magic if Hinata is in Juuho mode)|n|cff32cd32Effects:|r Drains 20% of target's chakra, slows, stuns for 0.5s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skil level|r|n|cff32cd32Cooldown:|r  15s|r|n|cff32cd32Description:|r|nUsing her Juuken combat style, Hinata hits the target countless times on their vital points, dealing damage and disabling the target temporarily.
-}
-
-STRING 21522
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 21523
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 21524
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 21525
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
-}
-
-STRING 21526
-// Abilities: A01N (|cff8080ffTsuuga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
 }
 
 STRING 21527
@@ -132794,10 +132772,10 @@ STRING 21730
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill Level|r|n|cff32cd32Area of Effect:|r 160 width with 300 fan at the tip|n|cff32cd32Effects:|r Slows enemies hit for 1.5s|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r |cff87ceeb|r|cff87ceeb10 x skill Level|n|cff32cd32Cooldown:|r 8s + |cff87ceebskill Level|n|cff32cd32Description:|r|nKurotsuchi shoots out a stream of water that fans out like a trumpet. Her ability interacts with her Yoton: Sekkaigyo no Jutsu causing it to deal damage instantly and rooting the target.
 }
 
-STRING 21731
-// Abilities: A01N (|cff8080ffTsuuga|r), Researchubertip (Tooltip - Learn - Extended)
+STRING 21732
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
 {
-|cff32cd32Target type:|r Point target|n|cff32cd32Target Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r to units or (|cff87ceeb80 x skill level|r chaos to lane creeps)|n|cff32cd32Damage type:|r Normal (Chaos |cff87ceebx 0.8|r if riderless)|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nKiba and Akamaru spins in high speed, dealing damage to enemies in line.
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
 
 STRING 21733
@@ -133500,6 +133478,12 @@ STRING 21849
 // Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Hotkey (Hotkey - Normal)
 {
 Q
+}
+
+STRING 21850
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
 
 STRING 21851
@@ -135490,10 +135474,46 @@ STRING 22181
 (Bugged)
 }
 
+STRING 22182
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
+}
+
+STRING 22183
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
+}
+
 STRING 22184
 // Abilities: A1AO (|cff9d8d8dCursed Seal|r), Tip (Tooltip - Normal)
 {
 |cff9d8d8dCursed Seal|r [|cffffcc00R|r] - [|cffffcc00Level 2|r]
+}
+
+STRING 22185
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
+}
+
+STRING 22186
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
+}
+
+STRING 22187
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
+}
+
+STRING 22188
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
 }
 
 STRING 22192
@@ -140380,18 +140400,6 @@ STRING 24279
 Learn |cff8080ffRaikiri|r [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
-STRING 24281
-// Abilities: A15Y (|cff8080ffRaiton: Raiju Tsuiga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb(700 + 4 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|n|cff32cd32Cooldown:|r 70s|n|cff32cd32Description:|r|nBy manipulating raiton chakra into his hand, Kakashi can make the lightning expand to create the form a hound, that cause the target and deals huge damage when in contact with it.
-}
-
-STRING 24283
-// Abilities: A15Y (|cff8080ffRaiton: Raiju Tsuiga|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb(700 + 4 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|n|cff32cd32Cooldown:|r 70s|n|cff32cd32Description:|r|nBy manipulating raiton chakra into his hand, Kakashi can make the lightning expand to create the form a hound, that cause the target and deals huge damage when in contact with it.
-}
-
 STRING 24286
 // Units: e073 (NejiUltimateKaiten), Name (Name)
 {
@@ -140408,12 +140416,6 @@ STRING 24293
 // Units: e075 (FountainEffect), Name (Name)
 {
 FountainEffect
-}
-
-STRING 24296
-// Abilities: A15Y (|cff8080ffRaiton: Raiju Tsuiga|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb(700 + 4 x Ninjutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 75 + |cff87ceeb75 x skill level|n|cff32cd32Cooldown:|r 70s|n|cff32cd32Description:|r|nBy manipulating raiton chakra into his hand, Kakashi can make the lightning expand to create the form a hound, that cause the target and deals huge damage when in contact with it.
 }
 
 STRING 24297
