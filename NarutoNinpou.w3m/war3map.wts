@@ -10704,13 +10704,6 @@ STRING 1784
 (+300)
 }
 
-STRING 1785
-// Items: I073 (Kohaku no Johei), Description (Description)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Area of Effect:|r 800|n|cff32cd32Chakra Cost:|r 200|n|cff32cd32Effect:|r Pull enemies for |cff87ceeb4s|r, sucking |cff87ceeb5%|r of chakra/second. If they get pulled for more than |cff87ceeb2s|r, they get esnared for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb50s|r|n|cffff0000Classification: None|r
-
-}
-
 STRING 1786
 // Abilities: A16M (Rinne Sharingan), Name (Name)
 {
@@ -20023,13 +20016,6 @@ STRING 3340
 // Abilities: A0UH (Goton Dairendan no Jutsu), Tip (Tooltip - Normal)
 {
 Amenotejikara [|cffffcc00E|r] - [|cffffcc00Level 5|r]
-}
-
-STRING 3341
-// Items: I073 (Kohaku no Johei), Ubertip (Tooltip - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Area of Effect:|r 800|n|cff32cd32Chakra Cost:|r 200|n|cff32cd32Effect:|r Pull enemies for |cff87ceeb4s|r, sucking |cff87ceeb5%|r of chakra/second. If they get pulled for more than |cff87ceeb2s|r, they get esnared for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb50s|r|n|cffff0000Classification: None|r
-
 }
 
 STRING 3342
@@ -33282,7 +33268,7 @@ Learn Bijuu Dama [|cffffcc00T|r] - [|cffffcc00Level %d|r]
 
 STRING 5474
 {
-|cffff0000Naruto Ninpou RE 14.6
+|cffff0000Naruto Ninpou RE 14.6B
 }
 
 STRING 5475
@@ -61798,6 +61784,12 @@ STRING 10065
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Damage:|r |cff87ceeb90 x skill level|r + 100 normal|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Paralyze nearby enemies and increases users armor to the maximum during spell execution.|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 14s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nA technique developed by Hinata where she releases a constant stream of chakra from the palm of her hands and then moves them in high-speed, creating a protective barrier that also deals damage to nearby enemies.
 }
 
+STRING 10066
+// Units: n02Q ((Dummy) Sai (Lion)), Name (Name)
+{
+(Dummy) Sai (Lion)
+}
+
 STRING 10067
 // Abilities: A0KV (|cff8080ffChidori|r), Tip (Tooltip - Normal)
 {
@@ -61922,6 +61914,20 @@ STRING 10087
 // Buffs/Effects: B02X (), Buffubertip (Tooltip - Extended)
 {
 This unit is being covered by a lightning armor; it has increased speed.
+}
+
+STRING 10088
+// Items: I033 (Body-Replacing Doll), Description (Description)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Effect:|r Switches your location with your target|r|n|cffff0000Care:|r Doesn't work if the target has |cff87ceebWire String|r|n|cff32cd32Cooldown:|r |cff87ceeb35s|r (Shared with Wire String/Kohaku no johei)|n|cffff0000Classification: None|r
+
+}
+
+STRING 10089
+// Items: I033 (Body-Replacing Doll), Ubertip (Tooltip - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Effect:|r Switches your location with your target|r|n|cffff0000Care:|r Doesn't work if the target has |cff87ceebWire String|r|n|cff32cd32Cooldown:|r |cff87ceeb35s|r (Shared with Wire String/Kohaku no johei)|n|cffff0000Classification: None|r
+
 }
 
 STRING 10090
@@ -66617,6 +66623,20 @@ STRING 10871
 // Abilities: A0KA (|cffc600ffTrap Soul|r), Tip (Tooltip - Normal)
 {
 Iron Dome [|cffffcc00D|r]
+}
+
+STRING 10872
+// Items: I05S (Wire String), Ubertip (Tooltip - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb1000|r at max|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effect:|r Prevents an enemy for |cff87ceeb4s|r from going further then |cff87ceebyour distance when cast|r from you|r|n|cff32cd32Cooldown:|r |cff87ceeb35s|r (Shared with Body-Replacing Doll/Kohaku no johei)|n|cffff0000Classification: None|r
+
+}
+
+STRING 10873
+// Items: I05S (Wire String), Description (Description)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb1000|r at max|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effect:|r Prevents an enemy for |cff87ceeb4s|r from going further then |cff87ceebyour distance when cast|r from you|r|n|cff32cd32Cooldown:|r |cff87ceeb35s|r (Shared with Body-Replacing Doll/Kohaku no johei)|n|cffff0000Classification: None|r
+
 }
 
 STRING 10874
@@ -106364,6 +106384,13 @@ STRING 17355
 Kamui [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
 }
 
+STRING 17356
+// Items: I073 (Kohaku no Johei), Description (Description)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Area of Effect:|r 800|n|cff32cd32Chakra Cost:|r 200|n|cff32cd32Effect:|r Pull enemies for |cff87ceeb4s|r, sucking |cff87ceeb5%|r of chakra/second. If they get pulled for more than |cff87ceeb2s|r, they get esnared for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb35s|r (Shared with Wire String/Body-Replacing Doll)
+|n|cffff0000Classification: None|r
+}
+
 STRING 17357
 // Abilities: A0FK (|cffa5fde2Projection Technique|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -106809,25 +106836,7 @@ STRING 17430
 }
 
 STRING 17431
-// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
-}
-
-STRING 17432
-// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
-}
-
-STRING 17433
-// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
-}
-
-STRING 17434
-// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XM (Silent Killing), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
 }
@@ -110932,6 +110941,14 @@ STRING 18117
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nDosu generates sound waves to attack enemies in a fan-like area.
 }
 
+STRING 18118
+// Items: I073 (Kohaku no Johei), Ubertip (Tooltip - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Area of Effect:|r 800|n|cff32cd32Chakra Cost:|r 200|n|cff32cd32Effect:|r Pull enemies for |cff87ceeb4s|r, sucking |cff87ceeb5%|r of chakra/second. If they get pulled for more than |cff87ceeb2s|r, they get esnared for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb35s|r (Shared with Wire String/Body-Replacing Doll)
+|n|cffff0000Classification: None|r
+
+}
+
 STRING 18119
 // Abilities: A0FM (|cffa5fde2Sage Chakra|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -114932,18 +114949,6 @@ STRING 18778
 |cffffcc00Description|r: Phoenix's breath emanates around with enormous strength. The enemies in the flow of breath to be swept away and could not resist.|n|n|cff0080ffDamage|r: 30 + 1.25 x |cff0080ffInt.|r|n|n|cff0080ffMana Cost:|r 150.|n|cff0080ffCooldown:|r 25s.|n|n"|cffffff00Eternal Shield|r" can lasting this effect for some seconds.
 }
 
-STRING 18779
-// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
-}
-
-STRING 18780
-// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
-}
-
 STRING 18781
 // Abilities: A0IZ (|cffe9576aKyuubi Rage|r), Tip (Tooltip - Normal)
 {
@@ -115008,12 +115013,6 @@ STRING 18791
 // Abilities: A0FS (|cffcddaedGinrin Tensei Baku|r), Tip (Tooltip - Normal)
 {
 Breath of Phoenix [|cffffcc00Q|r] - [|cffffcc00Level 12|r]
-}
-
-STRING 18792
-// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
 }
 
 STRING 18793
@@ -115150,12 +115149,6 @@ STRING 18814
 // Abilities: A0FR (|cff800080Nano-bug mode|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r Transform into Nano-bug mode, dealing |cff87ceeb0.5% x skill level|r of target maximum hp and |cff87ceeb0.3% x skill level|r of target current chakra per second.|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTorune being part of the Aburame clan is a host to a special type on insect Rinkaichu which destroy their enemies cells, causing excruciating pain in the process.
-}
-
-STRING 18815
-// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
 }
 
 STRING 18816
@@ -117945,6 +117938,12 @@ STRING 19279
 D
 }
 
+STRING 19280
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.25s later damaging all targets in an area.
+}
+
 STRING 19281
 // Abilities: A1AD (|cff55697bKamui Dimension|r), Tip (Tooltip - Normal)
 {
@@ -118047,6 +118046,12 @@ STRING 19297
 Chiyo performs a variation of the technique by attaching threads generated for the Puppet Technique to the blades and suppressing her chakra as much as possible that they will be unnoticeable. In doing this, she is able to transfer the threads from one weapon to that of the enemies for an added surprise or advantage during battle.|n|cff87ceebPicks the kunais released during Soushujin and sends them to a target enemy, dealing Genjutsu X Ability-Level.|n|cffff0000Caution: It's necessary you cast Soushujin before to use this technique.|r
 }
 
+STRING 19298
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.25s later damaging all targets in an area.
+}
+
 STRING 19299
 // Abilities: A0PA (Wind (R) + Water (W): Ice Release - Icicle Barrage), EditorSuffix (Editor Suffix)
 {
@@ -118123,6 +118128,12 @@ STRING 19311
 // Abilities: A0LJ (Explode!), Ubertip (Tooltip - Normal - Extended)
 {
 Chiyo performs a variation of the technique by attaching threads generated for the Puppet Technique to the blades and suppressing her chakra as much as possible that they will be unnoticeable. In doing this, she is able to transfer the threads from one weapon to that of the enemies for an added surprise or advantage during battle.|n|cff87ceebPicks the kunais released during Soushujin and sends them to a target enemy, dealing Genjutsu X Ability-Level.|n|cffff0000Caution: It's necessary you cast Soushujin before to use this technique.|r
+}
+
+STRING 19312
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.25s later damaging all targets in an area.
 }
 
 STRING 19313
@@ -119615,28 +119626,10 @@ STRING 19559
 Earth (Q) + Water (W): Wood Release - Entangling Roots
 }
 
-STRING 19560
-// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
-}
-
 STRING 19561
 // Abilities: A0L1 (Endurance Aura), Ubertip (Tooltip - Normal - Extended)
 {
 Increases attack speed by |cff87ceeb5% x skill level|r and each attack throw |cff87ceebskill level|r additional shurikens. Also increases range of Fuuma Shuriken item by |cff87ceeb50 x skill level|r.
-}
-
-STRING 19562
-// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
-}
-
-STRING 19563
-// Abilities: A0XM (Silent Killing), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
 }
 
 STRING 19564
@@ -126532,6 +126525,48 @@ The arc widens based on the distance from the caster, reaching up to a 180° spr
 Orbs last for 7 seconds and stay stationary giving off a burning aura.
 }
 
+STRING 20672
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.25s later damaging all targets in an area.
+}
+
+STRING 20673
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.25s later damaging all targets in an area.
+}
+
+STRING 20674
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.25s later damaging all targets in an area.
+}
+
+STRING 20675
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.25s later damaging all targets in an area.
+}
+
+STRING 20676
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.25s later damaging all targets in an area.
+}
+
+STRING 20677
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.25s later damaging all targets in an area.
+}
+
+STRING 20678
+// Abilities: A0XM (Silent Killing), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.25s later damaging all targets in an area.
+}
+
 STRING 20681
 // Abilities: A0I9 (Deadly Kick), Ubertip (Tooltip - Normal - Extended)
 {
@@ -131151,20 +131186,6 @@ STRING 21456
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(25 + Taijutsu) / 2 x skill level|r |n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 90 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nEnma jumps and slams the ground, stunning nearby enemy heroes for 1.5s.
 }
 
-STRING 21457
-// Items: I033 (Body-Replacing Doll), Description (Description)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Effect:|r Switches your location with your target|r|n|cffff0000Care:|r Doesn't work if the target has |cff87ceebWire String|r|n|cff32cd32Cooldown:|r |cff87ceeb35s|r (Shared with Wire String)|n|cffff0000Classification: None|r
-
-}
-
-STRING 21458
-// Items: I033 (Body-Replacing Doll), Ubertip (Tooltip - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Ally, Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Effect:|r Switches your location with your target|r|n|cffff0000Care:|r Doesn't work if the target has |cff87ceebWire String|r|n|cff32cd32Cooldown:|r |cff87ceeb35s|r (Shared with Wire String)|n|cffff0000Classification: None|r
-
-}
-
 STRING 21459
 // Items: I03L (|cff53a4ffMizukage Robe|r), Ubertip (Tooltip - Extended)
 {
@@ -131189,24 +131210,10 @@ STRING 21462
 Raigo: Senjusatsu
 }
 
-STRING 21463
-// Items: I05S (Wire String), Ubertip (Tooltip - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb1000|r at max|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effect:|r Prevents an enemy for |cff87ceeb4s|r from going further then |cff87ceebyour distance when cast|r from you|r|n|cff32cd32Cooldown:|r |cff87ceeb35s|r (Shared with Body-Replacing Doll)|n|cffff0000Classification: None|r
-
-}
-
 STRING 21464
 // Abilities: A0WH (|cff8080ffRaitou Jutsu: Rakurai|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Ensnare target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 35 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
-}
-
-STRING 21465
-// Items: I05S (Wire String), Description (Description)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb1000|r at max|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effect:|r Prevents an enemy for |cff87ceeb4s|r from going further then |cff87ceebyour distance when cast|r from you|r|n|cff32cd32Cooldown:|r |cff87ceeb35s|r (Shared with Body-Replacing Doll)|n|cffff0000Classification: None|r
-
 }
 
 STRING 21466
