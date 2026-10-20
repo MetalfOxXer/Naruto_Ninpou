@@ -10704,6 +10704,12 @@ STRING 1784
 (+300)
 }
 
+STRING 1785
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Name (Name)
+{
+Hachibi Chakra Mode (KillerBee)
+}
+
 STRING 1786
 // Abilities: A16M (Rinne Sharingan), Name (Name)
 {
@@ -12735,7 +12741,7 @@ To maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi
 }
 
 STRING 2125
-// Abilities: A0GN (Hachibi Chakra Form), Name (Name)
+// Abilities: A05T (Hachibi Chakra Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form
 }
@@ -20018,6 +20024,12 @@ STRING 3340
 Amenotejikara [|cffffcc00E|r] - [|cffffcc00Level 5|r]
 }
 
+STRING 3341
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Researchtip (Tooltip - Learn)
+{
+Learn Hachibi Chakra Mode
+}
+
 STRING 3342
 // Abilities: A0EG (|cff8b4600Doton: Tsuiga no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -22372,7 +22384,7 @@ STRING 3733
 }
 
 STRING 3734
-// Abilities: A0GN (Hachibi Chakra Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UN (|cff000000Hijutsu: Mushiyose|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -22420,7 +22432,7 @@ Q
 }
 
 STRING 3742
-// Abilities: A0GN (Hachibi Chakra Form), Hotkey (Hotkey - Normal)
+// Abilities: A0UN (|cff000000Hijutsu: Mushiyose|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -22702,13 +22714,13 @@ Bakusai Hyosho [|cffffcc00E|r] - [|cffffcc00Level 7|r]
 }
 
 STRING 3789
-// Abilities: A0GN (Hachibi Chakra Form), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KP (Mujin Meisai), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 3790
-// Abilities: A0UN (|cff000000Hijutsu: Mushiyose|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KP (Mujin Meisai), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -24034,7 +24046,7 @@ STRING 3971
 }
 
 STRING 3972
-// Abilities: A0UN (|cff000000Hijutsu: Mushiyose|r), Hotkey (Hotkey - Normal)
+// Abilities: A0MP (|cff0fcaf7Souen: Hitomi Goku|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -24475,7 +24487,7 @@ STRING 4025
 }
 
 STRING 4026
-// Abilities: A0KP (Mujin Meisai), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MP (|cff0fcaf7Souen: Hitomi Goku|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -24499,7 +24511,7 @@ Pein switches to Human Path
 }
 
 STRING 4030
-// Abilities: A0KP (Mujin Meisai), Hotkey (Hotkey - Normal)
+// Abilities: A0IQ (|cff40e0d0Suiton: Mizukagami no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -24517,7 +24529,7 @@ http://wc3campaigns.net/vexorian
 }
 
 STRING 4033
-// Abilities: A0MP (|cff0fcaf7Souen: Hitomi Goku|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IQ (|cff40e0d0Suiton: Mizukagami no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -26262,13 +26274,13 @@ Q
 }
 
 STRING 4321
-// Abilities: A0MP (|cff0fcaf7Souen: Hitomi Goku|r), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (|cffB0B0B0Hakke Kusho|r/|cff0fcaf7Lion Fists|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 4322
-// Abilities: A0IQ (|cff40e0d0Suiton: Mizukagami no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VQ (|cffB0B0B0Hakke Kusho|r/|cff0fcaf7Lion Fists|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -26814,13 +26826,13 @@ D
 }
 
 STRING 4413
-// Abilities: A0IQ (|cff40e0d0Suiton: Mizukagami no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A02T (Devour), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 4414
-// Abilities: A0VQ (|cffB0B0B0Hakke Kusho|r/|cff0fcaf7Lion Fists|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IT (|cff75baeeYasogami Kugeki|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26928,7 +26940,7 @@ D
 }
 
 STRING 4432
-// Abilities: A0VQ (|cffB0B0B0Hakke Kusho|r/|cff0fcaf7Lion Fists|r), Hotkey (Hotkey - Normal)
+// Abilities: A0IT (|cff75baeeYasogami Kugeki|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -26958,7 +26970,7 @@ D
 }
 
 STRING 4437
-// Abilities: A02T (Devour), Researchhotkey (Hotkey - Learn)
+// Abilities: A02V (Mushi Kame no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27229,13 +27241,13 @@ STRING 4481
 }
 
 STRING 4482
-// Abilities: A0IT (|cff75baeeYasogami Kugeki|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SV (Human Path), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 4483
-// Abilities: A0IT (|cff75baeeYasogami Kugeki|r), Hotkey (Hotkey - Normal)
+// Abilities: A0SV (Human Path), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -27771,7 +27783,7 @@ D
 }
 
 STRING 4555
-// Abilities: A02V (Mushi Kame no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A07W (Iron Sand Shield), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27933,13 +27945,13 @@ HagoromoE
 }
 
 STRING 4582
-// Abilities: A0SV (Human Path), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HW (|cff53a4ffSuika no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 4583
-// Abilities: A0SV (Human Path), Hotkey (Hotkey - Normal)
+// Abilities: A0HW (|cff53a4ffSuika no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -28119,7 +28131,7 @@ Q
 }
 
 STRING 4613
-// Abilities: A07W (Iron Sand Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UW (Bijuu Hachimaki), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -28431,7 +28443,7 @@ Counter Instance [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 4665
-// Abilities: A0HW (|cff53a4ffSuika no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -28533,7 +28545,7 @@ R
 }
 
 STRING 4682
-// Abilities: A0HW (|cff53a4ffSuika no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -28731,7 +28743,7 @@ STRING 4714
 }
 
 STRING 4715
-// Abilities: A0UW (Bijuu Hachimaki), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TX (|cffB0B0B0Ninpou: Kamaitachi|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -28809,7 +28821,7 @@ Breath of Phoenix [|cffffcc00Q|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 4728
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TX (|cffB0B0B0Ninpou: Kamaitachi|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -28845,7 +28857,7 @@ Domu: Iron Punch [|cffffcc00W|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 4734
-// Abilities: A0PX (|cfffffc00Shunshin Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A09Y (Marked Kunais Field), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -29943,13 +29955,13 @@ STRING 4916
 }
 
 STRING 4917
-// Abilities: A0TX (|cffB0B0B0Ninpou: Kamaitachi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A09Y (Marked Kunais Field), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 4918
-// Abilities: A0TX (|cffB0B0B0Ninpou: Kamaitachi|r), Hotkey (Hotkey - Normal)
+// Abilities: A0UY (Bijuu Lariat), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -30093,13 +30105,13 @@ STRING 4941
 }
 
 STRING 4942
-// Abilities: A09Y (Marked Kunais Field), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EZ (|cffaa8a29Doton: Chokajugan no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 4943
-// Abilities: A09Y (Marked Kunais Field), Hotkey (Hotkey - Normal)
+// Abilities: A0EZ (|cffaa8a29Doton: Chokajugan no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -30662,19 +30674,19 @@ Turn Futton Mode [|cffffcc00E|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 5037
-// Abilities: A0UY (Bijuu Lariat), Hotkey (Hotkey - Normal)
+// Abilities: A0JZ (|cff31645cOpen Gates!|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 5038
-// Abilities: A0EZ (|cffaa8a29Doton: Chokajugan no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JZ (|cff31645cOpen Gates!|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
 
 STRING 5039
-// Abilities: A05T (Hachibi Chakra Form), Tip (Tooltip - Normal)
+// Abilities: A05T (Hachibi Chakra Form), Name (Name)
 {
 Hachibi Chakra Form
 }
@@ -30962,7 +30974,7 @@ Weapon Mastery - [|cffffcc00Level 5|r]
 }
 
 STRING 5087
-// Abilities: A05T (Hachibi Chakra Form), Name (Name)
+// Buffs/Effects: B02E (), Bufftip (Tooltip)
 {
 Hachibi Chakra Form
 }
@@ -32518,7 +32530,7 @@ Wind Weasel
 }
 
 STRING 5349
-// Abilities: A0EZ (|cffaa8a29Doton: Chokajugan no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0XI (|cff000000Karasu Bunshin no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -32809,7 +32821,7 @@ Bijuu Dama
 }
 
 STRING 5398
-// Abilities: A0JZ (|cff31645cOpen Gates!|r), Hotkey (Hotkey - Normal)
+// Abilities: A0XI (|cff000000Karasu Bunshin no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -32943,7 +32955,7 @@ Karamatsu no Mai [|cffffcc00W|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 5420
-// Abilities: A0GN (Hachibi Chakra Form), Researchtip (Tooltip - Learn)
+// Abilities: A0SZ (True Form), Researchtip (Tooltip - Learn)
 {
 Learn Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
@@ -32955,7 +32967,7 @@ STRING 5421
 }
 
 STRING 5422
-// Abilities: A0GN (Hachibi Chakra Form), Tip (Tooltip - Normal)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 1|r]
 }
@@ -32967,55 +32979,55 @@ STRING 5423
 }
 
 STRING 5424
-// Abilities: A0GN (Hachibi Chakra Form), Tip (Tooltip - Normal)
+// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 5425
-// Abilities: A0GN (Hachibi Chakra Form), Tip (Tooltip - Normal)
+// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 5426
-// Abilities: A0GN (Hachibi Chakra Form), Tip (Tooltip - Normal)
+// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 5427
-// Abilities: A0GN (Hachibi Chakra Form), Tip (Tooltip - Normal)
+// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 5428
-// Abilities: A0GN (Hachibi Chakra Form), Tip (Tooltip - Normal)
+// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 5429
-// Abilities: A0GN (Hachibi Chakra Form), Tip (Tooltip - Normal)
+// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 7|r]
 }
 
 STRING 5430
-// Abilities: A0GN (Hachibi Chakra Form), Tip (Tooltip - Normal)
+// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 5431
-// Abilities: A0GN (Hachibi Chakra Form), Tip (Tooltip - Normal)
+// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 5432
-// Abilities: A0GN (Hachibi Chakra Form), Tip (Tooltip - Normal)
+// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
@@ -33355,7 +33367,7 @@ STRING 5488
 }
 
 STRING 5489
-// Abilities: A0JZ (|cff31645cOpen Gates!|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0XP (Cocoon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -33385,7 +33397,7 @@ Swap between Futton or Youton modes.
 }
 
 STRING 5494
-// Abilities: A0XI (|cff000000Karasu Bunshin no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XV (Wing Assault), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34325,7 +34337,7 @@ Otogakure Rock 1
 }
 
 STRING 5651
-// Abilities: A0XI (|cff000000Karasu Bunshin no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0XV (Wing Assault), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34349,7 +34361,7 @@ STRING 5654
 }
 
 STRING 5655
-// Abilities: A0XP (Cocoon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y7 (Assassination Technique), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34685,7 +34697,7 @@ Bash - [|cffffcc00Level 6|r]
 }
 
 STRING 5711
-// Abilities: A0XV (Wing Assault), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y7 (Assassination Technique), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34751,7 +34763,7 @@ Otogakure Rock 4
 }
 
 STRING 5722
-// Abilities: A0XV (Wing Assault), Hotkey (Hotkey - Normal)
+// Abilities: A102 (|cff87ceebBakusai Hyosho|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -35144,7 +35156,7 @@ Otogakure Rock 3
 }
 
 STRING 5787
-// Abilities: A0Y7 (Assassination Technique), Researchhotkey (Hotkey - Learn)
+// Abilities: A102 (|cff87ceebBakusai Hyosho|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -35848,7 +35860,7 @@ STRING 5905
 }
 
 STRING 5906
-// Abilities: A0Y7 (Assassination Technique), Hotkey (Hotkey - Normal)
+// Abilities: A11L (|cff000000Mushi Dome|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -35878,7 +35890,7 @@ Purified Sword of Totsuka
 }
 
 STRING 5911
-// Abilities: A102 (|cff87ceebBakusai Hyosho|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A11T (|cff8dc3fcBubble Jutsu Drift|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36808,13 +36820,13 @@ Learn Ninpou: Choushin Giga [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 6066
-// Abilities: A102 (|cff87ceebBakusai Hyosho|r), Hotkey (Hotkey - Normal)
+// Abilities: A11T (|cff8dc3fcBubble Jutsu Drift|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 6067
-// Abilities: A11L (|cff000000Mushi Dome|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A122 (Gunbai Uchiwa), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37931,12 +37943,6 @@ STRING 6252
 Subjugation of Earth
 }
 
-STRING 6253
-// Buffs/Effects: B02E (), Bufftip (Tooltip)
-{
-Hachibi Chakra Form
-}
-
 STRING 6254
 // Abilities: A02G (Art of Creation), Ubertip (Tooltip - Normal - Extended)
 {
@@ -38220,7 +38226,7 @@ Deals |cff40e0d0Ninjutsu X [Ability Level] |r|cff0000ffsuiton |rdamage in a fan-
 }
 
 STRING 6301
-// Abilities: A11T (|cff8dc3fcBubble Jutsu Drift|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A122 (Gunbai Uchiwa), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -38250,7 +38256,7 @@ Jiraiya
 }
 
 STRING 6306
-// Abilities: A11T (|cff8dc3fcBubble Jutsu Drift|r), Hotkey (Hotkey - Normal)
+// Abilities: A126 (Mazo no Kusari), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -38569,7 +38575,7 @@ MD_Bomb
 }
 
 STRING 6359
-// Abilities: A122 (Gunbai Uchiwa), Researchhotkey (Hotkey - Learn)
+// Abilities: A126 (Mazo no Kusari), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -39061,31 +39067,31 @@ STRING 6440
 }
 
 STRING 6441
-// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 6442
-// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 6443
-// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 6444
-// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 6445
-// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 6|r]
 }
@@ -39097,7 +39103,7 @@ Invisible Dummy 4
 }
 
 STRING 6447
-// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 7|r]
 }
@@ -39115,13 +39121,13 @@ black domo
 }
 
 STRING 6450
-// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 6451
-// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 9|r]
 }
@@ -39145,7 +39151,7 @@ STRING 6454
 }
 
 STRING 6455
-// Abilities: A0SZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
@@ -39954,7 +39960,7 @@ Earth Release
 }
 
 STRING 6590
-// Abilities: A122 (Gunbai Uchiwa), Hotkey (Hotkey - Normal)
+// Abilities: A003 (|cff000000Karasu Bunshin no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -40164,7 +40170,7 @@ Chiyo performs a variation of the technique by attaching threads generated for t
 }
 
 STRING 6625
-// Abilities: A126 (Mazo no Kusari), Researchhotkey (Hotkey - Learn)
+// Abilities: A003 (|cff000000Karasu Bunshin no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -40362,7 +40368,7 @@ STRING 6657
 }
 
 STRING 6658
-// Abilities: A126 (Mazo no Kusari), Hotkey (Hotkey - Normal)
+// Abilities: A012 (Silent Killing), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -40458,7 +40464,7 @@ Mushi Kame no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 6674
-// Abilities: A0SZ (True Form), Researchtip (Tooltip - Learn)
+// Abilities: A0UZ (True Form), Researchtip (Tooltip - Learn)
 {
 Learn Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
@@ -40476,7 +40482,7 @@ Senbon Dance infused with fire. Heat can be felt radiating from this weapon.|n|c
 }
 
 STRING 6677
-// Abilities: A003 (|cff000000Karasu Bunshin no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A012 (Silent Killing), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -40698,7 +40704,7 @@ STRING 6713
 }
 
 STRING 6714
-// Abilities: A003 (|cff000000Karasu Bunshin no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A048 (Strong Floating Blade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -40782,7 +40788,7 @@ STRING 6727
 }
 
 STRING 6728
-// Abilities: A0GN (Hachibi Chakra Form), Untip (Tooltip - Turn Off)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -40848,7 +40854,7 @@ Kunai infused with thunder. Sparks can be seen racing across the weapon.|n|cff32
 }
 
 STRING 6739
-// Abilities: A0GN (Hachibi Chakra Form), Untip (Tooltip - Turn Off)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -41052,7 +41058,7 @@ STRING 6772
 }
 
 STRING 6773
-// Abilities: A012 (Silent Killing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -41184,13 +41190,13 @@ STRING 6794
 }
 
 STRING 6795
-// Abilities: A0GN (Hachibi Chakra Form), Untip (Tooltip - Turn Off)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 6796
-// Abilities: A0GN (Hachibi Chakra Form), Untip (Tooltip - Turn Off)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -41280,7 +41286,7 @@ STRING 6810
 }
 
 STRING 6811
-// Abilities: A0GN (Hachibi Chakra Form), Untip (Tooltip - Turn Off)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -41322,7 +41328,7 @@ Vitality Pills
 }
 
 STRING 6818
-// Abilities: A0GN (Hachibi Chakra Form), Untip (Tooltip - Turn Off)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -41334,7 +41340,7 @@ R
 }
 
 STRING 6820
-// Abilities: A0GN (Hachibi Chakra Form), Untip (Tooltip - Turn Off)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -41436,7 +41442,7 @@ STRING 6836
 }
 
 STRING 6837
-// Abilities: A012 (Silent Killing), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -41658,7 +41664,7 @@ STRING 6873
 }
 
 STRING 6874
-// Abilities: A048 (Strong Floating Blade), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -41712,7 +41718,7 @@ Z
 }
 
 STRING 6883
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BK (Yanagi no Mai), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -41736,7 +41742,7 @@ STRING 6886
 }
 
 STRING 6887
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BK (Yanagi no Mai), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -41976,7 +41982,7 @@ R
 }
 
 STRING 6927
-// Abilities: A0GN (Hachibi Chakra Form), Untip (Tooltip - Turn Off)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -42227,7 +42233,7 @@ Suiton: Suidanha [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 6969
-// Abilities: A0MG (|cffe36d50Yoton: Shakugaikoken|r), Hotkey (Hotkey - Normal)
+// Abilities: A0MS (Tessenka no Mai: Hana), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -42535,7 +42541,7 @@ STRING 7019
 }
 
 STRING 7020
-// Abilities: A0BK (Yanagi no Mai), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NC (|cff215dbfClaws Strike|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43058,7 +43064,7 @@ STRING 7104
 }
 
 STRING 7105
-// Abilities: A0BK (Yanagi no Mai), Hotkey (Hotkey - Normal)
+// Abilities: A0NC (|cff215dbfClaws Strike|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43184,7 +43190,7 @@ A
 }
 
 STRING 7126
-// Abilities: A0MS (Tessenka no Mai: Hana), Hotkey (Hotkey - Normal)
+// Abilities: A0SK (|cffff0000Katon: Endan|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43691,7 +43697,7 @@ STRING 7190
 }
 
 STRING 7191
-// Abilities: A0NC (|cff215dbfClaws Strike|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SK (|cffff0000Katon: Endan|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44045,7 +44051,7 @@ Specially designed for assassination.|n|cff32cd32+120 Movement Speed|n+300 HP|n+
 }
 
 STRING 7250
-// Abilities: A0GN (Hachibi Chakra Form), Untip (Tooltip - Turn Off)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -44081,7 +44087,7 @@ STRING 7255
 }
 
 STRING 7256
-// Abilities: A0NC (|cff215dbfClaws Strike|r), Hotkey (Hotkey - Normal)
+// Abilities: A0TJ (Toton Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44195,7 +44201,7 @@ R
 }
 
 STRING 7275
-// Abilities: A0SK (|cffff0000Katon: Endan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TJ (Toton Jutsu), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44327,7 +44333,7 @@ STRING 7296
 }
 
 STRING 7297
-// Abilities: A0SK (|cffff0000Katon: Endan|r), Hotkey (Hotkey - Normal)
+// Abilities: A0UO (Toton Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44527,25 +44533,25 @@ STRING 7329
 }
 
 STRING 7330
-// Abilities: A0GN (Hachibi Chakra Form), Untip (Tooltip - Turn Off)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 7331
-// Abilities: A0GN (Hachibi Chakra Form), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 7332
-// Abilities: A0GN (Hachibi Chakra Form), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 7333
-// Abilities: A0GN (Hachibi Chakra Form), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -44605,13 +44611,13 @@ STRING 7342
 }
 
 STRING 7343
-// Abilities: A0GN (Hachibi Chakra Form), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 7344
-// Abilities: A0GN (Hachibi Chakra Form), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -44623,31 +44629,31 @@ STRING 7345
 }
 
 STRING 7346
-// Abilities: A0GN (Hachibi Chakra Form), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 7347
-// Abilities: A0GN (Hachibi Chakra Form), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 7348
-// Abilities: A0GN (Hachibi Chakra Form), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 7349
-// Abilities: A0GN (Hachibi Chakra Form), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 7350
-// Abilities: A0GN (Hachibi Chakra Form), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -45395,13 +45401,13 @@ STRING 7474
 }
 
 STRING 7475
-// Abilities: A0TJ (Toton Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A13Z (|cff8ff6bcShosen Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7476
-// Abilities: A0TJ (Toton Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A13Z (|cff8ff6bcShosen Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -45695,13 +45701,13 @@ Learning multiple water body of the operation (|cffffcc00E |r) - [|cffffcc00 Lev
 }
 
 STRING 7525
-// Abilities: A0UO (Toton Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7526
-// Abilities: A13Z (|cff8ff6bcShosen Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A14Y (Kori Shinchuu no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -46025,7 +46031,7 @@ STRING 7579
 }
 
 STRING 7580
-// Abilities: A13Z (|cff8ff6bcShosen Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A14Y (Kori Shinchuu no Jutsu), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -46049,7 +46055,7 @@ Ultimate Choice
 }
 
 STRING 7584
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A154 (|cffdabd91Suna no Yoroi|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -46973,7 +46979,7 @@ Lightning Arrow
 }
 
 STRING 7738
-// Abilities: A14Y (Kori Shinchuu no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A154 (|cffdabd91Suna no Yoroi|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47339,7 +47345,7 @@ STRING 7798
 }
 
 STRING 7799
-// Abilities: A14Y (Kori Shinchuu no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A158 (|cff09520eSnake Skin Change|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47387,7 +47393,7 @@ STRING 7806
 }
 
 STRING 7807
-// Abilities: A154 (|cffdabd91Suna no Yoroi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A179 (|cff800080Amenotejikara|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47573,13 +47579,13 @@ Shuradou [|cffffcc00W|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 7838
-// Abilities: A154 (|cffdabd91Suna no Yoroi|r), Hotkey (Hotkey - Normal)
+// Abilities: A179 (|cff800080Amenotejikara|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7839
-// Abilities: A158 (|cff09520eSnake Skin Change|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A17A (|cff8080ffChidori Eiso), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47621,13 +47627,13 @@ Learn Sandaime Kazekage Puppet [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 7846
-// Abilities: A179 (|cff800080Amenotejikara|r), Hotkey (Hotkey - Normal)
+// Abilities: A17B (Feel the Pain!), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7847
-// Abilities: A179 (|cff800080Amenotejikara|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A17B (Feel the Pain!), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47650,13 +47656,13 @@ Role: Destroyer
 }
 
 STRING 7851
-// Abilities: A17A (|cff8080ffChidori Eiso), Researchhotkey (Hotkey - Learn)
+// Abilities: A17F (|cff008000Hokage-Shiki Jijun Jutsu: Kakuan Nitten Suishu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7852
-// Abilities: A17B (Feel the Pain!), Researchhotkey (Hotkey - Learn)
+// Abilities: A17F (|cff008000Hokage-Shiki Jijun Jutsu: Kakuan Nitten Suishu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47764,7 +47770,7 @@ STRING 7869
 }
 
 STRING 7870
-// Abilities: A17B (Feel the Pain!), Hotkey (Hotkey - Normal)
+// Abilities: A17U (Naruto Beam), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48166,13 +48172,13 @@ STRING 7936
 }
 
 STRING 7937
-// Abilities: A17F (|cff008000Hokage-Shiki Jijun Jutsu: Kakuan Nitten Suishu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A17U (Naruto Beam), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 7938
-// Abilities: A17F (|cff008000Hokage-Shiki Jijun Jutsu: Kakuan Nitten Suishu|r), Hotkey (Hotkey - Normal)
+// Abilities: A18B (Uppercut), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48376,7 +48382,7 @@ Mokuton: Mokujin no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 7972
-// Abilities: A17U (Naruto Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A18B (Uppercut), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48598,7 +48604,7 @@ Mokuton: Mokujin no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 8009
-// Abilities: A17U (Naruto Beam), Hotkey (Hotkey - Normal)
+// Abilities: A19C (Assassination Technique), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48622,7 +48628,7 @@ STRING 8012
 }
 
 STRING 8013
-// Abilities: A18B (Uppercut), Researchhotkey (Hotkey - Learn)
+// Abilities: A19C (Assassination Technique), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48717,13 +48723,13 @@ Spectator 2
 }
 
 STRING 8029
-// Abilities: A18B (Uppercut), Hotkey (Hotkey - Normal)
+// Abilities: A19V (Kumonendo), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8030
-// Abilities: A19C (Assassination Technique), Researchhotkey (Hotkey - Learn)
+// Abilities: A19V (Kumonendo), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48921,19 +48927,19 @@ STRING 8062
 }
 
 STRING 8063
-// Abilities: A19C (Assassination Technique), Hotkey (Hotkey - Normal)
+// Abilities: A19W ( ), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8064
-// Abilities: A19V (Kumonendo), Researchhotkey (Hotkey - Learn)
+// Abilities: A19W ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8065
-// Abilities: A19V (Kumonendo), Hotkey (Hotkey - Normal)
+// Abilities: A1AC (|cff000000Black Lightning|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49006,7 +49012,7 @@ STRING 8076
 }
 
 STRING 8077
-// Abilities: A19W ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A097 (|cffe95e01Katon: Gouryuuka no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49034,7 +49040,7 @@ The second subcategory is called hero destroyer and the second most favorite rol
 }
 
 STRING 8081
-// Abilities: A19W ( ), Hotkey (Hotkey - Normal)
+// Abilities: A097 (|cffe95e01Katon: Gouryuuka no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -49276,7 +49282,7 @@ STRING 8116
 }
 
 STRING 8117
-// Abilities: A1AC (|cff000000Black Lightning|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49539,7 +49545,7 @@ Instant Water [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 8158
-// Abilities: A097 (|cffe95e01Katon: Gouryuuka no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -49587,7 +49593,7 @@ Rikudou Sennin Staff
 }
 
 STRING 8166
-// Abilities: A097 (|cffe95e01Katon: Gouryuuka no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -50581,13 +50587,13 @@ STRING 8329
 }
 
 STRING 8330
-// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1AN (Headbutt), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8331
-// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A1AN (Headbutt), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50861,19 +50867,19 @@ Q
 }
 
 STRING 8366
-// Abilities: A103 (|cff0fcaf7In'yu Shōmetsu|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1AS (|cff8b4600Doton: Doryou Dango|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8367
-// Abilities: A1AN (Headbutt), Researchhotkey (Hotkey - Learn)
+// Abilities: A1AV ( ), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8368
-// Abilities: A1AN (Headbutt), Hotkey (Hotkey - Normal)
+// Abilities: A1AV ( ), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -51127,13 +51133,13 @@ STRING 8405
 }
 
 STRING 8406
-// Abilities: A1AS (|cff8b4600Doton: Doryou Dango|r), Hotkey (Hotkey - Normal)
+// Abilities: A1AV ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8407
-// Abilities: A1AV ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A1B3 (|cffff0000Sword of Totsuka|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51397,7 +51403,7 @@ Darui Suiton
 }
 
 STRING 8451
-// Abilities: A1AV ( ), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1B3 (|cffff0000Sword of Totsuka|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51409,13 +51415,13 @@ Chiyo performs a variation of the technique by attaching threads generated for t
 }
 
 STRING 8453
-// Abilities: A1AV ( ), Hotkey (Hotkey - Normal)
+// Abilities: A1B4 (|cffff0000Yata Mirror|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8454
-// Abilities: A1B3 (|cffff0000Sword of Totsuka|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1B5 (|cff87ceebChakra Healing Shield|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51553,7 +51559,7 @@ STRING 8476
 }
 
 STRING 8477
-// Abilities: A1B3 (|cffff0000Sword of Totsuka|r), Hotkey (Hotkey - Normal)
+// Abilities: A1B5 (|cff87ceebChakra Healing Shield|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51667,7 +51673,7 @@ STRING 8495
 }
 
 STRING 8496
-// Abilities: A1B4 (|cffff0000Yata Mirror|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A16H (Adamantine Chakra Transfer Chain), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51679,7 +51685,7 @@ STRING 8497
 }
 
 STRING 8498
-// Abilities: A1B5 (|cff87ceebChakra Healing Shield|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A16H (Adamantine Chakra Transfer Chain), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53776,7 +53782,7 @@ Sky-Eagle Art [|cffffcc00E|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 8789
-// Abilities: A1B5 (|cff87ceebChakra Healing Shield|r), Hotkey (Hotkey - Normal)
+// Abilities: A16K (Drunken Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -53800,7 +53806,7 @@ Learn Sky-Eagle Art [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 8793
-// Abilities: A16H (Adamantine Chakra Transfer Chain), Researchhotkey (Hotkey - Learn)
+// Abilities: A170 (|cff8b4600Doton: Shinjuu Zanshu no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54082,7 +54088,7 @@ Art of Creation [|cffffcc00W|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 8840
-// Abilities: A16H (Adamantine Chakra Transfer Chain), Hotkey (Hotkey - Normal)
+// Abilities: A170 (|cff8b4600Doton: Shinjuu Zanshu no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54118,7 +54124,7 @@ STRING 8845
 }
 
 STRING 8846
-// Abilities: A16K (Drunken Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A171 ( ), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54274,13 +54280,13 @@ Dance of Chains [|cffffcc00Q|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 8872
-// Abilities: A170 (|cff8b4600Doton: Shinjuu Zanshu no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A171 ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8873
-// Abilities: A170 (|cff8b4600Doton: Shinjuu Zanshu no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A166 (Mini Rasenshuriken), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54448,7 +54454,7 @@ Bashosen
 }
 
 STRING 8901
-// Abilities: A171 ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A166 (Mini Rasenshuriken), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54749,13 +54755,13 @@ Mushi Kame no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 8949
-// Abilities: A171 ( ), Hotkey (Hotkey - Normal)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8950
-// Abilities: A166 (Mini Rasenshuriken), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55297,7 +55303,7 @@ Turn Futton Mode [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 9023
-// Abilities: A166 (Mini Rasenshuriken), Hotkey (Hotkey - Normal)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -55321,7 +55327,7 @@ AHSS_KINKAKU_ICON
 }
 
 STRING 9027
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A15V (|cff000000Serial Gudoudamas|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55351,13 +55357,13 @@ Senei Jashu [|cffffcc00Q|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 9032
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Hotkey (Hotkey - Normal)
+// Abilities: A15V (|cff000000Serial Gudoudamas|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
 
 STRING 9033
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A185 (Sound Barrier), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -56221,7 +56227,7 @@ STRING 9150
 }
 
 STRING 9151
-// Abilities: A15V (|cff000000Serial Gudoudamas|r), Hotkey (Hotkey - Normal)
+// Abilities: A185 (Sound Barrier), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56263,7 +56269,7 @@ Q
 }
 
 STRING 9158
-// Abilities: A15V (|cff000000Serial Gudoudamas|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1C2 (Kirigakure no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -56407,13 +56413,13 @@ Kuchiyose: Kusanagi
 }
 
 STRING 9182
-// Abilities: A185 (Sound Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A1C2 (Kirigakure no Jutsu), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 9183
-// Abilities: A185 (Sound Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A1C5 (Switch Mode), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -56707,19 +56713,19 @@ Shotei [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 9232
-// Abilities: A1C2 (Kirigakure no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DG (|cff8080ffChidori Senbons|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 9233
-// Abilities: A1C2 (Kirigakure no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A0DG (|cff8080ffChidori Senbons|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 9234
-// Abilities: A1C5 (Switch Mode), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q6 (|cff87ceebSuiton: Suiryuudan no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -57487,7 +57493,7 @@ Cloth worn by members of Anbu.|n|cff32cd32+40 All Stats|n+40 Damage|n+10 Armor|n
 }
 
 STRING 9349
-// Abilities: A0DG (|cff8080ffChidori Senbons|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q6 (|cff87ceebSuiton: Suiryuudan no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -57853,7 +57859,7 @@ Mei turns into Youton Mode, making her attack have a chance to deal |cff87ceeb10
 }
 
 STRING 9410
-// Abilities: A0DG (|cff8080ffChidori Senbons|r), Hotkey (Hotkey - Normal)
+// Abilities: A19N (|cff867092Kuchiyose no Jutsu: Kamereon |r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -57973,7 +57979,7 @@ STRING 9429
 }
 
 STRING 9430
-// Abilities: A0Q6 (|cff87ceebSuiton: Suiryuudan no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A19N (|cff867092Kuchiyose no Jutsu: Kamereon |r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -58351,7 +58357,7 @@ STRING 9492
 }
 
 STRING 9493
-// Abilities: A0Q6 (|cff87ceebSuiton: Suiryuudan no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A1CU (|cff0fcaf7Kage Bunshin Rasengan|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -60087,7 +60093,7 @@ Hokage's Building
 }
 
 STRING 9783
-// Abilities: A19N (|cff867092Kuchiyose no Jutsu: Kamereon |r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1CU (|cff0fcaf7Kage Bunshin Rasengan|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60213,7 +60219,7 @@ STRING 9803
 }
 
 STRING 9804
-// Abilities: A19N (|cff867092Kuchiyose no Jutsu: Kamereon |r), Hotkey (Hotkey - Normal)
+// Abilities: A0M5 (|cff800080Poisoned Gas|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -60459,7 +60465,7 @@ Mei turns into Youton Mode, making her attack have a chance to deal |cff87ceeb28
 }
 
 STRING 9845
-// Abilities: A1CU (|cff0fcaf7Kage Bunshin Rasengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M5 (|cff800080Poisoned Gas|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60825,7 +60831,7 @@ STRING 9905
 }
 
 STRING 9906
-// Abilities: A1CU (|cff0fcaf7Kage Bunshin Rasengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A1CT (|cffb64444Sharingan|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61317,7 +61323,7 @@ STRING 9987
 }
 
 STRING 9988
-// Abilities: A0M5 (|cff800080Poisoned Gas|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1D6 (|cff000000Crow Clone|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61491,7 +61497,7 @@ Throw Ink [|cffffcc00D|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 10017
-// Abilities: A0M5 (|cff800080Poisoned Gas|r), Hotkey (Hotkey - Normal)
+// Abilities: A1DL (|cff0fcaf7Chakra Transfer Technique|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61875,7 +61881,7 @@ STRING 10080
 }
 
 STRING 10081
-// Abilities: A1CT (|cffb64444Sharingan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DQ (|cffba0000Hollow Mask|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61899,7 +61905,7 @@ STRING 10084
 }
 
 STRING 10085
-// Abilities: A1D6 (|cff000000Crow Clone|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DQ (|cffba0000Hollow Mask|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62663,7 +62669,7 @@ STRING 10211
 }
 
 STRING 10212
-// Abilities: A1DL (|cff0fcaf7Chakra Transfer Technique|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DR ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62687,7 +62693,7 @@ STRING 10215
 }
 
 STRING 10216
-// Abilities: A1DQ (|cffba0000Hollow Mask|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1E7 (Ninpou: Choushin Giga), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62759,7 +62765,7 @@ Same with The Heaven Sword and Heaven 8 Mirror, it is one of the three strongest
 }
 
 STRING 10228
-// Abilities: A1DQ (|cffba0000Hollow Mask|r), Hotkey (Hotkey - Normal)
+// Abilities: A1EK (|cffba8b55Shukaku Perfect Shield|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -63209,7 +63215,7 @@ STRING 10302
 }
 
 STRING 10303
-// Abilities: A1DR ( ), Hotkey (Hotkey - Normal)
+// Abilities: A1EP (|cffff0000Frenzy Mode|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -63697,13 +63703,13 @@ Battle Kunai - |cffffcc00Level 3|r
 }
 
 STRING 10384
-// Abilities: A1E7 (Ninpou: Choushin Giga), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EP (|cffff0000Frenzy Mode|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 10385
-// Abilities: A1EK (|cffba8b55Shukaku Perfect Shield|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EP (|cffff0000Frenzy Mode|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -64776,7 +64782,7 @@ T
 }
 
 STRING 10564
-// Abilities: A1EP (|cffff0000Frenzy Mode|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A16R (|cffB0B0B0Fuuton: Senpuuken|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65853,7 +65859,7 @@ STRING 10742
 }
 
 STRING 10743
-// Abilities: A1EP (|cffff0000Frenzy Mode|r), Hotkey (Hotkey - Normal)
+// Abilities: A16R (|cffB0B0B0Fuuton: Senpuuken|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65895,7 +65901,7 @@ Sarutobi Hiruzen
 }
 
 STRING 10750
-// Abilities: A1EP (|cffff0000Frenzy Mode|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1EF (|cff8080ffLightning Strike|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65931,7 +65937,7 @@ STRING 10755
 }
 
 STRING 10756
-// Abilities: A16R (|cffB0B0B0Fuuton: Senpuuken|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EF (|cff8080ffLightning Strike|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66038,7 +66044,7 @@ STRING 10773
 }
 
 STRING 10774
-// Abilities: A16R (|cffB0B0B0Fuuton: Senpuuken|r), Hotkey (Hotkey - Normal)
+// Abilities: A0DY (|cffc7ad60Sand Drizzle|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -66994,7 +67000,7 @@ STRING 10932
 }
 
 STRING 10933
-// Abilities: A1EF (|cff8080ffLightning Strike|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DY (|cffc7ad60Sand Drizzle|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67666,7 +67672,7 @@ Q
 }
 
 STRING 11045
-// Abilities: A1EF (|cff8080ffLightning Strike|r), Hotkey (Hotkey - Normal)
+// Abilities: A1EX (Air Bullet), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67949,7 +67955,7 @@ STRING 11091
 }
 
 STRING 11092
-// Abilities: A0DY (|cffc7ad60Sand Drizzle|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BH (|cffff8000Hari Jizo|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67961,7 +67967,7 @@ STRING 11093
 }
 
 STRING 11094
-// Abilities: A0DY (|cffc7ad60Sand Drizzle|r), Hotkey (Hotkey - Normal)
+// Abilities: A02K (|cff0fcaf7Hakkeshō Kaiten|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68009,7 +68015,7 @@ R
 }
 
 STRING 11102
-// Abilities: A1EX (Air Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A02K (|cff0fcaf7Hakkeshō Kaiten|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68040,7 +68046,7 @@ Purchase |cffe9a144South Ring|r [|cffffcc00Z|r]
 }
 
 STRING 11107
-// Abilities: A0BH (|cffff8000Hari Jizo|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A01B (|cffff0000Mangekyou Sharingan!|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68514,7 +68520,7 @@ STRING 11185
 }
 
 STRING 11186
-// Abilities: A02K (|cff0fcaf7Hakkeshō Kaiten|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A01B (|cffff0000Mangekyou Sharingan!|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68628,7 +68634,7 @@ Perfume Spray
 }
 
 STRING 11205
-// Abilities: A02K (|cff0fcaf7Hakkeshō Kaiten|r), Hotkey (Hotkey - Normal)
+// Abilities: A01F (Senpou: Kebari Senbon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68640,7 +68646,7 @@ Shikomi Kugutsu: Shinshin Happa
 }
 
 STRING 11207
-// Abilities: A01B (|cffff0000Mangekyou Sharingan!|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A02I (Kawarimi no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68875,7 +68881,7 @@ R
 }
 
 STRING 11246
-// Abilities: A01B (|cffff0000Mangekyou Sharingan!|r), Hotkey (Hotkey - Normal)
+// Abilities: A05W (|cff5b85ffSuiton: Bakusui Shoha|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68947,7 +68953,7 @@ STRING 11257
 }
 
 STRING 11258
-// Abilities: A01F (Senpou: Kebari Senbon), Researchhotkey (Hotkey - Learn)
+// Abilities: A05W (|cff5b85ffSuiton: Bakusui Shoha|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69984,7 +69990,7 @@ Kenjutsu Flash [|cffffcc00E|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 11432
-// Abilities: A02I (Kawarimi no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A067 (|cff7f2c84M|cff40388ei|cff088490r|cff68bc5ca|cfff6f101g|cffe56524e|cffdb253c|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -70272,7 +70278,7 @@ Kage Bunshin no Jutsu [|cffffcc00W|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 11480
-// Abilities: A05W (|cff5b85ffSuiton: Bakusui Shoha|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A06I (Kuchiyose: Scorpion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -71924,7 +71930,7 @@ STRING 11754
 }
 
 STRING 11755
-// Abilities: A05W (|cff5b85ffSuiton: Bakusui Shoha|r), Hotkey (Hotkey - Normal)
+// Abilities: A0C4 (|cff0000ffYasaka no Magatama|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -71990,7 +71996,7 @@ STRING 11765
 }
 
 STRING 11766
-// Abilities: A067 (|cff7f2c84M|cff40388ei|cff088490r|cff68bc5ca|cfff6f101g|cffe56524e|cffdb253c|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CX (|cff800080Ningendou|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72014,7 +72020,7 @@ STRING 11769
 }
 
 STRING 11770
-// Abilities: A06I (Kuchiyose: Scorpion), Hotkey (Hotkey - Normal)
+// Abilities: A0CX (|cff800080Ningendou|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -72062,7 +72068,7 @@ T
 }
 
 STRING 11778
-// Abilities: A0C4 (|cff0000ffYasaka no Magatama|r), Hotkey (Hotkey - Normal)
+// Abilities: A0D0 (|cffa52a2aDoton: Doroku Gaeshi|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72146,7 +72152,7 @@ STRING 11791
 }
 
 STRING 11792
-// Abilities: A0CX (|cff800080Ningendou|r), Hotkey (Hotkey - Normal)
+// Abilities: A0DL (Goton Dairendan no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -72182,7 +72188,7 @@ D
 }
 
 STRING 11798
-// Abilities: A0CX (|cff800080Ningendou|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DL (Goton Dairendan no Jutsu), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72224,7 +72230,7 @@ Futton: Kairiki Muso [|cffffcc00R|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 11805
-// Abilities: A0D0 (|cffa52a2aDoton: Doroku Gaeshi|r), Hotkey (Hotkey - Normal)
+// Abilities: A14G (|cffffff00The Yellow Flash|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -72236,7 +72242,7 @@ D
 }
 
 STRING 11807
-// Abilities: A0DL (Goton Dairendan no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A14G (|cffffff00The Yellow Flash|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -73346,7 +73352,7 @@ STRING 11991
 }
 
 STRING 11992
-// Abilities: A0DL (Goton Dairendan no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A10U (|cff00ff00Senpou: Mokuton: Shin Susenju|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -73538,7 +73544,7 @@ W
 }
 
 STRING 12024
-// Abilities: A14G (|cffffff00The Yellow Flash|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10U (|cff00ff00Senpou: Mokuton: Shin Susenju|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -75199,7 +75205,7 @@ T
 }
 
 STRING 12302
-// Abilities: A14G (|cffffff00The Yellow Flash|r), Hotkey (Hotkey - Normal)
+// Abilities: A1C0 (Gojou Kibaku Fuda), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -76513,7 +76519,7 @@ D
 }
 
 STRING 12521
-// Abilities: A10U (|cff00ff00Senpou: Mokuton: Shin Susenju|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1C0 (Gojou Kibaku Fuda), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -76933,13 +76939,13 @@ STRING 12590
 }
 
 STRING 12591
-// Abilities: A10U (|cff00ff00Senpou: Mokuton: Shin Susenju|r), Hotkey (Hotkey - Normal)
+// Abilities: A0CI (|cfff38f41Tenbin |cff9F7038no|cff44392C Jūgo), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 12592
-// Abilities: A1C0 (Gojou Kibaku Fuda), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CI (|cfff38f41Tenbin |cff9F7038no|cff44392C Jūgo), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -76951,7 +76957,7 @@ STRING 12593
 }
 
 STRING 12594
-// Abilities: A1C0 (Gojou Kibaku Fuda), Hotkey (Hotkey - Normal)
+// Abilities: A0E9 (|cffB0B0B0Futon: Reppusho|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -77053,7 +77059,7 @@ You gain taijutsu when you lose hit points. Formula: |cff87ceeb(100 - percentage
 }
 
 STRING 12611
-// Abilities: A0CI (|cfff38f41Tenbin |cff9F7038no|cff44392C Jūgo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E9 (|cffB0B0B0Futon: Reppusho|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77077,7 +77083,7 @@ Learn |cffa5fde2Truth-Seeking Balls|r [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 12615
-// Abilities: A0CI (|cfff38f41Tenbin |cff9F7038no|cff44392C Jūgo), Hotkey (Hotkey - Normal)
+// Abilities: A0EC (|cffba0000Kamui Dimension: Teleport Ally|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -77125,7 +77131,7 @@ Ninpou: Chouji Giga "Tigers"
 }
 
 STRING 12623
-// Abilities: A0E9 (|cffB0B0B0Futon: Reppusho|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EC (|cffba0000Kamui Dimension: Teleport Ally|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77155,7 +77161,7 @@ R
 }
 
 STRING 12628
-// Abilities: A0E9 (|cffB0B0B0Futon: Reppusho|r), Hotkey (Hotkey - Normal)
+// Abilities: A0EI (|cffa52a2aDoton: Doroku Gaeshi|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77221,7 +77227,7 @@ Weapon Mastery - [|cffffcc00Level 5|r]
 }
 
 STRING 12639
-// Abilities: A0EC (|cffba0000Kamui Dimension: Teleport Ally|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A04Z (|cff8b4600Kongo Roheki|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77275,7 +77281,7 @@ STRING 12647
 }
 
 STRING 12648
-// Abilities: A0EC (|cffba0000Kamui Dimension: Teleport Ally|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FK (|cffa5fde2Projection Technique|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -77485,13 +77491,13 @@ Anshosui [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 12683
-// Abilities: A0EI (|cffa52a2aDoton: Doroku Gaeshi|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FK (|cffa5fde2Projection Technique|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 12684
-// Abilities: A04Z (|cff8b4600Kongo Roheki|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FY (|cffff0000Fox Rush|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -77515,7 +77521,7 @@ Rasengan [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 12688
-// Abilities: A0FK (|cffa5fde2Projection Technique|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FY (|cffff0000Fox Rush|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77857,7 +77863,7 @@ Kyoumeisen [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 12745
-// Abilities: A0FK (|cffa5fde2Projection Technique|r), Hotkey (Hotkey - Normal)
+// Abilities: A0H3 (Chakra Chains), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -77965,25 +77971,25 @@ STRING 12762
 }
 
 STRING 12763
-// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 12764
-// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 12765
-// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 12766
-// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 5|r]
 }
@@ -78001,7 +78007,7 @@ T
 }
 
 STRING 12769
-// Abilities: A0FY (|cffff0000Fox Rush|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0H3 (Chakra Chains), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -78211,7 +78217,7 @@ T
 }
 
 STRING 12804
-// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 6|r]
 }
@@ -78325,7 +78331,7 @@ Katon: Housenka Tsumabeni [|cffffcc00W|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 12823
-// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 7|r]
 }
@@ -78445,7 +78451,7 @@ Kage Bunshin no Jutsu [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 12843
-// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 8|r]
 }
@@ -78487,7 +78493,7 @@ STRING 12849
 }
 
 STRING 12850
-// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 9|r]
 }
@@ -78523,7 +78529,7 @@ STRING 12855
 }
 
 STRING 12856
-// Abilities: A0UZ (True Form), Tip (Tooltip - Normal)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
@@ -78583,7 +78589,7 @@ Learn Iaidou Chiratsuki Kusa [|cffffcc00T|r]
 }
 
 STRING 12866
-// Abilities: A0FY (|cffff0000Fox Rush|r), Hotkey (Hotkey - Normal)
+// Abilities: A0HD (Chakra Chains), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -78697,7 +78703,7 @@ STRING 12884
 }
 
 STRING 12885
-// Abilities: A0UZ (True Form), Researchtip (Tooltip - Learn)
+// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Researchtip (Tooltip - Learn)
 {
 Learn Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
@@ -79406,13 +79412,13 @@ STRING 13002
 }
 
 STRING 13003
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 13004
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -79430,13 +79436,13 @@ STRING 13006
 }
 
 STRING 13007
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 13008
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 2|r]
 }
@@ -79496,37 +79502,37 @@ Assault Blade [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 13018
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 13019
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 13020
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 13021
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 13022
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 7|r]
 }
 
 STRING 13023
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 8|r]
 }
@@ -79562,7 +79568,7 @@ STRING 13028
 }
 
 STRING 13029
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -79574,13 +79580,13 @@ W
 }
 
 STRING 13031
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 13032
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -79604,19 +79610,19 @@ STRING 13035
 }
 
 STRING 13036
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 13037
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 13038
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -79634,7 +79640,7 @@ STRING 13040
 }
 
 STRING 13041
-// Abilities: A0H3 (Chakra Chains), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IE (|cffffc0cbMagen: Miryoku|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -79646,7 +79652,7 @@ STRING 13042
 }
 
 STRING 13043
-// Abilities: A0H3 (Chakra Chains), Hotkey (Hotkey - Normal)
+// Abilities: A0IE (|cffffc0cbMagen: Miryoku|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -79826,61 +79832,61 @@ Rasengan [|cffffcc00Q|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 13073
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13074
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13075
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13076
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13077
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13078
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13079
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13080
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13081
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13082
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -79976,7 +79982,7 @@ R
 }
 
 STRING 13098
-// Abilities: A0HD (Chakra Chains), Hotkey (Hotkey - Normal)
+// Abilities: A0J0 (|cffff0000Fox Rush|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -79994,7 +80000,7 @@ Rasengan [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 13101
-// Abilities: A0IE (|cffffc0cbMagen: Miryoku|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J0 (|cffff0000Fox Rush|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -80060,7 +80066,7 @@ Increases attack speed by |cff87ceeb5% x skill level|r and each attack throw |cf
 }
 
 STRING 13112
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 9|r]
 }
@@ -80253,7 +80259,7 @@ STRING 13143
 }
 
 STRING 13144
-// Abilities: A0IE (|cffffc0cbMagen: Miryoku|r), Hotkey (Hotkey - Normal)
+// Abilities: A0J3 (|cffebee8bChain Spears|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -80307,7 +80313,7 @@ Fire Blades
 }
 
 STRING 13153
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
@@ -80325,7 +80331,7 @@ STRING 13155
 }
 
 STRING 13156
-// Abilities: A0J0 (|cffff0000Fox Rush|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0J3 (|cffebee8bChain Spears|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -80337,7 +80343,7 @@ Purchase Kusanagi Sword [|cffffcc00E|r]
 }
 
 STRING 13158
-// Abilities: A0D5 (|cff215dbfNiibi Chakra Mode|r), Researchtip (Tooltip - Learn)
+// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Researchtip (Tooltip - Learn)
 {
 Learn Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
@@ -80349,13 +80355,13 @@ STRING 13159
 }
 
 STRING 13160
-// Abilities: A0J0 (|cffff0000Fox Rush|r), Hotkey (Hotkey - Normal)
+// Abilities: A0J2 (|cffebee8bChain Pillar|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 13161
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -80379,13 +80385,13 @@ STRING 13164
 }
 
 STRING 13165
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 13166
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -80571,7 +80577,7 @@ STRING 13196
 }
 
 STRING 13197
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -80673,7 +80679,7 @@ Battle Shuriken used by Ninjutsu Heroes|n|cff32cd32+150 HP x Level|n+50 Damage|n
 }
 
 STRING 13214
-// Abilities: A0J3 (|cffebee8bChain Spears|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JD (Sky-Eagle Art), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -81087,13 +81093,13 @@ Battle Shuriken used by Ninjutsu Heroes|n|cff32cd32+150 HP x Level|n+50 Damage|n
 }
 
 STRING 13283
-// Abilities: A0J3 (|cffebee8bChain Spears|r), Hotkey (Hotkey - Normal)
+// Abilities: A0JD (Sky-Eagle Art), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 13284
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -81381,25 +81387,25 @@ STRING 13331
 }
 
 STRING 13332
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 13333
-// Abilities: A0J2 (|cffebee8bChain Pillar|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A02D (Kuchiyose: Kusanagi), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 13334
-// Abilities: A0JD (Sky-Eagle Art), Researchhotkey (Hotkey - Learn)
+// Abilities: A02D (Kuchiyose: Kusanagi), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 13335
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -81411,7 +81417,7 @@ STRING 13336
 }
 
 STRING 13337
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -81423,7 +81429,7 @@ Genjutsu: Sharingan
 }
 
 STRING 13339
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -81441,7 +81447,7 @@ STRING 13341
 }
 
 STRING 13342
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Untip (Tooltip - Turn Off)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -82305,7 +82311,7 @@ W
 }
 
 STRING 13486
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -82569,61 +82575,61 @@ Turn off |cff800080Nano-bug mode|r [|cffffcc00E|r]
 }
 
 STRING 13530
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13531
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13532
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13533
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13534
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13535
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13536
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13537
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13538
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13539
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -83331,13 +83337,13 @@ Amenominaka [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 13657
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 13658
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -83667,7 +83673,7 @@ STRING 13712
 }
 
 STRING 13713
-// Abilities: A0JD (Sky-Eagle Art), Hotkey (Hotkey - Normal)
+// Abilities: A0KK (|cfffe0000Throw Scythe|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -83787,7 +83793,7 @@ Shosen Jutsu [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 13733
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -84033,7 +84039,7 @@ T
 }
 
 STRING 13774
-// Abilities: A02D (Kuchiyose: Kusanagi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KK (|cfffe0000Throw Scythe|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -84183,7 +84189,7 @@ Learn Release Mask [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 13799
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
+// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -84381,7 +84387,7 @@ Explosive Tag [|cffffcc00R|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 13832
-// Abilities: A02D (Kuchiyose: Kusanagi), Hotkey (Hotkey - Normal)
+// Abilities: A0KM (|cfffe0000Throw Scythe|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -84729,7 +84735,7 @@ STRING 13889
 }
 
 STRING 13890
-// Abilities: A0KK (|cfffe0000Throw Scythe|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KM (|cfffe0000Throw Scythe|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -84779,7 +84785,7 @@ Release Rashomon
 }
 
 STRING 13898
-// Abilities: A0KK (|cfffe0000Throw Scythe|r), Hotkey (Hotkey - Normal)
+// Abilities: A0KZ ( ), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -85019,7 +85025,7 @@ This unit has increased damage.
 }
 
 STRING 13938
-// Abilities: A0KM (|cfffe0000Throw Scythe|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KZ ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -85109,7 +85115,7 @@ D
 }
 
 STRING 13953
-// Abilities: A0KM (|cfffe0000Throw Scythe|r), Hotkey (Hotkey - Normal)
+// Abilities: A0L0 (Claws Combo), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -85277,7 +85283,7 @@ STRING 13980
 }
 
 STRING 13981
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 2|r]
 }
@@ -85475,7 +85481,7 @@ STRING 14013
 }
 
 STRING 14014
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -85511,7 +85517,7 @@ STRING 14019
 }
 
 STRING 14020
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 3|r]
 }
@@ -85877,7 +85883,7 @@ Gengetsu Mirage
 }
 
 STRING 14081
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -85998,7 +86004,7 @@ STRING 14098
 }
 
 STRING 14099
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -86052,7 +86058,7 @@ Yoton: Shakugaryuugan no Jutsu [|cffffcc00W|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 14108
-// Abilities: A0KZ ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L0 (Claws Combo), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -86382,13 +86388,13 @@ Mei actives Futton Mode, making her attacks deal |cff87ceeb(0.15 X Ninjutsu) X A
 }
 
 STRING 14163
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
+// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 14164
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
+// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -86592,7 +86598,7 @@ STRING 14197
 }
 
 STRING 14198
-// Abilities: A0KZ ( ), Hotkey (Hotkey - Normal)
+// Abilities: A0L2 (|cff008000Hachimon|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -86604,7 +86610,7 @@ Single-target skill [|cffffcc00Q|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 14200
-// Abilities: A0L0 (Claws Combo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L2 (|cff008000Hachimon|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -86682,7 +86688,7 @@ Sogu: Fuujin Heki [|cffffcc00R|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 14213
-// Abilities: A0L0 (Claws Combo), Hotkey (Hotkey - Normal)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -86802,7 +86808,7 @@ D
 }
 
 STRING 14233
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -86880,7 +86886,7 @@ STRING 14245
 }
 
 STRING 14246
-// Abilities: A0L2 (|cff008000Hachimon|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LU (|cff000000Satetsu Boru|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -86964,13 +86970,13 @@ STRING 14259
 }
 
 STRING 14260
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 14261
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -87090,7 +87096,7 @@ Toton Jutsu [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 14281
-// Abilities: A0L2 (|cff008000Hachimon|r), Hotkey (Hotkey - Normal)
+// Abilities: A0M1 (Bandage), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -87114,7 +87120,7 @@ STRING 14284
 }
 
 STRING 14285
-// Abilities: A0L2 (|cff008000Hachimon|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0M1 (Bandage), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87138,7 +87144,7 @@ Kori Shinchuu no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 14289
-// Abilities: A0LU (|cff000000Satetsu Boru|r), Hotkey (Hotkey - Normal)
+// Abilities: A0MC (!), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -87421,7 +87427,7 @@ Increases attack speed by |cff87ceeb5% x skill level|r and each attack throw |cf
 }
 
 STRING 14334
-// Abilities: A0M1 (Bandage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MC (!), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87881,44 +87887,32 @@ STRING 14410
 True Form [|cffffcc00D|r]
 }
 
-STRING 14411
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
-{
-Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 2|r]
-}
-
-STRING 14412
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
-{
-Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 3|r]
-}
-
 STRING 14413
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 14414
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 14415
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 14416
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 7|r]
 }
 
 STRING 14417
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 8|r]
 }
@@ -87942,7 +87936,7 @@ STRING 14420
 }
 
 STRING 14421
-// Abilities: A0M1 (Bandage), Hotkey (Hotkey - Normal)
+// Abilities: A0MC (!), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -88244,19 +88238,19 @@ STRING 14470
 }
 
 STRING 14471
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
+// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 14472
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
+// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 14473
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
+// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -88634,7 +88628,7 @@ STRING 14535
 }
 
 STRING 14536
-// Abilities: A0MC (!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -89367,7 +89361,7 @@ STRING 14653
 }
 
 STRING 14654
-// Abilities: A0MC (!), Hotkey (Hotkey - Normal)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -89451,19 +89445,19 @@ Saiken Aura
 }
 
 STRING 14668
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
+// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 14669
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
+// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 14670
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
+// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -89703,7 +89697,7 @@ Recipe: Bashosen
 }
 
 STRING 14710
-// Abilities: A0MC (!), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -90249,7 +90243,7 @@ Learn |cffc7ad60Sand Drizzle|r [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 14801
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NT (|cfff4f5acKokinjo|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -90843,7 +90837,7 @@ MultipleShurikens
 }
 
 STRING 14900
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Hotkey (Hotkey - Normal)
+// Abilities: A0NT (|cfff4f5acKokinjo|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -90969,7 +90963,7 @@ STRING 14920
 }
 
 STRING 14921
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0OE (|cffd07723Benihisago|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -91022,28 +91016,10 @@ STRING 14929
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Ally, Self|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Effect:|r Increases armor by |cff87ceeb200|r for |cff87ceeb20s|r, and reflects |cff87ceeb20%|r of damage taken|r|n|cff32cd32Cooldown:|r |cff87ceeb60s|r|n|cffff0000Classification: None|r
 }
 
-STRING 14930
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
-{
-Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 4|r]
-}
-
-STRING 14931
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
-{
-Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 5|r]
-}
-
 STRING 14932
 // Items: I08F (Combine: Chakra Disruption Device), Hotkey (Hotkey)
 {
 V
-}
-
-STRING 14933
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
-{
-Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 14934
@@ -94138,13 +94114,13 @@ D
 }
 
 STRING 15316
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 15317
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Tip (Tooltip - Normal)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
 {
 Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
@@ -94318,7 +94294,7 @@ True Form
 }
 
 STRING 15346
-// Abilities: A14J (|cfffff699Kyuubi Chakra Mode|r), Researchtip (Tooltip - Learn)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Researchtip (Tooltip - Learn)
 {
 Learn Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
@@ -94336,7 +94312,7 @@ D
 }
 
 STRING 15349
-// Abilities: A0LK (|cff8080ffRaiton Yoroi|r), Untip (Tooltip - Turn Off)
+// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -94864,7 +94840,7 @@ Pull [|cffffcc00E|r]
 }
 
 STRING 15437
-// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
+// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -95518,49 +95494,49 @@ http://wc3campaigns.net/vexorian
 }
 
 STRING 15546
-// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
+// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 15547
-// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
+// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 15548
-// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
+// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 15549
-// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
+// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 15550
-// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
+// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 15551
-// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 15552
-// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 15553
-// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -95584,43 +95560,43 @@ Chakra Chains [|cffffcc00E|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 15557
-// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 15558
-// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 15559
-// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 15560
-// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 15561
-// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 15562
-// Abilities: A1C5 (Switch Mode), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 15563
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -95680,7 +95656,7 @@ Chakra Chains [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 15573
-// Abilities: A0NT (|cfff4f5acKokinjo|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OE (|cffd07723Benihisago|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -95782,7 +95758,7 @@ STRING 15589
 }
 
 STRING 15590
-// Abilities: A0NT (|cfff4f5acKokinjo|r), Hotkey (Hotkey - Normal)
+// Abilities: A0PI (Sai Lions Slow), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -96184,7 +96160,7 @@ Release Masks
 }
 
 STRING 15657
-// Abilities: A0OE (|cffd07723Benihisago|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -96469,12 +96445,6 @@ STRING 15704
 // Abilities: A11N (|cff800080Poison Mist|r), Tip (Tooltip - Normal)
 {
 Shuradou [|cffffcc00W|r] - [|cffffcc00Level 10|r]
-}
-
-STRING 15705
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
-{
-Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 7|r]
 }
 
 STRING 15706
@@ -97059,12 +97029,6 @@ STRING 15802
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 200|n|cff32cd32Damage:|r (500 + Ninjutsu) x Cursed Seal of Heaven skill level|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Stuns the target for 2.5s|n|cff32cd32Chakra Cost:|r 180|n|cff32cd32Cooldown:|r 70s|n|cff32cd32Description:|r|nSasuke hits the target multiple times with his Kusanagi gravely injuring them.
 }
 
-STRING 15803
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
-{
-Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 8|r]
-}
-
 STRING 15804
 // Abilities: A0AR (|cff53a4ffKirigakure no Jutsu|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -97546,7 +97510,7 @@ STRING 15883
 }
 
 STRING 15884
-// Abilities: A0OE (|cffd07723Benihisago|r), Hotkey (Hotkey - Normal)
+// Abilities: A0PV (|cfff4f5acKokinjo|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -97654,7 +97618,7 @@ STRING 15901
 }
 
 STRING 15902
-// Abilities: A0PI (Sai Lions Slow), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PV (|cfff4f5acKokinjo|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -98296,13 +98260,13 @@ STRING 16008
 }
 
 STRING 16009
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S5 (Hebi Chakura no Mesu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 16010
-// Abilities: A0PV (|cfff4f5acKokinjo|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S5 (Hebi Chakura no Mesu), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -99120,7 +99084,7 @@ Kikaichuu Yajiri no Jutsu [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 16146
-// Abilities: A0PV (|cfff4f5acKokinjo|r), Hotkey (Hotkey - Normal)
+// Abilities: A0SA (Sekizo), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -100430,7 +100394,7 @@ STRING 16363
 }
 
 STRING 16364
-// Abilities: A0S5 (Hebi Chakura no Mesu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SN (|cffe95e01Katon: Kurosu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -100862,13 +100826,13 @@ Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 16436
-// Abilities: A0S5 (Hebi Chakura no Mesu), Hotkey (Hotkey - Normal)
+// Abilities: A0SN (|cffe95e01Katon: Kurosu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 16437
-// Abilities: A0SA (Sekizo), Hotkey (Hotkey - Normal)
+// Abilities: A0TA (|cffff8080Shoton: Crystal Wheel|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -100886,7 +100850,7 @@ Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 16440
-// Abilities: A0SN (|cffe95e01Katon: Kurosu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TA (|cffff8080Shoton: Crystal Wheel|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -101138,7 +101102,7 @@ STRING 16481
 }
 
 STRING 16482
-// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
+// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -102796,7 +102760,7 @@ STRING 16757
 }
 
 STRING 16758
-// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
+// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -104294,22 +104258,10 @@ STRING 17007
 Dance of Chains [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
 }
 
-STRING 17008
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
-{
-Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 9|r]
-}
-
 STRING 17009
 // Abilities: A0FM (|cffa5fde2Sage Chakra|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nDosu generates sound waves to attack enemies in a fan-like area.
-}
-
-STRING 17010
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
-{
-Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 17011
@@ -104328,12 +104280,6 @@ STRING 17013
 // Abilities: A0VL (Kikaichuu Yajiri no Jutsu), Researchtip (Tooltip - Learn)
 {
 Learn Kikaichuu Yajiri no Jutsu [|cffffcc00W|r] - [|cffffcc00Level %d|r]
-}
-
-STRING 17014
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Researchtip (Tooltip - Learn)
-{
-Learn Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 17015
@@ -104565,7 +104511,7 @@ Point
 }
 
 STRING 17053
-// Abilities: A0SN (|cffe95e01Katon: Kurosu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0TZ (TayuyaSlow), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -106841,6 +106787,26 @@ STRING 17431
 |cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.2s later damaging all targets in an area.
 }
 
+STRING 17432
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Researchubertip (Tooltip - Learn - Extended)
+{
+Gives Killer Bee enhanced abilities, movementspeed while draining Chakra.
+}
+
+STRING 17433
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
+
+}
+
+STRING 17434
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
+
+}
+
 STRING 17435
 // Abilities: A0XM (Silent Killing), Tip (Tooltip - Normal)
 {
@@ -107418,7 +107384,7 @@ STRING 17530
 }
 
 STRING 17531
-// Abilities: A0TA (|cffff8080Shoton: Crystal Wheel|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VH (|cffFC6022Shakuton: Kajosatsu|r), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -107442,7 +107408,7 @@ STRING 17534
 }
 
 STRING 17535
-// Abilities: A0TA (|cffff8080Shoton: Crystal Wheel|r), Hotkey (Hotkey - Normal)
+// Abilities: A0VH (|cffFC6022Shakuton: Kajosatsu|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -108655,7 +108621,7 @@ Silent Killing [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 17737
-// Abilities: A0TZ (TayuyaSlow), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VK ( ), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -109111,7 +109077,7 @@ STRING 17812
 }
 
 STRING 17813
-// Abilities: A0VH (|cffFC6022Shakuton: Kajosatsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WE (Tayuya Bandage Doki Slow), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -110198,7 +110164,7 @@ STRING 17993
 }
 
 STRING 17994
-// Abilities: A1C5 (Switch Mode), Untip (Tooltip - Turn Off)
+// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -110246,67 +110212,67 @@ STRING 18001
 }
 
 STRING 18002
-// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18003
-// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18004
-// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18005
-// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18006
-// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18007
-// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18008
-// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18009
-// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18010
-// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18011
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 18012
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -110330,7 +110296,7 @@ STRING 18015
 }
 
 STRING 18016
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -110342,7 +110308,7 @@ STRING 18017
 }
 
 STRING 18018
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -110372,13 +110338,13 @@ STRING 18022
 }
 
 STRING 18023
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 18024
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -110396,7 +110362,7 @@ Learn |cff8080ffRaikiri|r [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 18027
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -110474,13 +110440,13 @@ STRING 18039
 }
 
 STRING 18040
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 18041
-// Abilities: A0FR (|cff800080Nano-bug mode|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -110516,7 +110482,7 @@ PinkCloud
 }
 
 STRING 18047
-// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -111256,13 +111222,13 @@ Normal Mode [|cffffcc00D|r]
 }
 
 STRING 18170
-// Abilities: A0L2 (|cff008000Hachimon|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18171
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -111274,7 +111240,7 @@ STRING 18172
 }
 
 STRING 18173
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -111322,7 +111288,7 @@ STRING 18180
 }
 
 STRING 18181
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -111334,7 +111300,7 @@ AoE Skill [|cffffcc00W|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 18183
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
@@ -111346,31 +111312,31 @@ STRING 18184
 }
 
 STRING 18185
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18186
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18187
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18188
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18189
-// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -111928,7 +111894,7 @@ STRING 18281
 }
 
 STRING 18282
-// Abilities: A0VH (|cffFC6022Shakuton: Kajosatsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0X1 (Yōton: Sekkaigyō no Jutsu), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -112158,7 +112124,7 @@ STRING 18319
 }
 
 STRING 18320
-// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -114509,13 +114475,13 @@ STRING 18705
 }
 
 STRING 18706
-// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 18707
-// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -114949,6 +114915,20 @@ STRING 18778
 |cffffcc00Description|r: Phoenix's breath emanates around with enormous strength. The enemies in the flow of breath to be swept away and could not resist.|n|n|cff0080ffDamage|r: 30 + 1.25 x |cff0080ffInt.|r|n|n|cff0080ffMana Cost:|r 150.|n|cff0080ffCooldown:|r 25s.|n|n"|cffffff00Eternal Shield|r" can lasting this effect for some seconds.
 }
 
+STRING 18779
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
+
+}
+
+STRING 18780
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
+
+}
+
 STRING 18781
 // Abilities: A0IZ (|cffe9576aKyuubi Rage|r), Tip (Tooltip - Normal)
 {
@@ -115013,6 +114993,13 @@ STRING 18791
 // Abilities: A0FS (|cffcddaedGinrin Tensei Baku|r), Tip (Tooltip - Normal)
 {
 Breath of Phoenix [|cffffcc00Q|r] - [|cffffcc00Level 12|r]
+}
+
+STRING 18792
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
+
 }
 
 STRING 18793
@@ -115149,6 +115136,13 @@ STRING 18814
 // Abilities: A0FR (|cff800080Nano-bug mode|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r Transform into Nano-bug mode, dealing |cff87ceeb0.5% x skill level|r of target maximum hp and |cff87ceeb0.3% x skill level|r of target current chakra per second.|n|cff32cd32Area of Effect:|r 250|n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTorune being part of the Aburame clan is a host to a special type on insect Rinkaichu which destroy their enemies cells, causing excruciating pain in the process.
+}
+
+STRING 18815
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
+
 }
 
 STRING 18816
@@ -115767,54 +115761,6 @@ Shugohakke Rokujuuyon Sho [|cffffcc00W|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 18918
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
-{
-Back to Normal Mode [|cffffcc00E|r]
-}
-
-STRING 18919
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Untip (Tooltip - Turn Off)
-{
-Back to Normal Mode [|cffffcc00E|r]
-}
-
-STRING 18920
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
-{
-Back to Normal Mode [|cffffcc00E|r]
-}
-
-STRING 18921
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
-{
-Back to Normal Mode [|cffffcc00E|r]
-}
-
-STRING 18922
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
-{
-Back to Normal Mode [|cffffcc00E|r]
-}
-
-STRING 18923
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
-{
-Back to Normal Mode [|cffffcc00E|r]
-}
-
-STRING 18924
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
-{
-Back to Normal Mode [|cffffcc00E|r]
-}
-
-STRING 18925
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
-{
-Back to Normal Mode [|cffffcc00E|r]
-}
-
-STRING 18926
 // Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
 {
 Back to Normal Mode [|cffffcc00E|r]
@@ -115851,7 +115797,7 @@ STRING 18931
 }
 
 STRING 18932
-// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -115893,7 +115839,7 @@ STRING 18938
 }
 
 STRING 18939
-// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -115983,7 +115929,7 @@ STRING 18953
 }
 
 STRING 18954
-// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -115995,13 +115941,13 @@ STRING 18955
 }
 
 STRING 18956
-// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 18957
-// Abilities: A0L2 (|cff008000Hachimon|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -116019,13 +115965,13 @@ Explode [|cffffcc00W|r]
 }
 
 STRING 18960
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 18961
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -116043,7 +115989,7 @@ STRING 18963
 }
 
 STRING 18964
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -116355,13 +116301,13 @@ STRING 19015
 }
 
 STRING 19016
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 19017
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -116385,7 +116331,7 @@ STRING 19020
 }
 
 STRING 19021
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -117314,12 +117260,6 @@ STRING 19175
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|r|n|cff32cd32Damage:|cff87ceeb Genjutsu x skill level|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Pushes the target back.|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 5s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nAnimal Path summons a Giant Ox to push all enemies away
 }
 
-STRING 19176
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
-{
-Back to Normal Mode [|cffffcc00E|r]
-}
-
 STRING 19177
 // Abilities: A0GY (|cff000000Pan Slam|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -117579,7 +117519,7 @@ A massive sword renowned as the seversword|n|cff32cd32+30 All Stats|n+25 Damage|
 }
 
 STRING 19220
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -118636,12 +118576,6 @@ STRING 19394
 Shugohakke Rokujuuyon Sho [|cffffcc00W|r] - [|cffffcc00Level 7|r]
 }
 
-STRING 19395
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Untip (Tooltip - Turn Off)
-{
-Back to Normal Mode [|cffffcc00E|r]
-}
-
 STRING 19396
 // Abilities: A058 (Soul Purification), Name (Name)
 {
@@ -119626,10 +119560,31 @@ STRING 19559
 Earth (Q) + Water (W): Wood Release - Entangling Roots
 }
 
+STRING 19560
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
+
+}
+
 STRING 19561
 // Abilities: A0L1 (Endurance Aura), Ubertip (Tooltip - Normal - Extended)
 {
 Increases attack speed by |cff87ceeb5% x skill level|r and each attack throw |cff87ceebskill level|r additional shurikens. Also increases range of Fuuma Shuriken item by |cff87ceeb50 x skill level|r.
+}
+
+STRING 19562
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
+
+}
+
+STRING 19563
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
+
 }
 
 STRING 19564
@@ -120449,25 +120404,25 @@ STRING 19699
 }
 
 STRING 19700
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 19701
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 19702
-// Abilities: A0MW (|cff9d8d8dCursed Seal|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 19703
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -121727,7 +121682,7 @@ STRING 19912
 }
 
 STRING 19913
-// Abilities: A0VK ( ), Hotkey (Hotkey - Normal)
+// Abilities: A0X1 (Yōton: Sekkaigyō no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -121931,7 +121886,7 @@ STRING 19946
 }
 
 STRING 19947
-// Abilities: A0WE (Tayuya Bandage Doki Slow), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XM (Silent Killing), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -122105,7 +122060,7 @@ STRING 19975
 }
 
 STRING 19976
-// Abilities: A0X1 (Yōton: Sekkaigyō no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A0XM (Silent Killing), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -123283,7 +123238,7 @@ STRING 20153
 }
 
 STRING 20154
-// Abilities: A0X1 (Yōton: Sekkaigyō no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XW (Release Mask), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -123823,7 +123778,7 @@ STRING 20243
 }
 
 STRING 20244
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -124234,7 +124189,7 @@ Iron Fan Mastery [|cffffcc00Level 10|r]
 }
 
 STRING 20312
-// Abilities: A0XM (Silent Killing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XW (Release Mask), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -124306,7 +124261,7 @@ Iron Fan Mastery [|cffffcc00Level 8|r]
 }
 
 STRING 20324
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -124336,7 +124291,7 @@ STRING 20328
 }
 
 STRING 20329
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -124354,13 +124309,13 @@ Learn Iron Fan Mastery [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 20332
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 20333
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -124432,7 +124387,7 @@ STRING 20344
 }
 
 STRING 20345
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -124444,7 +124399,7 @@ STRING 20346
 }
 
 STRING 20347
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -124456,13 +124411,13 @@ STRING 20348
 }
 
 STRING 20349
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
 
 STRING 20350
-// Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Unubertip (Tooltip - Turn Off - Extended)
 {
 Transform back to normal.
 }
@@ -126567,6 +126522,19 @@ STRING 20678
 |cff32cd32Target type:|r Point Target|n|cff32cd32Target Alloweds:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Damage:|r |cff87ceeb85 x skill level|r|n|cff32cd32Damage type:|r Normal|n|cff32cd32Chakra cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceebskill level|r|n|cff32cd32Description:|r|nKisame disappears under the ground then erupts 0.25s later damaging all targets in an area.
 }
 
+STRING 20679
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
+
+}
+
+STRING 20680
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Tip (Tooltip - Normal)
+{
+Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 1|r]
+}
+
 STRING 20681
 // Abilities: A0I9 (Deadly Kick), Ubertip (Tooltip - Normal - Extended)
 {
@@ -126769,12 +126737,6 @@ STRING 20714
 // Abilities: A0VP (|cffFC6022Shakuton: Daijohappa|r), Researchtip (Tooltip - Learn)
 {
 Learn |cffFC6022Shakuton: Daijohappa|r [|cffffcc00R|r] - [|cffffcc00Level %d|r]
-}
-
-STRING 20715
-// Abilities: A0GN (Hachibi Chakra Form), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
 }
 
 STRING 20716
@@ -127143,6 +127105,12 @@ STRING 20776
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 240 width x 875 length|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Effects:|r|nEsnare affected enemies for 2s.|n|cff32cd32Description:|r|nYagura is able to create many corals which immobilize the enemies in line, while dealing damage.
 }
 
+STRING 20777
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Tip (Tooltip - Normal)
+{
+Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 1|r]
+}
+
 STRING 20778
 // Abilities: A0ZR (Space-time Jutsu), Tip (Tooltip - Normal)
 {
@@ -127264,21 +127232,9 @@ STRING 20797
 }
 
 STRING 20798
-// Abilities: A0XM (Silent Killing), Hotkey (Hotkey - Normal)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 20799
-// Abilities: A0GN (Hachibi Chakra Form), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
-}
-
-STRING 20800
-// Abilities: A0GN (Hachibi Chakra Form), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
 }
 
 STRING 20801
@@ -127311,18 +127267,6 @@ STRING 20805
 Mokuton Hijutsu: Jukai Koutan [|cffffcc00W|r] 
 }
 
-STRING 20806
-// Abilities: A0GN (Hachibi Chakra Form), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
-}
-
-STRING 20807
-// Abilities: A0GN (Hachibi Chakra Form), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
-}
-
 STRING 20808
 // Abilities: A0AO (|cff5b85ffSuiton: Senshokukou|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -127351,18 +127295,6 @@ STRING 20812
 // Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
-}
-
-STRING 20813
-// Abilities: A0GN (Hachibi Chakra Form), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
-}
-
-STRING 20814
-// Abilities: A0GN (Hachibi Chakra Form), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
 }
 
 STRING 20815
@@ -127671,12 +127603,6 @@ STRING 20865
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r at first strike and |cff87ceebNinjutsu / 2 x skill level|r at the second|n|cff32cd32Damage Type:|r Normal at first strike, magic at second|n|cff32cd32Area of Effect:|r 220 width x 700 length|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 8s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nHayate throws an explosive kunai at the target, exploding all enemies in area.
 }
 
-STRING 20866
-// Abilities: A0GN (Hachibi Chakra Form), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
-}
-
 STRING 20867
 // Abilities: A0VK ( ), EditorSuffix (Editor Suffix)
 {
@@ -127700,22 +127626,10 @@ STRING 20870
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebGenjutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 150 width x 880 length|n|cff32cd32Effects:|r Stuns for 1s. Also if it his a hero allows you to teleport to the end of the cast.|n|cff32cd32Chakra Cost:|r 10 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nGengetsu mimics a gun with his hand and then compresses a drop of water in his index finger, firing it with tremendous force and speed.
 }
 
-STRING 20871
-// Abilities: A0GN (Hachibi Chakra Form), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
-}
-
 STRING 20872
 // Abilities: A126 (Mazo no Kusari), Name (Name)
 {
 Mazo no Kusari
-}
-
-STRING 20873
-// Abilities: A0GN (Hachibi Chakra Form), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
 }
 
 STRING 20874
@@ -127812,12 +127726,6 @@ STRING 20889
 // Abilities: A0VP (|cffFC6022Shakuton: Daijohappa|r), Tip (Tooltip - Normal)
 {
 |cffFC6022Shakuton: Extremely Steaming Murder|r [|cffffcc00E|r] - [|cffffcc00Level 10|r]
-}
-
-STRING 20890
-// Abilities: A0GN (Hachibi Chakra Form), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effects:|r +100 Movement Speed, +Chaos Attack, drains 5 + (2 * (Hero Level / 10)) max chakra per second. |n|cff32cd32Chakra Cost:|r 0|n|cff32cd32Cooldown:|r 0s|n|cff32cd32Description:|r|nTo maintain a frienly relationship with his bijuu, Killer Bee can handle Hachibi's chakra, enhancing his abilities.
 }
 
 STRING 20891
@@ -129620,6 +129528,30 @@ STRING 21190
 A special made metal infused with earth|n|cff32cd32+50 All Stats|n+40 Taijutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Earth Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line that stuns for 1s and does not push|n|cffff0000Item Type: Weapon|r
 }
 
+STRING 21191
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Tip (Tooltip - Normal)
+{
+Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 21192
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Tip (Tooltip - Normal)
+{
+Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 21193
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Tip (Tooltip - Normal)
+{
+Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 21194
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Tip (Tooltip - Normal)
+{
+Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 1|r]
+}
+
 STRING 21195
 // Abilities: A0U5 (Shadow Combo), EditorSuffix (Editor Suffix)
 {
@@ -130868,6 +130800,12 @@ STRING 21402
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb(Taijutsu / 2) x Skill Level|r|n|cff32cd32Area of Effect:|r 160|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Chakra Cost:|r |cff87ceeb|r10 x Skill Level|n|cff32cd32Cooldown:|r |cff87ceeb10s + Skill Level|n|cff32cd32Description:|r|nKurotsuchi shoots out a blob of hot quicklime that connects with the first hero found creating a tether and lowering their armor - |cff87ceeb they can escape from if they continue to run.|r
 }
 
+STRING 21403
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Tip (Tooltip - Normal)
+{
+Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 1|r]
+}
+
 STRING 21404
 // Abilities: A0VH (|cffFC6022Shakuton: Kajosatsu|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -131186,6 +131124,18 @@ STRING 21456
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 550|n|cff32cd32Damage:|r |cff87ceeb(25 + Taijutsu) / 2 x skill level|r |n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 90 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nEnma jumps and slams the ground, stunning nearby enemy heroes for 1.5s.
 }
 
+STRING 21457
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Tip (Tooltip - Normal)
+{
+Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 21458
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Tip (Tooltip - Normal)
+{
+Hachibi Chakra Form [|cffffcc00E|r] - [|cffffcc00Level 1|r]
+}
+
 STRING 21459
 // Items: I03L (|cff53a4ffMizukage Robe|r), Ubertip (Tooltip - Extended)
 {
@@ -131210,10 +131160,22 @@ STRING 21462
 Raigo: Senjusatsu
 }
 
+STRING 21463
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Untip (Tooltip - Turn Off)
+{
+Back to Normal Mode [E]
+}
+
 STRING 21464
 // Abilities: A0WH (|cff8080ffRaitou Jutsu: Rakurai|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Ensnare target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 35 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
+}
+
+STRING 21465
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Untip (Tooltip - Turn Off)
+{
+Back to Normal Mode [E]
 }
 
 STRING 21466
@@ -131475,13 +131437,13 @@ STRING 21508
 }
 
 STRING 21509
-// Abilities: A0XW (Release Mask), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 21510
-// Abilities: A0XW (Release Mask), Hotkey (Hotkey - Normal)
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -131550,6 +131512,36 @@ STRING 21521
 // Abilities: A0J7 (Shotei), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 300|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal (Magic if Hinata is in Juuho mode)|n|cff32cd32Effects:|r Drains 20% of target's chakra, slows, stuns for 0.5s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skil level|r|n|cff32cd32Cooldown:|r  15s|r|n|cff32cd32Description:|r|nUsing her Juuken combat style, Hinata hits the target countless times on their vital points, dealing damage and disabling the target temporarily.
+}
+
+STRING 21522
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Untip (Tooltip - Turn Off)
+{
+Back to Normal Mode [E]
+}
+
+STRING 21523
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Untip (Tooltip - Turn Off)
+{
+Back to Normal Mode [E]
+}
+
+STRING 21524
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Untip (Tooltip - Turn Off)
+{
+Back to Normal Mode [E]
+}
+
+STRING 21525
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Untip (Tooltip - Turn Off)
+{
+Back to Normal Mode [E]
+}
+
+STRING 21526
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Untip (Tooltip - Turn Off)
+{
+Back to Normal Mode [E]
 }
 
 STRING 21527
@@ -132777,6 +132769,12 @@ STRING 21730
 // Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 900|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill Level|r|n|cff32cd32Area of Effect:|r 160 width with 300 fan at the tip|n|cff32cd32Effects:|r Slows enemies hit for 1.5s|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r |cff87ceeb|r|cff87ceeb10 x skill Level|n|cff32cd32Cooldown:|r 8s + |cff87ceebskill Level|n|cff32cd32Description:|r|nKurotsuchi shoots out a stream of water that fans out like a trumpet. Her ability interacts with her Yoton: Sekkaigyo no Jutsu causing it to deal damage instantly and rooting the target.
+}
+
+STRING 21731
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Untip (Tooltip - Turn Off)
+{
+Back to Normal Mode [E]
 }
 
 STRING 21732
@@ -135521,6 +135519,18 @@ STRING 22188
 // Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Hero|n|cff32cd32Casting Range:|r Infinite|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nJirobo throws a huge boulder, which deals damage to the first enemy it encounters.
+}
+
+STRING 22189
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Untip (Tooltip - Turn Off)
+{
+Back to Normal Mode [E]
+}
+
+STRING 22190
+// Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Untip (Tooltip - Turn Off)
+{
+Back to Normal Mode [E]
 }
 
 STRING 22192
