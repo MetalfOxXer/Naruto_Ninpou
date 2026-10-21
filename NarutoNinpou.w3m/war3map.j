@@ -255,8 +255,8 @@ integer Table___more= 8190
     //Configure it if you use more than 8190 "key" variables in your map (this will never happen though).
     
 hashtable Table___ht= InitHashtable()
-constant integer Table___sizeK=5
-constant integer Table___listK=7
+constant integer Table___sizeK=3
+constant integer Table___listK=5
 //endglobals from Table
 //globals from TimerUtils:
 constant boolean LIBRARY_TimerUtils=true
@@ -316,10 +316,10 @@ constant real XE_MAX_COLLISION_SIZE=  197.0
 //endglobals from xebasic
 //globals from AutoBuyS:
 constant boolean LIBRARY_AutoBuyS=true
-// processed: boolean array AutoBuyS__autobuy[12]
-// processed: boolean array AutoBuyS__firstUse[12] 
-// processed: integer array AutoBuyS__buildId[14]
-// processed:     ItemList array AutoBuyS__lists[12] 
+// processed: boolean array AutoBuyS___autobuy[12]
+// processed: boolean array AutoBuyS___firstUse[12] 
+// processed: integer array AutoBuyS___buildId[14]
+// processed:     ItemList array AutoBuyS___lists[12] 
 //endglobals from AutoBuyS
 //globals from Camera:
 constant boolean LIBRARY_Camera=true
@@ -3396,7 +3396,7 @@ unit Mu__Mu_laser2
 unit Mu__Mu_clone1
 unit Mu__Mu_clone2
 effect Mu__Mu_laser2e
-// processed:         unit array NarutoDama___chakra[1][1]
+// processed:         unit array NarutoDama__chakra[1][1]
 // processed:         unit array NarutoShockwave___wave[1][1]
 constant integer RASHO_RELEASE_ID= 'A0XQ'
 constant real RASHO_DURATION= 2.5
@@ -3516,8 +3516,8 @@ unit array Anbus
 effect array AnbusWeapons
 integer AnbuIndexLength= 0
 hashtable AnbuTable= InitHashtable()
-// processed:         boolean array AssistSystem__sai[8190]
-// processed: 	boolean array AssistSystem__reflectsai[8190]
+// processed:         boolean array AssistSystem___sai[8190]
+// processed: 	boolean array AssistSystem___reflectsai[8190]
 
 trigger l__library_init
 
@@ -8863,18 +8863,18 @@ unit array s__NarutoBijuuRasenshuriken_caster
 real array s__NarutoBijuuRasenshuriken_target_x
 real array s__NarutoBijuuRasenshuriken_target_y
 unit array s__NarutoBijuuRasenshuriken_rasenshuriken
-constant integer si__NarutoDama___Spell=753
-integer s__NarutoDama___Spell_Alloc__instanceCount= 0
-integer array s__NarutoDama___Spell_Alloc__recycle
-constant integer s__NarutoDama___Spell_SPELL_ID= 'A0J9'
-group array s__NarutoDama___Spell_glow
-group array s__NarutoDama___Spell_damaged
-unit array s__NarutoDama___Spell_caster
-unit array s__NarutoDama___Spell_kyuubi
-unit array s__NarutoDama___Spell_ball
-unit array s__NarutoDama___Spell_dummy
-integer array s__NarutoDama___Spell_count
-group array s__NarutoDama___Spell_paused
+constant integer si__NarutoDama__Spell=753
+integer s__NarutoDama__Spell_Alloc__instanceCount= 0
+integer array s__NarutoDama__Spell_Alloc__recycle
+constant integer s__NarutoDama__Spell_SPELL_ID= 'A0J9'
+group array s__NarutoDama__Spell_glow
+group array s__NarutoDama__Spell_damaged
+unit array s__NarutoDama__Spell_caster
+unit array s__NarutoDama__Spell_kyuubi
+unit array s__NarutoDama__Spell_ball
+unit array s__NarutoDama__Spell_dummy
+integer array s__NarutoDama__Spell_count
+group array s__NarutoDama__Spell_paused
 constant integer si__NarutoNewD=754
 integer s__NarutoNewD_Alloc__instanceCount= 0
 integer array s__NarutoNewD_Alloc__recycle
@@ -11611,16 +11611,16 @@ integer s__AHSS_Configurations_heroes
 integer s__AHSS_Configurations_options
 integer s__AHSS_Configurations_paths
 integer s__AHSS_Configurations_graphics
-constant integer si__AHSS__Team=1077
-integer si__AHSS__Team_F=0
-integer si__AHSS__Team_I=0
-integer array si__AHSS__Team_V
-string array s__AHSS__Team_name
-integer array s___AHSS__Team_players
-constant integer s___AHSS__Team_players_size=12
-integer array s__AHSS__Team_players
-integer array s__AHSS__Team_count
-rect array s__AHSS__Team_spawningSpot
+constant integer si__AHSS___Team=1077
+integer si__AHSS___Team_F=0
+integer si__AHSS___Team_I=0
+integer array si__AHSS___Team_V
+string array s__AHSS___Team_name
+integer array s___AHSS___Team_players
+constant integer s___AHSS___Team_players_size=12
+integer array s__AHSS___Team_players
+integer array s__AHSS___Team_count
+rect array s__AHSS___Team_spawningSpot
 constant integer si__AHSS_MinimapIcon=1079
 integer si__AHSS_MinimapIcon_F=0
 integer si__AHSS_MinimapIcon_I=0
@@ -11633,24 +11633,24 @@ integer array s___AHSS_Teams_teams
 constant integer s___AHSS_Teams_teams_size=12
 integer array s__AHSS_Teams_teams
 integer array s__AHSS_Teams_count
-constant integer si__AHSS__Hero=1082
-integer si__AHSS__Hero_F=0
-integer si__AHSS__Hero_I=0
-integer array si__AHSS__Hero_V
-string array s__AHSS__Hero_name
-real array s__AHSS__Hero_strength
-real array s__AHSS__Hero_strengthLvl
-real array s__AHSS__Hero_agility
-real array s__AHSS__Hero_agilityLvl
-real array s__AHSS__Hero_intelligence
-real array s__AHSS__Hero_intelligenceLvl
-string array s__AHSS__Hero_description
-integer array s__AHSS__Hero_heroid
-string array s__AHSS__Hero_modelPath
-boolean array s__AHSS__Hero_modelAlternate
-real array s__AHSS__Hero_modelScale
-integer array s__AHSS__Hero_icon
-string array s__AHSS__Hero_iconPath
+constant integer si__AHSS___Hero=1082
+integer si__AHSS___Hero_F=0
+integer si__AHSS___Hero_I=0
+integer array si__AHSS___Hero_V
+string array s__AHSS___Hero_name
+real array s__AHSS___Hero_strength
+real array s__AHSS___Hero_strengthLvl
+real array s__AHSS___Hero_agility
+real array s__AHSS___Hero_agilityLvl
+real array s__AHSS___Hero_intelligence
+real array s__AHSS___Hero_intelligenceLvl
+string array s__AHSS___Hero_description
+integer array s__AHSS___Hero_heroid
+string array s__AHSS___Hero_modelPath
+boolean array s__AHSS___Hero_modelAlternate
+real array s__AHSS___Hero_modelScale
+integer array s__AHSS___Hero_icon
+string array s__AHSS___Hero_iconPath
 constant integer si__AHSS_Heroes=1083
 integer si__AHSS_Heroes_F=0
 integer si__AHSS_Heroes_I=0
@@ -11684,46 +11684,46 @@ integer array s__AHSS_Paths_selection
 string array s__AHSS_Paths_strength
 string array s__AHSS_Paths_agility
 string array s__AHSS_Paths_intelligence
-constant integer si__AHSS__AHSSIcon=1087
-integer si__AHSS__AHSSIcon_F=0
-integer si__AHSS__AHSSIcon_I=0
-integer array si__AHSS__AHSSIcon_V
-constant integer s__AHSS__AHSSIcon_IMAGE_TYPE= 2
-constant real s__AHSS__AHSSIcon_ICON_SIZE= 64.0
-constant real s__AHSS__AHSSIcon_PROJECTION= 1.62
-constant real s__AHSS__AHSSIcon_FOCUS_X_OFFSET= 0.0
-constant real s__AHSS__AHSSIcon_FOCUS_Y_OFFSET= 40.0
-real s__AHSS__AHSSIcon_centerX= 0.0
-real s__AHSS__AHSSIcon_centerY= 0.0
-real array s__AHSS__AHSSIcon_x
-real array s__AHSS__AHSSIcon_y
-image array s__AHSS__AHSSIcon_img
-constant integer si__AHSS__TeamIcon=1088
-integer si__AHSS__TeamIcon_F=0
-integer si__AHSS__TeamIcon_I=0
-integer array si__AHSS__TeamIcon_V
-integer array s___AHSS__TeamIcon_icons
-constant integer s___AHSS__TeamIcon_icons_size=12
-integer array s__AHSS__TeamIcon_icons
-string array s___AHSS__TeamIcon_iconsId
-constant integer s___AHSS__TeamIcon_iconsId_size=12
-integer array s__AHSS__TeamIcon_iconsId
-constant integer si__AHSS__PlayerSelection=1091
-integer si__AHSS__PlayerSelection_F=0
-integer si__AHSS__PlayerSelection_I=0
-integer array si__AHSS__PlayerSelection_V
-integer array s__AHSS__PlayerSelection_whichPlayer
-unit array s__AHSS__PlayerSelection_selectionBox
-integer array s__AHSS__PlayerSelection_row
-integer array s__AHSS__PlayerSelection_column
-constant integer s__AHSS__PlayerSelection_FRAME_IMAGE_TYPE= 1
-constant real s__AHSS__PlayerSelection_FRAME_THICKNESS= 3.0
-image array s___AHSS__PlayerSelection_bar
-constant integer s___AHSS__PlayerSelection_bar_size=4
-integer array s__AHSS__PlayerSelection_bar
-boolean array s__AHSS__PlayerSelection_frameVisible
-real array s__AHSS__PlayerSelection_frameX
-real array s__AHSS__PlayerSelection_frameY
+constant integer si__AHSS___AHSSIcon=1087
+integer si__AHSS___AHSSIcon_F=0
+integer si__AHSS___AHSSIcon_I=0
+integer array si__AHSS___AHSSIcon_V
+constant integer s__AHSS___AHSSIcon_IMAGE_TYPE= 2
+constant real s__AHSS___AHSSIcon_ICON_SIZE= 64.0
+constant real s__AHSS___AHSSIcon_PROJECTION= 1.62
+constant real s__AHSS___AHSSIcon_FOCUS_X_OFFSET= 0.0
+constant real s__AHSS___AHSSIcon_FOCUS_Y_OFFSET= 40.0
+real s__AHSS___AHSSIcon_centerX= 0.0
+real s__AHSS___AHSSIcon_centerY= 0.0
+real array s__AHSS___AHSSIcon_x
+real array s__AHSS___AHSSIcon_y
+image array s__AHSS___AHSSIcon_img
+constant integer si__AHSS___TeamIcon=1088
+integer si__AHSS___TeamIcon_F=0
+integer si__AHSS___TeamIcon_I=0
+integer array si__AHSS___TeamIcon_V
+integer array s___AHSS___TeamIcon_icons
+constant integer s___AHSS___TeamIcon_icons_size=12
+integer array s__AHSS___TeamIcon_icons
+string array s___AHSS___TeamIcon_iconsId
+constant integer s___AHSS___TeamIcon_iconsId_size=12
+integer array s__AHSS___TeamIcon_iconsId
+constant integer si__AHSS___PlayerSelection=1091
+integer si__AHSS___PlayerSelection_F=0
+integer si__AHSS___PlayerSelection_I=0
+integer array si__AHSS___PlayerSelection_V
+integer array s__AHSS___PlayerSelection_whichPlayer
+unit array s__AHSS___PlayerSelection_selectionBox
+integer array s__AHSS___PlayerSelection_row
+integer array s__AHSS___PlayerSelection_column
+constant integer s__AHSS___PlayerSelection_FRAME_IMAGE_TYPE= 1
+constant real s__AHSS___PlayerSelection_FRAME_THICKNESS= 3.0
+image array s___AHSS___PlayerSelection_bar
+constant integer s___AHSS___PlayerSelection_bar_size=4
+integer array s__AHSS___PlayerSelection_bar
+boolean array s__AHSS___PlayerSelection_frameVisible
+real array s__AHSS___PlayerSelection_frameX
+real array s__AHSS___PlayerSelection_frameY
 constant integer si__AHSS_Graphics=1093
 integer si__AHSS_Graphics_F=0
 integer si__AHSS_Graphics_I=0
@@ -11843,12 +11843,12 @@ constant integer si__AkatsukiArtistsGenjutsuBonus=1122
 integer si__AkatsukiArtistsGenjutsuBonus_F=0
 integer si__AkatsukiArtistsGenjutsuBonus_I=0
 integer array si__AkatsukiArtistsGenjutsuBonus_V
-constant integer si__TeamMatching__System=1123
-integer si__TeamMatching__System_F=0
-integer si__TeamMatching__System_I=0
-integer array si__TeamMatching__System_V
-boolean s__TeamMatching__System_MEDICAL_TEAM= false
-integer s__TeamMatching__System_MEDICAL_TEAM_INDEX= 0
+constant integer si__TeamMatching___System=1123
+integer si__TeamMatching___System_F=0
+integer si__TeamMatching___System_I=0
+integer array si__TeamMatching___System_V
+boolean s__TeamMatching___System_MEDICAL_TEAM= false
+integer s__TeamMatching___System_MEDICAL_TEAM_INDEX= 0
 constant integer si__AnbuShuriken=1124
 integer s__AnbuShuriken_Alloc__instanceCount= 0
 integer array s__AnbuShuriken_Alloc__recycle
@@ -11858,12 +11858,12 @@ unit array s__AnbuShuriken_caster
 unit array s__AnbuShuriken_target
 unit array s__AnbuShuriken_missile
 integer array s__AnbuShuriken_count
-constant integer si__AssistSystem__System=1125
-integer si__AssistSystem__System_F=0
-integer si__AssistSystem__System_I=0
-integer array si__AssistSystem__System_V
-trigger s__AssistSystem__System_assist_trigger
-integer s__AssistSystem__System_count_active
+constant integer si__AssistSystem___System=1125
+integer si__AssistSystem___System_F=0
+integer si__AssistSystem___System_I=0
+integer array si__AssistSystem___System_V
+trigger s__AssistSystem___System_assist_trigger
+integer s__AssistSystem___System_count_active
 constant integer si__BaseRemoveItems=1126
 constant integer si__SpawnBijuus=1127
 integer s__SpawnBijuus_Alloc__instanceCount= 0
@@ -11938,10 +11938,10 @@ integer array s__9assisted
 integer array s__10assisted
 integer array s__11assisted
 integer array s__12assisted
-boolean array s__AutoBuyS__autobuy
-boolean array s__AutoBuyS__firstUse
-integer array s__AutoBuyS__buildId
-integer array s__AutoBuyS__lists
+boolean array s__AutoBuyS___autobuy
+boolean array s__AutoBuyS___firstUse
+integer array s__AutoBuyS___buildId
+integer array s__AutoBuyS___lists
 integer array s__RegisterPlayerUnitEvent___leave_ids
 boolexpr array s__RegisterPlayerUnitEvent___death_events
 boolexpr array s__2RegisterPlayerUnitEvent___death_events
@@ -12051,7 +12051,7 @@ unit array s__MinatoJouninYellowFlash__flashes
 unit array s__MitsukiLightning__lasers
 effect array s__MitsukiLightning__effects
 destructable array s__MitsukiDoton__blocks
-unit array s__NarutoDama___chakra
+unit array s__NarutoDama__chakra
 unit array s__NarutoShockwave___wave
 unit array s__OrochimaruYamataNoJutsu___chakra
 unit array s__PakuraE_Orb
@@ -12108,8 +12108,8 @@ button array s__SendGoldAndCystal___cb
 integer array s__SendGoldAndCystal___g
 integer array s__SendGoldAndCystal___c
 integer array s__SendGoldAndCystal___given
-boolean array s__AssistSystem__sai
-boolean array s__AssistSystem__reflectsai
+boolean array s__AssistSystem___sai
+boolean array s__AssistSystem___reflectsai
 integer array s__s__HagoromoD_R
 integer array s__s__HagoromoD_G
 integer array s__s__HagoromoD_B
@@ -12305,27 +12305,27 @@ boolean array s__s__NewSwap_usingSwap
 button array s__s__NewSwap_inviteButtons
 integer array s__s__NewSwap_receivePlayers
 button array s__s__NewSwap_receiveButtons
-integer array s__s__TeamMatching__System_MEDICAL_TEAM_COUNTER
-integer array s__s__TeamMatching__System_TEAM_7_COUNTER
-integer array s__s__TeamMatching__System_TEAM_9_COUNTER
-integer array s__s__TeamMatching__System_TEAM_10_COUNTER
-integer array s__s__TeamMatching__System_TEAM_HOKAGE_COUNTER
-integer array s__s__TeamMatching__System_TEAM_HIRAISHIN_COUNTER
-integer array s__s__TeamMatching__System_TEAM_SUNA_COUNTER
-integer array s__s__TeamMatching__System_TEAM_TAKA_COUNTER
-integer array s__s__TeamMatching__System_TEAM_SANNIN_COUNTER
-integer array s__s__TeamMatching__System_TEAM_BETRAYERS_COUNTER
-integer array s__s__TeamMatching__System_TEAM_ZOMBIE_COUNTER
-integer array s__s__TeamMatching__System_TEAM_ARTISTS_COUNTER
-integer array s__s__TeamMatching__System_TEAM_AMEGAKURE_COUNTER
-integer array s__s__TeamMatching__System_TEAM_KUMOGAKURE_COUNTER
-integer array s__s__TeamMatching__System_TEAM_GAI_COUNTER
-integer array s__s__TeamMatching__System_TEAM_MISSING_COUNTER
-integer array s__s__TeamMatching__System_TEAM_PUPPETERS_COUNTER
-integer array s__s__TeamMatching__System_TEAM_SWORDMEN_COUNT
-integer array s__s__TeamMatching__System_TEAM_JOUNIN
-boolean array s__s__TeamMatching__System_PLAYER_COUNT
-integer array s__s__TeamMatching__System_TEAM_MIZUKAGES
+integer array s__s__TeamMatching___System_MEDICAL_TEAM_COUNTER
+integer array s__s__TeamMatching___System_TEAM_7_COUNTER
+integer array s__s__TeamMatching___System_TEAM_9_COUNTER
+integer array s__s__TeamMatching___System_TEAM_10_COUNTER
+integer array s__s__TeamMatching___System_TEAM_HOKAGE_COUNTER
+integer array s__s__TeamMatching___System_TEAM_HIRAISHIN_COUNTER
+integer array s__s__TeamMatching___System_TEAM_SUNA_COUNTER
+integer array s__s__TeamMatching___System_TEAM_TAKA_COUNTER
+integer array s__s__TeamMatching___System_TEAM_SANNIN_COUNTER
+integer array s__s__TeamMatching___System_TEAM_BETRAYERS_COUNTER
+integer array s__s__TeamMatching___System_TEAM_ZOMBIE_COUNTER
+integer array s__s__TeamMatching___System_TEAM_ARTISTS_COUNTER
+integer array s__s__TeamMatching___System_TEAM_AMEGAKURE_COUNTER
+integer array s__s__TeamMatching___System_TEAM_KUMOGAKURE_COUNTER
+integer array s__s__TeamMatching___System_TEAM_GAI_COUNTER
+integer array s__s__TeamMatching___System_TEAM_MISSING_COUNTER
+integer array s__s__TeamMatching___System_TEAM_PUPPETERS_COUNTER
+integer array s__s__TeamMatching___System_TEAM_SWORDMEN_COUNT
+integer array s__s__TeamMatching___System_TEAM_JOUNIN
+boolean array s__s__TeamMatching___System_PLAYER_COUNT
+integer array s__s__TeamMatching___System_TEAM_MIZUKAGES
 integer array s__s__SpawnBijuus_stats1
 integer array s__s__SpawnBijuus_stats2
 integer array s__s__SpawnBijuus_stats3
@@ -12457,7 +12457,7 @@ trigger st__AHSS_Paths_setStrIcon
 trigger st__AHSS_Paths_setAgiIcon
 trigger st__AHSS_Paths_setIntIcon
 trigger st__AHSS_Paths_setVersus
-trigger st__AHSS__AHSSIcon_onDestroy
+trigger st__AHSS___AHSSIcon_onDestroy
 trigger st__AHSS_Graphics_create
 trigger st__AHSS_Graphics_loopMethod
 trigger st__AHSS_Graphics_selectHeroRandom
@@ -12472,7 +12472,7 @@ trigger st__AHSS_Graphics_createTexts
 trigger st__AHSS_Graphics_createSelections
 trigger st__AHSS_Graphics_draw
 trigger st__AHSS_Graphics_destroy
-trigger st__TeamMatching__System_medicalHeal
+trigger st__TeamMatching___System_medicalHeal
 trigger array st___prototype3
 integer f__result_integer
 trigger array st___prototype5
@@ -12841,65 +12841,65 @@ function s__Spectator_deallocate takes integer this returns nothing
     set si__Spectator_F=this
 endfunction
 
-//Generated allocator of AssistSystem__System
-function s__AssistSystem__System__allocate takes nothing returns integer
- local integer this=si__AssistSystem__System_F
+//Generated allocator of AssistSystem___System
+function s__AssistSystem___System__allocate takes nothing returns integer
+ local integer this=si__AssistSystem___System_F
     if (this!=0) then
-        set si__AssistSystem__System_F=si__AssistSystem__System_V[this]
+        set si__AssistSystem___System_F=si__AssistSystem___System_V[this]
     else
-        set si__AssistSystem__System_I=si__AssistSystem__System_I+1
-        set this=si__AssistSystem__System_I
+        set si__AssistSystem___System_I=si__AssistSystem___System_I+1
+        set this=si__AssistSystem___System_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__AssistSystem__System_V[this]=-1
+    set si__AssistSystem___System_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of AssistSystem__System
-function s__AssistSystem__System_deallocate takes integer this returns nothing
+//Generated destructor of AssistSystem___System
+function s__AssistSystem___System_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__AssistSystem__System_V[this]!=-1) then
+    elseif (si__AssistSystem___System_V[this]!=-1) then
         return
     endif
-    set si__AssistSystem__System_V[this]=si__AssistSystem__System_F
-    set si__AssistSystem__System_F=this
+    set si__AssistSystem___System_V[this]=si__AssistSystem___System_F
+    set si__AssistSystem___System_F=this
 endfunction
 
-//Generated method caller for TeamMatching__System.medicalHeal
-function sc__TeamMatching__System_medicalHeal takes nothing returns nothing
-    call TriggerEvaluate(st__TeamMatching__System_medicalHeal)
+//Generated method caller for TeamMatching___System.medicalHeal
+function sc__TeamMatching___System_medicalHeal takes nothing returns nothing
+    call TriggerEvaluate(st__TeamMatching___System_medicalHeal)
 endfunction
 
-//Generated allocator of TeamMatching__System
-function s__TeamMatching__System__allocate takes nothing returns integer
- local integer this=si__TeamMatching__System_F
+//Generated allocator of TeamMatching___System
+function s__TeamMatching___System__allocate takes nothing returns integer
+ local integer this=si__TeamMatching___System_F
     if (this!=0) then
-        set si__TeamMatching__System_F=si__TeamMatching__System_V[this]
+        set si__TeamMatching___System_F=si__TeamMatching___System_V[this]
     else
-        set si__TeamMatching__System_I=si__TeamMatching__System_I+1
-        set this=si__TeamMatching__System_I
+        set si__TeamMatching___System_I=si__TeamMatching___System_I+1
+        set this=si__TeamMatching___System_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__TeamMatching__System_V[this]=-1
+    set si__TeamMatching___System_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of TeamMatching__System
-function s__TeamMatching__System_deallocate takes integer this returns nothing
+//Generated destructor of TeamMatching___System
+function s__TeamMatching___System_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__TeamMatching__System_V[this]!=-1) then
+    elseif (si__TeamMatching___System_V[this]!=-1) then
         return
     endif
-    set si__TeamMatching__System_V[this]=si__TeamMatching__System_F
-    set si__TeamMatching__System_F=this
+    set si__TeamMatching___System_V[this]=si__TeamMatching___System_F
+    set si__TeamMatching___System_F=this
 endfunction
 
 //Generated allocator of AkatsukiArtistsGenjutsuBonus
@@ -13100,100 +13100,100 @@ function s__AHSS_Graphics_deallocate takes integer this returns nothing
     set si__AHSS_Graphics_F=this
 endfunction
 
-//Generated allocator of AHSS__PlayerSelection
-function s__AHSS__PlayerSelection__allocate takes nothing returns integer
- local integer this=si__AHSS__PlayerSelection_F
+//Generated allocator of AHSS___PlayerSelection
+function s__AHSS___PlayerSelection__allocate takes nothing returns integer
+ local integer this=si__AHSS___PlayerSelection_F
     if (this!=0) then
-        set si__AHSS__PlayerSelection_F=si__AHSS__PlayerSelection_V[this]
+        set si__AHSS___PlayerSelection_F=si__AHSS___PlayerSelection_V[this]
     else
-        set si__AHSS__PlayerSelection_I=si__AHSS__PlayerSelection_I+1
-        set this=si__AHSS__PlayerSelection_I
+        set si__AHSS___PlayerSelection_I=si__AHSS___PlayerSelection_I+1
+        set this=si__AHSS___PlayerSelection_I
     endif
     if (this>2046) then
         return 0
     endif
-    set s__AHSS__PlayerSelection_bar[this]=(this-1)*4
-    set si__AHSS__PlayerSelection_V[this]=-1
+    set s__AHSS___PlayerSelection_bar[this]=(this-1)*4
+    set si__AHSS___PlayerSelection_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of AHSS__PlayerSelection
-function s__AHSS__PlayerSelection_deallocate takes integer this returns nothing
+//Generated destructor of AHSS___PlayerSelection
+function s__AHSS___PlayerSelection_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__AHSS__PlayerSelection_V[this]!=-1) then
+    elseif (si__AHSS___PlayerSelection_V[this]!=-1) then
         return
     endif
-    set si__AHSS__PlayerSelection_V[this]=si__AHSS__PlayerSelection_F
-    set si__AHSS__PlayerSelection_F=this
+    set si__AHSS___PlayerSelection_V[this]=si__AHSS___PlayerSelection_F
+    set si__AHSS___PlayerSelection_F=this
 endfunction
 
-//Generated allocator of AHSS__TeamIcon
-function s__AHSS__TeamIcon__allocate takes nothing returns integer
- local integer this=si__AHSS__TeamIcon_F
+//Generated allocator of AHSS___TeamIcon
+function s__AHSS___TeamIcon__allocate takes nothing returns integer
+ local integer this=si__AHSS___TeamIcon_F
     if (this!=0) then
-        set si__AHSS__TeamIcon_F=si__AHSS__TeamIcon_V[this]
+        set si__AHSS___TeamIcon_F=si__AHSS___TeamIcon_V[this]
     else
-        set si__AHSS__TeamIcon_I=si__AHSS__TeamIcon_I+1
-        set this=si__AHSS__TeamIcon_I
+        set si__AHSS___TeamIcon_I=si__AHSS___TeamIcon_I+1
+        set this=si__AHSS___TeamIcon_I
     endif
     if (this>681) then
         return 0
     endif
-    set s__AHSS__TeamIcon_icons[this]=(this-1)*12
-    set s__AHSS__TeamIcon_iconsId[this]=(this-1)*12
-    set si__AHSS__TeamIcon_V[this]=-1
+    set s__AHSS___TeamIcon_icons[this]=(this-1)*12
+    set s__AHSS___TeamIcon_iconsId[this]=(this-1)*12
+    set si__AHSS___TeamIcon_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of AHSS__TeamIcon
-function s__AHSS__TeamIcon_deallocate takes integer this returns nothing
+//Generated destructor of AHSS___TeamIcon
+function s__AHSS___TeamIcon_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__AHSS__TeamIcon_V[this]!=-1) then
+    elseif (si__AHSS___TeamIcon_V[this]!=-1) then
         return
     endif
-    set si__AHSS__TeamIcon_V[this]=si__AHSS__TeamIcon_F
-    set si__AHSS__TeamIcon_F=this
+    set si__AHSS___TeamIcon_V[this]=si__AHSS___TeamIcon_F
+    set si__AHSS___TeamIcon_F=this
 endfunction
 
-//Generated method caller for AHSS__AHSSIcon.onDestroy
-function sc__AHSS__AHSSIcon_onDestroy takes integer this returns nothing
-            if s__AHSS__AHSSIcon_img[this] != null then
-                call ShowImage(s__AHSS__AHSSIcon_img[this], false)
-                call DestroyImage(s__AHSS__AHSSIcon_img[this])
-                set s__AHSS__AHSSIcon_img[this]=null
+//Generated method caller for AHSS___AHSSIcon.onDestroy
+function sc__AHSS___AHSSIcon_onDestroy takes integer this returns nothing
+            if s__AHSS___AHSSIcon_img[this] != null then
+                call ShowImage(s__AHSS___AHSSIcon_img[this], false)
+                call DestroyImage(s__AHSS___AHSSIcon_img[this])
+                set s__AHSS___AHSSIcon_img[this]=null
             endif
 endfunction
 
-//Generated allocator of AHSS__AHSSIcon
-function s__AHSS__AHSSIcon__allocate takes nothing returns integer
- local integer this=si__AHSS__AHSSIcon_F
+//Generated allocator of AHSS___AHSSIcon
+function s__AHSS___AHSSIcon__allocate takes nothing returns integer
+ local integer this=si__AHSS___AHSSIcon_F
     if (this!=0) then
-        set si__AHSS__AHSSIcon_F=si__AHSS__AHSSIcon_V[this]
+        set si__AHSS___AHSSIcon_F=si__AHSS___AHSSIcon_V[this]
     else
-        set si__AHSS__AHSSIcon_I=si__AHSS__AHSSIcon_I+1
-        set this=si__AHSS__AHSSIcon_I
+        set si__AHSS___AHSSIcon_I=si__AHSS___AHSSIcon_I+1
+        set this=si__AHSS___AHSSIcon_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__AHSS__AHSSIcon_V[this]=-1
+    set si__AHSS___AHSSIcon_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of AHSS__AHSSIcon
-function sc__AHSS__AHSSIcon_deallocate takes integer this returns nothing
+//Generated destructor of AHSS___AHSSIcon
+function sc__AHSS___AHSSIcon_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__AHSS__AHSSIcon_V[this]!=-1) then
+    elseif (si__AHSS___AHSSIcon_V[this]!=-1) then
         return
     endif
     set f__arg_this=this
-    call TriggerEvaluate(st__AHSS__AHSSIcon_onDestroy)
-    set si__AHSS__AHSSIcon_V[this]=si__AHSS__AHSSIcon_F
-    set si__AHSS__AHSSIcon_F=this
+    call TriggerEvaluate(st__AHSS___AHSSIcon_onDestroy)
+    set si__AHSS___AHSSIcon_V[this]=si__AHSS___AHSSIcon_F
+    set si__AHSS___AHSSIcon_F=this
 endfunction
 
 //Generated method caller for AHSS_Paths.setBackground
@@ -13435,32 +13435,32 @@ function s__AHSS_Heroes_deallocate takes integer this returns nothing
     set si__AHSS_Heroes_F=this
 endfunction
 
-//Generated allocator of AHSS__Hero
-function s__AHSS__Hero__allocate takes nothing returns integer
- local integer this=si__AHSS__Hero_F
+//Generated allocator of AHSS___Hero
+function s__AHSS___Hero__allocate takes nothing returns integer
+ local integer this=si__AHSS___Hero_F
     if (this!=0) then
-        set si__AHSS__Hero_F=si__AHSS__Hero_V[this]
+        set si__AHSS___Hero_F=si__AHSS___Hero_V[this]
     else
-        set si__AHSS__Hero_I=si__AHSS__Hero_I+1
-        set this=si__AHSS__Hero_I
+        set si__AHSS___Hero_I=si__AHSS___Hero_I+1
+        set this=si__AHSS___Hero_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__AHSS__Hero_V[this]=-1
+    set si__AHSS___Hero_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of AHSS__Hero
-function s__AHSS__Hero_deallocate takes integer this returns nothing
+//Generated destructor of AHSS___Hero
+function s__AHSS___Hero_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__AHSS__Hero_V[this]!=-1) then
+    elseif (si__AHSS___Hero_V[this]!=-1) then
         return
     endif
-    set si__AHSS__Hero_V[this]=si__AHSS__Hero_F
-    set si__AHSS__Hero_F=this
+    set si__AHSS___Hero_V[this]=si__AHSS___Hero_F
+    set si__AHSS___Hero_F=this
 endfunction
 
 //Generated method caller for AHSS_Teams.create
@@ -13546,32 +13546,32 @@ function s__AHSS_MinimapIcon_deallocate takes integer this returns nothing
     set si__AHSS_MinimapIcon_F=this
 endfunction
 
-//Generated allocator of AHSS__Team
-function s__AHSS__Team__allocate takes nothing returns integer
- local integer this=si__AHSS__Team_F
+//Generated allocator of AHSS___Team
+function s__AHSS___Team__allocate takes nothing returns integer
+ local integer this=si__AHSS___Team_F
     if (this!=0) then
-        set si__AHSS__Team_F=si__AHSS__Team_V[this]
+        set si__AHSS___Team_F=si__AHSS___Team_V[this]
     else
-        set si__AHSS__Team_I=si__AHSS__Team_I+1
-        set this=si__AHSS__Team_I
+        set si__AHSS___Team_I=si__AHSS___Team_I+1
+        set this=si__AHSS___Team_I
     endif
     if (this>681) then
         return 0
     endif
-    set s__AHSS__Team_players[this]=(this-1)*12
-    set si__AHSS__Team_V[this]=-1
+    set s__AHSS___Team_players[this]=(this-1)*12
+    set si__AHSS___Team_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of AHSS__Team
-function s__AHSS__Team_deallocate takes integer this returns nothing
+//Generated destructor of AHSS___Team
+function s__AHSS___Team_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__AHSS__Team_V[this]!=-1) then
+    elseif (si__AHSS___Team_V[this]!=-1) then
         return
     endif
-    set si__AHSS__Team_V[this]=si__AHSS__Team_F
-    set si__AHSS__Team_F=this
+    set si__AHSS___Team_V[this]=si__AHSS___Team_F
+    set si__AHSS___Team_F=this
 endfunction
 
 //Generated allocator of AHSS_Configurations
@@ -16892,7 +16892,7 @@ endfunction
 //library ItemUtils ends
 //library Minimap:
 
-    function Minimap__onInit takes nothing returns nothing
+    function Minimap___onInit takes nothing returns nothing
         // Initialize your Icon Path array here (Example: SaveStr(minimapIconPaths, 'hfoo', 'hfoo', "icon.mdx")) 
         set udg_MinimapIconPaths=InitHashtable()
 		call SaveStr(udg_MinimapIconPaths, 'N013', 'N013', "MiniMap_Kaguya.mdx")
@@ -19719,34 +19719,34 @@ endfunction
     endfunction 
 
 
-    function AutoBuyS__buyItems takes unit u returns nothing
+    function AutoBuyS___buyItems takes unit u returns nothing
         local integer id= GetPlayerId(GetOwningPlayer(u))
         loop
-            exitwhen not s__ItemList_doAction(s__AutoBuyS__lists[id])
+            exitwhen not s__ItemList_doAction(s__AutoBuyS___lists[id])
         endloop
     endfunction
     
-    function AutoBuyS__enterKonoha takes nothing returns nothing
-        if IsUnitAlly(GetEnteringUnit(), Player(3)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS__autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
-		call AutoBuyS__buyItems(GetEnteringUnit())
+    function AutoBuyS___enterKonoha takes nothing returns nothing
+        if IsUnitAlly(GetEnteringUnit(), Player(3)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS___autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
+		call AutoBuyS___buyItems(GetEnteringUnit())
         endif
     endfunction
     
-    function AutoBuyS__enterEvil takes nothing returns nothing
-        if IsUnitAlly(GetTriggerUnit(), Player(7)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS__autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
-            call AutoBuyS__buyItems(GetEnteringUnit())
+    function AutoBuyS___enterEvil takes nothing returns nothing
+        if IsUnitAlly(GetTriggerUnit(), Player(7)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS___autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
+            call AutoBuyS___buyItems(GetEnteringUnit())
         endif
     endfunction
     
-    function AutoBuyS__enterAkt takes nothing returns nothing
-        if IsUnitAlly(GetEnteringUnit(), Player(11)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS__autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
-            call AutoBuyS__buyItems(GetEnteringUnit())
+    function AutoBuyS___enterAkt takes nothing returns nothing
+        if IsUnitAlly(GetEnteringUnit(), Player(11)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS___autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
+            call AutoBuyS___buyItems(GetEnteringUnit())
         endif
     endfunction
      
     function autoBuyCmdEnable takes boolean enable returns nothing
  local integer id= GetPlayerId(GetTriggerPlayer())
-	set s__AutoBuyS__autobuy[id]= enable
+	set s__AutoBuyS___autobuy[id]= enable
     endfunction 
 
     function autobuyCmdBuild takes integer build returns nothing
@@ -19757,154 +19757,154 @@ endfunction
   local boolean gen
   local boolean nin
   local integer id= GetPlayerId(GetTriggerPlayer())
-		set s__AutoBuyS__autobuy[id]= true
-		set s__AutoBuyS__buildId[id]= build
-                if s__AutoBuyS__firstUse[id] then
+		set s__AutoBuyS___autobuy[id]= true
+		set s__AutoBuyS___buildId[id]= build
+                if s__AutoBuyS___firstUse[id] then
                     set str=GetHeroStr(udg_units33[id + 1], true)
                     set agi=GetHeroAgi(udg_units33[id + 1], true)
                     set int=GetHeroInt(udg_units33[id + 1], true)
                     set tai=str >= agi and str >= int
                     set nin=agi >= str and agi >= int
                     set gen=int >= str and int >= agi
-                    set s__AutoBuyS__lists[id]= s__ItemList_create(id)
-                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CLOGS ) , ( 800) , 0) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I00B' ) , ( 900) , 1) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),(NINJA_BOOTS ) , ( 900) , 1) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I03V' ) , ( 500) , 1) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OIL ) , ( 2250) , 0) // INLINED!!
-                    if s__AutoBuyS__buildId[id] == 2 then
+                    set s__AutoBuyS___lists[id]= s__ItemList_create(id)
+                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CLOGS ) , ( 800) , 0) // INLINED!!
+                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I00B' ) , ( 900) , 1) // INLINED!!
+                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NINJA_BOOTS ) , ( 900) , 1) // INLINED!!
+                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03V' ) , ( 500) , 1) // INLINED!!
+                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 0) // INLINED!!
+                    if s__AutoBuyS___buildId[id] == 2 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing offensive build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_MASK ) , ( 2500) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_MASK ) , ( 2500) , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I01Z' ) , ( 7000 ) , ( KUNAI_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I045' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I01Z' ) , ( 7000 ) , ( KUNAI_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I045' ) , ( 3000) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I027' ) , ( 7000 ) , ( SHURIKEN_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I04M' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I027' ) , ( 7000 ) , ( SHURIKEN_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I04M' ) , ( 3000) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I02A' ) , ( 7000 ) , ( SENBONS_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I04C' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I02A' ) , ( 7000 ) , ( SENBONS_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I04C' ) , ( 3000) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(GENIN_CLOTH ) , ( 3300) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3300) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),(HOKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(HOKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),(RAIKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(RAIKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),(MIZUKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(MIZUKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
                         endif
                         if tai then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I07A' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07A' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I07E' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07E' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I07B' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07B' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I01X' ) , ( 3000) , 0) // INLINED!!
-                    elseif s__AutoBuyS__buildId[id] == 3 then
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I01X' ) , ( 3000) , 0) // INLINED!!
+                    elseif s__AutoBuyS___buildId[id] == 3 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing anti-stun build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I01Z' ) , ( 7000 ) , ( KUNAI_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I01Z' ) , ( 7000 ) , ( KUNAI_1) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I027' ) , ( 7000 ) , ( SHURIKEN_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I027' ) , ( 7000 ) , ( SHURIKEN_1) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I02A' ) , ( 7000 ) , ( SENBONS_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I02A' ) , ( 7000 ) , ( SENBONS_1) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I05K' ) , ( 6000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OTOKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I006' ) , ( 5300 ) , ( 'I05K') , 1) // INLINED!!
-                    elseif s__AutoBuyS__buildId[id] == 4 then
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05K' ) , ( 6000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OTOKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I006' ) , ( 5300 ) , ( 'I05K') , 1) // INLINED!!
+                    elseif s__AutoBuyS___buildId[id] == 4 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing anti-debuff build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_MASK ) , ( 800 + 2500 + 2000) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I03T' ) , ( 4000) , 0) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I03T' ) , ( 6500 ) , ( 'I00V') , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_MASK ) , ( 800 + 2500 + 2000) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03T' ) , ( 4000) , 0) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I03T' ) , ( 6500 ) , ( 'I00V') , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I01Z' ) , ( 8000 ) , ( KUNAI_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I01Z' ) , ( 8000 ) , ( KUNAI_1) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I027' ) , ( 8000 ) , ( SHURIKEN_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I027' ) , ( 8000 ) , ( SHURIKEN_1) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I02A' ) , ( 8000 ) , ( SENBONS_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I02A' ) , ( 8000 ) , ( SENBONS_1) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I086' ) , ( 3000) , 0) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I006' ) , ( 9000 ) , ( ANBU_MASK) , 1) // INLINED!!
-                    elseif s__AutoBuyS__buildId[id] == 5 then
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I086' ) , ( 3000) , 0) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I006' ) , ( 9000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                    elseif s__AutoBuyS___buildId[id] == 5 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing auto-attack build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I007' ) , ( 6000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(AKATSUKI_RING ) , ( 3500) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JADE_OF_SUSANOO ) , ( 6500) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I05U' ) , ( 5000 ) , ( JADE_OF_SUSANOO) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I02T' ) , ( 10000 ) , ( 'I007') , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OTOKAGE_ROBE ) , ( 8500) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I007' ) , ( 6000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(AKATSUKI_RING ) , ( 3500) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JADE_OF_SUSANOO ) , ( 6500) , 1) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I05U' ) , ( 5000 ) , ( JADE_OF_SUSANOO) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I02T' ) , ( 10000 ) , ( 'I007') , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OTOKAGE_ROBE ) , ( 8500) , 1) // INLINED!!
                     else
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing defensive build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_MASK ) , ( 800 + 2500 + 2000) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_MASK ) , ( 800 + 2500 + 2000) , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I01Z' ) , ( 8000 ) , ( KUNAI_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I045' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I01Z' ) , ( 8000 ) , ( KUNAI_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I045' ) , ( 3000) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I028' ) , ( 8000 ) , ( SHURIKEN_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I04L' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I028' ) , ( 8000 ) , ( SHURIKEN_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I04L' ) , ( 3000) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I02D' ) , ( 8000 ) , ( SENBONS_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I04F' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I02D' ) , ( 8000 ) , ( SENBONS_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I04F' ) , ( 3000) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I03X' ) , ( 2250) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANBI_SKIN ) , ( 5000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I00T' ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I054' ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I055' ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I05Q' ) , ( 5000) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I07A' ) , ( 11000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03X' ) , ( 2250) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANBI_SKIN ) , ( 5000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I00T' ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I054' ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I055' ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05Q' ) , ( 5000) , 1) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07A' ) , ( 11000 ) , ( ANBU_MASK) , 1) // INLINED!!
                     endif
-                    call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I051' ) , ( 1500 ) , ( 'I03V') , 1) // INLINED!!
-                    call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I052' ) , ( 1500 ) , ( 'I051') , 1) // INLINED!!
+                    call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I051' ) , ( 1500 ) , ( 'I03V') , 1) // INLINED!!
+                    call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I052' ) , ( 1500 ) , ( 'I051') , 1) // INLINED!!
                 endif
-                set s__AutoBuyS__firstUse[id]= false
+                set s__AutoBuyS___firstUse[id]= false
     endfunction
 
-    function AutoBuyS__autobuyCmd takes nothing returns nothing
+    function AutoBuyS___autobuyCmd takes nothing returns nothing
         local integer id= GetPlayerId(GetTriggerPlayer())
         if udg_units33[id + 1] == null then
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You must have a hero to enable this command.|r")
         else
-            if s__AutoBuyS__autobuy[id] then
+            if s__AutoBuyS___autobuy[id] then
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebAutobuy disabled.|r")
-                set s__AutoBuyS__autobuy[id]= false
+                set s__AutoBuyS___autobuy[id]= false
             else
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebAutobuy enabled. Type -autobuy again to disable it. |cffff0000DO NOT BUY ANYTHING MANUALLY!|r")
                 //set buildId[id] = S2I(SubStringBJ(GetEventPlayerChatString(), 10, 11))
@@ -19913,7 +19913,7 @@ endfunction
         endif
     endfunction
     
-    function AutoBuyS__init takes nothing returns nothing
+    function AutoBuyS___init takes nothing returns nothing
         local trigger t= CreateTrigger()
         local trigger t1= CreateTrigger()
         local trigger t2= CreateTrigger()
@@ -19921,19 +19921,19 @@ endfunction
         local integer i= 0
         loop
             exitwhen i > 11
-            set s__AutoBuyS__autobuy[i]= false
-            set s__AutoBuyS__firstUse[i]= true
+            set s__AutoBuyS___autobuy[i]= false
+            set s__AutoBuyS___firstUse[i]= true
             call TriggerRegisterPlayerChatEvent(t, Player(i), "-autobuy", false)
             set i=i + 1
         endloop
-        call TriggerAddAction(t, function AutoBuyS__autobuyCmd)
+        call TriggerAddAction(t, function AutoBuyS___autobuyCmd)
 
         call TriggerRegisterEnterRectSimple(t1, gg_rct_Base_Konohagakure)
-        call TriggerAddAction(t1, function AutoBuyS__enterKonoha)
+        call TriggerAddAction(t1, function AutoBuyS___enterKonoha)
         call TriggerRegisterEnterRectSimple(t2, gg_rct_Base_Otogakure)
-        call TriggerAddAction(t2, function AutoBuyS__enterEvil)
+        call TriggerAddAction(t2, function AutoBuyS___enterEvil)
         call TriggerRegisterEnterRectSimple(t3, gg_rct_Base_Akatsuki)
-        call TriggerAddAction(t3, function AutoBuyS__enterAkt)
+        call TriggerAddAction(t3, function AutoBuyS___enterAkt)
 
     endfunction
    
@@ -97888,58 +97888,58 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__NarutoDama___Spell_allocate takes nothing returns integer
+        function s__NarutoDama__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__NarutoDama___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__NarutoDama___Spell_Alloc__instanceCount=s__NarutoDama___Spell_Alloc__instanceCount + 1
-                set this=s__NarutoDama___Spell_Alloc__instanceCount
+            if ( s__NarutoDama__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__NarutoDama__Spell_Alloc__instanceCount=s__NarutoDama__Spell_Alloc__instanceCount + 1
+                set this=s__NarutoDama__Spell_Alloc__instanceCount
             else
-                set this=s__NarutoDama___Spell_Alloc__recycle[(0)]
-                set s__NarutoDama___Spell_Alloc__recycle[(0)]=s__NarutoDama___Spell_Alloc__recycle[s__NarutoDama___Spell_Alloc__recycle[(0)]]
+                set this=s__NarutoDama__Spell_Alloc__recycle[(0)]
+                set s__NarutoDama__Spell_Alloc__recycle[(0)]=s__NarutoDama__Spell_Alloc__recycle[s__NarutoDama__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__NarutoDama___Spell_deallocate takes integer this returns nothing
-            set s__NarutoDama___Spell_Alloc__recycle[this]=s__NarutoDama___Spell_Alloc__recycle[(0)]
-            set s__NarutoDama___Spell_Alloc__recycle[(0)]=this
+        function s__NarutoDama__Spell_deallocate takes integer this returns nothing
+            set s__NarutoDama__Spell_Alloc__recycle[this]=s__NarutoDama__Spell_Alloc__recycle[(0)]
+            set s__NarutoDama__Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__NarutoDama___Spell_destroy takes integer this returns nothing
+        function s__NarutoDama__Spell_destroy takes integer this returns nothing
             local real caster_x
             local real caster_y
             local integer i= 0
-            set caster_x=GetUnitX(s__NarutoDama___Spell_caster[this])
-            set caster_y=GetUnitY(s__NarutoDama___Spell_caster[this])
-            call SetUnitVertexColor((s__NarutoDama___Spell_caster[this] ), ( 255 ), ( 255 ), ( 255 ), ( 255)) // INLINED!!
+            set caster_x=GetUnitX(s__NarutoDama__Spell_caster[this])
+            set caster_y=GetUnitY(s__NarutoDama__Spell_caster[this])
+            call SetUnitVertexColor((s__NarutoDama__Spell_caster[this] ), ( 255 ), ( 255 ), ( 255 ), ( 255)) // INLINED!!
             loop
                 set i=i + 1
                 exitwhen i > 15
-                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__NarutoDama___Spell_caster[this]) ), ( 'e01B' ), (( caster_x )*1.0), (( caster_y )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
+                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__NarutoDama__Spell_caster[this]) ), ( 'e01B' ), (( caster_x )*1.0), (( caster_y )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
                 call SetUnitX(bj_lastCreatedUnit, caster_x)
                 call SetUnitY(bj_lastCreatedUnit, caster_y)
                 call SetUnitScale(bj_lastCreatedUnit, 10.0, 10.0, 10.0)
                 call SetUnitTimeScale(bj_lastCreatedUnit, GetRandomReal(1.0, 3.0))
                 call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 2.0)
             endloop
-            call DestroyGroup(s__NarutoDama___Spell_glow[this])
-            call DestroyGroup(s__NarutoDama___Spell_damaged[this])
-            call KillUnit(s__NarutoDama___Spell_dummy[this])
-            set s__NarutoDama___Spell_glow[this]=null
-            set s__NarutoDama___Spell_damaged[this]=null
-            set s__NarutoDama___Spell_caster[this]=null
-            set s__NarutoDama___Spell_kyuubi[this]=null
-            set s__NarutoDama___Spell_ball[this]=null
-            set s__NarutoDama___Spell_dummy[this]=null
-            call s__NarutoDama___Spell_deallocate(this)
+            call DestroyGroup(s__NarutoDama__Spell_glow[this])
+            call DestroyGroup(s__NarutoDama__Spell_damaged[this])
+            call KillUnit(s__NarutoDama__Spell_dummy[this])
+            set s__NarutoDama__Spell_glow[this]=null
+            set s__NarutoDama__Spell_damaged[this]=null
+            set s__NarutoDama__Spell_caster[this]=null
+            set s__NarutoDama__Spell_kyuubi[this]=null
+            set s__NarutoDama__Spell_ball[this]=null
+            set s__NarutoDama__Spell_dummy[this]=null
+            call s__NarutoDama__Spell_deallocate(this)
         endfunction
         
-        function s__NarutoDama___Spell_shake takes nothing returns nothing
+        function s__NarutoDama__Spell_shake takes nothing returns nothing
             local integer i= 0
             loop
                 exitwhen i > 11
@@ -97949,7 +97949,7 @@ endfunction
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__NarutoDama___Spell_periodic takes nothing returns nothing
+        function s__NarutoDama__Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real ball_x
             local real ball_y
@@ -97967,115 +97967,115 @@ endfunction
             local real offset
             local real size
             local integer i= 0
-            set s__NarutoDama___Spell_count[this]=s__NarutoDama___Spell_count[this] + 1
-            if s__NarutoDama___Spell_count[this] <= 30 then
-                set ball_x=GetUnitX(s__NarutoDama___Spell_ball[this])
-                set ball_y=GetUnitY(s__NarutoDama___Spell_ball[this])
+            set s__NarutoDama__Spell_count[this]=s__NarutoDama__Spell_count[this] + 1
+            if s__NarutoDama__Spell_count[this] <= 30 then
+                set ball_x=GetUnitX(s__NarutoDama__Spell_ball[this])
+                set ball_y=GetUnitY(s__NarutoDama__Spell_ball[this])
                 loop
                     set i=i + 1
                     exitwhen i > 20
-                    set unit_x=GetUnitX(s__NarutoDama___chakra[(this)*(1)+i])
-                    set unit_y=GetUnitY(s__NarutoDama___chakra[(this)*(1)+i])
+                    set unit_x=GetUnitX(s__NarutoDama__chakra[(this)*(1)+i])
+                    set unit_y=GetUnitY(s__NarutoDama__chakra[(this)*(1)+i])
                     set angle=Atan2(( ball_y - unit_y ), ( ball_x - unit_x ))
                     set new_x=unit_x + Cos(angle) * 10
                     set new_y=unit_y + Sin(angle) * 10
                     set parabola_x=new_x + Cos(angle + bj_PI / 2) * 10
                     set parabola_y=new_y + Sin(angle + bj_PI / 2) * 10
-                    call SetUnitX(s__NarutoDama___chakra[(this)*(1)+i], parabola_x)
-                    call SetUnitY(s__NarutoDama___chakra[(this)*(1)+i], parabola_y)
-                    call SetUnitFlyHeight(s__NarutoDama___chakra[(this)*(1)+i], Parabola(0 , 350 , 160 , 300 , 10 * s__NarutoDama___Spell_count[this]), 0)
+                    call SetUnitX(s__NarutoDama__chakra[(this)*(1)+i], parabola_x)
+                    call SetUnitY(s__NarutoDama__chakra[(this)*(1)+i], parabola_y)
+                    call SetUnitFlyHeight(s__NarutoDama__chakra[(this)*(1)+i], Parabola(0 , 350 , 160 , 300 , 10 * s__NarutoDama__Spell_count[this]), 0)
                 endloop
-            elseif s__NarutoDama___Spell_count[this] == 31 then
+            elseif s__NarutoDama__Spell_count[this] == 31 then
                 loop
                     set i=i + 1
                     exitwhen i > 20
-                    call KillUnit(s__NarutoDama___chakra[(this)*(1)+i])
-                    set s__NarutoDama___chakra[(this)*(1)+i]= null
+                    call KillUnit(s__NarutoDama__chakra[(this)*(1)+i])
+                    set s__NarutoDama__chakra[(this)*(1)+i]= null
                 endloop
                 //if IsUnitVisible(this.caster, GetLocalPlayer()) then 
                     //call PlaySoundOnUnitBJ(gg_snd_Naruto_Rikudou_T, 100.0, this.caster)
                 //endif 
             endif
-            if s__NarutoDama___Spell_count[this] <= 50 then
-                set size=0.006 * s__NarutoDama___Spell_count[this]
-                call SetUnitScale(s__NarutoDama___Spell_ball[this], size, size, size)
-                if ModuloInteger(s__NarutoDama___Spell_count[this], 3) == 0 then
-                    set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__NarutoDama___Spell_caster[this]) ), ( 'e015' ), (( GetUnitX(s__NarutoDama___Spell_ball[this]) )*1.0), (( GetUnitY(s__NarutoDama___Spell_ball[this]) )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
-                    call SetUnitX(bj_lastCreatedUnit, GetUnitX(s__NarutoDama___Spell_ball[this]))
-                    call SetUnitY(bj_lastCreatedUnit, GetUnitY(s__NarutoDama___Spell_ball[this]))
+            if s__NarutoDama__Spell_count[this] <= 50 then
+                set size=0.006 * s__NarutoDama__Spell_count[this]
+                call SetUnitScale(s__NarutoDama__Spell_ball[this], size, size, size)
+                if ModuloInteger(s__NarutoDama__Spell_count[this], 3) == 0 then
+                    set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__NarutoDama__Spell_caster[this]) ), ( 'e015' ), (( GetUnitX(s__NarutoDama__Spell_ball[this]) )*1.0), (( GetUnitY(s__NarutoDama__Spell_ball[this]) )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
+                    call SetUnitX(bj_lastCreatedUnit, GetUnitX(s__NarutoDama__Spell_ball[this]))
+                    call SetUnitY(bj_lastCreatedUnit, GetUnitY(s__NarutoDama__Spell_ball[this]))
                     call SetUnitTimeScale(bj_lastCreatedUnit, 1.5)
                     call SetUnitVertexColor(bj_lastCreatedUnit, 100, 100, 200, 150)
                     call SetUnitScale(bj_lastCreatedUnit, 2.5, 2.5, 2.5)
                     call KillUnit(bj_lastCreatedUnit)
                 endif
             endif
-            if s__NarutoDama___Spell_count[this] >= 35 and s__NarutoDama___Spell_count[this] < 65 then
-                call SetUnitScale(s__NarutoDama___Spell_ball[this], 0.001, 0.001, 0.001)
+            if s__NarutoDama__Spell_count[this] >= 35 and s__NarutoDama__Spell_count[this] < 65 then
+                call SetUnitScale(s__NarutoDama__Spell_ball[this], 0.001, 0.001, 0.001)
             endif
-            if s__NarutoDama___Spell_count[this] == 65 then
+            if s__NarutoDama__Spell_count[this] == 65 then
                 loop
-                    set bj_lastCreatedUnit=FirstOfGroup(s__NarutoDama___Spell_paused[this])
+                    set bj_lastCreatedUnit=FirstOfGroup(s__NarutoDama__Spell_paused[this])
                     exitwhen bj_lastCreatedUnit == null
                     
-                    call GroupRemoveUnit(s__NarutoDama___Spell_paused[this], bj_lastCreatedUnit)
+                    call GroupRemoveUnit(s__NarutoDama__Spell_paused[this], bj_lastCreatedUnit)
                 endloop
-                call DestroyGroup(s__NarutoDama___Spell_paused[this])
-                set s__NarutoDama___Spell_paused[this]=null
+                call DestroyGroup(s__NarutoDama__Spell_paused[this])
+                set s__NarutoDama__Spell_paused[this]=null
                 
-                call SetUnitScale(s__NarutoDama___Spell_ball[this], 0.3, 0.3, 0.3)
-                call SetUnitFlyHeight(s__NarutoDama___Spell_ball[this], 100, 0)
-                set kyuubi_x=GetUnitX(s__NarutoDama___Spell_kyuubi[this])
-                set kyuubi_y=GetUnitY(s__NarutoDama___Spell_kyuubi[this])
-                set new_x=kyuubi_x + Cos(Deg2Rad(GetUnitFacing(s__NarutoDama___Spell_kyuubi[this]))) * 400
-                set new_y=kyuubi_y + Sin(Deg2Rad(GetUnitFacing(s__NarutoDama___Spell_kyuubi[this]))) * 400
+                call SetUnitScale(s__NarutoDama__Spell_ball[this], 0.3, 0.3, 0.3)
+                call SetUnitFlyHeight(s__NarutoDama__Spell_ball[this], 100, 0)
+                set kyuubi_x=GetUnitX(s__NarutoDama__Spell_kyuubi[this])
+                set kyuubi_y=GetUnitY(s__NarutoDama__Spell_kyuubi[this])
+                set new_x=kyuubi_x + Cos(Deg2Rad(GetUnitFacing(s__NarutoDama__Spell_kyuubi[this]))) * 400
+                set new_y=kyuubi_y + Sin(Deg2Rad(GetUnitFacing(s__NarutoDama__Spell_kyuubi[this]))) * 400
 
 		set bj_lastCreatedEffect=AddSpecialEffect("DevilSlam.mdl", new_x, new_y)
 		call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 3.0)
 		call BlzSetSpecialEffectColor(bj_lastCreatedEffect, 255, 0, 0)
 		call BlzSetSpecialEffectPitch(bj_lastCreatedEffect, - 1.57)
-		call BlzSetSpecialEffectRoll(bj_lastCreatedEffect, Deg2Rad(180 + GetUnitFacing(s__NarutoDama___Spell_kyuubi[this])))
+		call BlzSetSpecialEffectRoll(bj_lastCreatedEffect, Deg2Rad(180 + GetUnitFacing(s__NarutoDama__Spell_kyuubi[this])))
 		call BlzSetSpecialEffectHeight(bj_lastCreatedEffect, 200 + GetPointZ(new_x , new_y))
 		call DestroyEffect(bj_lastCreatedEffect)
 
-                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__NarutoDama___Spell_caster[this]) ), ( 'e007' ), (( new_x )*1.0), (( new_y )*1.0), (( GetUnitFacing(s__NarutoDama___Spell_kyuubi[this]))*1.0))) // INLINED!!
+                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__NarutoDama__Spell_caster[this]) ), ( 'e007' ), (( new_x )*1.0), (( new_y )*1.0), (( GetUnitFacing(s__NarutoDama__Spell_kyuubi[this]))*1.0))) // INLINED!!
                 call SetUnitX(bj_lastCreatedUnit, new_x)
                 call SetUnitY(bj_lastCreatedUnit, new_y)
                 call SetUnitFlyHeight(bj_lastCreatedUnit, 200, 0)
                 call SetUnitVertexColor((bj_lastCreatedUnit ), ( 255 ), ( 0 ), ( 0 ), ( 255)) // INLINED!!
                 call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 4.0)
-                set new_x=kyuubi_x + Cos(Deg2Rad(GetUnitFacing(s__NarutoDama___Spell_kyuubi[this]))) * 450
-                set new_y=kyuubi_y + Sin(Deg2Rad(GetUnitFacing(s__NarutoDama___Spell_kyuubi[this]))) * 450
-                set s__NarutoDama___Spell_dummy[this]=(CreateUnit((GetOwningPlayer(s__NarutoDama___Spell_caster[this]) ), ( XE_DUMMY_UNITID ), (( new_x )*1.0), (( new_y )*1.0), (( 0)*1.0))) // INLINED!!
-                call SetUnitX(s__NarutoDama___Spell_dummy[this], new_x)
-                call SetUnitY(s__NarutoDama___Spell_dummy[this], new_y)
-                call SetUnitTimeScale(s__NarutoDama___Spell_kyuubi[this], 2.0)
-            elseif s__NarutoDama___Spell_count[this] > 65 and s__NarutoDama___Spell_count[this] <= 100 then
-                set dummy_x=GetUnitX(s__NarutoDama___Spell_dummy[this])
-                set dummy_y=GetUnitY(s__NarutoDama___Spell_dummy[this])
-                set new_x=dummy_x + Cos(Deg2Rad(GetUnitFacing(s__NarutoDama___Spell_kyuubi[this]))) * 30
-                set new_y=dummy_y + Sin(Deg2Rad(GetUnitFacing(s__NarutoDama___Spell_kyuubi[this]))) * 30
-                call SetUnitX(s__NarutoDama___Spell_dummy[this], new_x)
-                call SetUnitY(s__NarutoDama___Spell_dummy[this], new_y)
-                call SetUnitX(s__NarutoDama___Spell_ball[this], new_x)
-                call SetUnitY(s__NarutoDama___Spell_ball[this], new_y)
-                if ModuloInteger(s__NarutoDama___Spell_count[this], 5) == 0 then
-                    set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__NarutoDama___Spell_caster[this]) ), ( 'e019' ), (( new_x )*1.0), (( new_y )*1.0), (( GetUnitFacing(s__NarutoDama___Spell_ball[this]))*1.0))) // INLINED!!
+                set new_x=kyuubi_x + Cos(Deg2Rad(GetUnitFacing(s__NarutoDama__Spell_kyuubi[this]))) * 450
+                set new_y=kyuubi_y + Sin(Deg2Rad(GetUnitFacing(s__NarutoDama__Spell_kyuubi[this]))) * 450
+                set s__NarutoDama__Spell_dummy[this]=(CreateUnit((GetOwningPlayer(s__NarutoDama__Spell_caster[this]) ), ( XE_DUMMY_UNITID ), (( new_x )*1.0), (( new_y )*1.0), (( 0)*1.0))) // INLINED!!
+                call SetUnitX(s__NarutoDama__Spell_dummy[this], new_x)
+                call SetUnitY(s__NarutoDama__Spell_dummy[this], new_y)
+                call SetUnitTimeScale(s__NarutoDama__Spell_kyuubi[this], 2.0)
+            elseif s__NarutoDama__Spell_count[this] > 65 and s__NarutoDama__Spell_count[this] <= 100 then
+                set dummy_x=GetUnitX(s__NarutoDama__Spell_dummy[this])
+                set dummy_y=GetUnitY(s__NarutoDama__Spell_dummy[this])
+                set new_x=dummy_x + Cos(Deg2Rad(GetUnitFacing(s__NarutoDama__Spell_kyuubi[this]))) * 30
+                set new_y=dummy_y + Sin(Deg2Rad(GetUnitFacing(s__NarutoDama__Spell_kyuubi[this]))) * 30
+                call SetUnitX(s__NarutoDama__Spell_dummy[this], new_x)
+                call SetUnitY(s__NarutoDama__Spell_dummy[this], new_y)
+                call SetUnitX(s__NarutoDama__Spell_ball[this], new_x)
+                call SetUnitY(s__NarutoDama__Spell_ball[this], new_y)
+                if ModuloInteger(s__NarutoDama__Spell_count[this], 5) == 0 then
+                    set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__NarutoDama__Spell_caster[this]) ), ( 'e019' ), (( new_x )*1.0), (( new_y )*1.0), (( GetUnitFacing(s__NarutoDama__Spell_ball[this]))*1.0))) // INLINED!!
                     call SetUnitX(bj_lastCreatedUnit, new_x)
                     call SetUnitY(bj_lastCreatedUnit, new_y)
                     call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 2.0)
                 endif
                 set bj_lastCreatedGroup=CreateGroup()
-                call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__NarutoDama___Spell_caster[this]), GetUnitY(s__NarutoDama___Spell_caster[this]), 200, null)
+                call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__NarutoDama__Spell_caster[this]), GetUnitY(s__NarutoDama__Spell_caster[this]), 200, null)
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NarutoDama___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__NarutoDama___Spell_damaged[this]) then
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NarutoDama__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__NarutoDama__Spell_damaged[this]) then
                         if IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) then
-                            call UnitDamageTarget(s__NarutoDama___Spell_caster[this], bj_lastCreatedUnit, 15.0 * GetHeroStr(s__NarutoDama___Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                            call UnitDamageTarget(s__NarutoDama__Spell_caster[this], bj_lastCreatedUnit, 15.0 * GetHeroStr(s__NarutoDama__Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
                         else
-                            call UnitDamageTarget(s__NarutoDama___Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroStr(s__NarutoDama___Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                            call UnitDamageTarget(s__NarutoDama__Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroStr(s__NarutoDama__Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
                         endif
-                        call GroupAddUnit(s__NarutoDama___Spell_damaged[this], bj_lastCreatedUnit)
+                        call GroupAddUnit(s__NarutoDama__Spell_damaged[this], bj_lastCreatedUnit)
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
@@ -98085,27 +98085,27 @@ endfunction
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NarutoDama___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__NarutoDama___Spell_damaged[this]) then
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NarutoDama__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__NarutoDama__Spell_damaged[this]) then
                         if IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) then
-                            call UnitDamageTarget(s__NarutoDama___Spell_caster[this], bj_lastCreatedUnit, 15.0 * GetHeroStr(s__NarutoDama___Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                            call UnitDamageTarget(s__NarutoDama__Spell_caster[this], bj_lastCreatedUnit, 15.0 * GetHeroStr(s__NarutoDama__Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
                         else
-                            call UnitDamageTarget(s__NarutoDama___Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroStr(s__NarutoDama___Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                            call UnitDamageTarget(s__NarutoDama__Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroStr(s__NarutoDama__Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
                         endif
-                        call GroupAddUnit(s__NarutoDama___Spell_damaged[this], bj_lastCreatedUnit)
+                        call GroupAddUnit(s__NarutoDama__Spell_damaged[this], bj_lastCreatedUnit)
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
             endif
-            if s__NarutoDama___Spell_count[this] == 101 then
+            if s__NarutoDama__Spell_count[this] == 101 then
                 loop
-                    set bj_lastCreatedUnit=FirstOfGroup(s__NarutoDama___Spell_glow[this])
+                    set bj_lastCreatedUnit=FirstOfGroup(s__NarutoDama__Spell_glow[this])
                     exitwhen bj_lastCreatedUnit == null
                     call KillUnit(bj_lastCreatedUnit)
-                    call GroupRemoveUnit(s__NarutoDama___Spell_glow[this], bj_lastCreatedUnit)
+                    call GroupRemoveUnit(s__NarutoDama__Spell_glow[this], bj_lastCreatedUnit)
                 endloop
-                set dummy_x=GetUnitX(s__NarutoDama___Spell_dummy[this])
-                set dummy_y=GetUnitY(s__NarutoDama___Spell_dummy[this])
+                set dummy_x=GetUnitX(s__NarutoDama__Spell_dummy[this])
+                set dummy_y=GetUnitY(s__NarutoDama__Spell_dummy[this])
                 
 		set bj_lastCreatedEffect=AddSpecialEffect("war3mapImported\\PrettyExplosion.mdx", dummy_x, dummy_y)
 		call BlzSetSpecialEffectTimeScale(bj_lastCreatedEffect, 2.0)
@@ -98115,48 +98115,48 @@ endfunction
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NarutoDama___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__NarutoDama___Spell_damaged[this]) then
-                        call UnitDamageTarget(s__NarutoDama___Spell_caster[this], bj_lastCreatedUnit, 5 * GetHeroStr(s__NarutoDama___Spell_caster[this], true) + 1000, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-                        call GroupAddUnit(s__NarutoDama___Spell_damaged[this], bj_lastCreatedUnit)
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NarutoDama__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__NarutoDama__Spell_damaged[this]) then
+                        call UnitDamageTarget(s__NarutoDama__Spell_caster[this], bj_lastCreatedUnit, 5 * GetHeroStr(s__NarutoDama__Spell_caster[this], true) + 1000, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                        call GroupAddUnit(s__NarutoDama__Spell_damaged[this], bj_lastCreatedUnit)
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
-                call KillUnit(s__NarutoDama___Spell_kyuubi[this])
-                call ShowUnit(s__NarutoDama___Spell_kyuubi[this], false)
-                call PauseUnit(s__NarutoDama___Spell_caster[this], false)
-                call SetUnitTimeScale(s__NarutoDama___Spell_caster[this], 1.0)
-                call ShowUnit(s__NarutoDama___Spell_caster[this], true)
-                call RemoveUnit(s__NarutoDama___Spell_ball[this])
-                call SelectUnitForPlayerSingle(s__NarutoDama___Spell_caster[this], GetOwningPlayer(s__NarutoDama___Spell_caster[this]))
+                call KillUnit(s__NarutoDama__Spell_kyuubi[this])
+                call ShowUnit(s__NarutoDama__Spell_kyuubi[this], false)
+                call PauseUnit(s__NarutoDama__Spell_caster[this], false)
+                call SetUnitTimeScale(s__NarutoDama__Spell_caster[this], 1.0)
+                call ShowUnit(s__NarutoDama__Spell_caster[this], true)
+                call RemoveUnit(s__NarutoDama__Spell_ball[this])
+                call SelectUnitForPlayerSingle(s__NarutoDama__Spell_caster[this], GetOwningPlayer(s__NarutoDama__Spell_caster[this]))
                 set i=0
                 loop
                     exitwhen i > 11
-                    if IsUnitVisible(s__NarutoDama___Spell_caster[this], Player(i)) then
+                    if IsUnitVisible(s__NarutoDama__Spell_caster[this], Player(i)) then
                         call CameraSetEQNoiseForPlayer(Player(i), 7.00)
                     endif
                     set i=i + 1
                 endloop
-                call TimerStart(CreateTimer(), 2.0, false, function s__NarutoDama___Spell_shake)
-                call s__NarutoDama___Spell_destroy(this)
+                call TimerStart(CreateTimer(), 2.0, false, function s__NarutoDama__Spell_shake)
+                call s__NarutoDama__Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__NarutoDama___Spell_pause takes nothing returns nothing
+        function s__NarutoDama__Spell_pause takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local integer i= 0
             loop
                 set i=i + 1
                 exitwhen i > 10
-                call ShowUnit(s__NarutoDama___chakra[(this)*(1)+i], true)
+                call ShowUnit(s__NarutoDama__chakra[(this)*(1)+i], true)
             endloop
-            call TimerStart(NewTimerEx(this), 0.02, true, function s__NarutoDama___Spell_periodic)
+            call TimerStart(NewTimerEx(this), 0.02, true, function s__NarutoDama__Spell_periodic)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
 
-        function s__NarutoDama___Spell_actions takes nothing returns nothing
-            local integer this= s__NarutoDama___Spell_allocate()
+        function s__NarutoDama__Spell_actions takes nothing returns nothing
+            local integer this= s__NarutoDama__Spell_allocate()
             local real caster_x
             local real caster_y
             local real target_x= GetSpellTargetX()
@@ -98167,26 +98167,26 @@ endfunction
             local real new_y_2
             local real angle
             local integer i= 0
-            set s__NarutoDama___Spell_glow[this]=CreateGroup()
-            set s__NarutoDama___Spell_damaged[this]=CreateGroup()
-            set s__NarutoDama___Spell_caster[this]=GetTriggerUnit()
-            call PauseUnit(s__NarutoDama___Spell_caster[this], true)
-            call ShowUnit(s__NarutoDama___Spell_caster[this], false)
-            set caster_x=GetUnitX(s__NarutoDama___Spell_caster[this])
-            set caster_y=GetUnitY(s__NarutoDama___Spell_caster[this])
+            set s__NarutoDama__Spell_glow[this]=CreateGroup()
+            set s__NarutoDama__Spell_damaged[this]=CreateGroup()
+            set s__NarutoDama__Spell_caster[this]=GetTriggerUnit()
+            call PauseUnit(s__NarutoDama__Spell_caster[this], true)
+            call ShowUnit(s__NarutoDama__Spell_caster[this], false)
+            set caster_x=GetUnitX(s__NarutoDama__Spell_caster[this])
+            set caster_y=GetUnitY(s__NarutoDama__Spell_caster[this])
             set angle=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
-            set s__NarutoDama___Spell_kyuubi[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e012' ), (( caster_x )*1.0), (( caster_y )*1.0), (( Rad2Deg(angle))*1.0))) // INLINED!!
-            call SetUnitX(s__NarutoDama___Spell_kyuubi[this], caster_x)
-            call SetUnitY(s__NarutoDama___Spell_kyuubi[this], caster_y)
-            call SetUnitAnimation(s__NarutoDama___Spell_kyuubi[this], "spell")
-            call SetUnitTimeScale(s__NarutoDama___Spell_kyuubi[this], 0.3)
+            set s__NarutoDama__Spell_kyuubi[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e012' ), (( caster_x )*1.0), (( caster_y )*1.0), (( Rad2Deg(angle))*1.0))) // INLINED!!
+            call SetUnitX(s__NarutoDama__Spell_kyuubi[this], caster_x)
+            call SetUnitY(s__NarutoDama__Spell_kyuubi[this], caster_y)
+            call SetUnitAnimation(s__NarutoDama__Spell_kyuubi[this], "spell")
+            call SetUnitTimeScale(s__NarutoDama__Spell_kyuubi[this], 0.3)
             set new_x=caster_x + Cos(Deg2Rad(Rad2Deg(angle))) * 300
             set new_y=caster_y + Sin(Deg2Rad(Rad2Deg(angle))) * 300
-            set s__NarutoDama___Spell_ball[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e013' ), (( new_x )*1.0), (( new_y )*1.0), (( 270)*1.0))) // INLINED!!
-            call SetUnitX(s__NarutoDama___Spell_ball[this], new_x)
-            call SetUnitY(s__NarutoDama___Spell_ball[this], new_y)
-            call SetUnitScale(s__NarutoDama___Spell_ball[this], 0.0001, 0.0001, 0.0001)
-            call SetUnitFlyHeight(s__NarutoDama___Spell_ball[this], 350, 0)
+            set s__NarutoDama__Spell_ball[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e013' ), (( new_x )*1.0), (( new_y )*1.0), (( 270)*1.0))) // INLINED!!
+            call SetUnitX(s__NarutoDama__Spell_ball[this], new_x)
+            call SetUnitY(s__NarutoDama__Spell_ball[this], new_y)
+            call SetUnitScale(s__NarutoDama__Spell_ball[this], 0.0001, 0.0001, 0.0001)
+            call SetUnitFlyHeight(s__NarutoDama__Spell_ball[this], 350, 0)
             set i=0
             loop
                 set i=i + 1
@@ -98196,20 +98196,20 @@ endfunction
                 set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'e014' ), (( new_x_2 )*1.0), (( new_y_2 )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
                 call SetUnitX(bj_lastCreatedUnit, new_x_2)
                 call SetUnitY(bj_lastCreatedUnit, new_y_2)
-                call ShowUnit(s__NarutoDama___chakra[(this)*(1)+i], false)
-                set s__NarutoDama___chakra[(this)*(1)+i]= bj_lastCreatedUnit
+                call ShowUnit(s__NarutoDama__chakra[(this)*(1)+i], false)
+                set s__NarutoDama__chakra[(this)*(1)+i]= bj_lastCreatedUnit
             endloop
-            set s__NarutoDama___Spell_count[this]=0
-            call SetUnitFacing(s__NarutoDama___Spell_caster[this], Rad2Deg(angle))
+            set s__NarutoDama__Spell_count[this]=0
+            call SetUnitFacing(s__NarutoDama__Spell_caster[this], Rad2Deg(angle))
             //if GetUnitTypeId(this.caster) == 'H027' then
-                if IsUnitVisible(s__NarutoDama___Spell_caster[this], GetLocalPlayer()) then
+                if IsUnitVisible(s__NarutoDama__Spell_caster[this], GetLocalPlayer()) then
                     //call PlaySoundOnUnitBJ(gg_snd_Naruto_D, 100.0, this.caster) 
-                    call PlaySoundOnUnitBJ(gg_snd_Naruto_Rikudou_T, 100.0, s__NarutoDama___Spell_caster[this])
+                    call PlaySoundOnUnitBJ(gg_snd_Naruto_Rikudou_T, 100.0, s__NarutoDama__Spell_caster[this])
                     call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff0000Naruto: Darkness, hatred...! I'll crush all that stuff...!!|r")
                 endif
             //endif
-            call SetUnitVertexColor((s__NarutoDama___Spell_caster[this] ), ( 255 ), ( 255 ), ( 255 ), ( 0)) // INLINED!!
-            set s__NarutoDama___Spell_paused[this]=CreateGroup()
+            call SetUnitVertexColor((s__NarutoDama__Spell_caster[this] ), ( 255 ), ( 255 ), ( 255 ), ( 0)) // INLINED!!
+            set s__NarutoDama__Spell_paused[this]=CreateGroup()
             set bj_lastCreatedGroup=CreateGroup()
             call GroupEnumUnitsInRange(bj_lastCreatedGroup, caster_x, caster_y, 700.0, null)
             loop
@@ -98217,17 +98217,17 @@ endfunction
                 exitwhen bj_lastCreatedUnit == null
                 if IsUnitEnemy(bj_lastCreatedUnit, GetTriggerPlayer()) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) then
                     //call StunUnitTimed(this.caster, bj_lastCreatedUnit, 2.6)
-                    call GroupAddUnit(s__NarutoDama___Spell_paused[this], bj_lastCreatedUnit)
+                    call GroupAddUnit(s__NarutoDama__Spell_paused[this], bj_lastCreatedUnit)
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            call TimerStart(NewTimerEx(this), 0.01, false, function s__NarutoDama___Spell_pause)
+            call TimerStart(NewTimerEx(this), 0.01, false, function s__NarutoDama__Spell_pause)
         endfunction
         
-        function s__NarutoDama___Spell_onInit takes nothing returns nothing
-  local integer this= s__NarutoDama___Spell_allocate()
-		call RegisterSpellEffectEvent2((s__NarutoDama___Spell_SPELL_ID ) , Filter(( function s__NarutoDama___Spell_actions))) // INLINED!!
+        function s__NarutoDama__Spell_onInit takes nothing returns nothing
+  local integer this= s__NarutoDama__Spell_allocate()
+		call RegisterSpellEffectEvent2((s__NarutoDama__Spell_SPELL_ID ) , Filter(( function s__NarutoDama__Spell_actions))) // INLINED!!
         endfunction
         
     
@@ -142336,31 +142336,31 @@ call sc__AHSS_Heroes_addHero(s__AHSS_Configurations_heroes,"Uzumaki Boruto, Son 
         endfunction
     
     
-        function s__AHSS__Team_create takes string name returns integer
-            local integer this= s__AHSS__Team__allocate()
-            set s__AHSS__Team_name[this]=name
-            set s__AHSS__Team_count[this]=0
+        function s__AHSS___Team_create takes string name returns integer
+            local integer this= s__AHSS___Team__allocate()
+            set s__AHSS___Team_name[this]=name
+            set s__AHSS___Team_count[this]=0
             return this
         endfunction 
-        function s__AHSS__Team_addPlayer takes integer this,integer whichPlayer returns nothing
-            set s___AHSS__Team_players[s__AHSS__Team_players[this]+s__AHSS__Team_count[this]]=whichPlayer
-            set s__AHSS__Team_count[this]=s__AHSS__Team_count[this] + 1
+        function s__AHSS___Team_addPlayer takes integer this,integer whichPlayer returns nothing
+            set s___AHSS___Team_players[s__AHSS___Team_players[this]+s__AHSS___Team_count[this]]=whichPlayer
+            set s__AHSS___Team_count[this]=s__AHSS___Team_count[this] + 1
         endfunction 
-        function s__AHSS__Team_setSpawningSpot takes integer this,rect whichRect returns nothing
-            set s__AHSS__Team_spawningSpot[this]=whichRect
+        function s__AHSS___Team_setSpawningSpot takes integer this,rect whichRect returns nothing
+            set s__AHSS___Team_spawningSpot[this]=whichRect
         endfunction
-        function s__AHSS__Team_getName takes integer this returns string
-            return s__AHSS__Team_name[this]
+        function s__AHSS___Team_getName takes integer this returns string
+            return s__AHSS___Team_name[this]
         endfunction
-        function s__AHSS__Team_getPlayer takes integer this,integer index returns integer
-            return s___AHSS__Team_players[s__AHSS__Team_players[this]+index]
+        function s__AHSS___Team_getPlayer takes integer this,integer index returns integer
+            return s___AHSS___Team_players[s__AHSS___Team_players[this]+index]
         endfunction
-        function s__AHSS__Team_getSpawningSpot takes integer this returns rect
-            return s__AHSS__Team_spawningSpot[this]
+        function s__AHSS___Team_getSpawningSpot takes integer this returns rect
+            return s__AHSS___Team_spawningSpot[this]
         endfunction
         
-        function s__AHSS__Team_getSize takes integer this returns integer
-            return s__AHSS__Team_count[this]
+        function s__AHSS___Team_getSize takes integer this returns integer
+            return s__AHSS___Team_count[this]
         endfunction
       
     
@@ -142433,7 +142433,7 @@ endfunction
         endfunction
         
         function s__AHSS_Teams_createTeam takes integer this,string name returns nothing
-            set s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this]]=s__AHSS__Team_create(name)
+            set s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this]]=s__AHSS___Team_create(name)
             set s__AHSS_Teams_count[this]=s__AHSS_Teams_count[this] + 1
         endfunction
         
@@ -142441,14 +142441,14 @@ endfunction
             if s__AHSS_Teams_count[this] == 0 then
                 return
             endif
-            call s__AHSS__Team_addPlayer(s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this] - 1],whichPlayer)
+            call s__AHSS___Team_addPlayer(s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this] - 1],whichPlayer)
         endfunction
         
         function s__AHSS_Teams_setSpawningSpot takes integer this,rect whichRect returns nothing
             if s__AHSS_Teams_count[this] == 0 then
                 return
             endif
-            set s__AHSS__Team_spawningSpot[(s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this] - 1])]=(whichRect) // INLINED!!
+            set s__AHSS___Team_spawningSpot[(s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this] - 1])]=(whichRect) // INLINED!!
         endfunction
         
         function s__AHSS_Teams_getTeam takes integer this,integer index returns integer
@@ -142463,91 +142463,91 @@ endfunction
             local integer i= 0
             loop
                 exitwhen i >= s__AHSS_Teams_count[this]
-                call s__AHSS__Team_deallocate(s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+i])
+                call s__AHSS___Team_deallocate(s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+i])
                 set i=i + 1
             endloop
         endfunction
     
     
-        function s__AHSS__Hero_create takes string whichName,integer heroId returns integer
-            local integer this= s__AHSS__Hero__allocate()
-            set s__AHSS__Hero_name[this]=whichName
-            set s__AHSS__Hero_description[this]=""
-            set s__AHSS__Hero_heroid[this]=heroId
-            set s__AHSS__Hero_icon[this]='OTip'
-            set s__AHSS__Hero_modelAlternate[this]=false
-            set s__AHSS__Hero_iconPath[this]=null
+        function s__AHSS___Hero_create takes string whichName,integer heroId returns integer
+            local integer this= s__AHSS___Hero__allocate()
+            set s__AHSS___Hero_name[this]=whichName
+            set s__AHSS___Hero_description[this]=""
+            set s__AHSS___Hero_heroid[this]=heroId
+            set s__AHSS___Hero_icon[this]='OTip'
+            set s__AHSS___Hero_modelAlternate[this]=false
+            set s__AHSS___Hero_iconPath[this]=null
             return this
         endfunction
-        function s__AHSS__Hero_setStr takes integer this,real initial,real lvl returns nothing
-            set s__AHSS__Hero_strength[this]=initial
-            set s__AHSS__Hero_strengthLvl[this]=lvl
+        function s__AHSS___Hero_setStr takes integer this,real initial,real lvl returns nothing
+            set s__AHSS___Hero_strength[this]=initial
+            set s__AHSS___Hero_strengthLvl[this]=lvl
         endfunction 
-        function s__AHSS__Hero_setAgi takes integer this,real initial,real lvl returns nothing
-            set s__AHSS__Hero_agility[this]=initial
-            set s__AHSS__Hero_agilityLvl[this]=lvl
+        function s__AHSS___Hero_setAgi takes integer this,real initial,real lvl returns nothing
+            set s__AHSS___Hero_agility[this]=initial
+            set s__AHSS___Hero_agilityLvl[this]=lvl
         endfunction
-        function s__AHSS__Hero_setInt takes integer this,real initial,real lvl returns nothing
-            set s__AHSS__Hero_intelligence[this]=initial
-            set s__AHSS__Hero_intelligenceLvl[this]=lvl
+        function s__AHSS___Hero_setInt takes integer this,real initial,real lvl returns nothing
+            set s__AHSS___Hero_intelligence[this]=initial
+            set s__AHSS___Hero_intelligenceLvl[this]=lvl
         endfunction
-        function s__AHSS__Hero_setDescription takes integer this,string whichDescription returns nothing
-            set s__AHSS__Hero_description[this]=whichDescription
+        function s__AHSS___Hero_setDescription takes integer this,string whichDescription returns nothing
+            set s__AHSS___Hero_description[this]=whichDescription
         endfunction
-        function s__AHSS__Hero_setModel takes integer this,string path,real scale returns nothing
-            set s__AHSS__Hero_modelPath[this]=path
-            set s__AHSS__Hero_modelScale[this]=scale
+        function s__AHSS___Hero_setModel takes integer this,string path,real scale returns nothing
+            set s__AHSS___Hero_modelPath[this]=path
+            set s__AHSS___Hero_modelScale[this]=scale
         endfunction
-        function s__AHSS__Hero_setModelAlternate takes integer this,boolean b returns nothing
-            set s__AHSS__Hero_modelAlternate[this]=b
+        function s__AHSS___Hero_setModelAlternate takes integer this,boolean b returns nothing
+            set s__AHSS___Hero_modelAlternate[this]=b
         endfunction 
-        function s__AHSS__Hero_setIcon takes integer this,integer whichIcon returns nothing
-            set s__AHSS__Hero_icon[this]=whichIcon
+        function s__AHSS___Hero_setIcon takes integer this,integer whichIcon returns nothing
+            set s__AHSS___Hero_icon[this]=whichIcon
         endfunction
-        function s__AHSS__Hero_setIconPath takes integer this,string path returns nothing
-            set s__AHSS__Hero_iconPath[this]=path
+        function s__AHSS___Hero_setIconPath takes integer this,string path returns nothing
+            set s__AHSS___Hero_iconPath[this]=path
         endfunction
-        function s__AHSS__Hero_getName takes integer this returns string
-            return s__AHSS__Hero_name[this]
+        function s__AHSS___Hero_getName takes integer this returns string
+            return s__AHSS___Hero_name[this]
         endfunction
-        function s__AHSS__Hero_getStr takes integer this returns real
-            return s__AHSS__Hero_strength[this]
+        function s__AHSS___Hero_getStr takes integer this returns real
+            return s__AHSS___Hero_strength[this]
         endfunction
-        function s__AHSS__Hero_getStrLvl takes integer this returns real
-            return s__AHSS__Hero_strengthLvl[this]
+        function s__AHSS___Hero_getStrLvl takes integer this returns real
+            return s__AHSS___Hero_strengthLvl[this]
         endfunction 
-        function s__AHSS__Hero_getAgi takes integer this returns real
-            return s__AHSS__Hero_agility[this]
+        function s__AHSS___Hero_getAgi takes integer this returns real
+            return s__AHSS___Hero_agility[this]
         endfunction 
-        function s__AHSS__Hero_getAgiLvl takes integer this returns real
-            return s__AHSS__Hero_agilityLvl[this]
+        function s__AHSS___Hero_getAgiLvl takes integer this returns real
+            return s__AHSS___Hero_agilityLvl[this]
         endfunction 
-        function s__AHSS__Hero_getInt takes integer this returns real
-            return s__AHSS__Hero_intelligence[this]
+        function s__AHSS___Hero_getInt takes integer this returns real
+            return s__AHSS___Hero_intelligence[this]
         endfunction
-        function s__AHSS__Hero_getIntLvl takes integer this returns real
-            return s__AHSS__Hero_intelligenceLvl[this]
+        function s__AHSS___Hero_getIntLvl takes integer this returns real
+            return s__AHSS___Hero_intelligenceLvl[this]
         endfunction 
-        function s__AHSS__Hero_getDescription takes integer this returns string
-            return s__AHSS__Hero_description[this]
+        function s__AHSS___Hero_getDescription takes integer this returns string
+            return s__AHSS___Hero_description[this]
         endfunction
-        function s__AHSS__Hero_getHeroid takes integer this returns integer
-            return s__AHSS__Hero_heroid[this]
+        function s__AHSS___Hero_getHeroid takes integer this returns integer
+            return s__AHSS___Hero_heroid[this]
         endfunction
-        function s__AHSS__Hero_getIconPath takes integer this returns string
-            return s__AHSS__Hero_iconPath[this]
+        function s__AHSS___Hero_getIconPath takes integer this returns string
+            return s__AHSS___Hero_iconPath[this]
         endfunction
-        function s__AHSS__Hero_getModelPath takes integer this returns string
-            return s__AHSS__Hero_modelPath[this]
+        function s__AHSS___Hero_getModelPath takes integer this returns string
+            return s__AHSS___Hero_modelPath[this]
         endfunction
-        function s__AHSS__Hero_getModelScale takes integer this returns real
-            return s__AHSS__Hero_modelScale[this]
+        function s__AHSS___Hero_getModelScale takes integer this returns real
+            return s__AHSS___Hero_modelScale[this]
         endfunction
-        function s__AHSS__Hero_isModelAlternate takes integer this returns boolean
-            return s__AHSS__Hero_modelAlternate[this]
+        function s__AHSS___Hero_isModelAlternate takes integer this returns boolean
+            return s__AHSS___Hero_modelAlternate[this]
         endfunction 
-        function s__AHSS__Hero_getIcon takes integer this returns integer
-            return s__AHSS__Hero_icon[this]
+        function s__AHSS___Hero_getIcon takes integer this returns integer
+            return s__AHSS___Hero_icon[this]
         endfunction
     
     
@@ -142561,7 +142561,7 @@ endfunction
             if s__AHSS_Heroes_count[this] >= s__AHSS_Configurations_MAX_SLOTS then
                 return
             endif
-            set s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this]]=s__AHSS__Hero_create(name , id)
+            set s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this]]=s__AHSS___Hero_create(name , id)
             set s__s__AHSS_Configurations_HERO_NAMES[s__AHSS_Heroes_count[this]]= name
             set s__s__AHSS_Configurations_HERO_IDS[s__AHSS_Heroes_count[this]]= id
             call SaveInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (id), ( s__AHSS_Heroes_count[this])) // INLINED!!
@@ -142572,49 +142572,49 @@ endfunction
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            call s__AHSS__Hero_setStr(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
+            call s__AHSS___Hero_setStr(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
         endfunction
         function s__AHSS_Heroes_setAgi takes integer this,real initial,real lvl returns nothing
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            call s__AHSS__Hero_setAgi(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
+            call s__AHSS___Hero_setAgi(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
         endfunction
         function s__AHSS_Heroes_setInt takes integer this,real initial,real lvl returns nothing
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            call s__AHSS__Hero_setInt(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
+            call s__AHSS___Hero_setInt(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
         endfunction
         function s__AHSS_Heroes_setDescription takes integer this,string whichDescription returns nothing
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            set s__AHSS__Hero_description[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichDescription) // INLINED!!
+            set s__AHSS___Hero_description[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichDescription) // INLINED!!
         endfunction
         function s__AHSS_Heroes_setModel takes integer this,string path,real scale returns nothing
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            call s__AHSS__Hero_setModel(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],path , scale)
+            call s__AHSS___Hero_setModel(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],path , scale)
         endfunction
         function s__AHSS_Heroes_setModelAlternate takes integer this,boolean b returns nothing
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            set s__AHSS__Hero_modelAlternate[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(b) // INLINED!!
+            set s__AHSS___Hero_modelAlternate[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(b) // INLINED!!
         endfunction
         function s__AHSS_Heroes_setIcon takes integer this,integer whichIcon returns nothing
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            set s__AHSS__Hero_icon[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichIcon) // INLINED!!
+            set s__AHSS___Hero_icon[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichIcon) // INLINED!!
         endfunction
         function s__AHSS_Heroes_setIconPath takes integer this,string path returns nothing
             if s__AHSS_Heroes_count[this] == 0 then
                 return
             endif
-            set s__AHSS__Hero_iconPath[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(path) // INLINED!!
+            set s__AHSS___Hero_iconPath[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(path) // INLINED!!
             set s__s__AHSS_Configurations_HERO_ICONS[s__AHSS_Heroes_count[this] - 1]= path
         endfunction
         
@@ -142630,7 +142630,7 @@ endfunction
             local integer i= 0
             loop
                 exitwhen i >= s__AHSS_Heroes_count[this]
-                call s__AHSS__Hero_deallocate(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+i])
+                call s__AHSS___Hero_deallocate(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+i])
                 set i=i + 1
             endloop
         endfunction
@@ -142744,76 +142744,76 @@ endfunction
         //The old hero grid icons floated at height 500, so the camera showed them bigger
         //and spread out. Raised icons copy that look: PROJECTION = how much bigger/wider,
         //FOCUS_Y_OFFSET = where the zoom is centered relative to the dummy. Tune if needed.
-        function s__AHSS__AHSSIcon_setCenter takes real x,real y returns nothing
-            set s__AHSS__AHSSIcon_centerX=x + s__AHSS__AHSSIcon_FOCUS_X_OFFSET
-            set s__AHSS__AHSSIcon_centerY=y + s__AHSS__AHSSIcon_FOCUS_Y_OFFSET
+        function s__AHSS___AHSSIcon_setCenter takes real x,real y returns nothing
+            set s__AHSS___AHSSIcon_centerX=x + s__AHSS___AHSSIcon_FOCUS_X_OFFSET
+            set s__AHSS___AHSSIcon_centerY=y + s__AHSS___AHSSIcon_FOCUS_Y_OFFSET
         endfunction 
-        function s__AHSS__AHSSIcon_projX takes real x returns real
-            return s__AHSS__AHSSIcon_centerX + ( x - s__AHSS__AHSSIcon_centerX ) * s__AHSS__AHSSIcon_PROJECTION
+        function s__AHSS___AHSSIcon_projX takes real x returns real
+            return s__AHSS___AHSSIcon_centerX + ( x - s__AHSS___AHSSIcon_centerX ) * s__AHSS___AHSSIcon_PROJECTION
         endfunction 
-        function s__AHSS__AHSSIcon_projY takes real y returns real
-            return s__AHSS__AHSSIcon_centerY + ( y - s__AHSS__AHSSIcon_centerY ) * s__AHSS__AHSSIcon_PROJECTION
+        function s__AHSS___AHSSIcon_projY takes real y returns real
+            return s__AHSS___AHSSIcon_centerY + ( y - s__AHSS___AHSSIcon_centerY ) * s__AHSS___AHSSIcon_PROJECTION
         endfunction 
-        function s__AHSS__AHSSIcon_make takes string path,real x,real y,real drawX,real drawY,real scale returns integer
-            local integer this= s__AHSS__AHSSIcon__allocate()
-            local real size= s__AHSS__AHSSIcon_ICON_SIZE * scale
-            set s__AHSS__AHSSIcon_x[this]=x
-            set s__AHSS__AHSSIcon_y[this]=y
+        function s__AHSS___AHSSIcon_make takes string path,real x,real y,real drawX,real drawY,real scale returns integer
+            local integer this= s__AHSS___AHSSIcon__allocate()
+            local real size= s__AHSS___AHSSIcon_ICON_SIZE * scale
+            set s__AHSS___AHSSIcon_x[this]=x
+            set s__AHSS___AHSSIcon_y[this]=y
             if path == null or path == "" then
-                set s__AHSS__AHSSIcon_img[this]=null
+                set s__AHSS___AHSSIcon_img[this]=null
                 return this
             endif
-            set s__AHSS__AHSSIcon_img[this]=CreateImage(path, size, size, 0, drawX - ( size / 2 ), drawY - ( size / 2 ), 0, 0, 0, 0, s__AHSS__AHSSIcon_IMAGE_TYPE)
-            call SetImageRenderAlways(s__AHSS__AHSSIcon_img[this], true)
-            call ShowImage(s__AHSS__AHSSIcon_img[this], true)
+            set s__AHSS___AHSSIcon_img[this]=CreateImage(path, size, size, 0, drawX - ( size / 2 ), drawY - ( size / 2 ), 0, 0, 0, 0, s__AHSS___AHSSIcon_IMAGE_TYPE)
+            call SetImageRenderAlways(s__AHSS___AHSSIcon_img[this], true)
+            call ShowImage(s__AHSS___AHSSIcon_img[this], true)
             return this
         endfunction 
         //Icon lying on the ground (team slots, banned heroes, stats, logo, versus)
-        function s__AHSS__AHSSIcon_create takes string path,real x,real y,real scale returns integer
-            return s__AHSS__AHSSIcon_make(path , x , y , x , y , scale)
+        function s__AHSS___AHSSIcon_create takes string path,real x,real y,real scale returns integer
+            return s__AHSS___AHSSIcon_make(path , x , y , x , y , scale)
         endfunction 
         //Icon of the hero grid (used to float at height 500)
-        function s__AHSS__AHSSIcon_createRaised takes string path,real x,real y,real scale returns integer
-            return s__AHSS__AHSSIcon_make(path , x , y , (s__AHSS__AHSSIcon_centerX + ( ((x)*1.0) - s__AHSS__AHSSIcon_centerX ) * s__AHSS__AHSSIcon_PROJECTION) , (s__AHSS__AHSSIcon_centerY + ( ((y)*1.0) - s__AHSS__AHSSIcon_centerY ) * s__AHSS__AHSSIcon_PROJECTION) , scale * s__AHSS__AHSSIcon_PROJECTION) // INLINED!!
+        function s__AHSS___AHSSIcon_createRaised takes string path,real x,real y,real scale returns integer
+            return s__AHSS___AHSSIcon_make(path , x , y , (s__AHSS___AHSSIcon_centerX + ( ((x)*1.0) - s__AHSS___AHSSIcon_centerX ) * s__AHSS___AHSSIcon_PROJECTION) , (s__AHSS___AHSSIcon_centerY + ( ((y)*1.0) - s__AHSS___AHSSIcon_centerY ) * s__AHSS___AHSSIcon_PROJECTION) , scale * s__AHSS___AHSSIcon_PROJECTION) // INLINED!!
         endfunction 
-        function s__AHSS__AHSSIcon_show takes integer this,boolean flag returns nothing
-            if s__AHSS__AHSSIcon_img[this] != null then
-                call ShowImage(s__AHSS__AHSSIcon_img[this], flag)
+        function s__AHSS___AHSSIcon_show takes integer this,boolean flag returns nothing
+            if s__AHSS___AHSSIcon_img[this] != null then
+                call ShowImage(s__AHSS___AHSSIcon_img[this], flag)
             endif
         endfunction 
-        function s__AHSS__AHSSIcon_onDestroy takes integer this returns nothing
-            if s__AHSS__AHSSIcon_img[this] != null then
-                call ShowImage(s__AHSS__AHSSIcon_img[this], false)
-                call DestroyImage(s__AHSS__AHSSIcon_img[this])
-                set s__AHSS__AHSSIcon_img[this]=null
+        function s__AHSS___AHSSIcon_onDestroy takes integer this returns nothing
+            if s__AHSS___AHSSIcon_img[this] != null then
+                call ShowImage(s__AHSS___AHSSIcon_img[this], false)
+                call DestroyImage(s__AHSS___AHSSIcon_img[this])
+                set s__AHSS___AHSSIcon_img[this]=null
             endif
         endfunction 
 
-//Generated destructor of AHSS__AHSSIcon
-function s__AHSS__AHSSIcon_deallocate takes integer this returns nothing
+//Generated destructor of AHSS___AHSSIcon
+function s__AHSS___AHSSIcon_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__AHSS__AHSSIcon_V[this]!=-1) then
+    elseif (si__AHSS___AHSSIcon_V[this]!=-1) then
         return
     endif
-    call s__AHSS__AHSSIcon_onDestroy(this)
-    set si__AHSS__AHSSIcon_V[this]=si__AHSS__AHSSIcon_F
-    set si__AHSS__AHSSIcon_F=this
+    call s__AHSS___AHSSIcon_onDestroy(this)
+    set si__AHSS___AHSSIcon_V[this]=si__AHSS___AHSSIcon_F
+    set si__AHSS___AHSSIcon_F=this
 endfunction
         //Safe destroy: does nothing for an empty slot (0)
-        function s__AHSS__AHSSIcon_remove takes integer which returns nothing
+        function s__AHSS___AHSSIcon_remove takes integer which returns nothing
             if which != 0 then
-                call s__AHSS__AHSSIcon_deallocate(which)
+                call s__AHSS___AHSSIcon_deallocate(which)
             endif
         endfunction 
     
-        function s__AHSS__TeamIcon_destroy takes integer this returns nothing
+        function s__AHSS___TeamIcon_destroy takes integer this returns nothing
             local integer i= 0
             loop
                 exitwhen i > 11
-                if s___AHSS__TeamIcon_icons[s__AHSS__TeamIcon_icons[this]+i] != 0 then
-                    call s__AHSS__AHSSIcon_remove(s___AHSS__TeamIcon_icons[s__AHSS__TeamIcon_icons[this]+i])
-                    set s___AHSS__TeamIcon_icons[s__AHSS__TeamIcon_icons[this]+i]=0
+                if s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[this]+i] != 0 then
+                    call s__AHSS___AHSSIcon_remove(s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[this]+i])
+                    set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[this]+i]=0
                 endif
                 set i=i + 1
             endloop
@@ -142821,107 +142821,107 @@ endfunction
     
         //Frame around the selected icon, drawn with 4 images in the player's color.
         //If the frame is hidden UNDER the icons, change FRAME_IMAGE_TYPE (try 1, 3 or 4).
-        function s__AHSS__PlayerSelection_clearFrame takes integer this returns nothing
+        function s__AHSS___PlayerSelection_clearFrame takes integer this returns nothing
             local integer i= 0
             loop
                 exitwhen i > 3
-                if s___AHSS__PlayerSelection_bar[s__AHSS__PlayerSelection_bar[this]+i] != null then
-                    call ShowImage(s___AHSS__PlayerSelection_bar[s__AHSS__PlayerSelection_bar[this]+i], false)
-                    call DestroyImage(s___AHSS__PlayerSelection_bar[s__AHSS__PlayerSelection_bar[this]+i])
-                    set s___AHSS__PlayerSelection_bar[s__AHSS__PlayerSelection_bar[this]+i]=null
+                if s___AHSS___PlayerSelection_bar[s__AHSS___PlayerSelection_bar[this]+i] != null then
+                    call ShowImage(s___AHSS___PlayerSelection_bar[s__AHSS___PlayerSelection_bar[this]+i], false)
+                    call DestroyImage(s___AHSS___PlayerSelection_bar[s__AHSS___PlayerSelection_bar[this]+i])
+                    set s___AHSS___PlayerSelection_bar[s__AHSS___PlayerSelection_bar[this]+i]=null
                 endif
                 set i=i + 1
             endloop
         endfunction 
-        function s__AHSS__PlayerSelection_newBar takes integer this,integer i,string tex,real w,real h,real px,real py returns nothing
-            set s___AHSS__PlayerSelection_bar[s__AHSS__PlayerSelection_bar[this]+i]=CreateImage(tex, w, h, 0, px, py, 0, 0, 0, 0, s__AHSS__PlayerSelection_FRAME_IMAGE_TYPE)
-            call SetImageRenderAlways(s___AHSS__PlayerSelection_bar[s__AHSS__PlayerSelection_bar[this]+i], true)
-            call ShowImage(s___AHSS__PlayerSelection_bar[s__AHSS__PlayerSelection_bar[this]+i], s__AHSS__PlayerSelection_frameVisible[this])
+        function s__AHSS___PlayerSelection_newBar takes integer this,integer i,string tex,real w,real h,real px,real py returns nothing
+            set s___AHSS___PlayerSelection_bar[s__AHSS___PlayerSelection_bar[this]+i]=CreateImage(tex, w, h, 0, px, py, 0, 0, 0, 0, s__AHSS___PlayerSelection_FRAME_IMAGE_TYPE)
+            call SetImageRenderAlways(s___AHSS___PlayerSelection_bar[s__AHSS___PlayerSelection_bar[this]+i], true)
+            call ShowImage(s___AHSS___PlayerSelection_bar[s__AHSS___PlayerSelection_bar[this]+i], s__AHSS___PlayerSelection_frameVisible[this])
         endfunction 
-        function s__AHSS__PlayerSelection_drawFrame takes integer this returns nothing
-            local real size= 64.0 * s__AHSS__AHSSIcon_PROJECTION
-            local real t= s__AHSS__PlayerSelection_FRAME_THICKNESS * s__AHSS__AHSSIcon_PROJECTION
-            local real cx= (s__AHSS__AHSSIcon_centerX + ( ((s__AHSS__PlayerSelection_frameX[this])*1.0) - s__AHSS__AHSSIcon_centerX ) * s__AHSS__AHSSIcon_PROJECTION) // INLINED!!
-            local real cy= (s__AHSS__AHSSIcon_centerY + ( ((s__AHSS__PlayerSelection_frameY[this])*1.0) - s__AHSS__AHSSIcon_centerY ) * s__AHSS__AHSSIcon_PROJECTION) // INLINED!!
+        function s__AHSS___PlayerSelection_drawFrame takes integer this returns nothing
+            local real size= 64.0 * s__AHSS___AHSSIcon_PROJECTION
+            local real t= s__AHSS___PlayerSelection_FRAME_THICKNESS * s__AHSS___AHSSIcon_PROJECTION
+            local real cx= (s__AHSS___AHSSIcon_centerX + ( ((s__AHSS___PlayerSelection_frameX[this])*1.0) - s__AHSS___AHSSIcon_centerX ) * s__AHSS___AHSSIcon_PROJECTION) // INLINED!!
+            local real cy= (s__AHSS___AHSSIcon_centerY + ( ((s__AHSS___PlayerSelection_frameY[this])*1.0) - s__AHSS___AHSSIcon_centerY ) * s__AHSS___AHSSIcon_PROJECTION) // INLINED!!
             local real left= cx - size / 2
             local real bottom= cy - size / 2
             local string tex
-            local integer c= GetHandleId(GetPlayerColor(Player(s__AHSS__PlayerSelection_whichPlayer[this])))
+            local integer c= GetHandleId(GetPlayerColor(Player(s__AHSS___PlayerSelection_whichPlayer[this])))
             if c < 10 then
                 set tex="ReplaceableTextures\\TeamColor\\TeamColor0" + I2S(c) + ".blp"
             else
                 set tex="ReplaceableTextures\\TeamColor\\TeamColor" + I2S(c) + ".blp"
             endif
-            call s__AHSS__PlayerSelection_clearFrame(this)
-            call s__AHSS__PlayerSelection_newBar(this,0 , tex , size , t , left , bottom + size - t)
-            call s__AHSS__PlayerSelection_newBar(this,1 , tex , size , t , left , bottom)
-            call s__AHSS__PlayerSelection_newBar(this,2 , tex , t , size , left , bottom)
-            call s__AHSS__PlayerSelection_newBar(this,3 , tex , t , size , left + size - t , bottom)
+            call s__AHSS___PlayerSelection_clearFrame(this)
+            call s__AHSS___PlayerSelection_newBar(this,0 , tex , size , t , left , bottom + size - t)
+            call s__AHSS___PlayerSelection_newBar(this,1 , tex , size , t , left , bottom)
+            call s__AHSS___PlayerSelection_newBar(this,2 , tex , t , size , left , bottom)
+            call s__AHSS___PlayerSelection_newBar(this,3 , tex , t , size , left + size - t , bottom)
         endfunction 
-        function s__AHSS__PlayerSelection_showFrame takes integer this,boolean flag returns nothing
+        function s__AHSS___PlayerSelection_showFrame takes integer this,boolean flag returns nothing
             local integer i= 0
-            set s__AHSS__PlayerSelection_frameVisible[this]=flag
+            set s__AHSS___PlayerSelection_frameVisible[this]=flag
             loop
                 exitwhen i > 3
-                if s___AHSS__PlayerSelection_bar[s__AHSS__PlayerSelection_bar[this]+i] != null then
-                    call ShowImage(s___AHSS__PlayerSelection_bar[s__AHSS__PlayerSelection_bar[this]+i], flag)
+                if s___AHSS___PlayerSelection_bar[s__AHSS___PlayerSelection_bar[this]+i] != null then
+                    call ShowImage(s___AHSS___PlayerSelection_bar[s__AHSS___PlayerSelection_bar[this]+i], flag)
                 endif
                 set i=i + 1
             endloop
         endfunction 
-        function s__AHSS__PlayerSelection_create takes integer whichPlayer,integer unitid,real x,real y,real red,real green,real blue returns integer
-            local integer this= s__AHSS__PlayerSelection__allocate()
-            set s__AHSS__PlayerSelection_whichPlayer[this]=whichPlayer
-            set s__AHSS__PlayerSelection_frameVisible[this]=true
-            set s__AHSS__PlayerSelection_frameX[this]=x
-            set s__AHSS__PlayerSelection_frameY[this]=y
-            call s__AHSS__PlayerSelection_drawFrame(this)
-            set s__AHSS__PlayerSelection_selectionBox[this]=CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), unitid, x, y, 270)
-            call h__SetUnitVertexColorBJ(s__AHSS__PlayerSelection_selectionBox[this], R2I(red * 100), R2I(green * 100), R2I(blue * 100), 0)
-            call UnitAddAbility(s__AHSS__PlayerSelection_selectionBox[this], 'Arav')
-            call UnitRemoveAbility(s__AHSS__PlayerSelection_selectionBox[this], 'Arav')
-            call SetUnitFlyHeight(s__AHSS__PlayerSelection_selectionBox[this], 760 + 12 - whichPlayer, 0)
-            call SetUnitX(s__AHSS__PlayerSelection_selectionBox[this], x)
-            call SetUnitY(s__AHSS__PlayerSelection_selectionBox[this], y)
-            set s__AHSS__PlayerSelection_row[this]=0
-            set s__AHSS__PlayerSelection_column[this]=0
+        function s__AHSS___PlayerSelection_create takes integer whichPlayer,integer unitid,real x,real y,real red,real green,real blue returns integer
+            local integer this= s__AHSS___PlayerSelection__allocate()
+            set s__AHSS___PlayerSelection_whichPlayer[this]=whichPlayer
+            set s__AHSS___PlayerSelection_frameVisible[this]=true
+            set s__AHSS___PlayerSelection_frameX[this]=x
+            set s__AHSS___PlayerSelection_frameY[this]=y
+            call s__AHSS___PlayerSelection_drawFrame(this)
+            set s__AHSS___PlayerSelection_selectionBox[this]=CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), unitid, x, y, 270)
+            call h__SetUnitVertexColorBJ(s__AHSS___PlayerSelection_selectionBox[this], R2I(red * 100), R2I(green * 100), R2I(blue * 100), 0)
+            call UnitAddAbility(s__AHSS___PlayerSelection_selectionBox[this], 'Arav')
+            call UnitRemoveAbility(s__AHSS___PlayerSelection_selectionBox[this], 'Arav')
+            call SetUnitFlyHeight(s__AHSS___PlayerSelection_selectionBox[this], 760 + 12 - whichPlayer, 0)
+            call SetUnitX(s__AHSS___PlayerSelection_selectionBox[this], x)
+            call SetUnitY(s__AHSS___PlayerSelection_selectionBox[this], y)
+            set s__AHSS___PlayerSelection_row[this]=0
+            set s__AHSS___PlayerSelection_column[this]=0
             return this
         endfunction
-        function s__AHSS__PlayerSelection_setRow takes integer this,integer whichRow returns nothing
-            set s__AHSS__PlayerSelection_row[this]=whichRow
+        function s__AHSS___PlayerSelection_setRow takes integer this,integer whichRow returns nothing
+            set s__AHSS___PlayerSelection_row[this]=whichRow
         endfunction 
-        function s__AHSS__PlayerSelection_setColumn takes integer this,integer whichColumn returns nothing
-            set s__AHSS__PlayerSelection_column[this]=whichColumn
+        function s__AHSS___PlayerSelection_setColumn takes integer this,integer whichColumn returns nothing
+            set s__AHSS___PlayerSelection_column[this]=whichColumn
         endfunction
-        function s__AHSS__PlayerSelection_setPos takes integer this,real x,real y returns nothing
-            call SetUnitPosition(s__AHSS__PlayerSelection_selectionBox[this], x, y)
-            set s__AHSS__PlayerSelection_frameX[this]=x
-            set s__AHSS__PlayerSelection_frameY[this]=y
-            call s__AHSS__PlayerSelection_drawFrame(this)
+        function s__AHSS___PlayerSelection_setPos takes integer this,real x,real y returns nothing
+            call SetUnitPosition(s__AHSS___PlayerSelection_selectionBox[this], x, y)
+            set s__AHSS___PlayerSelection_frameX[this]=x
+            set s__AHSS___PlayerSelection_frameY[this]=y
+            call s__AHSS___PlayerSelection_drawFrame(this)
         endfunction
-        function s__AHSS__PlayerSelection_setX takes integer this,real x returns nothing
-            call SetUnitX(s__AHSS__PlayerSelection_selectionBox[this], x)
-            set s__AHSS__PlayerSelection_frameX[this]=x
-            call s__AHSS__PlayerSelection_drawFrame(this)
+        function s__AHSS___PlayerSelection_setX takes integer this,real x returns nothing
+            call SetUnitX(s__AHSS___PlayerSelection_selectionBox[this], x)
+            set s__AHSS___PlayerSelection_frameX[this]=x
+            call s__AHSS___PlayerSelection_drawFrame(this)
         endfunction 
-        function s__AHSS__PlayerSelection_setY takes integer this,real y returns nothing
-            call SetUnitY(s__AHSS__PlayerSelection_selectionBox[this], y)
-            set s__AHSS__PlayerSelection_frameY[this]=y
-            call s__AHSS__PlayerSelection_drawFrame(this)
+        function s__AHSS___PlayerSelection_setY takes integer this,real y returns nothing
+            call SetUnitY(s__AHSS___PlayerSelection_selectionBox[this], y)
+            set s__AHSS___PlayerSelection_frameY[this]=y
+            call s__AHSS___PlayerSelection_drawFrame(this)
         endfunction
-        function s__AHSS__PlayerSelection_getRow takes integer this returns integer
-            return s__AHSS__PlayerSelection_row[this]
+        function s__AHSS___PlayerSelection_getRow takes integer this returns integer
+            return s__AHSS___PlayerSelection_row[this]
         endfunction 
-        function s__AHSS__PlayerSelection_getColumn takes integer this returns integer
-            return s__AHSS__PlayerSelection_column[this]
+        function s__AHSS___PlayerSelection_getColumn takes integer this returns integer
+            return s__AHSS___PlayerSelection_column[this]
         endfunction
-        function s__AHSS__PlayerSelection_getUnit takes integer this returns unit
-            return s__AHSS__PlayerSelection_selectionBox[this]
+        function s__AHSS___PlayerSelection_getUnit takes integer this returns unit
+            return s__AHSS___PlayerSelection_selectionBox[this]
         endfunction
-        function s__AHSS__PlayerSelection_destroy takes integer this returns nothing
-            call s__AHSS__PlayerSelection_clearFrame(this)
-            call RemoveUnit(s__AHSS__PlayerSelection_selectionBox[this])
-            set s__AHSS__PlayerSelection_selectionBox[this]=null
+        function s__AHSS___PlayerSelection_destroy takes integer this returns nothing
+            call s__AHSS___PlayerSelection_clearFrame(this)
+            call RemoveUnit(s__AHSS___PlayerSelection_selectionBox[this])
+            set s__AHSS___PlayerSelection_selectionBox[this]=null
         endfunction 
     
         //Images are always drawn below 3D models, so the hero model is moved up to sit above the icon grid.
@@ -143005,8 +143005,8 @@ endfunction
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
                     if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and ( GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and (s__AHSS_Options_bots[(s__AHSS_Graphics_options[this])]) ) ) then // INLINED!!
                         if not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+id] then
                             call sc__AHSS_Graphics_selectHeroRandom(this , id)
@@ -143033,12 +143033,12 @@ endfunction
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
                     if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and ( GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and (s__AHSS_Options_bots[(s__AHSS_Graphics_options[this])]) ) ) then // INLINED!!
-                        set index=(s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) // INLINED!!
-                        set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=s__AHSS__AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                        call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
+                        set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) // INLINED!!
+                        set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=s__AHSS___AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                        call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
                         set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=0
                         set pickDonator=false
                         if udg_DonatorHeroesEnabled[id + 1] and udg_DonatorHeroes[id + 1] > 0 then
@@ -143055,9 +143055,9 @@ endfunction
                             endif
                         endif
                         set bj_lastCreatedUnit=CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), s__s__AHSS_Graphics_availableHeroesId[index], GetRectCenterX(gg_rct_fonte), GetRectCenterY(gg_rct_fonte), 270)
-                        call SetUnitPosition(bj_lastCreatedUnit, GetRectCenterX((s__AHSS__Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))])), GetRectCenterY((s__AHSS__Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]))) // INLINED!!
+                        call SetUnitPosition(bj_lastCreatedUnit, GetRectCenterX((s__AHSS___Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))])), GetRectCenterY((s__AHSS___Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]))) // INLINED!!
                         call ResetToGameCameraForPlayer(Player(id), 0)
-                        call PanCameraToTimedForPlayer(Player(id), GetRectCenterX((s__AHSS__Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))])), GetRectCenterY((s__AHSS__Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))])), 0) // INLINED!!
+                        call PanCameraToTimedForPlayer(Player(id), GetRectCenterX((s__AHSS___Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))])), GetRectCenterY((s__AHSS___Team_spawningSpot[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))])), 0) // INLINED!!
                         call SelectUnitForPlayerSingle(bj_lastCreatedUnit, Player(id))
                         call SetUnitOwner(bj_lastCreatedUnit, Player(id), true)
 		                call ForceAddPlayer(udg_forces01[1], Player(id))
@@ -143088,8 +143088,8 @@ endfunction
         //------------------------------------------------------------------
         function s__AHSS_Graphics_hideSelection takes integer this,integer playerid returns nothing
             local integer i= playerid
-            call SetUnitScale((s__AHSS__PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]), 0, 0, 0) // INLINED!!
-            call s__AHSS__PlayerSelection_showFrame(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],false)
+            call SetUnitScale((s__AHSS___PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]), 0, 0, 0) // INLINED!!
+            call s__AHSS___PlayerSelection_showFrame(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],false)
             set s___AHSS_Graphics_isHidden[s__AHSS_Graphics_isHidden[this]+playerid]=true
 //textmacro instance: DESTROY_MODELS()
             if s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+i] != null then
@@ -143110,7 +143110,7 @@ endfunction
 //end of: DESTROY_MODELS()
 //textmacro instance: DESTROY_STAT("str", "Str") 
             if s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i])
                 set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+i] != null then
@@ -143120,7 +143120,7 @@ endfunction
 //end of: DESTROY_STAT("str", "Str") 
 //textmacro instance: DESTROY_STAT("agi", "Agi")
             if s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i])
                 set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+i] != null then
@@ -143130,7 +143130,7 @@ endfunction
 //end of: DESTROY_STAT("agi", "Agi")
 //textmacro instance: DESTROY_STAT("int", "Int")
             if s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i])
                 set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+i] != null then
@@ -143140,8 +143140,8 @@ endfunction
 //end of: DESTROY_STAT("int", "Int")
         endfunction 
         function s__AHSS_Graphics_showSelection takes integer this,integer playerid returns nothing
-            call SetUnitScale((s__AHSS__PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]), 0.60, 0.60, 0.50) // INLINED!!
-            call s__AHSS__PlayerSelection_showFrame(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],true)
+            call SetUnitScale((s__AHSS___PlayerSelection_selectionBox[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]), 0.60, 0.60, 0.50) // INLINED!!
+            call s__AHSS___PlayerSelection_showFrame(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],true)
             set s___AHSS_Graphics_isHidden[s__AHSS_Graphics_isHidden[this]+playerid]=false
         endfunction
         function s__AHSS_Graphics_createTeamIcon takes integer this,integer playerid,integer index,boolean remove returns nothing
@@ -143154,17 +143154,17 @@ endfunction
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    if (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == playerid then // INLINED!!
-                        set x=s__AHSS__AHSSIcon_x[s___AHSS__TeamIcon_icons[s__AHSS__TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]]
-                        set y=s__AHSS__AHSSIcon_y[s___AHSS__TeamIcon_icons[s__AHSS__TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]]
-                        call s__AHSS__AHSSIcon_remove(s___AHSS__TeamIcon_icons[s__AHSS__TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j])
+                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    if (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == playerid then // INLINED!!
+                        set x=s__AHSS___AHSSIcon_x[s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]]
+                        set y=s__AHSS___AHSSIcon_y[s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]]
+                        call s__AHSS___AHSSIcon_remove(s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j])
                         if remove then
-                            set s___AHSS__TeamIcon_icons[s__AHSS__TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=s__AHSS__AHSSIcon_create((s__AHSS__Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                            set s___AHSS__TeamIcon_iconsId[s__AHSS__TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=(s__AHSS__Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) // INLINED!!
+                            set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=s__AHSS___AHSSIcon_create((s__AHSS___Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                            set s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=(s__AHSS___Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) // INLINED!!
                         else
-                            set s___AHSS__TeamIcon_icons[s__AHSS__TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                            set s___AHSS__TeamIcon_iconsId[s__AHSS__TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=(s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) // INLINED!!
+                            set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                            set s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=(s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) // INLINED!!
                         endif
                         return
                     endif
@@ -143181,28 +143181,28 @@ endfunction
             loop
                 exitwhen i > s__AHSS_Configurations_MAX_SLOTS
                 if s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i] != 0 then
-                    call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i])
+                    call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i])
                     set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i]=0
                 endif
                 if s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i] != 0 then
-                    call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i])
+                    call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i])
                     set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i]=0
                 endif
                 set i=i + 1
             endloop
             if s__AHSS_Graphics_randomIcon[this] != 0 then
-                call s__AHSS__AHSSIcon_remove(s__AHSS_Graphics_randomIcon[this])
+                call s__AHSS___AHSSIcon_remove(s__AHSS_Graphics_randomIcon[this])
                 set s__AHSS_Graphics_randomIcon[this]=0
             endif
             set i=0
             loop
                 exitwhen i >= 9
                 if s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+i] != 0 then
-                    call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+i])
+                    call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+i])
                     set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+i]=0
                 endif
                 if s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+i] != 0 then
-                    call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+i])
+                    call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+i])
                     set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+i]=0
                 endif
                 set i=i + 1
@@ -143215,7 +143215,7 @@ endfunction
             loop
                 exitwhen i > 11
                 if s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+i] != 0 then
-                    call s__AHSS__PlayerSelection_destroy(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+i])
+                    call s__AHSS___PlayerSelection_destroy(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+i])
                 endif
                 if s___AHSS_Graphics_modifier[s__AHSS_Graphics_modifier[this]+i] != null then
                     call FogModifierStop(s___AHSS_Graphics_modifier[s__AHSS_Graphics_modifier[this]+i])
@@ -143241,7 +143241,7 @@ endfunction
 //end of: DESTROY_MODELS()
 //textmacro instance: DESTROY_STAT("str", "Str") 
             if s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i])
                 set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+i] != null then
@@ -143251,7 +143251,7 @@ endfunction
 //end of: DESTROY_STAT("str", "Str") 
 //textmacro instance: DESTROY_STAT("agi", "Agi")
             if s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i])
                 set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+i] != null then
@@ -143261,7 +143261,7 @@ endfunction
 //end of: DESTROY_STAT("agi", "Agi")
 //textmacro instance: DESTROY_STAT("int", "Int")
             if s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i])
                 set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+i] != null then
@@ -143290,9 +143290,9 @@ endfunction
                 set x=GetUnitX(s__AHSS_Graphics_dummy[this]) - 100
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    call s__AHSS__AHSSIcon_remove(s___AHSS__TeamIcon_icons[s__AHSS__TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j])
-                    set s___AHSS__TeamIcon_icons[s__AHSS__TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=s__AHSS__AHSSIcon_create(s___AHSS__TeamIcon_iconsId[s__AHSS__TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j] , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) * 2) // INLINED!!
+                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    call s__AHSS___AHSSIcon_remove(s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j])
+                    set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=s__AHSS___AHSSIcon_create(s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j] , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) * 2) // INLINED!!
                     set x=x + iconSize * 2
                     set j=j + 1
                 endloop
@@ -143307,8 +143307,8 @@ endfunction
                 call SetTextTagPos(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], x, y, 0)
                 set i=i + 1
             endloop
-            set s__AHSS_Graphics_versus1[this]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_versus[(s__AHSS_Graphics_paths[this])]) , GetUnitX(s__AHSS_Graphics_dummy[this]) + 50 , GetUnitY(s__AHSS_Graphics_dummy[this]) - 180 , 2.5) // INLINED!!
-            set s__AHSS_Graphics_versus2[this]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_versus[(s__AHSS_Graphics_paths[this])]) , GetUnitX(s__AHSS_Graphics_dummy[this]) + 50 , GetUnitY(s__AHSS_Graphics_dummy[this]) - 495 , 2.5) // INLINED!!
+            set s__AHSS_Graphics_versus1[this]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_versus[(s__AHSS_Graphics_paths[this])]) , GetUnitX(s__AHSS_Graphics_dummy[this]) + 50 , GetUnitY(s__AHSS_Graphics_dummy[this]) - 180 , 2.5) // INLINED!!
+            set s__AHSS_Graphics_versus2[this]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_versus[(s__AHSS_Graphics_paths[this])]) , GetUnitX(s__AHSS_Graphics_dummy[this]) + 50 , GetUnitY(s__AHSS_Graphics_dummy[this]) - 495 , 2.5) // INLINED!!
         endfunction 
         function s__AHSS_Graphics_loopMethodAllPick takes integer this returns nothing
             set s__AHSS_Graphics_allowPick[this]=true
@@ -143344,8 +143344,8 @@ endfunction
                     exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                     set j=0
                     loop
-                        exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                        set id=(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                        exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                        set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
                         if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(Player(id)) == MAP_CONTROL_USER then
                             call s__AHSS_Graphics_showSelection(this , id)
                         endif
@@ -143386,9 +143386,9 @@ endfunction
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    if GetPlayerController(Player((s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == MAP_CONTROL_USER and GetPlayerSlotState(Player((s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == PLAYER_SLOT_STATE_PLAYING then // INLINED!!
-                        if not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])] then // INLINED!!
+                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    if GetPlayerController(Player((s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == MAP_CONTROL_USER and GetPlayerSlotState(Player((s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == PLAYER_SLOT_STATE_PLAYING then // INLINED!!
+                        if not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])] then // INLINED!!
                             return false
                         endif
                     endif
@@ -143406,9 +143406,9 @@ endfunction
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    if GetPlayerController(Player((s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == MAP_CONTROL_USER and GetPlayerSlotState(Player((s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == PLAYER_SLOT_STATE_PLAYING then // INLINED!!
-                        if not s___AHSS_Graphics_draftUsed[s__AHSS_Graphics_draftUsed[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])] then // INLINED!!
+                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    if GetPlayerController(Player((s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == MAP_CONTROL_USER and GetPlayerSlotState(Player((s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]))) == PLAYER_SLOT_STATE_PLAYING then // INLINED!!
+                        if not s___AHSS_Graphics_draftUsed[s__AHSS_Graphics_draftUsed[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])] then // INLINED!!
                             return false
                         endif
                     endif
@@ -143455,12 +143455,12 @@ endfunction
                     exitwhen s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+random] != 0 and s__s__AHSS_Graphics_availableHeroesAttribute[random] == s__s__AHSS_Graphics_playersAttribute[id]
                 endloop
                 call sc__AHSS_Graphics_showHero(this , id , random)
-                set s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random / (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random / (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])) // INLINED!!
                 loop
                     exitwhen random < (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) // INLINED!!
                     set random=random - (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) // INLINED!!
                 endloop
-                set s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random) // INLINED!!
+                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random) // INLINED!!
                 call sc__AHSS_Graphics_updateCursor(this , id)
                 call sc__AHSS_Graphics_pressEscActions(this , id)
             endif
@@ -143469,12 +143469,12 @@ endfunction
             local integer index
             if not s__AHSS_Graphics_gameStarted[this] then
                 if s__AHSS_Graphics_dummy[this] != null and IsPlayerInForce(Player(id), s__AHSS_Graphics_cameraForce) then
-                    if (s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) == - 1 then // INLINED!!
+                    if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) == - 1 then // INLINED!!
                         if s__AHSS_Graphics_allowPick[this] then
                             call s__AHSS_Graphics_selectHeroRandom(this , id)
                         endif
                     else
-                        set index=(s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) // INLINED!!
+                        set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) // INLINED!!
                         if s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index] == 0 then
                             if GetLocalPlayer() == GetTriggerPlayer() then
                                 call PlaySoundBJ((s__AHSS_Options_error[(s__AHSS_Graphics_options[this])])) // INLINED!!
@@ -143486,8 +143486,8 @@ endfunction
                                 if GetLocalPlayer() == GetTriggerPlayer() then
                                     call PlaySoundBJ((s__AHSS_Options_ok[(s__AHSS_Graphics_options[this])])) // INLINED!!
                                 endif
-                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=s__AHSS__AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
+                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=s__AHSS___AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
                                 set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=0
                                 set s__s__AHSS_Graphics_availableHeroes[index]= false
                                 set s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+id]=true
@@ -143499,8 +143499,8 @@ endfunction
                                 endif
                                 call s__AHSS_Graphics_showSelection(this , id)
                                 call s__AHSS_Graphics_createTeamIcon(this , id , index , false)
-                                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=s__AHSS__AHSSIcon_createRaised((s__AHSS__Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index])
+                                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=s__AHSS___AHSSIcon_createRaised((s__AHSS___Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index])
                                 set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=0
                                 set s__s__AHSS_Graphics_availableHeroes[index]= true
                                 call sc__AHSS_Graphics_showHero(this , id , index)
@@ -143514,24 +143514,24 @@ endfunction
                                 set s___AHSS_Graphics_draftUsed[s__AHSS_Graphics_draftUsed[this]+id]=true
                                 
                                 if ( id == 4 or id == 5 or id == 6 ) then
-                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS__AHSSIcon_create((s__AHSS__Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                    call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1])
+                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS___AHSSIcon_create((s__AHSS___Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1])
                                     set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1]=0
                                     set s__AHSS_Graphics_countBanned[this]=s__AHSS_Graphics_countBanned[this] + 1
                                 elseif ( id == 8 or id == 9 or id == 10 ) then
-                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS__AHSSIcon_create((s__AHSS__Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                    call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2])
+                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS___AHSSIcon_create((s__AHSS___Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2])
                                     set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2]=0
                                     set s__AHSS_Graphics_countBanned[this]=s__AHSS_Graphics_countBanned[this] + 1
                                 else
-                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS__AHSSIcon_create((s__AHSS__Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                    call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id])
+                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS___AHSSIcon_create((s__AHSS___Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id])
                                     set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id]=0
                                     set s__AHSS_Graphics_countBanned[this]=s__AHSS_Graphics_countBanned[this] + 1
                                 endif
 
-                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=s__AHSS__AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
+                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=s__AHSS___AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
                                 set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=0
                                 set s__s__AHSS_Graphics_availableHeroes[index]= false
                                 call s__AHSS_Graphics_hideSelection(this , id)
@@ -143560,83 +143560,83 @@ endfunction
             local integer index
             if s__AHSS_Graphics_dummy[this] != null and s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid] != 0 and IsPlayerInForce(Player(playerid), s__AHSS_Graphics_cameraForce) and (s__ArrowKey_eventKeyPressed) and not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+playerid] then // INLINED!!
                 call sc__AHSS_Graphics_moveCursor(this , playerid)
-                set index=(s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
+                set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
                 call sc__AHSS_Graphics_showHero(this , playerid , index)
             endif
         endfunction 
         
         function s__AHSS_Graphics_moveLeft takes integer this,integer playerid,integer index returns nothing
             local integer i
-            if (s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == 0 then // INLINED!!
+            if (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == 0 then // INLINED!!
                 set i=0
                 loop
                     exitwhen i >= ( (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) - 1 ) or ( s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index + i] == 0 and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index + i] == 0 ) // INLINED!!
                     set i=i + 1
                 endloop
-                set s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(i) // INLINED!!
+                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(i) // INLINED!!
             else
-                set s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) - 1) // INLINED!!
+                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) - 1) // INLINED!!
             endif
         endfunction
         
         function s__AHSS_Graphics_moveRight takes integer this,integer playerid,integer index returns nothing
             local integer i
-            if (s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) >= ( (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) - 1 ) or ( s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index + 1] == 0 and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index + 1] == 0 ) then // INLINED!!
-                set s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(0) // INLINED!!
+            if (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) >= ( (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) - 1 ) or ( s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index + 1] == 0 and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index + 1] == 0 ) then // INLINED!!
+                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(0) // INLINED!!
             else
-                set s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) + 1) // INLINED!!
+                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) + 1) // INLINED!!
             endif
         endfunction
         
         function s__AHSS_Graphics_moveDown takes integer this,integer playerid,integer index returns nothing
             local integer i
-            if (s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
-                set s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(0) // INLINED!!
+            if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
+                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(0) // INLINED!!
                 set i=0
                 loop
                     exitwhen i >= (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) or ( s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i] == 0 and s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i] == 0 ) // INLINED!!
                     set i=i + 1
                 endloop
-                set s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(( i - 1 ) / 2) // INLINED!!
+                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(( i - 1 ) / 2) // INLINED!!
             elseif s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index + (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])] == 0 and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index + (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])] == 0 then // INLINED!!
-                set s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(- 1) // INLINED!!
+                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(- 1) // INLINED!!
             else
-                set s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) + 1) // INLINED!!
+                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) + 1) // INLINED!!
             endif
         endfunction
         
         function s__AHSS_Graphics_moveUp takes integer this,integer playerid,integer index returns nothing
             local integer i
-            if (s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == 0 then // INLINED!!
-                set s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(- 1) // INLINED!!
-            elseif (s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
+            if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == 0 then // INLINED!!
+                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(- 1) // INLINED!!
+            elseif (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
                 set i=0
                 loop
                     exitwhen s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])] == 0 and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])] == 0 // INLINED!!
                     set i=i + 1
                 endloop
-                set s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(i - 1) // INLINED!!
+                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(i - 1) // INLINED!!
                 set i=0
                 loop
-                    exitwhen s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+(s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + i] == 0 and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+(s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + i] == 0 // INLINED!!
+                    exitwhen s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + i] == 0 and s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + i] == 0 // INLINED!!
                     set i=i + 1
                 endloop
-                set s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(( i - 1 ) / 2) // INLINED!!
+                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=(( i - 1 ) / 2) // INLINED!!
             else
-                set s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) - 1) // INLINED!!
+                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]=((s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) - 1) // INLINED!!
             endif
         endfunction
         
         function s__AHSS_Graphics_updateCursor takes integer this,integer playerid returns nothing
-            local integer index= (s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
+            local integer index= (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
             local integer i
-            if (s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
-                call s__AHSS__PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS__AHSSIcon_x[s__AHSS_Graphics_randomIcon[this]] , s__AHSS__AHSSIcon_y[s__AHSS_Graphics_randomIcon[this]])
+            if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
+                call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS___AHSSIcon_x[s__AHSS_Graphics_randomIcon[this]] , s__AHSS___AHSSIcon_y[s__AHSS_Graphics_randomIcon[this]])
             else
                 if s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index] != 0 then
-                    call s__AHSS__PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS__AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]])
+                    call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS___AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]])
                 else
-                    call s__AHSS__PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS__AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]])
+                    call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS___AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]])
                 endif
             endif
             if GetLocalPlayer() == Player(playerid) then
@@ -143650,7 +143650,7 @@ endfunction
             if s___AHSS_Graphics_isHidden[s__AHSS_Graphics_isHidden[this]+playerid] or ( not s__AHSS_Graphics_allowPick[this] and not s__AHSS_Graphics_draftPick[this] ) then
                 return
             endif
-            set index=(s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
+            set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
             if (s__ArrowKey_eventKey) == 0 then // INLINED!!
                 call s__AHSS_Graphics_moveLeft(this , playerid , index)
             elseif (s__ArrowKey_eventKey) == 1 then // INLINED!!
@@ -143701,7 +143701,7 @@ endfunction
 //end of: DESTROY_MODELS()
 //textmacro instance: DESTROY_STAT("str", "Str") 
             if s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i])
                 set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+i] != null then
@@ -143711,7 +143711,7 @@ endfunction
 //end of: DESTROY_STAT("str", "Str") 
 //textmacro instance: DESTROY_STAT("agi", "Agi")
             if s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i])
                 set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+i] != null then
@@ -143721,7 +143721,7 @@ endfunction
 //end of: DESTROY_STAT("agi", "Agi")
 //textmacro instance: DESTROY_STAT("int", "Int")
             if s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i])
                 set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+i] != null then
@@ -143736,15 +143736,15 @@ endfunction
                 if GetLocalPlayer() != Player(playerid) then
                     set s=""
                 else
-                    set s=(s__AHSS__Hero_modelPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) // INLINED!!
+                    set s=(s__AHSS___Hero_modelPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) // INLINED!!
                 endif
                 set s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid]=AddSpecialEffect(s, x - 100, y + s__AHSS_Graphics_MODEL_Y_OFFSET)
                 call BlzSetSpecialEffectHeight(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], 100)
                 call BlzSetSpecialEffectPitch(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], Deg2Rad(- 90))
                 call BlzSetSpecialEffectYaw(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], Deg2Rad(270))
-                call BlzSetSpecialEffectScale(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], ( 2.0 + (s__AHSS__Hero_modelScale[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) ) * s__AHSS_Graphics_MODEL_SCALE_FACTOR) // INLINED!!
+                call BlzSetSpecialEffectScale(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], ( 2.0 + (s__AHSS___Hero_modelScale[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) ) * s__AHSS_Graphics_MODEL_SCALE_FACTOR) // INLINED!!
                 //call BlzPlaySpecialEffect(this.heroesModels[playerid], ANIM_TYPE_SPELL)
-                if (s__AHSS__Hero_modelAlternate[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+                if (s__AHSS___Hero_modelAlternate[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
                     call BlzSpecialEffectAddSubAnimation(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], SUBANIM_TYPE_ALTERNATE_EX)
                     call BlzPlaySpecialEffect(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], ANIM_TYPE_STAND)
                 endif
@@ -143752,23 +143752,23 @@ endfunction
                 set x=x + 600
                 set y=y + 500
                 set s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], (s__AHSS__Hero_name[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(16)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], (s__AHSS___Hero_name[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(16)) // INLINED!!
                 call SetTextTagPos(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], 255, 255, 255, 255)
                 //CREATE STATS INFO
                 set y=y - 100
-                set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_strength[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_strength[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
                 set y=y - s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) - 10 // INLINED!!
-                set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_agility[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_agility[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
                 set y=y - s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) - 10 // INLINED!!
-                set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_intelligence[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_intelligence[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
 //textmacro instance: STAT_TEXT("str", "Str")
-            set x=s__AHSS__AHSSIcon_x[s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]] + 50
-            set y=s__AHSS__AHSSIcon_y[s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]] - 15
+            set x=s__AHSS___AHSSIcon_x[s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]] + 50
+            set y=s__AHSS___AHSSIcon_y[s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]] - 15
             set s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], I2S(R2I((s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS__Hero_strengthLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], I2S(R2I((s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_strengthLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
             call SetTextTagPos(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], x, y, 0)
-            if (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
                 call SetTextTagColor(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], 255, 255, 255, 255)
@@ -143778,17 +143778,17 @@ endfunction
                     call SetTextTagVisibility(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], false)
                 endif
                 if s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid] != 0 then
-                    call s__AHSS__AHSSIcon_show(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid],false)
+                    call s__AHSS___AHSSIcon_show(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid],false)
                 endif
             endif
 //end of: STAT_TEXT("str", "Str")
 //textmacro instance: STAT_TEXT("agi", "Agi")
-            set x=s__AHSS__AHSSIcon_x[s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]] + 50
-            set y=s__AHSS__AHSSIcon_y[s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]] - 15
+            set x=s__AHSS___AHSSIcon_x[s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]] + 50
+            set y=s__AHSS___AHSSIcon_y[s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]] - 15
             set s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], I2S(R2I((s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS__Hero_agilityLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], I2S(R2I((s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_agilityLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
             call SetTextTagPos(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], x, y, 0)
-            if (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
                 call SetTextTagColor(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], 255, 255, 255, 255)
@@ -143798,17 +143798,17 @@ endfunction
                     call SetTextTagVisibility(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], false)
                 endif
                 if s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid] != 0 then
-                    call s__AHSS__AHSSIcon_show(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid],false)
+                    call s__AHSS___AHSSIcon_show(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid],false)
                 endif
             endif
 //end of: STAT_TEXT("agi", "Agi")
 //textmacro instance: STAT_TEXT("int", "Int")
-            set x=s__AHSS__AHSSIcon_x[s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]] + 50
-            set y=s__AHSS__AHSSIcon_y[s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]] - 15
+            set x=s__AHSS___AHSSIcon_x[s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]] + 50
+            set y=s__AHSS___AHSSIcon_y[s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]] - 15
             set s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], I2S(R2I((s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS__Hero_intelligenceLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], I2S(R2I((s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_intelligenceLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
             call SetTextTagPos(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], x, y, 0)
-            if (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
                 call SetTextTagColor(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], 255, 255, 255, 255)
@@ -143818,15 +143818,15 @@ endfunction
                     call SetTextTagVisibility(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], false)
                 endif
                 if s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid] != 0 then
-                    call s__AHSS__AHSSIcon_show(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid],false)
+                    call s__AHSS___AHSSIcon_show(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid],false)
                 endif
             endif
 //end of: STAT_TEXT("int", "Int")
                 //CREATE HERO INFO 
                 set x=x - 100
-                set y=y - 200 - ( 20 * s__AHSS_Graphics_countLines((s__AHSS__Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])) ) // INLINED!!
+                set y=y - 200 - ( 20 * s__AHSS_Graphics_countLines((s__AHSS___Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])) ) // INLINED!!
                 set s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], (s__AHSS__Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(9)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], (s__AHSS___Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(9)) // INLINED!!
                 call SetTextTagPos(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], 255, 255, 255, 255)
                 //HIDE INFO FROM OTHER PLAYERS
@@ -143879,14 +143879,14 @@ endfunction
             set i=0
             loop
                 exitwhen i > ( (s__AHSS_Heroes_count[(s__AHSS_Graphics_heroes[this])]) - 1 ) // INLINED!!
-                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i]=s__AHSS__AHSSIcon_createRaised((s__AHSS__Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i])
+                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+i]=s__AHSS___AHSSIcon_createRaised((s__AHSS___Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i])
                 set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+i]=0
                 set s__s__AHSS_Graphics_availableHeroes[i]= true
-                set s__s__AHSS_Graphics_availableHeroesId[i]= (s__AHSS__Hero_heroid[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) // INLINED!!
-                if (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) and (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) then // INLINED!!
+                set s__s__AHSS_Graphics_availableHeroesId[i]= (s__AHSS___Hero_heroid[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) // INLINED!!
+                if (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) and (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) then // INLINED!!
                     set s__s__AHSS_Graphics_availableHeroesAttribute[i]= 0
-                elseif (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) and (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) then // INLINED!!
+                elseif (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) and (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(i)]))]) then // INLINED!!
                     set s__s__AHSS_Graphics_availableHeroesAttribute[i]= 1
                 else
                     set s__s__AHSS_Graphics_availableHeroesAttribute[i]= 2
@@ -143907,14 +143907,14 @@ endfunction
             set i=0
             loop
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
-                set s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]=s__AHSS__TeamIcon__allocate()
+                set s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]=s__AHSS___TeamIcon__allocate()
                 set y=y - ( s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) ) - iconSize // INLINED!!
                 set x=GetUnitX(s__AHSS_Graphics_dummy[this]) - 950
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set s___AHSS__TeamIcon_icons[s__AHSS__TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                    set s___AHSS__TeamIcon_iconsId[s__AHSS__TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=(s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) // INLINED!!
+                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    set s___AHSS___TeamIcon_icons[s__AHSS___TeamIcon_icons[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                    set s___AHSS___TeamIcon_iconsId[s__AHSS___TeamIcon_iconsId[s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i]]+j]=(s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) // INLINED!!
                     set x=x + iconSize
                     set j=j + 1
                 endloop
@@ -143930,7 +143930,7 @@ endfunction
                 set y=y - s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) // INLINED!!
                 loop
                     exitwhen j > 2
-                    set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+count]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                    set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+count]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
                     set count=count + 1
                     set x=x + iconSize
                     set j=j + 1
@@ -143953,7 +143953,7 @@ endfunction
                 set i=0
                 loop
                     exitwhen i > ( iconsByLine - 1 )
-                    set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+row * iconsByLine + i]=s__AHSS__AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                    set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+row * iconsByLine + i]=s__AHSS___AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
                     set x=x + iconSize
                     set i=i + 1
                 endloop
@@ -143965,7 +143965,7 @@ endfunction
             set i=0
             loop
                 exitwhen i > ( count - 1 )
-                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+row * iconsByLine + i]=s__AHSS__AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , x , y , scale) // INLINED!!
+                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+row * iconsByLine + i]=s__AHSS___AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , x , y , scale) // INLINED!!
                 set x=x + iconSize
                 set i=i + 1
             endloop
@@ -143973,7 +143973,7 @@ endfunction
                 set y=y - iconSize
             endif
             set x=GetUnitX(s__AHSS_Graphics_dummy[this]) - ( iconSize / 2 )
-            set s__AHSS_Graphics_randomIcon[this]=s__AHSS__AHSSIcon_createRaised((s__AHSS_Paths_randomIcon[(s__AHSS_Graphics_paths[this])]) , x , y , scale) // INLINED!!
+            set s__AHSS_Graphics_randomIcon[this]=s__AHSS___AHSSIcon_createRaised((s__AHSS_Paths_randomIcon[(s__AHSS_Graphics_paths[this])]) , x , y , scale) // INLINED!!
         endfunction 
         function s__AHSS_Graphics_CreateImageEx takes integer this,string imagePath,real size,real x,real y,real z,boolean showImage returns image
             local image i= CreateImage(imagePath, size, size, 0, x - ( size / 2 ), y - ( size / 2 ), z, 0, 0, 0, 2)
@@ -143982,13 +143982,13 @@ endfunction
             return i
         endfunction
         function s__AHSS_Graphics_createImages takes integer this returns nothing
-            call s__AHSS__AHSSIcon_setCenter(GetUnitX(s__AHSS_Graphics_dummy[this]) , GetUnitY(s__AHSS_Graphics_dummy[this]))
+            call s__AHSS___AHSSIcon_setCenter(GetUnitX(s__AHSS_Graphics_dummy[this]) , GetUnitY(s__AHSS_Graphics_dummy[this]))
             if s__AHSS_Graphics_backgroundImg[this] == null then
 				set s__AHSS_Graphics_backgroundImg[this]=s__AHSS_Graphics_CreateImageEx(this,(s__AHSS_Paths_background[(s__AHSS_Graphics_paths[this])]) , 2900 , GetUnitX(s__AHSS_Graphics_dummy[this]) , GetUnitY(s__AHSS_Graphics_dummy[this]) , 700 , true) // INLINED!!
                 call SetImageColor(s__AHSS_Graphics_backgroundImg[this], 100, 100, 100, 255)
             endif
             if s__AHSS_Graphics_logoImg[this] == 0 then
-                set s__AHSS_Graphics_logoImg[this]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_logo[(s__AHSS_Graphics_paths[this])]) , GetUnitX(s__AHSS_Graphics_dummy[this]) , GetUnitY(s__AHSS_Graphics_dummy[this]) + 75 , 6.0) // INLINED!!
+                set s__AHSS_Graphics_logoImg[this]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_logo[(s__AHSS_Graphics_paths[this])]) , GetUnitX(s__AHSS_Graphics_dummy[this]) , GetUnitY(s__AHSS_Graphics_dummy[this]) + 75 , 6.0) // INLINED!!
             endif
         endfunction
         function s__AHSS_Graphics_createIcons takes integer this returns nothing
@@ -144006,8 +144006,8 @@ endfunction
                     exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                     set j=0
                     loop
-                        exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                        set id=(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                        exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                        set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
                         if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(Player(id)) == MAP_CONTROL_USER then
                             call s__AHSS_Graphics_showHero(this , i , 0)
                         endif
@@ -144025,7 +144025,7 @@ endfunction
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                 set y=y - ( 128 * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) ) - 10 // INLINED!!
                 set s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], (s__AHSS__Team_name[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]), TextTagSize2Height(12)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], (s__AHSS___Team_name[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]), TextTagSize2Height(12)) // INLINED!!
                 call SetTextTagPos(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], 255, 255, 255, 255)
                 set i=i + 1
@@ -144043,66 +144043,66 @@ endfunction
             local integer count= 0
             local integer id
             if s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]] != 0 then
-                set x=s__AHSS__AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]]]
-                set y=s__AHSS__AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]]]
+                set x=s__AHSS___AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]]]
+                set y=s__AHSS___AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]]]
             else
-                set x=s__AHSS__AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]]]
-                set y=s__AHSS__AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]]]
+                set x=s__AHSS___AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]]]
+                set y=s__AHSS___AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]]]
             endif
             set i=0
             loop
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
                     if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING then
                         if GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and (s__AHSS_Options_bots[(s__AHSS_Graphics_options[this])]) ) then // INLINED!!
-                            if (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 0 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(0 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.01 , 0.01) // INLINED!!
+                            if (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 0 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(0 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.01 , 0.01) // INLINED!!
 //textmacro instance: COND("1", "0.00","0.25","1.00")
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 1 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(1 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.00 , 0.25 , 1.00) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 1 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(1 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.00 , 0.25 , 1.00) // INLINED!!
 //end of: COND("1", "0.00","0.25","1.00")
 //textmacro instance: COND("2", "0.09","0.90","0.70")
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 2 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(2 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.09 , 0.90 , 0.70) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 2 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(2 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.09 , 0.90 , 0.70) // INLINED!!
 //end of: COND("2", "0.09","0.90","0.70")
 //textmacro instance: COND("3", "0.32","0.00","0.50")
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 3 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(3 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.32 , 0.00 , 0.50) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 3 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(3 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.32 , 0.00 , 0.50) // INLINED!!
 //end of: COND("3", "0.32","0.00","0.50")
 //textmacro instance: COND("4", "1.00","0.98","0.40")
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 4 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(4 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.98 , 0.40) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 4 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(4 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.98 , 0.40) // INLINED!!
 //end of: COND("4", "1.00","0.98","0.40")
 //textmacro instance: COND("5", "0.99","0.72","0.05")
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 5 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(5 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.99 , 0.72 , 0.05) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 5 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(5 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.99 , 0.72 , 0.05) // INLINED!!
 //end of: COND("5", "0.99","0.72","0.05")
 //textmacro instance: COND("6", "0.12","0.75","0.00")
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 6 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(6 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.12 , 0.75 , 0.00) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 6 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(6 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.12 , 0.75 , 0.00) // INLINED!!
 //end of: COND("6", "0.12","0.75","0.00")
 //textmacro instance: COND("7", "0.89","0.35","0.69")
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 7 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(7 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.89 , 0.35 , 0.69) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 7 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(7 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.89 , 0.35 , 0.69) // INLINED!!
 //end of: COND("7", "0.89","0.35","0.69")
 //textmacro instance: COND("8", "0.58","0.58","0.58")
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 8 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(8 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.58 , 0.58 , 0.58) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 8 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(8 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.58 , 0.58 , 0.58) // INLINED!!
 //end of: COND("8", "0.58","0.58","0.58")
 //textmacro instance: COND("9", "0.49","0.74","0.94")
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 9 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(9 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.49 , 0.74 , 0.94) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 9 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(9 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.49 , 0.74 , 0.94) // INLINED!!
 //end of: COND("9", "0.49","0.74","0.94")
 //textmacro instance: COND("10","0.06","0.38","0.27")
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 10 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(10 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.06 , 0.38 , 0.27) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 10 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(10 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.06 , 0.38 , 0.27) // INLINED!!
 //end of: COND("10","0.06","0.38","0.27")
 //textmacro instance: COND("11","0.30","0.16","0.01")
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 11 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(11 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.30 , 0.16 , 0.01) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 11 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(11 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.30 , 0.16 , 0.01) // INLINED!!
 //end of: COND("11","0.30","0.16","0.01")
                             endif
                         endif
@@ -144124,8 +144124,8 @@ endfunction
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
                     if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING then
                         if GetPlayerController(Player(id)) == MAP_CONTROL_USER then
                             if allRandom then
@@ -144158,21 +144158,21 @@ endfunction
                 call DestroyImage(s__AHSS_Graphics_backgroundImg[this])
             //endif
             if s__AHSS_Graphics_versus1[this] != 0 then
-                call s__AHSS__AHSSIcon_remove(s__AHSS_Graphics_versus1[this])
+                call s__AHSS___AHSSIcon_remove(s__AHSS_Graphics_versus1[this])
                 set s__AHSS_Graphics_versus1[this]=0
             endif
             if s__AHSS_Graphics_versus2[this] != 0 then
-                call s__AHSS__AHSSIcon_remove(s__AHSS_Graphics_versus2[this])
+                call s__AHSS___AHSSIcon_remove(s__AHSS_Graphics_versus2[this])
                 set s__AHSS_Graphics_versus2[this]=0
             endif
             if s__AHSS_Graphics_logoImg[this] != 0 then
-                call s__AHSS__AHSSIcon_remove(s__AHSS_Graphics_logoImg[this])
+                call s__AHSS___AHSSIcon_remove(s__AHSS_Graphics_logoImg[this])
                 set s__AHSS_Graphics_logoImg[this]=0
             endif
             set i=0
             loop
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
-                call s__AHSS__TeamIcon_destroy(s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i])
+                call s__AHSS___TeamIcon_destroy(s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i])
                 call DestroyTextTag(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i])
                 set s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i]=null
                 set i=i + 1
@@ -147438,7 +147438,7 @@ endfunction
 
         
         
-        function s__TeamMatching__System_removeShadowMeld takes nothing returns nothing
+        function s__TeamMatching___System_removeShadowMeld takes nothing returns nothing
             local integer i= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             call UnitRemoveAbility(udg_units33[i + 1], 'Ashm')
             call SetPlayerAbilityAvailable(Player(i), 'A0AO', true)
@@ -147447,17 +147447,17 @@ endfunction
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__TeamMatching__System_actions takes nothing returns nothing
+        function s__TeamMatching___System_actions takes nothing returns nothing
             local integer id= GetUnitTypeId(GetEnteringUnit())
             local integer i
             local integer team
 	    if udg_DraftPickAR == true then
 		return
 	    endif
-            if s__s__TeamMatching__System_PLAYER_COUNT[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] then
+            if s__s__TeamMatching___System_PLAYER_COUNT[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] then
                 return
             endif
-            set s__s__TeamMatching__System_PLAYER_COUNT[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))]= true
+            set s__s__TeamMatching___System_PLAYER_COUNT[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))]= true
             if IsPlayerAlly(GetOwningPlayer(GetEnteringUnit()), Player(3)) then
                 set team=0
             elseif IsPlayerAlly(GetOwningPlayer(GetEnteringUnit()), Player(7)) then
@@ -147466,73 +147466,73 @@ endfunction
                 set team=2
             endif
             if id == 'Hblm' or id == 'O000' or id == 'N00J' then
-                set s__s__TeamMatching__System_TEAM_10_COUNTER[team]= s__s__TeamMatching__System_TEAM_10_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_10_COUNTER[team]= s__s__TeamMatching___System_TEAM_10_COUNTER[team] + 1
                 if id == 'N00J' then
-                    set s__s__TeamMatching__System_MEDICAL_TEAM_COUNTER[team]= s__s__TeamMatching__System_MEDICAL_TEAM_COUNTER[team] + 1
+                    set s__s__TeamMatching___System_MEDICAL_TEAM_COUNTER[team]= s__s__TeamMatching___System_MEDICAL_TEAM_COUNTER[team] + 1
                 endif
             elseif id == 'H033' or id == 'N00P' or id == 'H03L' then
-                set s__s__TeamMatching__System_TEAM_HOKAGE_COUNTER[team]= s__s__TeamMatching__System_TEAM_HOKAGE_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_HOKAGE_COUNTER[team]= s__s__TeamMatching___System_TEAM_HOKAGE_COUNTER[team] + 1
             elseif id == 'E000' or id == 'H00Y' or id == 'Hmkg' then
-                set s__s__TeamMatching__System_TEAM_9_COUNTER[team]= s__s__TeamMatching__System_TEAM_9_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_9_COUNTER[team]= s__s__TeamMatching___System_TEAM_9_COUNTER[team] + 1
             elseif id == 'H07E' or id == 'H07B' or id == 'E00V' or id == 'U00J' or id == 'U00H' or id == 'O006' then
-                set s__s__TeamMatching__System_TEAM_7_COUNTER[team]= s__s__TeamMatching__System_TEAM_7_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_7_COUNTER[team]= s__s__TeamMatching___System_TEAM_7_COUNTER[team] + 1
                 if id == 'E00V' then
-                    set s__s__TeamMatching__System_MEDICAL_TEAM_COUNTER[team]= s__s__TeamMatching__System_MEDICAL_TEAM_COUNTER[team] + 1
+                    set s__s__TeamMatching___System_MEDICAL_TEAM_COUNTER[team]= s__s__TeamMatching___System_MEDICAL_TEAM_COUNTER[team] + 1
                 elseif id == 'H07E' or id == 'H07B' then
-                    set s__s__TeamMatching__System_TEAM_HIRAISHIN_COUNTER[team]= s__s__TeamMatching__System_TEAM_HIRAISHIN_COUNTER[team] + 1
+                    set s__s__TeamMatching___System_TEAM_HIRAISHIN_COUNTER[team]= s__s__TeamMatching___System_TEAM_HIRAISHIN_COUNTER[team] + 1
                 elseif id == 'U00J' or id == 'U00H' then
-                    set s__s__TeamMatching__System_TEAM_TAKA_COUNTER[team]= s__s__TeamMatching__System_TEAM_TAKA_COUNTER[team] + 1
+                    set s__s__TeamMatching___System_TEAM_TAKA_COUNTER[team]= s__s__TeamMatching___System_TEAM_TAKA_COUNTER[team] + 1
                 endif
             elseif id == 'E034' then
-                set s__s__TeamMatching__System_TEAM_TAKA_COUNTER[team]= s__s__TeamMatching__System_TEAM_TAKA_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_TAKA_COUNTER[team]= s__s__TeamMatching___System_TEAM_TAKA_COUNTER[team] + 1
             elseif id == 'Hamg' then
-                set s__s__TeamMatching__System_MEDICAL_TEAM_COUNTER[team]= s__s__TeamMatching__System_MEDICAL_TEAM_COUNTER[team] + 1
-                set s__s__TeamMatching__System_TEAM_SANNIN_COUNTER[team]= s__s__TeamMatching__System_TEAM_SANNIN_COUNTER[team] + 1
+                set s__s__TeamMatching___System_MEDICAL_TEAM_COUNTER[team]= s__s__TeamMatching___System_MEDICAL_TEAM_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_SANNIN_COUNTER[team]= s__s__TeamMatching___System_TEAM_SANNIN_COUNTER[team] + 1
             elseif id == 'H00P' or id == 'H086' then
-                set s__s__TeamMatching__System_TEAM_HIRAISHIN_COUNTER[team]= s__s__TeamMatching__System_TEAM_HIRAISHIN_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_HIRAISHIN_COUNTER[team]= s__s__TeamMatching___System_TEAM_HIRAISHIN_COUNTER[team] + 1
             elseif id == 'H00C' or id == 'H02P' or id == 'Otch' then
-                set s__s__TeamMatching__System_TEAM_SUNA_COUNTER[team]= s__s__TeamMatching__System_TEAM_SUNA_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_SUNA_COUNTER[team]= s__s__TeamMatching___System_TEAM_SUNA_COUNTER[team] + 1
                 if id == 'Otch' then
-                    set s__s__TeamMatching__System_TEAM_PUPPETERS_COUNTER[team]= s__s__TeamMatching__System_TEAM_PUPPETERS_COUNTER[team] + 1
+                    set s__s__TeamMatching___System_TEAM_PUPPETERS_COUNTER[team]= s__s__TeamMatching___System_TEAM_PUPPETERS_COUNTER[team] + 1
                 endif
             elseif id == 'N00M' or id == 'H06J' then
-                set s__s__TeamMatching__System_TEAM_TAKA_COUNTER[team]= s__s__TeamMatching__System_TEAM_TAKA_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_TAKA_COUNTER[team]= s__s__TeamMatching___System_TEAM_TAKA_COUNTER[team] + 1
             elseif id == 'U00C' or id == 'U006' then
-                set s__s__TeamMatching__System_TEAM_SANNIN_COUNTER[team]= s__s__TeamMatching__System_TEAM_SANNIN_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_SANNIN_COUNTER[team]= s__s__TeamMatching___System_TEAM_SANNIN_COUNTER[team] + 1
             elseif id == 'N001' or id == 'U005' then
                 if id == 'U005' then
-                    set s__s__TeamMatching__System_TEAM_SWORDMEN_COUNT[team]= s__s__TeamMatching__System_TEAM_SWORDMEN_COUNT[team] + 1
+                    set s__s__TeamMatching___System_TEAM_SWORDMEN_COUNT[team]= s__s__TeamMatching___System_TEAM_SWORDMEN_COUNT[team] + 1
                 endif
-                set s__s__TeamMatching__System_TEAM_BETRAYERS_COUNTER[team]= s__s__TeamMatching__System_TEAM_BETRAYERS_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_BETRAYERS_COUNTER[team]= s__s__TeamMatching___System_TEAM_BETRAYERS_COUNTER[team] + 1
             elseif id == 'U004' or id == 'Udea' then
-                set s__s__TeamMatching__System_TEAM_ZOMBIE_COUNTER[team]= s__s__TeamMatching__System_TEAM_ZOMBIE_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_ZOMBIE_COUNTER[team]= s__s__TeamMatching___System_TEAM_ZOMBIE_COUNTER[team] + 1
             elseif id == 'E01Y' or id == 'H00D' then
-                set s__s__TeamMatching__System_TEAM_ARTISTS_COUNTER[team]= s__s__TeamMatching__System_TEAM_ARTISTS_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_ARTISTS_COUNTER[team]= s__s__TeamMatching___System_TEAM_ARTISTS_COUNTER[team] + 1
                 if id == 'E01Y' then
-                    set s__s__TeamMatching__System_TEAM_PUPPETERS_COUNTER[team]= s__s__TeamMatching__System_TEAM_PUPPETERS_COUNTER[team] + 1
+                    set s__s__TeamMatching___System_TEAM_PUPPETERS_COUNTER[team]= s__s__TeamMatching___System_TEAM_PUPPETERS_COUNTER[team] + 1
                 endif
             elseif id == 'H00O' or id == 'H041' then
-                set s__s__TeamMatching__System_TEAM_AMEGAKURE_COUNTER[team]= s__s__TeamMatching__System_TEAM_AMEGAKURE_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_AMEGAKURE_COUNTER[team]= s__s__TeamMatching___System_TEAM_AMEGAKURE_COUNTER[team] + 1
             elseif id == 'E01C' or id == 'H055' or id == 'H056' or id == 'H09O' or id == 'E00F' then
-                set s__s__TeamMatching__System_TEAM_KUMOGAKURE_COUNTER[team]= s__s__TeamMatching__System_TEAM_KUMOGAKURE_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_KUMOGAKURE_COUNTER[team]= s__s__TeamMatching___System_TEAM_KUMOGAKURE_COUNTER[team] + 1
             elseif id == 'H000' or id == 'H070' or id == 'Hvwd' then
-                set s__s__TeamMatching__System_TEAM_GAI_COUNTER[team]= s__s__TeamMatching__System_TEAM_GAI_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_GAI_COUNTER[team]= s__s__TeamMatching___System_TEAM_GAI_COUNTER[team] + 1
             elseif id == 'H071' or id == 'H05M' then
                 if id == 'H05M' then
-                    set s__s__TeamMatching__System_TEAM_SWORDMEN_COUNT[team]= s__s__TeamMatching__System_TEAM_SWORDMEN_COUNT[team] + 1
+                    set s__s__TeamMatching___System_TEAM_SWORDMEN_COUNT[team]= s__s__TeamMatching___System_TEAM_SWORDMEN_COUNT[team] + 1
                 endif
-                set s__s__TeamMatching__System_TEAM_MISSING_COUNTER[team]= s__s__TeamMatching__System_TEAM_MISSING_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_MISSING_COUNTER[team]= s__s__TeamMatching___System_TEAM_MISSING_COUNTER[team] + 1
             elseif id == 'O007' then
-                set s__s__TeamMatching__System_TEAM_PUPPETERS_COUNTER[team]= s__s__TeamMatching__System_TEAM_PUPPETERS_COUNTER[team] + 1
+                set s__s__TeamMatching___System_TEAM_PUPPETERS_COUNTER[team]= s__s__TeamMatching___System_TEAM_PUPPETERS_COUNTER[team] + 1
             elseif id == 'U00K' then
-                set s__s__TeamMatching__System_TEAM_SWORDMEN_COUNT[team]= s__s__TeamMatching__System_TEAM_SWORDMEN_COUNT[team] + 1
+                set s__s__TeamMatching___System_TEAM_SWORDMEN_COUNT[team]= s__s__TeamMatching___System_TEAM_SWORDMEN_COUNT[team] + 1
             elseif id == 'H03D' or id == 'H009' or id == 'N01M' then
-                set s__s__TeamMatching__System_TEAM_JOUNIN[team]= s__s__TeamMatching__System_TEAM_JOUNIN[team] + 1
+                set s__s__TeamMatching___System_TEAM_JOUNIN[team]= s__s__TeamMatching___System_TEAM_JOUNIN[team] + 1
             elseif id == 'N01S' or id == 'H008' or id == 'H06L' then
-                set s__s__TeamMatching__System_TEAM_MIZUKAGES[team]= s__s__TeamMatching__System_TEAM_MIZUKAGES[team] + 1
+                set s__s__TeamMatching___System_TEAM_MIZUKAGES[team]= s__s__TeamMatching___System_TEAM_MIZUKAGES[team] + 1
             endif
-            if s__s__TeamMatching__System_TEAM_SWORDMEN_COUNT[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_SWORDMEN_COUNT[team]= 0
+            if s__s__TeamMatching___System_TEAM_SWORDMEN_COUNT[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_SWORDMEN_COUNT[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147543,8 +147543,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Swordmen of Mist|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_JOUNIN[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_JOUNIN[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_JOUNIN[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_JOUNIN[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147556,8 +147556,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Jounins of Konoha|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_10_COUNTER[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_10_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_10_COUNTER[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_10_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147568,8 +147568,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team 10|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_HOKAGE_COUNTER[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_HOKAGE_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_HOKAGE_COUNTER[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_HOKAGE_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147580,8 +147580,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000The Hokages|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_9_COUNTER[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_9_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_9_COUNTER[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_9_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147592,8 +147592,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team 8|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_7_COUNTER[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_7_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_7_COUNTER[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_7_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147604,10 +147604,10 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team 7|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_MEDICAL_TEAM_COUNTER[team] == 3 then
-                set s__s__TeamMatching__System_MEDICAL_TEAM_COUNTER[team]= 0
-                set s__TeamMatching__System_MEDICAL_TEAM=true
-                set s__TeamMatching__System_MEDICAL_TEAM_INDEX=GetPlayerId(GetOwningPlayer(GetEnteringUnit()))
+            elseif s__s__TeamMatching___System_MEDICAL_TEAM_COUNTER[team] == 3 then
+                set s__s__TeamMatching___System_MEDICAL_TEAM_COUNTER[team]= 0
+                set s__TeamMatching___System_MEDICAL_TEAM=true
+                set s__TeamMatching___System_MEDICAL_TEAM_INDEX=GetPlayerId(GetOwningPlayer(GetEnteringUnit()))
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147617,9 +147617,9 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team Medical|cff7ebff1 has joined the battlefield! ====|r")
-				call TimerStart((NewTimerEx(0)), 30.0, true, function sc__TeamMatching__System_medicalHeal) // INLINED!!
-            elseif s__s__TeamMatching__System_TEAM_HIRAISHIN_COUNTER[team] == 2 then
-                set s__s__TeamMatching__System_TEAM_HIRAISHIN_COUNTER[team]= 0
+				call TimerStart((NewTimerEx(0)), 30.0, true, function sc__TeamMatching___System_medicalHeal) // INLINED!!
+            elseif s__s__TeamMatching___System_TEAM_HIRAISHIN_COUNTER[team] == 2 then
+                set s__s__TeamMatching___System_TEAM_HIRAISHIN_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147630,8 +147630,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team Hiraishin|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_SUNA_COUNTER[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_SUNA_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_SUNA_COUNTER[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_SUNA_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147642,8 +147642,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Suna siblings|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_TAKA_COUNTER[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_TAKA_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_TAKA_COUNTER[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_TAKA_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147654,8 +147654,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team Taka|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_SANNIN_COUNTER[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_SANNIN_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_SANNIN_COUNTER[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_SANNIN_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147666,8 +147666,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000The Legendary Sannins|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_BETRAYERS_COUNTER[team] == 2 then
-                set s__s__TeamMatching__System_TEAM_BETRAYERS_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_BETRAYERS_COUNTER[team] == 2 then
+                set s__s__TeamMatching___System_TEAM_BETRAYERS_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147678,8 +147678,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team Betrayers|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_ZOMBIE_COUNTER[team] == 2 then
-                set s__s__TeamMatching__System_TEAM_ZOMBIE_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_ZOMBIE_COUNTER[team] == 2 then
+                set s__s__TeamMatching___System_TEAM_ZOMBIE_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147690,8 +147690,8 @@ endfunction
                 endloop
                 set udg_ZombieCombo=true
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team Zombie Combo|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_ARTISTS_COUNTER[team] == 2 then
-                set s__s__TeamMatching__System_TEAM_ARTISTS_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_ARTISTS_COUNTER[team] == 2 then
+                set s__s__TeamMatching___System_TEAM_ARTISTS_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147701,8 +147701,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team Akatsuki Artists|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_AMEGAKURE_COUNTER[team] == 2 then
-                set s__s__TeamMatching__System_TEAM_AMEGAKURE_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_AMEGAKURE_COUNTER[team] == 2 then
+                set s__s__TeamMatching___System_TEAM_AMEGAKURE_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147713,8 +147713,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team Amegakure Orphans|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_KUMOGAKURE_COUNTER[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_KUMOGAKURE_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_KUMOGAKURE_COUNTER[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_KUMOGAKURE_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147725,8 +147725,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team Kumogakure Ninjas|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_GAI_COUNTER[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_GAI_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_GAI_COUNTER[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_GAI_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147737,8 +147737,8 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team Gai|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_MISSING_COUNTER[team] == 2 then
-                set s__s__TeamMatching__System_TEAM_MISSING_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_MISSING_COUNTER[team] == 2 then
+                set s__s__TeamMatching___System_TEAM_MISSING_COUNTER[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147749,13 +147749,13 @@ endfunction
                     set i=i + 1
                 endloop
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Missing Ninja Duo|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_PUPPETERS_COUNTER[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_PUPPETERS_COUNTER[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_PUPPETERS_COUNTER[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_PUPPETERS_COUNTER[team]= 0
                 set i=0
                 //call TimerStart(NewTimerEx(team), 30.0, true, function thistype.puppetLink)
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cff7ebff1==== |cffff0000Team Puppeters|cff7ebff1 has joined the battlefield! ====|r")
-            elseif s__s__TeamMatching__System_TEAM_MIZUKAGES[team] == 3 then
-                set s__s__TeamMatching__System_TEAM_MIZUKAGES[team]= 0
+            elseif s__s__TeamMatching___System_TEAM_MIZUKAGES[team] == 3 then
+                set s__s__TeamMatching___System_TEAM_MIZUKAGES[team]= 0
                 set i=0
                 loop
                     exitwhen i > 11
@@ -147769,7 +147769,7 @@ endfunction
             endif
         endfunction 
 
-        function s__TeamMatching__System_puppetLink takes nothing returns nothing
+        function s__TeamMatching___System_puppetLink takes nothing returns nothing
             local integer team= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local player p
             if team == 0 then
@@ -147787,13 +147787,13 @@ endfunction
         endfunction
         
         
-        function s__TeamMatching__System_medicalHeal takes nothing returns nothing
+        function s__TeamMatching___System_medicalHeal takes nothing returns nothing
             local integer i
-            if s__TeamMatching__System_MEDICAL_TEAM then
+            if s__TeamMatching___System_MEDICAL_TEAM then
                 set i=0
                 loop
                     exitwhen i > 11
-                    if IsPlayerAlly(Player(i), Player(s__TeamMatching__System_MEDICAL_TEAM_INDEX)) then
+                    if IsPlayerAlly(Player(i), Player(s__TeamMatching___System_MEDICAL_TEAM_INDEX)) then
                         call SetUnitState(udg_units33[i + 1], UNIT_STATE_LIFE, GetUnitState(udg_units33[i + 1], UNIT_STATE_LIFE) + 300)
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\HolyBolt\\HolyBoltSpecialArt.mdl" ), (( GetUnitX(udg_units33[i + 1]) )*1.0), (( GetUnitY(udg_units33[i + 1]))*1.0))) // INLINED!!
                     endif
@@ -147803,19 +147803,19 @@ endfunction
         endfunction
         
         //===========================================================================
-        function s__TeamMatching__System_onInit takes nothing returns nothing
+        function s__TeamMatching___System_onInit takes nothing returns nothing
             local integer i
             set i=0
             loop
                 exitwhen i > 11
-                set s__s__TeamMatching__System_PLAYER_COUNT[i]= false
+                set s__s__TeamMatching___System_PLAYER_COUNT[i]= false
                 set i=i + 1
             endloop
             set gg_trg_TeamMatching=CreateTrigger()
             call TriggerRegisterEnterRectSimple(gg_trg_TeamMatching, gg_rct_MainBaseKonohagakure)
             call TriggerRegisterEnterRectSimple(gg_trg_TeamMatching, gg_rct_MainBaseOtogakure)
             call TriggerRegisterEnterRectSimple(gg_trg_TeamMatching, gg_rct_MainBaseAkatsuki)
-            call TriggerAddAction(gg_trg_TeamMatching, function s__TeamMatching__System_actions)
+            call TriggerAddAction(gg_trg_TeamMatching, function s__TeamMatching___System_actions)
             //call RegisterSpellEffectEvent('A0JI', function thistype.hiraishin)
         endfunction 
 
@@ -148864,10 +148864,10 @@ endfunction
     
     
         
-        function s__AssistSystem__System_periodic takes nothing returns nothing
+        function s__AssistSystem___System_periodic takes nothing returns nothing
             local integer i
             local integer id
-            if s__AssistSystem__System_count_active == 0 then
+            if s__AssistSystem___System_count_active == 0 then
                 return
             endif
             set bj_lastCreatedGroup=CreateGroup()
@@ -148882,7 +148882,7 @@ endfunction
                     if sg__assisted_get((id)*(12)+i) > 0 then
                         call sg__assisted_set((id)*(12)+i,sg__assisted_get((id)*(12)+i) - 1)
                         if sg__assisted_get((id)*(12)+i) == 0 then
-                            set s__AssistSystem__System_count_active=s__AssistSystem__System_count_active - 1
+                            set s__AssistSystem___System_count_active=s__AssistSystem___System_count_active - 1
                         endif
                     endif
                     set i=i + 1
@@ -148903,26 +148903,26 @@ endfunction
             endloop
         endfunction
         
-        function s__AssistSystem__System_removeSai takes nothing returns nothing
+        function s__AssistSystem___System_removeSai takes nothing returns nothing
             local integer uid= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            set s__AssistSystem__sai[uid]= false
+            set s__AssistSystem___sai[uid]= false
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__AssistSystem__System_removeReflectSai takes nothing returns nothing
+        function s__AssistSystem___System_removeReflectSai takes nothing returns nothing
             local integer uid= (LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            set s__AssistSystem__reflectsai[uid]= false
+            set s__AssistSystem___reflectsai[uid]= false
             call ReleaseTimer(GetExpiredTimer())
         endfunction
 
-        function s__AssistSystem__System_removeInvul takes nothing returns nothing
+        function s__AssistSystem___System_removeInvul takes nothing returns nothing
             call SetUnitInvulnerable((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), false) // INLINED!!
             call UnitRemoveAbility((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), 'B039') // INLINED!!
 	        call UnitRemoveAbility((s__UnitDex_Unit[((LoadInteger(TimerUtils___ht, 0, GetHandleId((GetExpiredTimer())))))]), 'B000') // INLINED!!
             call ReleaseTimer(GetExpiredTimer())
         endfunction 
         
-        function s__AssistSystem__System_actions takes nothing returns nothing
+        function s__AssistSystem___System_actions takes nothing returns nothing
             // Guren passive
             local integer id
             local real damage= GetEventDamage()
@@ -148934,7 +148934,7 @@ endfunction
 				set id=GetPlayerId(GetOwningPlayer(GetEventDamageSource()))
 
 				// Dragon blade
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I06N'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07U'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07T'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07V'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07W'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07Z'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07Y'))) and GetRandomInt(0, 100) < ( ( 3000 - RMinBJ(3000, damage) ) / 150 ) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I06N'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07U'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07T'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07V'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07W'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07Z'))) or (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07Y'))) and GetRandomInt(0, 100) < ( ( 3000 - RMinBJ(3000, damage) ) / 150 ) and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
 					call CreateTextTagUnitBJ("Critical!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -148944,14 +148944,14 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage, true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeSai) // INLINED!!
 				endif
 
 
 				// Wind Dragon blade
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07X'))) and GetRandomInt(0, 100) < ( ( 4000 - RMinBJ(4000, damage) ) / 150 ) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I07X'))) and GetRandomInt(0, 100) < ( ( 4000 - RMinBJ(4000, damage) ) / 150 ) and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
 					call CreateTextTagUnitBJ("Critical!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -148961,13 +148961,13 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage, true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeSai) // INLINED!!
 				endif
 
 				// Kazekage Robe 
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I03O'))) and GetRandomInt(0, 100) < 20 and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I03O'))) and GetRandomInt(0, 100) < 20 and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
 					call CreateTextTagUnitBJ("Critical!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -148977,25 +148977,25 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.33, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeSai) // INLINED!!
 				endif
 
                 // Chakra Disruption Device
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I08E'))) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I08E'))) and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
     					if ( GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) / 30000 ) > 0.1 and BlzGetUnitMaxHP(GetTriggerUnit()) >= 8500 then
         				    call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * ( GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) / 30000 ), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
     					else
         				    call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.1, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
     					endif
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeSai) // INLINED!!
 				endif
 
 
 				// Deidara Ring
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I00Q'))) and GetRandomInt(0, 100) < 20 and damage < 4000 and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I00Q'))) and GetRandomInt(0, 100) < 20 and damage < 4000 and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
 					call CreateTextTagUnitBJ("Explosion!", GetEventDamageSource(), 0, 12.00, 100, 0.00, 0.00, 0)
 					call SetTextTagVelocityBJ(GetLastCreatedTextTag(), 128.00, 90)
                     			call SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -149005,36 +149005,36 @@ endfunction
 		   			if not IsUnitVisible(GetEventDamageSource(), GetLocalPlayer()) then
         					call SetTextTagVisibility(GetLastCreatedTextTag(), false)
     		   			endif
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
 					call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeSai) // INLINED!!
 				endif
 
 				// Pain's Ring
-				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I01X'))) and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if (UnitHasItemOfTypeBJ((GetEventDamageSource() ), ( 'I01X'))) and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.10, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeSai) // INLINED!!
 				endif
 
 				// Ichigo D
-				if ( GetUnitTypeId(GetEventDamageSource()) == 'H0A7' or GetUnitTypeId(GetEventDamageSource()) == 'U00G' or GetUnitTypeId(GetEventDamageSource()) == 'U00A' ) and udg_Farm[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] >= 2400 and not s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
-					set s__AssistSystem__sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+				if ( GetUnitTypeId(GetEventDamageSource()) == 'H0A7' or GetUnitTypeId(GetEventDamageSource()) == 'U00G' or GetUnitTypeId(GetEventDamageSource()) == 'U00A' ) and udg_Farm[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] >= 2400 and not s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))] then // INLINED!!
+					set s__AssistSystem___sai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 					call UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage * 0.10, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeSai) // INLINED!!
+					call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeSai) // INLINED!!
 				endif
 
                 
-				if GetEventDamageSource() != null and GetPlayerController(GetOwningPlayer(GetEventDamageSource())) == MAP_CONTROL_USER and udg_units33[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] != null and not s__AssistSystem__reflectsai[(GetUnitUserData((GetTriggerUnit())))] and GetEventDamage() < 20000 then // INLINED!!
+				if GetEventDamageSource() != null and GetPlayerController(GetOwningPlayer(GetEventDamageSource())) == MAP_CONTROL_USER and udg_units33[GetPlayerId(GetOwningPlayer(GetEventDamageSource())) + 1] != null and not s__AssistSystem___reflectsai[(GetUnitUserData((GetTriggerUnit())))] and GetEventDamage() < 20000 then // INLINED!!
                     			// Yagura Mirror 
 					            if GetUnitAbilityLevel(GetTriggerUnit(), 'B046') > 0 then
-						            set s__AssistSystem__reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+						            set s__AssistSystem___reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 						            call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.03 * GetUnitAbilityLevel(GetTriggerUnit(), 'A0IQ'), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-						            call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeReflectSai) // INLINED!!
+						            call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeReflectSai) // INLINED!!
                     			// Sanbi's shell 
                     			elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B038') > 0 and damage < 10000 then
-                        			set s__AssistSystem__reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+                        			set s__AssistSystem___reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
                                     if (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I02U'))) then // INLINED!!
                         			    call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.1, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
                                     elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I00T'))) then // INLINED!!
@@ -149047,37 +149047,37 @@ endfunction
                                         call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.5, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
                                     endif
                             
-                        			call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeReflectSai) // INLINED!!
+                        			call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeReflectSai) // INLINED!!
                     			// Juubi's aura
                     			elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B00B') > 0 and damage < 10000 then
-                        			set s__AssistSystem__reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+                        			set s__AssistSystem___reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
                         			call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.25, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-                        			call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeReflectSai) // INLINED!!
+                        			call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeReflectSai) // INLINED!!
                     			// Isobu aura
                     			elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B01L') > 0 and damage < 10000 then
-                        			set s__AssistSystem__reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+                        			set s__AssistSystem___reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
                         			call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.25, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-                        			call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeReflectSai) // INLINED!!
+                        			call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeReflectSai) // INLINED!!
                     			// Defense Pills  
 							    elseif GetUnitAbilityLevel(GetTriggerUnit(), 'B070') > 0 then
-								    set s__AssistSystem__reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+								    set s__AssistSystem___reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 								    call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-								    call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeReflectSai) // INLINED!!
+								    call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeReflectSai) // INLINED!!
 		
 							    // Earth Anbu Mask
 							    elseif (UnitHasItemOfTypeBJ((GetTriggerUnit() ), ( 'I07D'))) then // INLINED!!
-								    set s__AssistSystem__reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+								    set s__AssistSystem___reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
 										if udg_ANBUTarget[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] != null and udg_ANBUTarget[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] != null then
 											call UnitDamageTarget(GetTriggerUnit(), udg_ANBUTarget[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))], damage * 0.2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
 								    endif
 								    call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage * 0.10, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-								    call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeReflectSai) // INLINED!!
+								    call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeReflectSai) // INLINED!!
 
                     			// Yata Mirror (Itachi)
                     			elseif udg_YataMirror == GetTriggerUnit() then
-                        			set s__AssistSystem__reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
+                        			set s__AssistSystem___reflectsai[(GetUnitUserData((GetTriggerUnit())))]= true // INLINED!!
                         			call UnitDamageTarget(GetTriggerUnit(), GetEventDamageSource(), damage, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-                        			call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem__System_removeReflectSai) // INLINED!!
+                        			call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.02, false, function s__AssistSystem___System_removeReflectSai) // INLINED!!
                     			endif
 
 				endif
@@ -149184,7 +149184,7 @@ endfunction
             endif
             if id != 3 and id != 7 and id != 11 then
                 if sg__assisted_get(((GetUnitUserData((GetTriggerUnit()))))*(12)+id + 1) == 0 then // INLINED!!
-                    set s__AssistSystem__System_count_active=s__AssistSystem__System_count_active + 1
+                    set s__AssistSystem___System_count_active=s__AssistSystem___System_count_active + 1
                 endif
                 call sg__assisted_set(((GetUnitUserData((GetTriggerUnit()))))*(12)+id + 1,15) // INLINED!!
             endif
@@ -149206,12 +149206,12 @@ endfunction
                     endloop
                     call DestroyGroup(bj_lastCreatedGroup)
                 endif
-                call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeInvul) // INLINED!!
+                call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeInvul) // INLINED!!
             endif
             // Pein gunbai 
             if GetUnitAbilityLevel(GetTriggerUnit(), 'B000') > 0 and damage > 500 then
                 call SetUnitInvulnerable(GetTriggerUnit(), true)
-                call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem__System_removeInvul) // INLINED!!
+                call TimerStart(NewTimerEx((GetUnitUserData((GetTriggerUnit())))), 0.1, false, function s__AssistSystem___System_removeInvul) // INLINED!!
             endif
             if damage < 12000 then
                 set hero_stats=damage / 1000
@@ -149247,10 +149247,10 @@ endfunction
             endif
         endfunction
 
-        function s__AssistSystem__System_leave takes nothing returns nothing
+        function s__AssistSystem___System_leave takes nothing returns nothing
             local integer i
             if IsUnitType(GetLeavingUnit(), UNIT_TYPE_HERO) == true and not IsUnitInGroup(GetLeavingUnit(), udg_AssistHeroes) then
-                call TriggerRegisterUnitEvent(s__AssistSystem__System_assist_trigger, GetLeavingUnit(), EVENT_UNIT_DAMAGED)
+                call TriggerRegisterUnitEvent(s__AssistSystem___System_assist_trigger, GetLeavingUnit(), EVENT_UNIT_DAMAGED)
                 call GroupAddUnit(udg_AssistHeroes, GetLeavingUnit())
                 set i=1
                 loop
@@ -149261,12 +149261,12 @@ endfunction
             endif
         endfunction 
 
-        function s__AssistSystem__System_onInit takes nothing returns nothing
+        function s__AssistSystem___System_onInit takes nothing returns nothing
             local integer i
-            set s__AssistSystem__System_assist_trigger=CreateTrigger()
-            call TriggerRegisterUnitEvent(s__AssistSystem__System_assist_trigger, gg_unit_H0A9_0068, EVENT_UNIT_DAMAGED)
+            set s__AssistSystem___System_assist_trigger=CreateTrigger()
+            call TriggerRegisterUnitEvent(s__AssistSystem___System_assist_trigger, gg_unit_H0A9_0068, EVENT_UNIT_DAMAGED)
 			call GroupAddUnit(udg_AssistHeroes, gg_unit_H0A9_0068)
-	        call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter((function s__AssistSystem__System_leave))) // INLINED!!
+	        call TriggerAddCondition(RegisterPlayerUnitEvent___leave_trigger, Filter((function s__AssistSystem___System_leave))) // INLINED!!
             set i=1
             loop
                 exitwhen i > 12
@@ -149275,9 +149275,9 @@ endfunction
                 set i=i + 1
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            call TriggerAddAction(s__AssistSystem__System_assist_trigger, function s__AssistSystem__System_actions)
-            call TimerStartEx((NewTimerEx(0)) , 1.0 , true , function s__AssistSystem__System_periodic , "AssisSystem_periodic") // INLINED!!
-	        set s__AssistSystem__System_count_active=0
+            call TriggerAddAction(s__AssistSystem___System_assist_trigger, function s__AssistSystem___System_actions)
+            call TimerStartEx((NewTimerEx(0)) , 1.0 , true , function s__AssistSystem___System_periodic , "AssisSystem_periodic") // INLINED!!
+	        set s__AssistSystem___System_count_active=0
         endfunction
         
     
@@ -155415,15 +155415,15 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs214376203")
+call ExecuteFunc("jasshelper__initstructs248866031")
 call ExecuteFunc("BoundSentinel___init")
 call ExecuteFunc("ItemTable___init")
-call ExecuteFunc("Minimap__onInit")
+call ExecuteFunc("Minimap___onInit")
 call ExecuteFunc("PowerupSentinel___onInit")
 call ExecuteFunc("PreventSave___onInit")
 call ExecuteFunc("TimerUtils___init")
 call ExecuteFunc("UIMath___Init")
-call ExecuteFunc("AutoBuyS__init")
+call ExecuteFunc("AutoBuyS___init")
 call ExecuteFunc("RegisterPlayerUnitEvent_init")
 call ExecuteFunc("UnitUtils___init")
 call GaiYagai__init()
@@ -155480,14 +155480,14 @@ endfunction
 //Struct method generated initializers/callers:
 
 //Functions for BigArrays:
-function sa__TeamMatching__System_medicalHeal takes nothing returns boolean
+function sa__TeamMatching___System_medicalHeal takes nothing returns boolean
 
             local integer i
-            if s__TeamMatching__System_MEDICAL_TEAM then
+            if s__TeamMatching___System_MEDICAL_TEAM then
                 set i=0
                 loop
                     exitwhen i > 11
-                    if IsPlayerAlly(Player(i), Player(s__TeamMatching__System_MEDICAL_TEAM_INDEX)) then
+                    if IsPlayerAlly(Player(i), Player(s__TeamMatching___System_MEDICAL_TEAM_INDEX)) then
                         call SetUnitState(udg_units33[i + 1], UNIT_STATE_LIFE, GetUnitState(udg_units33[i + 1], UNIT_STATE_LIFE) + 300)
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\HolyBolt\\HolyBoltSpecialArt.mdl" ), (( GetUnitX(udg_units33[i + 1]) )*1.0), (( GetUnitY(udg_units33[i + 1]))*1.0))) // INLINED!!
                     endif
@@ -155558,12 +155558,12 @@ local integer id=f__arg_integer2
                     exitwhen s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+random] != 0 and s__s__AHSS_Graphics_availableHeroesAttribute[random] == s__s__AHSS_Graphics_playersAttribute[id]
                 endloop
                 call sc__AHSS_Graphics_showHero(this , id , random)
-                set s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random / (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                set s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random / (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])])) // INLINED!!
                 loop
                     exitwhen random < (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) // INLINED!!
                     set random=random - (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) // INLINED!!
                 endloop
-                set s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random) // INLINED!!
+                set s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]=(random) // INLINED!!
                 call sc__AHSS_Graphics_updateCursor(this , id)
                 call sc__AHSS_Graphics_pressEscActions(this , id)
             endif
@@ -155575,12 +155575,12 @@ local integer id=f__arg_integer2
             local integer index
             if not s__AHSS_Graphics_gameStarted[this] then
                 if s__AHSS_Graphics_dummy[this] != null and IsPlayerInForce(Player(id), s__AHSS_Graphics_cameraForce) then
-                    if (s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) == - 1 then // INLINED!!
+                    if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) == - 1 then // INLINED!!
                         if s__AHSS_Graphics_allowPick[this] then
                             call s__AHSS_Graphics_selectHeroRandom(this , id)
                         endif
                     else
-                        set index=(s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) // INLINED!!
+                        set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+id])]) // INLINED!!
                         if s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index] == 0 then
                             if GetLocalPlayer() == GetTriggerPlayer() then
                                 call PlaySoundBJ((s__AHSS_Options_error[(s__AHSS_Graphics_options[this])])) // INLINED!!
@@ -155593,8 +155593,8 @@ return true
                                 if GetLocalPlayer() == GetTriggerPlayer() then
                                     call PlaySoundBJ((s__AHSS_Options_ok[(s__AHSS_Graphics_options[this])])) // INLINED!!
                                 endif
-                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=s__AHSS__AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
+                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=s__AHSS___AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
                                 set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=0
                                 set s__s__AHSS_Graphics_availableHeroes[index]= false
                                 set s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+id]=true
@@ -155606,8 +155606,8 @@ return true
                                 endif
                                 call s__AHSS_Graphics_showSelection(this , id)
                                 call s__AHSS_Graphics_createTeamIcon(this , id , index , false)
-                                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=s__AHSS__AHSSIcon_createRaised((s__AHSS__Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index])
+                                set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=s__AHSS___AHSSIcon_createRaised((s__AHSS___Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index])
                                 set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=0
                                 set s__s__AHSS_Graphics_availableHeroes[index]= true
                                 call sc__AHSS_Graphics_showHero(this , id , index)
@@ -155620,23 +155620,23 @@ return true
                                 endif
                                 set s___AHSS_Graphics_draftUsed[s__AHSS_Graphics_draftUsed[this]+id]=true
                                 if ( id == 4 or id == 5 or id == 6 ) then
-                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS__AHSSIcon_create((s__AHSS__Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                    call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1])
+                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS___AHSSIcon_create((s__AHSS___Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1])
                                     set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 1]=0
                                     set s__AHSS_Graphics_countBanned[this]=s__AHSS_Graphics_countBanned[this] + 1
                                 elseif ( id == 8 or id == 9 or id == 10 ) then
-                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS__AHSSIcon_create((s__AHSS__Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                    call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2])
+                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS___AHSSIcon_create((s__AHSS___Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2])
                                     set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id - 2]=0
                                     set s__AHSS_Graphics_countBanned[this]=s__AHSS_Graphics_countBanned[this] + 1
                                 else
-                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS__AHSSIcon_create((s__AHSS__Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                    call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id])
+                                	set s___AHSS_Graphics_bannedHeroIcons[s__AHSS_Graphics_bannedHeroIcons[this]+s__AHSS_Graphics_countBanned[this]]=s__AHSS___AHSSIcon_create((s__AHSS___Hero_iconPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                    call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id])
                                     set s___AHSS_Graphics_bannedEmptyIcons[s__AHSS_Graphics_bannedEmptyIcons[this]+id]=0
                                     set s__AHSS_Graphics_countBanned[this]=s__AHSS_Graphics_countBanned[this] + 1
                                 endif
-                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=s__AHSS__AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , s__AHSS__AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-                                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
+                                set s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]=s__AHSS___AHSSIcon_createRaised((s__AHSS_Paths_emptyIcon[(s__AHSS_Graphics_paths[this])]) , s__AHSS___AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index])
                                 set s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]=0
                                 set s__s__AHSS_Graphics_availableHeroes[index]= false
                                 call s__AHSS_Graphics_hideSelection(this , id)
@@ -155669,7 +155669,7 @@ function sa__AHSS_Graphics_pressKey takes nothing returns boolean
             local integer index
             if s__AHSS_Graphics_dummy[this] != null and s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid] != 0 and IsPlayerInForce(Player(playerid), s__AHSS_Graphics_cameraForce) and (s__ArrowKey_eventKeyPressed) and not s___AHSS_Graphics_selectionUsed[s__AHSS_Graphics_selectionUsed[this]+playerid] then // INLINED!!
                 call sc__AHSS_Graphics_moveCursor(this , playerid)
-                set index=(s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
+                set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
                 call sc__AHSS_Graphics_showHero(this , playerid , index)
             endif
    return true
@@ -155677,15 +155677,15 @@ endfunction
 function sa__AHSS_Graphics_updateCursor takes nothing returns boolean
 local integer this=f__arg_integer1
 local integer playerid=f__arg_integer2
-            local integer index= (s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
+            local integer index= (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
             local integer i
-            if (s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
-                call s__AHSS__PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS__AHSSIcon_x[s__AHSS_Graphics_randomIcon[this]] , s__AHSS__AHSSIcon_y[s__AHSS_Graphics_randomIcon[this]])
+            if (s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) == - 1 then // INLINED!!
+                call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS___AHSSIcon_x[s__AHSS_Graphics_randomIcon[this]] , s__AHSS___AHSSIcon_y[s__AHSS_Graphics_randomIcon[this]])
             else
                 if s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index] != 0 then
-                    call s__AHSS__PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS__AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]])
+                    call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS___AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]+index]])
                 else
-                    call s__AHSS__PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS__AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS__AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]])
+                    call s__AHSS___PlayerSelection_setPos(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid],s__AHSS___AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]] , s__AHSS___AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]+index]])
                 endif
             endif
             if GetLocalPlayer() == Player(playerid) then
@@ -155701,7 +155701,7 @@ local integer playerid=f__arg_integer2
             if s___AHSS_Graphics_isHidden[s__AHSS_Graphics_isHidden[this]+playerid] or ( not s__AHSS_Graphics_allowPick[this] and not s__AHSS_Graphics_draftPick[this] ) then
 return true
             endif
-            set index=(s__AHSS__PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS__PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
+            set index=(s__AHSS___PlayerSelection_column[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) * (s__AHSS_Options_iconsByLine[(s__AHSS_Graphics_options[this])]) + (s__AHSS___PlayerSelection_row[(s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+playerid])]) // INLINED!!
             if (s__ArrowKey_eventKey) == 0 then // INLINED!!
                 call s__AHSS_Graphics_moveLeft(this , playerid , index)
             elseif (s__ArrowKey_eventKey) == 1 then // INLINED!!
@@ -155738,7 +155738,7 @@ local integer index=f__arg_integer3
                 set s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+i]=null
             endif
             if s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i])
                 set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+i] != null then
@@ -155746,7 +155746,7 @@ local integer index=f__arg_integer3
                 set s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+i]=null
             endif
             if s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i])
                 set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+i] != null then
@@ -155754,7 +155754,7 @@ local integer index=f__arg_integer3
                 set s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+i]=null
             endif
             if s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i] != 0 then
-                call s__AHSS__AHSSIcon_remove(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i])
+                call s__AHSS___AHSSIcon_remove(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i])
                 set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+i]=0
             endif
             if s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+i] != null then
@@ -155767,35 +155767,35 @@ local integer index=f__arg_integer3
                 if GetLocalPlayer() != Player(playerid) then
                     set s=""
                 else
-                    set s=(s__AHSS__Hero_modelPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) // INLINED!!
+                    set s=(s__AHSS___Hero_modelPath[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) // INLINED!!
                 endif
                 set s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid]=AddSpecialEffect(s, x - 100, y + s__AHSS_Graphics_MODEL_Y_OFFSET)
                 call BlzSetSpecialEffectHeight(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], 100)
                 call BlzSetSpecialEffectPitch(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], Deg2Rad(- 90))
                 call BlzSetSpecialEffectYaw(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], Deg2Rad(270))
-                call BlzSetSpecialEffectScale(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], ( 2.0 + (s__AHSS__Hero_modelScale[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) ) * s__AHSS_Graphics_MODEL_SCALE_FACTOR) // INLINED!!
-                if (s__AHSS__Hero_modelAlternate[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+                call BlzSetSpecialEffectScale(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], ( 2.0 + (s__AHSS___Hero_modelScale[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) ) * s__AHSS_Graphics_MODEL_SCALE_FACTOR) // INLINED!!
+                if (s__AHSS___Hero_modelAlternate[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
                     call BlzSpecialEffectAddSubAnimation(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], SUBANIM_TYPE_ALTERNATE_EX)
                     call BlzPlaySpecialEffect(s___AHSS_Graphics_heroesModels[s__AHSS_Graphics_heroesModels[this]+playerid], ANIM_TYPE_STAND)
                 endif
                 set x=x + 600
                 set y=y + 500
                 set s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], (s__AHSS__Hero_name[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(16)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], (s__AHSS___Hero_name[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(16)) // INLINED!!
                 call SetTextTagPos(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_heroesName[s__AHSS_Graphics_heroesName[this]+playerid], 255, 255, 255, 255)
                 set y=y - 100
-                set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_strength[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                set s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_strength[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
                 set y=y - s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) - 10 // INLINED!!
-                set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_agility[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+                set s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_agility[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
                 set y=y - s__AHSS_Graphics_ICON_SIZE * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) - 10 // INLINED!!
-                set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]=s__AHSS__AHSSIcon_create((s__AHSS_Paths_intelligence[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
-            set x=s__AHSS__AHSSIcon_x[s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]] + 50
-            set y=s__AHSS__AHSSIcon_y[s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]] - 15
+                set s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]=s__AHSS___AHSSIcon_create((s__AHSS_Paths_intelligence[(s__AHSS_Graphics_paths[this])]) , x , y , (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])])) // INLINED!!
+            set x=s__AHSS___AHSSIcon_x[s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]] + 50
+            set y=s__AHSS___AHSSIcon_y[s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid]] - 15
             set s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], I2S(R2I((s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS__Hero_strengthLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], I2S(R2I((s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_strengthLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
             call SetTextTagPos(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], x, y, 0)
-            if (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
                 call SetTextTagColor(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], 255, 255, 255, 255)
@@ -155805,15 +155805,15 @@ local integer index=f__arg_integer3
                     call SetTextTagVisibility(s___AHSS_Graphics_strText[s__AHSS_Graphics_strText[this]+playerid], false)
                 endif
                 if s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid] != 0 then
-                    call s__AHSS__AHSSIcon_show(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid],false)
+                    call s__AHSS___AHSSIcon_show(s___AHSS_Graphics_strIcon[s__AHSS_Graphics_strIcon[this]+playerid],false)
                 endif
             endif
-            set x=s__AHSS__AHSSIcon_x[s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]] + 50
-            set y=s__AHSS__AHSSIcon_y[s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]] - 15
+            set x=s__AHSS___AHSSIcon_x[s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]] + 50
+            set y=s__AHSS___AHSSIcon_y[s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid]] - 15
             set s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], I2S(R2I((s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS__Hero_agilityLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], I2S(R2I((s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_agilityLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
             call SetTextTagPos(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], x, y, 0)
-            if (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
                 call SetTextTagColor(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], 255, 255, 255, 255)
@@ -155823,15 +155823,15 @@ local integer index=f__arg_integer3
                     call SetTextTagVisibility(s___AHSS_Graphics_agiText[s__AHSS_Graphics_agiText[this]+playerid], false)
                 endif
                 if s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid] != 0 then
-                    call s__AHSS__AHSSIcon_show(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid],false)
+                    call s__AHSS___AHSSIcon_show(s___AHSS_Graphics_agiIcon[s__AHSS_Graphics_agiIcon[this]+playerid],false)
                 endif
             endif
-            set x=s__AHSS__AHSSIcon_x[s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]] + 50
-            set y=s__AHSS__AHSSIcon_y[s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]] - 15
+            set x=s__AHSS___AHSSIcon_x[s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]] + 50
+            set y=s__AHSS___AHSSIcon_y[s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid]] - 15
             set s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid]=CreateTextTag()
-            call SetTextTagText(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], I2S(R2I((s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS__Hero_intelligenceLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
+            call SetTextTagText(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], I2S(R2I((s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]))) + " + " + SubString(R2S((s__AHSS___Hero_intelligenceLvl[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])), 0, 3) + " x lvl", TextTagSize2Height(13)) // INLINED!!
             call SetTextTagPos(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], x, y, 0)
-            if (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS__Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
+            if (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_strength[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_agility[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) and (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) >= (s__AHSS___Hero_intelligence[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]) then // INLINED!!
                 call SetTextTagColor(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], 255, 0, 0, 255)
             else
                 call SetTextTagColor(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], 255, 255, 255, 255)
@@ -155841,13 +155841,13 @@ local integer index=f__arg_integer3
                     call SetTextTagVisibility(s___AHSS_Graphics_intText[s__AHSS_Graphics_intText[this]+playerid], false)
                 endif
                 if s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid] != 0 then
-                    call s__AHSS__AHSSIcon_show(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid],false)
+                    call s__AHSS___AHSSIcon_show(s___AHSS_Graphics_intIcon[s__AHSS_Graphics_intIcon[this]+playerid],false)
                 endif
             endif
                 set x=x - 100
-                set y=y - 200 - ( 20 * s__AHSS_Graphics_countLines((s__AHSS__Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])) ) // INLINED!!
+                set y=y - 200 - ( 20 * s__AHSS_Graphics_countLines((s__AHSS___Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))])) ) // INLINED!!
                 set s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], (s__AHSS__Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(9)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], (s__AHSS___Hero_description[((s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[(s__AHSS_Graphics_heroes[this])]+(index)]))]), TextTagSize2Height(9)) // INLINED!!
                 call SetTextTagPos(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_descriptionText[s__AHSS_Graphics_descriptionText[this]+playerid], 255, 255, 255, 255)
                 if GetLocalPlayer() != Player(playerid) then
@@ -155877,8 +155877,8 @@ local integer this=f__arg_this
                     exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                     set j=0
                     loop
-                        exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                        set id=(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                        exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                        set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
                         if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(Player(id)) == MAP_CONTROL_USER then
                             call s__AHSS_Graphics_showHero(this , i , 0)
                         endif
@@ -155898,7 +155898,7 @@ local integer this=f__arg_this
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                 set y=y - ( 128 * (s__AHSS_Options_iconScale[(s__AHSS_Graphics_options[this])]) ) - 10 // INLINED!!
                 set s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i]=CreateTextTag()
-                call SetTextTagText(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], (s__AHSS__Team_name[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]), TextTagSize2Height(12)) // INLINED!!
+                call SetTextTagText(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], (s__AHSS___Team_name[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]), TextTagSize2Height(12)) // INLINED!!
                 call SetTextTagPos(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], x, y, 0)
                 call SetTextTagColor(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i], 255, 255, 255, 255)
                 set i=i + 1
@@ -155918,45 +155918,45 @@ local integer this=f__arg_this
             local integer count= 0
             local integer id
             if s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]] != 0 then
-                set x=s__AHSS__AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]]]
-                set y=s__AHSS__AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]]]
+                set x=s__AHSS___AHSSIcon_x[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]]]
+                set y=s__AHSS___AHSSIcon_y[s___AHSS_Graphics_emptyIcon[s__AHSS_Graphics_emptyIcon[this]]]
             else
-                set x=s__AHSS__AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]]]
-                set y=s__AHSS__AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]]]
+                set x=s__AHSS___AHSSIcon_x[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]]]
+                set y=s__AHSS___AHSSIcon_y[s___AHSS_Graphics_heroesIcon[s__AHSS_Graphics_heroesIcon[this]]]
             endif
             set i=0
             loop
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
                     if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING then
                         if GetPlayerController(Player(id)) == MAP_CONTROL_USER or ( GetPlayerController(Player(id)) == MAP_CONTROL_COMPUTER and (s__AHSS_Options_bots[(s__AHSS_Graphics_options[this])]) ) then // INLINED!!
-                            if (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 0 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(0 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.01 , 0.01) // INLINED!!
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 1 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(1 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.00 , 0.25 , 1.00) // INLINED!!
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 2 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(2 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.09 , 0.90 , 0.70) // INLINED!!
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 3 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(3 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.32 , 0.00 , 0.50) // INLINED!!
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 4 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(4 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.98 , 0.40) // INLINED!!
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 5 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(5 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.99 , 0.72 , 0.05) // INLINED!!
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 6 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(6 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.12 , 0.75 , 0.00) // INLINED!!
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 7 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(7 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.89 , 0.35 , 0.69) // INLINED!!
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 8 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(8 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.58 , 0.58 , 0.58) // INLINED!!
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 9 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(9 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.49 , 0.74 , 0.94) // INLINED!!
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 10 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(10 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.06 , 0.38 , 0.27) // INLINED!!
-                            elseif (s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 11 then // INLINED!!
-                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS__PlayerSelection_create(11 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.30 , 0.16 , 0.01) // INLINED!!
+                            if (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 0 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(0 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.01 , 0.01) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 1 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(1 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.00 , 0.25 , 1.00) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 2 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(2 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.09 , 0.90 , 0.70) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 3 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(3 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.32 , 0.00 , 0.50) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 4 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(4 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 1.00 , 0.98 , 0.40) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 5 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(5 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.99 , 0.72 , 0.05) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 6 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(6 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.12 , 0.75 , 0.00) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 7 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(7 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.89 , 0.35 , 0.69) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 8 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(8 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.58 , 0.58 , 0.58) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 9 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(9 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.49 , 0.74 , 0.94) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 10 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(10 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.06 , 0.38 , 0.27) // INLINED!!
+                            elseif (s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) == 11 then // INLINED!!
+                                set s___AHSS_Graphics_selections[s__AHSS_Graphics_selections[this]+(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)])]=s__AHSS___PlayerSelection_create(11 , (s__AHSS_Paths_selection[(s__AHSS_Graphics_paths[this])]) , x , y , 0.30 , 0.16 , 0.01) // INLINED!!
                             endif
                         endif
                     endif
@@ -155980,8 +155980,8 @@ local boolean allRandom=f__arg_boolean1
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
                 set j=0
                 loop
-                    exitwhen j > ( (s__AHSS__Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
-                    set id=(s___AHSS__Team_players[s__AHSS__Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
+                    exitwhen j > ( (s__AHSS___Team_count[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]) - 1 ) // INLINED!!
+                    set id=(s___AHSS___Team_players[s__AHSS___Team_players[((s___AHSS_Teams_teams[s__AHSS_Teams_teams[(s__AHSS_Graphics_teams[this])]+(i)]))]+(j)]) // INLINED!!
                     if GetPlayerSlotState(Player(id)) == PLAYER_SLOT_STATE_PLAYING then
                         if GetPlayerController(Player(id)) == MAP_CONTROL_USER then
                             if allRandom then
@@ -156014,21 +156014,21 @@ local integer this=f__arg_this
                 call ShowImage(s__AHSS_Graphics_backgroundImg[this], false)
                 call DestroyImage(s__AHSS_Graphics_backgroundImg[this])
             if s__AHSS_Graphics_versus1[this] != 0 then
-                call s__AHSS__AHSSIcon_remove(s__AHSS_Graphics_versus1[this])
+                call s__AHSS___AHSSIcon_remove(s__AHSS_Graphics_versus1[this])
                 set s__AHSS_Graphics_versus1[this]=0
             endif
             if s__AHSS_Graphics_versus2[this] != 0 then
-                call s__AHSS__AHSSIcon_remove(s__AHSS_Graphics_versus2[this])
+                call s__AHSS___AHSSIcon_remove(s__AHSS_Graphics_versus2[this])
                 set s__AHSS_Graphics_versus2[this]=0
             endif
             if s__AHSS_Graphics_logoImg[this] != 0 then
-                call s__AHSS__AHSSIcon_remove(s__AHSS_Graphics_logoImg[this])
+                call s__AHSS___AHSSIcon_remove(s__AHSS_Graphics_logoImg[this])
                 set s__AHSS_Graphics_logoImg[this]=0
             endif
             set i=0
             loop
                 exitwhen i > ( (s__AHSS_Teams_count[(s__AHSS_Graphics_teams[this])]) - 1 ) // INLINED!!
-                call s__AHSS__TeamIcon_destroy(s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i])
+                call s__AHSS___TeamIcon_destroy(s___AHSS_Graphics_teamsIcon[s__AHSS_Graphics_teamsIcon[this]+i])
                 call DestroyTextTag(s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i])
                 set s___AHSS_Graphics_teamsText[s__AHSS_Graphics_teamsText[this]+i]=null
                 set i=i + 1
@@ -156132,12 +156132,12 @@ local integer this=f__arg_this
     endloop
    return true
 endfunction
-function sa__AHSS__AHSSIcon_onDestroy takes nothing returns boolean
+function sa__AHSS___AHSSIcon_onDestroy takes nothing returns boolean
 local integer this=f__arg_this
-            if s__AHSS__AHSSIcon_img[this] != null then
-                call ShowImage(s__AHSS__AHSSIcon_img[this], false)
-                call DestroyImage(s__AHSS__AHSSIcon_img[this])
-                set s__AHSS__AHSSIcon_img[this]=null
+            if s__AHSS___AHSSIcon_img[this] != null then
+                call ShowImage(s__AHSS___AHSSIcon_img[this], false)
+                call DestroyImage(s__AHSS___AHSSIcon_img[this])
+                set s__AHSS___AHSSIcon_img[this]=null
             endif
    return true
 endfunction
@@ -156247,7 +156247,7 @@ local integer id=f__arg_integer1
             if s__AHSS_Heroes_count[this] >= s__AHSS_Configurations_MAX_SLOTS then
 return true
             endif
-            set s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this]]=s__AHSS__Hero_create(name , id)
+            set s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this]]=s__AHSS___Hero_create(name , id)
             set s__s__AHSS_Configurations_HERO_NAMES[s__AHSS_Heroes_count[this]]= name
             set s__s__AHSS_Configurations_HERO_IDS[s__AHSS_Heroes_count[this]]= id
             call SaveInteger(Table___ht, (s__AHSS_Configurations_HERO_BY_ID), (id), ( s__AHSS_Heroes_count[this])) // INLINED!!
@@ -156261,7 +156261,7 @@ local real lvl=f__arg_real2
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            call s__AHSS__Hero_setStr(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
+            call s__AHSS___Hero_setStr(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
    return true
 endfunction
 function sa__AHSS_Heroes_setAgi takes nothing returns boolean
@@ -156271,7 +156271,7 @@ local real lvl=f__arg_real2
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            call s__AHSS__Hero_setAgi(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
+            call s__AHSS___Hero_setAgi(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
    return true
 endfunction
 function sa__AHSS_Heroes_setInt takes nothing returns boolean
@@ -156281,7 +156281,7 @@ local real lvl=f__arg_real2
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            call s__AHSS__Hero_setInt(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
+            call s__AHSS___Hero_setInt(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],initial , lvl)
    return true
 endfunction
 function sa__AHSS_Heroes_setDescription takes nothing returns boolean
@@ -156290,7 +156290,7 @@ local string whichDescription=f__arg_string1
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            set s__AHSS__Hero_description[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichDescription) // INLINED!!
+            set s__AHSS___Hero_description[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichDescription) // INLINED!!
    return true
 endfunction
 function sa__AHSS_Heroes_setModel takes nothing returns boolean
@@ -156300,7 +156300,7 @@ local real scale=f__arg_real1
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            call s__AHSS__Hero_setModel(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],path , scale)
+            call s__AHSS___Hero_setModel(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1],path , scale)
    return true
 endfunction
 function sa__AHSS_Heroes_setModelAlternate takes nothing returns boolean
@@ -156309,7 +156309,7 @@ local boolean b=f__arg_boolean1
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            set s__AHSS__Hero_modelAlternate[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(b) // INLINED!!
+            set s__AHSS___Hero_modelAlternate[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(b) // INLINED!!
    return true
 endfunction
 function sa__AHSS_Heroes_setIcon takes nothing returns boolean
@@ -156318,7 +156318,7 @@ local integer whichIcon=f__arg_integer1
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            set s__AHSS__Hero_icon[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichIcon) // INLINED!!
+            set s__AHSS___Hero_icon[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(whichIcon) // INLINED!!
    return true
 endfunction
 function sa__AHSS_Heroes_setIconPath takes nothing returns boolean
@@ -156327,7 +156327,7 @@ local string path=f__arg_string1
             if s__AHSS_Heroes_count[this] == 0 then
 return true
             endif
-            set s__AHSS__Hero_iconPath[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(path) // INLINED!!
+            set s__AHSS___Hero_iconPath[(s___AHSS_Heroes_heroes[s__AHSS_Heroes_heroes[this]+s__AHSS_Heroes_count[this] - 1])]=(path) // INLINED!!
             set s__s__AHSS_Configurations_HERO_ICONS[s__AHSS_Heroes_count[this] - 1]= path
    return true
 endfunction
@@ -156341,7 +156341,7 @@ endfunction
 function sa__AHSS_Teams_createTeam takes nothing returns boolean
 local integer this=f__arg_this
 local string name=f__arg_string1
-            set s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this]]=s__AHSS__Team_create(name)
+            set s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this]]=s__AHSS___Team_create(name)
             set s__AHSS_Teams_count[this]=s__AHSS_Teams_count[this] + 1
    return true
 endfunction
@@ -156351,7 +156351,7 @@ local integer whichPlayer=f__arg_integer1
             if s__AHSS_Teams_count[this] == 0 then
 return true
             endif
-            call s__AHSS__Team_addPlayer(s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this] - 1],whichPlayer)
+            call s__AHSS___Team_addPlayer(s___AHSS_Teams_teams[s__AHSS_Teams_teams[this]+s__AHSS_Teams_count[this] - 1],whichPlayer)
    return true
 endfunction
 function sa__AHSS_Teams_setSpawningSpot takes nothing returns boolean
@@ -158967,9 +158967,9 @@ function sa___prototype3_s__SMission_allocate takes nothing returns boolean
     return true
 endfunction
 
-function jasshelper__initstructs214376203 takes nothing returns nothing
-    set st__TeamMatching__System_medicalHeal=CreateTrigger()
-    call TriggerAddCondition(st__TeamMatching__System_medicalHeal,Condition( function sa__TeamMatching__System_medicalHeal))
+function jasshelper__initstructs248866031 takes nothing returns nothing
+    set st__TeamMatching___System_medicalHeal=CreateTrigger()
+    call TriggerAddCondition(st__TeamMatching___System_medicalHeal,Condition( function sa__TeamMatching___System_medicalHeal))
     set st__AHSS_Graphics_create=CreateTrigger()
     call TriggerAddCondition(st__AHSS_Graphics_create,Condition( function sa__AHSS_Graphics_create))
     set st__AHSS_Graphics_loopMethod=CreateTrigger()
@@ -158998,8 +158998,8 @@ function jasshelper__initstructs214376203 takes nothing returns nothing
     call TriggerAddCondition(st__AHSS_Graphics_draw,Condition( function sa__AHSS_Graphics_draw))
     set st__AHSS_Graphics_destroy=CreateTrigger()
     call TriggerAddCondition(st__AHSS_Graphics_destroy,Condition( function sa__AHSS_Graphics_destroy))
-    set st__AHSS__AHSSIcon_onDestroy=CreateTrigger()
-    call TriggerAddCondition(st__AHSS__AHSSIcon_onDestroy,Condition( function sa__AHSS__AHSSIcon_onDestroy))
+    set st__AHSS___AHSSIcon_onDestroy=CreateTrigger()
+    call TriggerAddCondition(st__AHSS___AHSSIcon_onDestroy,Condition( function sa__AHSS___AHSSIcon_onDestroy))
     set st__AHSS_Paths_setBackground=CreateTrigger()
     call TriggerAddCondition(st__AHSS_Paths_setBackground,Condition( function sa__AHSS_Paths_setBackground))
     set st__AHSS_Paths_setLogo=CreateTrigger()
@@ -160941,7 +160941,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent___S_RegisterPlayerUnitEvent___M__on
     call ExecuteFunc("s__NarutoYotonRasenshuriken_onInit")
     call ExecuteFunc("s__NarutoMiniRasenshurikenNew_onInit")
     call ExecuteFunc("s__NarutoBijuuRasenshuriken_onInit")
-    call ExecuteFunc("s__NarutoDama___Spell_onInit")
+    call ExecuteFunc("s__NarutoDama__Spell_onInit")
     call ExecuteFunc("s__NarutoNewD_onInit")
     call ExecuteFunc("s__NarutoNewQ_onInit")
     call ExecuteFunc("s__NarutoFrogCart___Spell_onInit")
@@ -161231,9 +161231,9 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent___S_RegisterPlayerUnitEvent___M__on
     call ExecuteFunc("s__FixTransformations_onInit")
     call ExecuteFunc("s__SetUnitVariables_onInit")
     call ExecuteFunc("s__AkatsukiArtistsGenjutsuBonus_onInit")
-    call ExecuteFunc("s__TeamMatching__System_onInit")
+    call ExecuteFunc("s__TeamMatching___System_onInit")
     call ExecuteFunc("s__AnbuShuriken_onInit")
-    call ExecuteFunc("s__AssistSystem__System_onInit")
+    call ExecuteFunc("s__AssistSystem___System_onInit")
     call ExecuteFunc("s__BaseRemoveItems_onInit")
     call ExecuteFunc("s__SpawnBijuus_onInit")
     call ExecuteFunc("s__Spectator_onInit")
