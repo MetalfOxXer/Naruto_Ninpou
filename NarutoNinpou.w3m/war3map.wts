@@ -30207,7 +30207,7 @@ STRING 4958
 }
 
 STRING 4959
-// Abilities: A0OV (Explosive Landmine), Name (Name)
+// Units: o00G (Explosive Landmine), Name (Name)
 {
 Explosive Landmine
 }
@@ -33280,7 +33280,7 @@ Learn Bijuu Dama [|cffffcc00T|r] - [|cffffcc00Level %d|r]
 
 STRING 5474
 {
-|cffff0000Naruto Ninpou RE 14.6B
+|cffff0000Naruto Ninpou RE 14.6C
 }
 
 STRING 5475
@@ -37941,6 +37941,12 @@ STRING 6252
 // Abilities: A08U (Subjugation of Earth), Name (Name)
 {
 Subjugation of Earth
+}
+
+STRING 6253
+// Abilities: A0OV (Explosive Landmine), Name (Name)
+{
+Explosive Landmine
 }
 
 STRING 6254
@@ -87887,6 +87893,18 @@ STRING 14410
 True Form [|cffffcc00D|r]
 }
 
+STRING 14411
+// Units: e08D (Gaara Kid Spear), Ubertip (Tooltip - Extended)
+{
+http://wc3campaigns.net/vexorian
+}
+
+STRING 14412
+// Units: e085 (IchigoDummy), EditorSuffix (Name - Editor Suffix)
+{
+(Caster System?)
+}
+
 STRING 14413
 // Abilities: A0PO (|cff0fcaf7Juuho Soshiken|r), Tip (Tooltip - Normal)
 {
@@ -88034,13 +88052,13 @@ STRING 14436
 }
 
 STRING 14437
-// Units: e08D (Gaara Kid Spear), Ubertip (Tooltip - Extended)
+// Units: e088 (AsumaFireRDummy), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
 
 STRING 14438
-// Units: e085 (IchigoDummy), EditorSuffix (Name - Editor Suffix)
+// Units: e087 (VastoLordDummy), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -88430,7 +88448,7 @@ Learn Bijuu Mode [|cffffcc00T|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 14503
-// Units: e088 (AsumaFireRDummy), Ubertip (Tooltip - Extended)
+// Units: e089 (OilProjectileDummy), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -89212,7 +89230,7 @@ STRING 14628
 }
 
 STRING 14629
-// Units: e089 (OilProjectileDummy), Ubertip (Tooltip - Extended)
+// Units: e08A (PillsProjectileDummy), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -90483,7 +90501,7 @@ STRING 14840
 }
 
 STRING 14841
-// Units: e08A (PillsProjectileDummy), Ubertip (Tooltip - Extended)
+// Units: e08C (NinjaNetDummy), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -90675,13 +90693,13 @@ Learn Weapon Mastery [|cffffcc00E|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 14873
-// Units: e08C (NinjaNetDummy), Ubertip (Tooltip - Extended)
+// Units: e08E (GaaraKidRedWave), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
 
 STRING 14874
-// Units: e087 (VastoLordDummy), EditorSuffix (Name - Editor Suffix)
+// Units: e08B (Gaara Kid Shield), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -91014,6 +91032,18 @@ STRING 14929
 // Items: I060 (Defense Pills), Ubertip (Tooltip - Extended)
 {
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Ally, Self|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Effect:|r Increases armor by |cff87ceeb200|r for |cff87ceeb20s|r, and reflects |cff87ceeb20%|r of damage taken|r|n|cff32cd32Cooldown:|r |cff87ceeb60s|r|n|cffff0000Classification: None|r
+}
+
+STRING 14930
+// Units: e04T (dummywebcaster), Name (Name)
+{
+dummywebcaster
+}
+
+STRING 14931
+// Abilities: A0E6 (Halloweenweb), Name (Name)
+{
+Halloweenweb
 }
 
 STRING 14932
@@ -92025,7 +92055,7 @@ STRING 15075
 }
 
 STRING 15076
-// Units: e08E (GaaraKidRedWave), Ubertip (Tooltip - Extended)
+// Units: e08F (GaaraKidRain1), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -92247,7 +92277,7 @@ STRING 15112
 }
 
 STRING 15113
-// Units: e08F (GaaraKidRain1), Ubertip (Tooltip - Extended)
+// Units: e08G (GaaraKidRain2), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -94168,7 +94198,7 @@ Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 15325
-// Units: e08G (GaaraKidRain2), Ubertip (Tooltip - Extended)
+// Units: e08H (GaaraKidAirBullet), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -95488,7 +95518,7 @@ D
 }
 
 STRING 15545
-// Units: e08H (GaaraKidAirBullet), Ubertip (Tooltip - Extended)
+// Units: e08I (GaaraKidAirBullet2), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -96106,7 +96136,7 @@ AHHS_KIMIMARO_ICON
 }
 
 STRING 15648
-// Units: e08I (GaaraKidAirBullet2), Ubertip (Tooltip - Extended)
+// Units: e08J (GaaraKidAirBullet3), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -96520,7 +96550,7 @@ Specially crafted shoes with cloning properties.|n|cff32cd32+10 All Stats|n+100 
 }
 
 STRING 15718
-// Units: e08J (GaaraKidAirBullet3), Ubertip (Tooltip - Extended)
+// Units: e08K (GaaraKidSandstorm), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -96544,7 +96574,7 @@ T
 }
 
 STRING 15722
-// Units: e08B (Gaara Kid Shield), EditorSuffix (Name - Editor Suffix)
+// Units: e08D (Gaara Kid Spear), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -96688,7 +96718,7 @@ D
 }
 
 STRING 15746
-// Units: e08K (GaaraKidSandstorm), Ubertip (Tooltip - Extended)
+// Units: e001 (TentenEProjectileDummy), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -97066,7 +97096,7 @@ This ninja is under protection of a crystal armor; it takes 10% reduced damage.
 }
 
 STRING 15810
-// Units: e001 (TentenEProjectileDummy), Ubertip (Tooltip - Extended)
+// Units: e002 (YamatoDummyD), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -97132,7 +97162,7 @@ Raitou Jutsu: Rakurai [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 15821
-// Units: e08D (Gaara Kid Spear), EditorSuffix (Name - Editor Suffix)
+// Units: e088 (AsumaFireRDummy), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -97702,7 +97732,7 @@ STRING 15915
 }
 
 STRING 15916
-// Units: e002 (YamatoDummyD), Ubertip (Tooltip - Extended)
+// Units: e003 (Crab), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -98862,13 +98892,13 @@ STRING 16108
 }
 
 STRING 16109
-// Units: e003 (Crab), Ubertip (Tooltip - Extended)
+// Units: e028 (EarthSphere), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
 
 STRING 16110
-// Units: e088 (AsumaFireRDummy), EditorSuffix (Name - Editor Suffix)
+// Units: e089 (OilProjectileDummy), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -100034,7 +100064,7 @@ Assassination Technique [|cffffcc00E|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 16304
-// Units: e089 (OilProjectileDummy), EditorSuffix (Name - Editor Suffix)
+// Units: e08A (PillsProjectileDummy), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -100094,13 +100124,13 @@ Kyuubi Statue
 }
 
 STRING 16314
-// Units: e028 (EarthSphere), Ubertip (Tooltip - Extended)
+// Units: e00H (JuugoCage), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
 
 STRING 16315
-// Units: e08A (PillsProjectileDummy), EditorSuffix (Name - Editor Suffix)
+// Units: e08C (NinjaNetDummy), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -100532,13 +100562,13 @@ STRING 16386
 }
 
 STRING 16387
-// Units: e00H (JuugoCage), Ubertip (Tooltip - Extended)
+// Units: e00I (MitsukiSnakeSemi), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
 
 STRING 16388
-// Units: e08C (NinjaNetDummy), EditorSuffix (Name - Editor Suffix)
+// Units: e08E (GaaraKidRedWave), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -101078,7 +101108,7 @@ T
 }
 
 STRING 16478
-// Units: e00I (MitsukiSnakeSemi), Ubertip (Tooltip - Extended)
+// Units: e00O (ToneriMissile), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -101342,7 +101372,7 @@ STRING 16521
 }
 
 STRING 16522
-// Units: e00O (ToneriMissile), Ubertip (Tooltip - Extended)
+// Units: e00R (JiroboBoulderUltimate), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -101907,13 +101937,13 @@ STRING 16615
 }
 
 STRING 16616
-// Units: e00R (JiroboBoulderUltimate), Ubertip (Tooltip - Extended)
+// Units: e00L (TentenWDragon), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
 
 STRING 16617
-// Units: e08E (GaaraKidRedWave), EditorSuffix (Name - Editor Suffix)
+// Units: e08F (GaaraKidRain1), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -102069,7 +102099,7 @@ Infinite Tsukuyomi
 }
 
 STRING 16643
-// Units: e00L (TentenWDragon), Ubertip (Tooltip - Extended)
+// Units: e01Q (SasoriBall), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -102273,7 +102303,7 @@ Kikaichuu Yajiri no Jutsu [|cffffcc00W|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 16677
-// Units: e08F (GaaraKidRain1), EditorSuffix (Name - Editor Suffix)
+// Units: e08G (GaaraKidRain2), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -102436,7 +102466,7 @@ STRING 16703
 }
 
 STRING 16704
-// Units: e01Q (SasoriBall), Ubertip (Tooltip - Extended)
+// Units: e01R (SasoriPuppetEnsnare), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -102598,7 +102628,7 @@ STRING 16730
 }
 
 STRING 16731
-// Units: e01R (SasoriPuppetEnsnare), Ubertip (Tooltip - Extended)
+// Units: e02R (TayuyaQOgre03Effect), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -102700,7 +102730,7 @@ Rapid Mirage 2222
 }
 
 STRING 16748
-// Units: e02R (TayuyaQOgre03Effect), Ubertip (Tooltip - Extended)
+// Units: e035 (HinataDummyUnit), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -105677,13 +105707,13 @@ STRING 17246
 }
 
 STRING 17247
-// Units: e035 (HinataDummyUnit), Ubertip (Tooltip - Extended)
+// Units: e03O (AnbuMissile), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
 
 STRING 17248
-// Units: e08G (GaaraKidRain2), EditorSuffix (Name - Editor Suffix)
+// Units: e08H (GaaraKidAirBullet), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -105821,13 +105851,13 @@ Specially crafted shoes for members of the Akatsuki|n|cff32cd32+10 All Stats|n+1
 }
 
 STRING 17271
-// Units: e03O (AnbuMissile), Ubertip (Tooltip - Extended)
+// Units: e03F (Shuriken (Hiruzen)), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
 
 STRING 17272
-// Units: e08H (GaaraKidAirBullet), EditorSuffix (Name - Editor Suffix)
+// Units: e08I (GaaraKidAirBullet2), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -105899,13 +105929,13 @@ STRING 17283
 }
 
 STRING 17284
-// Units: e03F (Shuriken (Hiruzen)), Ubertip (Tooltip - Extended)
+// Units: e03P (SuigetsuW), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
 
 STRING 17285
-// Units: e08I (GaaraKidAirBullet2), EditorSuffix (Name - Editor Suffix)
+// Units: e08J (GaaraKidAirBullet3), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -108555,7 +108585,7 @@ KidomaruDummy
 }
 
 STRING 17726
-// Units: e03P (SuigetsuW), Ubertip (Tooltip - Extended)
+// Units: e04R (Neji Vision), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -108753,7 +108783,7 @@ Scythe Combo [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 17759
-// Units: e08J (GaaraKidAirBullet3), EditorSuffix (Name - Editor Suffix)
+// Units: e08K (GaaraKidSandstorm), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -109227,7 +109257,7 @@ Learn Hachimon [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 17838
-// Units: e08K (GaaraKidSandstorm), EditorSuffix (Name - Editor Suffix)
+// Units: e001 (TentenEProjectileDummy), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -109888,7 +109918,7 @@ STRING 17947
 }
 
 STRING 17948
-// Units: e001 (TentenEProjectileDummy), EditorSuffix (Name - Editor Suffix)
+// Units: e00O (ToneriMissile), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -109906,7 +109936,7 @@ FuuWeb
 }
 
 STRING 17951
-// Units: e00O (ToneriMissile), EditorSuffix (Name - Editor Suffix)
+// Units: e00R (JiroboBoulderUltimate), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -111810,7 +111840,7 @@ STRING 18267
 }
 
 STRING 18268
-// Units: e00R (JiroboBoulderUltimate), EditorSuffix (Name - Editor Suffix)
+// Units: e011 (ChunninTiles), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -113872,7 +113902,7 @@ Dokujin No Jutsu [|cffffcc00R|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 18607
-// Units: e011 (ChunninTiles), EditorSuffix (Name - Editor Suffix)
+// Units: e01Q (SasoriBall), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -115359,7 +115389,7 @@ Rikudou Mode [|cffffcc00T|r]
 }
 
 STRING 18851
-// Units: e01Q (SasoriBall), EditorSuffix (Name - Editor Suffix)
+// Units: e01R (SasoriPuppetEnsnare), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -117801,7 +117831,7 @@ STRING 19266
 }
 
 STRING 19267
-// Units: e01R (SasoriPuppetEnsnare), EditorSuffix (Name - Editor Suffix)
+// Units: e035 (HinataDummyUnit), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -118203,7 +118233,7 @@ STRING 19333
 }
 
 STRING 19334
-// Units: e035 (HinataDummyUnit), EditorSuffix (Name - Editor Suffix)
+// Units: e03O (AnbuMissile), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -119924,7 +119954,7 @@ Lava Release
 }
 
 STRING 19620
-// Units: e03O (AnbuMissile), EditorSuffix (Name - Editor Suffix)
+// Units: e03F (Shuriken (Hiruzen)), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -120848,7 +120878,7 @@ STRING 19773
 }
 
 STRING 19774
-// Units: e03F (Shuriken (Hiruzen)), EditorSuffix (Name - Editor Suffix)
+// Units: e03P (SuigetsuW), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -124771,7 +124801,7 @@ Learn Takigakure no Senpuu [|cffffcc00W|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 20409
-// Units: e04R (Neji Vision), Ubertip (Tooltip - Extended)
+// Units: e04S (GurenShuriken), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
@@ -124825,7 +124855,7 @@ Takigakure no Senpuu [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 20418
-// Units: e03P (SuigetsuW), EditorSuffix (Name - Editor Suffix)
+// Units: e04S (GurenShuriken), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
@@ -133426,13 +133456,13 @@ Chakra Blade Active
 }
 
 STRING 21840
-// Units: e04S (GurenShuriken), Ubertip (Tooltip - Extended)
+// Units: e04T (dummywebcaster), Ubertip (Tooltip - Extended)
 {
 http://wc3campaigns.net/vexorian
 }
 
 STRING 21841
-// Units: e04S (GurenShuriken), EditorSuffix (Name - Editor Suffix)
+// Units: e04T (dummywebcaster), EditorSuffix (Name - Editor Suffix)
 {
 (Caster System?)
 }
