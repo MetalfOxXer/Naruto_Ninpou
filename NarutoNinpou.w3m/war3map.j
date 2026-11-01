@@ -255,8 +255,8 @@ integer Table__more= 8190
     //Configure it if you use more than 8190 "key" variables in your map (this will never happen though).
     
 hashtable Table__ht= InitHashtable()
-constant integer Table__sizeK=8
-constant integer Table__listK=9
+constant integer Table__sizeK=3
+constant integer Table__listK=4
 //endglobals from Table
 //globals from TimerUtils:
 constant boolean LIBRARY_TimerUtils=true
@@ -316,10 +316,10 @@ constant real XE_MAX_COLLISION_SIZE=  197.0
 //endglobals from xebasic
 //globals from AutoBuyS:
 constant boolean LIBRARY_AutoBuyS=true
-// processed: boolean array AutoBuyS___autobuy[12]
-// processed: boolean array AutoBuyS___firstUse[12] 
-// processed: integer array AutoBuyS___buildId[14]
-// processed:     ItemList array AutoBuyS___lists[12] 
+// processed: boolean array AutoBuyS__autobuy[12]
+// processed: boolean array AutoBuyS__firstUse[12] 
+// processed: integer array AutoBuyS__buildId[14]
+// processed:     ItemList array AutoBuyS__lists[12] 
 //endglobals from AutoBuyS
 //globals from Camera:
 constant boolean LIBRARY_Camera=true
@@ -3018,7 +3018,6 @@ trigger gg_trg_EnableDonatorHeroes= null
 trigger gg_trg_TestCommand= null
 trigger gg_trg_Music= null
 trigger gg_trg_UI= null
-trigger gg_trg_NinpouTooltipVerticalLoop= null
 trigger gg_trg_Custom_Minimap_Colors= null
 trigger gg_trg_InitMinimapIcons= null
 trigger gg_trg_PickScreen= null
@@ -3107,6 +3106,7 @@ unit gg_unit_hgra_0168= null
 unit gg_unit_hbla_0169= null
 unit gg_unit_hbla_0170= null
 unit gg_unit_hbla_0171= null
+trigger gg_trg_Untitled_Trigger_001= null
 effect HagoromoChargesD_release= null
 effect HagoromoChargesD_releaseOverhead= null
 // processed:         unit array HagoromoChargesD_orbs[8]
@@ -3219,21 +3219,47 @@ group HideHeroesSystem__hidedummy
 // processed:     real array heroscaley[8190]
 // processed:     real array heroscalez[8190]
 // processed:     boolean array HideHeroesSystem__ishidden[12][8190]
-// processed:         unit array ItemKunai___heroes[12]
-// processed:         unit array Bashosen___dummies[1][1]
+constant integer NSB_ITEM_ID= 'ISB1'
+constant integer NSB_CAST_ID= 'ASB2'
+constant integer NSB_SEAL_ID= 'uSB1'
+constant integer NSB_CARRIER_ID= 'uSB2'
+constant integer NSB_INVIS_ID= 'ASBI'
+
+constant integer NSB_SEAL_HP= 500
+constant real NSB_RADIUS= 600.00
+constant real NSB_LIFETIME= 40.00
+constant real NSB_SCAN_INTERVAL= 0.05
+constant real NSB_PING_DURATION= 2.00
+    // The 30-second cooldown and placement range are Object Editor settings.
+constant string NSB_BARRIER_MODEL= "JiraiyaBarrier.mdx"
+constant real NSB_BARRIER_SCALE= 9.28
+
+constant integer NSB_KEY_ACTIVE= 100
+constant integer NSB_KEY_OWNER= 101
+constant integer NSB_KEY_CARRIER= 102
+constant integer NSB_KEY_EFFECT= 103
+constant integer NSB_KEY_INDEX= 104
+    // Child keys 0..11 store prior occupancy, indexed by player slot.
+hashtable NSB_Data= null
+unit array NSB_Seals
+timer NSB_Timer= null
+integer NSB_Count= 0
+boolean NSB_Ready= false
+// processed:         unit array ItemKunai__heroes[12]
+// processed:         unit array Bashosen__dummies[1][1]
 
 force Akatsuki
 
 
-// processed:     unit array ScrollOfTeleportScope___anbus[1][1] 
-// processed:     unit array AnkoNewE___AnkoNewE[1][1]
-// processed:     unit array AsumaFireR___firewall[1][1]
+// processed:     unit array ScrollOfTeleportScope__anbus[1][1] 
+// processed:     unit array AnkoNewE__AnkoNewE[1][1]
+// processed:     unit array AsumaFireR__firewall[1][1]
 // processed:     unit array chiyo_kunais[1][6] 
-// processed:     integer array DanzoNewSemiS___instances[8190]
-// processed:     unit array DanzoIzanagiModel___sharingans[1][1] 
-// processed:         unit array DaruiSuiton___wave[1][1]
-// processed:         unit array DaruiLaserCircus___lasers[1][1]
-// processed:         effect array DaruiLaserCircus___effects[1][1] 
+// processed:     integer array DanzoNewSemiS__instances[8190]
+// processed:     unit array DanzoIzanagiModel__sharingans[1][1] 
+// processed:         unit array DaruiSuiton__wave[1][1]
+// processed:         unit array DaruiLaserCircus__lasers[1][1]
+// processed:         effect array DaruiLaserCircus__effects[1][1] 
 boolean metaCtrlDownDeidara= false
 trigger rmbClickTriggerDeidara= CreateTrigger()
 trigger rmbReleaseTriggerDeidara= CreateTrigger()
@@ -3245,16 +3271,16 @@ unit deidaraSummon
 unit deidara
 real deidaraMouseX= 0
 real deidaraMouseY= 0
-boolean DeidaraT___detonate= false
-boolean DeidaraT___created= false
-// processed:         unit array GaaraKidShukakuBijuuDama___chakra[1][1]
-trigger GaiYagai___t1
-trigger GaiYagai___t2
-integer GaiYagai___count= 0
-unit GaiYagai___dragon
-real GaiYagai___angle
-// processed:         unit array NidaimeMizukageGenjutsu___mirages[1][1] 
-// processed: 		destructable array GurenSuishoRo___GurenQBlocks[8]
+boolean DeidaraT__detonate= false
+boolean DeidaraT__created= false
+// processed:         unit array GaaraKidShukakuBijuuDama__chakra[1][1]
+trigger GaiYagai__t1
+trigger GaiYagai__t2
+integer GaiYagai__count= 0
+unit GaiYagai__dragon
+real GaiYagai__angle
+// processed:         unit array NidaimeMizukageGenjutsu__mirages[1][1] 
+// processed: 		destructable array GurenSuishoRo__GurenQBlocks[8]
 // processed:     unit array HakuNewSemiS___needles[1][1] 
 unit HiruzenCore_Hiruzen= null
 unit HiruzenCore_Enma= null
@@ -3293,75 +3319,75 @@ boolean kakashi_susanoo_active
 // processed:         integer array KakashiNewSusanoo___units_triggers2[8190]
 // processed:     unit array KakashiKamuiShuriken_HitTarg[128]
 // processed:     real array KakashiKamuiShuriken_HitMulti[128]
-// processed:         unit array KakuzuCombinedAttack__dummies[1][12]
-// processed:         unit array KarinChainsArea__KarinChain[1][1]
-// processed:     		unit array KarinLesserChakraChainsNew__Karinchain[1][1]
-// processed: 		unit array KarinLesserChakraChainsNew__Karinchain2[1][1]
-// processed:     	unit array KidomaruTripleArrow__KidoArrows[1][1]
-// processed:         unit array KillerBeNewBijuuDama__chakra[1][1]
-// processed:         unit array BrotherBashosen__dummies[1][1]
-// processed:     integer array GinkakuPot__instances[8190]
-// processed:         unit array UltimateRoar__wave[1][1]
+// processed:         unit array KakuzuCombinedAttack___dummies[1][12]
+// processed:         unit array KarinChainsArea___KarinChain[1][1]
+// processed:     		unit array KarinLesserChakraChainsNew___Karinchain[1][1]
+// processed: 		unit array KarinLesserChakraChainsNew___Karinchain2[1][1]
+// processed:     	unit array KidomaruTripleArrow___KidoArrows[1][1]
+// processed:         unit array KillerBeNewBijuuDama___chakra[1][1]
+// processed:         unit array BrotherBashosen___dummies[1][1]
+// processed:     integer array GinkakuPot___instances[8190]
+// processed:         unit array UltimateRoar___wave[1][1]
 hashtable KurotsuchiHash= InitHashtable()
 integer QHitTable
 constant integer SOAKED_FLAG= 1
 constant integer HARDENED_FLAG= 2
-constant integer KurotsuchiWaterTrumpet__SPELL_ID= 'A0WZ'
-constant real KurotsuchiWaterTrumpet__PROJECTILE_SPEED= 40.0
-constant real KurotsuchiWaterTrumpet__LINE_DISTANCE= 600.0
-constant real KurotsuchiWaterTrumpet__FAN_DISTANCE= 300.0
-constant real KurotsuchiWaterTrumpet__DAMAGE_RADIUS= 150.0
-constant integer KurotsuchiWaterTrumpet__NUM_FAN_PROJECTILES= 13
-constant real KurotsuchiWaterTrumpet__FAN_Z_MAX= 300.0
-constant string KurotsuchiWaterTrumpet__SFX_LINE= "Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveDamage.mdl"
-constant integer KurotsuchiWaterTrumpet__MAX_TRUMPET_HITS= 300
+constant integer KurotsuchiWaterTrumpet___SPELL_ID= 'A0WZ'
+constant real KurotsuchiWaterTrumpet___PROJECTILE_SPEED= 40.0
+constant real KurotsuchiWaterTrumpet___LINE_DISTANCE= 600.0
+constant real KurotsuchiWaterTrumpet___FAN_DISTANCE= 300.0
+constant real KurotsuchiWaterTrumpet___DAMAGE_RADIUS= 150.0
+constant integer KurotsuchiWaterTrumpet___NUM_FAN_PROJECTILES= 13
+constant real KurotsuchiWaterTrumpet___FAN_Z_MAX= 300.0
+constant string KurotsuchiWaterTrumpet___SFX_LINE= "Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveDamage.mdl"
+constant integer KurotsuchiWaterTrumpet___MAX_TRUMPET_HITS= 300
 unit array TrumpetHitUnits
 integer TrumpetHitCount= 0
-constant integer KaidoShock__ABILITY_ID= 'A0WJ'
-constant integer KaidoShock__DUMMY_ID= 'h0BC'
-constant string KaidoShock__SFX_IMPACT= "war3mapImported\\groundshock0.mdx"
-constant string KaidoShock__SFX_IMPACT2= "war3mapImported\\zarakiwcrack1.mdx"
-constant real KaidoShock__KS_RADIUS= 350.0
-constant real KaidoShock__KS_DELAY= 0.50
-constant real KaidoShock__KS_RISE_HEIGHT= 100.0
-constant real KaidoShock__KS_RISE_DURATION= 0.3
-constant real KaidoShock__KS_DURATION= 3.0
-constant real KaidoShock__KS_KNOCKUP_HEIGHT= 250.0
-effect KaidoShock__explosion
-effect KaidoShock__explosion2
-effect KaidoShock__explosion3
-hashtable KaidoShock__RockHT
-constant integer KurotsuchiQuicklimeE__SPELL_ID= 'A0X1'
-constant real KurotsuchiQuicklimeE__PROJECTILE_SPEED= 1600.0
-constant real KurotsuchiQuicklimeE__MAX_TETHER_DIST= 500.0
-constant real KurotsuchiQuicklimeE__TETHER_DURATION= 4.0
-constant real KurotsuchiQuicklimeE__BREAK_HOLD_TIME= 0.75
-constant real KurotsuchiQuicklimeE__PULL_INTERVAL= 0.03
-constant real KurotsuchiQuicklimeE__BASE_PULL_SPEED= 15.0
-constant string KurotsuchiQuicklimeE__SFX_PROJECTILE= "war3mapImported\\LiMuLv.mdx"
-constant string KurotsuchiQuicklimeE__SFX_TETHER= "war3mapImported\\LiMuLv.mdx"
-constant integer KurotsuchiQuicklimeE__DUMMY_PROJECTILE= 'e007'
-constant real KurotsuchiQuicklimeE__LANDMINE_DURATION= 6.0
-constant integer KurotsuchiR__R_SPELL_ID= 'A0X2'
-constant real KurotsuchiR__R_CAST_DURATION= 0.78
-constant real KurotsuchiR__R_TICK_PERIOD= 0.01
-constant integer KurotsuchiR__R_TOTAL_ROWS= 12
-constant integer KurotsuchiR__R_TOTAL_BLOBS= 200
-constant real KurotsuchiR__R_BLOB_ARC_HEIGHT= 80.0
-constant real KurotsuchiR__R_MOUTH_FORWARD= 0.0
-constant real KurotsuchiR__R_MOUTH_HEIGHT= 80.0
-constant real KurotsuchiR__R_BLOB_TRAVEL_TIME= 0.75
-constant real KurotsuchiR__R_DRAG_RADIUS= 128.0
-constant real KurotsuchiR__R_BASE_DAMAGE= 800.0
-constant real KurotsuchiR__R_STR_MULTIPLIER= 4.0
-constant integer KurotsuchiR__MAX_INSTANCES= 8
-constant integer KurotsuchiR__MAX_TRACKED_UNITS= 300
-constant integer KurotsuchiR__R_EXTRA_ROWS= 3
-constant real KurotsuchiR__R_AREA_CHECK_INTERVAL= 0.1
+constant integer KaidoShock___ABILITY_ID= 'A0WJ'
+constant integer KaidoShock___DUMMY_ID= 'h0BC'
+constant string KaidoShock___SFX_IMPACT= "war3mapImported\\groundshock0.mdx"
+constant string KaidoShock___SFX_IMPACT2= "war3mapImported\\zarakiwcrack1.mdx"
+constant real KaidoShock___KS_RADIUS= 350.0
+constant real KaidoShock___KS_DELAY= 0.50
+constant real KaidoShock___KS_RISE_HEIGHT= 100.0
+constant real KaidoShock___KS_RISE_DURATION= 0.3
+constant real KaidoShock___KS_DURATION= 3.0
+constant real KaidoShock___KS_KNOCKUP_HEIGHT= 250.0
+effect KaidoShock___explosion
+effect KaidoShock___explosion2
+effect KaidoShock___explosion3
+hashtable KaidoShock___RockHT
+constant integer KurotsuchiQuicklimeE___SPELL_ID= 'A0X1'
+constant real KurotsuchiQuicklimeE___PROJECTILE_SPEED= 1600.0
+constant real KurotsuchiQuicklimeE___MAX_TETHER_DIST= 500.0
+constant real KurotsuchiQuicklimeE___TETHER_DURATION= 4.0
+constant real KurotsuchiQuicklimeE___BREAK_HOLD_TIME= 0.75
+constant real KurotsuchiQuicklimeE___PULL_INTERVAL= 0.03
+constant real KurotsuchiQuicklimeE___BASE_PULL_SPEED= 15.0
+constant string KurotsuchiQuicklimeE___SFX_PROJECTILE= "war3mapImported\\LiMuLv.mdx"
+constant string KurotsuchiQuicklimeE___SFX_TETHER= "war3mapImported\\LiMuLv.mdx"
+constant integer KurotsuchiQuicklimeE___DUMMY_PROJECTILE= 'e007'
+constant real KurotsuchiQuicklimeE___LANDMINE_DURATION= 6.0
+constant integer KurotsuchiR___R_SPELL_ID= 'A0X2'
+constant real KurotsuchiR___R_CAST_DURATION= 0.78
+constant real KurotsuchiR___R_TICK_PERIOD= 0.01
+constant integer KurotsuchiR___R_TOTAL_ROWS= 12
+constant integer KurotsuchiR___R_TOTAL_BLOBS= 200
+constant real KurotsuchiR___R_BLOB_ARC_HEIGHT= 80.0
+constant real KurotsuchiR___R_MOUTH_FORWARD= 0.0
+constant real KurotsuchiR___R_MOUTH_HEIGHT= 80.0
+constant real KurotsuchiR___R_BLOB_TRAVEL_TIME= 0.75
+constant real KurotsuchiR___R_DRAG_RADIUS= 128.0
+constant real KurotsuchiR___R_BASE_DAMAGE= 800.0
+constant real KurotsuchiR___R_STR_MULTIPLIER= 4.0
+constant integer KurotsuchiR___MAX_INSTANCES= 8
+constant integer KurotsuchiR___MAX_TRACKED_UNITS= 300
+constant integer KurotsuchiR___R_EXTRA_ROWS= 3
+constant real KurotsuchiR___R_AREA_CHECK_INTERVAL= 0.1
 
-constant string KurotsuchiR__R_BLOB_SFX= "war3mapImported\\LiMuLv.mdx"
-constant string KurotsuchiR__R_LOOKAT_ATTACH= "bone_turret"
-constant integer KurotsuchiR__R_VISION_DUMMY= 'e007'
+constant string KurotsuchiR___R_BLOB_SFX= "war3mapImported\\LiMuLv.mdx"
+constant string KurotsuchiR___R_LOOKAT_ATTACH= "bone_turret"
+constant integer KurotsuchiR___R_VISION_DUMMY= 'e007'
 
 integer YokaiSpray_blobDamageDone
 integer YokaiSpray_unitsFullyDamaged
@@ -3373,20 +3399,20 @@ unit array trackedUnits
 real array trackedPrevX
 real array trackedPrevY
 integer array trackedCounts
-constant integer KaidoLeap__ABILITY_ID= 'A0WW'
-constant real KaidoLeap__LEAP_DURATION= 1.5
-constant real KaidoLeap__LEAP_HEIGHT= 350.0
-constant real KaidoLeap__DAMAGE_RADIUS= 400.0
-constant real KaidoLeap__LEAP_DEADZONE= 50.0
-constant string KaidoLeap__SFX_IMPACT= "war3mapImported\\dls1_exd.mdl"
-constant string KaidoLeap__SFX_HAND= "war3mapImported\\RockRew.mdl"
-// processed:     unit array KushinaChains__kushinaChains[1][1]
-// processed:         unit array KushinaChainsArea__KushinaChain[1][1]
-// processed:         unit array MadaraKaton__firewall[1][1]
+constant integer KaidoLeap___ABILITY_ID= 'A0WW'
+constant real KaidoLeap___LEAP_DURATION= 1.5
+constant real KaidoLeap___LEAP_HEIGHT= 350.0
+constant real KaidoLeap___DAMAGE_RADIUS= 400.0
+constant real KaidoLeap___LEAP_DEADZONE= 50.0
+constant string KaidoLeap___SFX_IMPACT= "war3mapImported\\dls1_exd.mdl"
+constant string KaidoLeap___SFX_HAND= "war3mapImported\\RockRew.mdl"
+// processed:     unit array KushinaChains___kushinaChains[1][1]
+// processed:         unit array KushinaChainsArea___KushinaChain[1][1]
+// processed:         unit array MadaraKaton___firewall[1][1]
 unit madara_susanoo
 // processed:         integer array units_triggers[8190]
-// processed:         unit array MadaraYasaka__yasakas[1][1]
-real array MadaraYasaka__distance
+// processed:         unit array MadaraYasaka___yasakas[1][1]
+real array MadaraYasaka___distance
 // processed:         unit array HokageMinatoFarmSpell__minatos[1][1]
 // processed:         unit array HokageMinatoFarmSpell__flashes[1][1]
 // processed:         unit array MinatoJouninYellowFlash__minatos[1][1]
@@ -3509,14 +3535,14 @@ real obitoMouseY= 0
 // processed:         unit array ObitoKaton__tornadoes[1][1]
 // processed:       boolean array TobiramaDarkness__show[12] 
 // processed:         unit array ToruneSemi__dummies[1][1]
-// processed:     unit array ZetsuMayflyClones___zetsuclones[1][1]
-// processed: dialog array SendGoldAndCystal___gd[12]
-// processed: button array SendGoldAndCystal___gb[12][12] 
-// processed: dialog array SendGoldAndCystal___cd[12]
-// processed: button array SendGoldAndCystal___cb[12][12] 
-// processed: integer array SendGoldAndCystal___g[12] 
-// processed: integer array SendGoldAndCystal___c[12] 
-// processed: integer array SendGoldAndCystal___given[12]
+// processed:     unit array ZetsuMayflyClones__zetsuclones[1][1]
+// processed: dialog array SendGoldAndCystal__gd[12]
+// processed: button array SendGoldAndCystal__gb[12][12] 
+// processed: dialog array SendGoldAndCystal__cd[12]
+// processed: button array SendGoldAndCystal__cb[12][12] 
+// processed: integer array SendGoldAndCystal__g[12] 
+// processed: integer array SendGoldAndCystal__c[12] 
+// processed: integer array SendGoldAndCystal__given[12]
 real HERO_DEATH_MIDPOINT_DIST= 6000.0
 unit array Anbus
 effect array AnbusWeapons
@@ -4151,8 +4177,8 @@ integer s__Recipes_count_recipes
 constant integer si__RecipeBashosen=176
 constant integer si__BadgeOfAnbu=177
 boolean s__BadgeOfAnbu_b= false
-constant integer si__JadePassive___Item=178
-boolean s__JadePassive___Item_b= false
+constant integer si__JadePassive__Item=178
+boolean s__JadePassive__Item_b= false
 constant integer si__SpiritOrbs=179
 boolean s__SpiritOrbs_b= false
 constant integer si__EightHeadSwordCritical=180
@@ -4377,14 +4403,14 @@ unit array s__TimedExplosiveTag_caster
 unit array s__TimedExplosiveTag_note
 integer array s__TimedExplosiveTag_count
 constant integer si__ExplosiveTagExplosion=222
-constant integer si__Bashosen___Item=223
-integer s__Bashosen___Item_Alloc__instanceCount= 0
-integer array s__Bashosen___Item_Alloc__recycle
-constant integer s__Bashosen___Item_SPELL_ID= 'A0JH'
-group array s__Bashosen___Item_damaged
-unit array s__Bashosen___Item_caster
-integer array s__Bashosen___Item_count
-integer array s__Bashosen___Item_element
+constant integer si__Bashosen__Item=223
+integer s__Bashosen__Item_Alloc__instanceCount= 0
+integer array s__Bashosen__Item_Alloc__recycle
+constant integer s__Bashosen__Item_SPELL_ID= 'A0JH'
+group array s__Bashosen__Item_damaged
+unit array s__Bashosen__Item_caster
+integer array s__Bashosen__Item_count
+integer array s__Bashosen__Item_element
 constant integer si__Ocarina=224
 integer s__Ocarina_Alloc__instanceCount= 0
 integer array s__Ocarina_Alloc__recycle
@@ -4470,16 +4496,16 @@ constant integer si__ItemShikiFuujin=239
 integer s__ItemShikiFuujin_Alloc__instanceCount= 0
 integer array s__ItemShikiFuujin_Alloc__recycle
 constant integer s__ItemShikiFuujin_SPELL_ID= 'A15X'
-constant integer si__AdamantineStaffActive___Spell=240
-integer s__AdamantineStaffActive___Spell_Alloc__instanceCount= 0
-integer array s__AdamantineStaffActive___Spell_Alloc__recycle
-constant integer s__AdamantineStaffActive___Spell_SPELL_ID= 'A04Z'
-unit array s__AdamantineStaffActive___Spell_caster
-unit array s__AdamantineStaffActive___Spell_target
-unit array s__AdamantineStaffActive___Spell_box
-integer array s__AdamantineStaffActive___Spell_count
-real array s__AdamantineStaffActive___Spell_target_x
-real array s__AdamantineStaffActive___Spell_target_y
+constant integer si__AdamantineStaffActive__Spell=240
+integer s__AdamantineStaffActive__Spell_Alloc__instanceCount= 0
+integer array s__AdamantineStaffActive__Spell_Alloc__recycle
+constant integer s__AdamantineStaffActive__Spell_SPELL_ID= 'A04Z'
+unit array s__AdamantineStaffActive__Spell_caster
+unit array s__AdamantineStaffActive__Spell_target
+unit array s__AdamantineStaffActive__Spell_box
+integer array s__AdamantineStaffActive__Spell_count
+real array s__AdamantineStaffActive__Spell_target_x
+real array s__AdamantineStaffActive__Spell_target_y
 constant integer si__ExecutionBlade=241
 integer s__ExecutionBlade_Alloc__instanceCount= 0
 integer array s__ExecutionBlade_Alloc__recycle
@@ -4592,12 +4618,12 @@ unit array s__AnkoW_dummy3
 unit array s__AnkoW_dummy4
 unit array s__AnkoW_dummy5
 real array s__AnkoW_angle
-constant integer si__AnkoNewE___AnkoNewE=260
-integer s__AnkoNewE___AnkoNewE_Alloc__instanceCount= 0
-integer array s__AnkoNewE___AnkoNewE_Alloc__recycle
-constant integer s__AnkoNewE___AnkoNewE_SPELL_ID= 'A14Y'
-unit array s__AnkoNewE___AnkoNewE_caster
-integer array s__AnkoNewE___AnkoNewE_count
+constant integer si__AnkoNewE__AnkoNewE=260
+integer s__AnkoNewE__AnkoNewE_Alloc__instanceCount= 0
+integer array s__AnkoNewE__AnkoNewE_Alloc__recycle
+constant integer s__AnkoNewE__AnkoNewE_SPELL_ID= 'A14Y'
+unit array s__AnkoNewE__AnkoNewE_caster
+integer array s__AnkoNewE__AnkoNewE_count
 constant integer si__AnkoR=261
 integer s__AnkoR_Alloc__instanceCount= 0
 integer array s__AnkoR_Alloc__recycle
@@ -4676,16 +4702,16 @@ real array s__Bird_angle
 real array s__Bird_x
 real array s__Bird_y
 real array s__Bird_angle2
-constant integer si__Panda___Spell=270
-integer s__Panda___Spell_Alloc__instanceCount= 0
-integer array s__Panda___Spell_Alloc__recycle
-constant integer s__Panda___Spell_SPELL_ID= 'A19I'
-integer s__Panda___Spell_instance
-unit array s__Panda___Spell_caster
-unit array s__Panda___Spell_panda
-real array s__Panda___Spell_target_x
-real array s__Panda___Spell_target_y
-real array s__Panda___Spell_angle
+constant integer si__Panda__Spell=270
+integer s__Panda__Spell_Alloc__instanceCount= 0
+integer array s__Panda__Spell_Alloc__recycle
+constant integer s__Panda__Spell_SPELL_ID= 'A19I'
+integer s__Panda__Spell_instance
+unit array s__Panda__Spell_caster
+unit array s__Panda__Spell_panda
+real array s__Panda__Spell_target_x
+real array s__Panda__Spell_target_y
+real array s__Panda__Spell_angle
 constant integer si__AsumaChakraBlades=271
 integer s__AsumaChakraBlades_Alloc__instanceCount= 0
 integer array s__AsumaChakraBlades_Alloc__recycle
@@ -4805,19 +4831,19 @@ real array s__BorutoRasengan_target_x
 real array s__BorutoRasengan_target_y
 real array s__BorutoRasengan_angle
 integer array s__BorutoRasengan_count
-constant integer si__BorutoOyakoRasengan___Spell=282
-integer s__BorutoOyakoRasengan___Spell_Alloc__instanceCount= 0
-integer array s__BorutoOyakoRasengan___Spell_Alloc__recycle
-constant integer s__BorutoOyakoRasengan___Spell_SPELL_ID= 'A1EE'
-integer s__BorutoOyakoRasengan___Spell_instance
-unit array s__BorutoOyakoRasengan___Spell_caster
-unit array s__BorutoOyakoRasengan___Spell_stunUnit
-effect array s__BorutoOyakoRasengan___Spell_rasengan
-integer array s__BorutoOyakoRasengan___Spell_count2
-real array s__BorutoOyakoRasengan___Spell_target_x
-real array s__BorutoOyakoRasengan___Spell_target_y
-real array s__BorutoOyakoRasengan___Spell_distance
-integer array s__BorutoOyakoRasengan___Spell_count
+constant integer si__BorutoOyakoRasengan__Spell=282
+integer s__BorutoOyakoRasengan__Spell_Alloc__instanceCount= 0
+integer array s__BorutoOyakoRasengan__Spell_Alloc__recycle
+constant integer s__BorutoOyakoRasengan__Spell_SPELL_ID= 'A1EE'
+integer s__BorutoOyakoRasengan__Spell_instance
+unit array s__BorutoOyakoRasengan__Spell_caster
+unit array s__BorutoOyakoRasengan__Spell_stunUnit
+effect array s__BorutoOyakoRasengan__Spell_rasengan
+integer array s__BorutoOyakoRasengan__Spell_count2
+real array s__BorutoOyakoRasengan__Spell_target_x
+real array s__BorutoOyakoRasengan__Spell_target_y
+real array s__BorutoOyakoRasengan__Spell_distance
+integer array s__BorutoOyakoRasengan__Spell_count
 constant integer si__ChiyoTrap=283
 integer s__ChiyoTrap_Alloc__instanceCount= 0
 integer array s__ChiyoTrap_Alloc__recycle
@@ -4979,16 +5005,16 @@ boolean array s__DanzoSuicide_ultimate
 integer array s__DanzoSuicide_count
 constant integer si__DaruiRaiton=302
 constant integer s__DaruiRaiton_SPELL_ID= 'A1A9'
-constant integer si__DaruiSuiton___Spell=303
-integer s__DaruiSuiton___Spell_Alloc__instanceCount= 0
-integer array s__DaruiSuiton___Spell_Alloc__recycle
-constant integer s__DaruiSuiton___Spell_SPELL_ID= 'A0LG'
-group array s__DaruiSuiton___Spell_damaged
-unit array s__DaruiSuiton___Spell_caster
-integer array s__DaruiSuiton___Spell_count
-real array s__DaruiSuiton___Spell_target_x
-real array s__DaruiSuiton___Spell_target_y
-unit array s__DaruiSuiton___Spell_raincloud
+constant integer si__DaruiSuiton__Spell=303
+integer s__DaruiSuiton__Spell_Alloc__instanceCount= 0
+integer array s__DaruiSuiton__Spell_Alloc__recycle
+constant integer s__DaruiSuiton__Spell_SPELL_ID= 'A0LG'
+group array s__DaruiSuiton__Spell_damaged
+unit array s__DaruiSuiton__Spell_caster
+integer array s__DaruiSuiton__Spell_count
+real array s__DaruiSuiton__Spell_target_x
+real array s__DaruiSuiton__Spell_target_y
+unit array s__DaruiSuiton__Spell_raincloud
 constant integer si__DaruiSuitonMultiChoice=304
 integer s__DaruiSuitonMultiChoice_Alloc__instanceCount= 0
 integer array s__DaruiSuitonMultiChoice_Alloc__recycle
@@ -5002,19 +5028,19 @@ constant integer si__DaruiLightningStrike=305
 integer s__DaruiLightningStrike_Alloc__instanceCount= 0
 integer array s__DaruiLightningStrike_Alloc__recycle
 constant integer s__DaruiLightningStrike_SPELL_ID= 'A1EF'
-constant integer si__DaruiLaserCircus___Spell=306
-integer s__DaruiLaserCircus___Spell_Alloc__instanceCount= 0
-integer array s__DaruiLaserCircus___Spell_Alloc__recycle
-constant integer s__DaruiLaserCircus___Spell_SPELL_ID= 'A01Y'
-integer s__DaruiLaserCircus___Spell_instance
-unit array s__DaruiLaserCircus___Spell_caster
-unit array s__DaruiLaserCircus___Spell_dummy
-real array s__DaruiLaserCircus___Spell_target_x
-real array s__DaruiLaserCircus___Spell_target_y
-real array s__DaruiLaserCircus___Spell_speed
-real array s__DaruiLaserCircus___Spell_distance
-integer array s__DaruiLaserCircus___Spell_count
-integer array s__DaruiLaserCircus___Spell_effects_count
+constant integer si__DaruiLaserCircus__Spell=306
+integer s__DaruiLaserCircus__Spell_Alloc__instanceCount= 0
+integer array s__DaruiLaserCircus__Spell_Alloc__recycle
+constant integer s__DaruiLaserCircus__Spell_SPELL_ID= 'A01Y'
+integer s__DaruiLaserCircus__Spell_instance
+unit array s__DaruiLaserCircus__Spell_caster
+unit array s__DaruiLaserCircus__Spell_dummy
+real array s__DaruiLaserCircus__Spell_target_x
+real array s__DaruiLaserCircus__Spell_target_y
+real array s__DaruiLaserCircus__Spell_speed
+real array s__DaruiLaserCircus__Spell_distance
+integer array s__DaruiLaserCircus__Spell_count
+integer array s__DaruiLaserCircus__Spell_effects_count
 constant integer si__DaruiBlackPanther=307
 integer s__DaruiBlackPanther_Alloc__instanceCount= 0
 integer array s__DaruiBlackPanther_Alloc__recycle
@@ -5184,16 +5210,16 @@ unit array s__FuuUltimate_caster
 unit array s__FuuUltimate_bijuu
 timer array s__FuuUltimate_spin
 integer array s__FuuUltimate_count
-constant integer si__GaaraSandShield___Spell=326
-integer s__GaaraSandShield___Spell_Alloc__instanceCount= 0
-integer array s__GaaraSandShield___Spell_Alloc__recycle
-constant integer s__GaaraSandShield___Spell_SPELL_ID= 'A0KE'
-unit array s__GaaraSandShield___Spell_caster
-unit array s__GaaraSandShield___Spell_target
-unit array s__GaaraSandShield___Spell_shield
-integer array s__GaaraSandShield___Spell_count
-real array s__GaaraSandShield___Spell_hp
-real array s__GaaraSandShield___Spell_last_hp
+constant integer si__GaaraSandShield__Spell=326
+integer s__GaaraSandShield__Spell_Alloc__instanceCount= 0
+integer array s__GaaraSandShield__Spell_Alloc__recycle
+constant integer s__GaaraSandShield__Spell_SPELL_ID= 'A0KE'
+unit array s__GaaraSandShield__Spell_caster
+unit array s__GaaraSandShield__Spell_target
+unit array s__GaaraSandShield__Spell_shield
+integer array s__GaaraSandShield__Spell_count
+real array s__GaaraSandShield__Spell_hp
+real array s__GaaraSandShield__Spell_last_hp
 constant integer si__GaaraSabakuKyu=327
 integer s__GaaraSabakuKyu_Alloc__instanceCount= 0
 integer array s__GaaraSabakuKyu_Alloc__recycle
@@ -5250,18 +5276,18 @@ unit array s__GaaraUltimate_cloud
 integer array s__GaaraUltimate_count
 real array s__GaaraUltimate_angle
 real array s__GaaraUltimate_distance
-constant integer si__GaaraKidShukakuBijuuDama___Spell=335
-integer s__GaaraKidShukakuBijuuDama___Spell_Alloc__instanceCount= 0
-integer array s__GaaraKidShukakuBijuuDama___Spell_Alloc__recycle
-constant integer s__GaaraKidShukakuBijuuDama___Spell_SPELL_ID= 'A1EY'
-group array s__GaaraKidShukakuBijuuDama___Spell_glow
-group array s__GaaraKidShukakuBijuuDama___Spell_damaged
-unit array s__GaaraKidShukakuBijuuDama___Spell_caster
-unit array s__GaaraKidShukakuBijuuDama___Spell_kyuubi
-unit array s__GaaraKidShukakuBijuuDama___Spell_ball
-unit array s__GaaraKidShukakuBijuuDama___Spell_dummy
-integer array s__GaaraKidShukakuBijuuDama___Spell_count
-group array s__GaaraKidShukakuBijuuDama___Spell_paused
+constant integer si__GaaraKidShukakuBijuuDama__Spell=335
+integer s__GaaraKidShukakuBijuuDama__Spell_Alloc__instanceCount= 0
+integer array s__GaaraKidShukakuBijuuDama__Spell_Alloc__recycle
+constant integer s__GaaraKidShukakuBijuuDama__Spell_SPELL_ID= 'A1EY'
+group array s__GaaraKidShukakuBijuuDama__Spell_glow
+group array s__GaaraKidShukakuBijuuDama__Spell_damaged
+unit array s__GaaraKidShukakuBijuuDama__Spell_caster
+unit array s__GaaraKidShukakuBijuuDama__Spell_kyuubi
+unit array s__GaaraKidShukakuBijuuDama__Spell_ball
+unit array s__GaaraKidShukakuBijuuDama__Spell_dummy
+integer array s__GaaraKidShukakuBijuuDama__Spell_count
+group array s__GaaraKidShukakuBijuuDama__Spell_paused
 constant integer si__GaaraFlyLevel=336
 constant integer si__GaiDynamicEntry=337
 integer s__GaiDynamicEntry_Alloc__instanceCount= 0
@@ -5270,15 +5296,15 @@ constant integer s__GaiDynamicEntry_SPELL_ID= 'A0JI'
 unit array s__GaiDynamicEntry_caster
 group array s__GaiDynamicEntry_damaged
 integer array s__GaiDynamicEntry_count
-constant integer si__GaiOmoteRenge___Spell=338
-integer s__GaiOmoteRenge___Spell_Alloc__instanceCount= 0
-integer array s__GaiOmoteRenge___Spell_Alloc__recycle
-constant integer s__GaiOmoteRenge___Spell_SPELL_ID= 'A0WO'
-constant integer s__GaiOmoteRenge___Spell_DUMMY_ID= 'hwat'
-integer s__GaiOmoteRenge___Spell_instance
-unit array s__GaiOmoteRenge___Spell_caster
-real array s__GaiOmoteRenge___Spell_target_x
-real array s__GaiOmoteRenge___Spell_target_y
+constant integer si__GaiOmoteRenge__Spell=338
+integer s__GaiOmoteRenge__Spell_Alloc__instanceCount= 0
+integer array s__GaiOmoteRenge__Spell_Alloc__recycle
+constant integer s__GaiOmoteRenge__Spell_SPELL_ID= 'A0WO'
+constant integer s__GaiOmoteRenge__Spell_DUMMY_ID= 'hwat'
+integer s__GaiOmoteRenge__Spell_instance
+unit array s__GaiOmoteRenge__Spell_caster
+real array s__GaiOmoteRenge__Spell_target_x
+real array s__GaiOmoteRenge__Spell_target_y
 constant integer si__HachimonLifeDrain=339
 unit s__HachimonLifeDrain_gai
 constant integer si__GaiEighthGates=340
@@ -5301,27 +5327,27 @@ real array s__GengetsuMirage_angle
 real array s__GengetsuMirage_target_x
 real array s__GengetsuMirage_target_y
 group s__GengetsuMirage_mirageUnits
-constant integer si__NidaimeMizukageWaterPistol___Spell=343
-integer s__NidaimeMizukageWaterPistol___Spell_Alloc__instanceCount= 0
-integer array s__NidaimeMizukageWaterPistol___Spell_Alloc__recycle
-constant integer s__NidaimeMizukageWaterPistol___Spell_SPELL_ID= 'A0VV'
-integer s__NidaimeMizukageWaterPistol___Spell_instance
-group array s__NidaimeMizukageWaterPistol___Spell_damaged
-unit array s__NidaimeMizukageWaterPistol___Spell_caster
-unit array s__NidaimeMizukageWaterPistol___Spell_pistol
-unit array s__NidaimeMizukageWaterPistol___Spell_mirage
-real array s__NidaimeMizukageWaterPistol___Spell_angle
-integer array s__NidaimeMizukageWaterPistol___Spell_count
-boolean array s__NidaimeMizukageWaterPistol___Spell_hithero
-constant integer si__NidaimeMizukageBubbles___Spell=344
-integer s__NidaimeMizukageBubbles___Spell_Alloc__instanceCount= 0
-integer array s__NidaimeMizukageBubbles___Spell_Alloc__recycle
-constant integer s__NidaimeMizukageBubbles___Spell_SPELL_ID= 'A0MA'
-group array s__NidaimeMizukageBubbles___Spell_damaged
-unit array s__NidaimeMizukageBubbles___Spell_caster
-unit array s__NidaimeMizukageBubbles___Spell_dummy
-real array s__NidaimeMizukageBubbles___Spell_angle
-integer array s__NidaimeMizukageBubbles___Spell_count
+constant integer si__NidaimeMizukageWaterPistol__Spell=343
+integer s__NidaimeMizukageWaterPistol__Spell_Alloc__instanceCount= 0
+integer array s__NidaimeMizukageWaterPistol__Spell_Alloc__recycle
+constant integer s__NidaimeMizukageWaterPistol__Spell_SPELL_ID= 'A0VV'
+integer s__NidaimeMizukageWaterPistol__Spell_instance
+group array s__NidaimeMizukageWaterPistol__Spell_damaged
+unit array s__NidaimeMizukageWaterPistol__Spell_caster
+unit array s__NidaimeMizukageWaterPistol__Spell_pistol
+unit array s__NidaimeMizukageWaterPistol__Spell_mirage
+real array s__NidaimeMizukageWaterPistol__Spell_angle
+integer array s__NidaimeMizukageWaterPistol__Spell_count
+boolean array s__NidaimeMizukageWaterPistol__Spell_hithero
+constant integer si__NidaimeMizukageBubbles__Spell=344
+integer s__NidaimeMizukageBubbles__Spell_Alloc__instanceCount= 0
+integer array s__NidaimeMizukageBubbles__Spell_Alloc__recycle
+constant integer s__NidaimeMizukageBubbles__Spell_SPELL_ID= 'A0MA'
+group array s__NidaimeMizukageBubbles__Spell_damaged
+unit array s__NidaimeMizukageBubbles__Spell_caster
+unit array s__NidaimeMizukageBubbles__Spell_dummy
+real array s__NidaimeMizukageBubbles__Spell_angle
+integer array s__NidaimeMizukageBubbles__Spell_count
 constant integer si__NidaimeMizukageSuikaNoJutsu=345
 integer s__NidaimeMizukageSuikaNoJutsu_Alloc__instanceCount= 0
 integer array s__NidaimeMizukageSuikaNoJutsu_Alloc__recycle
@@ -5340,28 +5366,28 @@ unit array s__NidaimeMIzukageClamDrop_gamahiro
 real array s__NidaimeMIzukageClamDrop_target_x
 real array s__NidaimeMIzukageClamDrop_target_y
 real array s__NidaimeMIzukageClamDrop_angle
-constant integer si__NidaimeMizukageGenjutsu___Spell=347
-integer s__NidaimeMizukageGenjutsu___Spell_Alloc__instanceCount= 0
-integer array s__NidaimeMizukageGenjutsu___Spell_Alloc__recycle
-constant integer s__NidaimeMizukageGenjutsu___Spell_SPELL_ID= 'A17M'
-unit array s__NidaimeMizukageGenjutsu___Spell_caster
-unit array s__NidaimeMizukageGenjutsu___Spell_clam
-real array s__NidaimeMizukageGenjutsu___Spell_target_x
-real array s__NidaimeMizukageGenjutsu___Spell_target_y
-integer array s__NidaimeMizukageGenjutsu___Spell_count
-constant integer si__NidaimeMizukageJokiBoi___Spell=348
-integer s__NidaimeMizukageJokiBoi___Spell_Alloc__instanceCount= 0
-integer array s__NidaimeMizukageJokiBoi___Spell_Alloc__recycle
-constant integer s__NidaimeMizukageJokiBoi___Spell_SPELL_ID= 'A02O'
-integer s__NidaimeMizukageJokiBoi___Spell_instance
-unit array s__NidaimeMizukageJokiBoi___Spell_caster
-unit array s__NidaimeMizukageJokiBoi___Spell_jokiBoi
-real array s__NidaimeMizukageJokiBoi___Spell_size
-real array s__NidaimeMizukageJokiBoi___Spell_target_x
-real array s__NidaimeMizukageJokiBoi___Spell_target_y
-integer array s__NidaimeMizukageJokiBoi___Spell_count
-unit array s__NidaimeMizukageJokiBoi___Spell_target
-real array s__NidaimeMizukageJokiBoi___Spell_distance
+constant integer si__NidaimeMizukageGenjutsu__Spell=347
+integer s__NidaimeMizukageGenjutsu__Spell_Alloc__instanceCount= 0
+integer array s__NidaimeMizukageGenjutsu__Spell_Alloc__recycle
+constant integer s__NidaimeMizukageGenjutsu__Spell_SPELL_ID= 'A17M'
+unit array s__NidaimeMizukageGenjutsu__Spell_caster
+unit array s__NidaimeMizukageGenjutsu__Spell_clam
+real array s__NidaimeMizukageGenjutsu__Spell_target_x
+real array s__NidaimeMizukageGenjutsu__Spell_target_y
+integer array s__NidaimeMizukageGenjutsu__Spell_count
+constant integer si__NidaimeMizukageJokiBoi__Spell=348
+integer s__NidaimeMizukageJokiBoi__Spell_Alloc__instanceCount= 0
+integer array s__NidaimeMizukageJokiBoi__Spell_Alloc__recycle
+constant integer s__NidaimeMizukageJokiBoi__Spell_SPELL_ID= 'A02O'
+integer s__NidaimeMizukageJokiBoi__Spell_instance
+unit array s__NidaimeMizukageJokiBoi__Spell_caster
+unit array s__NidaimeMizukageJokiBoi__Spell_jokiBoi
+real array s__NidaimeMizukageJokiBoi__Spell_size
+real array s__NidaimeMizukageJokiBoi__Spell_target_x
+real array s__NidaimeMizukageJokiBoi__Spell_target_y
+integer array s__NidaimeMizukageJokiBoi__Spell_count
+unit array s__NidaimeMizukageJokiBoi__Spell_target
+real array s__NidaimeMizukageJokiBoi__Spell_distance
 constant integer si__GurenSuishoRo=349
 integer s__GurenSuishoRo_Alloc__instanceCount= 0
 integer array s__GurenSuishoRo_Alloc__recycle
@@ -7094,13 +7120,13 @@ constant integer s__KakuzuRaiton_SPELL_ID= 'A0TH'
 lightning array s___KakuzuRaiton_lights
 constant integer s___KakuzuRaiton_lights_size=12
 integer array s__KakuzuRaiton_lights
-constant integer si__KakuzuCombinedAttack__Item=542
-integer s__KakuzuCombinedAttack__Item_Alloc__instanceCount= 0
-integer array s__KakuzuCombinedAttack__Item_Alloc__recycle
-constant integer s__KakuzuCombinedAttack__Item_SPELL_ID= 'A0W9'
-group array s__KakuzuCombinedAttack__Item_damaged
-unit array s__KakuzuCombinedAttack__Item_caster
-integer array s__KakuzuCombinedAttack__Item_count
+constant integer si__KakuzuCombinedAttack___Item=542
+integer s__KakuzuCombinedAttack___Item_Alloc__instanceCount= 0
+integer array s__KakuzuCombinedAttack___Item_Alloc__recycle
+constant integer s__KakuzuCombinedAttack___Item_SPELL_ID= 'A0W9'
+group array s__KakuzuCombinedAttack___Item_damaged
+unit array s__KakuzuCombinedAttack___Item_caster
+integer array s__KakuzuCombinedAttack___Item_count
 constant integer si__KakuzuUltimateChoice=543
 integer s__KakuzuUltimateChoice_Alloc__instanceCount= 0
 integer array s__KakuzuUltimateChoice_Alloc__recycle
@@ -7382,11 +7408,11 @@ real array s__KillerBeeThrowInk_current_y
 real array s__KillerBeeThrowInk_target_x
 real array s__KillerBeeThrowInk_target_y
 real array s__KillerBeeThrowInk_distance
-constant integer si__KillerBeeMorph__Spell=578
-integer s__KillerBeeMorph__Spell_Alloc__instanceCount= 0
-integer array s__KillerBeeMorph__Spell_Alloc__recycle
-constant integer s__KillerBeeMorph__Spell_SPELL_ID= 'A0UV'
-unit array s__KillerBeeMorph__Spell_caster
+constant integer si__KillerBeeMorph___Spell=578
+integer s__KillerBeeMorph___Spell_Alloc__instanceCount= 0
+integer array s__KillerBeeMorph___Spell_Alloc__recycle
+constant integer s__KillerBeeMorph___Spell_SPELL_ID= 'A0UV'
+unit array s__KillerBeeMorph___Spell_caster
 constant integer si__KillerBeeHachimaki=579
 integer s__KillerBeeHachimaki_Alloc__instanceCount= 0
 integer array s__KillerBeeHachimaki_Alloc__recycle
@@ -7404,15 +7430,15 @@ unit array s__KillerBeeLariat_caster
 real array s__KillerBeeLariat_angle
 integer array s__KillerBeeLariat_count
 group array s__KillerBeeLariat_damaged
-constant integer si__KillerBeNewBijuuDama__Spell=582
-integer s__KillerBeNewBijuuDama__Spell_Alloc__instanceCount= 0
-integer array s__KillerBeNewBijuuDama__Spell_Alloc__recycle
-constant integer s__KillerBeNewBijuuDama__Spell_SPELL_ID= 'A0GU'
-group array s__KillerBeNewBijuuDama__Spell_damaged
-unit array s__KillerBeNewBijuuDama__Spell_caster
-unit array s__KillerBeNewBijuuDama__Spell_ball
-real array s__KillerBeNewBijuuDama__Spell_angle
-integer array s__KillerBeNewBijuuDama__Spell_count
+constant integer si__KillerBeNewBijuuDama___Spell=582
+integer s__KillerBeNewBijuuDama___Spell_Alloc__instanceCount= 0
+integer array s__KillerBeNewBijuuDama___Spell_Alloc__recycle
+constant integer s__KillerBeNewBijuuDama___Spell_SPELL_ID= 'A0GU'
+group array s__KillerBeNewBijuuDama___Spell_damaged
+unit array s__KillerBeNewBijuuDama___Spell_caster
+unit array s__KillerBeNewBijuuDama___Spell_ball
+real array s__KillerBeNewBijuuDama___Spell_angle
+integer array s__KillerBeNewBijuuDama___Spell_count
 constant integer si__KimimaroPassive=583
 integer s__KimimaroPassive_Alloc__instanceCount= 0
 integer array s__KimimaroPassive_Alloc__recycle
@@ -7481,14 +7507,14 @@ integer array s__KimimaroTessenkaTsuru_chains_x
 real array s___KimimaroTessenkaTsuru_chains_y
 constant integer s___KimimaroTessenkaTsuru_chains_y_size=8190
 integer array s__KimimaroTessenkaTsuru_chains_y
-constant integer si__KimimaroTessenkaHana__Spell=593
-integer s__KimimaroTessenkaHana__Spell_Alloc__instanceCount= 0
-integer array s__KimimaroTessenkaHana__Spell_Alloc__recycle
-constant integer s__KimimaroTessenkaHana__Spell_SPELL_ID= 'A0MS'
-unit array s__KimimaroTessenkaHana__Spell_caster
-real array s__KimimaroTessenkaHana__Spell_angle
-integer array s__KimimaroTessenkaHana__Spell_count
-group array s__KimimaroTessenkaHana__Spell_damaged
+constant integer si__KimimaroTessenkaHana___Spell=593
+integer s__KimimaroTessenkaHana___Spell_Alloc__instanceCount= 0
+integer array s__KimimaroTessenkaHana___Spell_Alloc__recycle
+constant integer s__KimimaroTessenkaHana___Spell_SPELL_ID= 'A0MS'
+unit array s__KimimaroTessenkaHana___Spell_caster
+real array s__KimimaroTessenkaHana___Spell_angle
+integer array s__KimimaroTessenkaHana___Spell_count
+group array s__KimimaroTessenkaHana___Spell_damaged
 constant integer si__KimimaroSawarabiNoMai=594
 integer s__KimimaroSawarabiNoMai_Alloc__instanceCount= 0
 integer array s__KimimaroSawarabiNoMai_Alloc__recycle
@@ -7502,14 +7528,14 @@ integer s__KimimaroBoneSpear_Alloc__instanceCount= 0
 integer array s__KimimaroBoneSpear_Alloc__recycle
 constant integer s__KimimaroBoneSpear_SPELL_ID= 'A0N5'
 unit array s__KimimaroBoneSpear_caster
-constant integer si__BrotherBashosen__Item=596
-integer s__BrotherBashosen__Item_Alloc__instanceCount= 0
-integer array s__BrotherBashosen__Item_Alloc__recycle
-constant integer s__BrotherBashosen__Item_SPELL_ID= 'A0NK'
-group array s__BrotherBashosen__Item_damaged
-unit array s__BrotherBashosen__Item_caster
-integer array s__BrotherBashosen__Item_count
-integer array s__BrotherBashosen__Item_element
+constant integer si__BrotherBashosen___Item=596
+integer s__BrotherBashosen___Item_Alloc__instanceCount= 0
+integer array s__BrotherBashosen___Item_Alloc__recycle
+constant integer s__BrotherBashosen___Item_SPELL_ID= 'A0NK'
+group array s__BrotherBashosen___Item_damaged
+unit array s__BrotherBashosen___Item_caster
+integer array s__BrotherBashosen___Item_count
+integer array s__BrotherBashosen___Item_element
 constant integer si__Farm=597
 integer s__Farm_Alloc__instanceCount= 0
 integer array s__Farm_Alloc__recycle
@@ -7563,15 +7589,15 @@ real array s__Combination_target_x
 real array s__Combination_target_y
 real array s__Combination_angle
 integer array s__Combination_count
-constant integer si__UltimateRoar__Spell=602
-integer s__UltimateRoar__Spell_Alloc__instanceCount= 0
-integer array s__UltimateRoar__Spell_Alloc__recycle
-constant integer s__UltimateRoar__Spell_SPELL_ID= 'A0NY'
-group array s__UltimateRoar__Spell_damaged
-unit array s__UltimateRoar__Spell_caster
-unit array s__UltimateRoar__Spell_bijuu
-unit array s__UltimateRoar__Spell_bijuu2
-integer array s__UltimateRoar__Spell_count
+constant integer si__UltimateRoar___Spell=602
+integer s__UltimateRoar___Spell_Alloc__instanceCount= 0
+integer array s__UltimateRoar___Spell_Alloc__recycle
+constant integer s__UltimateRoar___Spell_SPELL_ID= 'A0NY'
+group array s__UltimateRoar___Spell_damaged
+unit array s__UltimateRoar___Spell_caster
+unit array s__UltimateRoar___Spell_bijuu
+unit array s__UltimateRoar___Spell_bijuu2
+integer array s__UltimateRoar___Spell_count
 constant integer si__KinkakuAbilities=603
 integer s__KinkakuAbilities_Alloc__instanceCount= 0
 integer array s__KinkakuAbilities_Alloc__recycle
@@ -7621,16 +7647,16 @@ constant integer s__KisameMugensame_SPELL_ID= 'A0JQ'
 unit array s__KisameMugensame_caster
 group array s__KisameMugensame_water
 integer array s__KisameMugensame_count
-constant integer si__KisameDaikoudan__Spell=609
-integer s__KisameDaikoudan__Spell_Alloc__instanceCount= 0
-integer array s__KisameDaikoudan__Spell_Alloc__recycle
-constant integer s__KisameDaikoudan__Spell_SPELL_ID= 'A1AX'
-integer s__KisameDaikoudan__Spell_instance
-unit array s__KisameDaikoudan__Spell_caster
-unit array s__KisameDaikoudan__Spell_target
-unit array s__KisameDaikoudan__Spell_shark
-real array s__KisameDaikoudan__Spell_angle
-integer array s__KisameDaikoudan__Spell_count
+constant integer si__KisameDaikoudan___Spell=609
+integer s__KisameDaikoudan___Spell_Alloc__instanceCount= 0
+integer array s__KisameDaikoudan___Spell_Alloc__recycle
+constant integer s__KisameDaikoudan___Spell_SPELL_ID= 'A1AX'
+integer s__KisameDaikoudan___Spell_instance
+unit array s__KisameDaikoudan___Spell_caster
+unit array s__KisameDaikoudan___Spell_target
+unit array s__KisameDaikoudan___Spell_shark
+real array s__KisameDaikoudan___Spell_angle
+integer array s__KisameDaikoudan___Spell_count
 constant integer si__KisameNewD=610
 integer s__KisameNewD_Alloc__instanceCount= 0
 integer array s__KisameNewD_Alloc__recycle
@@ -7741,17 +7767,17 @@ integer s__KonohamaruShuriken_instance
 unit array s__KonohamaruShuriken_caster
 unit array s__KonohamaruShuriken_target
 unit array s__KonohamaruShuriken_missile
-constant integer si__KonohamaruOodamaRasengan__Spell=626
-integer s__KonohamaruOodamaRasengan__Spell_Alloc__instanceCount= 0
-integer array s__KonohamaruOodamaRasengan__Spell_Alloc__recycle
-constant integer s__KonohamaruOodamaRasengan__Spell_SPELL_ID= 'A0T6'
-unit array s__KonohamaruOodamaRasengan__Spell_caster
-unit array s__KonohamaruOodamaRasengan__Spell_stunUnit
-effect array s__KonohamaruOodamaRasengan__Spell_rasengan
-real array s__KonohamaruOodamaRasengan__Spell_target_x
-real array s__KonohamaruOodamaRasengan__Spell_target_y
-real array s__KonohamaruOodamaRasengan__Spell_distance
-integer array s__KonohamaruOodamaRasengan__Spell_count
+constant integer si__KonohamaruOodamaRasengan___Spell=626
+integer s__KonohamaruOodamaRasengan___Spell_Alloc__instanceCount= 0
+integer array s__KonohamaruOodamaRasengan___Spell_Alloc__recycle
+constant integer s__KonohamaruOodamaRasengan___Spell_SPELL_ID= 'A0T6'
+unit array s__KonohamaruOodamaRasengan___Spell_caster
+unit array s__KonohamaruOodamaRasengan___Spell_stunUnit
+effect array s__KonohamaruOodamaRasengan___Spell_rasengan
+real array s__KonohamaruOodamaRasengan___Spell_target_x
+real array s__KonohamaruOodamaRasengan___Spell_target_y
+real array s__KonohamaruOodamaRasengan___Spell_distance
+integer array s__KonohamaruOodamaRasengan___Spell_count
 constant integer si__KonohamaruGamakichi=627
 integer s__KonohamaruGamakichi_Alloc__instanceCount= 0
 integer array s__KonohamaruGamakichi_Alloc__recycle
@@ -7842,27 +7868,27 @@ real array s__KurotsuchiDotonDefense_scaleX
 real array s__KurotsuchiDotonDefense_scaleY
 integer array s__KurotsuchiDotonDefense_count
 group array s__KurotsuchiDotonDefense_allies
-constant integer si__KurotsuchiWaterTrumpet__TrumpetFan=636
-integer s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__instanceCount= 0
-integer array s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__recycle
-unit array s__KurotsuchiWaterTrumpet__TrumpetFan_caster
-real array s__KurotsuchiWaterTrumpet__TrumpetFan_angle
-integer array s__KurotsuchiWaterTrumpet__TrumpetFan_level
-real array s__KurotsuchiWaterTrumpet__TrumpetFan_distance
-group array s__KurotsuchiWaterTrumpet__TrumpetFan_damaged
-unit array s__KurotsuchiWaterTrumpet__TrumpetFan_dummy
-real array s__KurotsuchiWaterTrumpet__TrumpetFan_zStart
-real array s__KurotsuchiWaterTrumpet__TrumpetFan_zEnd
-constant integer si__KurotsuchiWaterTrumpet__TrumpetSpell=637
-integer s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__instanceCount= 0
-integer array s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__recycle
-unit array s__KurotsuchiWaterTrumpet__TrumpetSpell_caster
-unit array s__KurotsuchiWaterTrumpet__TrumpetSpell_proj
-real array s__KurotsuchiWaterTrumpet__TrumpetSpell_angle
-real array s__KurotsuchiWaterTrumpet__TrumpetSpell_distance
-group array s__KurotsuchiWaterTrumpet__TrumpetSpell_damaged
-integer array s__KurotsuchiWaterTrumpet__TrumpetSpell_level
-boolean array s__KurotsuchiWaterTrumpet__TrumpetSpell_fanTriggered
+constant integer si__KurotsuchiWaterTrumpet___TrumpetFan=636
+integer s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__instanceCount= 0
+integer array s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__recycle
+unit array s__KurotsuchiWaterTrumpet___TrumpetFan_caster
+real array s__KurotsuchiWaterTrumpet___TrumpetFan_angle
+integer array s__KurotsuchiWaterTrumpet___TrumpetFan_level
+real array s__KurotsuchiWaterTrumpet___TrumpetFan_distance
+group array s__KurotsuchiWaterTrumpet___TrumpetFan_damaged
+unit array s__KurotsuchiWaterTrumpet___TrumpetFan_dummy
+real array s__KurotsuchiWaterTrumpet___TrumpetFan_zStart
+real array s__KurotsuchiWaterTrumpet___TrumpetFan_zEnd
+constant integer si__KurotsuchiWaterTrumpet___TrumpetSpell=637
+integer s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__instanceCount= 0
+integer array s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__recycle
+unit array s__KurotsuchiWaterTrumpet___TrumpetSpell_caster
+unit array s__KurotsuchiWaterTrumpet___TrumpetSpell_proj
+real array s__KurotsuchiWaterTrumpet___TrumpetSpell_angle
+real array s__KurotsuchiWaterTrumpet___TrumpetSpell_distance
+group array s__KurotsuchiWaterTrumpet___TrumpetSpell_damaged
+integer array s__KurotsuchiWaterTrumpet___TrumpetSpell_level
+boolean array s__KurotsuchiWaterTrumpet___TrumpetSpell_fanTriggered
 constant integer si__RockData=638
 integer si__RockData_F=0
 integer si__RockData_I=0
@@ -7871,114 +7897,114 @@ unit array s__RockData_rock
 real array s__RockData_rx
 real array s__RockData_ry
 integer s__RockData_count= 0
-constant integer si__KaidoShock__Knockup=639
-integer si__KaidoShock__Knockup_F=0
-integer si__KaidoShock__Knockup_I=0
-integer array si__KaidoShock__Knockup_V
-unit array s__KaidoShock__Knockup_u
-unit array s__KaidoShock__Knockup_source
-timer array s__KaidoShock__Knockup_t
-real array s__KaidoShock__Knockup_duration
-real array s__KaidoShock__Knockup_elapsed
-real array s__KaidoShock__Knockup_height
-constant integer si__KaidoShock__KaidoShockSpell=640
-integer si__KaidoShock__KaidoShockSpell_F=0
-integer si__KaidoShock__KaidoShockSpell_I=0
-integer array si__KaidoShock__KaidoShockSpell_V
-unit array s__KaidoShock__KaidoShockSpell_caster
-unit array s__KaidoShock__KaidoShockSpell_dummy
-real array s__KaidoShock__KaidoShockSpell_x
-real array s__KaidoShock__KaidoShockSpell_y
-integer array s__KaidoShock__KaidoShockSpell_lvl
-real array s__KaidoShock__KaidoShockSpell_elapsed
-real array s__KaidoShock__KaidoShockSpell_height
-integer array s__KaidoShock__KaidoShockSpell_phase
-timer array s__KaidoShock__KaidoShockSpell_t
-effect array s__KaidoShock__KaidoShockSpell_e1
-effect array s__KaidoShock__KaidoShockSpell_e2
-effect array s__KaidoShock__KaidoShockSpell_e3
-constant integer si__KurotsuchiQuicklimeE__QuicklimeTether=641
-integer s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__instanceCount= 0
-integer array s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__recycle
-effect array s__KurotsuchiQuicklimeE__QuicklimeTether_segPool
-unit array s__KurotsuchiQuicklimeE__QuicklimeTether_caster
-unit array s__KurotsuchiQuicklimeE__QuicklimeTether_target
-real array s__KurotsuchiQuicklimeE__QuicklimeTether_anchorX
-real array s__KurotsuchiQuicklimeE__QuicklimeTether_anchorY
-real array s__KurotsuchiQuicklimeE__QuicklimeTether_anchorZ
-real array s__KurotsuchiQuicklimeE__QuicklimeTether_time
-real array s__KurotsuchiQuicklimeE__QuicklimeTether_heldOutsideTime
-integer array s__KurotsuchiQuicklimeE__QuicklimeTether_segCount
-timer array s__KurotsuchiQuicklimeE__QuicklimeTether_t
-boolean array s__KurotsuchiQuicklimeE__QuicklimeTether_isSnapping
-real array s__KurotsuchiQuicklimeE__QuicklimeTether_snapProgress
-constant integer si__KurotsuchiQuicklimeE__QuicklimeProjectile=642
-integer s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__instanceCount= 0
-integer array s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__recycle
-unit array s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster
-unit array s__KurotsuchiQuicklimeE__QuicklimeProjectile_dummy
-effect array s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_startX
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_startY
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_startZ
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_endX
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_endY
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_endZ
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_angle
-integer array s__KurotsuchiQuicklimeE__QuicklimeProjectile_level
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_damage
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_maxScale
-timer array s__KurotsuchiQuicklimeE__QuicklimeProjectile_t
-boolean array s__KurotsuchiQuicklimeE__QuicklimeProjectile_landed
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_landX
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_landY
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_landZ
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_landTime
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_dirX
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_dirY
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_totalDist
-real array s__KurotsuchiQuicklimeE__QuicklimeProjectile_traveled
-constant integer si__KurotsuchiR__YokaiSpray=643
-integer s__KurotsuchiR__YokaiSpray_Alloc__instanceCount= 0
-integer array s__KurotsuchiR__YokaiSpray_Alloc__recycle
-unit array s__KurotsuchiR__YokaiSpray_caster
-unit array s__KurotsuchiR__YokaiSpray_lookatDummy
-effect array s__KurotsuchiR__YokaiSpray_mouthStream
-timer array s__KurotsuchiR__YokaiSpray_t
-group array s__KurotsuchiR__YokaiSpray_affectedUnits
-integer array s__KurotsuchiR__YokaiSpray_hitThisTick
-integer array s__KurotsuchiR__YokaiSpray_blobDamageDone
-integer array s__KurotsuchiR__YokaiSpray_unitsFullyDamaged
-real array s__KurotsuchiR__YokaiSpray_baseX
-real array s__KurotsuchiR__YokaiSpray_baseY
-real array s__KurotsuchiR__YokaiSpray_baseAngle
-real array s__KurotsuchiR__YokaiSpray_elapsed
-real array s__KurotsuchiR__YokaiSpray_forwardSoFar
-integer array s__KurotsuchiR__YokaiSpray_row
-integer array s__KurotsuchiR__YokaiSpray_rowIndex
-integer array s__KurotsuchiR__YokaiSpray_rowSize
-integer array s__KurotsuchiR__YokaiSpray_blobsInRow
-integer array s__KurotsuchiR__YokaiSpray_totalEmitted
-boolean array s__KurotsuchiR__YokaiSpray_disabled
-integer array s__KurotsuchiR__YokaiSpray_instanceIndex
-real array s__KurotsuchiR__YokaiSpray_pullAccum
-real array s__KurotsuchiR__YokaiSpray_areaCheckAccum
-real array s__KurotsuchiR__YokaiSpray_maxReachedDistance
-constant integer si__KaidoLeap__LeapSpell=644
-integer si__KaidoLeap__LeapSpell_F=0
-integer si__KaidoLeap__LeapSpell_I=0
-integer array si__KaidoLeap__LeapSpell_V
-unit array s__KaidoLeap__LeapSpell_caster
-real array s__KaidoLeap__LeapSpell_startX
-real array s__KaidoLeap__LeapSpell_startY
-real array s__KaidoLeap__LeapSpell_targetX
-real array s__KaidoLeap__LeapSpell_targetY
-real array s__KaidoLeap__LeapSpell_angle
-real array s__KaidoLeap__LeapSpell_elapsed
-timer array s__KaidoLeap__LeapSpell_t
-effect array s__KaidoLeap__LeapSpell_e1
-effect array s__KaidoLeap__LeapSpell_e2
-effect array s__KaidoLeap__LeapSpell_e3
+constant integer si__KaidoShock___Knockup=639
+integer si__KaidoShock___Knockup_F=0
+integer si__KaidoShock___Knockup_I=0
+integer array si__KaidoShock___Knockup_V
+unit array s__KaidoShock___Knockup_u
+unit array s__KaidoShock___Knockup_source
+timer array s__KaidoShock___Knockup_t
+real array s__KaidoShock___Knockup_duration
+real array s__KaidoShock___Knockup_elapsed
+real array s__KaidoShock___Knockup_height
+constant integer si__KaidoShock___KaidoShockSpell=640
+integer si__KaidoShock___KaidoShockSpell_F=0
+integer si__KaidoShock___KaidoShockSpell_I=0
+integer array si__KaidoShock___KaidoShockSpell_V
+unit array s__KaidoShock___KaidoShockSpell_caster
+unit array s__KaidoShock___KaidoShockSpell_dummy
+real array s__KaidoShock___KaidoShockSpell_x
+real array s__KaidoShock___KaidoShockSpell_y
+integer array s__KaidoShock___KaidoShockSpell_lvl
+real array s__KaidoShock___KaidoShockSpell_elapsed
+real array s__KaidoShock___KaidoShockSpell_height
+integer array s__KaidoShock___KaidoShockSpell_phase
+timer array s__KaidoShock___KaidoShockSpell_t
+effect array s__KaidoShock___KaidoShockSpell_e1
+effect array s__KaidoShock___KaidoShockSpell_e2
+effect array s__KaidoShock___KaidoShockSpell_e3
+constant integer si__KurotsuchiQuicklimeE___QuicklimeTether=641
+integer s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__instanceCount= 0
+integer array s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__recycle
+effect array s__KurotsuchiQuicklimeE___QuicklimeTether_segPool
+unit array s__KurotsuchiQuicklimeE___QuicklimeTether_caster
+unit array s__KurotsuchiQuicklimeE___QuicklimeTether_target
+real array s__KurotsuchiQuicklimeE___QuicklimeTether_anchorX
+real array s__KurotsuchiQuicklimeE___QuicklimeTether_anchorY
+real array s__KurotsuchiQuicklimeE___QuicklimeTether_anchorZ
+real array s__KurotsuchiQuicklimeE___QuicklimeTether_time
+real array s__KurotsuchiQuicklimeE___QuicklimeTether_heldOutsideTime
+integer array s__KurotsuchiQuicklimeE___QuicklimeTether_segCount
+timer array s__KurotsuchiQuicklimeE___QuicklimeTether_t
+boolean array s__KurotsuchiQuicklimeE___QuicklimeTether_isSnapping
+real array s__KurotsuchiQuicklimeE___QuicklimeTether_snapProgress
+constant integer si__KurotsuchiQuicklimeE___QuicklimeProjectile=642
+integer s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__instanceCount= 0
+integer array s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__recycle
+unit array s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster
+unit array s__KurotsuchiQuicklimeE___QuicklimeProjectile_dummy
+effect array s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_startX
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_startY
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_startZ
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_endX
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_endY
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_endZ
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_angle
+integer array s__KurotsuchiQuicklimeE___QuicklimeProjectile_level
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_damage
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_maxScale
+timer array s__KurotsuchiQuicklimeE___QuicklimeProjectile_t
+boolean array s__KurotsuchiQuicklimeE___QuicklimeProjectile_landed
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_landX
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_landY
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_landZ
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_landTime
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_dirX
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_dirY
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_totalDist
+real array s__KurotsuchiQuicklimeE___QuicklimeProjectile_traveled
+constant integer si__KurotsuchiR___YokaiSpray=643
+integer s__KurotsuchiR___YokaiSpray_Alloc__instanceCount= 0
+integer array s__KurotsuchiR___YokaiSpray_Alloc__recycle
+unit array s__KurotsuchiR___YokaiSpray_caster
+unit array s__KurotsuchiR___YokaiSpray_lookatDummy
+effect array s__KurotsuchiR___YokaiSpray_mouthStream
+timer array s__KurotsuchiR___YokaiSpray_t
+group array s__KurotsuchiR___YokaiSpray_affectedUnits
+integer array s__KurotsuchiR___YokaiSpray_hitThisTick
+integer array s__KurotsuchiR___YokaiSpray_blobDamageDone
+integer array s__KurotsuchiR___YokaiSpray_unitsFullyDamaged
+real array s__KurotsuchiR___YokaiSpray_baseX
+real array s__KurotsuchiR___YokaiSpray_baseY
+real array s__KurotsuchiR___YokaiSpray_baseAngle
+real array s__KurotsuchiR___YokaiSpray_elapsed
+real array s__KurotsuchiR___YokaiSpray_forwardSoFar
+integer array s__KurotsuchiR___YokaiSpray_row
+integer array s__KurotsuchiR___YokaiSpray_rowIndex
+integer array s__KurotsuchiR___YokaiSpray_rowSize
+integer array s__KurotsuchiR___YokaiSpray_blobsInRow
+integer array s__KurotsuchiR___YokaiSpray_totalEmitted
+boolean array s__KurotsuchiR___YokaiSpray_disabled
+integer array s__KurotsuchiR___YokaiSpray_instanceIndex
+real array s__KurotsuchiR___YokaiSpray_pullAccum
+real array s__KurotsuchiR___YokaiSpray_areaCheckAccum
+real array s__KurotsuchiR___YokaiSpray_maxReachedDistance
+constant integer si__KaidoLeap___LeapSpell=644
+integer si__KaidoLeap___LeapSpell_F=0
+integer si__KaidoLeap___LeapSpell_I=0
+integer array si__KaidoLeap___LeapSpell_V
+unit array s__KaidoLeap___LeapSpell_caster
+real array s__KaidoLeap___LeapSpell_startX
+real array s__KaidoLeap___LeapSpell_startY
+real array s__KaidoLeap___LeapSpell_targetX
+real array s__KaidoLeap___LeapSpell_targetY
+real array s__KaidoLeap___LeapSpell_angle
+real array s__KaidoLeap___LeapSpell_elapsed
+timer array s__KaidoLeap___LeapSpell_t
+effect array s__KaidoLeap___LeapSpell_e1
+effect array s__KaidoLeap___LeapSpell_e2
+effect array s__KaidoLeap___LeapSpell_e3
 constant integer si__KushinaQ=645
 integer s__KushinaQ_Alloc__instanceCount= 0
 integer array s__KushinaQ_Alloc__recycle
@@ -8074,62 +8100,62 @@ effect array s__KushinaD_e2
 unit array s__KushinaD_caster
 integer array s__KushinaD_level
 integer array s__KushinaD_count
-constant integer si__MadaraMokuton__Spell=655
-integer s__MadaraMokuton__Spell_Alloc__instanceCount= 0
-integer array s__MadaraMokuton__Spell_Alloc__recycle
-constant integer s__MadaraMokuton__Spell_SPELL_ID= 'A0HE'
-group array s__MadaraMokuton__Spell_damaged
-unit array s__MadaraMokuton__Spell_caster
-unit array s__MadaraMokuton__Spell_dummy
-integer array s__MadaraMokuton__Spell_count
-group array s__MadaraMokuton__Spell_dummies_effect
-constant integer si__MadaraKaton__Spell=656
-integer s__MadaraKaton__Spell_Alloc__instanceCount= 0
-integer array s__MadaraKaton__Spell_Alloc__recycle
-constant integer s__MadaraKaton__Spell_SPELL_ID= 'A0HM'
-group array s__MadaraKaton__Spell_katon
-group array s__MadaraKaton__Spell_damaged
-unit array s__MadaraKaton__Spell_caster
-unit array s__MadaraKaton__Spell_dummy
-integer array s__MadaraKaton__Spell_count
-constant integer si__PenRemoveSoul__Spell=657
-integer s__PenRemoveSoul__Spell_Alloc__instanceCount= 0
-integer array s__PenRemoveSoul__Spell_Alloc__recycle
-constant integer s__PenRemoveSoul__Spell_SPELL_ID= 'A0CX'
-unit array s__PenRemoveSoul__Spell_caster
-unit array s__PenRemoveSoul__Spell_target
-lightning array s__PenRemoveSoul__Spell_light
-effect array s__PenRemoveSoul__Spell_e
-real array s__PenRemoveSoul__Spell_d
-integer array s__PenRemoveSoul__Spell_count
-constant integer si__MadaraAnnihilation__Spell=658
-integer s__MadaraAnnihilation__Spell_Alloc__instanceCount= 0
-integer array s__MadaraAnnihilation__Spell_Alloc__recycle
-constant integer s__MadaraAnnihilation__Spell_SPELL_ID= 'A0HO'
-unit array s__MadaraAnnihilation__Spell_caster
-unit array s__MadaraAnnihilation__Spell_dummy
-integer s__MadaraAnnihilation__Spell_instance
-real array s__MadaraAnnihilation__Spell_target_x
-real array s__MadaraAnnihilation__Spell_target_y
-constant integer si__MadaraNewSusanoo__Spell=659
-integer s__MadaraNewSusanoo__Spell_Alloc__instanceCount= 0
-integer array s__MadaraNewSusanoo__Spell_Alloc__recycle
-constant integer s__MadaraNewSusanoo__Spell_SPELL_ID= 'A0HQ'
-unit array s__MadaraNewSusanoo__Spell_caster
-unit array s__MadaraNewSusanoo__Spell_susanoo
-real array s__MadaraNewSusanoo__Spell_hp
-real array s__MadaraNewSusanoo__Spell_damage
-real array s__MadaraNewSusanoo__Spell_duration
-boolean array s__MadaraNewSusanoo__Spell_firstDmg
-integer array s__MadaraNewSusanoo__Spell_count
-trigger array s__MadaraNewSusanoo__Spell_dmgTrig
-constant integer si__MadaraYasaka__Spell=660
-integer s__MadaraYasaka__Spell_Alloc__instanceCount= 0
-integer array s__MadaraYasaka__Spell_Alloc__recycle
-constant integer s__MadaraYasaka__Spell_SPELL_ID= 'A0C4'
-unit array s__MadaraYasaka__Spell_caster
-unit array s__MadaraYasaka__Spell_target
-integer array s__MadaraYasaka__Spell_count
+constant integer si__MadaraMokuton___Spell=655
+integer s__MadaraMokuton___Spell_Alloc__instanceCount= 0
+integer array s__MadaraMokuton___Spell_Alloc__recycle
+constant integer s__MadaraMokuton___Spell_SPELL_ID= 'A0HE'
+group array s__MadaraMokuton___Spell_damaged
+unit array s__MadaraMokuton___Spell_caster
+unit array s__MadaraMokuton___Spell_dummy
+integer array s__MadaraMokuton___Spell_count
+group array s__MadaraMokuton___Spell_dummies_effect
+constant integer si__MadaraKaton___Spell=656
+integer s__MadaraKaton___Spell_Alloc__instanceCount= 0
+integer array s__MadaraKaton___Spell_Alloc__recycle
+constant integer s__MadaraKaton___Spell_SPELL_ID= 'A0HM'
+group array s__MadaraKaton___Spell_katon
+group array s__MadaraKaton___Spell_damaged
+unit array s__MadaraKaton___Spell_caster
+unit array s__MadaraKaton___Spell_dummy
+integer array s__MadaraKaton___Spell_count
+constant integer si__PenRemoveSoul___Spell=657
+integer s__PenRemoveSoul___Spell_Alloc__instanceCount= 0
+integer array s__PenRemoveSoul___Spell_Alloc__recycle
+constant integer s__PenRemoveSoul___Spell_SPELL_ID= 'A0CX'
+unit array s__PenRemoveSoul___Spell_caster
+unit array s__PenRemoveSoul___Spell_target
+lightning array s__PenRemoveSoul___Spell_light
+effect array s__PenRemoveSoul___Spell_e
+real array s__PenRemoveSoul___Spell_d
+integer array s__PenRemoveSoul___Spell_count
+constant integer si__MadaraAnnihilation___Spell=658
+integer s__MadaraAnnihilation___Spell_Alloc__instanceCount= 0
+integer array s__MadaraAnnihilation___Spell_Alloc__recycle
+constant integer s__MadaraAnnihilation___Spell_SPELL_ID= 'A0HO'
+unit array s__MadaraAnnihilation___Spell_caster
+unit array s__MadaraAnnihilation___Spell_dummy
+integer s__MadaraAnnihilation___Spell_instance
+real array s__MadaraAnnihilation___Spell_target_x
+real array s__MadaraAnnihilation___Spell_target_y
+constant integer si__MadaraNewSusanoo___Spell=659
+integer s__MadaraNewSusanoo___Spell_Alloc__instanceCount= 0
+integer array s__MadaraNewSusanoo___Spell_Alloc__recycle
+constant integer s__MadaraNewSusanoo___Spell_SPELL_ID= 'A0HQ'
+unit array s__MadaraNewSusanoo___Spell_caster
+unit array s__MadaraNewSusanoo___Spell_susanoo
+real array s__MadaraNewSusanoo___Spell_hp
+real array s__MadaraNewSusanoo___Spell_damage
+real array s__MadaraNewSusanoo___Spell_duration
+boolean array s__MadaraNewSusanoo___Spell_firstDmg
+integer array s__MadaraNewSusanoo___Spell_count
+trigger array s__MadaraNewSusanoo___Spell_dmgTrig
+constant integer si__MadaraYasaka___Spell=660
+integer s__MadaraYasaka___Spell_Alloc__instanceCount= 0
+integer array s__MadaraYasaka___Spell_Alloc__recycle
+constant integer s__MadaraYasaka___Spell_SPELL_ID= 'A0C4'
+unit array s__MadaraYasaka___Spell_caster
+unit array s__MadaraYasaka___Spell_target
+integer array s__MadaraYasaka___Spell_count
 constant integer si__MadaraTengaiShinseiSingle=661
 integer s__MadaraTengaiShinseiSingle_Alloc__instanceCount= 0
 integer array s__MadaraTengaiShinseiSingle_Alloc__recycle
@@ -8147,11 +8173,11 @@ unit array s__MadaraSusanooSlash_slash
 group array s__MadaraSusanooSlash_damaged
 integer array s__MadaraSusanooSlash_count
 constant integer si__MadaraBonesPassive=663
-constant integer si__MadaraRikuudou__Spell=664
-integer s__MadaraRikuudou__Spell_Alloc__instanceCount= 0
-integer array s__MadaraRikuudou__Spell_Alloc__recycle
-constant integer s__MadaraRikuudou__Spell_SPELL_ID= 'A0P3'
-unit array s__MadaraRikuudou__Spell_caster
+constant integer si__MadaraRikuudou___Spell=664
+integer s__MadaraRikuudou___Spell_Alloc__instanceCount= 0
+integer array s__MadaraRikuudou___Spell_Alloc__recycle
+constant integer s__MadaraRikuudou___Spell_SPELL_ID= 'A0P3'
+unit array s__MadaraRikuudou___Spell_caster
 constant integer si__MadaraIntonRaiha=665
 integer si__MadaraIntonRaiha_F=0
 integer si__MadaraIntonRaiha_I=0
@@ -8164,17 +8190,17 @@ unit array s__MadaraIntonRaiha_caster
 group array s__MadaraIntonRaiha_damaged
 real array s__MadaraIntonRaiha_target_x
 real array s__MadaraIntonRaiha_target_y
-constant integer si__MadaraRantonKouga__Spell=667
-integer s__MadaraRantonKouga__Spell_Alloc__instanceCount= 0
-integer array s__MadaraRantonKouga__Spell_Alloc__recycle
-constant integer s__MadaraRantonKouga__Spell_SPELL_ID= 'A0P5'
-group array s__MadaraRantonKouga__Spell_damaged
-unit array s__MadaraRantonKouga__Spell_caster
-unit array s__MadaraRantonKouga__Spell_missile
-real array s__MadaraRantonKouga__Spell_target_x
-real array s__MadaraRantonKouga__Spell_target_y
-integer array s__MadaraRantonKouga__Spell_light
-integer array s__MadaraRantonKouga__Spell_count
+constant integer si__MadaraRantonKouga___Spell=667
+integer s__MadaraRantonKouga___Spell_Alloc__instanceCount= 0
+integer array s__MadaraRantonKouga___Spell_Alloc__recycle
+constant integer s__MadaraRantonKouga___Spell_SPELL_ID= 'A0P5'
+group array s__MadaraRantonKouga___Spell_damaged
+unit array s__MadaraRantonKouga___Spell_caster
+unit array s__MadaraRantonKouga___Spell_missile
+real array s__MadaraRantonKouga___Spell_target_x
+real array s__MadaraRantonKouga___Spell_target_y
+integer array s__MadaraRantonKouga___Spell_light
+integer array s__MadaraRantonKouga___Spell_count
 constant integer si__MadaraTengaiShinsei=668
 integer s__MadaraTengaiShinsei_Alloc__instanceCount= 0
 integer array s__MadaraTengaiShinsei_Alloc__recycle
@@ -11077,23 +11103,23 @@ integer array s__YamanakaControl_Alloc__recycle
 unit s__YamanakaControl_caster
 unit s__YamanakaControl_target
 integer s__YamanakaControl_count
-constant integer si__YamatoReleaseCage___Spell=1006
-integer s__YamatoReleaseCage___Spell_Alloc__instanceCount= 0
-integer array s__YamatoReleaseCage___Spell_Alloc__recycle
-constant integer s__YamatoReleaseCage___Spell_SPELL_ID= 'A0TQ'
-constant integer si__YamatoNewSemi___Spell=1007
-integer s__YamatoNewSemi___Spell_Alloc__instanceCount= 0
-integer array s__YamatoNewSemi___Spell_Alloc__recycle
-constant integer s__YamatoNewSemi___Spell_SPELL_ID= 'A0VX'
-unit array s__YamatoNewSemi___Spell_caster
-real array s__YamatoNewSemi___Spell_caster_x
-real array s__YamatoNewSemi___Spell_caster_y
-real array s__YamatoNewSemi___Spell_target_x
-real array s__YamatoNewSemi___Spell_target_y
-real array s__YamatoNewSemi___Spell_angle
-unit array s__YamatoNewSemi___Spell_wood
-integer array s__YamatoNewSemi___Spell_count
-group array s__YamatoNewSemi___Spell_damaged
+constant integer si__YamatoReleaseCage__Spell=1006
+integer s__YamatoReleaseCage__Spell_Alloc__instanceCount= 0
+integer array s__YamatoReleaseCage__Spell_Alloc__recycle
+constant integer s__YamatoReleaseCage__Spell_SPELL_ID= 'A0TQ'
+constant integer si__YamatoNewSemi__Spell=1007
+integer s__YamatoNewSemi__Spell_Alloc__instanceCount= 0
+integer array s__YamatoNewSemi__Spell_Alloc__recycle
+constant integer s__YamatoNewSemi__Spell_SPELL_ID= 'A0VX'
+unit array s__YamatoNewSemi__Spell_caster
+real array s__YamatoNewSemi__Spell_caster_x
+real array s__YamatoNewSemi__Spell_caster_y
+real array s__YamatoNewSemi__Spell_target_x
+real array s__YamatoNewSemi__Spell_target_y
+real array s__YamatoNewSemi__Spell_angle
+unit array s__YamatoNewSemi__Spell_wood
+integer array s__YamatoNewSemi__Spell_count
+group array s__YamatoNewSemi__Spell_damaged
 constant integer si__YamatoSealing=1008
 integer s__YamatoSealing_Alloc__instanceCount= 0
 integer array s__YamatoSealing_Alloc__recycle
@@ -11111,13 +11137,13 @@ unit array s__YamatoNewSemi_missile
 real array s__YamatoNewSemi_angle
 integer array s__YamatoNewSemi_count
 group array s__YamatoNewSemi_damaged
-constant integer si__YamatoNewD___Spell=1011
-integer s__YamatoNewD___Spell_Alloc__instanceCount= 0
-integer array s__YamatoNewD___Spell_Alloc__recycle
-constant integer s__YamatoNewD___Spell_SPELL_ID= 'A07R'
-unit array s__YamatoNewD___Spell_caster
-integer array s__YamatoNewD___Spell_count
-unit array s__YamatoNewD___Spell_domo
+constant integer si__YamatoNewD__Spell=1011
+integer s__YamatoNewD__Spell_Alloc__instanceCount= 0
+integer array s__YamatoNewD__Spell_Alloc__recycle
+constant integer s__YamatoNewD__Spell_SPELL_ID= 'A07R'
+unit array s__YamatoNewD__Spell_caster
+integer array s__YamatoNewD__Spell_count
+unit array s__YamatoNewD__Spell_domo
 constant integer si__YaguraCoralWave=1012
 integer s__YaguraCoralWave_Alloc__instanceCount= 0
 integer array s__YaguraCoralWave_Alloc__recycle
@@ -11198,17 +11224,17 @@ constant integer s__YugitoClawsStorm_SPELL_ID= 'A0DB'
 group array s__YugitoClawsStorm_damaged
 unit array s__YugitoClawsStorm_caster
 integer array s__YugitoClawsStorm_count
-constant integer si__YugitoClawsStrike___Spell=1020
-integer s__YugitoClawsStrike___Spell_Alloc__instanceCount= 0
-integer array s__YugitoClawsStrike___Spell_Alloc__recycle
-constant integer s__YugitoClawsStrike___Spell_SPELL_ID= 'A0NC'
-unit s__YugitoClawsStrike___Spell_dummy2
-group array s__YugitoClawsStrike___Spell_damaged
-group array s__YugitoClawsStrike___Spell_dummies
-unit array s__YugitoClawsStrike___Spell_caster
-unit array s__YugitoClawsStrike___Spell_dummy
-real array s__YugitoClawsStrike___Spell_angle
-integer array s__YugitoClawsStrike___Spell_count
+constant integer si__YugitoClawsStrike__Spell=1020
+integer s__YugitoClawsStrike__Spell_Alloc__instanceCount= 0
+integer array s__YugitoClawsStrike__Spell_Alloc__recycle
+constant integer s__YugitoClawsStrike__Spell_SPELL_ID= 'A0NC'
+unit s__YugitoClawsStrike__Spell_dummy2
+group array s__YugitoClawsStrike__Spell_damaged
+group array s__YugitoClawsStrike__Spell_dummies
+unit array s__YugitoClawsStrike__Spell_caster
+unit array s__YugitoClawsStrike__Spell_dummy
+real array s__YugitoClawsStrike__Spell_angle
+integer array s__YugitoClawsStrike__Spell_count
 constant integer si__YugitoClawCombo=1021
 integer s__YugitoClawCombo_Alloc__instanceCount= 0
 integer array s__YugitoClawCombo_Alloc__recycle
@@ -11396,10 +11422,10 @@ timer s__TeamDuel_DUEL_TIMER
 timerdialog s__TeamDuel_DUEL_TIMER_DIALOG
 boolean s__TeamDuel_ENABLED
 boolean s__TeamDuel_STARTED
-constant integer si__SendGoldAndCystal___Command=1045
-integer si__SendGoldAndCystal___Command_F=0
-integer si__SendGoldAndCystal___Command_I=0
-integer array si__SendGoldAndCystal___Command_V
+constant integer si__SendGoldAndCystal__Command=1045
+integer si__SendGoldAndCystal__Command_F=0
+integer si__SendGoldAndCystal__Command_I=0
+integer array si__SendGoldAndCystal__Command_V
 constant integer si__BuyAttributes=1046
 integer si__BuyAttributes_F=0
 integer si__BuyAttributes_I=0
@@ -11944,10 +11970,10 @@ integer array s__9assisted
 integer array s__10assisted
 integer array s__11assisted
 integer array s__12assisted
-boolean array s__AutoBuyS___autobuy
-boolean array s__AutoBuyS___firstUse
-integer array s__AutoBuyS___buildId
-integer array s__AutoBuyS___lists
+boolean array s__AutoBuyS__autobuy
+boolean array s__AutoBuyS__firstUse
+integer array s__AutoBuyS__buildId
+integer array s__AutoBuyS__lists
 integer array s__RegisterPlayerUnitEvent__leave_ids
 boolexpr array s__RegisterPlayerUnitEvent__death_events
 boolexpr array s__2RegisterPlayerUnitEvent__death_events
@@ -12007,20 +12033,20 @@ boolean array s__9HideHeroesSystem__ishidden
 boolean array s__10HideHeroesSystem__ishidden
 boolean array s__11HideHeroesSystem__ishidden
 boolean array s__12HideHeroesSystem__ishidden
-unit array s__ItemKunai___heroes
-unit array s__Bashosen___dummies
-unit array s__ScrollOfTeleportScope___anbus
-unit array s__AnkoNewE___AnkoNewE
-unit array s__AsumaFireR___firewall
+unit array s__ItemKunai__heroes
+unit array s__Bashosen__dummies
+unit array s__ScrollOfTeleportScope__anbus
+unit array s__AnkoNewE__AnkoNewE
+unit array s__AsumaFireR__firewall
 unit array s__chiyo_kunais
-integer array s__DanzoNewSemiS___instances
-unit array s__DanzoIzanagiModel___sharingans
-unit array s__DaruiSuiton___wave
-unit array s__DaruiLaserCircus___lasers
-effect array s__DaruiLaserCircus___effects
-unit array s__GaaraKidShukakuBijuuDama___chakra
-unit array s__NidaimeMizukageGenjutsu___mirages
-destructable array s__GurenSuishoRo___GurenQBlocks
+integer array s__DanzoNewSemiS__instances
+unit array s__DanzoIzanagiModel__sharingans
+unit array s__DaruiSuiton__wave
+unit array s__DaruiLaserCircus__lasers
+effect array s__DaruiLaserCircus__effects
+unit array s__GaaraKidShukakuBijuuDama__chakra
+unit array s__NidaimeMizukageGenjutsu__mirages
+destructable array s__GurenSuishoRo__GurenQBlocks
 unit array s__HakuNewSemiS___needles
 destructable array s__HiruzenCageNew___blocks
 unit array s__HiruzenE___mud
@@ -12036,20 +12062,20 @@ real array s__KakashiLightningCloneScope___order_y
 integer array s__KakashiNewSusanoo___units_triggers2
 unit array s__KakashiKamuiShuriken_HitTarg
 real array s__KakashiKamuiShuriken_HitMulti
-unit array s__KakuzuCombinedAttack__dummies
-unit array s__KarinChainsArea__KarinChain
-unit array s__KarinLesserChakraChainsNew__Karinchain
-unit array s__KarinLesserChakraChainsNew__Karinchain2
-unit array s__KidomaruTripleArrow__KidoArrows
-unit array s__KillerBeNewBijuuDama__chakra
-unit array s__BrotherBashosen__dummies
-integer array s__GinkakuPot__instances
-unit array s__UltimateRoar__wave
-unit array s__KushinaChains__kushinaChains
-unit array s__KushinaChainsArea__KushinaChain
-unit array s__MadaraKaton__firewall
+unit array s__KakuzuCombinedAttack___dummies
+unit array s__KarinChainsArea___KarinChain
+unit array s__KarinLesserChakraChainsNew___Karinchain
+unit array s__KarinLesserChakraChainsNew___Karinchain2
+unit array s__KidomaruTripleArrow___KidoArrows
+unit array s__KillerBeNewBijuuDama___chakra
+unit array s__BrotherBashosen___dummies
+integer array s__GinkakuPot___instances
+unit array s__UltimateRoar___wave
+unit array s__KushinaChains___kushinaChains
+unit array s__KushinaChainsArea___KushinaChain
+unit array s__MadaraKaton___firewall
 integer array s__units_triggers
-unit array s__MadaraYasaka__yasakas
+unit array s__MadaraYasaka___yasakas
 unit array s__HokageMinatoFarmSpell__minatos
 unit array s__HokageMinatoFarmSpell__flashes
 unit array s__MinatoJouninYellowFlash__minatos
@@ -12106,14 +12132,14 @@ group array s__TemariR__damaged
 unit array s__ObitoKaton__tornadoes
 boolean array s__TobiramaDarkness__show
 unit array s__ToruneSemi__dummies
-unit array s__ZetsuMayflyClones___zetsuclones
-dialog array s__SendGoldAndCystal___gd
-button array s__SendGoldAndCystal___gb
-dialog array s__SendGoldAndCystal___cd
-button array s__SendGoldAndCystal___cb
-integer array s__SendGoldAndCystal___g
-integer array s__SendGoldAndCystal___c
-integer array s__SendGoldAndCystal___given
+unit array s__ZetsuMayflyClones__zetsuclones
+dialog array s__SendGoldAndCystal__gd
+button array s__SendGoldAndCystal__gb
+dialog array s__SendGoldAndCystal__cd
+button array s__SendGoldAndCystal__cb
+integer array s__SendGoldAndCystal__g
+integer array s__SendGoldAndCystal__c
+integer array s__SendGoldAndCystal__given
 boolean array s__AssistSystem___sai
 boolean array s__AssistSystem___reflectsai
 integer array s__s__HagoromoD_R
@@ -12403,12 +12429,12 @@ trigger st__KaguyaSemi_startSlash
 trigger st__KakashiKamui_enumUnits
 trigger st__KidomaruTripleArrow_actions
 trigger st__KisameBubbleDrain_start
-trigger st__KaidoShock__Knockup_periodic
-trigger st__KaidoShock__KaidoShockSpell_periodic
-trigger st__KurotsuchiQuicklimeE__QuicklimeTether_destroy
-trigger st__KurotsuchiR__YokaiSpray_cleanup
-trigger st__KaidoLeap__LeapSpell_periodic
-trigger st__MadaraRikuudou__Spell_delay2
+trigger st__KaidoShock___Knockup_periodic
+trigger st__KaidoShock___KaidoShockSpell_periodic
+trigger st__KurotsuchiQuicklimeE___QuicklimeTether_destroy
+trigger st__KurotsuchiR___YokaiSpray_cleanup
+trigger st__KaidoLeap___LeapSpell_periodic
+trigger st__MadaraRikuudou___Spell_delay2
 trigger st__NagatoDevaArea_actions
 trigger st__NagatoAsuraArea_actions
 trigger st__NagatoAnimalArea_actions
@@ -13950,32 +13976,32 @@ function s__BuyAttributes_deallocate takes integer this returns nothing
     set si__BuyAttributes_F=this
 endfunction
 
-//Generated allocator of SendGoldAndCystal___Command
-function s__SendGoldAndCystal___Command__allocate takes nothing returns integer
- local integer this=si__SendGoldAndCystal___Command_F
+//Generated allocator of SendGoldAndCystal__Command
+function s__SendGoldAndCystal__Command__allocate takes nothing returns integer
+ local integer this=si__SendGoldAndCystal__Command_F
     if (this!=0) then
-        set si__SendGoldAndCystal___Command_F=si__SendGoldAndCystal___Command_V[this]
+        set si__SendGoldAndCystal__Command_F=si__SendGoldAndCystal__Command_V[this]
     else
-        set si__SendGoldAndCystal___Command_I=si__SendGoldAndCystal___Command_I+1
-        set this=si__SendGoldAndCystal___Command_I
+        set si__SendGoldAndCystal__Command_I=si__SendGoldAndCystal__Command_I+1
+        set this=si__SendGoldAndCystal__Command_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__SendGoldAndCystal___Command_V[this]=-1
+    set si__SendGoldAndCystal__Command_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of SendGoldAndCystal___Command
-function s__SendGoldAndCystal___Command_deallocate takes integer this returns nothing
+//Generated destructor of SendGoldAndCystal__Command
+function s__SendGoldAndCystal__Command_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__SendGoldAndCystal___Command_V[this]!=-1) then
+    elseif (si__SendGoldAndCystal__Command_V[this]!=-1) then
         return
     endif
-    set si__SendGoldAndCystal___Command_V[this]=si__SendGoldAndCystal___Command_F
-    set si__SendGoldAndCystal___Command_F=this
+    set si__SendGoldAndCystal__Command_V[this]=si__SendGoldAndCystal__Command_F
+    set si__SendGoldAndCystal__Command_F=this
 endfunction
 
 //Generated allocator of TeamDuel
@@ -14533,120 +14559,120 @@ function s__MadaraIntonRaiha_deallocate takes integer this returns nothing
     set si__MadaraIntonRaiha_F=this
 endfunction
 
-//Generated method caller for MadaraRikuudou__Spell.delay2
-function sc__MadaraRikuudou__Spell_delay2 takes nothing returns nothing
-    call TriggerEvaluate(st__MadaraRikuudou__Spell_delay2)
+//Generated method caller for MadaraRikuudou___Spell.delay2
+function sc__MadaraRikuudou___Spell_delay2 takes nothing returns nothing
+    call TriggerEvaluate(st__MadaraRikuudou___Spell_delay2)
 endfunction
 
-//Generated method caller for KaidoLeap__LeapSpell.periodic
-function sc__KaidoLeap__LeapSpell_periodic takes nothing returns nothing
-    call TriggerEvaluate(st__KaidoLeap__LeapSpell_periodic)
+//Generated method caller for KaidoLeap___LeapSpell.periodic
+function sc__KaidoLeap___LeapSpell_periodic takes nothing returns nothing
+    call TriggerEvaluate(st__KaidoLeap___LeapSpell_periodic)
 endfunction
 
-//Generated allocator of KaidoLeap__LeapSpell
-function s__KaidoLeap__LeapSpell__allocate takes nothing returns integer
- local integer this=si__KaidoLeap__LeapSpell_F
+//Generated allocator of KaidoLeap___LeapSpell
+function s__KaidoLeap___LeapSpell__allocate takes nothing returns integer
+ local integer this=si__KaidoLeap___LeapSpell_F
     if (this!=0) then
-        set si__KaidoLeap__LeapSpell_F=si__KaidoLeap__LeapSpell_V[this]
+        set si__KaidoLeap___LeapSpell_F=si__KaidoLeap___LeapSpell_V[this]
     else
-        set si__KaidoLeap__LeapSpell_I=si__KaidoLeap__LeapSpell_I+1
-        set this=si__KaidoLeap__LeapSpell_I
+        set si__KaidoLeap___LeapSpell_I=si__KaidoLeap___LeapSpell_I+1
+        set this=si__KaidoLeap___LeapSpell_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__KaidoLeap__LeapSpell_V[this]=-1
+    set si__KaidoLeap___LeapSpell_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of KaidoLeap__LeapSpell
-function s__KaidoLeap__LeapSpell_deallocate takes integer this returns nothing
+//Generated destructor of KaidoLeap___LeapSpell
+function s__KaidoLeap___LeapSpell_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__KaidoLeap__LeapSpell_V[this]!=-1) then
+    elseif (si__KaidoLeap___LeapSpell_V[this]!=-1) then
         return
     endif
-    set si__KaidoLeap__LeapSpell_V[this]=si__KaidoLeap__LeapSpell_F
-    set si__KaidoLeap__LeapSpell_F=this
+    set si__KaidoLeap___LeapSpell_V[this]=si__KaidoLeap___LeapSpell_F
+    set si__KaidoLeap___LeapSpell_F=this
 endfunction
 
-//Generated method caller for KurotsuchiR__YokaiSpray.cleanup
-function sc__KurotsuchiR__YokaiSpray_cleanup takes integer this returns nothing
+//Generated method caller for KurotsuchiR___YokaiSpray.cleanup
+function sc__KurotsuchiR___YokaiSpray_cleanup takes integer this returns nothing
     set f__arg_this=this
-    call TriggerEvaluate(st__KurotsuchiR__YokaiSpray_cleanup)
+    call TriggerEvaluate(st__KurotsuchiR___YokaiSpray_cleanup)
 endfunction
 
-//Generated method caller for KurotsuchiQuicklimeE__QuicklimeTether.destroy
-function sc__KurotsuchiQuicklimeE__QuicklimeTether_destroy takes integer this returns nothing
+//Generated method caller for KurotsuchiQuicklimeE___QuicklimeTether.destroy
+function sc__KurotsuchiQuicklimeE___QuicklimeTether_destroy takes integer this returns nothing
     set f__arg_this=this
-    call TriggerEvaluate(st__KurotsuchiQuicklimeE__QuicklimeTether_destroy)
+    call TriggerEvaluate(st__KurotsuchiQuicklimeE___QuicklimeTether_destroy)
 endfunction
 
-//Generated method caller for KaidoShock__KaidoShockSpell.periodic
-function sc__KaidoShock__KaidoShockSpell_periodic takes nothing returns nothing
-    call TriggerEvaluate(st__KaidoShock__KaidoShockSpell_periodic)
+//Generated method caller for KaidoShock___KaidoShockSpell.periodic
+function sc__KaidoShock___KaidoShockSpell_periodic takes nothing returns nothing
+    call TriggerEvaluate(st__KaidoShock___KaidoShockSpell_periodic)
 endfunction
 
-//Generated allocator of KaidoShock__KaidoShockSpell
-function s__KaidoShock__KaidoShockSpell__allocate takes nothing returns integer
- local integer this=si__KaidoShock__KaidoShockSpell_F
+//Generated allocator of KaidoShock___KaidoShockSpell
+function s__KaidoShock___KaidoShockSpell__allocate takes nothing returns integer
+ local integer this=si__KaidoShock___KaidoShockSpell_F
     if (this!=0) then
-        set si__KaidoShock__KaidoShockSpell_F=si__KaidoShock__KaidoShockSpell_V[this]
+        set si__KaidoShock___KaidoShockSpell_F=si__KaidoShock___KaidoShockSpell_V[this]
     else
-        set si__KaidoShock__KaidoShockSpell_I=si__KaidoShock__KaidoShockSpell_I+1
-        set this=si__KaidoShock__KaidoShockSpell_I
+        set si__KaidoShock___KaidoShockSpell_I=si__KaidoShock___KaidoShockSpell_I+1
+        set this=si__KaidoShock___KaidoShockSpell_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__KaidoShock__KaidoShockSpell_V[this]=-1
+    set si__KaidoShock___KaidoShockSpell_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of KaidoShock__KaidoShockSpell
-function s__KaidoShock__KaidoShockSpell_deallocate takes integer this returns nothing
+//Generated destructor of KaidoShock___KaidoShockSpell
+function s__KaidoShock___KaidoShockSpell_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__KaidoShock__KaidoShockSpell_V[this]!=-1) then
+    elseif (si__KaidoShock___KaidoShockSpell_V[this]!=-1) then
         return
     endif
-    set si__KaidoShock__KaidoShockSpell_V[this]=si__KaidoShock__KaidoShockSpell_F
-    set si__KaidoShock__KaidoShockSpell_F=this
+    set si__KaidoShock___KaidoShockSpell_V[this]=si__KaidoShock___KaidoShockSpell_F
+    set si__KaidoShock___KaidoShockSpell_F=this
 endfunction
 
-//Generated method caller for KaidoShock__Knockup.periodic
-function sc__KaidoShock__Knockup_periodic takes nothing returns nothing
-    call TriggerEvaluate(st__KaidoShock__Knockup_periodic)
+//Generated method caller for KaidoShock___Knockup.periodic
+function sc__KaidoShock___Knockup_periodic takes nothing returns nothing
+    call TriggerEvaluate(st__KaidoShock___Knockup_periodic)
 endfunction
 
-//Generated allocator of KaidoShock__Knockup
-function s__KaidoShock__Knockup__allocate takes nothing returns integer
- local integer this=si__KaidoShock__Knockup_F
+//Generated allocator of KaidoShock___Knockup
+function s__KaidoShock___Knockup__allocate takes nothing returns integer
+ local integer this=si__KaidoShock___Knockup_F
     if (this!=0) then
-        set si__KaidoShock__Knockup_F=si__KaidoShock__Knockup_V[this]
+        set si__KaidoShock___Knockup_F=si__KaidoShock___Knockup_V[this]
     else
-        set si__KaidoShock__Knockup_I=si__KaidoShock__Knockup_I+1
-        set this=si__KaidoShock__Knockup_I
+        set si__KaidoShock___Knockup_I=si__KaidoShock___Knockup_I+1
+        set this=si__KaidoShock___Knockup_I
     endif
     if (this>8190) then
         return 0
     endif
 
-    set si__KaidoShock__Knockup_V[this]=-1
+    set si__KaidoShock___Knockup_V[this]=-1
  return this
 endfunction
 
-//Generated destructor of KaidoShock__Knockup
-function s__KaidoShock__Knockup_deallocate takes integer this returns nothing
+//Generated destructor of KaidoShock___Knockup
+function s__KaidoShock___Knockup_deallocate takes integer this returns nothing
     if this==null then
         return
-    elseif (si__KaidoShock__Knockup_V[this]!=-1) then
+    elseif (si__KaidoShock___Knockup_V[this]!=-1) then
         return
     endif
-    set si__KaidoShock__Knockup_V[this]=si__KaidoShock__Knockup_F
-    set si__KaidoShock__Knockup_F=this
+    set si__KaidoShock___Knockup_V[this]=si__KaidoShock___Knockup_F
+    set si__KaidoShock___Knockup_F=this
 endfunction
 
 //Generated allocator of RockData
@@ -19725,34 +19751,34 @@ endfunction
     endfunction 
 
 
-    function AutoBuyS___buyItems takes unit u returns nothing
+    function AutoBuyS__buyItems takes unit u returns nothing
         local integer id= GetPlayerId(GetOwningPlayer(u))
         loop
-            exitwhen not s__ItemList_doAction(s__AutoBuyS___lists[id])
+            exitwhen not s__ItemList_doAction(s__AutoBuyS__lists[id])
         endloop
     endfunction
     
-    function AutoBuyS___enterKonoha takes nothing returns nothing
-        if IsUnitAlly(GetEnteringUnit(), Player(3)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS___autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
-		call AutoBuyS___buyItems(GetEnteringUnit())
+    function AutoBuyS__enterKonoha takes nothing returns nothing
+        if IsUnitAlly(GetEnteringUnit(), Player(3)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS__autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
+		call AutoBuyS__buyItems(GetEnteringUnit())
         endif
     endfunction
     
-    function AutoBuyS___enterEvil takes nothing returns nothing
-        if IsUnitAlly(GetTriggerUnit(), Player(7)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS___autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
-            call AutoBuyS___buyItems(GetEnteringUnit())
+    function AutoBuyS__enterEvil takes nothing returns nothing
+        if IsUnitAlly(GetTriggerUnit(), Player(7)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS__autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
+            call AutoBuyS__buyItems(GetEnteringUnit())
         endif
     endfunction
     
-    function AutoBuyS___enterAkt takes nothing returns nothing
-        if IsUnitAlly(GetEnteringUnit(), Player(11)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS___autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
-            call AutoBuyS___buyItems(GetEnteringUnit())
+    function AutoBuyS__enterAkt takes nothing returns nothing
+        if IsUnitAlly(GetEnteringUnit(), Player(11)) and GetEnteringUnit() == udg_units33[GetPlayerId(GetOwningPlayer(GetEnteringUnit())) + 1] and s__AutoBuyS__autobuy[GetPlayerId(GetOwningPlayer(GetEnteringUnit()))] and UnitAlive(GetEnteringUnit()) and GetWidgetLife(GetEnteringUnit()) > 0.405 then
+            call AutoBuyS__buyItems(GetEnteringUnit())
         endif
     endfunction
      
     function autoBuyCmdEnable takes boolean enable returns nothing
  local integer id= GetPlayerId(GetTriggerPlayer())
-	set s__AutoBuyS___autobuy[id]= enable
+	set s__AutoBuyS__autobuy[id]= enable
     endfunction 
 
     function autobuyCmdBuild takes integer build returns nothing
@@ -19763,154 +19789,154 @@ endfunction
   local boolean gen
   local boolean nin
   local integer id= GetPlayerId(GetTriggerPlayer())
-		set s__AutoBuyS___autobuy[id]= true
-		set s__AutoBuyS___buildId[id]= build
-                if s__AutoBuyS___firstUse[id] then
+		set s__AutoBuyS__autobuy[id]= true
+		set s__AutoBuyS__buildId[id]= build
+                if s__AutoBuyS__firstUse[id] then
                     set str=GetHeroStr(udg_units33[id + 1], true)
                     set agi=GetHeroAgi(udg_units33[id + 1], true)
                     set int=GetHeroInt(udg_units33[id + 1], true)
                     set tai=str >= agi and str >= int
                     set nin=agi >= str and agi >= int
                     set gen=int >= str and int >= agi
-                    set s__AutoBuyS___lists[id]= s__ItemList_create(id)
-                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CLOGS ) , ( 800) , 0) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I00B' ) , ( 900) , 1) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(NINJA_BOOTS ) , ( 900) , 1) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03V' ) , ( 500) , 1) // INLINED!!
-                    call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OIL ) , ( 2250) , 0) // INLINED!!
-                    if s__AutoBuyS___buildId[id] == 2 then
+                    set s__AutoBuyS__lists[id]= s__ItemList_create(id)
+                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CLOGS ) , ( 800) , 0) // INLINED!!
+                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I00B' ) , ( 900) , 1) // INLINED!!
+                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),(NINJA_BOOTS ) , ( 900) , 1) // INLINED!!
+                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I03V' ) , ( 500) , 1) // INLINED!!
+                    call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OIL ) , ( 2250) , 0) // INLINED!!
+                    if s__AutoBuyS__buildId[id] == 2 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing offensive build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_MASK ) , ( 2500) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_MASK ) , ( 2500) , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I01Z' ) , ( 7000 ) , ( KUNAI_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I045' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I01Z' ) , ( 7000 ) , ( KUNAI_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I045' ) , ( 3000) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I027' ) , ( 7000 ) , ( SHURIKEN_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I04M' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I027' ) , ( 7000 ) , ( SHURIKEN_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I04M' ) , ( 3000) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I02A' ) , ( 7000 ) , ( SENBONS_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I04C' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I02A' ) , ( 7000 ) , ( SENBONS_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I04C' ) , ( 3000) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3300) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(GENIN_CLOTH ) , ( 3300) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(HOKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),(HOKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(RAIKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),(RAIKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),(MIZUKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),(MIZUKAGE_ROBE ) , ( 7500 ) , ( KAGE_ROBE) , 1) // INLINED!!
                         endif
                         if tai then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07A' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I07A' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07E' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I07E' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07B' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I07B' ) , ( 10000 ) , ( ANBU_MASK) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I01X' ) , ( 3000) , 0) // INLINED!!
-                    elseif s__AutoBuyS___buildId[id] == 3 then
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I01X' ) , ( 3000) , 0) // INLINED!!
+                    elseif s__AutoBuyS__buildId[id] == 3 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing anti-stun build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I01Z' ) , ( 7000 ) , ( KUNAI_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I01Z' ) , ( 7000 ) , ( KUNAI_1) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I027' ) , ( 7000 ) , ( SHURIKEN_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I027' ) , ( 7000 ) , ( SHURIKEN_1) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I02A' ) , ( 7000 ) , ( SENBONS_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I02A' ) , ( 7000 ) , ( SENBONS_1) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05K' ) , ( 6000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OTOKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I006' ) , ( 5300 ) , ( 'I05K') , 1) // INLINED!!
-                    elseif s__AutoBuyS___buildId[id] == 4 then
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I05K' ) , ( 6000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OTOKAGE_ROBE ) , ( 9500) , 1) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I006' ) , ( 5300 ) , ( 'I05K') , 1) // INLINED!!
+                    elseif s__AutoBuyS__buildId[id] == 4 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing anti-debuff build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_MASK ) , ( 800 + 2500 + 2000) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03T' ) , ( 4000) , 0) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I03T' ) , ( 6500 ) , ( 'I00V') , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_MASK ) , ( 800 + 2500 + 2000) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I03T' ) , ( 4000) , 0) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I03T' ) , ( 6500 ) , ( 'I00V') , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I01Z' ) , ( 8000 ) , ( KUNAI_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I01Z' ) , ( 8000 ) , ( KUNAI_1) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I027' ) , ( 8000 ) , ( SHURIKEN_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I027' ) , ( 8000 ) , ( SHURIKEN_1) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I02A' ) , ( 8000 ) , ( SENBONS_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I02A' ) , ( 8000 ) , ( SENBONS_1) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I086' ) , ( 3000) , 0) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I006' ) , ( 9000 ) , ( ANBU_MASK) , 1) // INLINED!!
-                    elseif s__AutoBuyS___buildId[id] == 5 then
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I086' ) , ( 3000) , 0) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I006' ) , ( 9000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                    elseif s__AutoBuyS__buildId[id] == 5 then
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing auto-attack build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I007' ) , ( 6000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(AKATSUKI_RING ) , ( 3500) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JADE_OF_SUSANOO ) , ( 6500) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I05U' ) , ( 5000 ) , ( JADE_OF_SUSANOO) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I02T' ) , ( 10000 ) , ( 'I007') , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(OTOKAGE_ROBE ) , ( 8500) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I007' ) , ( 6000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(AKATSUKI_RING ) , ( 3500) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JADE_OF_SUSANOO ) , ( 6500) , 1) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I05U' ) , ( 5000 ) , ( JADE_OF_SUSANOO) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I078' ) , ( 3000) , 0) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I02T' ) , ( 10000 ) , ( 'I007') , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(GENIN_CLOTH ) , ( 3700) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(CHUNNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(JOUNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_ARMOR ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANNIN_CLOTH ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KAGE_ROBE ) , ( 12800) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(OTOKAGE_ROBE ) , ( 8500) , 1) // INLINED!!
                     else
                         call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebUsing defensive build.|r")
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(ANBU_MASK ) , ( 800 + 2500 + 2000) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I05M' ) , ( 800) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(ANBU_MASK ) , ( 800 + 2500 + 2000) , 1) // INLINED!!
                         if tai then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I01Z' ) , ( 8000 ) , ( KUNAI_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I045' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(KUNAI_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I01Z' ) , ( 8000 ) , ( KUNAI_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I045' ) , ( 3000) , 1) // INLINED!!
                         elseif nin then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I028' ) , ( 8000 ) , ( SHURIKEN_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I04L' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SHURIKEN_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I028' ) , ( 8000 ) , ( SHURIKEN_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I04L' ) , ( 3000) , 1) // INLINED!!
                         elseif gen then
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
-                            call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I02D' ) , ( 8000 ) , ( SENBONS_1) , 1) // INLINED!!
-                            call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I04F' ) , ( 3000) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SENBONS_1 ) , ( 3000) , 0) // INLINED!!
+                            call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I02D' ) , ( 8000 ) , ( SENBONS_1) , 1) // INLINED!!
+                            call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I04F' ) , ( 3000) , 1) // INLINED!!
                         endif
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I03X' ) , ( 2250) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),(SANBI_SKIN ) , ( 5000) , 0) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I00T' ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I054' ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I055' ) , ( 3300) , 1) // INLINED!!
-                        call s__ItemList_addAction((s__AutoBuyS___lists[id]),('I05Q' ) , ( 5000) , 1) // INLINED!!
-                        call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I07A' ) , ( 11000 ) , ( ANBU_MASK) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I03X' ) , ( 2250) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),(SANBI_SKIN ) , ( 5000) , 0) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I00T' ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I054' ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I055' ) , ( 3300) , 1) // INLINED!!
+                        call s__ItemList_addAction((s__AutoBuyS__lists[id]),('I05Q' ) , ( 5000) , 1) // INLINED!!
+                        call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I07A' ) , ( 11000 ) , ( ANBU_MASK) , 1) // INLINED!!
                     endif
-                    call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I051' ) , ( 1500 ) , ( 'I03V') , 1) // INLINED!!
-                    call s__ItemList_addActionFrom((s__AutoBuyS___lists[id]),('I052' ) , ( 1500 ) , ( 'I051') , 1) // INLINED!!
+                    call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I051' ) , ( 1500 ) , ( 'I03V') , 1) // INLINED!!
+                    call s__ItemList_addActionFrom((s__AutoBuyS__lists[id]),('I052' ) , ( 1500 ) , ( 'I051') , 1) // INLINED!!
                 endif
-                set s__AutoBuyS___firstUse[id]= false
+                set s__AutoBuyS__firstUse[id]= false
     endfunction
 
-    function AutoBuyS___autobuyCmd takes nothing returns nothing
+    function AutoBuyS__autobuyCmd takes nothing returns nothing
         local integer id= GetPlayerId(GetTriggerPlayer())
         if udg_units33[id + 1] == null then
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You must have a hero to enable this command.|r")
         else
-            if s__AutoBuyS___autobuy[id] then
+            if s__AutoBuyS__autobuy[id] then
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebAutobuy disabled.|r")
-                set s__AutoBuyS___autobuy[id]= false
+                set s__AutoBuyS__autobuy[id]= false
             else
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cff87ceebAutobuy enabled. Type -autobuy again to disable it. |cffff0000DO NOT BUY ANYTHING MANUALLY!|r")
                 //set buildId[id] = S2I(SubStringBJ(GetEventPlayerChatString(), 10, 11))
@@ -19919,7 +19945,7 @@ endfunction
         endif
     endfunction
     
-    function AutoBuyS___init takes nothing returns nothing
+    function AutoBuyS__init takes nothing returns nothing
         local trigger t= CreateTrigger()
         local trigger t1= CreateTrigger()
         local trigger t2= CreateTrigger()
@@ -19927,19 +19953,19 @@ endfunction
         local integer i= 0
         loop
             exitwhen i > 11
-            set s__AutoBuyS___autobuy[i]= false
-            set s__AutoBuyS___firstUse[i]= true
+            set s__AutoBuyS__autobuy[i]= false
+            set s__AutoBuyS__firstUse[i]= true
             call TriggerRegisterPlayerChatEvent(t, Player(i), "-autobuy", false)
             set i=i + 1
         endloop
-        call TriggerAddAction(t, function AutoBuyS___autobuyCmd)
+        call TriggerAddAction(t, function AutoBuyS__autobuyCmd)
 
         call TriggerRegisterEnterRectSimple(t1, gg_rct_Base_Konohagakure)
-        call TriggerAddAction(t1, function AutoBuyS___enterKonoha)
+        call TriggerAddAction(t1, function AutoBuyS__enterKonoha)
         call TriggerRegisterEnterRectSimple(t2, gg_rct_Base_Otogakure)
-        call TriggerAddAction(t2, function AutoBuyS___enterEvil)
+        call TriggerAddAction(t2, function AutoBuyS__enterEvil)
         call TriggerRegisterEnterRectSimple(t3, gg_rct_Base_Akatsuki)
-        call TriggerAddAction(t3, function AutoBuyS___enterAkt)
+        call TriggerAddAction(t3, function AutoBuyS__enterAkt)
 
     endfunction
    
@@ -30121,6 +30147,20 @@ endfunction
 
 //***************************************************************************
 //*
+//*  Items
+//*
+//***************************************************************************
+
+function CreateAllItems takes nothing returns nothing
+    local integer itemID
+    local item i
+
+    set i=BlzCreateItemWithSkin('ISB1', - 4241.7, - 841.2, 'ISB1')
+    call BlzSetItemColor(i, ConvertPlayerColor(0))
+endfunction
+
+//***************************************************************************
+//*
 //*  Unit Creation
 //*
 //***************************************************************************
@@ -32095,13 +32135,13 @@ endfunction
 
     
 
-        function s__JadePassive___Item_attack takes nothing returns nothing
+        function s__JadePassive__Item_attack takes nothing returns nothing
             if GetUnitTypeId(GetAttacker()) == 'n01F' or GetUnitTypeId(GetAttacker()) == 'n01H' then
                 call KillUnit(GetAttacker())
             endif
         endfunction
         
-        function s__JadePassive___Item_dies takes nothing returns nothing
+        function s__JadePassive__Item_dies takes nothing returns nothing
             local real x
             local real y
             if GetWidgetLife(GetKillingUnit()) > 0.405 and GetUnitAbilityLevel(GetTriggerUnit(), 'Aloc') == 0 then
@@ -32135,16 +32175,16 @@ endfunction
             endif
         endfunction
         
- function s__JadePassive___Item_init takes nothing returns nothing
-		if GetItemTypeId(GetManipulatedItem()) == 'I04S' and not s__JadePassive___Item_b then
-            		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__JadePassive___Item_dies))) // INLINED!!
-            		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__JadePassive___Item_attack))) // INLINED!!
-			set s__JadePassive___Item_b=true
+ function s__JadePassive__Item_init takes nothing returns nothing
+		if GetItemTypeId(GetManipulatedItem()) == 'I04S' and not s__JadePassive__Item_b then
+            		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function s__JadePassive__Item_dies))) // INLINED!!
+            		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_ATTACKED ) , Filter(( function s__JadePassive__Item_attack))) // INLINED!!
+			set s__JadePassive__Item_b=true
 		endif
  endfunction
 
-        function s__JadePassive___Item_onInit takes nothing returns nothing
-		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__JadePassive___Item_init))) // INLINED!!
+        function s__JadePassive__Item_onInit takes nothing returns nothing
+		call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_PICKUP_ITEM ) , Filter(( function s__JadePassive__Item_init))) // INLINED!!
         endfunction
         
     
@@ -33873,7 +33913,7 @@ endfunction
             set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
             exitwhen bj_lastCreatedUnit == null
             if GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitEnemy(bj_lastCreatedUnit, GetTriggerPlayer()) and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_HERO) == true and IsVisibleToPlayer(GetUnitX(bj_lastCreatedUnit), GetUnitY(bj_lastCreatedUnit), GetTriggerPlayer()) then
-                call PingMinimapForPlayer(GetTriggerPlayer(), GetUnitX(bj_lastCreatedUnit), GetUnitY(bj_lastCreatedUnit), 5.0)
+                call PingMinimapForPlayer(GetTriggerPlayer(), GetUnitX(bj_lastCreatedUnit), GetUnitY(bj_lastCreatedUnit), 4.0)
             endif
             call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
         endloop
@@ -34537,6 +34577,258 @@ endfunction
  function s__KohakuNoJohei_onInit takes nothing returns nothing
 		call RegisterSpellEffectEvent2((s__KohakuNoJohei_SPELL_ID ) , Filter(( function s__KohakuNoJohei_actions))) // INLINED!!
  endfunction
+
+//===========================================================================
+// Trigger: Untitled Trigger 001
+//===========================================================================
+
+function NSB_IsParticipant takes integer slot returns boolean
+    return slot == 0 or slot == 1 or slot == 2 or slot == 4 or slot == 5 or slot == 6 or slot == 8 or slot == 9 or slot == 10
+endfunction
+
+function NSB_IsRealHero takes unit u returns boolean
+    if u == null then
+        return false
+    endif
+    if GetUnitTypeId(u) == 0 or GetWidgetLife(u) <= 0.405 or IsUnitType(u, UNIT_TYPE_DEAD) then
+        return false
+    endif
+    if not IsUnitType(u, UNIT_TYPE_HERO) or IsUnitIllusion(u) or IsUnitType(u, UNIT_TYPE_SUMMONED) then
+        return false
+    endif
+    // Hayate's custom clone is a created hero, not necessarily an illusion.
+    if GetUnitTypeId(u) == 'E04B' then
+        return false
+    endif
+    return NSB_IsParticipant(GetPlayerId(GetOwningPlayer(u))) and u == udg_units33[GetPlayerId(GetOwningPlayer(u)) + 1]
+endfunction
+
+function NSB_PingTeam takes player owner,real x,real y returns nothing
+    // Only the UI call is local. All sensing and state changes remain synced.
+    if NSB_IsParticipant(GetPlayerId(GetLocalPlayer())) and IsPlayerAlly(GetLocalPlayer(), owner) then
+        call PingMinimapEx(x, y, NSB_PING_DURATION, 255, 80, 0, false)
+    endif
+endfunction
+
+function NSB_Cleanup takes unit seal returns nothing
+    local integer key
+    local unit carrier
+    local effect visual
+    local integer index
+    local unit lastSeal
+    if seal == null then
+        return
+    endif
+    set key=GetHandleId(seal)
+    if not LoadBoolean(NSB_Data, key, NSB_KEY_ACTIVE) then
+        return
+    endif
+    set carrier=LoadUnitHandle(NSB_Data, key, NSB_KEY_CARRIER)
+    set visual=LoadEffectHandle(NSB_Data, key, NSB_KEY_EFFECT)
+    set index=LoadInteger(NSB_Data, key, NSB_KEY_INDEX)
+
+    // Unregister first, so nested death/removal callbacks cannot clean twice.
+    set lastSeal=NSB_Seals[NSB_Count]
+    set NSB_Seals[index]=lastSeal
+    call SaveInteger(NSB_Data, GetHandleId(lastSeal), NSB_KEY_INDEX, index)
+    set NSB_Seals[NSB_Count]=null
+    call FlushChildHashtable(NSB_Data, key)
+    set NSB_Count=NSB_Count - 1
+    if NSB_Count == 0 then
+        call PauseTimer(NSB_Timer)
+    endif
+    if visual != null then
+        call DestroyEffect(visual)
+    endif
+    if carrier != null then
+        call RemoveUnit(carrier)
+    endif
+    if GetUnitTypeId(seal) != 0 then
+        call RemoveUnit(seal)
+    endif
+    set carrier=null
+    set visual=null
+    set lastSeal=null
+endfunction
+
+function NSB_Scan takes unit seal,boolean alert returns nothing
+    local integer key= GetHandleId(seal)
+    local player owner= LoadPlayerHandle(NSB_Data, key, NSB_KEY_OWNER)
+    local integer slot= 0
+    local unit hero
+    local boolean inside
+    local real dx
+    local real dy
+    loop
+        exitwhen slot >= 12
+        if NSB_IsParticipant(slot) then
+            set hero=udg_units33[slot + 1]
+            set inside=false
+            if NSB_IsRealHero(hero) then
+                if IsUnitEnemy(hero, owner) then
+                    set dx=GetUnitX(hero) - GetUnitX(seal)
+                    set dy=GetUnitY(hero) - GetUnitY(seal)
+                    set inside=dx * dx + dy * dy <= NSB_RADIUS * NSB_RADIUS
+                endif
+            endif
+            if inside and not LoadBoolean(NSB_Data, key, slot) then
+                if alert then
+                    call NSB_PingTeam(owner , GetUnitX(hero) , GetUnitY(hero))
+                endif
+            endif
+            call SaveBoolean(NSB_Data, key, slot, inside)
+        endif
+        set slot=slot + 1
+    endloop
+    set hero=null
+    set owner=null
+endfunction
+
+function NSB_Periodic takes nothing returns nothing
+    local unit seal
+    local unit carrier
+    local integer key
+    local integer index= 1
+    // A unit array retains removed handles, unlike engine group enumeration.
+    loop
+        exitwhen index > NSB_Count
+        set seal=NSB_Seals[index]
+        set key=GetHandleId(seal)
+        if LoadBoolean(NSB_Data, key, NSB_KEY_ACTIVE) then
+            if GetUnitTypeId(seal) == 0 or GetWidgetLife(seal) <= 0.405 or IsUnitType(seal, UNIT_TYPE_DEAD) then
+                call NSB_Cleanup(seal)
+            else
+                set carrier=LoadUnitHandle(NSB_Data, key, NSB_KEY_CARRIER)
+                // Keep the effect centered if a map mechanic moves the seal.
+                if carrier == null or GetUnitTypeId(carrier) == 0 or GetWidgetLife(carrier) <= 0.405 then
+                    call NSB_Cleanup(seal)
+                else
+                    call SetUnitX(carrier, GetUnitX(seal))
+                    call SetUnitY(carrier, GetUnitY(seal))
+                    if LoadBoolean(NSB_Data, key, NSB_KEY_ACTIVE) then
+                        call NSB_Scan(seal , true)
+                    endif
+                endif
+            endif
+        endif
+        // Cleanup swaps the last seal into this slot; process that one next.
+        if index <= NSB_Count and NSB_Seals[index] == seal then
+            set index=index + 1
+        endif
+    endloop
+    set seal=null
+    set carrier=null
+endfunction
+
+function NSB_OnDeath takes nothing returns nothing
+    call NSB_Cleanup(GetTriggerUnit())
+endfunction
+
+function NSB_OnCast takes nothing returns nothing
+    local unit caster
+    local unit seal
+    local unit carrier
+    local player owner
+    local effect visual
+    local real x
+    local real y
+    local integer key
+    if GetSpellAbilityId() != NSB_CAST_ID then
+        return
+    endif
+    set caster=GetTriggerUnit()
+    if not NSB_IsRealHero(caster) then
+        set caster=null
+        return
+    endif
+    // Native JASS arrays have a finite capacity; no per-player cap is imposed.
+    if NSB_Count >= 8190 then
+        set caster=null
+        return
+    endif
+    set owner=GetOwningPlayer(caster)
+    set x=GetSpellTargetX()
+    set y=GetSpellTargetY()
+    set seal=CreateUnit(owner, NSB_SEAL_ID, x, y, 270.00)
+    set carrier=CreateUnit(owner, NSB_CARRIER_ID, x, y, 270.00)
+    if seal == null or carrier == null then
+        if seal != null then
+            call RemoveUnit(seal)
+        endif
+        if carrier != null then
+            call RemoveUnit(carrier)
+        endif
+        call DisplayTextToPlayer(owner, 0.00, 0.00, "Sensing Barrier: check seal/carrier rawcodes in the Object Editor.")
+        set caster=null
+        set seal=null
+        set carrier=null
+        set owner=null
+        return
+    endif
+
+    call SetUnitPathing(seal, false)
+    call SetUnitX(seal, x)
+    call SetUnitY(seal, y)
+    call BlzSetUnitMaxHP(seal, NSB_SEAL_HP)
+    call SetWidgetLife(seal, I2R(NSB_SEAL_HP))
+    call SetUnitInvulnerable(seal, false)
+
+    call SetUnitPathing(carrier, false)
+    call SetUnitX(carrier, x)
+    call SetUnitY(carrier, y)
+    call SetUnitInvulnerable(carrier, true)
+    call UnitAddAbility(carrier, NSB_INVIS_ID)
+    // Never add Locust: it can prevent True Sight from revealing this carrier.
+    set visual=AddSpecialEffectTarget(NSB_BARRIER_MODEL, carrier, "origin")
+    call BlzSetSpecialEffectScale(visual, NSB_BARRIER_SCALE)
+
+    set key=GetHandleId(seal)
+    call SaveBoolean(NSB_Data, key, NSB_KEY_ACTIVE, true)
+    call SavePlayerHandle(NSB_Data, key, NSB_KEY_OWNER, owner)
+    call SaveUnitHandle(NSB_Data, key, NSB_KEY_CARRIER, carrier)
+    call SaveEffectHandle(NSB_Data, key, NSB_KEY_EFFECT, visual)
+    set NSB_Count=NSB_Count + 1
+    set NSB_Seals[NSB_Count]=seal
+    call SaveInteger(NSB_Data, key, NSB_KEY_INDEX, NSB_Count)
+
+    // Existing occupants do not count as entering a newly placed barrier.
+    call NSB_Scan(seal , false)
+    if NSB_Count == 1 then
+        call TimerStart(NSB_Timer, NSB_SCAN_INTERVAL, true, function NSB_Periodic)
+    endif
+    // Engine timed life gives the seal a 40-second expiry and a death event.
+    call UnitApplyTimedLife(seal, 'BTLF', NSB_LIFETIME)
+
+    set caster=null
+    set seal=null
+    set carrier=null
+    set owner=null
+    set visual=null
+endfunction
+
+function InitTrig_NinpouSensingBarrier takes nothing returns nothing
+    local trigger castTrigger
+    local trigger deathTrigger
+    local integer slot= 0
+    if NSB_Ready then
+        return
+    endif
+    set NSB_Ready=true
+    set NSB_Data=InitHashtable()
+    set NSB_Timer=CreateTimer()
+    set castTrigger=CreateTrigger()
+    set deathTrigger=CreateTrigger()
+    loop
+        exitwhen slot >= bj_MAX_PLAYER_SLOTS
+        call TriggerRegisterPlayerUnitEvent(castTrigger, Player(slot), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
+        call TriggerRegisterPlayerUnitEvent(deathTrigger, Player(slot), EVENT_PLAYER_UNIT_DEATH, null)
+        set slot=slot + 1
+    endloop
+    call TriggerAddAction(castTrigger, function NSB_OnCast)
+    call TriggerAddAction(deathTrigger, function NSB_OnDeath)
+    set castTrigger=null
+    set deathTrigger=null
+endfunction
 
 //===========================================================================
 // Trigger: Oil
@@ -35371,7 +35663,7 @@ endfunction
                 set i=i + 1
             endloop
             set id=GetPlayerId(GetTriggerPlayer())
-            if s__ItemKunai___heroes[id] == null then
+            if s__ItemKunai__heroes[id] == null then
                 if udg_units33[id + 1] == null then
                     set bj_lastCreatedGroup=CreateGroup()
                     call GroupEnumUnitsInRect(bj_lastCreatedGroup, GetPlayableMapRect(), null)
@@ -35381,12 +35673,12 @@ endfunction
                         call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                     endloop
                     call DestroyGroup(bj_lastCreatedGroup)
-                    set s__ItemKunai___heroes[id]= bj_lastCreatedUnit
+                    set s__ItemKunai__heroes[id]= bj_lastCreatedUnit
                 else
-                    set s__ItemKunai___heroes[id]= udg_units33[id + 1]
+                    set s__ItemKunai__heroes[id]= udg_units33[id + 1]
                 endif
             endif
-            if UnitHasItemOfTypeBJ(s__ItemKunai___heroes[id], 'I047') then
+            if UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I047') then
                 set i=1
                 loop
                     exitwhen i > 5
@@ -35394,7 +35686,7 @@ endfunction
                     call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
                     set i=i + 1
                 endloop
-            elseif UnitHasItemOfTypeBJ(s__ItemKunai___heroes[id], 'I04A') then
+            elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I04A') then
                 set i=1
                 loop
                     exitwhen i > 5
@@ -35403,7 +35695,7 @@ endfunction
                     set i=i + 1
                 endloop
 
-            elseif UnitHasItemOfTypeBJ(s__ItemKunai___heroes[id], 'I048') then
+            elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I048') then
                 set i=1
                 loop
                     exitwhen i > 5
@@ -35412,7 +35704,7 @@ endfunction
                     set i=i + 1
                 endloop
 
-            elseif UnitHasItemOfTypeBJ(s__ItemKunai___heroes[id], 'I045') then
+            elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I045') then
                 set i=1
                 loop
                     exitwhen i > 5
@@ -35421,7 +35713,7 @@ endfunction
                     set i=i + 1
                 endloop
 
-            elseif UnitHasItemOfTypeBJ(s__ItemKunai___heroes[id], 'I046') then
+            elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I046') then
                 set i=1
                 loop
                     exitwhen i > 5
@@ -35429,7 +35721,7 @@ endfunction
                     call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
                     set i=i + 1
                 endloop
-            elseif UnitHasItemOfTypeBJ(s__ItemKunai___heroes[id], 'I06A') then
+            elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I06A') then
                 set i=1
                 loop
                     exitwhen i > 5
@@ -35447,18 +35739,18 @@ endfunction
                 if IsUnitEnemy(bj_lastCreatedUnit, GetTriggerPlayer()) and ( IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false or building ) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
                     set enemy_x=GetUnitX(bj_lastCreatedUnit)
                     set enemy_y=GetUnitY(bj_lastCreatedUnit)
-                    if UnitHasItemOfTypeBJ(s__ItemKunai___heroes[id], 'I047') then
-			call SlowedUnit(s__ItemKunai___heroes[id] , bj_lastCreatedUnit , 3.0)
-                    elseif UnitHasItemOfTypeBJ(s__ItemKunai___heroes[id], 'I04A') then
-			call EsnareUnitTimed(s__ItemKunai___heroes[id] , bj_lastCreatedUnit , 2.0)
-		    elseif UnitHasItemOfTypeBJ(s__ItemKunai___heroes[id], 'I048') then
-                    	call StunUnitTimed(s__ItemKunai___heroes[id] , bj_lastCreatedUnit , 0.5)
-                    elseif UnitHasItemOfTypeBJ(s__ItemKunai___heroes[id], 'I06A') then
-                        call SilenceUnitLight(s__ItemKunai___heroes[id] , bj_lastCreatedUnit)
+                    if UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I047') then
+			call SlowedUnit(s__ItemKunai__heroes[id] , bj_lastCreatedUnit , 3.0)
+                    elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I04A') then
+			call EsnareUnitTimed(s__ItemKunai__heroes[id] , bj_lastCreatedUnit , 2.0)
+		    elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I048') then
+                    	call StunUnitTimed(s__ItemKunai__heroes[id] , bj_lastCreatedUnit , 0.5)
+                    elseif UnitHasItemOfTypeBJ(s__ItemKunai__heroes[id], 'I06A') then
+                        call SilenceUnitLight(s__ItemKunai__heroes[id] , bj_lastCreatedUnit)
                     else
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" ), (( enemy_x )*1.0), (( enemy_y)*1.0))) // INLINED!!
                     endif
-                    call UnitDamageTarget(s__ItemKunai___heroes[id], bj_lastCreatedUnit, 7.0 * GetHeroStr(s__ItemKunai___heroes[id], true), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                    call UnitDamageTarget(s__ItemKunai__heroes[id], bj_lastCreatedUnit, 7.0 * GetHeroStr(s__ItemKunai__heroes[id], true), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
                 endif
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
@@ -35467,7 +35759,7 @@ endfunction
         
         function s__ItemExplosiveKunai_spell takes nothing returns nothing
             if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true then
-                set s__ItemKunai___heroes[GetPlayerId(GetTriggerPlayer())]= GetTriggerUnit()
+                set s__ItemKunai__heroes[GetPlayerId(GetTriggerPlayer())]= GetTriggerUnit()
             endif
         endfunction 
         
@@ -35690,43 +35982,43 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__Bashosen___Item_allocate takes nothing returns integer
+        function s__Bashosen__Item_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__Bashosen___Item_Alloc__recycle[(0)] == 0 ) then
-                set s__Bashosen___Item_Alloc__instanceCount=s__Bashosen___Item_Alloc__instanceCount + 1
-                set this=s__Bashosen___Item_Alloc__instanceCount
+            if ( s__Bashosen__Item_Alloc__recycle[(0)] == 0 ) then
+                set s__Bashosen__Item_Alloc__instanceCount=s__Bashosen__Item_Alloc__instanceCount + 1
+                set this=s__Bashosen__Item_Alloc__instanceCount
             else
-                set this=s__Bashosen___Item_Alloc__recycle[(0)]
-                set s__Bashosen___Item_Alloc__recycle[(0)]=s__Bashosen___Item_Alloc__recycle[s__Bashosen___Item_Alloc__recycle[(0)]]
+                set this=s__Bashosen__Item_Alloc__recycle[(0)]
+                set s__Bashosen__Item_Alloc__recycle[(0)]=s__Bashosen__Item_Alloc__recycle[s__Bashosen__Item_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__Bashosen___Item_deallocate takes integer this returns nothing
-            set s__Bashosen___Item_Alloc__recycle[this]=s__Bashosen___Item_Alloc__recycle[(0)]
-            set s__Bashosen___Item_Alloc__recycle[(0)]=this
+        function s__Bashosen__Item_deallocate takes integer this returns nothing
+            set s__Bashosen__Item_Alloc__recycle[this]=s__Bashosen__Item_Alloc__recycle[(0)]
+            set s__Bashosen__Item_Alloc__recycle[(0)]=this
         endfunction
         
     
-        function s__Bashosen___Item_destroy takes integer this returns nothing
+        function s__Bashosen__Item_destroy takes integer this returns nothing
             local integer i= 0
-            call DestroyGroup(s__Bashosen___Item_damaged[this])
+            call DestroyGroup(s__Bashosen__Item_damaged[this])
             loop
                 set i=i + 1
                 exitwhen i > 6
-                call RecycleUnit(s__Bashosen___dummies[(this)*(1)+i])
-                set s__Bashosen___dummies[(this)*(1)+i]= null
+                call RecycleUnit(s__Bashosen__dummies[(this)*(1)+i])
+                set s__Bashosen__dummies[(this)*(1)+i]= null
             endloop
-            set s__Bashosen___Item_damaged[this]=null
-            set s__Bashosen___Item_caster[this]=null
-            call s__Bashosen___Item_deallocate(this)
+            set s__Bashosen__Item_damaged[this]=null
+            set s__Bashosen__Item_caster[this]=null
+            call s__Bashosen__Item_deallocate(this)
         endfunction
         
-        function s__Bashosen___Item_periodic takes nothing returns nothing
+        function s__Bashosen__Item_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real unit_x
             local real unit_y
@@ -35735,26 +36027,26 @@ endfunction
             local real new_x
             local real new_y
             local integer i= 0
-            set s__Bashosen___Item_count[this]=s__Bashosen___Item_count[this] + 1
+            set s__Bashosen__Item_count[this]=s__Bashosen__Item_count[this] + 1
             loop
                 set i=i + 1
                 exitwhen i > 6
-                set unit_x=GetUnitX(s__Bashosen___dummies[(this)*(1)+i])
-                set unit_y=GetUnitY(s__Bashosen___dummies[(this)*(1)+i])
-                set new_x=unit_x + Cos(Deg2Rad(GetUnitFacing(s__Bashosen___dummies[(this)*(1)+i]))) * 30
-                set new_y=unit_y + Sin(Deg2Rad(GetUnitFacing(s__Bashosen___dummies[(this)*(1)+i]))) * 30
-                call SetUnitX(s__Bashosen___dummies[(this)*(1)+i], new_x)
-                call SetUnitY(s__Bashosen___dummies[(this)*(1)+i], new_y)
-                if ModuloInteger(s__Bashosen___Item_count[this], 4) == 0 then
-                    if s__Bashosen___Item_element[this] == 1 then
+                set unit_x=GetUnitX(s__Bashosen__dummies[(this)*(1)+i])
+                set unit_y=GetUnitY(s__Bashosen__dummies[(this)*(1)+i])
+                set new_x=unit_x + Cos(Deg2Rad(GetUnitFacing(s__Bashosen__dummies[(this)*(1)+i]))) * 30
+                set new_y=unit_y + Sin(Deg2Rad(GetUnitFacing(s__Bashosen__dummies[(this)*(1)+i]))) * 30
+                call SetUnitX(s__Bashosen__dummies[(this)*(1)+i], new_x)
+                call SetUnitY(s__Bashosen__dummies[(this)*(1)+i], new_y)
+                if ModuloInteger(s__Bashosen__Item_count[this], 4) == 0 then
+                    if s__Bashosen__Item_element[this] == 1 then
                         call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Other\\NeutralBuildingExplosion\\NeutralBuildingExplosion.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
-                    elseif s__Bashosen___Item_element[this] == 2 then
+                    elseif s__Bashosen__Item_element[this] == 2 then
                         call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
-                    elseif s__Bashosen___Item_element[this] == 3 then
+                    elseif s__Bashosen__Item_element[this] == 3 then
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
-                    elseif s__Bashosen___Item_element[this] == 4 then
+                    elseif s__Bashosen__Item_element[this] == 4 then
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
-                    elseif s__Bashosen___Item_element[this] == 5 then
+                    elseif s__Bashosen__Item_element[this] == 5 then
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                     endif
                 endif
@@ -35763,25 +36055,25 @@ endfunction
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__Bashosen___Item_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__Bashosen___Item_damaged[this]) then
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__Bashosen__Item_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__Bashosen__Item_damaged[this]) then
                         set unit_x_2=GetUnitX(bj_lastCreatedUnit)
                         set unit_y_2=GetUnitY(bj_lastCreatedUnit)
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" ), (( unit_x_2 )*1.0), (( unit_y_2)*1.0))) // INLINED!!
-                        call UnitDamageTarget(s__Bashosen___Item_caster[this], bj_lastCreatedUnit, 3.0 * GetHeroStr(s__Bashosen___Item_caster[this], true) + 3.0 * GetHeroAgi(s__Bashosen___Item_caster[this], true) + 3.0 * GetHeroInt(s__Bashosen___Item_caster[this], true), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                        call GroupAddUnit(s__Bashosen___Item_damaged[this], bj_lastCreatedUnit)
+                        call UnitDamageTarget(s__Bashosen__Item_caster[this], bj_lastCreatedUnit, 3.0 * GetHeroStr(s__Bashosen__Item_caster[this], true) + 3.0 * GetHeroAgi(s__Bashosen__Item_caster[this], true) + 3.0 * GetHeroInt(s__Bashosen__Item_caster[this], true), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                        call GroupAddUnit(s__Bashosen__Item_damaged[this], bj_lastCreatedUnit)
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
             endloop
-            if s__Bashosen___Item_count[this] >= 25 then
-                call s__Bashosen___Item_destroy(this)
+            if s__Bashosen__Item_count[this] >= 25 then
+                call s__Bashosen__Item_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__Bashosen___Item_actions takes nothing returns nothing
-            local integer this= s__Bashosen___Item_allocate()
+        function s__Bashosen__Item_actions takes nothing returns nothing
+            local integer this= s__Bashosen__Item_allocate()
             local real caster_x
             local real caster_y
             local real target_x= GetSpellTargetX()
@@ -35789,10 +36081,10 @@ endfunction
             local real angle
             local real facing
             local integer i= 0
-            set s__Bashosen___Item_damaged[this]=CreateGroup()
-            set s__Bashosen___Item_caster[this]=GetTriggerUnit()
-            set caster_x=GetUnitX(s__Bashosen___Item_caster[this])
-            set caster_y=GetUnitY(s__Bashosen___Item_caster[this])
+            set s__Bashosen__Item_damaged[this]=CreateGroup()
+            set s__Bashosen__Item_caster[this]=GetTriggerUnit()
+            set caster_x=GetUnitX(s__Bashosen__Item_caster[this])
+            set caster_y=GetUnitY(s__Bashosen__Item_caster[this])
             set angle=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
             loop
                 set i=i + 1
@@ -35802,15 +36094,15 @@ endfunction
                 call SetUnitFacing(bj_lastCreatedUnit, facing)
                 call SetUnitX(bj_lastCreatedUnit, caster_x)
                 call SetUnitY(bj_lastCreatedUnit, caster_y)
-                set s__Bashosen___dummies[(this)*(1)+i]= bj_lastCreatedUnit
+                set s__Bashosen__dummies[(this)*(1)+i]= bj_lastCreatedUnit
             endloop
-            set s__Bashosen___Item_count[this]=0
-            set s__Bashosen___Item_element[this]=GetRandomInt(1, 5)
-            call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__Bashosen___Item_periodic , "Bashosen_periodic")
+            set s__Bashosen__Item_count[this]=0
+            set s__Bashosen__Item_element[this]=GetRandomInt(1, 5)
+            call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__Bashosen__Item_periodic , "Bashosen_periodic")
         endfunction
         
-        function s__Bashosen___Item_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2((s__Bashosen___Item_SPELL_ID ) , Filter(( function s__Bashosen___Item_actions))) // INLINED!!
+        function s__Bashosen__Item_onInit takes nothing returns nothing
+            call RegisterSpellEffectEvent2((s__Bashosen__Item_SPELL_ID ) , Filter(( function s__Bashosen__Item_actions))) // INLINED!!
         endfunction
         
     
@@ -36788,8 +37080,8 @@ endfunction
             exitwhen i == 4
             set x=(((GetUnitX(GetTriggerUnit()) )*1.0) + Cos((( Deg2Rad(90 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
             set y=(((GetUnitY(GetTriggerUnit()) )*1.0) + Sin((( Deg2Rad(90 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
-            set s__ScrollOfTeleportScope___anbus[(id)*(1)+i]= (CreateUnit((GetTriggerPlayer() ), ( 'nfgl' ), (( x )*1.0), (( y )*1.0), (( i * 90 + 180)*1.0))) // INLINED!!
-            call SetUnitAnimation(s__ScrollOfTeleportScope___anbus[(id)*(1)+i], "spell")
+            set s__ScrollOfTeleportScope__anbus[(id)*(1)+i]= (CreateUnit((GetTriggerPlayer() ), ( 'nfgl' ), (( x )*1.0), (( y )*1.0), (( i * 90 + 180)*1.0))) // INLINED!!
+            call SetUnitAnimation(s__ScrollOfTeleportScope__anbus[(id)*(1)+i], "spell")
             call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Other\\ToonBoom\\ToonBoom.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
             call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
             set i=i + 1
@@ -36804,10 +37096,10 @@ endfunction
             set i=0
             loop
                 exitwhen i == 4
-                call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Other\\ToonBoom\\ToonBoom.mdl" ), (( GetUnitX(s__ScrollOfTeleportScope___anbus[(id)*(1)+i]) )*1.0), (( GetUnitY(s__ScrollOfTeleportScope___anbus[(id)*(1)+i]))*1.0))) // INLINED!!
-                call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" ), (( GetUnitX(s__ScrollOfTeleportScope___anbus[(id)*(1)+i]) )*1.0), (( GetUnitY(s__ScrollOfTeleportScope___anbus[(id)*(1)+i]))*1.0))) // INLINED!!
-                call RecycleUnit(s__ScrollOfTeleportScope___anbus[(id)*(1)+i])
-                set s__ScrollOfTeleportScope___anbus[(id)*(1)+i]= null
+                call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Other\\ToonBoom\\ToonBoom.mdl" ), (( GetUnitX(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]) )*1.0), (( GetUnitY(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]))*1.0))) // INLINED!!
+                call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl" ), (( GetUnitX(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]) )*1.0), (( GetUnitY(s__ScrollOfTeleportScope__anbus[(id)*(1)+i]))*1.0))) // INLINED!!
+                call RecycleUnit(s__ScrollOfTeleportScope__anbus[(id)*(1)+i])
+                set s__ScrollOfTeleportScope__anbus[(id)*(1)+i]= null
                 set i=i + 1
             endloop
         endif
@@ -37251,85 +37543,85 @@ endfunction
 
 //Implemented from module Alloc:
     
-        function s__AdamantineStaffActive___Spell_allocate takes nothing returns integer
+        function s__AdamantineStaffActive__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__AdamantineStaffActive___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__AdamantineStaffActive___Spell_Alloc__instanceCount=s__AdamantineStaffActive___Spell_Alloc__instanceCount + 1
-                set this=s__AdamantineStaffActive___Spell_Alloc__instanceCount
+            if ( s__AdamantineStaffActive__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__AdamantineStaffActive__Spell_Alloc__instanceCount=s__AdamantineStaffActive__Spell_Alloc__instanceCount + 1
+                set this=s__AdamantineStaffActive__Spell_Alloc__instanceCount
             else
-                set this=s__AdamantineStaffActive___Spell_Alloc__recycle[(0)]
-                set s__AdamantineStaffActive___Spell_Alloc__recycle[(0)]=s__AdamantineStaffActive___Spell_Alloc__recycle[s__AdamantineStaffActive___Spell_Alloc__recycle[(0)]]
+                set this=s__AdamantineStaffActive__Spell_Alloc__recycle[(0)]
+                set s__AdamantineStaffActive__Spell_Alloc__recycle[(0)]=s__AdamantineStaffActive__Spell_Alloc__recycle[s__AdamantineStaffActive__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__AdamantineStaffActive___Spell_deallocate takes integer this returns nothing
-            set s__AdamantineStaffActive___Spell_Alloc__recycle[this]=s__AdamantineStaffActive___Spell_Alloc__recycle[(0)]
-            set s__AdamantineStaffActive___Spell_Alloc__recycle[(0)]=this
+        function s__AdamantineStaffActive__Spell_deallocate takes integer this returns nothing
+            set s__AdamantineStaffActive__Spell_Alloc__recycle[this]=s__AdamantineStaffActive__Spell_Alloc__recycle[(0)]
+            set s__AdamantineStaffActive__Spell_Alloc__recycle[(0)]=this
         endfunction
 
 
-        function s__AdamantineStaffActive___Spell_destroy takes integer this returns nothing
-            set s__AdamantineStaffActive___Spell_caster[this]=null
-            set s__AdamantineStaffActive___Spell_box[this]=null
-            call s__AdamantineStaffActive___Spell_deallocate(this)
+        function s__AdamantineStaffActive__Spell_destroy takes integer this returns nothing
+            set s__AdamantineStaffActive__Spell_caster[this]=null
+            set s__AdamantineStaffActive__Spell_box[this]=null
+            call s__AdamantineStaffActive__Spell_deallocate(this)
         endfunction
 
-        function s__AdamantineStaffActive___Spell_delay2 takes nothing returns nothing
+        function s__AdamantineStaffActive__Spell_delay2 takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            set s__AdamantineStaffActive___Spell_count[this]=s__AdamantineStaffActive___Spell_count[this] + 1
-            if IsUnitPaused(s__AdamantineStaffActive___Spell_target[this]) == false then
-                call PauseUnit(s__AdamantineStaffActive___Spell_target[this], true)
+            set s__AdamantineStaffActive__Spell_count[this]=s__AdamantineStaffActive__Spell_count[this] + 1
+            if IsUnitPaused(s__AdamantineStaffActive__Spell_target[this]) == false then
+                call PauseUnit(s__AdamantineStaffActive__Spell_target[this], true)
             endif
-            if s__AdamantineStaffActive___Spell_count[this] >= 100 then
-                call KillUnit(s__AdamantineStaffActive___Spell_box[this])
-                call ShowUnit(s__AdamantineStaffActive___Spell_box[this], false)
-                call PauseUnit(s__AdamantineStaffActive___Spell_target[this], false)
-                call SetUnitInvulnerable(s__AdamantineStaffActive___Spell_target[this], false)
-                set s__AdamantineStaffActive___Spell_target[this]=null
-                call s__AdamantineStaffActive___Spell_destroy(this)
+            if s__AdamantineStaffActive__Spell_count[this] >= 100 then
+                call KillUnit(s__AdamantineStaffActive__Spell_box[this])
+                call ShowUnit(s__AdamantineStaffActive__Spell_box[this], false)
+                call PauseUnit(s__AdamantineStaffActive__Spell_target[this], false)
+                call SetUnitInvulnerable(s__AdamantineStaffActive__Spell_target[this], false)
+                set s__AdamantineStaffActive__Spell_target[this]=null
+                call s__AdamantineStaffActive__Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
 
-        function s__AdamantineStaffActive___Spell_delay1 takes nothing returns nothing
+        function s__AdamantineStaffActive__Spell_delay1 takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real new_x
             local real new_y
             local integer i
-            set s__AdamantineStaffActive___Spell_box[this]=CreateUnit(GetOwningPlayer(s__AdamantineStaffActive___Spell_caster[this]), 'h03M', s__AdamantineStaffActive___Spell_target_x[this], s__AdamantineStaffActive___Spell_target_y[this], 270)
-            call SetUnitTimeScale(s__AdamantineStaffActive___Spell_box[this], 100000000.00)
-            call SetUnitAnimationByIndex(s__AdamantineStaffActive___Spell_box[this], 2)
-            call SetUnitScale(s__AdamantineStaffActive___Spell_box[this], 1.50, 0, 0)
-            call SetUnitX(s__AdamantineStaffActive___Spell_box[this], s__AdamantineStaffActive___Spell_target_x[this])
-            call SetUnitY(s__AdamantineStaffActive___Spell_box[this], s__AdamantineStaffActive___Spell_target_y[this])
+            set s__AdamantineStaffActive__Spell_box[this]=CreateUnit(GetOwningPlayer(s__AdamantineStaffActive__Spell_caster[this]), 'h03M', s__AdamantineStaffActive__Spell_target_x[this], s__AdamantineStaffActive__Spell_target_y[this], 270)
+            call SetUnitTimeScale(s__AdamantineStaffActive__Spell_box[this], 100000000.00)
+            call SetUnitAnimationByIndex(s__AdamantineStaffActive__Spell_box[this], 2)
+            call SetUnitScale(s__AdamantineStaffActive__Spell_box[this], 1.50, 0, 0)
+            call SetUnitX(s__AdamantineStaffActive__Spell_box[this], s__AdamantineStaffActive__Spell_target_x[this])
+            call SetUnitY(s__AdamantineStaffActive__Spell_box[this], s__AdamantineStaffActive__Spell_target_y[this])
 
-            call TimerStartEx(NewTimerEx(this) , 0.02 , true , function s__AdamantineStaffActive___Spell_delay2 , "AdamantineStaff_delay2")
+            call TimerStartEx(NewTimerEx(this) , 0.02 , true , function s__AdamantineStaffActive__Spell_delay2 , "AdamantineStaff_delay2")
             call ReleaseTimer(GetExpiredTimer())
         endfunction
 
-        function s__AdamantineStaffActive___Spell_actions takes nothing returns nothing
-            local integer this= s__AdamantineStaffActive___Spell_allocate()
+        function s__AdamantineStaffActive__Spell_actions takes nothing returns nothing
+            local integer this= s__AdamantineStaffActive__Spell_allocate()
             local real caster_x
             local real caster_y
-            set s__AdamantineStaffActive___Spell_caster[this]=GetTriggerUnit()
-            set s__AdamantineStaffActive___Spell_target[this]=GetSpellTargetUnit()
-            set s__AdamantineStaffActive___Spell_target_x[this]=GetUnitX(GetSpellTargetUnit())
-            set s__AdamantineStaffActive___Spell_target_y[this]=GetUnitY(GetSpellTargetUnit())
-            set s__AdamantineStaffActive___Spell_count[this]=0
-            set caster_x=GetUnitX(s__AdamantineStaffActive___Spell_caster[this])
-            set caster_y=GetUnitY(s__AdamantineStaffActive___Spell_caster[this])
-            call SetUnitInvulnerable(s__AdamantineStaffActive___Spell_target[this], true)
-            call PauseUnit(s__AdamantineStaffActive___Spell_target[this], true)
-            call TimerStartEx(NewTimerEx(this) , 0.05 , false , function s__AdamantineStaffActive___Spell_delay1 , "AdamantineStaff_delay1")
+            set s__AdamantineStaffActive__Spell_caster[this]=GetTriggerUnit()
+            set s__AdamantineStaffActive__Spell_target[this]=GetSpellTargetUnit()
+            set s__AdamantineStaffActive__Spell_target_x[this]=GetUnitX(GetSpellTargetUnit())
+            set s__AdamantineStaffActive__Spell_target_y[this]=GetUnitY(GetSpellTargetUnit())
+            set s__AdamantineStaffActive__Spell_count[this]=0
+            set caster_x=GetUnitX(s__AdamantineStaffActive__Spell_caster[this])
+            set caster_y=GetUnitY(s__AdamantineStaffActive__Spell_caster[this])
+            call SetUnitInvulnerable(s__AdamantineStaffActive__Spell_target[this], true)
+            call PauseUnit(s__AdamantineStaffActive__Spell_target[this], true)
+            call TimerStartEx(NewTimerEx(this) , 0.05 , false , function s__AdamantineStaffActive__Spell_delay1 , "AdamantineStaff_delay1")
         endfunction
 
-        function s__AdamantineStaffActive___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2((s__AdamantineStaffActive___Spell_SPELL_ID ) , Filter(( function s__AdamantineStaffActive___Spell_actions))) // INLINED!!
+        function s__AdamantineStaffActive__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEvent2((s__AdamantineStaffActive__Spell_SPELL_ID ) , Filter(( function s__AdamantineStaffActive__Spell_actions))) // INLINED!!
         endfunction
 
 
@@ -38852,82 +39144,82 @@ endfunction
 
 //Implemented from module Alloc:
     
-        function s__AnkoNewE___AnkoNewE_allocate takes nothing returns integer
+        function s__AnkoNewE__AnkoNewE_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__AnkoNewE___AnkoNewE_Alloc__recycle[(0)] == 0 ) then
-                set s__AnkoNewE___AnkoNewE_Alloc__instanceCount=s__AnkoNewE___AnkoNewE_Alloc__instanceCount + 1
-                set this=s__AnkoNewE___AnkoNewE_Alloc__instanceCount
+            if ( s__AnkoNewE__AnkoNewE_Alloc__recycle[(0)] == 0 ) then
+                set s__AnkoNewE__AnkoNewE_Alloc__instanceCount=s__AnkoNewE__AnkoNewE_Alloc__instanceCount + 1
+                set this=s__AnkoNewE__AnkoNewE_Alloc__instanceCount
             else
-                set this=s__AnkoNewE___AnkoNewE_Alloc__recycle[(0)]
-                set s__AnkoNewE___AnkoNewE_Alloc__recycle[(0)]=s__AnkoNewE___AnkoNewE_Alloc__recycle[s__AnkoNewE___AnkoNewE_Alloc__recycle[(0)]]
+                set this=s__AnkoNewE__AnkoNewE_Alloc__recycle[(0)]
+                set s__AnkoNewE__AnkoNewE_Alloc__recycle[(0)]=s__AnkoNewE__AnkoNewE_Alloc__recycle[s__AnkoNewE__AnkoNewE_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__AnkoNewE___AnkoNewE_deallocate takes integer this returns nothing
-            set s__AnkoNewE___AnkoNewE_Alloc__recycle[this]=s__AnkoNewE___AnkoNewE_Alloc__recycle[(0)]
-            set s__AnkoNewE___AnkoNewE_Alloc__recycle[(0)]=this
+        function s__AnkoNewE__AnkoNewE_deallocate takes integer this returns nothing
+            set s__AnkoNewE__AnkoNewE_Alloc__recycle[this]=s__AnkoNewE__AnkoNewE_Alloc__recycle[(0)]
+            set s__AnkoNewE__AnkoNewE_Alloc__recycle[(0)]=this
         endfunction
     
-    function s__AnkoNewE___AnkoNewE_periodic takes nothing returns nothing
+    function s__AnkoNewE__AnkoNewE_periodic takes nothing returns nothing
         local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
         local integer i
         local real x
         local real y
-        if s__AnkoNewE___AnkoNewE_count[this] <= 40 then
+        if s__AnkoNewE__AnkoNewE_count[this] <= 40 then
             set i=0
             loop
                 exitwhen i > 8
-                set x=(((GetUnitX(s__AnkoNewE___AnkoNewE[(this)*(1)+i]) )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__AnkoNewE___AnkoNewE[(this)*(1)+i])) )*1.0)) * (( 25.0 + ( 2 * GetUnitAbilityLevel(s__AnkoNewE___AnkoNewE_caster[this], s__AnkoNewE___AnkoNewE_SPELL_ID) ))*1.0)) // INLINED!!
-                set y=(((GetUnitY(s__AnkoNewE___AnkoNewE[(this)*(1)+i]) )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__AnkoNewE___AnkoNewE[(this)*(1)+i])) )*1.0)) * (( 25.0 + ( 2 * GetUnitAbilityLevel(s__AnkoNewE___AnkoNewE_caster[this], s__AnkoNewE___AnkoNewE_SPELL_ID) ))*1.0)) // INLINED!!
-                call SetUnitX(s__AnkoNewE___AnkoNewE[(this)*(1)+i], x)
-                call SetUnitY(s__AnkoNewE___AnkoNewE[(this)*(1)+i], y)
+                set x=(((GetUnitX(s__AnkoNewE__AnkoNewE[(this)*(1)+i]) )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__AnkoNewE__AnkoNewE[(this)*(1)+i])) )*1.0)) * (( 25.0 + ( 2 * GetUnitAbilityLevel(s__AnkoNewE__AnkoNewE_caster[this], s__AnkoNewE__AnkoNewE_SPELL_ID) ))*1.0)) // INLINED!!
+                set y=(((GetUnitY(s__AnkoNewE__AnkoNewE[(this)*(1)+i]) )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__AnkoNewE__AnkoNewE[(this)*(1)+i])) )*1.0)) * (( 25.0 + ( 2 * GetUnitAbilityLevel(s__AnkoNewE__AnkoNewE_caster[this], s__AnkoNewE__AnkoNewE_SPELL_ID) ))*1.0)) // INLINED!!
+                call SetUnitX(s__AnkoNewE__AnkoNewE[(this)*(1)+i], x)
+                call SetUnitY(s__AnkoNewE__AnkoNewE[(this)*(1)+i], y)
                 set i=i + 1
             endloop
         endif
-        set s__AnkoNewE___AnkoNewE_count[this]=s__AnkoNewE___AnkoNewE_count[this] + 1
-        if s__AnkoNewE___AnkoNewE_count[this] > 60 then
+        set s__AnkoNewE__AnkoNewE_count[this]=s__AnkoNewE__AnkoNewE_count[this] + 1
+        if s__AnkoNewE__AnkoNewE_count[this] > 60 then
             set i=0
             loop
                 exitwhen i > 8
-                call KillUnit(s__AnkoNewE___AnkoNewE[(this)*(1)+i])
-                call ShowUnit(s__AnkoNewE___AnkoNewE[(this)*(1)+i], false)
-                set s__AnkoNewE___AnkoNewE[(this)*(1)+i]= null
+                call KillUnit(s__AnkoNewE__AnkoNewE[(this)*(1)+i])
+                call ShowUnit(s__AnkoNewE__AnkoNewE[(this)*(1)+i], false)
+                set s__AnkoNewE__AnkoNewE[(this)*(1)+i]= null
                 set i=i + 1
             endloop
-            set s__AnkoNewE___AnkoNewE_caster[this]=null
-            call s__AnkoNewE___AnkoNewE_deallocate(this)
+            set s__AnkoNewE__AnkoNewE_caster[this]=null
+            call s__AnkoNewE__AnkoNewE_deallocate(this)
             call ReleaseTimer(GetExpiredTimer())
         endif
     endfunction
     
-    function s__AnkoNewE___AnkoNewE_actions takes nothing returns nothing
-        local integer this= s__AnkoNewE___AnkoNewE_allocate()
+    function s__AnkoNewE__AnkoNewE_actions takes nothing returns nothing
+        local integer this= s__AnkoNewE__AnkoNewE_allocate()
         local integer i
         local real x
         local real y
         local real angle
-        set s__AnkoNewE___AnkoNewE_caster[this]=GetTriggerUnit()
-        set s__AnkoNewE___AnkoNewE_count[this]=0
-        set angle=Atan3(GetUnitX(s__AnkoNewE___AnkoNewE_caster[this]) , GetUnitY(s__AnkoNewE___AnkoNewE_caster[this]) , GetSpellTargetX() , GetSpellTargetY())
+        set s__AnkoNewE__AnkoNewE_caster[this]=GetTriggerUnit()
+        set s__AnkoNewE__AnkoNewE_count[this]=0
+        set angle=Atan3(GetUnitX(s__AnkoNewE__AnkoNewE_caster[this]) , GetUnitY(s__AnkoNewE__AnkoNewE_caster[this]) , GetSpellTargetX() , GetSpellTargetY())
         set i=0
         loop
             exitwhen i > 8
-            set s__AnkoNewE___AnkoNewE[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__AnkoNewE___AnkoNewE_caster[this]), 'e05B', GetUnitX(s__AnkoNewE___AnkoNewE_caster[this]), GetUnitY(s__AnkoNewE___AnkoNewE_caster[this]), Rad2Deg(angle) - 30 + 6.66 * ( i + 1 ))
-            call SetUnitScale(s__AnkoNewE___AnkoNewE[(this)*(1)+i], 0.5, 0.5, 0.5)
-	    call SetUnitTimeScale(s__AnkoNewE___AnkoNewE[(this)*(1)+i], 1.25)
+            set s__AnkoNewE__AnkoNewE[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__AnkoNewE__AnkoNewE_caster[this]), 'e05B', GetUnitX(s__AnkoNewE__AnkoNewE_caster[this]), GetUnitY(s__AnkoNewE__AnkoNewE_caster[this]), Rad2Deg(angle) - 30 + 6.66 * ( i + 1 ))
+            call SetUnitScale(s__AnkoNewE__AnkoNewE[(this)*(1)+i], 0.5, 0.5, 0.5)
+	    call SetUnitTimeScale(s__AnkoNewE__AnkoNewE[(this)*(1)+i], 1.25)
             set i=i + 1
         endloop
-        call SetUnitAnimation(s__AnkoNewE___AnkoNewE_caster[this], "attack")
-        call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__AnkoNewE___AnkoNewE_periodic , "AnkoNewE_periodic")
+        call SetUnitAnimation(s__AnkoNewE__AnkoNewE_caster[this], "attack")
+        call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__AnkoNewE__AnkoNewE_periodic , "AnkoNewE_periodic")
     endfunction
     
-    function s__AnkoNewE___AnkoNewE_onInit takes nothing returns nothing
-        call RegisterSpellEffectEventForId(83 , s__AnkoNewE___AnkoNewE_SPELL_ID , function s__AnkoNewE___AnkoNewE_actions)
+    function s__AnkoNewE__AnkoNewE_onInit takes nothing returns nothing
+        call RegisterSpellEffectEventForId(83 , s__AnkoNewE__AnkoNewE_SPELL_ID , function s__AnkoNewE__AnkoNewE_actions)
     endfunction
     
 
@@ -39982,86 +40274,86 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__Panda___Spell_allocate takes nothing returns integer
+        function s__Panda__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__Panda___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__Panda___Spell_Alloc__instanceCount=s__Panda___Spell_Alloc__instanceCount + 1
-                set this=s__Panda___Spell_Alloc__instanceCount
+            if ( s__Panda__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__Panda__Spell_Alloc__instanceCount=s__Panda__Spell_Alloc__instanceCount + 1
+                set this=s__Panda__Spell_Alloc__instanceCount
             else
-                set this=s__Panda___Spell_Alloc__recycle[(0)]
-                set s__Panda___Spell_Alloc__recycle[(0)]=s__Panda___Spell_Alloc__recycle[s__Panda___Spell_Alloc__recycle[(0)]]
+                set this=s__Panda__Spell_Alloc__recycle[(0)]
+                set s__Panda__Spell_Alloc__recycle[(0)]=s__Panda__Spell_Alloc__recycle[s__Panda__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__Panda___Spell_deallocate takes integer this returns nothing
-            set s__Panda___Spell_Alloc__recycle[this]=s__Panda___Spell_Alloc__recycle[(0)]
-            set s__Panda___Spell_Alloc__recycle[(0)]=this
+        function s__Panda__Spell_deallocate takes integer this returns nothing
+            set s__Panda__Spell_Alloc__recycle[this]=s__Panda__Spell_Alloc__recycle[(0)]
+            set s__Panda__Spell_Alloc__recycle[(0)]=this
         endfunction
     
         
-        function s__Panda___Spell_dealDamage takes nothing returns boolean
-         if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__Panda___Spell_caster[s__Panda___Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 then
-                    call UnitDamageTarget(s__Panda___Spell_caster[s__Panda___Spell_instance], GetFilterUnit(), 3 * GetHeroInt(s__Panda___Spell_caster[s__Panda___Spell_instance], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+        function s__Panda__Spell_dealDamage takes nothing returns boolean
+         if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__Panda__Spell_caster[s__Panda__Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 then
+                    call UnitDamageTarget(s__Panda__Spell_caster[s__Panda__Spell_instance], GetFilterUnit(), 3 * GetHeroInt(s__Panda__Spell_caster[s__Panda__Spell_instance], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
             endif
             return false
         endfunction
         
-        function s__Panda___Spell_destroy takes integer this returns nothing
-            call ShowUnit(s__Panda___Spell_panda[this], false)
-            call KillUnit(s__Panda___Spell_panda[this])
-            set s__Panda___Spell_panda[this]=null
-            set s__Panda___Spell_caster[this]=null
-            call s__Panda___Spell_deallocate(this)
+        function s__Panda__Spell_destroy takes integer this returns nothing
+            call ShowUnit(s__Panda__Spell_panda[this], false)
+            call KillUnit(s__Panda__Spell_panda[this])
+            set s__Panda__Spell_panda[this]=null
+            set s__Panda__Spell_caster[this]=null
+            call s__Panda__Spell_deallocate(this)
         endfunction
         
-        function s__Panda___Spell_damage takes nothing returns nothing
+        function s__Panda__Spell_damage takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
 
             set bj_lastCreatedGroup=CreateGroup()
-            set s__Panda___Spell_instance=this
-            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__Panda___Spell_target_x[this], s__Panda___Spell_target_y[this], 400.0, Filter(function s__Panda___Spell_dealDamage))
+            set s__Panda__Spell_instance=this
+            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__Panda__Spell_target_x[this], s__Panda__Spell_target_y[this], 400.0, Filter(function s__Panda__Spell_dealDamage))
             call DestroyGroup(bj_lastCreatedGroup)
-            call DestroyEffect(AddSpecialEffect(("war3mapImported\\Ground Crack Big.mdx" ), (( s__Panda___Spell_target_x[this] )*1.0), (( s__Panda___Spell_target_y[this])*1.0))) // INLINED!!
+            call DestroyEffect(AddSpecialEffect(("war3mapImported\\Ground Crack Big.mdx" ), (( s__Panda__Spell_target_x[this] )*1.0), (( s__Panda__Spell_target_y[this])*1.0))) // INLINED!!
 
-            call SlowArea(s__Panda___Spell_caster[this] , s__Panda___Spell_target_x[this] , s__Panda___Spell_target_y[this] , 400.0)
-            call s__Panda___Spell_destroy(this)
+            call SlowArea(s__Panda__Spell_caster[this] , s__Panda__Spell_target_x[this] , s__Panda__Spell_target_y[this] , 400.0)
+            call s__Panda__Spell_destroy(this)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__Panda___Spell_create_panda takes nothing returns nothing
+        function s__Panda__Spell_create_panda takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            set s__Panda___Spell_panda[this]=CreateUnit(GetOwningPlayer(s__Panda___Spell_caster[this]), 'n03D', s__Panda___Spell_target_x[this], s__Panda___Spell_target_y[this], s__Panda___Spell_angle[this])
-            call SetUnitX(s__Panda___Spell_panda[this], s__Panda___Spell_target_x[this])
-            call SetUnitY(s__Panda___Spell_panda[this], s__Panda___Spell_target_y[this])
-            call UnitAddAbility(s__Panda___Spell_panda[this], 'Arav')
-            call UnitRemoveAbility(s__Panda___Spell_panda[this], 'Arav')
-            call SetUnitFlyHeight(s__Panda___Spell_panda[this], 700, 0)
-            call SetUnitFlyHeight(s__Panda___Spell_panda[this], 0, 1400)
-            call TimerStart(NewTimerEx(this), 0.5, false, function s__Panda___Spell_damage)
+            set s__Panda__Spell_panda[this]=CreateUnit(GetOwningPlayer(s__Panda__Spell_caster[this]), 'n03D', s__Panda__Spell_target_x[this], s__Panda__Spell_target_y[this], s__Panda__Spell_angle[this])
+            call SetUnitX(s__Panda__Spell_panda[this], s__Panda__Spell_target_x[this])
+            call SetUnitY(s__Panda__Spell_panda[this], s__Panda__Spell_target_y[this])
+            call UnitAddAbility(s__Panda__Spell_panda[this], 'Arav')
+            call UnitRemoveAbility(s__Panda__Spell_panda[this], 'Arav')
+            call SetUnitFlyHeight(s__Panda__Spell_panda[this], 700, 0)
+            call SetUnitFlyHeight(s__Panda__Spell_panda[this], 0, 1400)
+            call TimerStart(NewTimerEx(this), 0.5, false, function s__Panda__Spell_damage)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__Panda___Spell_actions takes nothing returns nothing
-            local integer this= s__Panda___Spell_allocate()
-            set s__Panda___Spell_caster[this]=GetTriggerUnit()
-            set s__Panda___Spell_target_x[this]=GetSpellTargetX()
-            set s__Panda___Spell_target_y[this]=GetSpellTargetY()
-            set s__Panda___Spell_angle[this]=GetUnitFacing(s__Panda___Spell_caster[this])
-            call SetUnitAnimation(s__Panda___Spell_caster[this], "spell")
+        function s__Panda__Spell_actions takes nothing returns nothing
+            local integer this= s__Panda__Spell_allocate()
+            set s__Panda__Spell_caster[this]=GetTriggerUnit()
+            set s__Panda__Spell_target_x[this]=GetSpellTargetX()
+            set s__Panda__Spell_target_y[this]=GetSpellTargetY()
+            set s__Panda__Spell_angle[this]=GetUnitFacing(s__Panda__Spell_caster[this])
+            call SetUnitAnimation(s__Panda__Spell_caster[this], "spell")
             set bj_lastCreatedUnit=CreateUnit(GetTriggerPlayer(), 'h01V', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 270)
             call SetUnitAnimation(bj_lastCreatedUnit, "birth")
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 3.0)
-            call TimerStart(NewTimerEx(this), 0.5, true, function s__Panda___Spell_create_panda)
+            call TimerStart(NewTimerEx(this), 0.5, true, function s__Panda__Spell_create_panda)
         endfunction
         
         
-        function s__Panda___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(95 , s__Panda___Spell_SPELL_ID , function s__Panda___Spell_actions)
+        function s__Panda__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(95 , s__Panda__Spell_SPELL_ID , function s__Panda__Spell_actions)
         endfunction
         
     
@@ -40559,9 +40851,9 @@ endfunction
         set i=0
         loop
             exitwhen i > 18
-            call KillUnit(s__AsumaFireR___firewall[(this)*(1)+i])
-            call ShowUnit(s__AsumaFireR___firewall[(this)*(1)+i], false)
-            set s__AsumaFireR___firewall[(this)*(1)+i]= null
+            call KillUnit(s__AsumaFireR__firewall[(this)*(1)+i])
+            call ShowUnit(s__AsumaFireR__firewall[(this)*(1)+i], false)
+            set s__AsumaFireR__firewall[(this)*(1)+i]= null
             set i=i + 1
         endloop
         call DestroyGroup(s__AsumaFireR_damaged[this])
@@ -40590,7 +40882,7 @@ endfunction
         loop
             exitwhen i > 18
             set bj_lastCreatedGroup=CreateGroup()
-            call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__AsumaFireR___firewall[(this)*(1)+i]), GetUnitY(s__AsumaFireR___firewall[(this)*(1)+i]), 220.0, null)
+            call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__AsumaFireR__firewall[(this)*(1)+i]), GetUnitY(s__AsumaFireR__firewall[(this)*(1)+i]), 220.0, null)
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
@@ -40643,14 +40935,14 @@ endfunction
            set i=0
            loop
            	exitwhen i > 18
-           	set s__AsumaFireR___firewall[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__AsumaFireR_caster[this]), 'n006', s__AsumaFireR_target_x[this], s__AsumaFireR_target_y[this], Rad2Deg(angle1) + 20 * ( i + 1 ))
+           	set s__AsumaFireR__firewall[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__AsumaFireR_caster[this]), 'n006', s__AsumaFireR_target_x[this], s__AsumaFireR_target_y[this], Rad2Deg(angle1) + 20 * ( i + 1 ))
 		if GetUnitAbilityLevel(s__AsumaFireR_caster[this], 'A0GH') > 0 then
-			call SlowAura(s__AsumaFireR___firewall[(this)*(1)+i] , 0.6 , 200)
+			call SlowAura(s__AsumaFireR__firewall[(this)*(1)+i] , 0.6 , 200)
 		endif
-	   	set x1=(((s__AsumaFireR_target_x[this] )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__AsumaFireR___firewall[(this)*(1)+i])) )*1.0)) * (( 300.0)*1.0)) // INLINED!!
-           	set y1=(((s__AsumaFireR_target_y[this] )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__AsumaFireR___firewall[(this)*(1)+i])) )*1.0)) * (( 300.0)*1.0)) // INLINED!!
-           	call SetUnitX(s__AsumaFireR___firewall[(this)*(1)+i], x1)
-           	call SetUnitY(s__AsumaFireR___firewall[(this)*(1)+i], y1)
+	   	set x1=(((s__AsumaFireR_target_x[this] )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__AsumaFireR__firewall[(this)*(1)+i])) )*1.0)) * (( 300.0)*1.0)) // INLINED!!
+           	set y1=(((s__AsumaFireR_target_y[this] )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__AsumaFireR__firewall[(this)*(1)+i])) )*1.0)) * (( 300.0)*1.0)) // INLINED!!
+           	call SetUnitX(s__AsumaFireR__firewall[(this)*(1)+i], x1)
+           	call SetUnitY(s__AsumaFireR__firewall[(this)*(1)+i], y1)
            	set i=i + 1
            endloop
            call TimerStartEx(NewTimerEx(this) , 0.5 , false , function s__AsumaFireR_delay , "AsumaFireR_delay")
@@ -41462,64 +41754,64 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__BorutoOyakoRasengan___Spell_allocate takes nothing returns integer
+        function s__BorutoOyakoRasengan__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__BorutoOyakoRasengan___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__BorutoOyakoRasengan___Spell_Alloc__instanceCount=s__BorutoOyakoRasengan___Spell_Alloc__instanceCount + 1
-                set this=s__BorutoOyakoRasengan___Spell_Alloc__instanceCount
+            if ( s__BorutoOyakoRasengan__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__BorutoOyakoRasengan__Spell_Alloc__instanceCount=s__BorutoOyakoRasengan__Spell_Alloc__instanceCount + 1
+                set this=s__BorutoOyakoRasengan__Spell_Alloc__instanceCount
             else
-                set this=s__BorutoOyakoRasengan___Spell_Alloc__recycle[(0)]
-                set s__BorutoOyakoRasengan___Spell_Alloc__recycle[(0)]=s__BorutoOyakoRasengan___Spell_Alloc__recycle[s__BorutoOyakoRasengan___Spell_Alloc__recycle[(0)]]
+                set this=s__BorutoOyakoRasengan__Spell_Alloc__recycle[(0)]
+                set s__BorutoOyakoRasengan__Spell_Alloc__recycle[(0)]=s__BorutoOyakoRasengan__Spell_Alloc__recycle[s__BorutoOyakoRasengan__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__BorutoOyakoRasengan___Spell_deallocate takes integer this returns nothing
-            set s__BorutoOyakoRasengan___Spell_Alloc__recycle[this]=s__BorutoOyakoRasengan___Spell_Alloc__recycle[(0)]
-            set s__BorutoOyakoRasengan___Spell_Alloc__recycle[(0)]=this
+        function s__BorutoOyakoRasengan__Spell_deallocate takes integer this returns nothing
+            set s__BorutoOyakoRasengan__Spell_Alloc__recycle[this]=s__BorutoOyakoRasengan__Spell_Alloc__recycle[(0)]
+            set s__BorutoOyakoRasengan__Spell_Alloc__recycle[(0)]=this
         endfunction
     
 
-        function s__BorutoOyakoRasengan___Spell_dealDamage takes nothing returns boolean
-                if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__BorutoOyakoRasengan___Spell_caster[s__BorutoOyakoRasengan___Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 then
-                    call UnitDamageTarget(s__BorutoOyakoRasengan___Spell_caster[s__BorutoOyakoRasengan___Spell_instance], GetFilterUnit(), ( 10.0 * GetHeroAgi(s__BorutoOyakoRasengan___Spell_caster[s__BorutoOyakoRasengan___Spell_instance], true) ) / 1.0, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+        function s__BorutoOyakoRasengan__Spell_dealDamage takes nothing returns boolean
+                if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__BorutoOyakoRasengan__Spell_caster[s__BorutoOyakoRasengan__Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 then
+                    call UnitDamageTarget(s__BorutoOyakoRasengan__Spell_caster[s__BorutoOyakoRasengan__Spell_instance], GetFilterUnit(), ( 10.0 * GetHeroAgi(s__BorutoOyakoRasengan__Spell_caster[s__BorutoOyakoRasengan__Spell_instance], true) ) / 1.0, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
                 endif
 		    return false
   endfunction
         
-        function s__BorutoOyakoRasengan___Spell_destroy takes integer this returns nothing
-	    set bj_lastCreatedEffect=AddSpecialEffect("RasenganExplosion.mdl", GetUnitX(s__BorutoOyakoRasengan___Spell_caster[this]), GetUnitY(s__BorutoOyakoRasengan___Spell_caster[this]))
+        function s__BorutoOyakoRasengan__Spell_destroy takes integer this returns nothing
+	    set bj_lastCreatedEffect=AddSpecialEffect("RasenganExplosion.mdl", GetUnitX(s__BorutoOyakoRasengan__Spell_caster[this]), GetUnitY(s__BorutoOyakoRasengan__Spell_caster[this]))
       	    call BlzSetSpecialEffectTimeScale(bj_lastCreatedEffect, GetRandomReal(1.8, 1.9))
             call BlzSetSpecialEffectScale(bj_lastCreatedEffect, GetRandomReal(0.6, 0.7))
             call DestroyEffect(bj_lastCreatedEffect)
-            call KillUnit(s__BorutoOyakoRasengan___Spell_stunUnit[this])
-            set s__BorutoOyakoRasengan___Spell_stunUnit[this]=null
-            call DestroyEffect(s__BorutoOyakoRasengan___Spell_rasengan[this])
-            call SetUnitTimeScale(s__BorutoOyakoRasengan___Spell_caster[this], 1.0)
-            call PauseUnit(s__BorutoOyakoRasengan___Spell_caster[this], false)
-            call SetUnitAnimation(s__BorutoOyakoRasengan___Spell_caster[this], "stand")
-            call SetUnitFlyHeight(s__BorutoOyakoRasengan___Spell_caster[this], 0, 0)
-            set s__BorutoOyakoRasengan___Spell_caster[this]=null
-            set s__BorutoOyakoRasengan___Spell_rasengan[this]=null
-            call s__BorutoOyakoRasengan___Spell_deallocate(this)
+            call KillUnit(s__BorutoOyakoRasengan__Spell_stunUnit[this])
+            set s__BorutoOyakoRasengan__Spell_stunUnit[this]=null
+            call DestroyEffect(s__BorutoOyakoRasengan__Spell_rasengan[this])
+            call SetUnitTimeScale(s__BorutoOyakoRasengan__Spell_caster[this], 1.0)
+            call PauseUnit(s__BorutoOyakoRasengan__Spell_caster[this], false)
+            call SetUnitAnimation(s__BorutoOyakoRasengan__Spell_caster[this], "stand")
+            call SetUnitFlyHeight(s__BorutoOyakoRasengan__Spell_caster[this], 0, 0)
+            set s__BorutoOyakoRasengan__Spell_caster[this]=null
+            set s__BorutoOyakoRasengan__Spell_rasengan[this]=null
+            call s__BorutoOyakoRasengan__Spell_deallocate(this)
         endfunction
         
-        function s__BorutoOyakoRasengan___Spell_damagePeriodic takes nothing returns nothing
+        function s__BorutoOyakoRasengan__Spell_damagePeriodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local integer i
             local integer j
             local real new_x
             local real new_y
             local real scale
-            set s__BorutoOyakoRasengan___Spell_count[this]=s__BorutoOyakoRasengan___Spell_count[this] + 1
-            if s__BorutoOyakoRasengan___Spell_count[this] == 30 then
-                call SetUnitAnimation(s__BorutoOyakoRasengan___Spell_caster[this], "spell four")
+            set s__BorutoOyakoRasengan__Spell_count[this]=s__BorutoOyakoRasengan__Spell_count[this] + 1
+            if s__BorutoOyakoRasengan__Spell_count[this] == 30 then
+                call SetUnitAnimation(s__BorutoOyakoRasengan__Spell_caster[this], "spell four")
             endif
-            if ModuloInteger(s__BorutoOyakoRasengan___Spell_count[this], 10) == 0 then
+            if ModuloInteger(s__BorutoOyakoRasengan__Spell_count[this], 10) == 0 then
                 set i=0
                 loop
                     set i=i + 1
@@ -41527,8 +41819,8 @@ endfunction
                     loop
                         set j=j + 1
                         exitwhen j > 10
-                        set new_x=(((s__BorutoOyakoRasengan___Spell_target_x[this] )*1.0) + Cos((( Deg2Rad(36 * j) )*1.0)) * (( 50 + 100 * i)*1.0)) // INLINED!!
-                        set new_y=(((s__BorutoOyakoRasengan___Spell_target_y[this] )*1.0) + Sin((( Deg2Rad(36 * j) )*1.0)) * (( 50 + 100 * i)*1.0)) // INLINED!!
+                        set new_x=(((s__BorutoOyakoRasengan__Spell_target_x[this] )*1.0) + Cos((( Deg2Rad(36 * j) )*1.0)) * (( 50 + 100 * i)*1.0)) // INLINED!!
+                        set new_y=(((s__BorutoOyakoRasengan__Spell_target_y[this] )*1.0) + Sin((( Deg2Rad(36 * j) )*1.0)) * (( 50 + 100 * i)*1.0)) // INLINED!!
                         //call AddSpecialEffectEx("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl", new_x, new_y)
                         call DestroyEffect(AddSpecialEffect(("war3mapImported\\Ground Crack.mdx" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                         if i == 1 then
@@ -41539,99 +41831,99 @@ endfunction
                 endloop
                 
             endif
-            if ModuloInteger(s__BorutoOyakoRasengan___Spell_count[this], 5) == 0 then
-                call IssueImmediateOrder(s__BorutoOyakoRasengan___Spell_stunUnit[this], "stomp")
-                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__BorutoOyakoRasengan___Spell_caster[this]), 'e015', s__BorutoOyakoRasengan___Spell_target_x[this], s__BorutoOyakoRasengan___Spell_target_y[this], GetRandomReal(0, 360))
-                call SetUnitX(bj_lastCreatedUnit, s__BorutoOyakoRasengan___Spell_target_x[this])
-                call SetUnitY(bj_lastCreatedUnit, s__BorutoOyakoRasengan___Spell_target_y[this])
+            if ModuloInteger(s__BorutoOyakoRasengan__Spell_count[this], 5) == 0 then
+                call IssueImmediateOrder(s__BorutoOyakoRasengan__Spell_stunUnit[this], "stomp")
+                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__BorutoOyakoRasengan__Spell_caster[this]), 'e015', s__BorutoOyakoRasengan__Spell_target_x[this], s__BorutoOyakoRasengan__Spell_target_y[this], GetRandomReal(0, 360))
+                call SetUnitX(bj_lastCreatedUnit, s__BorutoOyakoRasengan__Spell_target_x[this])
+                call SetUnitY(bj_lastCreatedUnit, s__BorutoOyakoRasengan__Spell_target_y[this])
                 call SetUnitTimeScale(bj_lastCreatedUnit, 1.5)
                 call SetUnitVertexColor((bj_lastCreatedUnit ), ( 100 ), ( 100 ), ( 200 ), ( 150)) // INLINED!!
                 call SetUnitScale(bj_lastCreatedUnit, 1.5, 1.5, 1.5)
                 call KillUnit(bj_lastCreatedUnit)
             endif
             set bj_lastCreatedGroup=CreateGroup()
-			set s__BorutoOyakoRasengan___Spell_instance=this
-            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__BorutoOyakoRasengan___Spell_target_x[this], s__BorutoOyakoRasengan___Spell_target_y[this], 400.0, Filter(function s__BorutoOyakoRasengan___Spell_dealDamage))
+			set s__BorutoOyakoRasengan__Spell_instance=this
+            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__BorutoOyakoRasengan__Spell_target_x[this], s__BorutoOyakoRasengan__Spell_target_y[this], 400.0, Filter(function s__BorutoOyakoRasengan__Spell_dealDamage))
             call DestroyGroup(bj_lastCreatedGroup)
-            if s__BorutoOyakoRasengan___Spell_count[this] > 0 then
+            if s__BorutoOyakoRasengan__Spell_count[this] > 0 then
                 set i=0
                 loop
                     set i=i + 1
                     exitwhen i > 10
-                    set new_x=s__BorutoOyakoRasengan___Spell_target_x[this] + Cos(Deg2Rad(36 * i)) * 150
-                    set new_y=s__BorutoOyakoRasengan___Spell_target_y[this] + Sin(Deg2Rad(36 * i)) * 150
+                    set new_x=s__BorutoOyakoRasengan__Spell_target_x[this] + Cos(Deg2Rad(36 * i)) * 150
+                    set new_y=s__BorutoOyakoRasengan__Spell_target_y[this] + Sin(Deg2Rad(36 * i)) * 150
                     //call AddSpecialEffectEx("Energy Release.mdl", new_x, new_y)
                     call DestroyEffect(AddSpecialEffect(("war3mapImported\\slam.mdx" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                     call DestroyEffect(AddSpecialEffect(("Effects\\s_Earth_Smash.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                 endloop
-                call s__BorutoOyakoRasengan___Spell_destroy(this)
+                call s__BorutoOyakoRasengan__Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction 
         
-        function s__BorutoOyakoRasengan___Spell_periodic takes nothing returns nothing
+        function s__BorutoOyakoRasengan__Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real caster_x= GetUnitX(s__BorutoOyakoRasengan___Spell_caster[this])
-            local real caster_y= GetUnitY(s__BorutoOyakoRasengan___Spell_caster[this])
-            local real angle= Atan2(( s__BorutoOyakoRasengan___Spell_target_y[this] - GetUnitY(s__BorutoOyakoRasengan___Spell_caster[this]) ), ( s__BorutoOyakoRasengan___Spell_target_x[this] - GetUnitX(s__BorutoOyakoRasengan___Spell_caster[this]) ))
+            local real caster_x= GetUnitX(s__BorutoOyakoRasengan__Spell_caster[this])
+            local real caster_y= GetUnitY(s__BorutoOyakoRasengan__Spell_caster[this])
+            local real angle= Atan2(( s__BorutoOyakoRasengan__Spell_target_y[this] - GetUnitY(s__BorutoOyakoRasengan__Spell_caster[this]) ), ( s__BorutoOyakoRasengan__Spell_target_x[this] - GetUnitX(s__BorutoOyakoRasengan__Spell_caster[this]) ))
             local real new_x= caster_x + Cos(angle) * 30
             local real new_y= caster_y + Sin(angle) * 30
-            local real distance_x= s__BorutoOyakoRasengan___Spell_target_x[this] - new_x
-            local real distance_y= s__BorutoOyakoRasengan___Spell_target_y[this] - new_y
+            local real distance_x= s__BorutoOyakoRasengan__Spell_target_x[this] - new_x
+            local real distance_y= s__BorutoOyakoRasengan__Spell_target_y[this] - new_y
             local real distance= SquareRoot(distance_x * distance_x + distance_y * distance_y)
             local integer i= 0
-            call SetUnitX(s__BorutoOyakoRasengan___Spell_caster[this], new_x)
-            call SetUnitY(s__BorutoOyakoRasengan___Spell_caster[this], new_y)
-            call SetUnitFacing(s__BorutoOyakoRasengan___Spell_caster[this], Rad2Deg(angle))
-            call UnitAddAbility(s__BorutoOyakoRasengan___Spell_caster[this], 'Arav')
-            call SetUnitFlyHeight(s__BorutoOyakoRasengan___Spell_caster[this], Parabola(0 , 0 , 300 , s__BorutoOyakoRasengan___Spell_distance[this] , s__BorutoOyakoRasengan___Spell_distance[this] - distance), 0)
-            call UnitRemoveAbility(s__BorutoOyakoRasengan___Spell_caster[this], 'Arav')
-            set s__BorutoOyakoRasengan___Spell_count2[this]=s__BorutoOyakoRasengan___Spell_count2[this] + 1
-            if distance <= 100 or s__BorutoOyakoRasengan___Spell_count2[this] >= 40 then
-                set s__BorutoOyakoRasengan___Spell_count[this]=0
-                set s__BorutoOyakoRasengan___Spell_stunUnit[this]=CreateUnit(GetOwningPlayer(s__BorutoOyakoRasengan___Spell_caster[this]), 'h02R', GetUnitX(s__BorutoOyakoRasengan___Spell_caster[this]), GetUnitY(s__BorutoOyakoRasengan___Spell_caster[this]), 270.0)
-                call SetUnitAnimation(s__BorutoOyakoRasengan___Spell_caster[this], "spell throw")
-                call SetUnitFlyHeight(s__BorutoOyakoRasengan___Spell_caster[this], 0, GetUnitFlyHeight(s__BorutoOyakoRasengan___Spell_caster[this]) * 2.0)
-                call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__BorutoOyakoRasengan___Spell_damagePeriodic , "KonohamaruOodamaRasengan_damagePeriodic")
+            call SetUnitX(s__BorutoOyakoRasengan__Spell_caster[this], new_x)
+            call SetUnitY(s__BorutoOyakoRasengan__Spell_caster[this], new_y)
+            call SetUnitFacing(s__BorutoOyakoRasengan__Spell_caster[this], Rad2Deg(angle))
+            call UnitAddAbility(s__BorutoOyakoRasengan__Spell_caster[this], 'Arav')
+            call SetUnitFlyHeight(s__BorutoOyakoRasengan__Spell_caster[this], Parabola(0 , 0 , 300 , s__BorutoOyakoRasengan__Spell_distance[this] , s__BorutoOyakoRasengan__Spell_distance[this] - distance), 0)
+            call UnitRemoveAbility(s__BorutoOyakoRasengan__Spell_caster[this], 'Arav')
+            set s__BorutoOyakoRasengan__Spell_count2[this]=s__BorutoOyakoRasengan__Spell_count2[this] + 1
+            if distance <= 100 or s__BorutoOyakoRasengan__Spell_count2[this] >= 40 then
+                set s__BorutoOyakoRasengan__Spell_count[this]=0
+                set s__BorutoOyakoRasengan__Spell_stunUnit[this]=CreateUnit(GetOwningPlayer(s__BorutoOyakoRasengan__Spell_caster[this]), 'h02R', GetUnitX(s__BorutoOyakoRasengan__Spell_caster[this]), GetUnitY(s__BorutoOyakoRasengan__Spell_caster[this]), 270.0)
+                call SetUnitAnimation(s__BorutoOyakoRasengan__Spell_caster[this], "spell throw")
+                call SetUnitFlyHeight(s__BorutoOyakoRasengan__Spell_caster[this], 0, GetUnitFlyHeight(s__BorutoOyakoRasengan__Spell_caster[this]) * 2.0)
+                call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__BorutoOyakoRasengan__Spell_damagePeriodic , "KonohamaruOodamaRasengan_damagePeriodic")
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
 
 
-   function s__BorutoOyakoRasengan___Spell_delay takes nothing returns nothing
+   function s__BorutoOyakoRasengan__Spell_delay takes nothing returns nothing
          local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-		call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__BorutoOyakoRasengan___Spell_periodic , "KonohamaruOodamaRasegan_periodic")
+		call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__BorutoOyakoRasengan__Spell_periodic , "KonohamaruOodamaRasegan_periodic")
                 call ReleaseTimer(GetExpiredTimer())
    endfunction
 
 
-        function s__BorutoOyakoRasengan___Spell_actions takes nothing returns nothing
-            local integer this= s__BorutoOyakoRasengan___Spell_allocate()
+        function s__BorutoOyakoRasengan__Spell_actions takes nothing returns nothing
+            local integer this= s__BorutoOyakoRasengan__Spell_allocate()
             local real distance_x
             local real distance_y
-            set s__BorutoOyakoRasengan___Spell_caster[this]=GetTriggerUnit()
-            set s__BorutoOyakoRasengan___Spell_target_x[this]=GetSpellTargetX()
-            set s__BorutoOyakoRasengan___Spell_target_y[this]=GetSpellTargetY()
-            set s__BorutoOyakoRasengan___Spell_count2[this]=0
+            set s__BorutoOyakoRasengan__Spell_caster[this]=GetTriggerUnit()
+            set s__BorutoOyakoRasengan__Spell_target_x[this]=GetSpellTargetX()
+            set s__BorutoOyakoRasengan__Spell_target_y[this]=GetSpellTargetY()
+            set s__BorutoOyakoRasengan__Spell_count2[this]=0
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
                 call PlaySoundOnUnitBJ(gg_snd_Boruto_T, 100, GetTriggerUnit())
             endif
-            call PauseUnit(s__BorutoOyakoRasengan___Spell_caster[this], true)
-            call UnitAddAbility(s__BorutoOyakoRasengan___Spell_caster[this], 'Arav')
-            call UnitRemoveAbility(s__BorutoOyakoRasengan___Spell_caster[this], 'Arav')
-            call SetUnitAnimation(s__BorutoOyakoRasengan___Spell_caster[this], "Spell One")
+            call PauseUnit(s__BorutoOyakoRasengan__Spell_caster[this], true)
+            call UnitAddAbility(s__BorutoOyakoRasengan__Spell_caster[this], 'Arav')
+            call UnitRemoveAbility(s__BorutoOyakoRasengan__Spell_caster[this], 'Arav')
+            call SetUnitAnimation(s__BorutoOyakoRasengan__Spell_caster[this], "Spell One")
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff0000Boruto: So, this is Dad's Power. I dont feel like losing today!|r")
             endif
-            set s__BorutoOyakoRasengan___Spell_rasengan[this]=AddSpecialEffectTarget("Effects\\s_Odama Rasengan.mdx", s__BorutoOyakoRasengan___Spell_caster[this], "right hand")
-            set distance_x=s__BorutoOyakoRasengan___Spell_target_x[this] - GetUnitX(s__BorutoOyakoRasengan___Spell_caster[this])
-            set distance_y=s__BorutoOyakoRasengan___Spell_target_y[this] - GetUnitY(s__BorutoOyakoRasengan___Spell_caster[this])
-            set s__BorutoOyakoRasengan___Spell_distance[this]=SquareRoot(distance_x * distance_x + distance_y * distance_y)
-       	    call TimerStart(NewTimerEx(this), 0.35, false, function s__BorutoOyakoRasengan___Spell_delay)
+            set s__BorutoOyakoRasengan__Spell_rasengan[this]=AddSpecialEffectTarget("Effects\\s_Odama Rasengan.mdx", s__BorutoOyakoRasengan__Spell_caster[this], "right hand")
+            set distance_x=s__BorutoOyakoRasengan__Spell_target_x[this] - GetUnitX(s__BorutoOyakoRasengan__Spell_caster[this])
+            set distance_y=s__BorutoOyakoRasengan__Spell_target_y[this] - GetUnitY(s__BorutoOyakoRasengan__Spell_caster[this])
+            set s__BorutoOyakoRasengan__Spell_distance[this]=SquareRoot(distance_x * distance_x + distance_y * distance_y)
+       	    call TimerStart(NewTimerEx(this), 0.35, false, function s__BorutoOyakoRasengan__Spell_delay)
         endfunction
         
-        function s__BorutoOyakoRasengan___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(93 , s__BorutoOyakoRasengan___Spell_SPELL_ID , function s__BorutoOyakoRasengan___Spell_actions)
+        function s__BorutoOyakoRasengan__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(93 , s__BorutoOyakoRasengan__Spell_SPELL_ID , function s__BorutoOyakoRasengan__Spell_actions)
         endfunction
         
     
@@ -42694,7 +42986,7 @@ function Trig_ChoujiSemi_Actions takes nothing returns nothing
 	endif
 	set udg_units14[52]=GetTriggerUnit()
 	set udg_locations07[3056]=GetUnitLoc(GetTriggerUnit())
-	//call TriggerSleepAction(0.05)
+	call TriggerSleepAction(0.05)
 	call PauseUnit(udg_units14[52], true)
 	call SetUnitAnimation(udg_units14[52], "Spell Slam")
 	//call SetUnitScaleEx(GetTriggerUnit(),1,1,1)
@@ -43393,7 +43685,7 @@ endfunction
         if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
             call PlaySoundOnUnitBJ(gg_snd_Danzo_R, 100.0, GetTriggerUnit())
         endif
-        set s__DanzoNewSemiS___instances[(GetUnitUserData((s__DanzoNewSemi_caster[this])))]= this // INLINED!!
+        set s__DanzoNewSemiS__instances[(GetUnitUserData((s__DanzoNewSemi_caster[this])))]= this // INLINED!!
         call PauseUnit(s__DanzoNewSemi_caster[this], true)
         call SetUnitAnimation(s__DanzoNewSemi_caster[this], "spell one")
         call SetUnitTimeScale(s__DanzoNewSemi_caster[this], 4.0)
@@ -43446,7 +43738,7 @@ endfunction
         endfunction
     
     function s__DanzoMissile_destroy takes integer this returns nothing
-        local integer semi= s__DanzoNewSemiS___instances[(GetUnitUserData((s__DanzoMissile_caster[this])))] // INLINED!!
+        local integer semi= s__DanzoNewSemiS__instances[(GetUnitUserData((s__DanzoMissile_caster[this])))] // INLINED!!
         call s__DanzoNewSemi_destroy(semi)
         call KillUnit(s__DanzoMissile_ball[this])
         call ShowUnit(s__DanzoMissile_ball[this], false)
@@ -43585,8 +43877,8 @@ endfunction
     
     function s__DanzoIzanagiModel_removeSharingan takes nothing returns nothing
         local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-        call RecycleUnit(s__DanzoIzanagiModel___sharingans[(this)*(1)+s__DanzoIzanagiModel_count[this]])
-        set s__DanzoIzanagiModel___sharingans[(this)*(1)+s__DanzoIzanagiModel_count[this]]= null
+        call RecycleUnit(s__DanzoIzanagiModel__sharingans[(this)*(1)+s__DanzoIzanagiModel_count[this]])
+        set s__DanzoIzanagiModel__sharingans[(this)*(1)+s__DanzoIzanagiModel_count[this]]= null
         set s__DanzoIzanagiModel_count[this]=s__DanzoIzanagiModel_count[this] - 1
         if s__DanzoIzanagiModel_count[this] < 0 then
             set s__DanzoIzanagiModel_Dexplode=false
@@ -43611,11 +43903,11 @@ endfunction
         else
             loop
                 exitwhen i > s__DanzoIzanagiModel_count[this]
-                set x=(((GetUnitX(s__DanzoIzanagiModel_caster[this]) )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__DanzoIzanagiModel___sharingans[(this)*(1)+i]) + 5) )*1.0)) * (( 100)*1.0)) // INLINED!!
-                set y=(((GetUnitY(s__DanzoIzanagiModel_caster[this]) )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__DanzoIzanagiModel___sharingans[(this)*(1)+i]) + 5) )*1.0)) * (( 100)*1.0)) // INLINED!!
-                call SetUnitX(s__DanzoIzanagiModel___sharingans[(this)*(1)+i], x)
-                call SetUnitY(s__DanzoIzanagiModel___sharingans[(this)*(1)+i], y)
-                call SetUnitFacing(s__DanzoIzanagiModel___sharingans[(this)*(1)+i], GetUnitFacing(s__DanzoIzanagiModel___sharingans[(this)*(1)+i]) + 5)
+                set x=(((GetUnitX(s__DanzoIzanagiModel_caster[this]) )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__DanzoIzanagiModel__sharingans[(this)*(1)+i]) + 5) )*1.0)) * (( 100)*1.0)) // INLINED!!
+                set y=(((GetUnitY(s__DanzoIzanagiModel_caster[this]) )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__DanzoIzanagiModel__sharingans[(this)*(1)+i]) + 5) )*1.0)) * (( 100)*1.0)) // INLINED!!
+                call SetUnitX(s__DanzoIzanagiModel__sharingans[(this)*(1)+i], x)
+                call SetUnitY(s__DanzoIzanagiModel__sharingans[(this)*(1)+i], y)
+                call SetUnitFacing(s__DanzoIzanagiModel__sharingans[(this)*(1)+i], GetUnitFacing(s__DanzoIzanagiModel__sharingans[(this)*(1)+i]) + 5)
                 set i=i + 1
             endloop
         endif
@@ -43640,7 +43932,7 @@ endfunction
             set x=(((GetUnitX(s__DanzoIzanagiModel_caster[this]) )*1.0) + Cos((( Deg2Rad(36 * i) )*1.0)) * (( 100)*1.0)) // INLINED!!
             set y=(((GetUnitY(s__DanzoIzanagiModel_caster[this]) )*1.0) + Sin((( Deg2Rad(36 * i) )*1.0)) * (( 100)*1.0)) // INLINED!!
             set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'h04Y' ), (( x )*1.0), (( y )*1.0), (( 36 * i)*1.0))) // INLINED!!
-            set s__DanzoIzanagiModel___sharingans[(this)*(1)+i]= bj_lastCreatedUnit
+            set s__DanzoIzanagiModel__sharingans[(this)*(1)+i]= bj_lastCreatedUnit
             set i=i + 1
         endloop
         call TimerStart(NewTimerEx(this), 0.03, true, function s__DanzoIzanagiModel_spin)
@@ -43856,80 +44148,80 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__DaruiSuiton___Spell_allocate takes nothing returns integer
+        function s__DaruiSuiton__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__DaruiSuiton___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__DaruiSuiton___Spell_Alloc__instanceCount=s__DaruiSuiton___Spell_Alloc__instanceCount + 1
-                set this=s__DaruiSuiton___Spell_Alloc__instanceCount
+            if ( s__DaruiSuiton__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__DaruiSuiton__Spell_Alloc__instanceCount=s__DaruiSuiton__Spell_Alloc__instanceCount + 1
+                set this=s__DaruiSuiton__Spell_Alloc__instanceCount
             else
-                set this=s__DaruiSuiton___Spell_Alloc__recycle[(0)]
-                set s__DaruiSuiton___Spell_Alloc__recycle[(0)]=s__DaruiSuiton___Spell_Alloc__recycle[s__DaruiSuiton___Spell_Alloc__recycle[(0)]]
+                set this=s__DaruiSuiton__Spell_Alloc__recycle[(0)]
+                set s__DaruiSuiton__Spell_Alloc__recycle[(0)]=s__DaruiSuiton__Spell_Alloc__recycle[s__DaruiSuiton__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__DaruiSuiton___Spell_deallocate takes integer this returns nothing
-            set s__DaruiSuiton___Spell_Alloc__recycle[this]=s__DaruiSuiton___Spell_Alloc__recycle[(0)]
-            set s__DaruiSuiton___Spell_Alloc__recycle[(0)]=this
+        function s__DaruiSuiton__Spell_deallocate takes integer this returns nothing
+            set s__DaruiSuiton__Spell_Alloc__recycle[this]=s__DaruiSuiton__Spell_Alloc__recycle[(0)]
+            set s__DaruiSuiton__Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__DaruiSuiton___Spell_destroy takes integer this returns nothing
+        function s__DaruiSuiton__Spell_destroy takes integer this returns nothing
             local integer i= 0
             loop
                 set i=i + 1
                 exitwhen i > 12
-                call KillUnit(s__DaruiSuiton___wave[(this)*(1)+i])
-                set s__DaruiSuiton___wave[(this)*(1)+i]= null
+                call KillUnit(s__DaruiSuiton__wave[(this)*(1)+i])
+                set s__DaruiSuiton__wave[(this)*(1)+i]= null
             endloop
-            call DestroyGroup(s__DaruiSuiton___Spell_damaged[this])
-            set s__DaruiSuiton___Spell_damaged[this]=null
-            set s__DaruiSuiton___Spell_caster[this]=null
-            call s__DaruiSuiton___Spell_deallocate(this)
+            call DestroyGroup(s__DaruiSuiton__Spell_damaged[this])
+            set s__DaruiSuiton__Spell_damaged[this]=null
+            set s__DaruiSuiton__Spell_caster[this]=null
+            call s__DaruiSuiton__Spell_deallocate(this)
         endfunction
         
-        function s__DaruiSuiton___Spell_periodic2 takes nothing returns nothing
+        function s__DaruiSuiton__Spell_periodic2 takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local unit u
-            set s__DaruiSuiton___Spell_count[this]=s__DaruiSuiton___Spell_count[this] + 1
+            set s__DaruiSuiton__Spell_count[this]=s__DaruiSuiton__Spell_count[this] + 1
             set bj_lastCreatedGroup=CreateGroup()
-            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__DaruiSuiton___Spell_target_x[this], s__DaruiSuiton___Spell_target_y[this], 300, null)
+            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__DaruiSuiton__Spell_target_x[this], s__DaruiSuiton__Spell_target_y[this], 300, null)
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 exitwhen bj_lastCreatedUnit == null
-                if GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__DaruiSuiton___Spell_caster[this])) then
+                if GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__DaruiSuiton__Spell_caster[this])) then
                             if IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == true then
-                                call UnitDamageTarget(s__DaruiSuiton___Spell_caster[this], bj_lastCreatedUnit, ( 50 + GetHeroAgi(s__DaruiSuiton___Spell_caster[this], true) / 1.5 ) * GetUnitAbilityLevel(s__DaruiSuiton___Spell_caster[this], s__DaruiSuiton___Spell_SPELL_ID) / 100, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                                call UnitDamageTarget(s__DaruiSuiton__Spell_caster[this], bj_lastCreatedUnit, ( 50 + GetHeroAgi(s__DaruiSuiton__Spell_caster[this], true) / 1.5 ) * GetUnitAbilityLevel(s__DaruiSuiton__Spell_caster[this], s__DaruiSuiton__Spell_SPELL_ID) / 100, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
                             else
-                                call UnitDamageTarget(s__DaruiSuiton___Spell_caster[this], bj_lastCreatedUnit, ( 50 + GetHeroAgi(s__DaruiSuiton___Spell_caster[this], true) / 1.5 ) * GetUnitAbilityLevel(s__DaruiSuiton___Spell_caster[this], s__DaruiSuiton___Spell_SPELL_ID) / 100, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                                if not IsUnitInGroup(bj_lastCreatedUnit, s__DaruiSuiton___Spell_damaged[this]) then
+                                call UnitDamageTarget(s__DaruiSuiton__Spell_caster[this], bj_lastCreatedUnit, ( 50 + GetHeroAgi(s__DaruiSuiton__Spell_caster[this], true) / 1.5 ) * GetUnitAbilityLevel(s__DaruiSuiton__Spell_caster[this], s__DaruiSuiton__Spell_SPELL_ID) / 100, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                                if not IsUnitInGroup(bj_lastCreatedUnit, s__DaruiSuiton__Spell_damaged[this]) then
                                         set u=CreateAbilityDummy(bj_lastCreatedUnit , 'A0I5')
                                         call IssueTargetOrder(u, "unholyfrenzy", bj_lastCreatedUnit)
                                         call UnitApplyTimedLife(u, 'BTLF', 1.0)
-                                        call GroupAddUnit(s__DaruiSuiton___Spell_damaged[this], bj_lastCreatedUnit)
+                                        call GroupAddUnit(s__DaruiSuiton__Spell_damaged[this], bj_lastCreatedUnit)
                                 endif
                             endif
                 endif
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            if s__DaruiSuiton___Spell_count[this] >= 100 then
-                call ShowUnit(s__DaruiSuiton___Spell_raincloud[this], false)
-                call KillUnit(s__DaruiSuiton___Spell_raincloud[this])
-                set s__DaruiSuiton___Spell_raincloud[this]=null
-                call DestroyGroup(s__DaruiSuiton___Spell_damaged[this])
-                set s__DaruiSuiton___Spell_damaged[this]=null
-                call s__DaruiSuiton___Spell_deallocate(this)
+            if s__DaruiSuiton__Spell_count[this] >= 100 then
+                call ShowUnit(s__DaruiSuiton__Spell_raincloud[this], false)
+                call KillUnit(s__DaruiSuiton__Spell_raincloud[this])
+                set s__DaruiSuiton__Spell_raincloud[this]=null
+                call DestroyGroup(s__DaruiSuiton__Spell_damaged[this])
+                set s__DaruiSuiton__Spell_damaged[this]=null
+                call s__DaruiSuiton__Spell_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction 
 
 
-        function s__DaruiSuiton___Spell_periodic takes nothing returns nothing
+        function s__DaruiSuiton__Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real wave_x
             local real wave_y
@@ -43939,17 +44231,17 @@ endfunction
             local real y
             local integer i= 0
             local unit u
-            set s__DaruiSuiton___Spell_count[this]=s__DaruiSuiton___Spell_count[this] + 1
+            set s__DaruiSuiton__Spell_count[this]=s__DaruiSuiton__Spell_count[this] + 1
             loop
                 set i=i + 1
                 exitwhen i > 12
-                set wave_x=GetUnitX(s__DaruiSuiton___wave[(this)*(1)+i])
-                set wave_y=GetUnitY(s__DaruiSuiton___wave[(this)*(1)+i])
-                set new_x=wave_x + Cos(Deg2Rad(GetUnitFacing(s__DaruiSuiton___wave[(this)*(1)+i]))) * 30
-                set new_y=wave_y + Sin(Deg2Rad(GetUnitFacing(s__DaruiSuiton___wave[(this)*(1)+i]))) * 30
-                call SetUnitX(s__DaruiSuiton___wave[(this)*(1)+i], new_x)
-                call SetUnitY(s__DaruiSuiton___wave[(this)*(1)+i], new_y)
-                if ModuloInteger(s__DaruiSuiton___Spell_count[this], 2) == 0 then
+                set wave_x=GetUnitX(s__DaruiSuiton__wave[(this)*(1)+i])
+                set wave_y=GetUnitY(s__DaruiSuiton__wave[(this)*(1)+i])
+                set new_x=wave_x + Cos(Deg2Rad(GetUnitFacing(s__DaruiSuiton__wave[(this)*(1)+i]))) * 30
+                set new_y=wave_y + Sin(Deg2Rad(GetUnitFacing(s__DaruiSuiton__wave[(this)*(1)+i]))) * 30
+                call SetUnitX(s__DaruiSuiton__wave[(this)*(1)+i], new_x)
+                call SetUnitY(s__DaruiSuiton__wave[(this)*(1)+i], new_y)
+                if ModuloInteger(s__DaruiSuiton__Spell_count[this], 2) == 0 then
                     call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveDamage.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                 endif
                 set bj_lastCreatedGroup=CreateGroup()
@@ -43957,48 +44249,48 @@ endfunction
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__DaruiSuiton___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__DaruiSuiton__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
                         if IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
-                            set x=(((GetUnitX(bj_lastCreatedUnit) )*1.0) + Cos((( GetAngleUnits(s__DaruiSuiton___Spell_caster[this] , bj_lastCreatedUnit) )*1.0)) * (( 30)*1.0)) // INLINED!!
-                            set y=(((GetUnitY(bj_lastCreatedUnit) )*1.0) + Sin((( GetAngleUnits(s__DaruiSuiton___Spell_caster[this] , bj_lastCreatedUnit) )*1.0)) * (( 30)*1.0)) // INLINED!!
+                            set x=(((GetUnitX(bj_lastCreatedUnit) )*1.0) + Cos((( GetAngleUnits(s__DaruiSuiton__Spell_caster[this] , bj_lastCreatedUnit) )*1.0)) * (( 30)*1.0)) // INLINED!!
+                            set y=(((GetUnitY(bj_lastCreatedUnit) )*1.0) + Sin((( GetAngleUnits(s__DaruiSuiton__Spell_caster[this] , bj_lastCreatedUnit) )*1.0)) * (( 30)*1.0)) // INLINED!!
 			if not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
                             call SetUnitX(bj_lastCreatedUnit, x)
                             call SetUnitY(bj_lastCreatedUnit, y)
 			endif
                         endif
-                        if not IsUnitInGroup(bj_lastCreatedUnit, s__DaruiSuiton___Spell_damaged[this]) then
+                        if not IsUnitInGroup(bj_lastCreatedUnit, s__DaruiSuiton__Spell_damaged[this]) then
                             if IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == true then
-                                call UnitDamageTarget(s__DaruiSuiton___Spell_caster[this], bj_lastCreatedUnit, ( 50 + GetHeroAgi(s__DaruiSuiton___Spell_caster[this], true) / 1.5 ) * GetUnitAbilityLevel(s__DaruiSuiton___Spell_caster[this], s__DaruiSuiton___Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                                call UnitDamageTarget(s__DaruiSuiton__Spell_caster[this], bj_lastCreatedUnit, ( 50 + GetHeroAgi(s__DaruiSuiton__Spell_caster[this], true) / 1.5 ) * GetUnitAbilityLevel(s__DaruiSuiton__Spell_caster[this], s__DaruiSuiton__Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
                             else
-                                call UnitDamageTarget(s__DaruiSuiton___Spell_caster[this], bj_lastCreatedUnit, ( 50 + GetHeroAgi(s__DaruiSuiton___Spell_caster[this], true) / 1.5 ) * GetUnitAbilityLevel(s__DaruiSuiton___Spell_caster[this], s__DaruiSuiton___Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                                call UnitDamageTarget(s__DaruiSuiton__Spell_caster[this], bj_lastCreatedUnit, ( 50 + GetHeroAgi(s__DaruiSuiton__Spell_caster[this], true) / 1.5 ) * GetUnitAbilityLevel(s__DaruiSuiton__Spell_caster[this], s__DaruiSuiton__Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
                                 if GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
-                                    set u=CreateAbilityDummy(s__DaruiSuiton___Spell_caster[this] , 'A0FM')
+                                    set u=CreateAbilityDummy(s__DaruiSuiton__Spell_caster[this] , 'A0FM')
                                     call IssueTargetOrder(u, "slow", bj_lastCreatedUnit)
                                     call UnitApplyTimedLife(u, 'BTLF', 1.0)
-                		if not IsUnitInGroup(bj_lastCreatedUnit, s__DaruiSuiton___Spell_damaged[this]) then
+                		if not IsUnitInGroup(bj_lastCreatedUnit, s__DaruiSuiton__Spell_damaged[this]) then
                     			set u=CreateAbilityDummy(bj_lastCreatedUnit , 'A0I5')
                     			call IssueTargetOrder(u, "unholyfrenzy", bj_lastCreatedUnit)
                     			call UnitApplyTimedLife(u, 'BTLF', 1.0)
-                    			call GroupAddUnit(s__DaruiSuiton___Spell_damaged[this], bj_lastCreatedUnit)
+                    			call GroupAddUnit(s__DaruiSuiton__Spell_damaged[this], bj_lastCreatedUnit)
                  		endif
                                 endif
                             endif
-                            call GroupAddUnit(s__DaruiSuiton___Spell_damaged[this], bj_lastCreatedUnit)
+                            call GroupAddUnit(s__DaruiSuiton__Spell_damaged[this], bj_lastCreatedUnit)
                         endif
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
             endloop
-            if s__DaruiSuiton___Spell_count[this] > 25 then
-                call s__DaruiSuiton___Spell_destroy(this)
+            if s__DaruiSuiton__Spell_count[this] > 25 then
+                call s__DaruiSuiton__Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
             set u=null
         endfunction
         
-        function s__DaruiSuiton___Spell_actions takes nothing returns nothing
-            local integer this= s__DaruiSuiton___Spell_allocate()
+        function s__DaruiSuiton__Spell_actions takes nothing returns nothing
+            local integer this= s__DaruiSuiton__Spell_allocate()
             local real caster_x
             local real caster_y
             local real target_x= GetSpellTargetX()
@@ -44006,38 +44298,38 @@ endfunction
             local real angle
             local integer i= 0
             if s__DaruiSuitonMultiChoice_SuitonPush then
-                set s__DaruiSuiton___Spell_damaged[this]=CreateGroup()
-                set s__DaruiSuiton___Spell_caster[this]=GetTriggerUnit()
-                set caster_x=GetUnitX(s__DaruiSuiton___Spell_caster[this])
-                set caster_y=GetUnitY(s__DaruiSuiton___Spell_caster[this])
+                set s__DaruiSuiton__Spell_damaged[this]=CreateGroup()
+                set s__DaruiSuiton__Spell_caster[this]=GetTriggerUnit()
+                set caster_x=GetUnitX(s__DaruiSuiton__Spell_caster[this])
+                set caster_y=GetUnitY(s__DaruiSuiton__Spell_caster[this])
                 set angle=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
                 loop
                     set i=i + 1
                     exitwhen i > 12
-                    set s__DaruiSuiton___wave[(this)*(1)+i]= (CreateUnit((GetTriggerPlayer() ), ( 'h05T' ), (( caster_x )*1.0), (( caster_y )*1.0), (( Rad2Deg(angle) + ( 20 - 3.33 * i ))*1.0))) // INLINED!!
-                    call SetUnitAnimation(s__DaruiSuiton___wave[(this)*(1)+i], "stand")
-                    call SetUnitX(s__DaruiSuiton___wave[(this)*(1)+i], caster_x)
-                    call SetUnitY(s__DaruiSuiton___wave[(this)*(1)+i], caster_y)
+                    set s__DaruiSuiton__wave[(this)*(1)+i]= (CreateUnit((GetTriggerPlayer() ), ( 'h05T' ), (( caster_x )*1.0), (( caster_y )*1.0), (( Rad2Deg(angle) + ( 20 - 3.33 * i ))*1.0))) // INLINED!!
+                    call SetUnitAnimation(s__DaruiSuiton__wave[(this)*(1)+i], "stand")
+                    call SetUnitX(s__DaruiSuiton__wave[(this)*(1)+i], caster_x)
+                    call SetUnitY(s__DaruiSuiton__wave[(this)*(1)+i], caster_y)
                 endloop
-                set s__DaruiSuiton___Spell_count[this]=0
-                call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__DaruiSuiton___Spell_periodic , "DaruiSuiton_periodic")
+                set s__DaruiSuiton__Spell_count[this]=0
+                call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__DaruiSuiton__Spell_periodic , "DaruiSuiton_periodic")
             elseif s__DaruiSuitonMultiChoice_SuitonRain then
-                set s__DaruiSuiton___Spell_caster[this]=GetTriggerUnit()
-                set s__DaruiSuiton___Spell_target_x[this]=GetSpellTargetX()
-                set s__DaruiSuiton___Spell_target_y[this]=GetSpellTargetY()
-                set s__DaruiSuiton___Spell_count[this]=0
-                set s__DaruiSuiton___Spell_damaged[this]=CreateGroup()
-                set s__DaruiSuiton___Spell_raincloud[this]=CreateUnit(GetOwningPlayer(s__DaruiSuiton___Spell_caster[this]), 'h02N', s__DaruiSuiton___Spell_target_x[this], s__DaruiSuiton___Spell_target_y[this], 270)
-                call SlowAura(s__DaruiSuiton___Spell_raincloud[this] , 0.3 , 300)
-                call SetUnitAnimation(s__DaruiSuiton___Spell_raincloud[this], "stand")
-                call SetUnitTimeScale(s__DaruiSuiton___Spell_raincloud[this], 2.0)
-                call UnitApplyTimedLife(s__DaruiSuiton___Spell_raincloud[this], 'BTLF', 5.0)
-                call TimerStartEx(NewTimerEx(this) , 0.02 , true , function s__DaruiSuiton___Spell_periodic2 , "DaruiRainSuiton_periodic2")
+                set s__DaruiSuiton__Spell_caster[this]=GetTriggerUnit()
+                set s__DaruiSuiton__Spell_target_x[this]=GetSpellTargetX()
+                set s__DaruiSuiton__Spell_target_y[this]=GetSpellTargetY()
+                set s__DaruiSuiton__Spell_count[this]=0
+                set s__DaruiSuiton__Spell_damaged[this]=CreateGroup()
+                set s__DaruiSuiton__Spell_raincloud[this]=CreateUnit(GetOwningPlayer(s__DaruiSuiton__Spell_caster[this]), 'h02N', s__DaruiSuiton__Spell_target_x[this], s__DaruiSuiton__Spell_target_y[this], 270)
+                call SlowAura(s__DaruiSuiton__Spell_raincloud[this] , 0.3 , 300)
+                call SetUnitAnimation(s__DaruiSuiton__Spell_raincloud[this], "stand")
+                call SetUnitTimeScale(s__DaruiSuiton__Spell_raincloud[this], 2.0)
+                call UnitApplyTimedLife(s__DaruiSuiton__Spell_raincloud[this], 'BTLF', 5.0)
+                call TimerStartEx(NewTimerEx(this) , 0.02 , true , function s__DaruiSuiton__Spell_periodic2 , "DaruiRainSuiton_periodic2")
             endif
         endfunction
         
-        function s__DaruiSuiton___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(40 , s__DaruiSuiton___Spell_SPELL_ID , function s__DaruiSuiton___Spell_actions)
+        function s__DaruiSuiton__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(40 , s__DaruiSuiton__Spell_SPELL_ID , function s__DaruiSuiton__Spell_actions)
         endfunction
         
     
@@ -44164,69 +44456,69 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__DaruiLaserCircus___Spell_allocate takes nothing returns integer
+        function s__DaruiLaserCircus__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__DaruiLaserCircus___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__DaruiLaserCircus___Spell_Alloc__instanceCount=s__DaruiLaserCircus___Spell_Alloc__instanceCount + 1
-                set this=s__DaruiLaserCircus___Spell_Alloc__instanceCount
+            if ( s__DaruiLaserCircus__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__DaruiLaserCircus__Spell_Alloc__instanceCount=s__DaruiLaserCircus__Spell_Alloc__instanceCount + 1
+                set this=s__DaruiLaserCircus__Spell_Alloc__instanceCount
             else
-                set this=s__DaruiLaserCircus___Spell_Alloc__recycle[(0)]
-                set s__DaruiLaserCircus___Spell_Alloc__recycle[(0)]=s__DaruiLaserCircus___Spell_Alloc__recycle[s__DaruiLaserCircus___Spell_Alloc__recycle[(0)]]
+                set this=s__DaruiLaserCircus__Spell_Alloc__recycle[(0)]
+                set s__DaruiLaserCircus__Spell_Alloc__recycle[(0)]=s__DaruiLaserCircus__Spell_Alloc__recycle[s__DaruiLaserCircus__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__DaruiLaserCircus___Spell_deallocate takes integer this returns nothing
-            set s__DaruiLaserCircus___Spell_Alloc__recycle[this]=s__DaruiLaserCircus___Spell_Alloc__recycle[(0)]
-            set s__DaruiLaserCircus___Spell_Alloc__recycle[(0)]=this
+        function s__DaruiLaserCircus__Spell_deallocate takes integer this returns nothing
+            set s__DaruiLaserCircus__Spell_Alloc__recycle[this]=s__DaruiLaserCircus__Spell_Alloc__recycle[(0)]
+            set s__DaruiLaserCircus__Spell_Alloc__recycle[(0)]=this
         endfunction
     
 	
- function s__DaruiLaserCircus___Spell_damagefix takes nothing returns boolean
-	if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__DaruiLaserCircus___Spell_caster[s__DaruiLaserCircus___Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 then
-                        call UnitDamageTarget(s__DaruiLaserCircus___Spell_caster[s__DaruiLaserCircus___Spell_instance], GetFilterUnit(), ( 700 + 4 * GetHeroAgi(s__DaruiLaserCircus___Spell_caster[s__DaruiLaserCircus___Spell_instance], true) ) * GetUnitAbilityLevel(s__DaruiLaserCircus___Spell_caster[s__DaruiLaserCircus___Spell_instance], s__DaruiLaserCircus___Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+ function s__DaruiLaserCircus__Spell_damagefix takes nothing returns boolean
+	if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__DaruiLaserCircus__Spell_caster[s__DaruiLaserCircus__Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 then
+                        call UnitDamageTarget(s__DaruiLaserCircus__Spell_caster[s__DaruiLaserCircus__Spell_instance], GetFilterUnit(), ( 700 + 4 * GetHeroAgi(s__DaruiLaserCircus__Spell_caster[s__DaruiLaserCircus__Spell_instance], true) ) * GetUnitAbilityLevel(s__DaruiLaserCircus__Spell_caster[s__DaruiLaserCircus__Spell_instance], s__DaruiLaserCircus__Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
                         //call StunUnitTimed(instance.caster, GetFilterUnit(), 2.0)
                     endif
 	return false
  endfunction
         
-        function s__DaruiLaserCircus___Spell_destroy takes integer this returns nothing
+        function s__DaruiLaserCircus__Spell_destroy takes integer this returns nothing
             local integer i= 0
 	    //call PauseUnit(this.target, false)
             loop
                 set i=i + 1
                 exitwhen i > 6
                 //call RecycleUnit(lasers[this][i])
-		call KillUnit(s__DaruiLaserCircus___lasers[(this)*(1)+i])
-                set s__DaruiLaserCircus___lasers[(this)*(1)+i]= null
+		call KillUnit(s__DaruiLaserCircus__lasers[(this)*(1)+i])
+                set s__DaruiLaserCircus__lasers[(this)*(1)+i]= null
             endloop
-            set i=s__DaruiLaserCircus___Spell_effects_count[this]
+            set i=s__DaruiLaserCircus__Spell_effects_count[this]
             loop
                 set i=i - 1
                 exitwhen i < 0
                 //call BlzSetSpecialEffectScale(effects[this][i], 0)
                 //call DestroyEffect(effects[this][i])
-                set s__DaruiLaserCircus___effects[(this)*(1)+i]= null
+                set s__DaruiLaserCircus__effects[(this)*(1)+i]= null
             endloop
-            call RecycleUnit(s__DaruiLaserCircus___Spell_dummy[this])
-            set s__DaruiLaserCircus___Spell_caster[this]=null
-            set s__DaruiLaserCircus___Spell_dummy[this]=null
-            call s__DaruiLaserCircus___Spell_deallocate(this)
+            call RecycleUnit(s__DaruiLaserCircus__Spell_dummy[this])
+            set s__DaruiLaserCircus__Spell_caster[this]=null
+            set s__DaruiLaserCircus__Spell_dummy[this]=null
+            call s__DaruiLaserCircus__Spell_deallocate(this)
         endfunction
         
-        function s__DaruiLaserCircus___Spell_periodic takes nothing returns nothing
+        function s__DaruiLaserCircus__Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real dummy_x= GetUnitX(s__DaruiLaserCircus___Spell_dummy[this])
-            local real dummy_y= GetUnitY(s__DaruiLaserCircus___Spell_dummy[this])
-            local real angle= Atan2(( s__DaruiLaserCircus___Spell_target_y[this] - dummy_y ), ( s__DaruiLaserCircus___Spell_target_x[this] - dummy_x ))
-            local real new_x= dummy_x + Cos(angle) * s__DaruiLaserCircus___Spell_speed[this]
-            local real new_y= dummy_y + Sin(angle) * s__DaruiLaserCircus___Spell_speed[this]
-            local real distance_x= new_x - s__DaruiLaserCircus___Spell_target_x[this]
-            local real distance_y= new_y - s__DaruiLaserCircus___Spell_target_y[this]
+            local real dummy_x= GetUnitX(s__DaruiLaserCircus__Spell_dummy[this])
+            local real dummy_y= GetUnitY(s__DaruiLaserCircus__Spell_dummy[this])
+            local real angle= Atan2(( s__DaruiLaserCircus__Spell_target_y[this] - dummy_y ), ( s__DaruiLaserCircus__Spell_target_x[this] - dummy_x ))
+            local real new_x= dummy_x + Cos(angle) * s__DaruiLaserCircus__Spell_speed[this]
+            local real new_y= dummy_y + Sin(angle) * s__DaruiLaserCircus__Spell_speed[this]
+            local real distance_x= new_x - s__DaruiLaserCircus__Spell_target_x[this]
+            local real distance_y= new_y - s__DaruiLaserCircus__Spell_target_y[this]
             local real distance= SquareRoot(distance_x * distance_x + distance_y * distance_y)
             local real laser_x
             local real laser_y
@@ -44235,50 +44527,50 @@ endfunction
             local real height
             local real parabola_height
             local integer i= 0
-            set s__DaruiLaserCircus___Spell_count[this]=s__DaruiLaserCircus___Spell_count[this] + 1
-            call SetUnitX(s__DaruiLaserCircus___Spell_dummy[this], new_x)
-            call SetUnitY(s__DaruiLaserCircus___Spell_dummy[this], new_y)
-            if s__DaruiLaserCircus___Spell_count[this] >= 20 then
-		set bj_lastCreatedEffect=AddSpecialEffect("ThunderGroundCrack.mdx", s__DaruiLaserCircus___Spell_target_x[this], s__DaruiLaserCircus___Spell_target_y[this])
+            set s__DaruiLaserCircus__Spell_count[this]=s__DaruiLaserCircus__Spell_count[this] + 1
+            call SetUnitX(s__DaruiLaserCircus__Spell_dummy[this], new_x)
+            call SetUnitY(s__DaruiLaserCircus__Spell_dummy[this], new_y)
+            if s__DaruiLaserCircus__Spell_count[this] >= 20 then
+		set bj_lastCreatedEffect=AddSpecialEffect("ThunderGroundCrack.mdx", s__DaruiLaserCircus__Spell_target_x[this], s__DaruiLaserCircus__Spell_target_y[this])
 		//call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 1.5)
 		call DestroyEffect(bj_lastCreatedEffect)
                 set bj_lastCreatedGroup=CreateGroup()
-		set s__DaruiLaserCircus___Spell_instance=this
-                call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__DaruiLaserCircus___Spell_target_x[this], s__DaruiLaserCircus___Spell_target_y[this], 350, Filter(function s__DaruiLaserCircus___Spell_damagefix))
+		set s__DaruiLaserCircus__Spell_instance=this
+                call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__DaruiLaserCircus__Spell_target_x[this], s__DaruiLaserCircus__Spell_target_y[this], 350, Filter(function s__DaruiLaserCircus__Spell_damagefix))
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
-                call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl" ), (( s__DaruiLaserCircus___Spell_target_x[this] )*1.0), (( s__DaruiLaserCircus___Spell_target_y[this])*1.0))) // INLINED!!
-                call s__DaruiLaserCircus___Spell_destroy(this)
+                call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl" ), (( s__DaruiLaserCircus__Spell_target_x[this] )*1.0), (( s__DaruiLaserCircus__Spell_target_y[this])*1.0))) // INLINED!!
+                call s__DaruiLaserCircus__Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             else
                 loop
                     set i=i + 1
                     exitwhen i > 6
                     set offset=300 - 100 * i
-                    set parabola_offset=Parabola(0 , 0 , offset , s__DaruiLaserCircus___Spell_distance[this] , s__DaruiLaserCircus___Spell_distance[this] - distance)
+                    set parabola_offset=Parabola(0 , 0 , offset , s__DaruiLaserCircus__Spell_distance[this] , s__DaruiLaserCircus__Spell_distance[this] - distance)
                     set laser_x=new_x + Cos(angle + bj_PI / 2) * parabola_offset
                     set laser_y=new_y + Sin(angle + bj_PI / 2) * parabola_offset
-                    call SetUnitX(s__DaruiLaserCircus___lasers[(this)*(1)+i], laser_x)
-                    call SetUnitY(s__DaruiLaserCircus___lasers[(this)*(1)+i], laser_y)
+                    call SetUnitX(s__DaruiLaserCircus__lasers[(this)*(1)+i], laser_x)
+                    call SetUnitY(s__DaruiLaserCircus__lasers[(this)*(1)+i], laser_y)
                     set height=300 - SquareRoot(Pow(300 - 100 * i, 2))
-                    set parabola_height=Parabola(0 , 0 , height , s__DaruiLaserCircus___Spell_distance[this] , s__DaruiLaserCircus___Spell_distance[this] - distance)
-                    call SetUnitFlyHeight(s__DaruiLaserCircus___lasers[(this)*(1)+i], parabola_height, 0)
+                    set parabola_height=Parabola(0 , 0 , height , s__DaruiLaserCircus__Spell_distance[this] , s__DaruiLaserCircus__Spell_distance[this] - distance)
+                    call SetUnitFlyHeight(s__DaruiLaserCircus__lasers[(this)*(1)+i], parabola_height, 0)
                     //set bj_lastCreatedEffect = AddSpecialEffect("Abilities\\Weapons\\ZigguratMissile\\ZigguratMissile.mdl", laser_x, laser_y)
                     //call BlzSetSpecialEffectRoll(bj_lastCreatedEffect, Deg2Rad(GetUnitFacing(lasers[this][i])))
                     //call BlzSetSpecialEffectHeight(bj_lastCreatedEffect, GetUnitFlyHeight(lasers[this][i])) 
                     //call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 1.5)
                     //set effects[this][this.effects_count] = bj_lastCreatedEffect 
-                    set s__DaruiLaserCircus___Spell_effects_count[this]=s__DaruiLaserCircus___Spell_effects_count[this] + 1
+                    set s__DaruiLaserCircus__Spell_effects_count[this]=s__DaruiLaserCircus__Spell_effects_count[this] + 1
                 endloop
             endif
         endfunction
         
-        function s__DaruiLaserCircus___Spell_actions takes nothing returns nothing
-            local integer this= s__DaruiLaserCircus___Spell_allocate()
+        function s__DaruiLaserCircus__Spell_actions takes nothing returns nothing
+            local integer this= s__DaruiLaserCircus__Spell_allocate()
             local real caster_x
             local real caster_y
             local real angle
@@ -44290,44 +44582,44 @@ endfunction
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
                 call PlaySoundOnUnitBJ(gg_snd_Darui_R, 100.0, GetTriggerUnit())
             endif
-            set s__DaruiLaserCircus___Spell_caster[this]=GetTriggerUnit()
-            set caster_x=GetUnitX(s__DaruiLaserCircus___Spell_caster[this])
-            set caster_y=GetUnitY(s__DaruiLaserCircus___Spell_caster[this])
-            set s__DaruiLaserCircus___Spell_target_x[this]=GetSpellTargetX()
-            set s__DaruiLaserCircus___Spell_target_y[this]=GetSpellTargetY()
-            set s__DaruiLaserCircus___Spell_effects_count[this]=0
-            set angle=Atan2(( s__DaruiLaserCircus___Spell_target_y[this] - caster_y ), ( s__DaruiLaserCircus___Spell_target_x[this] - caster_x ))
+            set s__DaruiLaserCircus__Spell_caster[this]=GetTriggerUnit()
+            set caster_x=GetUnitX(s__DaruiLaserCircus__Spell_caster[this])
+            set caster_y=GetUnitY(s__DaruiLaserCircus__Spell_caster[this])
+            set s__DaruiLaserCircus__Spell_target_x[this]=GetSpellTargetX()
+            set s__DaruiLaserCircus__Spell_target_y[this]=GetSpellTargetY()
+            set s__DaruiLaserCircus__Spell_effects_count[this]=0
+            set angle=Atan2(( s__DaruiLaserCircus__Spell_target_y[this] - caster_y ), ( s__DaruiLaserCircus__Spell_target_x[this] - caster_x ))
             set new_x=caster_x + Cos(angle) * 100
             set new_y=caster_y + Sin(angle) * 100
-            set distance_x=s__DaruiLaserCircus___Spell_target_x[this] - caster_x
-            set distance_y=s__DaruiLaserCircus___Spell_target_y[this] - caster_y
+            set distance_x=s__DaruiLaserCircus__Spell_target_x[this] - caster_x
+            set distance_y=s__DaruiLaserCircus__Spell_target_y[this] - caster_y
 	    //set this.target = GetSpellTargetUnit()
-            set s__DaruiLaserCircus___Spell_distance[this]=SquareRoot(distance_x * distance_x + distance_y * distance_y)
-	    set s__DaruiLaserCircus___Spell_speed[this]=s__DaruiLaserCircus___Spell_distance[this] / 20.0
+            set s__DaruiLaserCircus__Spell_distance[this]=SquareRoot(distance_x * distance_x + distance_y * distance_y)
+	    set s__DaruiLaserCircus__Spell_speed[this]=s__DaruiLaserCircus__Spell_distance[this] / 20.0
             //if this.distance >= 150 then
-                set s__DaruiLaserCircus___Spell_dummy[this]=GetInvisibleDummy(GetTriggerPlayer() , new_x , new_y)
-                call SetUnitX(s__DaruiLaserCircus___Spell_dummy[this], new_x)
-                call SetUnitY(s__DaruiLaserCircus___Spell_dummy[this], new_y)
+                set s__DaruiLaserCircus__Spell_dummy[this]=GetInvisibleDummy(GetTriggerPlayer() , new_x , new_y)
+                call SetUnitX(s__DaruiLaserCircus__Spell_dummy[this], new_x)
+                call SetUnitY(s__DaruiLaserCircus__Spell_dummy[this], new_y)
                 loop
                     set i=i + 1
                     exitwhen i > 6
-                    set s__DaruiLaserCircus___lasers[(this)*(1)+i]= GetDummy(GetTriggerPlayer() , "Psionic Shot Blue.mdx" , new_x , new_y , GetUnitFacing(s__DaruiLaserCircus___Spell_caster[this]))
-                    call SetUnitX(s__DaruiLaserCircus___lasers[(this)*(1)+i], new_x)
-                    call SetUnitY(s__DaruiLaserCircus___lasers[(this)*(1)+i], new_y)
-		    call SetUnitScale(s__DaruiLaserCircus___lasers[(this)*(1)+i], 5.0, 5.0, 5.0)
+                    set s__DaruiLaserCircus__lasers[(this)*(1)+i]= GetDummy(GetTriggerPlayer() , "Psionic Shot Blue.mdx" , new_x , new_y , GetUnitFacing(s__DaruiLaserCircus__Spell_caster[this]))
+                    call SetUnitX(s__DaruiLaserCircus__lasers[(this)*(1)+i], new_x)
+                    call SetUnitY(s__DaruiLaserCircus__lasers[(this)*(1)+i], new_y)
+		    call SetUnitScale(s__DaruiLaserCircus__lasers[(this)*(1)+i], 5.0, 5.0, 5.0)
                 endloop
-                set s__DaruiLaserCircus___Spell_count[this]=0
+                set s__DaruiLaserCircus__Spell_count[this]=0
 		set bj_lastCreatedEffect=AddSpecialEffect("s_FreezingRing.mdl", caster_x, caster_y)
 		call BlzSetSpecialEffectPitch(bj_lastCreatedEffect, - 1.57)
 		call BlzSetSpecialEffectRoll(bj_lastCreatedEffect, angle + bj_PI)
 		call DestroyEffect(bj_lastCreatedEffect)
-                call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__DaruiLaserCircus___Spell_periodic , "DaruiLaserCircus_periodic")
+                call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__DaruiLaserCircus__Spell_periodic , "DaruiLaserCircus_periodic")
             
 	    //call PauseUnit(this.target, true)
         endfunction
         
-        function s__DaruiLaserCircus___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(40 , s__DaruiLaserCircus___Spell_SPELL_ID , function s__DaruiLaserCircus___Spell_actions)
+        function s__DaruiLaserCircus__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(40 , s__DaruiLaserCircus__Spell_SPELL_ID , function s__DaruiLaserCircus__Spell_actions)
         endfunction
         
     
@@ -45526,10 +45818,10 @@ endfunction
         
     		set s__DeidaraEternalExplosion_count[this]=s__DeidaraEternalExplosion_count[this] + 1
         
-           	if s__DeidaraEternalExplosion_count[this] > 666 or DeidaraT___detonate or not IsUnitAliveBJ(s__DeidaraEternalExplosion_deidara) then
+           	if s__DeidaraEternalExplosion_count[this] > 666 or DeidaraT__detonate or not IsUnitAliveBJ(s__DeidaraEternalExplosion_deidara) then
                 set this2=s__DeidaraEternalExplosion_allocate()
-                set DeidaraT___detonate=false
-                set DeidaraT___created=false
+                set DeidaraT__detonate=false
+                set DeidaraT__created=false
                 
                 call BlzSetAbilityIntegerLevelField(BlzGetUnitAbility(s__DeidaraEternalExplosion_deidara, 'A020'), ABILITY_ILF_TARGET_TYPE, 0, 2)
             
@@ -45562,13 +45854,13 @@ endfunction
             local real casterX= GetSpellTargetX()
             local real casterY= GetSpellTargetY()
             local location loc= Location(casterX, casterY)
-    		if DeidaraT___created == false then
+    		if DeidaraT__created == false then
                 set this=s__DeidaraEternalExplosion_allocate()
                 set this2=s__DeidaraEternalExplosion_allocate()
             
     		    set s__DeidaraEternalExplosion_count[this]=0
-                set DeidaraT___created=true
-                set DeidaraT___detonate=false
+                set DeidaraT__created=true
+                set DeidaraT__detonate=false
             
     		    set s__DeidaraEternalExplosion_deidara=GetTriggerUnit()
     		    set deidaraSummon=null
@@ -45588,8 +45880,8 @@ endfunction
     		    call TimerStart(NewTimerEx(this2), 0.03, false, function s__DeidaraEternalExplosion_resetSpellCD)
     		else
                 set this=s__DeidaraEternalExplosion_allocate()
-                set DeidaraT___detonate=true
-                set DeidaraT___created=false
+                set DeidaraT__detonate=true
+                set DeidaraT__created=false
     			call s__DeidaraEternalExplosion_deallocate(this)
     		endif
      endfunction 
@@ -45621,8 +45913,8 @@ endfunction
     			set this=s__DeidaraEternalExplosion_allocate()
     			set s__DeidaraEternalExplosion_damaged[this]=CreateGroup()
     			set s__DeidaraEternalExplosion_count[this]=0
-                set DeidaraT___detonate=false
-                set DeidaraT___created=false
+                set DeidaraT__detonate=false
+                set DeidaraT__created=false
 
 				set bj_lastCreatedEffect=AddSpecialEffect("s_Shadow_Smoke.mdl", GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
 				call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 5.0)
@@ -46936,54 +47228,54 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__GaaraSandShield___Spell_allocate takes nothing returns integer
+        function s__GaaraSandShield__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__GaaraSandShield___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__GaaraSandShield___Spell_Alloc__instanceCount=s__GaaraSandShield___Spell_Alloc__instanceCount + 1
-                set this=s__GaaraSandShield___Spell_Alloc__instanceCount
+            if ( s__GaaraSandShield__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__GaaraSandShield__Spell_Alloc__instanceCount=s__GaaraSandShield__Spell_Alloc__instanceCount + 1
+                set this=s__GaaraSandShield__Spell_Alloc__instanceCount
             else
-                set this=s__GaaraSandShield___Spell_Alloc__recycle[(0)]
-                set s__GaaraSandShield___Spell_Alloc__recycle[(0)]=s__GaaraSandShield___Spell_Alloc__recycle[s__GaaraSandShield___Spell_Alloc__recycle[(0)]]
+                set this=s__GaaraSandShield__Spell_Alloc__recycle[(0)]
+                set s__GaaraSandShield__Spell_Alloc__recycle[(0)]=s__GaaraSandShield__Spell_Alloc__recycle[s__GaaraSandShield__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__GaaraSandShield___Spell_deallocate takes integer this returns nothing
-            set s__GaaraSandShield___Spell_Alloc__recycle[this]=s__GaaraSandShield___Spell_Alloc__recycle[(0)]
-            set s__GaaraSandShield___Spell_Alloc__recycle[(0)]=this
+        function s__GaaraSandShield__Spell_deallocate takes integer this returns nothing
+            set s__GaaraSandShield__Spell_Alloc__recycle[this]=s__GaaraSandShield__Spell_Alloc__recycle[(0)]
+            set s__GaaraSandShield__Spell_Alloc__recycle[(0)]=this
         endfunction
     
         
-        function s__GaaraSandShield___Spell_finish takes nothing returns nothing
+        function s__GaaraSandShield__Spell_finish takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real diff= s__GaaraSandShield___Spell_last_hp[this] - GetUnitState(s__GaaraSandShield___Spell_target[this], UNIT_STATE_LIFE)
-            local real shield_x= (((GetUnitX(s__GaaraSandShield___Spell_target[this]) )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__GaaraSandShield___Spell_target[this]) + 180) )*1.0)) * (( 100)*1.0)) // INLINED!!
-            local real shield_y= (((GetUnitY(s__GaaraSandShield___Spell_target[this]) )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__GaaraSandShield___Spell_target[this]) + 180) )*1.0)) * (( 100)*1.0)) // INLINED!!
-            call SetUnitX(s__GaaraSandShield___Spell_shield[this], shield_x)
-            call SetUnitY(s__GaaraSandShield___Spell_shield[this], shield_y)
-            call SetUnitFacing(s__GaaraSandShield___Spell_shield[this], GetUnitFacing(s__GaaraSandShield___Spell_target[this]))
+            local real diff= s__GaaraSandShield__Spell_last_hp[this] - GetUnitState(s__GaaraSandShield__Spell_target[this], UNIT_STATE_LIFE)
+            local real shield_x= (((GetUnitX(s__GaaraSandShield__Spell_target[this]) )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__GaaraSandShield__Spell_target[this]) + 180) )*1.0)) * (( 100)*1.0)) // INLINED!!
+            local real shield_y= (((GetUnitY(s__GaaraSandShield__Spell_target[this]) )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__GaaraSandShield__Spell_target[this]) + 180) )*1.0)) * (( 100)*1.0)) // INLINED!!
+            call SetUnitX(s__GaaraSandShield__Spell_shield[this], shield_x)
+            call SetUnitY(s__GaaraSandShield__Spell_shield[this], shield_y)
+            call SetUnitFacing(s__GaaraSandShield__Spell_shield[this], GetUnitFacing(s__GaaraSandShield__Spell_target[this]))
             if diff > 0 then
-                set diff=RMinBJ(s__GaaraSandShield___Spell_hp[this], diff)
-                set s__GaaraSandShield___Spell_hp[this]=s__GaaraSandShield___Spell_hp[this] - diff
-                call SetUnitState(s__GaaraSandShield___Spell_target[this], UNIT_STATE_LIFE, GetUnitState(s__GaaraSandShield___Spell_target[this], UNIT_STATE_LIFE) + diff)
+                set diff=RMinBJ(s__GaaraSandShield__Spell_hp[this], diff)
+                set s__GaaraSandShield__Spell_hp[this]=s__GaaraSandShield__Spell_hp[this] - diff
+                call SetUnitState(s__GaaraSandShield__Spell_target[this], UNIT_STATE_LIFE, GetUnitState(s__GaaraSandShield__Spell_target[this], UNIT_STATE_LIFE) + diff)
             endif
-            set s__GaaraSandShield___Spell_last_hp[this]=GetUnitState(s__GaaraSandShield___Spell_target[this], UNIT_STATE_LIFE)
-            set s__GaaraSandShield___Spell_count[this]=s__GaaraSandShield___Spell_count[this] + 1
-            if s__GaaraSandShield___Spell_hp[this] <= 0 or s__GaaraSandShield___Spell_count[this] >= 300 then
-                call KillUnit(s__GaaraSandShield___Spell_shield[this])
-                call PauseUnit(s__GaaraSandShield___Spell_target[this], false)
-                set s__GaaraSandShield___Spell_target[this]=null
-                set s__GaaraSandShield___Spell_shield[this]=null
-                call s__GaaraSandShield___Spell_deallocate(this)
+            set s__GaaraSandShield__Spell_last_hp[this]=GetUnitState(s__GaaraSandShield__Spell_target[this], UNIT_STATE_LIFE)
+            set s__GaaraSandShield__Spell_count[this]=s__GaaraSandShield__Spell_count[this] + 1
+            if s__GaaraSandShield__Spell_hp[this] <= 0 or s__GaaraSandShield__Spell_count[this] >= 300 then
+                call KillUnit(s__GaaraSandShield__Spell_shield[this])
+                call PauseUnit(s__GaaraSandShield__Spell_target[this], false)
+                set s__GaaraSandShield__Spell_target[this]=null
+                set s__GaaraSandShield__Spell_shield[this]=null
+                call s__GaaraSandShield__Spell_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__GaaraSandShield___Spell_actions takes nothing returns nothing
+        function s__GaaraSandShield__Spell_actions takes nothing returns nothing
             local integer this
             local real caster_x
             local real caster_y
@@ -46992,36 +47284,36 @@ endfunction
             local real angle
             local real shield_x
             local real shield_y
-            set this=s__GaaraSandShield___Spell_allocate()
-            set s__GaaraSandShield___Spell_caster[this]=GetTriggerUnit()
-            set s__GaaraSandShield___Spell_target[this]=GetSpellTargetUnit()
-            set s__GaaraSandShield___Spell_count[this]=0
-            set caster_x=GetUnitX(s__GaaraSandShield___Spell_caster[this])
-            set caster_y=GetUnitY(s__GaaraSandShield___Spell_caster[this])
-            set target_x=GetUnitX(s__GaaraSandShield___Spell_target[this])
-            set target_y=GetUnitY(s__GaaraSandShield___Spell_target[this])
-            if s__GaaraSandShield___Spell_caster[this] == s__GaaraSandShield___Spell_target[this] then
-                set angle=Deg2Rad(GetUnitFacing(s__GaaraSandShield___Spell_caster[this]) + 180)
-                set shield_x=caster_x + Cos(Deg2Rad(GetUnitFacing(s__GaaraSandShield___Spell_caster[this]) + 180)) * 100
-                set shield_y=caster_y + Sin(Deg2Rad(GetUnitFacing(s__GaaraSandShield___Spell_caster[this]) + 180)) * 100
+            set this=s__GaaraSandShield__Spell_allocate()
+            set s__GaaraSandShield__Spell_caster[this]=GetTriggerUnit()
+            set s__GaaraSandShield__Spell_target[this]=GetSpellTargetUnit()
+            set s__GaaraSandShield__Spell_count[this]=0
+            set caster_x=GetUnitX(s__GaaraSandShield__Spell_caster[this])
+            set caster_y=GetUnitY(s__GaaraSandShield__Spell_caster[this])
+            set target_x=GetUnitX(s__GaaraSandShield__Spell_target[this])
+            set target_y=GetUnitY(s__GaaraSandShield__Spell_target[this])
+            if s__GaaraSandShield__Spell_caster[this] == s__GaaraSandShield__Spell_target[this] then
+                set angle=Deg2Rad(GetUnitFacing(s__GaaraSandShield__Spell_caster[this]) + 180)
+                set shield_x=caster_x + Cos(Deg2Rad(GetUnitFacing(s__GaaraSandShield__Spell_caster[this]) + 180)) * 100
+                set shield_y=caster_y + Sin(Deg2Rad(GetUnitFacing(s__GaaraSandShield__Spell_caster[this]) + 180)) * 100
             else
                 set angle=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
                 set shield_x=target_x + Cos(angle) * 100
                 set shield_y=target_y + Sin(angle) * 100
             endif
-            set s__GaaraSandShield___Spell_shield[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e01S' ), (( shield_x )*1.0), (( shield_y )*1.0), (( Rad2Deg(angle) + 180)*1.0))) // INLINED!!
-            call SetUnitX(s__GaaraSandShield___Spell_shield[this], shield_x)
-            call SetUnitY(s__GaaraSandShield___Spell_shield[this], shield_y)
-            call SetUnitAnimation(s__GaaraSandShield___Spell_shield[this], "birth")
-            call SetUnitFlyHeight(s__GaaraSandShield___Spell_shield[this], GetUnitFlyHeight(s__GaaraSandShield___Spell_target[this]), 0)
+            set s__GaaraSandShield__Spell_shield[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e01S' ), (( shield_x )*1.0), (( shield_y )*1.0), (( Rad2Deg(angle) + 180)*1.0))) // INLINED!!
+            call SetUnitX(s__GaaraSandShield__Spell_shield[this], shield_x)
+            call SetUnitY(s__GaaraSandShield__Spell_shield[this], shield_y)
+            call SetUnitAnimation(s__GaaraSandShield__Spell_shield[this], "birth")
+            call SetUnitFlyHeight(s__GaaraSandShield__Spell_shield[this], GetUnitFlyHeight(s__GaaraSandShield__Spell_target[this]), 0)
 
-            set s__GaaraSandShield___Spell_hp[this]=GetHeroAgi(GetTriggerUnit(), true) * 3 + 10 * GetHeroLevel(GetTriggerUnit())
-            set s__GaaraSandShield___Spell_last_hp[this]=GetUnitState(s__GaaraSandShield___Spell_target[this], UNIT_STATE_LIFE)
-            call TimerStart(NewTimerEx(this), 0.02, true, function s__GaaraSandShield___Spell_finish)
+            set s__GaaraSandShield__Spell_hp[this]=GetHeroAgi(GetTriggerUnit(), true) * 3 + 10 * GetHeroLevel(GetTriggerUnit())
+            set s__GaaraSandShield__Spell_last_hp[this]=GetUnitState(s__GaaraSandShield__Spell_target[this], UNIT_STATE_LIFE)
+            call TimerStart(NewTimerEx(this), 0.02, true, function s__GaaraSandShield__Spell_finish)
         endfunction
         
-        function s__GaaraSandShield___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(15 , s__GaaraSandShield___Spell_SPELL_ID , function s__GaaraSandShield___Spell_actions)
+        function s__GaaraSandShield__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(15 , s__GaaraSandShield__Spell_SPELL_ID , function s__GaaraSandShield__Spell_actions)
         endfunction
         
     
@@ -47840,48 +48132,48 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__GaaraKidShukakuBijuuDama___Spell_allocate takes nothing returns integer
+        function s__GaaraKidShukakuBijuuDama__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__GaaraKidShukakuBijuuDama___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__GaaraKidShukakuBijuuDama___Spell_Alloc__instanceCount=s__GaaraKidShukakuBijuuDama___Spell_Alloc__instanceCount + 1
-                set this=s__GaaraKidShukakuBijuuDama___Spell_Alloc__instanceCount
+            if ( s__GaaraKidShukakuBijuuDama__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__GaaraKidShukakuBijuuDama__Spell_Alloc__instanceCount=s__GaaraKidShukakuBijuuDama__Spell_Alloc__instanceCount + 1
+                set this=s__GaaraKidShukakuBijuuDama__Spell_Alloc__instanceCount
             else
-                set this=s__GaaraKidShukakuBijuuDama___Spell_Alloc__recycle[(0)]
-                set s__GaaraKidShukakuBijuuDama___Spell_Alloc__recycle[(0)]=s__GaaraKidShukakuBijuuDama___Spell_Alloc__recycle[s__GaaraKidShukakuBijuuDama___Spell_Alloc__recycle[(0)]]
+                set this=s__GaaraKidShukakuBijuuDama__Spell_Alloc__recycle[(0)]
+                set s__GaaraKidShukakuBijuuDama__Spell_Alloc__recycle[(0)]=s__GaaraKidShukakuBijuuDama__Spell_Alloc__recycle[s__GaaraKidShukakuBijuuDama__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__GaaraKidShukakuBijuuDama___Spell_deallocate takes integer this returns nothing
-            set s__GaaraKidShukakuBijuuDama___Spell_Alloc__recycle[this]=s__GaaraKidShukakuBijuuDama___Spell_Alloc__recycle[(0)]
-            set s__GaaraKidShukakuBijuuDama___Spell_Alloc__recycle[(0)]=this
+        function s__GaaraKidShukakuBijuuDama__Spell_deallocate takes integer this returns nothing
+            set s__GaaraKidShukakuBijuuDama__Spell_Alloc__recycle[this]=s__GaaraKidShukakuBijuuDama__Spell_Alloc__recycle[(0)]
+            set s__GaaraKidShukakuBijuuDama__Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__GaaraKidShukakuBijuuDama___Spell_destroy takes integer this returns nothing
+        function s__GaaraKidShukakuBijuuDama__Spell_destroy takes integer this returns nothing
             local real caster_x
             local real caster_y
             local integer i= 0
-            set caster_x=GetUnitX(s__GaaraKidShukakuBijuuDama___Spell_caster[this])
-            set caster_y=GetUnitY(s__GaaraKidShukakuBijuuDama___Spell_caster[this])
+            set caster_x=GetUnitX(s__GaaraKidShukakuBijuuDama__Spell_caster[this])
+            set caster_y=GetUnitY(s__GaaraKidShukakuBijuuDama__Spell_caster[this])
              
-            call DestroyGroup(s__GaaraKidShukakuBijuuDama___Spell_glow[this])
-            call DestroyGroup(s__GaaraKidShukakuBijuuDama___Spell_damaged[this])
-            call KillUnit(s__GaaraKidShukakuBijuuDama___Spell_dummy[this])
-            set s__GaaraKidShukakuBijuuDama___Spell_glow[this]=null
-            set s__GaaraKidShukakuBijuuDama___Spell_damaged[this]=null
-            set s__GaaraKidShukakuBijuuDama___Spell_caster[this]=null
-            set s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this]=null
-            set s__GaaraKidShukakuBijuuDama___Spell_ball[this]=null
-            set s__GaaraKidShukakuBijuuDama___Spell_dummy[this]=null
-            call s__GaaraKidShukakuBijuuDama___Spell_deallocate(this)
+            call DestroyGroup(s__GaaraKidShukakuBijuuDama__Spell_glow[this])
+            call DestroyGroup(s__GaaraKidShukakuBijuuDama__Spell_damaged[this])
+            call KillUnit(s__GaaraKidShukakuBijuuDama__Spell_dummy[this])
+            set s__GaaraKidShukakuBijuuDama__Spell_glow[this]=null
+            set s__GaaraKidShukakuBijuuDama__Spell_damaged[this]=null
+            set s__GaaraKidShukakuBijuuDama__Spell_caster[this]=null
+            set s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this]=null
+            set s__GaaraKidShukakuBijuuDama__Spell_ball[this]=null
+            set s__GaaraKidShukakuBijuuDama__Spell_dummy[this]=null
+            call s__GaaraKidShukakuBijuuDama__Spell_deallocate(this)
         endfunction
         
-        function s__GaaraKidShukakuBijuuDama___Spell_shake takes nothing returns nothing
+        function s__GaaraKidShukakuBijuuDama__Spell_shake takes nothing returns nothing
             local integer i= 0
             loop
                 exitwhen i > 11
@@ -47891,7 +48183,7 @@ endfunction
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__GaaraKidShukakuBijuuDama___Spell_periodic takes nothing returns nothing
+        function s__GaaraKidShukakuBijuuDama__Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real ball_x
             local real ball_y
@@ -47909,95 +48201,95 @@ endfunction
             local real offset
             local real size
             local integer i= 0
-            set s__GaaraKidShukakuBijuuDama___Spell_count[this]=s__GaaraKidShukakuBijuuDama___Spell_count[this] + 1
-            if s__GaaraKidShukakuBijuuDama___Spell_count[this] <= 30 then
-                set ball_x=GetUnitX(s__GaaraKidShukakuBijuuDama___Spell_ball[this])
-                set ball_y=GetUnitY(s__GaaraKidShukakuBijuuDama___Spell_ball[this])
+            set s__GaaraKidShukakuBijuuDama__Spell_count[this]=s__GaaraKidShukakuBijuuDama__Spell_count[this] + 1
+            if s__GaaraKidShukakuBijuuDama__Spell_count[this] <= 30 then
+                set ball_x=GetUnitX(s__GaaraKidShukakuBijuuDama__Spell_ball[this])
+                set ball_y=GetUnitY(s__GaaraKidShukakuBijuuDama__Spell_ball[this])
                 loop
                     set i=i + 1
                     exitwhen i > 20
-                    set unit_x=GetUnitX(s__GaaraKidShukakuBijuuDama___chakra[(this)*(1)+i])
-                    set unit_y=GetUnitY(s__GaaraKidShukakuBijuuDama___chakra[(this)*(1)+i])
+                    set unit_x=GetUnitX(s__GaaraKidShukakuBijuuDama__chakra[(this)*(1)+i])
+                    set unit_y=GetUnitY(s__GaaraKidShukakuBijuuDama__chakra[(this)*(1)+i])
                     set angle=Atan2(( ball_y - unit_y ), ( ball_x - unit_x ))
                     set new_x=unit_x + Cos(angle) * 10
                     set new_y=unit_y + Sin(angle) * 10
                     set parabola_x=new_x + Cos(angle + bj_PI / 2) * 10
                     set parabola_y=new_y + Sin(angle + bj_PI / 2) * 10
-                    call SetUnitX(s__GaaraKidShukakuBijuuDama___chakra[(this)*(1)+i], parabola_x)
-                    call SetUnitY(s__GaaraKidShukakuBijuuDama___chakra[(this)*(1)+i], parabola_y)
-                    call SetUnitFlyHeight(s__GaaraKidShukakuBijuuDama___chakra[(this)*(1)+i], Parabola(0 , 350 , 160 , 300 , 10 * s__GaaraKidShukakuBijuuDama___Spell_count[this]), 0)
+                    call SetUnitX(s__GaaraKidShukakuBijuuDama__chakra[(this)*(1)+i], parabola_x)
+                    call SetUnitY(s__GaaraKidShukakuBijuuDama__chakra[(this)*(1)+i], parabola_y)
+                    call SetUnitFlyHeight(s__GaaraKidShukakuBijuuDama__chakra[(this)*(1)+i], Parabola(0 , 350 , 160 , 300 , 10 * s__GaaraKidShukakuBijuuDama__Spell_count[this]), 0)
                 endloop
-            elseif s__GaaraKidShukakuBijuuDama___Spell_count[this] == 31 then
+            elseif s__GaaraKidShukakuBijuuDama__Spell_count[this] == 31 then
                 loop
                     set i=i + 1
                     exitwhen i > 20
-                    call KillUnit(s__GaaraKidShukakuBijuuDama___chakra[(this)*(1)+i])
-                    set s__GaaraKidShukakuBijuuDama___chakra[(this)*(1)+i]= null
+                    call KillUnit(s__GaaraKidShukakuBijuuDama__chakra[(this)*(1)+i])
+                    set s__GaaraKidShukakuBijuuDama__chakra[(this)*(1)+i]= null
                 endloop
             endif
-            if s__GaaraKidShukakuBijuuDama___Spell_count[this] <= 50 then
-                set size=0.006 * s__GaaraKidShukakuBijuuDama___Spell_count[this]
-                call SetUnitScale(s__GaaraKidShukakuBijuuDama___Spell_ball[this], size, size, size)
-                if ModuloInteger(s__GaaraKidShukakuBijuuDama___Spell_count[this], 3) == 0 then
-                    set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__GaaraKidShukakuBijuuDama___Spell_caster[this]) ), ( 'e015' ), (( GetUnitX(s__GaaraKidShukakuBijuuDama___Spell_ball[this]) )*1.0), (( GetUnitY(s__GaaraKidShukakuBijuuDama___Spell_ball[this]) )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
-                    call SetUnitX(bj_lastCreatedUnit, GetUnitX(s__GaaraKidShukakuBijuuDama___Spell_ball[this]))
-                    call SetUnitY(bj_lastCreatedUnit, GetUnitY(s__GaaraKidShukakuBijuuDama___Spell_ball[this]))
+            if s__GaaraKidShukakuBijuuDama__Spell_count[this] <= 50 then
+                set size=0.006 * s__GaaraKidShukakuBijuuDama__Spell_count[this]
+                call SetUnitScale(s__GaaraKidShukakuBijuuDama__Spell_ball[this], size, size, size)
+                if ModuloInteger(s__GaaraKidShukakuBijuuDama__Spell_count[this], 3) == 0 then
+                    set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__GaaraKidShukakuBijuuDama__Spell_caster[this]) ), ( 'e015' ), (( GetUnitX(s__GaaraKidShukakuBijuuDama__Spell_ball[this]) )*1.0), (( GetUnitY(s__GaaraKidShukakuBijuuDama__Spell_ball[this]) )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
+                    call SetUnitX(bj_lastCreatedUnit, GetUnitX(s__GaaraKidShukakuBijuuDama__Spell_ball[this]))
+                    call SetUnitY(bj_lastCreatedUnit, GetUnitY(s__GaaraKidShukakuBijuuDama__Spell_ball[this]))
                     call SetUnitTimeScale(bj_lastCreatedUnit, 1.5)
                     call SetUnitVertexColor(bj_lastCreatedUnit, 100, 100, 200, 150)
                     call SetUnitScale(bj_lastCreatedUnit, 2.5, 2.5, 2.5)
                     call KillUnit(bj_lastCreatedUnit)
                 endif
             endif
-            if s__GaaraKidShukakuBijuuDama___Spell_count[this] == 50 then
-                call SetUnitTimeScale(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this], 0)
+            if s__GaaraKidShukakuBijuuDama__Spell_count[this] == 50 then
+                call SetUnitTimeScale(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this], 0)
             endif
-            if s__GaaraKidShukakuBijuuDama___Spell_count[this] >= 35 and s__GaaraKidShukakuBijuuDama___Spell_count[this] < 70 then
+            if s__GaaraKidShukakuBijuuDama__Spell_count[this] >= 35 and s__GaaraKidShukakuBijuuDama__Spell_count[this] < 70 then
                 //call SetUnitScale(this.ball, 0.001, 0.001, 0.001)
             endif
-            if s__GaaraKidShukakuBijuuDama___Spell_count[this] == 70 then
-                call SetUnitTimeScale(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this], 1.0)
+            if s__GaaraKidShukakuBijuuDama__Spell_count[this] == 70 then
+                call SetUnitTimeScale(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this], 1.0)
                 loop
-                    set bj_lastCreatedUnit=FirstOfGroup(s__GaaraKidShukakuBijuuDama___Spell_paused[this])
+                    set bj_lastCreatedUnit=FirstOfGroup(s__GaaraKidShukakuBijuuDama__Spell_paused[this])
                     exitwhen bj_lastCreatedUnit == null
                     call PauseUnit(bj_lastCreatedUnit, false)
-                    call GroupRemoveUnit(s__GaaraKidShukakuBijuuDama___Spell_paused[this], bj_lastCreatedUnit)
+                    call GroupRemoveUnit(s__GaaraKidShukakuBijuuDama__Spell_paused[this], bj_lastCreatedUnit)
                 endloop
-                call DestroyGroup(s__GaaraKidShukakuBijuuDama___Spell_paused[this])
-                set s__GaaraKidShukakuBijuuDama___Spell_paused[this]=null
+                call DestroyGroup(s__GaaraKidShukakuBijuuDama__Spell_paused[this])
+                set s__GaaraKidShukakuBijuuDama__Spell_paused[this]=null
                 
-                call SetUnitScale(s__GaaraKidShukakuBijuuDama___Spell_ball[this], 0.3, 0.3, 0.3)
-                call SetUnitFlyHeight(s__GaaraKidShukakuBijuuDama___Spell_ball[this], 100, 0)
-                set kyuubi_x=GetUnitX(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this])
-                set kyuubi_y=GetUnitY(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this])
-                set new_x=kyuubi_x + Cos(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this]))) * 400
-                set new_y=kyuubi_y + Sin(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this]))) * 400
+                call SetUnitScale(s__GaaraKidShukakuBijuuDama__Spell_ball[this], 0.3, 0.3, 0.3)
+                call SetUnitFlyHeight(s__GaaraKidShukakuBijuuDama__Spell_ball[this], 100, 0)
+                set kyuubi_x=GetUnitX(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this])
+                set kyuubi_y=GetUnitY(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this])
+                set new_x=kyuubi_x + Cos(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this]))) * 400
+                set new_y=kyuubi_y + Sin(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this]))) * 400
                         
                 set bj_lastCreatedEffect=AddSpecialEffect("DevilSlam.mdl", new_x, new_y)
                 call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 3.0)
                 call BlzSetSpecialEffectColor(bj_lastCreatedEffect, 255, 0, 0)
                 call BlzSetSpecialEffectPitch(bj_lastCreatedEffect, - 1.57)
-                call BlzSetSpecialEffectRoll(bj_lastCreatedEffect, Deg2Rad(180 + GetUnitFacing(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this])))
+                call BlzSetSpecialEffectRoll(bj_lastCreatedEffect, Deg2Rad(180 + GetUnitFacing(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this])))
                 call BlzSetSpecialEffectHeight(bj_lastCreatedEffect, 200 + GetPointZ(new_x , new_y))
                 call DestroyEffect(bj_lastCreatedEffect)
 
-                set new_x=kyuubi_x + Cos(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this]))) * 450
-                set new_y=kyuubi_y + Sin(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this]))) * 450
-                set s__GaaraKidShukakuBijuuDama___Spell_dummy[this]=(CreateUnit((GetOwningPlayer(s__GaaraKidShukakuBijuuDama___Spell_caster[this]) ), ( XE_DUMMY_UNITID ), (( new_x )*1.0), (( new_y )*1.0), (( 0)*1.0))) // INLINED!!
-                call SetUnitX(s__GaaraKidShukakuBijuuDama___Spell_dummy[this], new_x)
-                call SetUnitY(s__GaaraKidShukakuBijuuDama___Spell_dummy[this], new_y)
-                call SetUnitTimeScale(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this], 2.0)
-            elseif s__GaaraKidShukakuBijuuDama___Spell_count[this] > 70 and s__GaaraKidShukakuBijuuDama___Spell_count[this] <= 100 then
-                set dummy_x=GetUnitX(s__GaaraKidShukakuBijuuDama___Spell_dummy[this])
-                set dummy_y=GetUnitY(s__GaaraKidShukakuBijuuDama___Spell_dummy[this])
-                set new_x=dummy_x + Cos(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this]))) * 30
-                set new_y=dummy_y + Sin(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this]))) * 30
+                set new_x=kyuubi_x + Cos(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this]))) * 450
+                set new_y=kyuubi_y + Sin(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this]))) * 450
+                set s__GaaraKidShukakuBijuuDama__Spell_dummy[this]=(CreateUnit((GetOwningPlayer(s__GaaraKidShukakuBijuuDama__Spell_caster[this]) ), ( XE_DUMMY_UNITID ), (( new_x )*1.0), (( new_y )*1.0), (( 0)*1.0))) // INLINED!!
+                call SetUnitX(s__GaaraKidShukakuBijuuDama__Spell_dummy[this], new_x)
+                call SetUnitY(s__GaaraKidShukakuBijuuDama__Spell_dummy[this], new_y)
+                call SetUnitTimeScale(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this], 2.0)
+            elseif s__GaaraKidShukakuBijuuDama__Spell_count[this] > 70 and s__GaaraKidShukakuBijuuDama__Spell_count[this] <= 100 then
+                set dummy_x=GetUnitX(s__GaaraKidShukakuBijuuDama__Spell_dummy[this])
+                set dummy_y=GetUnitY(s__GaaraKidShukakuBijuuDama__Spell_dummy[this])
+                set new_x=dummy_x + Cos(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this]))) * 30
+                set new_y=dummy_y + Sin(Deg2Rad(GetUnitFacing(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this]))) * 30
                 
-                call SetUnitX(s__GaaraKidShukakuBijuuDama___Spell_dummy[this], new_x)
-                call SetUnitY(s__GaaraKidShukakuBijuuDama___Spell_dummy[this], new_y)
-                call SetUnitX(s__GaaraKidShukakuBijuuDama___Spell_ball[this], new_x)
-                call SetUnitY(s__GaaraKidShukakuBijuuDama___Spell_ball[this], new_y)
-                if ModuloInteger(s__GaaraKidShukakuBijuuDama___Spell_count[this], 5) == 0 then
-                    set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__GaaraKidShukakuBijuuDama___Spell_caster[this]) ), ( 'e019' ), (( new_x )*1.0), (( new_y )*1.0), (( GetUnitFacing(s__GaaraKidShukakuBijuuDama___Spell_ball[this]))*1.0))) // INLINED!!
+                call SetUnitX(s__GaaraKidShukakuBijuuDama__Spell_dummy[this], new_x)
+                call SetUnitY(s__GaaraKidShukakuBijuuDama__Spell_dummy[this], new_y)
+                call SetUnitX(s__GaaraKidShukakuBijuuDama__Spell_ball[this], new_x)
+                call SetUnitY(s__GaaraKidShukakuBijuuDama__Spell_ball[this], new_y)
+                if ModuloInteger(s__GaaraKidShukakuBijuuDama__Spell_count[this], 5) == 0 then
+                    set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__GaaraKidShukakuBijuuDama__Spell_caster[this]) ), ( 'e019' ), (( new_x )*1.0), (( new_y )*1.0), (( GetUnitFacing(s__GaaraKidShukakuBijuuDama__Spell_ball[this]))*1.0))) // INLINED!!
                     call SetUnitX(bj_lastCreatedUnit, new_x)
                     call SetUnitY(bj_lastCreatedUnit, new_y)
                     call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 2.0)
@@ -48007,23 +48299,23 @@ endfunction
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__GaaraKidShukakuBijuuDama___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__GaaraKidShukakuBijuuDama___Spell_damaged[this]) then
-                        call UnitDamageTarget(s__GaaraKidShukakuBijuuDama___Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroAgi(s__GaaraKidShukakuBijuuDama___Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-                        call GroupAddUnit(s__GaaraKidShukakuBijuuDama___Spell_damaged[this], bj_lastCreatedUnit)
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__GaaraKidShukakuBijuuDama__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__GaaraKidShukakuBijuuDama__Spell_damaged[this]) then
+                        call UnitDamageTarget(s__GaaraKidShukakuBijuuDama__Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroAgi(s__GaaraKidShukakuBijuuDama__Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                        call GroupAddUnit(s__GaaraKidShukakuBijuuDama__Spell_damaged[this], bj_lastCreatedUnit)
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
             endif
-            if s__GaaraKidShukakuBijuuDama___Spell_count[this] == 101 then
+            if s__GaaraKidShukakuBijuuDama__Spell_count[this] == 101 then
                 loop
-                    set bj_lastCreatedUnit=FirstOfGroup(s__GaaraKidShukakuBijuuDama___Spell_glow[this])
+                    set bj_lastCreatedUnit=FirstOfGroup(s__GaaraKidShukakuBijuuDama__Spell_glow[this])
                     exitwhen bj_lastCreatedUnit == null
                     call KillUnit(bj_lastCreatedUnit)
-                    call GroupRemoveUnit(s__GaaraKidShukakuBijuuDama___Spell_glow[this], bj_lastCreatedUnit)
+                    call GroupRemoveUnit(s__GaaraKidShukakuBijuuDama__Spell_glow[this], bj_lastCreatedUnit)
                 endloop
-                set dummy_x=GetUnitX(s__GaaraKidShukakuBijuuDama___Spell_dummy[this])
-                set dummy_y=GetUnitY(s__GaaraKidShukakuBijuuDama___Spell_dummy[this])
+                set dummy_x=GetUnitX(s__GaaraKidShukakuBijuuDama__Spell_dummy[this])
+                set dummy_y=GetUnitY(s__GaaraKidShukakuBijuuDama__Spell_dummy[this])
                 set bj_lastCreatedEffect=AddSpecialEffect("war3mapImported\\PrettyExplosion.mdx", dummy_x, dummy_y)
 		        call BlzSetSpecialEffectTimeScale(bj_lastCreatedEffect, 2.0)
                 call DestroyEffect(bj_lastCreatedEffect)
@@ -48032,48 +48324,48 @@ endfunction
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__GaaraKidShukakuBijuuDama___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__GaaraKidShukakuBijuuDama___Spell_damaged[this]) then
-                        call UnitDamageTarget(s__GaaraKidShukakuBijuuDama___Spell_caster[this], bj_lastCreatedUnit, 5 * GetHeroAgi(s__GaaraKidShukakuBijuuDama___Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-                        call GroupAddUnit(s__GaaraKidShukakuBijuuDama___Spell_damaged[this], bj_lastCreatedUnit)
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__GaaraKidShukakuBijuuDama__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__GaaraKidShukakuBijuuDama__Spell_damaged[this]) then
+                        call UnitDamageTarget(s__GaaraKidShukakuBijuuDama__Spell_caster[this], bj_lastCreatedUnit, 5 * GetHeroAgi(s__GaaraKidShukakuBijuuDama__Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                        call GroupAddUnit(s__GaaraKidShukakuBijuuDama__Spell_damaged[this], bj_lastCreatedUnit)
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
-                call KillUnit(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this])
-                call ShowUnit(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this], false)
-                call PauseUnit(s__GaaraKidShukakuBijuuDama___Spell_caster[this], false)
-                call SetUnitTimeScale(s__GaaraKidShukakuBijuuDama___Spell_caster[this], 1.0)
-                call ShowUnit(s__GaaraKidShukakuBijuuDama___Spell_caster[this], true)
-                call RemoveUnit(s__GaaraKidShukakuBijuuDama___Spell_ball[this])
-                call SelectUnitForPlayerSingle(s__GaaraKidShukakuBijuuDama___Spell_caster[this], GetOwningPlayer(s__GaaraKidShukakuBijuuDama___Spell_caster[this]))
+                call KillUnit(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this])
+                call ShowUnit(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this], false)
+                call PauseUnit(s__GaaraKidShukakuBijuuDama__Spell_caster[this], false)
+                call SetUnitTimeScale(s__GaaraKidShukakuBijuuDama__Spell_caster[this], 1.0)
+                call ShowUnit(s__GaaraKidShukakuBijuuDama__Spell_caster[this], true)
+                call RemoveUnit(s__GaaraKidShukakuBijuuDama__Spell_ball[this])
+                call SelectUnitForPlayerSingle(s__GaaraKidShukakuBijuuDama__Spell_caster[this], GetOwningPlayer(s__GaaraKidShukakuBijuuDama__Spell_caster[this]))
                 set i=0
                 loop
                     exitwhen i > 11
-                    if IsUnitVisible(s__GaaraKidShukakuBijuuDama___Spell_caster[this], Player(i)) then
+                    if IsUnitVisible(s__GaaraKidShukakuBijuuDama__Spell_caster[this], Player(i)) then
                         call CameraSetEQNoiseForPlayer(Player(i), 7.00)
                     endif
                     set i=i + 1
                 endloop
-                call TimerStart(CreateTimer(), 2.0, false, function s__GaaraKidShukakuBijuuDama___Spell_shake)
-                call s__GaaraKidShukakuBijuuDama___Spell_destroy(this)
+                call TimerStart(CreateTimer(), 2.0, false, function s__GaaraKidShukakuBijuuDama__Spell_shake)
+                call s__GaaraKidShukakuBijuuDama__Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__GaaraKidShukakuBijuuDama___Spell_pause takes nothing returns nothing
+        function s__GaaraKidShukakuBijuuDama__Spell_pause takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local integer i= 0
             loop
                 set i=i + 1
                 exitwhen i > 10
-                call ShowUnit(s__GaaraKidShukakuBijuuDama___chakra[(this)*(1)+i], true)
+                call ShowUnit(s__GaaraKidShukakuBijuuDama__chakra[(this)*(1)+i], true)
             endloop
-            call TimerStart(NewTimerEx(this), 0.02, true, function s__GaaraKidShukakuBijuuDama___Spell_periodic)
+            call TimerStart(NewTimerEx(this), 0.02, true, function s__GaaraKidShukakuBijuuDama__Spell_periodic)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__GaaraKidShukakuBijuuDama___Spell_actions takes nothing returns nothing
-            local integer this= s__GaaraKidShukakuBijuuDama___Spell_allocate()
+        function s__GaaraKidShukakuBijuuDama__Spell_actions takes nothing returns nothing
+            local integer this= s__GaaraKidShukakuBijuuDama__Spell_allocate()
             local real caster_x
             local real caster_y
             local real target_x= GetSpellTargetX()
@@ -48084,26 +48376,26 @@ endfunction
             local real new_y_2
             local real angle
             local integer i= 0
-            set s__GaaraKidShukakuBijuuDama___Spell_glow[this]=CreateGroup()
-            set s__GaaraKidShukakuBijuuDama___Spell_damaged[this]=CreateGroup()
-            set s__GaaraKidShukakuBijuuDama___Spell_caster[this]=GetTriggerUnit()
-            call PauseUnit(s__GaaraKidShukakuBijuuDama___Spell_caster[this], true)
-            call ShowUnit(s__GaaraKidShukakuBijuuDama___Spell_caster[this], false)
-            set caster_x=GetUnitX(s__GaaraKidShukakuBijuuDama___Spell_caster[this])
-            set caster_y=GetUnitY(s__GaaraKidShukakuBijuuDama___Spell_caster[this])
+            set s__GaaraKidShukakuBijuuDama__Spell_glow[this]=CreateGroup()
+            set s__GaaraKidShukakuBijuuDama__Spell_damaged[this]=CreateGroup()
+            set s__GaaraKidShukakuBijuuDama__Spell_caster[this]=GetTriggerUnit()
+            call PauseUnit(s__GaaraKidShukakuBijuuDama__Spell_caster[this], true)
+            call ShowUnit(s__GaaraKidShukakuBijuuDama__Spell_caster[this], false)
+            set caster_x=GetUnitX(s__GaaraKidShukakuBijuuDama__Spell_caster[this])
+            set caster_y=GetUnitY(s__GaaraKidShukakuBijuuDama__Spell_caster[this])
             set angle=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
-            set s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e08J' ), (( caster_x )*1.0), (( caster_y )*1.0), (( Rad2Deg(angle))*1.0))) // INLINED!!
-            call SetUnitX(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this], caster_x)
-            call SetUnitY(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this], caster_y)
-            call SetUnitAnimation(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this], "spell")
-            call SetUnitTimeScale(s__GaaraKidShukakuBijuuDama___Spell_kyuubi[this], 0.8)
+            set s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e08J' ), (( caster_x )*1.0), (( caster_y )*1.0), (( Rad2Deg(angle))*1.0))) // INLINED!!
+            call SetUnitX(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this], caster_x)
+            call SetUnitY(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this], caster_y)
+            call SetUnitAnimation(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this], "spell")
+            call SetUnitTimeScale(s__GaaraKidShukakuBijuuDama__Spell_kyuubi[this], 0.8)
             set new_x=caster_x + Cos(Deg2Rad(Rad2Deg(angle))) * 300
             set new_y=caster_y + Sin(Deg2Rad(Rad2Deg(angle))) * 300
-            set s__GaaraKidShukakuBijuuDama___Spell_ball[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e013' ), (( new_x )*1.0), (( new_y )*1.0), (( 270)*1.0))) // INLINED!!
-            call SetUnitX(s__GaaraKidShukakuBijuuDama___Spell_ball[this], new_x)
-            call SetUnitY(s__GaaraKidShukakuBijuuDama___Spell_ball[this], new_y)
-            call SetUnitScale(s__GaaraKidShukakuBijuuDama___Spell_ball[this], 0.0001, 0.0001, 0.0001)
-            call SetUnitFlyHeight(s__GaaraKidShukakuBijuuDama___Spell_ball[this], 350, 0)
+            set s__GaaraKidShukakuBijuuDama__Spell_ball[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e013' ), (( new_x )*1.0), (( new_y )*1.0), (( 270)*1.0))) // INLINED!!
+            call SetUnitX(s__GaaraKidShukakuBijuuDama__Spell_ball[this], new_x)
+            call SetUnitY(s__GaaraKidShukakuBijuuDama__Spell_ball[this], new_y)
+            call SetUnitScale(s__GaaraKidShukakuBijuuDama__Spell_ball[this], 0.0001, 0.0001, 0.0001)
+            call SetUnitFlyHeight(s__GaaraKidShukakuBijuuDama__Spell_ball[this], 350, 0)
             set i=0
             loop
                 set i=i + 1
@@ -48113,29 +48405,29 @@ endfunction
                 set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'e014' ), (( new_x_2 )*1.0), (( new_y_2 )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
                 call SetUnitX(bj_lastCreatedUnit, new_x_2)
                 call SetUnitY(bj_lastCreatedUnit, new_y_2)
-                call ShowUnit(s__GaaraKidShukakuBijuuDama___chakra[(this)*(1)+i], false)
-                set s__GaaraKidShukakuBijuuDama___chakra[(this)*(1)+i]= bj_lastCreatedUnit
+                call ShowUnit(s__GaaraKidShukakuBijuuDama__chakra[(this)*(1)+i], false)
+                set s__GaaraKidShukakuBijuuDama__chakra[(this)*(1)+i]= bj_lastCreatedUnit
             endloop
-            set s__GaaraKidShukakuBijuuDama___Spell_count[this]=0
-            call SetUnitFacing(s__GaaraKidShukakuBijuuDama___Spell_caster[this], Rad2Deg(angle))
-            set s__GaaraKidShukakuBijuuDama___Spell_paused[this]=CreateGroup()
+            set s__GaaraKidShukakuBijuuDama__Spell_count[this]=0
+            call SetUnitFacing(s__GaaraKidShukakuBijuuDama__Spell_caster[this], Rad2Deg(angle))
+            set s__GaaraKidShukakuBijuuDama__Spell_paused[this]=CreateGroup()
             set bj_lastCreatedGroup=CreateGroup()
             call GroupEnumUnitsInRange(bj_lastCreatedGroup, caster_x, caster_y, 700.0, null)
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
                 if IsUnitEnemy(bj_lastCreatedUnit, GetTriggerPlayer()) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) then
-                    call GroupAddUnit(s__GaaraKidShukakuBijuuDama___Spell_paused[this], bj_lastCreatedUnit)
+                    call GroupAddUnit(s__GaaraKidShukakuBijuuDama__Spell_paused[this], bj_lastCreatedUnit)
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            call SetUnitAnimationByIndex(s__GaaraKidShukakuBijuuDama___Spell_caster[this], 3)
-            call TimerStart(NewTimerEx(this), 0.3, false, function s__GaaraKidShukakuBijuuDama___Spell_pause)
+            call SetUnitAnimationByIndex(s__GaaraKidShukakuBijuuDama__Spell_caster[this], 3)
+            call TimerStart(NewTimerEx(this), 0.3, false, function s__GaaraKidShukakuBijuuDama__Spell_pause)
         endfunction
         
-        function s__GaaraKidShukakuBijuuDama___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2((s__GaaraKidShukakuBijuuDama___Spell_SPELL_ID ) , Filter(( function s__GaaraKidShukakuBijuuDama___Spell_actions))) // INLINED!!
+        function s__GaaraKidShukakuBijuuDama__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEvent2((s__GaaraKidShukakuBijuuDama__Spell_SPELL_ID ) , Filter(( function s__GaaraKidShukakuBijuuDama__Spell_actions))) // INLINED!!
         endfunction
         
     
@@ -48279,47 +48571,47 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__GaiOmoteRenge___Spell_allocate takes nothing returns integer
+        function s__GaiOmoteRenge__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__GaiOmoteRenge___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__GaiOmoteRenge___Spell_Alloc__instanceCount=s__GaiOmoteRenge___Spell_Alloc__instanceCount + 1
-                set this=s__GaiOmoteRenge___Spell_Alloc__instanceCount
+            if ( s__GaiOmoteRenge__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__GaiOmoteRenge__Spell_Alloc__instanceCount=s__GaiOmoteRenge__Spell_Alloc__instanceCount + 1
+                set this=s__GaiOmoteRenge__Spell_Alloc__instanceCount
             else
-                set this=s__GaiOmoteRenge___Spell_Alloc__recycle[(0)]
-                set s__GaiOmoteRenge___Spell_Alloc__recycle[(0)]=s__GaiOmoteRenge___Spell_Alloc__recycle[s__GaiOmoteRenge___Spell_Alloc__recycle[(0)]]
+                set this=s__GaiOmoteRenge__Spell_Alloc__recycle[(0)]
+                set s__GaiOmoteRenge__Spell_Alloc__recycle[(0)]=s__GaiOmoteRenge__Spell_Alloc__recycle[s__GaiOmoteRenge__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__GaiOmoteRenge___Spell_deallocate takes integer this returns nothing
-            set s__GaiOmoteRenge___Spell_Alloc__recycle[this]=s__GaiOmoteRenge___Spell_Alloc__recycle[(0)]
-            set s__GaiOmoteRenge___Spell_Alloc__recycle[(0)]=this
+        function s__GaiOmoteRenge__Spell_deallocate takes integer this returns nothing
+            set s__GaiOmoteRenge__Spell_Alloc__recycle[this]=s__GaiOmoteRenge__Spell_Alloc__recycle[(0)]
+            set s__GaiOmoteRenge__Spell_Alloc__recycle[(0)]=this
         endfunction
         
         //private unit target
 		
-  function s__GaiOmoteRenge___Spell_dealDamage takes nothing returns boolean
-		                if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__GaiOmoteRenge___Spell_caster[s__GaiOmoteRenge___Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 and IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) == false then
+  function s__GaiOmoteRenge__Spell_dealDamage takes nothing returns boolean
+		                if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__GaiOmoteRenge__Spell_caster[s__GaiOmoteRenge__Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 and IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) == false then
                     //call StunUnitTimed(instance.caster, GetFilterUnit(), 2.0)
-                    call UnitDamageTarget(s__GaiOmoteRenge___Spell_caster[s__GaiOmoteRenge___Spell_instance], GetFilterUnit(), ( ( 50 + GetHeroStr(s__GaiOmoteRenge___Spell_caster[s__GaiOmoteRenge___Spell_instance], true) ) / 2 ) * GetUnitAbilityLevel(s__GaiOmoteRenge___Spell_caster[s__GaiOmoteRenge___Spell_instance], s__GaiOmoteRenge___Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                    call UnitDamageTarget(s__GaiOmoteRenge__Spell_caster[s__GaiOmoteRenge__Spell_instance], GetFilterUnit(), ( ( 50 + GetHeroStr(s__GaiOmoteRenge__Spell_caster[s__GaiOmoteRenge__Spell_instance], true) ) / 2 ) * GetUnitAbilityLevel(s__GaiOmoteRenge__Spell_caster[s__GaiOmoteRenge__Spell_instance], s__GaiOmoteRenge__Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
                 endif
       		return false
   endfunction
 
-        function s__GaiOmoteRenge___Spell_actions3 takes nothing returns nothing
+        function s__GaiOmoteRenge__Spell_actions3 takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real target_x= GetUnitX(s__GaiOmoteRenge___Spell_caster[this])
-            local real target_y= GetUnitY(s__GaiOmoteRenge___Spell_caster[this])
+            local real target_x= GetUnitX(s__GaiOmoteRenge__Spell_caster[this])
+            local real target_y= GetUnitY(s__GaiOmoteRenge__Spell_caster[this])
             local real new_x
             local real new_y
             local integer i= 0
             local integer i_2= 0
             local location l
-            set l=Location(GetUnitX(s__GaiOmoteRenge___Spell_caster[this]), GetUnitY(s__GaiOmoteRenge___Spell_caster[this]))
+            set l=Location(GetUnitX(s__GaiOmoteRenge__Spell_caster[this]), GetUnitY(s__GaiOmoteRenge__Spell_caster[this]))
             call TerrainDeformationRippleBJ(1.50, false, l, 100.00, 300.00, 128, 0.25, 50.00)
             call RemoveLocation(l)
             set l=null
@@ -48328,45 +48620,45 @@ endfunction
             
 	    call DestroyEffect(AddSpecialEffect(("war3mapImported\\bwaxec.mdx" ), (( target_x )*1.0), (( target_y)*1.0))) // INLINED!!
             set bj_lastCreatedGroup=CreateGroup()
-			set s__GaiOmoteRenge___Spell_instance=this
-            call GroupEnumUnitsInRange(bj_lastCreatedGroup, target_x, target_y, 300.0, Filter(function s__GaiOmoteRenge___Spell_dealDamage))
+			set s__GaiOmoteRenge__Spell_instance=this
+            call GroupEnumUnitsInRange(bj_lastCreatedGroup, target_x, target_y, 300.0, Filter(function s__GaiOmoteRenge__Spell_dealDamage))
             call DestroyGroup(bj_lastCreatedGroup)
-            call SlowArea(s__GaiOmoteRenge___Spell_caster[this] , target_x , target_y , 300.0)
-            call SetUnitTimeScale(s__GaiOmoteRenge___Spell_caster[this], 1.0)
-            call PauseUnit(s__GaiOmoteRenge___Spell_caster[this], false)
+            call SlowArea(s__GaiOmoteRenge__Spell_caster[this] , target_x , target_y , 300.0)
+            call SetUnitTimeScale(s__GaiOmoteRenge__Spell_caster[this], 1.0)
+            call PauseUnit(s__GaiOmoteRenge__Spell_caster[this], false)
             //call PauseUnit(this.target, false)
-            set s__GaiOmoteRenge___Spell_caster[this]=null
+            set s__GaiOmoteRenge__Spell_caster[this]=null
             //set this.target = null
-            call s__GaiOmoteRenge___Spell_deallocate(this)
+            call s__GaiOmoteRenge__Spell_deallocate(this)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__GaiOmoteRenge___Spell_actions2 takes nothing returns nothing
+        function s__GaiOmoteRenge__Spell_actions2 takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real caster_x= GetUnitX(s__GaiOmoteRenge___Spell_caster[this])
-            local real caster_y= GetUnitY(s__GaiOmoteRenge___Spell_caster[this])
-            call SetUnitTimeScale(s__GaiOmoteRenge___Spell_caster[this], 1.0)
+            local real caster_x= GetUnitX(s__GaiOmoteRenge__Spell_caster[this])
+            local real caster_y= GetUnitY(s__GaiOmoteRenge__Spell_caster[this])
+            call SetUnitTimeScale(s__GaiOmoteRenge__Spell_caster[this], 1.0)
             //call AddSpecialEffectEx("blackblink.mdx", caster_x, caster_y)
-            call TimerStart(NewTimerEx(this), 0.1, false, function s__GaiOmoteRenge___Spell_actions3)
+            call TimerStart(NewTimerEx(this), 0.1, false, function s__GaiOmoteRenge__Spell_actions3)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__GaiOmoteRenge___Spell_periodic takes nothing returns nothing
+        function s__GaiOmoteRenge__Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real caster_x= GetUnitX(s__GaiOmoteRenge___Spell_caster[this])
-            local real caster_y= GetUnitY(s__GaiOmoteRenge___Spell_caster[this])
-            local real target_x= s__GaiOmoteRenge___Spell_target_x[this]
-            local real target_y= s__GaiOmoteRenge___Spell_target_y[this]
+            local real caster_x= GetUnitX(s__GaiOmoteRenge__Spell_caster[this])
+            local real caster_y= GetUnitY(s__GaiOmoteRenge__Spell_caster[this])
+            local real target_x= s__GaiOmoteRenge__Spell_target_x[this]
+            local real target_y= s__GaiOmoteRenge__Spell_target_y[this]
             local real angle= Atan2(( target_y - caster_y ), ( target_x - caster_x ))
             local real new_x= caster_x + Cos(angle) * 35
             local real new_y= caster_y + Sin(angle) * 35
             local real distance_x= target_x - new_x
             local real distance_y= target_y - new_y
             local real distance= SquareRoot(distance_x * distance_x + distance_y * distance_y)
-            call SetUnitX(s__GaiOmoteRenge___Spell_caster[this], new_x)
-            call SetUnitY(s__GaiOmoteRenge___Spell_caster[this], new_y)
-            call SetUnitFacing(s__GaiOmoteRenge___Spell_caster[this], Rad2Deg(angle))
-            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__GaiOmoteRenge___Spell_caster[this]), s__GaiOmoteRenge___Spell_DUMMY_ID, caster_x, caster_y, GetUnitFacing(s__GaiOmoteRenge___Spell_caster[this]))
+            call SetUnitX(s__GaiOmoteRenge__Spell_caster[this], new_x)
+            call SetUnitY(s__GaiOmoteRenge__Spell_caster[this], new_y)
+            call SetUnitFacing(s__GaiOmoteRenge__Spell_caster[this], Rad2Deg(angle))
+            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__GaiOmoteRenge__Spell_caster[this]), s__GaiOmoteRenge__Spell_DUMMY_ID, caster_x, caster_y, GetUnitFacing(s__GaiOmoteRenge__Spell_caster[this]))
             call SetUnitX(bj_lastCreatedUnit, caster_x)
             call SetUnitY(bj_lastCreatedUnit, caster_y)
             call SetUnitVertexColor((bj_lastCreatedUnit ), ( 200 ), ( 200 ), ( 200 ), ( 200)) // INLINED!!
@@ -48374,41 +48666,41 @@ endfunction
             call SetUnitAnimationByIndex(bj_lastCreatedUnit, 16)
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 0.15)
             call DestroyEffect(AddSpecialEffect(("Effects\\s_Earth_Smash.mdl" ), (( caster_x )*1.0), (( caster_y)*1.0))) // INLINED!!
-            call SetUnitAnimationByIndex(s__GaiOmoteRenge___Spell_caster[this], 16)
+            call SetUnitAnimationByIndex(s__GaiOmoteRenge__Spell_caster[this], 16)
             if distance <= 50 then
-                call SetUnitTimeScale(s__GaiOmoteRenge___Spell_caster[this], 3.0)
-                call SetUnitAnimation(s__GaiOmoteRenge___Spell_caster[this], "attack 7")
-                call SetUnitFlyHeight(s__GaiOmoteRenge___Spell_caster[this], 500, 0)
-                call SetUnitFlyHeight(s__GaiOmoteRenge___Spell_caster[this], 0, 3000)
-                call SetUnitTimeScale(s__GaiOmoteRenge___Spell_caster[this], 1.0)
+                call SetUnitTimeScale(s__GaiOmoteRenge__Spell_caster[this], 3.0)
+                call SetUnitAnimation(s__GaiOmoteRenge__Spell_caster[this], "attack 7")
+                call SetUnitFlyHeight(s__GaiOmoteRenge__Spell_caster[this], 500, 0)
+                call SetUnitFlyHeight(s__GaiOmoteRenge__Spell_caster[this], 0, 3000)
+                call SetUnitTimeScale(s__GaiOmoteRenge__Spell_caster[this], 1.0)
                 //call PauseUnit(this.target, false) 
                 //call ShowUnit(this.target, false)
-                call TimerStart(NewTimerEx(this), 0.1, false, function s__GaiOmoteRenge___Spell_actions2)
+                call TimerStart(NewTimerEx(this), 0.1, false, function s__GaiOmoteRenge__Spell_actions2)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__GaiOmoteRenge___Spell_actions takes nothing returns nothing
-            local integer this= s__GaiOmoteRenge___Spell_allocate()
-            set s__GaiOmoteRenge___Spell_caster[this]=GetTriggerUnit()
+        function s__GaiOmoteRenge__Spell_actions takes nothing returns nothing
+            local integer this= s__GaiOmoteRenge__Spell_allocate()
+            set s__GaiOmoteRenge__Spell_caster[this]=GetTriggerUnit()
             //set this.target = GetSpellTargetUnit()
-            set s__GaiOmoteRenge___Spell_target_x[this]=GetSpellTargetX()
-            set s__GaiOmoteRenge___Spell_target_y[this]=GetSpellTargetY()
-            call PauseUnit(s__GaiOmoteRenge___Spell_caster[this], true)
+            set s__GaiOmoteRenge__Spell_target_x[this]=GetSpellTargetX()
+            set s__GaiOmoteRenge__Spell_target_y[this]=GetSpellTargetY()
+            call PauseUnit(s__GaiOmoteRenge__Spell_caster[this], true)
             //call PauseUnit(this.target, true)
-            call SetUnitAnimationByIndex(s__GaiOmoteRenge___Spell_caster[this], 16)
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__GaiOmoteRenge___Spell_periodic)
+            call SetUnitAnimationByIndex(s__GaiOmoteRenge__Spell_caster[this], 16)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__GaiOmoteRenge__Spell_periodic)
         endfunction
         
-        function s__GaiOmoteRenge___Spell_dies takes nothing returns nothing
-            if GetUnitTypeId(GetTriggerUnit()) == s__GaiOmoteRenge___Spell_DUMMY_ID then
+        function s__GaiOmoteRenge__Spell_dies takes nothing returns nothing
+            if GetUnitTypeId(GetTriggerUnit()) == s__GaiOmoteRenge__Spell_DUMMY_ID then
                 call ShowUnit(GetTriggerUnit(), false)
             endif
         endfunction
         
-        function s__GaiOmoteRenge___Spell_onInit takes nothing returns nothing
-            call RegisterPlayerUnitEventForId(29 , EVENT_PLAYER_UNIT_DEATH , function s__GaiOmoteRenge___Spell_dies)
-            call RegisterSpellEffectEventForId(29 , s__GaiOmoteRenge___Spell_SPELL_ID , function s__GaiOmoteRenge___Spell_actions)
+        function s__GaiOmoteRenge__Spell_onInit takes nothing returns nothing
+            call RegisterPlayerUnitEventForId(29 , EVENT_PLAYER_UNIT_DEATH , function s__GaiOmoteRenge__Spell_dies)
+            call RegisterSpellEffectEventForId(29 , s__GaiOmoteRenge__Spell_SPELL_ID , function s__GaiOmoteRenge__Spell_actions)
         endfunction
         
     
@@ -48932,14 +49224,14 @@ function Trig_Yagai_Conditions takes nothing returns boolean
     return ( ( GetSpellAbilityId() == 'A0OC' ) )
 endfunction
 
-function GaiYagai___YagaiEnd takes nothing returns nothing
-    call DisableTrigger(GaiYagai___t2)
+function GaiYagai__YagaiEnd takes nothing returns nothing
+    call DisableTrigger(GaiYagai__t2)
     call SetUnitFlyHeight(udg_units14[3], 0.00, 500.00)
     call PauseUnit(udg_units14[3], false)
     call SetUnitPathing(udg_units14[3], true)
     call SetUnitTimeScale(udg_units14[3], 1.0)
     call DestroyEffect(udg_effects02[1213])
-    call KillUnit(GaiYagai___dragon)
+    call KillUnit(GaiYagai__dragon)
     call GroupClear(udg_groups03[0])
 endfunction
 
@@ -48948,7 +49240,7 @@ function Trig_Yagai_Actions takes nothing returns nothing
         call PlaySoundOnUnitBJ(gg_snd_Gai_Q_Yagai, 100.0, GetTriggerUnit())
     endif
     set udg_units14[3]=GetTriggerUnit()
-    set GaiYagai___angle=Rad2Deg(Atan3(GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , GetSpellTargetX() , GetSpellTargetY()))
+    set GaiYagai__angle=Rad2Deg(Atan3(GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , GetSpellTargetX() , GetSpellTargetY()))
 
     call PauseUnit(udg_units14[3], true)
     call SetUnitTimeScale(udg_units14[3], 3.0)
@@ -48959,12 +49251,12 @@ function Trig_Yagai_Actions takes nothing returns nothing
 call AddSpecialEffectTargetUnitBJ(("foot right" ), ( udg_units14[3] ), ( "Abilities\\Spells\\Other\\ImmolationRed\\ImmolationRedTarget.mdl")) // INLINED!!
     set udg_effects02[1213]=bj_lastCreatedEffect
 
-    set GaiYagai___dragon=CreateUnit(GetTriggerPlayer(), 'n01X', GetUnitX(udg_units14[3]), GetUnitY(udg_units14[3]), GaiYagai___angle)
-    call SetUnitTimeScale(GaiYagai___dragon, 3.0)
-    call SetUnitAnimation(GaiYagai___dragon, "birth")
+    set GaiYagai__dragon=CreateUnit(GetTriggerPlayer(), 'n01X', GetUnitX(udg_units14[3]), GetUnitY(udg_units14[3]), GaiYagai__angle)
+    call SetUnitTimeScale(GaiYagai__dragon, 3.0)
+    call SetUnitAnimation(GaiYagai__dragon, "birth")
 
-    set GaiYagai___count=0
-    call EnableTrigger(GaiYagai___t2)
+    set GaiYagai__count=0
+    call EnableTrigger(GaiYagai__t2)
 endfunction
 
 function Trig_Yagai2_Func001C takes nothing returns boolean
@@ -49028,22 +49320,22 @@ function Trig_Yagai2_Actions takes nothing returns nothing
     local real x
     local real y
     local integer i
-    set GaiYagai___count=GaiYagai___count + 1
-    if GaiYagai___count == 10 then
-        call SetUnitTimeScale(GaiYagai___dragon, 1.0)
-        call SetUnitAnimation(GaiYagai___dragon, "stand")
+    set GaiYagai__count=GaiYagai__count + 1
+    if GaiYagai__count == 10 then
+        call SetUnitTimeScale(GaiYagai__dragon, 1.0)
+        call SetUnitAnimation(GaiYagai__dragon, "stand")
     endif
     if ( ( IsTerrainPathableBJ(PolarProjectionBJ(GetUnitLoc(udg_units14[3]), 50.00, GetUnitFacing(udg_units14[3])), PATHING_TYPE_WALKABILITY) ) ) then
     else
-        set udg_locations03[126]=PolarProjectionBJ(GetUnitLoc(udg_units14[3]), 50.00, GaiYagai___angle)
+        set udg_locations03[126]=PolarProjectionBJ(GetUnitLoc(udg_units14[3]), 50.00, GaiYagai__angle)
         //call SetUnitPositionLocFacingBJ(udg_units14[3],udg_locations03[126],GetUnitFacing(udg_units14[3]))
         call SetUnitX(udg_units14[3], GetLocationX(udg_locations03[126]))
         call SetUnitY(udg_units14[3], GetLocationY(udg_locations03[126]))
-        call SetUnitFacing(udg_units14[3], GaiYagai___angle)
-        call SetUnitX(GaiYagai___dragon, GetUnitX(udg_units14[3]))
-        call SetUnitY(GaiYagai___dragon, GetUnitY(udg_units14[3]))
-        call SetUnitFacing(GaiYagai___dragon, GaiYagai___angle)
-        if ModuloInteger(GaiYagai___count, 3) == 0 then
+        call SetUnitFacing(udg_units14[3], GaiYagai__angle)
+        call SetUnitX(GaiYagai__dragon, GetUnitX(udg_units14[3]))
+        call SetUnitY(GaiYagai__dragon, GetUnitY(udg_units14[3]))
+        call SetUnitFacing(GaiYagai__dragon, GaiYagai__angle)
+        if ModuloInteger(GaiYagai__count, 3) == 0 then
             //call TerrainDeformationRippleBJ( 1.0, true, udg_locations03[126], 300.00, 300.00, 300.00, 0.2, 50.00 )
             set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(udg_units14[3]), 'n01D', GetLocationX(udg_locations03[126]), GetLocationY(udg_locations03[126]), GetUnitFacing(udg_units14[3]))
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 2.0)
@@ -49061,21 +49353,21 @@ call AddSpecialEffectTargetUnitBJ(("foot right" ), ( udg_units14[3] ), ( "Abilit
     call ForGroupBJ(GetUnitsInRangeOfLocMatching(300.00, udg_locations03[126], Condition(function Trig_Yagai2_Func009001003)), function Trig_Yagai2_Func009A)
     call ForGroupBJ(GetUnitsInRangeOfLocMatching(250.00, udg_locations03[126], Condition(function Trig_Yagai2_Func010001003)), function Trig_Yagai2_Func010A)
     call RemoveLocation(udg_locations03[126])
-    if GaiYagai___count >= 20 then
-        call GaiYagai___YagaiEnd()
+    if GaiYagai__count >= 20 then
+        call GaiYagai__YagaiEnd()
     endif
 endfunction
 
-function GaiYagai___init takes nothing returns nothing
-    set GaiYagai___t1=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(GaiYagai___t1, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(GaiYagai___t1, Condition(function Trig_Yagai_Conditions))
-    call TriggerAddAction(GaiYagai___t1, function Trig_Yagai_Actions)
-    call EnableTriggerForId(29 , GaiYagai___t1)
-    set GaiYagai___t2=CreateTrigger()
-    call DisableTrigger(GaiYagai___t2)
-    call TriggerRegisterTimerEventPeriodic(GaiYagai___t2, 0.03)
-    call TriggerAddAction(GaiYagai___t2, function Trig_Yagai2_Actions)
+function GaiYagai__init takes nothing returns nothing
+    set GaiYagai__t1=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(GaiYagai__t1, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(GaiYagai__t1, Condition(function Trig_Yagai_Conditions))
+    call TriggerAddAction(GaiYagai__t1, function Trig_Yagai_Actions)
+    call EnableTriggerForId(29 , GaiYagai__t1)
+    set GaiYagai__t2=CreateTrigger()
+    call DisableTrigger(GaiYagai__t2)
+    call TriggerRegisterTimerEventPeriodic(GaiYagai__t2, 0.03)
+    call TriggerAddAction(GaiYagai__t2, function Trig_Yagai2_Actions)
 endfunction
 
 // scope GaiYagai ends
@@ -49284,118 +49576,118 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__NidaimeMizukageWaterPistol___Spell_allocate takes nothing returns integer
+        function s__NidaimeMizukageWaterPistol__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__NidaimeMizukageWaterPistol___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__NidaimeMizukageWaterPistol___Spell_Alloc__instanceCount=s__NidaimeMizukageWaterPistol___Spell_Alloc__instanceCount + 1
-                set this=s__NidaimeMizukageWaterPistol___Spell_Alloc__instanceCount
+            if ( s__NidaimeMizukageWaterPistol__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__NidaimeMizukageWaterPistol__Spell_Alloc__instanceCount=s__NidaimeMizukageWaterPistol__Spell_Alloc__instanceCount + 1
+                set this=s__NidaimeMizukageWaterPistol__Spell_Alloc__instanceCount
             else
-                set this=s__NidaimeMizukageWaterPistol___Spell_Alloc__recycle[(0)]
-                set s__NidaimeMizukageWaterPistol___Spell_Alloc__recycle[(0)]=s__NidaimeMizukageWaterPistol___Spell_Alloc__recycle[s__NidaimeMizukageWaterPistol___Spell_Alloc__recycle[(0)]]
+                set this=s__NidaimeMizukageWaterPistol__Spell_Alloc__recycle[(0)]
+                set s__NidaimeMizukageWaterPistol__Spell_Alloc__recycle[(0)]=s__NidaimeMizukageWaterPistol__Spell_Alloc__recycle[s__NidaimeMizukageWaterPistol__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__NidaimeMizukageWaterPistol___Spell_deallocate takes integer this returns nothing
-            set s__NidaimeMizukageWaterPistol___Spell_Alloc__recycle[this]=s__NidaimeMizukageWaterPistol___Spell_Alloc__recycle[(0)]
-            set s__NidaimeMizukageWaterPistol___Spell_Alloc__recycle[(0)]=this
+        function s__NidaimeMizukageWaterPistol__Spell_deallocate takes integer this returns nothing
+            set s__NidaimeMizukageWaterPistol__Spell_Alloc__recycle[this]=s__NidaimeMizukageWaterPistol__Spell_Alloc__recycle[(0)]
+            set s__NidaimeMizukageWaterPistol__Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
- function s__NidaimeMizukageWaterPistol___Spell_finish takes nothing returns nothing
+ function s__NidaimeMizukageWaterPistol__Spell_finish takes nothing returns nothing
   local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-		if GetWidgetLife(s__NidaimeMizukageWaterPistol___Spell_mirage[this]) < 0.405 then
-			call UnitRemoveAbility(s__NidaimeMizukageWaterPistol___Spell_caster[this], 'A178')
-			call SetPlayerAbilityAvailable(GetOwningPlayer(s__NidaimeMizukageWaterPistol___Spell_caster[this]), s__NidaimeMizukageWaterPistol___Spell_SPELL_ID, true)
-			call DestroyEffect(AddSpecialEffect(("blackblink.mdx" ), (( GetUnitX(s__NidaimeMizukageWaterPistol___Spell_mirage[this]) )*1.0), (( GetUnitY(s__NidaimeMizukageWaterPistol___Spell_mirage[this]))*1.0))) // INLINED!!
-			call ShowUnit(s__NidaimeMizukageWaterPistol___Spell_mirage[this], false)
-			call s__NidaimeMizukageWaterPistol___Spell_deallocate(this)
+		if GetWidgetLife(s__NidaimeMizukageWaterPistol__Spell_mirage[this]) < 0.405 then
+			call UnitRemoveAbility(s__NidaimeMizukageWaterPistol__Spell_caster[this], 'A178')
+			call SetPlayerAbilityAvailable(GetOwningPlayer(s__NidaimeMizukageWaterPistol__Spell_caster[this]), s__NidaimeMizukageWaterPistol__Spell_SPELL_ID, true)
+			call DestroyEffect(AddSpecialEffect(("blackblink.mdx" ), (( GetUnitX(s__NidaimeMizukageWaterPistol__Spell_mirage[this]) )*1.0), (( GetUnitY(s__NidaimeMizukageWaterPistol__Spell_mirage[this]))*1.0))) // INLINED!!
+			call ShowUnit(s__NidaimeMizukageWaterPistol__Spell_mirage[this], false)
+			call s__NidaimeMizukageWaterPistol__Spell_deallocate(this)
 			call ReleaseTimer(GetExpiredTimer())
 		endif
  endfunction 
 
-        function s__NidaimeMizukageWaterPistol___Spell_periodic takes nothing returns nothing
+        function s__NidaimeMizukageWaterPistol__Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real pistol_x= GetUnitX(s__NidaimeMizukageWaterPistol___Spell_pistol[this])
-            local real pistol_y= GetUnitY(s__NidaimeMizukageWaterPistol___Spell_pistol[this])
-            local real new_x= pistol_x + Cos(s__NidaimeMizukageWaterPistol___Spell_angle[this]) * 40
-            local real new_y= pistol_y + Sin(s__NidaimeMizukageWaterPistol___Spell_angle[this]) * 40
-            call SetUnitX(s__NidaimeMizukageWaterPistol___Spell_pistol[this], new_x)
-            call SetUnitY(s__NidaimeMizukageWaterPistol___Spell_pistol[this], new_y)
-            set s__NidaimeMizukageWaterPistol___Spell_count[this]=s__NidaimeMizukageWaterPistol___Spell_count[this] + 1
+            local real pistol_x= GetUnitX(s__NidaimeMizukageWaterPistol__Spell_pistol[this])
+            local real pistol_y= GetUnitY(s__NidaimeMizukageWaterPistol__Spell_pistol[this])
+            local real new_x= pistol_x + Cos(s__NidaimeMizukageWaterPistol__Spell_angle[this]) * 40
+            local real new_y= pistol_y + Sin(s__NidaimeMizukageWaterPistol__Spell_angle[this]) * 40
+            call SetUnitX(s__NidaimeMizukageWaterPistol__Spell_pistol[this], new_x)
+            call SetUnitY(s__NidaimeMizukageWaterPistol__Spell_pistol[this], new_y)
+            set s__NidaimeMizukageWaterPistol__Spell_count[this]=s__NidaimeMizukageWaterPistol__Spell_count[this] + 1
             call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveDamage.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
             set bj_lastCreatedGroup=CreateGroup()
             call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 150.0, null)
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
-                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NidaimeMizukageWaterPistol___Spell_caster[this])) and not IsUnitInGroup(bj_lastCreatedUnit, s__NidaimeMizukageWaterPistol___Spell_damaged[this]) then
+                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NidaimeMizukageWaterPistol__Spell_caster[this])) and not IsUnitInGroup(bj_lastCreatedUnit, s__NidaimeMizukageWaterPistol__Spell_damaged[this]) then
 			if IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_HERO) == true then
-				set s__NidaimeMizukageWaterPistol___Spell_hithero[this]=true
+				set s__NidaimeMizukageWaterPistol__Spell_hithero[this]=true
 			endif
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Stampede\\StampedeMissileDeath.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
-                        call UnitDamageTarget(s__NidaimeMizukageWaterPistol___Spell_caster[this], bj_lastCreatedUnit, GetHeroInt(s__NidaimeMizukageWaterPistol___Spell_caster[this], true) * GetUnitAbilityLevel(s__NidaimeMizukageWaterPistol___Spell_caster[this], s__NidaimeMizukageWaterPistol___Spell_SPELL_ID), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
-			call StunUnitTimed(s__NidaimeMizukageWaterPistol___Spell_caster[this] , bj_lastCreatedUnit , 1.0)
-                    call GroupAddUnit(s__NidaimeMizukageWaterPistol___Spell_damaged[this], bj_lastCreatedUnit)
+                        call UnitDamageTarget(s__NidaimeMizukageWaterPistol__Spell_caster[this], bj_lastCreatedUnit, GetHeroInt(s__NidaimeMizukageWaterPistol__Spell_caster[this], true) * GetUnitAbilityLevel(s__NidaimeMizukageWaterPistol__Spell_caster[this], s__NidaimeMizukageWaterPistol__Spell_SPELL_ID), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+			call StunUnitTimed(s__NidaimeMizukageWaterPistol__Spell_caster[this] , bj_lastCreatedUnit , 1.0)
+                    call GroupAddUnit(s__NidaimeMizukageWaterPistol__Spell_damaged[this], bj_lastCreatedUnit)
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            if s__NidaimeMizukageWaterPistol___Spell_count[this] >= 22 then
-                call DestroyGroup(s__NidaimeMizukageWaterPistol___Spell_damaged[this])
-		if s__NidaimeMizukageWaterPistol___Spell_hithero[this] then
-			set s__NidaimeMizukageWaterPistol___Spell_mirage[this]=CreateUnit(GetOwningPlayer(s__NidaimeMizukageWaterPistol___Spell_caster[this]), 'e05N', GetUnitX(s__NidaimeMizukageWaterPistol___Spell_pistol[this]), GetUnitY(s__NidaimeMizukageWaterPistol___Spell_pistol[this]), GetUnitFacing(s__NidaimeMizukageWaterPistol___Spell_pistol[this]))
-			call UnitApplyTimedLife(s__NidaimeMizukageWaterPistol___Spell_mirage[this], 'BTLF', 6.0)
-			call SetPlayerAbilityAvailable(GetOwningPlayer(s__NidaimeMizukageWaterPistol___Spell_caster[this]), s__NidaimeMizukageWaterPistol___Spell_SPELL_ID, false)
-			call UnitAddAbility(s__NidaimeMizukageWaterPistol___Spell_caster[this], 'A178')
-			call TimerStart(NewTimerEx(this), 0.1, true, function s__NidaimeMizukageWaterPistol___Spell_finish)
+            if s__NidaimeMizukageWaterPistol__Spell_count[this] >= 22 then
+                call DestroyGroup(s__NidaimeMizukageWaterPistol__Spell_damaged[this])
+		if s__NidaimeMizukageWaterPistol__Spell_hithero[this] then
+			set s__NidaimeMizukageWaterPistol__Spell_mirage[this]=CreateUnit(GetOwningPlayer(s__NidaimeMizukageWaterPistol__Spell_caster[this]), 'e05N', GetUnitX(s__NidaimeMizukageWaterPistol__Spell_pistol[this]), GetUnitY(s__NidaimeMizukageWaterPistol__Spell_pistol[this]), GetUnitFacing(s__NidaimeMizukageWaterPistol__Spell_pistol[this]))
+			call UnitApplyTimedLife(s__NidaimeMizukageWaterPistol__Spell_mirage[this], 'BTLF', 6.0)
+			call SetPlayerAbilityAvailable(GetOwningPlayer(s__NidaimeMizukageWaterPistol__Spell_caster[this]), s__NidaimeMizukageWaterPistol__Spell_SPELL_ID, false)
+			call UnitAddAbility(s__NidaimeMizukageWaterPistol__Spell_caster[this], 'A178')
+			call TimerStart(NewTimerEx(this), 0.1, true, function s__NidaimeMizukageWaterPistol__Spell_finish)
 		endif
-                call KillUnit(s__NidaimeMizukageWaterPistol___Spell_pistol[this])
-                set s__NidaimeMizukageWaterPistol___Spell_damaged[this]=null
-                set s__NidaimeMizukageWaterPistol___Spell_pistol[this]=null
-		if not s__NidaimeMizukageWaterPistol___Spell_hithero[this] then
-			call s__NidaimeMizukageWaterPistol___Spell_deallocate(this)
+                call KillUnit(s__NidaimeMizukageWaterPistol__Spell_pistol[this])
+                set s__NidaimeMizukageWaterPistol__Spell_damaged[this]=null
+                set s__NidaimeMizukageWaterPistol__Spell_pistol[this]=null
+		if not s__NidaimeMizukageWaterPistol__Spell_hithero[this] then
+			call s__NidaimeMizukageWaterPistol__Spell_deallocate(this)
 		endif
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__NidaimeMizukageWaterPistol___Spell_actions takes nothing returns nothing
-            local integer this= s__NidaimeMizukageWaterPistol___Spell_allocate()
+        function s__NidaimeMizukageWaterPistol__Spell_actions takes nothing returns nothing
+            local integer this= s__NidaimeMizukageWaterPistol__Spell_allocate()
             local real caster_x
             local real caster_y
-	    set s__NidaimeMizukageWaterPistol___Spell_instance=this
-            set s__NidaimeMizukageWaterPistol___Spell_damaged[this]=CreateGroup()
-            set s__NidaimeMizukageWaterPistol___Spell_caster[this]=GetTriggerUnit()
-            set caster_x=GetUnitX(s__NidaimeMizukageWaterPistol___Spell_caster[this])
-            set caster_y=GetUnitY(s__NidaimeMizukageWaterPistol___Spell_caster[this])
-            set s__NidaimeMizukageWaterPistol___Spell_pistol[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, GetUnitFacing(s__NidaimeMizukageWaterPistol___Spell_caster[this]))
-            call SetUnitX(s__NidaimeMizukageWaterPistol___Spell_pistol[this], caster_x)
-            call SetUnitY(s__NidaimeMizukageWaterPistol___Spell_pistol[this], caster_y)
-            set s__NidaimeMizukageWaterPistol___Spell_count[this]=0
-	    set s__NidaimeMizukageWaterPistol___Spell_hithero[this]=false
+	    set s__NidaimeMizukageWaterPistol__Spell_instance=this
+            set s__NidaimeMizukageWaterPistol__Spell_damaged[this]=CreateGroup()
+            set s__NidaimeMizukageWaterPistol__Spell_caster[this]=GetTriggerUnit()
+            set caster_x=GetUnitX(s__NidaimeMizukageWaterPistol__Spell_caster[this])
+            set caster_y=GetUnitY(s__NidaimeMizukageWaterPistol__Spell_caster[this])
+            set s__NidaimeMizukageWaterPistol__Spell_pistol[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, GetUnitFacing(s__NidaimeMizukageWaterPistol__Spell_caster[this]))
+            call SetUnitX(s__NidaimeMizukageWaterPistol__Spell_pistol[this], caster_x)
+            call SetUnitY(s__NidaimeMizukageWaterPistol__Spell_pistol[this], caster_y)
+            set s__NidaimeMizukageWaterPistol__Spell_count[this]=0
+	    set s__NidaimeMizukageWaterPistol__Spell_hithero[this]=false
             //call SetUnitAnimation(this.caster, "attack")
-            set s__NidaimeMizukageWaterPistol___Spell_angle[this]=Atan3(caster_x , caster_y , GetSpellTargetX() , GetSpellTargetY())
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__NidaimeMizukageWaterPistol___Spell_periodic)
+            set s__NidaimeMizukageWaterPistol__Spell_angle[this]=Atan3(caster_x , caster_y , GetSpellTargetX() , GetSpellTargetY())
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__NidaimeMizukageWaterPistol__Spell_periodic)
         endfunction
         
- function s__NidaimeMizukageWaterPistol___Spell_teleport takes nothing returns nothing
-  local integer this= s__NidaimeMizukageWaterPistol___Spell_instance
-		call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" ), (( GetUnitX(s__NidaimeMizukageWaterPistol___Spell_caster[this]) )*1.0), (( GetUnitY(s__NidaimeMizukageWaterPistol___Spell_caster[this]))*1.0))) // INLINED!!
-		call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" ), (( GetUnitX(s__NidaimeMizukageWaterPistol___Spell_mirage[this]) )*1.0), (( GetUnitY(s__NidaimeMizukageWaterPistol___Spell_mirage[this]))*1.0))) // INLINED!!
-		call SetUnitX(s__NidaimeMizukageWaterPistol___Spell_caster[this], GetUnitX(s__NidaimeMizukageWaterPistol___Spell_mirage[this]))
-		call SetUnitY(s__NidaimeMizukageWaterPistol___Spell_caster[this], GetUnitY(s__NidaimeMizukageWaterPistol___Spell_mirage[this]))
-		call SetUnitFacing(s__NidaimeMizukageWaterPistol___Spell_caster[this], GetUnitFacing(s__NidaimeMizukageWaterPistol___Spell_mirage[this]))
-		call KillUnit(s__NidaimeMizukageWaterPistol___Spell_mirage[this])
+ function s__NidaimeMizukageWaterPistol__Spell_teleport takes nothing returns nothing
+  local integer this= s__NidaimeMizukageWaterPistol__Spell_instance
+		call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" ), (( GetUnitX(s__NidaimeMizukageWaterPistol__Spell_caster[this]) )*1.0), (( GetUnitY(s__NidaimeMizukageWaterPistol__Spell_caster[this]))*1.0))) // INLINED!!
+		call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" ), (( GetUnitX(s__NidaimeMizukageWaterPistol__Spell_mirage[this]) )*1.0), (( GetUnitY(s__NidaimeMizukageWaterPistol__Spell_mirage[this]))*1.0))) // INLINED!!
+		call SetUnitX(s__NidaimeMizukageWaterPistol__Spell_caster[this], GetUnitX(s__NidaimeMizukageWaterPistol__Spell_mirage[this]))
+		call SetUnitY(s__NidaimeMizukageWaterPistol__Spell_caster[this], GetUnitY(s__NidaimeMizukageWaterPistol__Spell_mirage[this]))
+		call SetUnitFacing(s__NidaimeMizukageWaterPistol__Spell_caster[this], GetUnitFacing(s__NidaimeMizukageWaterPistol__Spell_mirage[this]))
+		call KillUnit(s__NidaimeMizukageWaterPistol__Spell_mirage[this])
  endfunction 
 
-        function s__NidaimeMizukageWaterPistol___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(47 , s__NidaimeMizukageWaterPistol___Spell_SPELL_ID , function s__NidaimeMizukageWaterPistol___Spell_actions)
-	    call RegisterSpellEffectEventForId(47 , 'A178' , function s__NidaimeMizukageWaterPistol___Spell_teleport)
+        function s__NidaimeMizukageWaterPistol__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(47 , s__NidaimeMizukageWaterPistol__Spell_SPELL_ID , function s__NidaimeMizukageWaterPistol__Spell_actions)
+	    call RegisterSpellEffectEventForId(47 , 'A178' , function s__NidaimeMizukageWaterPistol__Spell_teleport)
         endfunction
         
     
@@ -49408,34 +49700,34 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__NidaimeMizukageBubbles___Spell_allocate takes nothing returns integer
+        function s__NidaimeMizukageBubbles__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__NidaimeMizukageBubbles___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__NidaimeMizukageBubbles___Spell_Alloc__instanceCount=s__NidaimeMizukageBubbles___Spell_Alloc__instanceCount + 1
-                set this=s__NidaimeMizukageBubbles___Spell_Alloc__instanceCount
+            if ( s__NidaimeMizukageBubbles__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__NidaimeMizukageBubbles__Spell_Alloc__instanceCount=s__NidaimeMizukageBubbles__Spell_Alloc__instanceCount + 1
+                set this=s__NidaimeMizukageBubbles__Spell_Alloc__instanceCount
             else
-                set this=s__NidaimeMizukageBubbles___Spell_Alloc__recycle[(0)]
-                set s__NidaimeMizukageBubbles___Spell_Alloc__recycle[(0)]=s__NidaimeMizukageBubbles___Spell_Alloc__recycle[s__NidaimeMizukageBubbles___Spell_Alloc__recycle[(0)]]
+                set this=s__NidaimeMizukageBubbles__Spell_Alloc__recycle[(0)]
+                set s__NidaimeMizukageBubbles__Spell_Alloc__recycle[(0)]=s__NidaimeMizukageBubbles__Spell_Alloc__recycle[s__NidaimeMizukageBubbles__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__NidaimeMizukageBubbles___Spell_deallocate takes integer this returns nothing
-            set s__NidaimeMizukageBubbles___Spell_Alloc__recycle[this]=s__NidaimeMizukageBubbles___Spell_Alloc__recycle[(0)]
-            set s__NidaimeMizukageBubbles___Spell_Alloc__recycle[(0)]=this
+        function s__NidaimeMizukageBubbles__Spell_deallocate takes integer this returns nothing
+            set s__NidaimeMizukageBubbles__Spell_Alloc__recycle[this]=s__NidaimeMizukageBubbles__Spell_Alloc__recycle[(0)]
+            set s__NidaimeMizukageBubbles__Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__NidaimeMizukageBubbles___Spell_periodic takes nothing returns nothing
+        function s__NidaimeMizukageBubbles__Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real dummy_x= GetUnitX(s__NidaimeMizukageBubbles___Spell_dummy[this])
-            local real dummy_y= GetUnitY(s__NidaimeMizukageBubbles___Spell_dummy[this])
-            local real new_x= dummy_x + Cos(s__NidaimeMizukageBubbles___Spell_angle[this]) * 25
-            local real new_y= dummy_y + Sin(s__NidaimeMizukageBubbles___Spell_angle[this]) * 25
+            local real dummy_x= GetUnitX(s__NidaimeMizukageBubbles__Spell_dummy[this])
+            local real dummy_y= GetUnitY(s__NidaimeMizukageBubbles__Spell_dummy[this])
+            local real new_x= dummy_x + Cos(s__NidaimeMizukageBubbles__Spell_angle[this]) * 25
+            local real new_y= dummy_y + Sin(s__NidaimeMizukageBubbles__Spell_angle[this]) * 25
             local real new_x_2
             local real new_y_2
             local real new_x_3
@@ -49443,63 +49735,63 @@ endfunction
             local real target_x
             local real target_y
             local integer i= 0
-            set s__NidaimeMizukageBubbles___Spell_count[this]=s__NidaimeMizukageBubbles___Spell_count[this] + 1
-            call SetUnitX(s__NidaimeMizukageBubbles___Spell_dummy[this], new_x)
-            call SetUnitY(s__NidaimeMizukageBubbles___Spell_dummy[this], new_y)
-            set new_x_2=new_x + Cos(s__NidaimeMizukageBubbles___Spell_angle[this] + bj_PI / 2) * 100
-            set new_y_2=new_y + Sin(s__NidaimeMizukageBubbles___Spell_angle[this] + bj_PI / 2) * 100
-            set new_x_3=new_x + Cos(s__NidaimeMizukageBubbles___Spell_angle[this] - bj_PI / 2) * 100
-            set new_y_3=new_y + Sin(s__NidaimeMizukageBubbles___Spell_angle[this] - bj_PI / 2) * 100
-            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__NidaimeMizukageBubbles___Spell_caster[this]), 'e00U', new_x, new_y, GetRandomReal(0, 360))
+            set s__NidaimeMizukageBubbles__Spell_count[this]=s__NidaimeMizukageBubbles__Spell_count[this] + 1
+            call SetUnitX(s__NidaimeMizukageBubbles__Spell_dummy[this], new_x)
+            call SetUnitY(s__NidaimeMizukageBubbles__Spell_dummy[this], new_y)
+            set new_x_2=new_x + Cos(s__NidaimeMizukageBubbles__Spell_angle[this] + bj_PI / 2) * 100
+            set new_y_2=new_y + Sin(s__NidaimeMizukageBubbles__Spell_angle[this] + bj_PI / 2) * 100
+            set new_x_3=new_x + Cos(s__NidaimeMizukageBubbles__Spell_angle[this] - bj_PI / 2) * 100
+            set new_y_3=new_y + Sin(s__NidaimeMizukageBubbles__Spell_angle[this] - bj_PI / 2) * 100
+            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__NidaimeMizukageBubbles__Spell_caster[this]), 'e00U', new_x, new_y, GetRandomReal(0, 360))
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 0.3)
-            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__NidaimeMizukageBubbles___Spell_caster[this]), 'e00U', new_x_2, new_y_2, GetRandomReal(0, 360))
+            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__NidaimeMizukageBubbles__Spell_caster[this]), 'e00U', new_x_2, new_y_2, GetRandomReal(0, 360))
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 0.3)
-            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__NidaimeMizukageBubbles___Spell_caster[this]), 'e00U', new_x_3, new_y_3, GetRandomReal(0, 360))
+            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__NidaimeMizukageBubbles__Spell_caster[this]), 'e00U', new_x_3, new_y_3, GetRandomReal(0, 360))
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 0.3)
             set bj_lastCreatedGroup=CreateGroup()
             call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 220.0, null)
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
-                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NidaimeMizukageBubbles___Spell_caster[this])) and not IsUnitInGroup(bj_lastCreatedUnit, s__NidaimeMizukageBubbles___Spell_damaged[this]) then
+                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NidaimeMizukageBubbles__Spell_caster[this])) and not IsUnitInGroup(bj_lastCreatedUnit, s__NidaimeMizukageBubbles__Spell_damaged[this]) then
                     set target_x=GetUnitX(bj_lastCreatedUnit)
                     set target_y=GetUnitY(bj_lastCreatedUnit)
                     call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveDamage.mdl" ), (( target_x )*1.0), (( target_y)*1.0))) // INLINED!!
-                    call UnitDamageTarget(s__NidaimeMizukageBubbles___Spell_caster[this], bj_lastCreatedUnit, 80.0 * GetUnitAbilityLevel(s__NidaimeMizukageBubbles___Spell_caster[this], s__NidaimeMizukageBubbles___Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
-                    call GroupAddUnit(s__NidaimeMizukageBubbles___Spell_damaged[this], bj_lastCreatedUnit)
+                    call UnitDamageTarget(s__NidaimeMizukageBubbles__Spell_caster[this], bj_lastCreatedUnit, 80.0 * GetUnitAbilityLevel(s__NidaimeMizukageBubbles__Spell_caster[this], s__NidaimeMizukageBubbles__Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+                    call GroupAddUnit(s__NidaimeMizukageBubbles__Spell_damaged[this], bj_lastCreatedUnit)
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            if s__NidaimeMizukageBubbles___Spell_count[this] > 30 then
-                call KillUnit(s__NidaimeMizukageBubbles___Spell_dummy[this])
-                call DestroyGroup(s__NidaimeMizukageBubbles___Spell_damaged[this])
-                set s__NidaimeMizukageBubbles___Spell_damaged[this]=null
-                set s__NidaimeMizukageBubbles___Spell_caster[this]=null
-                set s__NidaimeMizukageBubbles___Spell_dummy[this]=null
-                call s__NidaimeMizukageBubbles___Spell_deallocate(this)
+            if s__NidaimeMizukageBubbles__Spell_count[this] > 30 then
+                call KillUnit(s__NidaimeMizukageBubbles__Spell_dummy[this])
+                call DestroyGroup(s__NidaimeMizukageBubbles__Spell_damaged[this])
+                set s__NidaimeMizukageBubbles__Spell_damaged[this]=null
+                set s__NidaimeMizukageBubbles__Spell_caster[this]=null
+                set s__NidaimeMizukageBubbles__Spell_dummy[this]=null
+                call s__NidaimeMizukageBubbles__Spell_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__NidaimeMizukageBubbles___Spell_actions takes nothing returns nothing
-            local integer this= s__NidaimeMizukageBubbles___Spell_allocate()
+        function s__NidaimeMizukageBubbles__Spell_actions takes nothing returns nothing
+            local integer this= s__NidaimeMizukageBubbles__Spell_allocate()
             local real caster_x= GetUnitX(GetTriggerUnit())
             local real caster_y= GetUnitY(GetTriggerUnit())
             local real target_x= GetSpellTargetX()
             local real target_y= GetSpellTargetY()
-            set s__NidaimeMizukageBubbles___Spell_angle[this]=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
-            set s__NidaimeMizukageBubbles___Spell_damaged[this]=CreateGroup()
-            set s__NidaimeMizukageBubbles___Spell_caster[this]=GetTriggerUnit()
-            set s__NidaimeMizukageBubbles___Spell_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, Rad2Deg(s__NidaimeMizukageBubbles___Spell_angle[this]))
-            call SetUnitX(s__NidaimeMizukageBubbles___Spell_dummy[this], caster_x)
-            call SetUnitY(s__NidaimeMizukageBubbles___Spell_dummy[this], caster_y)
-            set s__NidaimeMizukageBubbles___Spell_count[this]=0
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__NidaimeMizukageBubbles___Spell_periodic)
+            set s__NidaimeMizukageBubbles__Spell_angle[this]=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
+            set s__NidaimeMizukageBubbles__Spell_damaged[this]=CreateGroup()
+            set s__NidaimeMizukageBubbles__Spell_caster[this]=GetTriggerUnit()
+            set s__NidaimeMizukageBubbles__Spell_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, Rad2Deg(s__NidaimeMizukageBubbles__Spell_angle[this]))
+            call SetUnitX(s__NidaimeMizukageBubbles__Spell_dummy[this], caster_x)
+            call SetUnitY(s__NidaimeMizukageBubbles__Spell_dummy[this], caster_y)
+            set s__NidaimeMizukageBubbles__Spell_count[this]=0
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__NidaimeMizukageBubbles__Spell_periodic)
         endfunction
         
-        function s__NidaimeMizukageBubbles___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(47 , s__NidaimeMizukageBubbles___Spell_SPELL_ID , function s__NidaimeMizukageBubbles___Spell_actions)
+        function s__NidaimeMizukageBubbles__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(47 , s__NidaimeMizukageBubbles__Spell_SPELL_ID , function s__NidaimeMizukageBubbles__Spell_actions)
         endfunction
         
     
@@ -49759,29 +50051,29 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__NidaimeMizukageGenjutsu___Spell_allocate takes nothing returns integer
+        function s__NidaimeMizukageGenjutsu__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__NidaimeMizukageGenjutsu___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__NidaimeMizukageGenjutsu___Spell_Alloc__instanceCount=s__NidaimeMizukageGenjutsu___Spell_Alloc__instanceCount + 1
-                set this=s__NidaimeMizukageGenjutsu___Spell_Alloc__instanceCount
+            if ( s__NidaimeMizukageGenjutsu__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__NidaimeMizukageGenjutsu__Spell_Alloc__instanceCount=s__NidaimeMizukageGenjutsu__Spell_Alloc__instanceCount + 1
+                set this=s__NidaimeMizukageGenjutsu__Spell_Alloc__instanceCount
             else
-                set this=s__NidaimeMizukageGenjutsu___Spell_Alloc__recycle[(0)]
-                set s__NidaimeMizukageGenjutsu___Spell_Alloc__recycle[(0)]=s__NidaimeMizukageGenjutsu___Spell_Alloc__recycle[s__NidaimeMizukageGenjutsu___Spell_Alloc__recycle[(0)]]
+                set this=s__NidaimeMizukageGenjutsu__Spell_Alloc__recycle[(0)]
+                set s__NidaimeMizukageGenjutsu__Spell_Alloc__recycle[(0)]=s__NidaimeMizukageGenjutsu__Spell_Alloc__recycle[s__NidaimeMizukageGenjutsu__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__NidaimeMizukageGenjutsu___Spell_deallocate takes integer this returns nothing
-            set s__NidaimeMizukageGenjutsu___Spell_Alloc__recycle[this]=s__NidaimeMizukageGenjutsu___Spell_Alloc__recycle[(0)]
-            set s__NidaimeMizukageGenjutsu___Spell_Alloc__recycle[(0)]=this
+        function s__NidaimeMizukageGenjutsu__Spell_deallocate takes integer this returns nothing
+            set s__NidaimeMizukageGenjutsu__Spell_Alloc__recycle[this]=s__NidaimeMizukageGenjutsu__Spell_Alloc__recycle[(0)]
+            set s__NidaimeMizukageGenjutsu__Spell_Alloc__recycle[(0)]=this
         endfunction
     
         
-        function s__NidaimeMizukageGenjutsu___Spell_periodic takes nothing returns nothing
+        function s__NidaimeMizukageGenjutsu__Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real angle
             local real offset
@@ -49791,15 +50083,15 @@ endfunction
             local real clam_x
             local real clam_y
             local integer i= 0
-            set s__NidaimeMizukageGenjutsu___Spell_count[this]=s__NidaimeMizukageGenjutsu___Spell_count[this] + 1
+            set s__NidaimeMizukageGenjutsu__Spell_count[this]=s__NidaimeMizukageGenjutsu__Spell_count[this] + 1
             set bj_lastCreatedGroup=CreateGroup()
-            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__NidaimeMizukageGenjutsu___Spell_target_x[this], s__NidaimeMizukageGenjutsu___Spell_target_y[this], 600.0, null)
+            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__NidaimeMizukageGenjutsu__Spell_target_x[this], s__NidaimeMizukageGenjutsu__Spell_target_y[this], 600.0, null)
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
-                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NidaimeMizukageGenjutsu___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) then
+                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__NidaimeMizukageGenjutsu__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) then
                     call DestroyEffect(AddSpecialEffectTarget("Abilities\\Weapons\\HydraliskImpact\\HydraliskImpact.mdl", bj_lastCreatedUnit, "chest"))
-                    call UnitDamageTarget(s__NidaimeMizukageGenjutsu___Spell_caster[this], bj_lastCreatedUnit, ( ( 3.0 * GetHeroInt(s__NidaimeMizukageGenjutsu___Spell_caster[this], true) + 750 ) * GetUnitAbilityLevel(s__NidaimeMizukageGenjutsu___Spell_caster[this], 'A0I7') ) / 70.0, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+                    call UnitDamageTarget(s__NidaimeMizukageGenjutsu__Spell_caster[this], bj_lastCreatedUnit, ( ( 3.0 * GetHeroInt(s__NidaimeMizukageGenjutsu__Spell_caster[this], true) + 750 ) * GetUnitAbilityLevel(s__NidaimeMizukageGenjutsu__Spell_caster[this], 'A0I7') ) / 70.0, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
@@ -49809,45 +50101,45 @@ endfunction
                 exitwhen i > 5
                 set angle=GetRandomReal(0, 360)
                 set offset=GetRandomReal(0, 500)
-                set new_x=s__NidaimeMizukageGenjutsu___Spell_target_x[this] + Cos(Deg2Rad(angle)) * offset
-                set new_y=s__NidaimeMizukageGenjutsu___Spell_target_y[this] + Sin(Deg2Rad(angle)) * offset
-                set angle2=Atan2(( s__NidaimeMizukageGenjutsu___Spell_target_y[this] - new_y ), ( s__NidaimeMizukageGenjutsu___Spell_target_x[this] - new_x ))
-                call DestroyEffect(AddSpecialEffect(("blackblink.mdx" ), (( GetUnitX(s__NidaimeMizukageGenjutsu___mirages[(this)*(1)+i]) )*1.0), (( GetUnitY(s__NidaimeMizukageGenjutsu___mirages[(this)*(1)+i]))*1.0))) // INLINED!!
-                call SetUnitX(s__NidaimeMizukageGenjutsu___mirages[(this)*(1)+i], new_x)
-                call SetUnitY(s__NidaimeMizukageGenjutsu___mirages[(this)*(1)+i], new_y)
-                call SetUnitFacing(s__NidaimeMizukageGenjutsu___mirages[(this)*(1)+i], Rad2Deg(angle2))
+                set new_x=s__NidaimeMizukageGenjutsu__Spell_target_x[this] + Cos(Deg2Rad(angle)) * offset
+                set new_y=s__NidaimeMizukageGenjutsu__Spell_target_y[this] + Sin(Deg2Rad(angle)) * offset
+                set angle2=Atan2(( s__NidaimeMizukageGenjutsu__Spell_target_y[this] - new_y ), ( s__NidaimeMizukageGenjutsu__Spell_target_x[this] - new_x ))
+                call DestroyEffect(AddSpecialEffect(("blackblink.mdx" ), (( GetUnitX(s__NidaimeMizukageGenjutsu__mirages[(this)*(1)+i]) )*1.0), (( GetUnitY(s__NidaimeMizukageGenjutsu__mirages[(this)*(1)+i]))*1.0))) // INLINED!!
+                call SetUnitX(s__NidaimeMizukageGenjutsu__mirages[(this)*(1)+i], new_x)
+                call SetUnitY(s__NidaimeMizukageGenjutsu__mirages[(this)*(1)+i], new_y)
+                call SetUnitFacing(s__NidaimeMizukageGenjutsu__mirages[(this)*(1)+i], Rad2Deg(angle2))
             endloop
-            if s__NidaimeMizukageGenjutsu___Spell_count[this] > 70 then
-                call UnitRemoveAbility(s__NidaimeMizukageGenjutsu___Spell_caster[this], 'Binv')
-                set s__NidaimeMizukageGenjutsu___Spell_caster[this]=null
-                set s__NidaimeMizukageGenjutsu___Spell_clam[this]=null
-                call s__NidaimeMizukageGenjutsu___Spell_deallocate(this)
+            if s__NidaimeMizukageGenjutsu__Spell_count[this] > 70 then
+                call UnitRemoveAbility(s__NidaimeMizukageGenjutsu__Spell_caster[this], 'Binv')
+                set s__NidaimeMizukageGenjutsu__Spell_caster[this]=null
+                set s__NidaimeMizukageGenjutsu__Spell_clam[this]=null
+                call s__NidaimeMizukageGenjutsu__Spell_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__NidaimeMizukageGenjutsu___Spell_pause2 takes nothing returns nothing
+        function s__NidaimeMizukageGenjutsu__Spell_pause2 takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local integer i= 0
             loop
                 set i=i + 1
                 exitwhen i > 5
-                set s__NidaimeMizukageGenjutsu___mirages[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__NidaimeMizukageGenjutsu___Spell_caster[this]), 'e00W', s__NidaimeMizukageGenjutsu___Spell_target_x[this], s__NidaimeMizukageGenjutsu___Spell_target_y[this], GetRandomReal(0, 360))
-                call AddSpecialEffectTarget("Abilities\\Weapons\\AvengerMissile\\AvengerMissile.mdl", s__NidaimeMizukageGenjutsu___mirages[(this)*(1)+i], "chest")
-                call UnitApplyTimedLife(s__NidaimeMizukageGenjutsu___mirages[(this)*(1)+i], 'BTLF', 3.0)
-                call SetUnitTimeScale(s__NidaimeMizukageGenjutsu___mirages[(this)*(1)+i], 5.0)
-                call SetUnitAnimationByIndex(s__NidaimeMizukageGenjutsu___mirages[(this)*(1)+i], 4)
+                set s__NidaimeMizukageGenjutsu__mirages[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__NidaimeMizukageGenjutsu__Spell_caster[this]), 'e00W', s__NidaimeMizukageGenjutsu__Spell_target_x[this], s__NidaimeMizukageGenjutsu__Spell_target_y[this], GetRandomReal(0, 360))
+                call AddSpecialEffectTarget("Abilities\\Weapons\\AvengerMissile\\AvengerMissile.mdl", s__NidaimeMizukageGenjutsu__mirages[(this)*(1)+i], "chest")
+                call UnitApplyTimedLife(s__NidaimeMizukageGenjutsu__mirages[(this)*(1)+i], 'BTLF', 3.0)
+                call SetUnitTimeScale(s__NidaimeMizukageGenjutsu__mirages[(this)*(1)+i], 5.0)
+                call SetUnitAnimationByIndex(s__NidaimeMizukageGenjutsu__mirages[(this)*(1)+i], 4)
             endloop
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__NidaimeMizukageGenjutsu___Spell_periodic)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__NidaimeMizukageGenjutsu__Spell_periodic)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__NidaimeMizukageGenjutsu___Spell_pause takes nothing returns nothing
+        function s__NidaimeMizukageGenjutsu__Spell_pause takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real clam_x= GetUnitX(s__NidaimeMizukageGenjutsu___Spell_clam[this])
-            local real clam_y= GetUnitY(s__NidaimeMizukageGenjutsu___Spell_clam[this])
-            local real new_x= clam_x + Cos(Deg2Rad(GetUnitFacing(s__NidaimeMizukageGenjutsu___Spell_clam[this]))) * 100
-            local real new_y= clam_y + Sin(Deg2Rad(GetUnitFacing(s__NidaimeMizukageGenjutsu___Spell_clam[this]))) * 100
+            local real clam_x= GetUnitX(s__NidaimeMizukageGenjutsu__Spell_clam[this])
+            local real clam_y= GetUnitY(s__NidaimeMizukageGenjutsu__Spell_clam[this])
+            local real new_x= clam_x + Cos(Deg2Rad(GetUnitFacing(s__NidaimeMizukageGenjutsu__Spell_clam[this]))) * 100
+            local real new_y= clam_y + Sin(Deg2Rad(GetUnitFacing(s__NidaimeMizukageGenjutsu__Spell_clam[this]))) * 100
             local real angle
             local real offset
             local real new_x_2
@@ -49859,9 +50151,9 @@ endfunction
                 exitwhen i > 100
                 set angle=GetRandomReal(0, 360)
                 set offset=GetRandomReal(0, 500)
-                set new_x_2=s__NidaimeMizukageGenjutsu___Spell_target_x[this] + Cos(Deg2Rad(angle)) * offset
-                set new_y_2=s__NidaimeMizukageGenjutsu___Spell_target_y[this] + Sin(Deg2Rad(angle)) * offset
-                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__NidaimeMizukageGenjutsu___Spell_caster[this]), 'z008', new_x, new_y, GetRandomReal(0, 360))
+                set new_x_2=s__NidaimeMizukageGenjutsu__Spell_target_x[this] + Cos(Deg2Rad(angle)) * offset
+                set new_y_2=s__NidaimeMizukageGenjutsu__Spell_target_y[this] + Sin(Deg2Rad(angle)) * offset
+                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__NidaimeMizukageGenjutsu__Spell_caster[this]), 'z008', new_x, new_y, GetRandomReal(0, 360))
                 call SetUnitVertexColor(bj_lastCreatedUnit, 255, 255, 255, 25)
                 call SetUnitMoveSpeed(bj_lastCreatedUnit, 522.0)
                 call IssuePointOrder(bj_lastCreatedUnit, "move", new_x_2, new_y_2)
@@ -49869,12 +50161,12 @@ endfunction
                 call SetUnitFlyHeight(bj_lastCreatedUnit, height, height)
                 call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 4.5)
             endloop
-            call TimerStart(NewTimerEx(this), 0.5, false, function s__NidaimeMizukageGenjutsu___Spell_pause2)
+            call TimerStart(NewTimerEx(this), 0.5, false, function s__NidaimeMizukageGenjutsu__Spell_pause2)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__NidaimeMizukageGenjutsu___Spell_actions takes nothing returns nothing
-            local integer this= s__NidaimeMizukageGenjutsu___Spell_allocate()
+        function s__NidaimeMizukageGenjutsu__Spell_actions takes nothing returns nothing
+            local integer this= s__NidaimeMizukageGenjutsu__Spell_allocate()
             local real caster_x
             local real caster_y
             local real angle
@@ -49886,15 +50178,15 @@ endfunction
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
                 call PlaySoundOnUnitBJ(gg_snd_Gengetsu_R, 80, GetTriggerUnit())
             endif
-            set s__NidaimeMizukageGenjutsu___Spell_caster[this]=GetTriggerUnit()
-            set s__NidaimeMizukageGenjutsu___Spell_clam[this]=s__NidaimeMIzukageClamDrop_clam
-            set s__NidaimeMizukageGenjutsu___Spell_target_x[this]=GetUnitX(s__NidaimeMizukageGenjutsu___Spell_clam[this])
-            set s__NidaimeMizukageGenjutsu___Spell_target_y[this]=GetUnitY(s__NidaimeMizukageGenjutsu___Spell_clam[this])
-            set s__NidaimeMizukageGenjutsu___Spell_count[this]=0
-            call TimerStart(NewTimerEx(this), 0.1, false, function s__NidaimeMizukageGenjutsu___Spell_pause)
+            set s__NidaimeMizukageGenjutsu__Spell_caster[this]=GetTriggerUnit()
+            set s__NidaimeMizukageGenjutsu__Spell_clam[this]=s__NidaimeMIzukageClamDrop_clam
+            set s__NidaimeMizukageGenjutsu__Spell_target_x[this]=GetUnitX(s__NidaimeMizukageGenjutsu__Spell_clam[this])
+            set s__NidaimeMizukageGenjutsu__Spell_target_y[this]=GetUnitY(s__NidaimeMizukageGenjutsu__Spell_clam[this])
+            set s__NidaimeMizukageGenjutsu__Spell_count[this]=0
+            call TimerStart(NewTimerEx(this), 0.1, false, function s__NidaimeMizukageGenjutsu__Spell_pause)
         endfunction
         
-        function s__NidaimeMizukageGenjutsu___Spell_dies takes nothing returns nothing
+        function s__NidaimeMizukageGenjutsu__Spell_dies takes nothing returns nothing
             local real unit_x
             local real unit_y
             local real new_x
@@ -49908,9 +50200,9 @@ endfunction
             endif
         endfunction
         
-        function s__NidaimeMizukageGenjutsu___Spell_onInit takes nothing returns nothing
-            call RegisterPlayerUnitEventForId(47 , EVENT_PLAYER_UNIT_DEATH , function s__NidaimeMizukageGenjutsu___Spell_dies)
-            call RegisterSpellEffectEventForId(47 , s__NidaimeMizukageGenjutsu___Spell_SPELL_ID , function s__NidaimeMizukageGenjutsu___Spell_actions)
+        function s__NidaimeMizukageGenjutsu__Spell_onInit takes nothing returns nothing
+            call RegisterPlayerUnitEventForId(47 , EVENT_PLAYER_UNIT_DEATH , function s__NidaimeMizukageGenjutsu__Spell_dies)
+            call RegisterSpellEffectEventForId(47 , s__NidaimeMizukageGenjutsu__Spell_SPELL_ID , function s__NidaimeMizukageGenjutsu__Spell_actions)
         endfunction
         
     
@@ -49923,114 +50215,114 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__NidaimeMizukageJokiBoi___Spell_allocate takes nothing returns integer
+        function s__NidaimeMizukageJokiBoi__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__NidaimeMizukageJokiBoi___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__NidaimeMizukageJokiBoi___Spell_Alloc__instanceCount=s__NidaimeMizukageJokiBoi___Spell_Alloc__instanceCount + 1
-                set this=s__NidaimeMizukageJokiBoi___Spell_Alloc__instanceCount
+            if ( s__NidaimeMizukageJokiBoi__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__NidaimeMizukageJokiBoi__Spell_Alloc__instanceCount=s__NidaimeMizukageJokiBoi__Spell_Alloc__instanceCount + 1
+                set this=s__NidaimeMizukageJokiBoi__Spell_Alloc__instanceCount
             else
-                set this=s__NidaimeMizukageJokiBoi___Spell_Alloc__recycle[(0)]
-                set s__NidaimeMizukageJokiBoi___Spell_Alloc__recycle[(0)]=s__NidaimeMizukageJokiBoi___Spell_Alloc__recycle[s__NidaimeMizukageJokiBoi___Spell_Alloc__recycle[(0)]]
+                set this=s__NidaimeMizukageJokiBoi__Spell_Alloc__recycle[(0)]
+                set s__NidaimeMizukageJokiBoi__Spell_Alloc__recycle[(0)]=s__NidaimeMizukageJokiBoi__Spell_Alloc__recycle[s__NidaimeMizukageJokiBoi__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__NidaimeMizukageJokiBoi___Spell_deallocate takes integer this returns nothing
-            set s__NidaimeMizukageJokiBoi___Spell_Alloc__recycle[this]=s__NidaimeMizukageJokiBoi___Spell_Alloc__recycle[(0)]
-            set s__NidaimeMizukageJokiBoi___Spell_Alloc__recycle[(0)]=this
+        function s__NidaimeMizukageJokiBoi__Spell_deallocate takes integer this returns nothing
+            set s__NidaimeMizukageJokiBoi__Spell_Alloc__recycle[this]=s__NidaimeMizukageJokiBoi__Spell_Alloc__recycle[(0)]
+            set s__NidaimeMizukageJokiBoi__Spell_Alloc__recycle[(0)]=this
         endfunction
         
 
-        function s__NidaimeMizukageJokiBoi___Spell_damagefix takes nothing returns boolean
-        if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__NidaimeMizukageJokiBoi___Spell_caster[s__NidaimeMizukageJokiBoi___Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 then
-                        call StunUnitTimed(s__NidaimeMizukageJokiBoi___Spell_caster[s__NidaimeMizukageJokiBoi___Spell_instance] , GetFilterUnit() , 2.0)
-                        call UnitDamageTarget(s__NidaimeMizukageJokiBoi___Spell_caster[s__NidaimeMizukageJokiBoi___Spell_instance], GetFilterUnit(), 10.0 * GetHeroInt(s__NidaimeMizukageJokiBoi___Spell_caster[s__NidaimeMizukageJokiBoi___Spell_instance], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+        function s__NidaimeMizukageJokiBoi__Spell_damagefix takes nothing returns boolean
+        if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__NidaimeMizukageJokiBoi__Spell_caster[s__NidaimeMizukageJokiBoi__Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 then
+                        call StunUnitTimed(s__NidaimeMizukageJokiBoi__Spell_caster[s__NidaimeMizukageJokiBoi__Spell_instance] , GetFilterUnit() , 2.0)
+                        call UnitDamageTarget(s__NidaimeMizukageJokiBoi__Spell_caster[s__NidaimeMizukageJokiBoi__Spell_instance], GetFilterUnit(), 10.0 * GetHeroInt(s__NidaimeMizukageJokiBoi__Spell_caster[s__NidaimeMizukageJokiBoi__Spell_instance], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
                     endif
         return false
         endfunction
 
 
-        function s__NidaimeMizukageJokiBoi___Spell_finalExplosion takes nothing returns nothing
+        function s__NidaimeMizukageJokiBoi__Spell_finalExplosion takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real randomAngle
             local real randomOffset
             local real new_x
             local real new_y
             local integer i
-            call SetUnitTimeScale(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this], 1.0)
-            call DestroyEffect(AddSpecialEffect(("Effects\\s_Frost_Nova.mdx" ), (( s__NidaimeMizukageJokiBoi___Spell_target_x[this] )*1.0), (( s__NidaimeMizukageJokiBoi___Spell_target_y[this])*1.0))) // INLINED!!
+            call SetUnitTimeScale(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this], 1.0)
+            call DestroyEffect(AddSpecialEffect(("Effects\\s_Frost_Nova.mdx" ), (( s__NidaimeMizukageJokiBoi__Spell_target_x[this] )*1.0), (( s__NidaimeMizukageJokiBoi__Spell_target_y[this])*1.0))) // INLINED!!
             set i=1
             loop
                 exitwhen i > 30
                 set randomAngle=GetRandomReal(1, 360)
                 set randomOffset=GetRandomReal(0, 600)
-                set new_x=s__NidaimeMizukageJokiBoi___Spell_target_x[this] + Cos(randomAngle * bj_DEGTORAD) * randomOffset
-                set new_y=s__NidaimeMizukageJokiBoi___Spell_target_y[this] + Sin(randomAngle * bj_DEGTORAD) * randomOffset
-                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__NidaimeMizukageJokiBoi___Spell_caster[this]), 'e00Z', new_x, new_y, GetRandomReal(1, 360))
+                set new_x=s__NidaimeMizukageJokiBoi__Spell_target_x[this] + Cos(randomAngle * bj_DEGTORAD) * randomOffset
+                set new_y=s__NidaimeMizukageJokiBoi__Spell_target_y[this] + Sin(randomAngle * bj_DEGTORAD) * randomOffset
+                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__NidaimeMizukageJokiBoi__Spell_caster[this]), 'e00Z', new_x, new_y, GetRandomReal(1, 360))
                 call SetUnitTimeScale(bj_lastCreatedUnit, GetRandomReal(0.7, 1.2))
                 call SetUnitScale(bj_lastCreatedUnit, 4.0, 0, 0)
                 call KillUnit(bj_lastCreatedUnit)
                 set i=i + 1
             endloop
             set bj_lastCreatedGroup=CreateGroup()
-            set s__NidaimeMizukageJokiBoi___Spell_instance=this
-            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__NidaimeMizukageJokiBoi___Spell_target_x[this], s__NidaimeMizukageJokiBoi___Spell_target_y[this], 600.0, Filter(function s__NidaimeMizukageJokiBoi___Spell_damagefix))
+            set s__NidaimeMizukageJokiBoi__Spell_instance=this
+            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__NidaimeMizukageJokiBoi__Spell_target_x[this], s__NidaimeMizukageJokiBoi__Spell_target_y[this], 600.0, Filter(function s__NidaimeMizukageJokiBoi__Spell_damagefix))
             call DestroyGroup(bj_lastCreatedGroup)
-            set s__NidaimeMizukageJokiBoi___Spell_size[this]=0.7
-            call KillUnit(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this])
-            call ShowUnit(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this], false)
-            set s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this]=null
-            set s__NidaimeMizukageJokiBoi___Spell_target[this]=null
-            call s__NidaimeMizukageJokiBoi___Spell_deallocate(this)
+            set s__NidaimeMizukageJokiBoi__Spell_size[this]=0.7
+            call KillUnit(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this])
+            call ShowUnit(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this], false)
+            set s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this]=null
+            set s__NidaimeMizukageJokiBoi__Spell_target[this]=null
+            call s__NidaimeMizukageJokiBoi__Spell_deallocate(this)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
 
-     function s__NidaimeMizukageJokiBoi___Spell_periodic takes nothing returns nothing
+     function s__NidaimeMizukageJokiBoi__Spell_periodic takes nothing returns nothing
       local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real distance
-            if s__NidaimeMizukageJokiBoi___Spell_target[this] != null then
-                call IssueTargetOrder(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this], "attack", s__NidaimeMizukageJokiBoi___Spell_target[this])
+            if s__NidaimeMizukageJokiBoi__Spell_target[this] != null then
+                call IssueTargetOrder(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this], "attack", s__NidaimeMizukageJokiBoi__Spell_target[this])
             else
-                set distance=GetDistance(GetUnitX(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this]) , GetUnitY(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this]) , s__NidaimeMizukageJokiBoi___Spell_target_x[this] , s__NidaimeMizukageJokiBoi___Spell_target_y[this])
-                if distance <= 50 and s__NidaimeMizukageJokiBoi___Spell_target[this] == null then
-                    call SetUnitX(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this], s__NidaimeMizukageJokiBoi___Spell_target_x[this])
-                    call SetUnitY(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this], s__NidaimeMizukageJokiBoi___Spell_target_y[this])
-                    call PauseUnit(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this], true)
+                set distance=GetDistance(GetUnitX(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this]) , GetUnitY(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this]) , s__NidaimeMizukageJokiBoi__Spell_target_x[this] , s__NidaimeMizukageJokiBoi__Spell_target_y[this])
+                if distance <= 50 and s__NidaimeMizukageJokiBoi__Spell_target[this] == null then
+                    call SetUnitX(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this], s__NidaimeMizukageJokiBoi__Spell_target_x[this])
+                    call SetUnitY(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this], s__NidaimeMizukageJokiBoi__Spell_target_y[this])
+                    call PauseUnit(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this], true)
                 endif
             endif
-    		set s__NidaimeMizukageJokiBoi___Spell_count[this]=s__NidaimeMizukageJokiBoi___Spell_count[this] + 1
-            set s__NidaimeMizukageJokiBoi___Spell_size[this]=s__NidaimeMizukageJokiBoi___Spell_size[this] + 0.075
-            call SetUnitScale(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this], s__NidaimeMizukageJokiBoi___Spell_size[this], s__NidaimeMizukageJokiBoi___Spell_size[this], s__NidaimeMizukageJokiBoi___Spell_size[this])
-            if s__NidaimeMizukageJokiBoi___Spell_size[this] >= 5.0 then
-                set s__NidaimeMizukageJokiBoi___Spell_target_x[this]=GetUnitX(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this])
-                set s__NidaimeMizukageJokiBoi___Spell_target_y[this]=GetUnitY(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this])
-                call SetUnitAnimation(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this], "spell one")
-                call TimerStart(NewTimerEx(this), 0.5, false, function s__NidaimeMizukageJokiBoi___Spell_finalExplosion)
+    		set s__NidaimeMizukageJokiBoi__Spell_count[this]=s__NidaimeMizukageJokiBoi__Spell_count[this] + 1
+            set s__NidaimeMizukageJokiBoi__Spell_size[this]=s__NidaimeMizukageJokiBoi__Spell_size[this] + 0.075
+            call SetUnitScale(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this], s__NidaimeMizukageJokiBoi__Spell_size[this], s__NidaimeMizukageJokiBoi__Spell_size[this], s__NidaimeMizukageJokiBoi__Spell_size[this])
+            if s__NidaimeMizukageJokiBoi__Spell_size[this] >= 5.0 then
+                set s__NidaimeMizukageJokiBoi__Spell_target_x[this]=GetUnitX(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this])
+                set s__NidaimeMizukageJokiBoi__Spell_target_y[this]=GetUnitY(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this])
+                call SetUnitAnimation(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this], "spell one")
+                call TimerStart(NewTimerEx(this), 0.5, false, function s__NidaimeMizukageJokiBoi__Spell_finalExplosion)
                 call ReleaseTimer(GetExpiredTimer())
             endif
      endfunction 
 
 
-        function s__NidaimeMizukageJokiBoi___Spell_actions takes nothing returns nothing
-            local integer this= s__NidaimeMizukageJokiBoi___Spell_allocate()
-            set s__NidaimeMizukageJokiBoi___Spell_caster[this]=GetTriggerUnit()
-            set s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this]=CreateUnit(GetTriggerPlayer(), 'e00Y', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), GetUnitFacing(GetTriggerUnit()))
-            set s__NidaimeMizukageJokiBoi___Spell_size[this]=0.8
-    		set s__NidaimeMizukageJokiBoi___Spell_count[this]=0
-	        call SlowAura(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this] , 0.3 , 400)
-            call SetUnitAnimationByIndex(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this], 1)
+        function s__NidaimeMizukageJokiBoi__Spell_actions takes nothing returns nothing
+            local integer this= s__NidaimeMizukageJokiBoi__Spell_allocate()
+            set s__NidaimeMizukageJokiBoi__Spell_caster[this]=GetTriggerUnit()
+            set s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this]=CreateUnit(GetTriggerPlayer(), 'e00Y', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), GetUnitFacing(GetTriggerUnit()))
+            set s__NidaimeMizukageJokiBoi__Spell_size[this]=0.8
+    		set s__NidaimeMizukageJokiBoi__Spell_count[this]=0
+	        call SlowAura(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this] , 0.3 , 400)
+            call SetUnitAnimationByIndex(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this], 1)
             if GetSpellTargetUnit() != null then
-				call IssueTargetOrder(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this], "attack", GetSpellTargetUnit())
-                set s__NidaimeMizukageJokiBoi___Spell_target[this]=GetSpellTargetUnit()
+				call IssueTargetOrder(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this], "attack", GetSpellTargetUnit())
+                set s__NidaimeMizukageJokiBoi__Spell_target[this]=GetSpellTargetUnit()
             else
-                call IssuePointOrder(s__NidaimeMizukageJokiBoi___Spell_jokiBoi[this], "move", GetSpellTargetX(), GetSpellTargetY())
-                set s__NidaimeMizukageJokiBoi___Spell_target_x[this]=GetSpellTargetX()
-                set s__NidaimeMizukageJokiBoi___Spell_target_y[this]=GetSpellTargetY()
-                set s__NidaimeMizukageJokiBoi___Spell_distance[this]=GetDistance(GetUnitX(s__NidaimeMizukageJokiBoi___Spell_caster[this]) , GetUnitY(s__NidaimeMizukageJokiBoi___Spell_caster[this]) , GetSpellTargetX() , GetSpellTargetY())
+                call IssuePointOrder(s__NidaimeMizukageJokiBoi__Spell_jokiBoi[this], "move", GetSpellTargetX(), GetSpellTargetY())
+                set s__NidaimeMizukageJokiBoi__Spell_target_x[this]=GetSpellTargetX()
+                set s__NidaimeMizukageJokiBoi__Spell_target_y[this]=GetSpellTargetY()
+                set s__NidaimeMizukageJokiBoi__Spell_distance[this]=GetDistance(GetUnitX(s__NidaimeMizukageJokiBoi__Spell_caster[this]) , GetUnitY(s__NidaimeMizukageJokiBoi__Spell_caster[this]) , GetSpellTargetX() , GetSpellTargetY())
             endif
 
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
@@ -50038,12 +50330,12 @@ endfunction
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff0000Gengetsu: I'll show you that the name of Mizukage is not just for show.|r")
             endif
 
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__NidaimeMizukageJokiBoi___Spell_periodic)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__NidaimeMizukageJokiBoi__Spell_periodic)
         endfunction 
 
         
-        function s__NidaimeMizukageJokiBoi___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(47 , s__NidaimeMizukageJokiBoi___Spell_SPELL_ID , function s__NidaimeMizukageJokiBoi___Spell_actions)
+        function s__NidaimeMizukageJokiBoi__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(47 , s__NidaimeMizukageJokiBoi__Spell_SPELL_ID , function s__NidaimeMizukageJokiBoi__Spell_actions)
         endfunction 
         
     
@@ -50116,16 +50408,16 @@ endfunction
                 set i=0
                 loop
                     exitwhen i > 7
-                    if s__GurenSuishoRo___GurenQBlocks[i] != null then
+                    if s__GurenSuishoRo__GurenQBlocks[i] != null then
                         set new_x=(((s__GurenSuishoRo_target_x[this] )*1.0) + Cos((( Deg2Rad(45 * i) )*1.0)) * (( 175)*1.0)) // INLINED!!
                         set new_y=(((s__GurenSuishoRo_target_y[this] )*1.0) + Sin((( Deg2Rad(45 * i) )*1.0)) * (( 175)*1.0)) // INLINED!!
                         if s__GurenSuishoHibari_hitcrystal then
                             set bj_lastCreatedEffect=AddSpecialEffect("war3mapImported\\ice.mdl", new_x, new_y)
                             call DestroyEffect(bj_lastCreatedEffect)
                         endif
-                        call RemoveDestructable(s__GurenSuishoRo___GurenQBlocks[i])
+                        call RemoveDestructable(s__GurenSuishoRo__GurenQBlocks[i])
                     endif
-                    set s__GurenSuishoRo___GurenQBlocks[i]= null
+                    set s__GurenSuishoRo__GurenQBlocks[i]= null
                     set i=i + 1
                 endloop
                 call KillUnit(s__GurenSuishoRo_GurenQ)
@@ -50157,7 +50449,7 @@ endfunction
                 call SetUnitAnimationByIndex(bj_lastCreatedUnit, 1)
                 call SetUnitScale(bj_lastCreatedUnit, 1.0, 0, 0)
                 call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 1.5)
-                set s__GurenSuishoRo___GurenQBlocks[i]= CreateDestructable('YTfc', x, y, 18 * i, 1.0, 0)
+                set s__GurenSuishoRo__GurenQBlocks[i]= CreateDestructable('YTfc', x, y, 18 * i, 1.0, 0)
                 set i=i + 1
             endloop
             set s__GurenSuishoRo_GurenQ=CreateUnit(GetTriggerPlayer(), 'h06A', s__GurenSuishoRo_target_x[this], s__GurenSuishoRo_target_y[this], 270)
@@ -74013,43 +74305,43 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__KakuzuCombinedAttack__Item_allocate takes nothing returns integer
+        function s__KakuzuCombinedAttack___Item_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KakuzuCombinedAttack__Item_Alloc__recycle[(0)] == 0 ) then
-                set s__KakuzuCombinedAttack__Item_Alloc__instanceCount=s__KakuzuCombinedAttack__Item_Alloc__instanceCount + 1
-                set this=s__KakuzuCombinedAttack__Item_Alloc__instanceCount
+            if ( s__KakuzuCombinedAttack___Item_Alloc__recycle[(0)] == 0 ) then
+                set s__KakuzuCombinedAttack___Item_Alloc__instanceCount=s__KakuzuCombinedAttack___Item_Alloc__instanceCount + 1
+                set this=s__KakuzuCombinedAttack___Item_Alloc__instanceCount
             else
-                set this=s__KakuzuCombinedAttack__Item_Alloc__recycle[(0)]
-                set s__KakuzuCombinedAttack__Item_Alloc__recycle[(0)]=s__KakuzuCombinedAttack__Item_Alloc__recycle[s__KakuzuCombinedAttack__Item_Alloc__recycle[(0)]]
+                set this=s__KakuzuCombinedAttack___Item_Alloc__recycle[(0)]
+                set s__KakuzuCombinedAttack___Item_Alloc__recycle[(0)]=s__KakuzuCombinedAttack___Item_Alloc__recycle[s__KakuzuCombinedAttack___Item_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__KakuzuCombinedAttack__Item_deallocate takes integer this returns nothing
-            set s__KakuzuCombinedAttack__Item_Alloc__recycle[this]=s__KakuzuCombinedAttack__Item_Alloc__recycle[(0)]
-            set s__KakuzuCombinedAttack__Item_Alloc__recycle[(0)]=this
+        function s__KakuzuCombinedAttack___Item_deallocate takes integer this returns nothing
+            set s__KakuzuCombinedAttack___Item_Alloc__recycle[this]=s__KakuzuCombinedAttack___Item_Alloc__recycle[(0)]
+            set s__KakuzuCombinedAttack___Item_Alloc__recycle[(0)]=this
         endfunction
         
     
-        function s__KakuzuCombinedAttack__Item_destroy takes integer this returns nothing
+        function s__KakuzuCombinedAttack___Item_destroy takes integer this returns nothing
             local integer i= 0
             loop
                 set i=i + 1
                 exitwhen i > 6
-                call KillUnit(s__KakuzuCombinedAttack__dummies[(this)*(12)+i])
-                set s__KakuzuCombinedAttack__dummies[(this)*(12)+i]= null
+                call KillUnit(s__KakuzuCombinedAttack___dummies[(this)*(12)+i])
+                set s__KakuzuCombinedAttack___dummies[(this)*(12)+i]= null
             endloop
-            call DestroyGroup(s__KakuzuCombinedAttack__Item_damaged[this])
-            set s__KakuzuCombinedAttack__Item_damaged[this]=null
-            set s__KakuzuCombinedAttack__Item_caster[this]=null
-            call s__KakuzuCombinedAttack__Item_deallocate(this)
+            call DestroyGroup(s__KakuzuCombinedAttack___Item_damaged[this])
+            set s__KakuzuCombinedAttack___Item_damaged[this]=null
+            set s__KakuzuCombinedAttack___Item_caster[this]=null
+            call s__KakuzuCombinedAttack___Item_deallocate(this)
         endfunction
         
-        function s__KakuzuCombinedAttack__Item_periodic takes nothing returns nothing
+        function s__KakuzuCombinedAttack___Item_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real unit_x
             local real unit_y
@@ -74058,17 +74350,17 @@ endfunction
             local real new_x
             local real new_y
             local integer i= 0
-            set s__KakuzuCombinedAttack__Item_count[this]=s__KakuzuCombinedAttack__Item_count[this] + 1
-            call PauseUnit(s__KakuzuCombinedAttack__Item_caster[this], false)
+            set s__KakuzuCombinedAttack___Item_count[this]=s__KakuzuCombinedAttack___Item_count[this] + 1
+            call PauseUnit(s__KakuzuCombinedAttack___Item_caster[this], false)
             loop
                 set i=i + 1
                 exitwhen i > 6
-                set unit_x=GetUnitX(s__KakuzuCombinedAttack__dummies[(this)*(12)+i])
-                set unit_y=GetUnitY(s__KakuzuCombinedAttack__dummies[(this)*(12)+i])
-                set new_x=unit_x + Cos(Deg2Rad(GetUnitFacing(s__KakuzuCombinedAttack__dummies[(this)*(12)+i]))) * 30
-                set new_y=unit_y + Sin(Deg2Rad(GetUnitFacing(s__KakuzuCombinedAttack__dummies[(this)*(12)+i]))) * 30
-                call SetUnitX(s__KakuzuCombinedAttack__dummies[(this)*(12)+i], new_x)
-                call SetUnitY(s__KakuzuCombinedAttack__dummies[(this)*(12)+i], new_y)
+                set unit_x=GetUnitX(s__KakuzuCombinedAttack___dummies[(this)*(12)+i])
+                set unit_y=GetUnitY(s__KakuzuCombinedAttack___dummies[(this)*(12)+i])
+                set new_x=unit_x + Cos(Deg2Rad(GetUnitFacing(s__KakuzuCombinedAttack___dummies[(this)*(12)+i]))) * 30
+                set new_y=unit_y + Sin(Deg2Rad(GetUnitFacing(s__KakuzuCombinedAttack___dummies[(this)*(12)+i]))) * 30
+                call SetUnitX(s__KakuzuCombinedAttack___dummies[(this)*(12)+i], new_x)
+                call SetUnitY(s__KakuzuCombinedAttack___dummies[(this)*(12)+i], new_y)
                 if i <= 1 then
                     call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Other\\NeutralBuildingExplosion\\NeutralBuildingExplosion.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                 elseif i <= 3 then
@@ -74082,36 +74374,36 @@ endfunction
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__KakuzuCombinedAttack__Item_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__KakuzuCombinedAttack__Item_damaged[this]) then
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__KakuzuCombinedAttack___Item_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__KakuzuCombinedAttack___Item_damaged[this]) then
                         set unit_x_2=GetUnitX(bj_lastCreatedUnit)
                         set unit_y_2=GetUnitY(bj_lastCreatedUnit)
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" ), (( unit_x_2 )*1.0), (( unit_y_2)*1.0))) // INLINED!!
                         if IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == true then
-                            call UnitDamageTarget(s__KakuzuCombinedAttack__Item_caster[this], bj_lastCreatedUnit, 22 * GetHeroStr(s__KakuzuCombinedAttack__Item_caster[this], true), true, false, ATTACK_TYPE_SIEGE, DAMAGE_TYPE_MAGIC, null)
+                            call UnitDamageTarget(s__KakuzuCombinedAttack___Item_caster[this], bj_lastCreatedUnit, 22 * GetHeroStr(s__KakuzuCombinedAttack___Item_caster[this], true), true, false, ATTACK_TYPE_SIEGE, DAMAGE_TYPE_MAGIC, null)
                         else
-                            call UnitDamageTarget(s__KakuzuCombinedAttack__Item_caster[this], bj_lastCreatedUnit, 11 * GetHeroStr(s__KakuzuCombinedAttack__Item_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                            call UnitDamageTarget(s__KakuzuCombinedAttack___Item_caster[this], bj_lastCreatedUnit, 11 * GetHeroStr(s__KakuzuCombinedAttack___Item_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
                         endif
-                        call GroupAddUnit(s__KakuzuCombinedAttack__Item_damaged[this], bj_lastCreatedUnit)
+                        call GroupAddUnit(s__KakuzuCombinedAttack___Item_damaged[this], bj_lastCreatedUnit)
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
             endloop
-            if s__KakuzuCombinedAttack__Item_count[this] >= 40 then
-                call SetUnitTimeScale(s__KakuzuCombinedAttack__Item_caster[this], 1.0)
-                call s__KakuzuCombinedAttack__Item_destroy(this)
+            if s__KakuzuCombinedAttack___Item_count[this] >= 40 then
+                call SetUnitTimeScale(s__KakuzuCombinedAttack___Item_caster[this], 1.0)
+                call s__KakuzuCombinedAttack___Item_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__KakuzuCombinedAttack__Item_delay takes nothing returns nothing
+        function s__KakuzuCombinedAttack___Item_delay takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__KakuzuCombinedAttack__Item_periodic , "KankuroCombinedAttack_periodic")
+            call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__KakuzuCombinedAttack___Item_periodic , "KankuroCombinedAttack_periodic")
             call ReleaseTimer(GetExpiredTimer())
         endfunction 
         
-        function s__KakuzuCombinedAttack__Item_actions takes nothing returns nothing
-            local integer this= s__KakuzuCombinedAttack__Item_allocate()
+        function s__KakuzuCombinedAttack___Item_actions takes nothing returns nothing
+            local integer this= s__KakuzuCombinedAttack___Item_allocate()
             local real caster_x
             local real caster_y
             local real target_x= GetSpellTargetX()
@@ -74122,10 +74414,10 @@ endfunction
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
                 call PlaySoundOnUnitBJ(gg_snd_Kakuzu_T_Zukokku, 80, GetTriggerUnit())
             endif
-            set s__KakuzuCombinedAttack__Item_damaged[this]=CreateGroup()
-            set s__KakuzuCombinedAttack__Item_caster[this]=GetTriggerUnit()
-            set caster_x=GetUnitX(s__KakuzuCombinedAttack__Item_caster[this])
-            set caster_y=GetUnitY(s__KakuzuCombinedAttack__Item_caster[this])
+            set s__KakuzuCombinedAttack___Item_damaged[this]=CreateGroup()
+            set s__KakuzuCombinedAttack___Item_caster[this]=GetTriggerUnit()
+            set caster_x=GetUnitX(s__KakuzuCombinedAttack___Item_caster[this])
+            set caster_y=GetUnitY(s__KakuzuCombinedAttack___Item_caster[this])
             set angle=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
             loop
                 set i=i + 1
@@ -74141,17 +74433,17 @@ endfunction
                 endif
                 call SetUnitX(bj_lastCreatedUnit, caster_x)
                 call SetUnitY(bj_lastCreatedUnit, caster_y)
-                set s__KakuzuCombinedAttack__dummies[(this)*(12)+i]= bj_lastCreatedUnit
+                set s__KakuzuCombinedAttack___dummies[(this)*(12)+i]= bj_lastCreatedUnit
             endloop
-            call PauseUnit(s__KakuzuCombinedAttack__Item_caster[this], true)
-            call SetUnitAnimation(s__KakuzuCombinedAttack__Item_caster[this], "spell channel")
-            call SetUnitTimeScale(s__KakuzuCombinedAttack__Item_caster[this], 3.0)
-            set s__KakuzuCombinedAttack__Item_count[this]=0
-            call TimerStartEx(NewTimerEx(this) , 0.3 , false , function s__KakuzuCombinedAttack__Item_delay , "KankuroCombinedAttack_delay")
+            call PauseUnit(s__KakuzuCombinedAttack___Item_caster[this], true)
+            call SetUnitAnimation(s__KakuzuCombinedAttack___Item_caster[this], "spell channel")
+            call SetUnitTimeScale(s__KakuzuCombinedAttack___Item_caster[this], 3.0)
+            set s__KakuzuCombinedAttack___Item_count[this]=0
+            call TimerStartEx(NewTimerEx(this) , 0.3 , false , function s__KakuzuCombinedAttack___Item_delay , "KankuroCombinedAttack_delay")
         endfunction
         
-        function s__KakuzuCombinedAttack__Item_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(5 , s__KakuzuCombinedAttack__Item_SPELL_ID , function s__KakuzuCombinedAttack__Item_actions)
+        function s__KakuzuCombinedAttack___Item_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(5 , s__KakuzuCombinedAttack___Item_SPELL_ID , function s__KakuzuCombinedAttack___Item_actions)
         endfunction
         
     
@@ -75520,9 +75812,9 @@ endfunction
             set i=0
             loop
                 exitwhen i > 5
-                call KillUnit(s__KarinChainsArea__KarinChain[(this)*(1)+i])
-                call ShowUnit(s__KarinChainsArea__KarinChain[(this)*(1)+i], false)
-                set s__KarinChainsArea__KarinChain[(this)*(1)+i]= null
+                call KillUnit(s__KarinChainsArea___KarinChain[(this)*(1)+i])
+                call ShowUnit(s__KarinChainsArea___KarinChain[(this)*(1)+i], false)
+                set s__KarinChainsArea___KarinChain[(this)*(1)+i]= null
                 set i=i + 1
             endloop
             call ShowUnit(s__KarinChainsArea_dummy[this], false)
@@ -75548,34 +75840,34 @@ endfunction
                 exitwhen i > 4
                 set x=(((s__KarinChainsArea_target_x[this] )*1.0) + Cos((( Deg2Rad(72 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
                 set y=(((s__KarinChainsArea_target_y[this] )*1.0) + Sin((( Deg2Rad(72 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
-                call SetUnitX(s__KarinChainsArea__KarinChain[(this)*(1)+i], x)
-                call SetUnitY(s__KarinChainsArea__KarinChain[(this)*(1)+i], y)
+                call SetUnitX(s__KarinChainsArea___KarinChain[(this)*(1)+i], x)
+                call SetUnitY(s__KarinChainsArea___KarinChain[(this)*(1)+i], y)
                 set i=i + 1
             endloop
             set s__KarinChainsArea_chain[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KarinChainsArea_chain[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KarinChainsArea_chain[this],false , s__KarinChainsArea_dummy[this] , 60)
-            call s__Lightning_attachToUnit(s__KarinChainsArea_chain[this],true , s__KarinChainsArea__KarinChain[(this)*(1)+0] , 60)
+            call s__Lightning_attachToUnit(s__KarinChainsArea_chain[this],true , s__KarinChainsArea___KarinChain[(this)*(1)+0] , 60)
 
             set s__KarinChainsArea_chain1[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KarinChainsArea_chain1[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KarinChainsArea_chain1[this],false , s__KarinChainsArea_dummy[this] , 60)
-            call s__Lightning_attachToUnit(s__KarinChainsArea_chain1[this],true , s__KarinChainsArea__KarinChain[(this)*(1)+1] , 60)
+            call s__Lightning_attachToUnit(s__KarinChainsArea_chain1[this],true , s__KarinChainsArea___KarinChain[(this)*(1)+1] , 60)
 
             set s__KarinChainsArea_chain2[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KarinChainsArea_chain2[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KarinChainsArea_chain2[this],false , s__KarinChainsArea_dummy[this] , 60)
-            call s__Lightning_attachToUnit(s__KarinChainsArea_chain2[this],true , s__KarinChainsArea__KarinChain[(this)*(1)+2] , 60)
+            call s__Lightning_attachToUnit(s__KarinChainsArea_chain2[this],true , s__KarinChainsArea___KarinChain[(this)*(1)+2] , 60)
 
             set s__KarinChainsArea_chain3[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KarinChainsArea_chain3[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KarinChainsArea_chain3[this],false , s__KarinChainsArea_dummy[this] , 60)
-            call s__Lightning_attachToUnit(s__KarinChainsArea_chain3[this],true , s__KarinChainsArea__KarinChain[(this)*(1)+3] , 60)
+            call s__Lightning_attachToUnit(s__KarinChainsArea_chain3[this],true , s__KarinChainsArea___KarinChain[(this)*(1)+3] , 60)
 
             set s__KarinChainsArea_chain4[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KarinChainsArea_chain4[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KarinChainsArea_chain4[this],false , s__KarinChainsArea_dummy[this] , 60)
-            call s__Lightning_attachToUnit(s__KarinChainsArea_chain4[this],true , s__KarinChainsArea__KarinChain[(this)*(1)+4] , 60)
+            call s__Lightning_attachToUnit(s__KarinChainsArea_chain4[this],true , s__KarinChainsArea___KarinChain[(this)*(1)+4] , 60)
             
             call SetUnitFlyHeight(s__KarinChainsArea_dummy[this], 300, 10000)
             set bj_lastCreatedGroup=CreateGroup()
@@ -75603,34 +75895,34 @@ endfunction
                 exitwhen i > 4
                 set x=(((GetUnitX(s__KarinChainsArea_caster[this]) )*1.0) + Cos((( Deg2Rad(72 * i) )*1.0)) * (( 250)*1.0)) // INLINED!!
                 set y=(((GetUnitY(s__KarinChainsArea_caster[this]) )*1.0) + Sin((( Deg2Rad(72 * i) )*1.0)) * (( 250)*1.0)) // INLINED!!
-                set s__KarinChainsArea__KarinChain[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__KarinChainsArea_caster[this]), 'e007', x, y, 270)
-                call SetUnitFlyHeight(s__KarinChainsArea__KarinChain[(this)*(1)+i], - 200, 0)
+                set s__KarinChainsArea___KarinChain[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__KarinChainsArea_caster[this]), 'e007', x, y, 270)
+                call SetUnitFlyHeight(s__KarinChainsArea___KarinChain[(this)*(1)+i], - 200, 0)
                 set i=i + 1
             endloop
             set s__KarinChainsArea_chain[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KarinChainsArea_chain[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KarinChainsArea_chain[this],false , s__KarinChainsArea_caster[this] , 60)
-            call s__Lightning_attachToUnit(s__KarinChainsArea_chain[this],true , s__KarinChainsArea__KarinChain[(this)*(1)+0] , 60)
+            call s__Lightning_attachToUnit(s__KarinChainsArea_chain[this],true , s__KarinChainsArea___KarinChain[(this)*(1)+0] , 60)
 
             set s__KarinChainsArea_chain1[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KarinChainsArea_chain1[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KarinChainsArea_chain1[this],false , s__KarinChainsArea_caster[this] , 60)
-            call s__Lightning_attachToUnit(s__KarinChainsArea_chain1[this],true , s__KarinChainsArea__KarinChain[(this)*(1)+1] , 60)
+            call s__Lightning_attachToUnit(s__KarinChainsArea_chain1[this],true , s__KarinChainsArea___KarinChain[(this)*(1)+1] , 60)
 
             set s__KarinChainsArea_chain2[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KarinChainsArea_chain2[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KarinChainsArea_chain2[this],false , s__KarinChainsArea_caster[this] , 60)
-            call s__Lightning_attachToUnit(s__KarinChainsArea_chain2[this],true , s__KarinChainsArea__KarinChain[(this)*(1)+2] , 60)
+            call s__Lightning_attachToUnit(s__KarinChainsArea_chain2[this],true , s__KarinChainsArea___KarinChain[(this)*(1)+2] , 60)
 
             set s__KarinChainsArea_chain3[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KarinChainsArea_chain3[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KarinChainsArea_chain3[this],false , s__KarinChainsArea_caster[this] , 60)
-            call s__Lightning_attachToUnit(s__KarinChainsArea_chain3[this],true , s__KarinChainsArea__KarinChain[(this)*(1)+3] , 60)
+            call s__Lightning_attachToUnit(s__KarinChainsArea_chain3[this],true , s__KarinChainsArea___KarinChain[(this)*(1)+3] , 60)
 
             set s__KarinChainsArea_chain4[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KarinChainsArea_chain4[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KarinChainsArea_chain4[this],false , s__KarinChainsArea_caster[this] , 60)
-            call s__Lightning_attachToUnit(s__KarinChainsArea_chain4[this],true , s__KarinChainsArea__KarinChain[(this)*(1)+4] , 60)
+            call s__Lightning_attachToUnit(s__KarinChainsArea_chain4[this],true , s__KarinChainsArea___KarinChain[(this)*(1)+4] , 60)
 	
 
         set bj_lastCreatedGroup=CreateGroup()
@@ -76083,12 +76375,12 @@ endfunction
 			set i=0
 			loop
 				exitwhen i > 4
-				call ShowUnit(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i], false)
-				call KillUnit(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i])
-				set s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i]= null
-				call ShowUnit(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+i], false)
-				call KillUnit(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+i])
-				set s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+i]= null
+				call ShowUnit(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i], false)
+				call KillUnit(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i])
+				set s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i]= null
+				call ShowUnit(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+i], false)
+				call KillUnit(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+i])
+				set s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+i]= null
 				set i=i + 1
 			endloop
 			call DestroyGroup(s__KarinLesserChakraChainsNew_damaged[this])
@@ -76108,22 +76400,22 @@ endfunction
 			set i=0
 			loop
 				exitwhen i > 4
-				set x=GetUnitX(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i])
-				set y=GetUnitY(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i])
-				set s__KarinLesserChakraChainsNew_angle[this]=Atan3(x , y , GetUnitX(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+i]) , GetUnitY(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+i]))
+				set x=GetUnitX(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i])
+				set y=GetUnitY(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i])
+				set s__KarinLesserChakraChainsNew_angle[this]=Atan3(x , y , GetUnitX(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+i]) , GetUnitY(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+i]))
 				set new_x=(((x )*1.0) + Cos((( s__KarinLesserChakraChainsNew_angle[this] )*1.0)) * (( 45)*1.0)) // INLINED!!
 				set new_y=(((y )*1.0) + Sin((( s__KarinLesserChakraChainsNew_angle[this] )*1.0)) * (( 45)*1.0)) // INLINED!!
-				call SetUnitX(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i], new_x)
-				call SetUnitY(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i], new_y)
+				call SetUnitX(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i], new_x)
+				call SetUnitY(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i], new_y)
 				if i == 0 or i == 4 then
-					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i]) + 2, 0)
+					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i]) + 2, 0)
 				elseif i == 1 or i == 3 then
-					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i]) + 10, 0)
+					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i]) + 10, 0)
 				elseif i == 2 then
-					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+2], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+2]) + 19, 0)
+					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+2], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+2]) + 19, 0)
 				endif
 				set bj_lastCreatedGroup=CreateGroup()
-				call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i]), GetUnitY(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i]), 160, null)
+				call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i]), GetUnitY(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i]), 160, null)
 				loop
 					set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
 					exitwhen bj_lastCreatedUnit == null
@@ -76185,22 +76477,22 @@ endfunction
 			set i=0
 			loop
 				exitwhen i > 4
-				set x=GetUnitX(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i])
-				set y=GetUnitY(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i])
-				set angle=Atan3(GetUnitX(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+i]) , GetUnitY(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+i]) , s__KarinLesserChakraChainsNew_target_x[this] , s__KarinLesserChakraChainsNew_target_y[this])
+				set x=GetUnitX(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i])
+				set y=GetUnitY(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i])
+				set angle=Atan3(GetUnitX(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+i]) , GetUnitY(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+i]) , s__KarinLesserChakraChainsNew_target_x[this] , s__KarinLesserChakraChainsNew_target_y[this])
 				set new_x=(((x )*1.0) + Cos((( angle )*1.0)) * (( 45)*1.0)) // INLINED!!
 				set new_y=(((y )*1.0) + Sin((( angle )*1.0)) * (( 45)*1.0)) // INLINED!!
-				call SetUnitX(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i], new_x)
-				call SetUnitY(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i], new_y)
+				call SetUnitX(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i], new_x)
+				call SetUnitY(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i], new_y)
 				if i == 0 or i == 4 then
-					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i]) - 2, 0)
+					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i]) - 2, 0)
 				elseif i == 1 or i == 3 then
-					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i]) - 10, 0)
+					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i]) - 10, 0)
 				elseif i == 2 then
-					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+2], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+2]) - 19, 0)
+					call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+2], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+2]) - 19, 0)
 				endif
 				set bj_lastCreatedGroup=CreateGroup()
-				call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i]), GetUnitY(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i]), 200, null)
+				call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i]), GetUnitY(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i]), 200, null)
 				loop
 					set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
 					exitwhen bj_lastCreatedUnit == null
@@ -76258,38 +76550,38 @@ endfunction
 					endif
 					set x=(((GetUnitX(s__KarinLesserChakraChainsNew_caster[this]) )*1.0) + Cos((( s__KarinLesserChakraChainsNew_angle[this] - Deg2Rad(- 60 + ( i * 30 )) )*1.0)) * (( offset)*1.0)) // INLINED!!
 					set y=(((GetUnitY(s__KarinLesserChakraChainsNew_caster[this]) )*1.0) + Sin((( s__KarinLesserChakraChainsNew_angle[this] - Deg2Rad(- 60 + ( i * 30 )) )*1.0)) * (( offset)*1.0)) // INLINED!!
-					set s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__KarinLesserChakraChainsNew_caster[this]), 'e007', x, y, 270)
+					set s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__KarinLesserChakraChainsNew_caster[this]), 'e007', x, y, 270)
 					set i=i + 1
 				endloop
-				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+0], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+0]) + 50, 0)
-				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+1], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+0]) + 200, 0)
-				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+2], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+0]) + 350, 0)
-				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+3], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+0]) + 200, 0)
-				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+4], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+0]) + 50, 0)
+				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+0], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+0]) + 50, 0)
+				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+1], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+0]) + 200, 0)
+				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+2], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+0]) + 350, 0)
+				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+3], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+0]) + 200, 0)
+				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+4], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+0]) + 50, 0)
 
 				set s__KarinLesserChakraChainsNew_chain[this]=s__Lightning_create("YECH" , true , 0.5)
 				call s__Lightning_recolor(s__KarinLesserChakraChainsNew_chain[this],1 , 1 , 0.7 , 0.8)
 				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain[this],false , s__KarinLesserChakraChainsNew_caster[this] , 60)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain[this],true , s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+0] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain[this],true , s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+0] , 60)
 				set s__KarinLesserChakraChainsNew_chain2[this]=s__Lightning_create("YECH" , true , 0.5)
 				call s__Lightning_recolor(s__KarinLesserChakraChainsNew_chain2[this],1 , 1 , 0.7 , 0.8)
 				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain2[this],false , s__KarinLesserChakraChainsNew_caster[this] , 60)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain2[this],true , s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+1] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain2[this],true , s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+1] , 60)
 	
 				set s__KarinLesserChakraChainsNew_chain3[this]=s__Lightning_create("YECH" , true , 0.5)
 				call s__Lightning_recolor(s__KarinLesserChakraChainsNew_chain3[this],1 , 1 , 0.7 , 0.8)
 				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain3[this],false , s__KarinLesserChakraChainsNew_caster[this] , 60)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain3[this],true , s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+2] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain3[this],true , s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+2] , 60)
 	
 				set s__KarinLesserChakraChainsNew_chain4[this]=s__Lightning_create("YECH" , true , 0.5)
 				call s__Lightning_recolor(s__KarinLesserChakraChainsNew_chain4[this],1 , 1 , 0.7 , 0.8)
 				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain4[this],false , s__KarinLesserChakraChainsNew_caster[this] , 60)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain4[this],true , s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+3] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain4[this],true , s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+3] , 60)
 	
 				set s__KarinLesserChakraChainsNew_chain5[this]=s__Lightning_create("YECH" , true , 0.5)
 				call s__Lightning_recolor(s__KarinLesserChakraChainsNew_chain5[this],1 , 1 , 0.7 , 0.8)
 				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain5[this],false , s__KarinLesserChakraChainsNew_caster[this] , 60)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain5[this],true , s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+4] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain5[this],true , s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+4] , 60)
 	
 				set i=0
 				loop
@@ -76307,39 +76599,39 @@ endfunction
 					endif
 					set x=(((GetUnitX(s__KarinLesserChakraChainsNew_caster[this]) )*1.0) + Cos((( s__KarinLesserChakraChainsNew_angle[this] - Deg2Rad(- 60 + ( i * 30 )) )*1.0)) * (( offset)*1.0)) // INLINED!!
 					set y=(((GetUnitY(s__KarinLesserChakraChainsNew_caster[this]) )*1.0) + Sin((( s__KarinLesserChakraChainsNew_angle[this] - Deg2Rad(- 60 + ( i * 30 )) )*1.0)) * (( offset)*1.0)) // INLINED!!
-					set s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__KarinLesserChakraChainsNew_caster[this]), 'e007', x, y, 270)
+					set s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__KarinLesserChakraChainsNew_caster[this]), 'e007', x, y, 270)
 					set i=i + 1
 				endloop
-				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+0], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+0]) + 50, 0)
-				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+1], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+0]) + 200, 0)
-				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+2], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+0]) + 350, 0)
-				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+3], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+0]) + 200, 0)
-				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+4], GetUnitFlyHeight(s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+0]) + 50, 0)
+				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+0], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+0]) + 50, 0)
+				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+1], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+0]) + 200, 0)
+				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+2], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+0]) + 350, 0)
+				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+3], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+0]) + 200, 0)
+				call SetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+4], GetUnitFlyHeight(s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+0]) + 50, 0)
 	
 				set s__KarinLesserChakraChainsNew_chain6[this]=s__Lightning_create("YECH" , true , 0.5)
 				call s__Lightning_recolor(s__KarinLesserChakraChainsNew_chain6[this],1 , 1 , 0.7 , 0.8)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain6[this],false , s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+0] , 60)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain6[this],true , s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+0] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain6[this],false , s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+0] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain6[this],true , s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+0] , 60)
 	
 				set s__KarinLesserChakraChainsNew_chain7[this]=s__Lightning_create("YECH" , true , 0.5)
 				call s__Lightning_recolor(s__KarinLesserChakraChainsNew_chain7[this],1 , 1 , 0.7 , 0.8)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain7[this],false , s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+1] , 60)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain7[this],true , s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+1] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain7[this],false , s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+1] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain7[this],true , s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+1] , 60)
 	
 				set s__KarinLesserChakraChainsNew_chain8[this]=s__Lightning_create("YECH" , true , 0.5)
 				call s__Lightning_recolor(s__KarinLesserChakraChainsNew_chain8[this],1 , 1 , 0.7 , 0.8)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain8[this],false , s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+2] , 60)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain8[this],true , s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+2] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain8[this],false , s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+2] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain8[this],true , s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+2] , 60)
 	
 				set s__KarinLesserChakraChainsNew_chain9[this]=s__Lightning_create("YECH" , true , 0.5)
 				call s__Lightning_recolor(s__KarinLesserChakraChainsNew_chain9[this],1 , 1 , 0.7 , 0.8)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain9[this],false , s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+3] , 60)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain9[this],true , s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+3] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain9[this],false , s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+3] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain9[this],true , s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+3] , 60)
 	
 				set s__KarinLesserChakraChainsNew_chain10[this]=s__Lightning_create("YECH" , true , 0.5)
 				call s__Lightning_recolor(s__KarinLesserChakraChainsNew_chain10[this],1 , 1 , 0.7 , 0.8)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain10[this],false , s__KarinLesserChakraChainsNew__Karinchain2[(this)*(1)+4] , 60)
-				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain10[this],true , s__KarinLesserChakraChainsNew__Karinchain[(this)*(1)+4] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain10[this],false , s__KarinLesserChakraChainsNew___Karinchain2[(this)*(1)+4] , 60)
+				call s__Lightning_attachToUnit(s__KarinLesserChakraChainsNew_chain10[this],true , s__KarinLesserChakraChainsNew___Karinchain[(this)*(1)+4] , 60)
 	
 				call SetUnitFacing(s__KarinLesserChakraChainsNew_caster[this], Rad2Deg(s__KarinLesserChakraChainsNew_angle[this]))
 
@@ -77578,11 +77870,11 @@ endfunction
             set i=0
             loop
                 exitwhen i > 3
-                set x2=(((GetUnitX(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+i]) )*1.0) + Cos((( s__KidomaruTripleArrow_angle[this] )*1.0)) * (( 40)*1.0)) // INLINED!!
-                set y2=(((GetUnitY(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+i]) )*1.0) + Sin((( s__KidomaruTripleArrow_angle[this] )*1.0)) * (( 40)*1.0)) // INLINED!!
-                call SetUnitX(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+i], x2)
-                call SetUnitY(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+i], y2)
-                call SetUnitFacing(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+i], Rad2Deg(s__KidomaruTripleArrow_angle[this]))
+                set x2=(((GetUnitX(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+i]) )*1.0) + Cos((( s__KidomaruTripleArrow_angle[this] )*1.0)) * (( 40)*1.0)) // INLINED!!
+                set y2=(((GetUnitY(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+i]) )*1.0) + Sin((( s__KidomaruTripleArrow_angle[this] )*1.0)) * (( 40)*1.0)) // INLINED!!
+                call SetUnitX(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+i], x2)
+                call SetUnitY(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+i], y2)
+                call SetUnitFacing(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+i], Rad2Deg(s__KidomaruTripleArrow_angle[this]))
                 set bj_lastCreatedGroup=CreateGroup()
                 call GroupEnumUnitsInRange(bj_lastCreatedGroup, x2, y2, 120, null)
                 loop
@@ -77593,23 +77885,23 @@ endfunction
                             call UnitDamageTarget(s__KidomaruTripleArrow_caster[this], bj_lastCreatedUnit, ( 60 + GetHeroAgi(s__KidomaruTripleArrow_caster[this], true) ) / 5 * GetUnitAbilityLevel(s__KidomaruTripleArrow_caster[this], s__KidomaruTripleArrow_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
                             call GroupAddUnit(s__KidomaruTripleArrow_damaged1[this], bj_lastCreatedUnit)
                             call DestroyEffect(AddSpecialEffect(("war3mapImported\\Blood.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
-                            call ShowUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+1], false)
-                            call KillUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+1])
-                            set s__KidomaruTripleArrow__KidoArrows[(this)*(1)+1]= null
+                            call ShowUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+1], false)
+                            call KillUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+1])
+                            set s__KidomaruTripleArrow___KidoArrows[(this)*(1)+1]= null
                         elseif i == 2 and not IsUnitInGroup(bj_lastCreatedUnit, s__KidomaruTripleArrow_damaged2[this]) then
                             call UnitDamageTarget(s__KidomaruTripleArrow_caster[this], bj_lastCreatedUnit, ( 60 + GetHeroAgi(s__KidomaruTripleArrow_caster[this], true) ) / 5 * GetUnitAbilityLevel(s__KidomaruTripleArrow_caster[this], s__KidomaruTripleArrow_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
                             call GroupAddUnit(s__KidomaruTripleArrow_damaged2[this], bj_lastCreatedUnit)
                             call DestroyEffect(AddSpecialEffect(("war3mapImported\\Blood.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
-                            call ShowUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+2], false)
-                            call KillUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+2])
-                            set s__KidomaruTripleArrow__KidoArrows[(this)*(1)+2]= null
+                            call ShowUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+2], false)
+                            call KillUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+2])
+                            set s__KidomaruTripleArrow___KidoArrows[(this)*(1)+2]= null
                         elseif i == 3 and not IsUnitInGroup(bj_lastCreatedUnit, s__KidomaruTripleArrow_damaged3[this]) then
                             call UnitDamageTarget(s__KidomaruTripleArrow_caster[this], bj_lastCreatedUnit, ( 60 + GetHeroAgi(s__KidomaruTripleArrow_caster[this], true) ) / 5 * GetUnitAbilityLevel(s__KidomaruTripleArrow_caster[this], s__KidomaruTripleArrow_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
                             call GroupAddUnit(s__KidomaruTripleArrow_damaged3[this], bj_lastCreatedUnit)
                             call DestroyEffect(AddSpecialEffect(("war3mapImported\\Blood.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
-                            call ShowUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+3], false)
-                            call KillUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+3])
-                            set s__KidomaruTripleArrow__KidoArrows[(this)*(1)+3]= null
+                            call ShowUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+3], false)
+                            call KillUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+3])
+                            set s__KidomaruTripleArrow___KidoArrows[(this)*(1)+3]= null
                         endif
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
@@ -77619,21 +77911,21 @@ endfunction
             endloop
             set s__KidomaruTripleArrow_count[this]=s__KidomaruTripleArrow_count[this] + 1
             if s__KidomaruTripleArrow_count[this] == 24 then
-                call ShowUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+1], false)
-                call KillUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+1])
-                set s__KidomaruTripleArrow__KidoArrows[(this)*(1)+1]= null
+                call ShowUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+1], false)
+                call KillUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+1])
+                set s__KidomaruTripleArrow___KidoArrows[(this)*(1)+1]= null
                 call DestroyGroup(s__KidomaruTripleArrow_damaged1[this])
                 set s__KidomaruTripleArrow_damaged1[this]=null
             elseif s__KidomaruTripleArrow_count[this] == 28 then
-                call ShowUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+2], false)
-                call KillUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+2])
-                set s__KidomaruTripleArrow__KidoArrows[(this)*(1)+2]= null
+                call ShowUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+2], false)
+                call KillUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+2])
+                set s__KidomaruTripleArrow___KidoArrows[(this)*(1)+2]= null
                 call DestroyGroup(s__KidomaruTripleArrow_damaged2[this])
                 set s__KidomaruTripleArrow_damaged2[this]=null
             elseif s__KidomaruTripleArrow_count[this] == 32 then
-                call ShowUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+3], false)
-                call KillUnit(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+3])
-                set s__KidomaruTripleArrow__KidoArrows[(this)*(1)+3]= null
+                call ShowUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+3], false)
+                call KillUnit(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+3])
+                set s__KidomaruTripleArrow___KidoArrows[(this)*(1)+3]= null
                 call DestroyGroup(s__KidomaruTripleArrow_damaged3[this])
                 set s__KidomaruTripleArrow_damaged3[this]=null
                 call s__KidomaruTripleArrow_deallocate(this)
@@ -77645,8 +77937,8 @@ endfunction
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real x= (((GetUnitX(s__KidomaruTripleArrow_caster[this]) )*1.0) + Cos((( s__KidomaruTripleArrow_angle[this] )*1.0)) * (( 120)*1.0)) // INLINED!!
             local real y= (((GetUnitY(s__KidomaruTripleArrow_caster[this]) )*1.0) + Sin((( s__KidomaruTripleArrow_angle[this] )*1.0)) * (( 120)*1.0)) // INLINED!!
-            set s__KidomaruTripleArrow__KidoArrows[(this)*(1)+s__KidomaruTripleArrow_count2[this]]= CreateUnit(GetOwningPlayer(s__KidomaruTripleArrow_caster[this]), 'h04O', x, y, Rad2Deg(s__KidomaruTripleArrow_angle[this]))
-            call SetUnitScale(s__KidomaruTripleArrow__KidoArrows[(this)*(1)+s__KidomaruTripleArrow_count2[this]], 2.0, 2.0, 2.0)
+            set s__KidomaruTripleArrow___KidoArrows[(this)*(1)+s__KidomaruTripleArrow_count2[this]]= CreateUnit(GetOwningPlayer(s__KidomaruTripleArrow_caster[this]), 'h04O', x, y, Rad2Deg(s__KidomaruTripleArrow_angle[this]))
+            call SetUnitScale(s__KidomaruTripleArrow___KidoArrows[(this)*(1)+s__KidomaruTripleArrow_count2[this]], 2.0, 2.0, 2.0)
             set s__KidomaruTripleArrow_count2[this]=s__KidomaruTripleArrow_count2[this] + 1
             if s__KidomaruTripleArrow_count2[this] > 2 then
                 call SetUnitPropWindow(s__KidomaruTripleArrow_caster[this], s__KidomaruTripleArrow_window[this])
@@ -78620,73 +78912,73 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__KillerBeeMorph__Spell_allocate takes nothing returns integer
+        function s__KillerBeeMorph___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KillerBeeMorph__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__KillerBeeMorph__Spell_Alloc__instanceCount=s__KillerBeeMorph__Spell_Alloc__instanceCount + 1
-                set this=s__KillerBeeMorph__Spell_Alloc__instanceCount
+            if ( s__KillerBeeMorph___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__KillerBeeMorph___Spell_Alloc__instanceCount=s__KillerBeeMorph___Spell_Alloc__instanceCount + 1
+                set this=s__KillerBeeMorph___Spell_Alloc__instanceCount
             else
-                set this=s__KillerBeeMorph__Spell_Alloc__recycle[(0)]
-                set s__KillerBeeMorph__Spell_Alloc__recycle[(0)]=s__KillerBeeMorph__Spell_Alloc__recycle[s__KillerBeeMorph__Spell_Alloc__recycle[(0)]]
+                set this=s__KillerBeeMorph___Spell_Alloc__recycle[(0)]
+                set s__KillerBeeMorph___Spell_Alloc__recycle[(0)]=s__KillerBeeMorph___Spell_Alloc__recycle[s__KillerBeeMorph___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__KillerBeeMorph__Spell_deallocate takes integer this returns nothing
-            set s__KillerBeeMorph__Spell_Alloc__recycle[this]=s__KillerBeeMorph__Spell_Alloc__recycle[(0)]
-            set s__KillerBeeMorph__Spell_Alloc__recycle[(0)]=this
+        function s__KillerBeeMorph___Spell_deallocate takes integer this returns nothing
+            set s__KillerBeeMorph___Spell_Alloc__recycle[this]=s__KillerBeeMorph___Spell_Alloc__recycle[(0)]
+            set s__KillerBeeMorph___Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__KillerBeeMorph__Spell_destroy takes integer this returns nothing
-            set s__KillerBeeMorph__Spell_caster[this]=null
-            call s__KillerBeeMorph__Spell_deallocate(this)
+        function s__KillerBeeMorph___Spell_destroy takes integer this returns nothing
+            set s__KillerBeeMorph___Spell_caster[this]=null
+            call s__KillerBeeMorph___Spell_deallocate(this)
         endfunction
         
-        function s__KillerBeeMorph__Spell_periodic takes nothing returns nothing
+        function s__KillerBeeMorph___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            if GetUnitTypeId(s__KillerBeeMorph__Spell_caster[this]) != 'H09O' then
-                call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph__Spell_caster[this]), 'A0GM', true)
-                call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph__Spell_caster[this]), 'A0GR', true)
-                call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph__Spell_caster[this]), 'A0GN', true)
-                call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph__Spell_caster[this]), 'A0GS', true)
-                call s__KillerBeeMorph__Spell_destroy(this)
+            if GetUnitTypeId(s__KillerBeeMorph___Spell_caster[this]) != 'H09O' then
+                call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph___Spell_caster[this]), 'A0GM', true)
+                call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph___Spell_caster[this]), 'A0GR', true)
+                call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph___Spell_caster[this]), 'A0GN', true)
+                call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph___Spell_caster[this]), 'A0GS', true)
+                call s__KillerBeeMorph___Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__KillerBeeMorph__Spell_delay takes nothing returns nothing
+        function s__KillerBeeMorph___Spell_delay takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph__Spell_caster[this]), 'A0GM', false)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph__Spell_caster[this]), 'A0GR', false)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph__Spell_caster[this]), 'A0GN', false)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph__Spell_caster[this]), 'A0GS', false)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph___Spell_caster[this]), 'A0GM', false)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph___Spell_caster[this]), 'A0GR', false)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph___Spell_caster[this]), 'A0GN', false)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__KillerBeeMorph___Spell_caster[this]), 'A0GS', false)
 
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__KillerBeeMorph__Spell_periodic)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__KillerBeeMorph___Spell_periodic)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__KillerBeeMorph__Spell_actions takes nothing returns nothing
-            local integer this= s__KillerBeeMorph__Spell_allocate()
-            set s__KillerBeeMorph__Spell_caster[this]=GetTriggerUnit()
- 	    set bj_lastCreatedUnit=GetDummy(GetTriggerPlayer() , "war3mapImported\\Firaga2.mdl" , GetUnitX(s__KillerBeeMorph__Spell_caster[this]) , GetUnitY(s__KillerBeeMorph__Spell_caster[this]) , 270)
+        function s__KillerBeeMorph___Spell_actions takes nothing returns nothing
+            local integer this= s__KillerBeeMorph___Spell_allocate()
+            set s__KillerBeeMorph___Spell_caster[this]=GetTriggerUnit()
+ 	    set bj_lastCreatedUnit=GetDummy(GetTriggerPlayer() , "war3mapImported\\Firaga2.mdl" , GetUnitX(s__KillerBeeMorph___Spell_caster[this]) , GetUnitY(s__KillerBeeMorph___Spell_caster[this]) , 270)
             call SetUnitScale(bj_lastCreatedUnit, 2, 2, 2)
     	    call RecycleUnitDelayed(bj_lastCreatedUnit , 4.0)
-            if GetUnitTypeId(s__KillerBeeMorph__Spell_caster[this]) == 'H055' or GetUnitTypeId(s__KillerBeeMorph__Spell_caster[this]) == 'H056' then
+            if GetUnitTypeId(s__KillerBeeMorph___Spell_caster[this]) == 'H055' or GetUnitTypeId(s__KillerBeeMorph___Spell_caster[this]) == 'H056' then
     		if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
             		call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff0000Killer Bee: Eight Tails, thats me, da rappin, Killer Bee|r")
-            		call PlaySoundOnUnitBJ(gg_snd_Killer_Bee_Transform, 100, s__KillerBeeMorph__Spell_caster[this])
+            		call PlaySoundOnUnitBJ(gg_snd_Killer_Bee_Transform, 100, s__KillerBeeMorph___Spell_caster[this])
     		endif
-                call TimerStart(NewTimerEx(this), 0.01, false, function s__KillerBeeMorph__Spell_delay)
+                call TimerStart(NewTimerEx(this), 0.01, false, function s__KillerBeeMorph___Spell_delay)
            endif
         endfunction
         
-        function s__KillerBeeMorph__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(42 , s__KillerBeeMorph__Spell_SPELL_ID , function s__KillerBeeMorph__Spell_actions)
+        function s__KillerBeeMorph___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(42 , s__KillerBeeMorph___Spell_SPELL_ID , function s__KillerBeeMorph___Spell_actions)
         endfunction
         
     
@@ -78926,29 +79218,29 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__KillerBeNewBijuuDama__Spell_allocate takes nothing returns integer
+        function s__KillerBeNewBijuuDama___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KillerBeNewBijuuDama__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__KillerBeNewBijuuDama__Spell_Alloc__instanceCount=s__KillerBeNewBijuuDama__Spell_Alloc__instanceCount + 1
-                set this=s__KillerBeNewBijuuDama__Spell_Alloc__instanceCount
+            if ( s__KillerBeNewBijuuDama___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__KillerBeNewBijuuDama___Spell_Alloc__instanceCount=s__KillerBeNewBijuuDama___Spell_Alloc__instanceCount + 1
+                set this=s__KillerBeNewBijuuDama___Spell_Alloc__instanceCount
             else
-                set this=s__KillerBeNewBijuuDama__Spell_Alloc__recycle[(0)]
-                set s__KillerBeNewBijuuDama__Spell_Alloc__recycle[(0)]=s__KillerBeNewBijuuDama__Spell_Alloc__recycle[s__KillerBeNewBijuuDama__Spell_Alloc__recycle[(0)]]
+                set this=s__KillerBeNewBijuuDama___Spell_Alloc__recycle[(0)]
+                set s__KillerBeNewBijuuDama___Spell_Alloc__recycle[(0)]=s__KillerBeNewBijuuDama___Spell_Alloc__recycle[s__KillerBeNewBijuuDama___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__KillerBeNewBijuuDama__Spell_deallocate takes integer this returns nothing
-            set s__KillerBeNewBijuuDama__Spell_Alloc__recycle[this]=s__KillerBeNewBijuuDama__Spell_Alloc__recycle[(0)]
-            set s__KillerBeNewBijuuDama__Spell_Alloc__recycle[(0)]=this
+        function s__KillerBeNewBijuuDama___Spell_deallocate takes integer this returns nothing
+            set s__KillerBeNewBijuuDama___Spell_Alloc__recycle[this]=s__KillerBeNewBijuuDama___Spell_Alloc__recycle[(0)]
+            set s__KillerBeNewBijuuDama___Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__KillerBeNewBijuuDama__Spell_shake takes nothing returns nothing
+        function s__KillerBeNewBijuuDama___Spell_shake takes nothing returns nothing
             local integer i= 0
             loop
                 exitwhen i > 11
@@ -78958,20 +79250,20 @@ endfunction
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__KillerBeNewBijuuDama__Spell_throw takes nothing returns nothing
+        function s__KillerBeNewBijuuDama___Spell_throw takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real x= GetUnitX(s__KillerBeNewBijuuDama__Spell_ball[this])
-            local real y= GetUnitY(s__KillerBeNewBijuuDama__Spell_ball[this])
-            local real new_x= (((x )*1.0) + Cos((( s__KillerBeNewBijuuDama__Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
-            local real new_y= (((y )*1.0) + Sin((( s__KillerBeNewBijuuDama__Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
+            local real x= GetUnitX(s__KillerBeNewBijuuDama___Spell_ball[this])
+            local real y= GetUnitY(s__KillerBeNewBijuuDama___Spell_ball[this])
+            local real new_x= (((x )*1.0) + Cos((( s__KillerBeNewBijuuDama___Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
+            local real new_y= (((y )*1.0) + Sin((( s__KillerBeNewBijuuDama___Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
             local integer i= 0
-            set s__KillerBeNewBijuuDama__Spell_count[this]=s__KillerBeNewBijuuDama__Spell_count[this] + 1
-            call SetUnitX(s__KillerBeNewBijuuDama__Spell_ball[this], new_x)
-            call SetUnitY(s__KillerBeNewBijuuDama__Spell_ball[this], new_y)
-            if ModuloInteger(s__KillerBeNewBijuuDama__Spell_count[this], 5) == 0 then
-                call SetUnitTimeScale(s__KillerBeNewBijuuDama__Spell_caster[this], 1.0)
-                call SetUnitAnimation(s__KillerBeNewBijuuDama__Spell_caster[this], "spell")
-                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__KillerBeNewBijuuDama__Spell_caster[this]) ), ( 'e019' ), (( new_x )*1.0), (( new_y )*1.0), (( Rad2Deg(s__KillerBeNewBijuuDama__Spell_angle[this]))*1.0))) // INLINED!!
+            set s__KillerBeNewBijuuDama___Spell_count[this]=s__KillerBeNewBijuuDama___Spell_count[this] + 1
+            call SetUnitX(s__KillerBeNewBijuuDama___Spell_ball[this], new_x)
+            call SetUnitY(s__KillerBeNewBijuuDama___Spell_ball[this], new_y)
+            if ModuloInteger(s__KillerBeNewBijuuDama___Spell_count[this], 5) == 0 then
+                call SetUnitTimeScale(s__KillerBeNewBijuuDama___Spell_caster[this], 1.0)
+                call SetUnitAnimation(s__KillerBeNewBijuuDama___Spell_caster[this], "spell")
+                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__KillerBeNewBijuuDama___Spell_caster[this]) ), ( 'e019' ), (( new_x )*1.0), (( new_y )*1.0), (( Rad2Deg(s__KillerBeNewBijuuDama___Spell_angle[this]))*1.0))) // INLINED!!
                 call RecycleUnitDelayed(bj_lastCreatedUnit , 5.0)
             endif
             set bj_lastCreatedGroup=CreateGroup()
@@ -78979,27 +79271,27 @@ endfunction
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
-                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__KillerBeNewBijuuDama__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__KillerBeNewBijuuDama__Spell_damaged[this]) then
+                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__KillerBeNewBijuuDama___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__KillerBeNewBijuuDama___Spell_damaged[this]) then
                     if IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) then
-                        call UnitDamageTarget(s__KillerBeNewBijuuDama__Spell_caster[this], bj_lastCreatedUnit, 15.0 * GetHeroStr(s__KillerBeNewBijuuDama__Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                        call UnitDamageTarget(s__KillerBeNewBijuuDama___Spell_caster[this], bj_lastCreatedUnit, 15.0 * GetHeroStr(s__KillerBeNewBijuuDama___Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
                     else
-                        call UnitDamageTarget(s__KillerBeNewBijuuDama__Spell_caster[this], bj_lastCreatedUnit, 11.0 * GetHeroStr(s__KillerBeNewBijuuDama__Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                        call UnitDamageTarget(s__KillerBeNewBijuuDama___Spell_caster[this], bj_lastCreatedUnit, 11.0 * GetHeroStr(s__KillerBeNewBijuuDama___Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
                     endif
-                    call GroupAddUnit(s__KillerBeNewBijuuDama__Spell_damaged[this], bj_lastCreatedUnit)
+                    call GroupAddUnit(s__KillerBeNewBijuuDama___Spell_damaged[this], bj_lastCreatedUnit)
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            if s__KillerBeNewBijuuDama__Spell_count[this] > 35 then
+            if s__KillerBeNewBijuuDama___Spell_count[this] > 35 then
                 set i=0
                 loop
                     exitwhen i > 11
-                    if IsUnitVisible(s__KillerBeNewBijuuDama__Spell_caster[this], Player(i)) then
+                    if IsUnitVisible(s__KillerBeNewBijuuDama___Spell_caster[this], Player(i)) then
                         call CameraSetEQNoiseForPlayer(Player(i), 7.00)
                     endif
                     set i=i + 1
                 endloop
-                call TimerStart(CreateTimer(), 2.0, false, function s__KillerBeNewBijuuDama__Spell_shake)
+                call TimerStart(CreateTimer(), 2.0, false, function s__KillerBeNewBijuuDama___Spell_shake)
                 
 		set bj_lastCreatedEffect=AddSpecialEffect("war3mapImported\\PrettyExplosion.mdx", new_x, new_y)
 		call BlzSetSpecialEffectTimeScale(bj_lastCreatedEffect, 2.0)
@@ -79009,107 +79301,107 @@ endfunction
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__KillerBeNewBijuuDama__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__KillerBeNewBijuuDama___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
                         if IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) then
-                            call UnitDamageTarget(s__KillerBeNewBijuuDama__Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroStr(s__KillerBeNewBijuuDama__Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                            call UnitDamageTarget(s__KillerBeNewBijuuDama___Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroStr(s__KillerBeNewBijuuDama___Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
                         else
-                            call UnitDamageTarget(s__KillerBeNewBijuuDama__Spell_caster[this], bj_lastCreatedUnit, 800, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                            call UnitDamageTarget(s__KillerBeNewBijuuDama___Spell_caster[this], bj_lastCreatedUnit, 800, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
                         endif
-                        call GroupAddUnit(s__KillerBeNewBijuuDama__Spell_damaged[this], bj_lastCreatedUnit)
+                        call GroupAddUnit(s__KillerBeNewBijuuDama___Spell_damaged[this], bj_lastCreatedUnit)
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
-                call RecycleUnit(s__KillerBeNewBijuuDama__Spell_ball[this])
-                call DestroyGroup(s__KillerBeNewBijuuDama__Spell_damaged[this])
-                set s__KillerBeNewBijuuDama__Spell_damaged[this]=null
-                set s__KillerBeNewBijuuDama__Spell_ball[this]=null
-                call s__KillerBeNewBijuuDama__Spell_deallocate(this)
+                call RecycleUnit(s__KillerBeNewBijuuDama___Spell_ball[this])
+                call DestroyGroup(s__KillerBeNewBijuuDama___Spell_damaged[this])
+                set s__KillerBeNewBijuuDama___Spell_damaged[this]=null
+                set s__KillerBeNewBijuuDama___Spell_ball[this]=null
+                call s__KillerBeNewBijuuDama___Spell_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction 
         
-        function s__KillerBeNewBijuuDama__Spell_delayBeforeThrow takes nothing returns nothing
+        function s__KillerBeNewBijuuDama___Spell_delayBeforeThrow takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            if IsUnitVisible(s__KillerBeNewBijuuDama__Spell_caster[this], GetLocalPlayer()) then
-                call PlaySoundOnUnitBJ(gg_snd_Killer_Bee_Transformed_R, 100.0, s__KillerBeNewBijuuDama__Spell_caster[this])
+            if IsUnitVisible(s__KillerBeNewBijuuDama___Spell_caster[this], GetLocalPlayer()) then
+                call PlaySoundOnUnitBJ(gg_snd_Killer_Bee_Transformed_R, 100.0, s__KillerBeNewBijuuDama___Spell_caster[this])
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff0000Killer Bee: I will rock ya! OH YEAH!|r")
             endif
             //call SetUnitScale(this.ball, 0.0001, 0.0001, 0.0001)
-	    set bj_lastCreatedEffect=AddSpecialEffect("DevilSlam.mdl", GetUnitX(s__KillerBeNewBijuuDama__Spell_ball[this]), GetUnitY(s__KillerBeNewBijuuDama__Spell_ball[this]))
+	    set bj_lastCreatedEffect=AddSpecialEffect("DevilSlam.mdl", GetUnitX(s__KillerBeNewBijuuDama___Spell_ball[this]), GetUnitY(s__KillerBeNewBijuuDama___Spell_ball[this]))
 	    call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 3.0)
 	    call BlzSetSpecialEffectColor(bj_lastCreatedEffect, 255, 255, 0)
-	    call BlzSetSpecialEffectHeight(bj_lastCreatedEffect, 200 + GetPointZ(GetUnitX(s__KillerBeNewBijuuDama__Spell_ball[this]) , GetUnitY(s__KillerBeNewBijuuDama__Spell_ball[this])))
+	    call BlzSetSpecialEffectHeight(bj_lastCreatedEffect, 200 + GetPointZ(GetUnitX(s__KillerBeNewBijuuDama___Spell_ball[this]) , GetUnitY(s__KillerBeNewBijuuDama___Spell_ball[this])))
 	    call BlzSetSpecialEffectPitch(bj_lastCreatedEffect, - 1.57)
-	    call BlzSetSpecialEffectRoll(bj_lastCreatedEffect, s__KillerBeNewBijuuDama__Spell_angle[this] + bj_PI)
+	    call BlzSetSpecialEffectRoll(bj_lastCreatedEffect, s__KillerBeNewBijuuDama___Spell_angle[this] + bj_PI)
 	    call DestroyEffect(bj_lastCreatedEffect)
             //set bj_lastCreatedUnit = GetUnit(GetOwningPlayer(this.caster), 'e016', GetUnitX(this.ball), GetUnitY(this.ball), Rad2Deg(this.angle))
             //call SetUnitFlyHeight(bj_lastCreatedUnit, 200, 0)
             //call SetUnitVertexColor(bj_lastCreatedUnit, 255, 255, 0, 255)
             //call RecycleUnitDelayed(bj_lastCreatedUnit, 5.0)
-            set s__KillerBeNewBijuuDama__Spell_count[this]=0
-            call PauseUnit(s__KillerBeNewBijuuDama__Spell_caster[this], false)
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__KillerBeNewBijuuDama__Spell_throw)
+            set s__KillerBeNewBijuuDama___Spell_count[this]=0
+            call PauseUnit(s__KillerBeNewBijuuDama___Spell_caster[this], false)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__KillerBeNewBijuuDama___Spell_throw)
         endfunction 
         
-        function s__KillerBeNewBijuuDama__Spell_growBall takes nothing returns nothing
+        function s__KillerBeNewBijuuDama___Spell_growBall takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real ball_x= GetUnitX(s__KillerBeNewBijuuDama__Spell_ball[this])
-            local real ball_y= GetUnitY(s__KillerBeNewBijuuDama__Spell_ball[this])
+            local real ball_x= GetUnitX(s__KillerBeNewBijuuDama___Spell_ball[this])
+            local real ball_y= GetUnitY(s__KillerBeNewBijuuDama___Spell_ball[this])
             local real x
             local real y
             local real angle
             local real new_x
             local real new_y
             local integer i= 0
-            set s__KillerBeNewBijuuDama__Spell_count[this]=s__KillerBeNewBijuuDama__Spell_count[this] + 1
+            set s__KillerBeNewBijuuDama___Spell_count[this]=s__KillerBeNewBijuuDama___Spell_count[this] + 1
             loop
                 set i=i + 1
                 exitwhen i > 20
-                set x=GetUnitX(s__KillerBeNewBijuuDama__chakra[(this)*(1)+i])
-                set y=GetUnitY(s__KillerBeNewBijuuDama__chakra[(this)*(1)+i])
+                set x=GetUnitX(s__KillerBeNewBijuuDama___chakra[(this)*(1)+i])
+                set y=GetUnitY(s__KillerBeNewBijuuDama___chakra[(this)*(1)+i])
                 set angle=Atan3(x , y , ball_x , ball_y)
                 set new_x=(((x )*1.0) + Cos((( angle )*1.0)) * (( 10)*1.0)) // INLINED!!
                 set new_y=(((y )*1.0) + Sin((( angle )*1.0)) * (( 10)*1.0)) // INLINED!!
-                call SetUnitX(s__KillerBeNewBijuuDama__chakra[(this)*(1)+i], new_x)
-                call SetUnitY(s__KillerBeNewBijuuDama__chakra[(this)*(1)+i], new_y)
-                call SetUnitFlyHeight(s__KillerBeNewBijuuDama__chakra[(this)*(1)+i], Parabola(0 , 350 , 160 , 300 , 10 * s__KillerBeNewBijuuDama__Spell_count[this]), 0)
+                call SetUnitX(s__KillerBeNewBijuuDama___chakra[(this)*(1)+i], new_x)
+                call SetUnitY(s__KillerBeNewBijuuDama___chakra[(this)*(1)+i], new_y)
+                call SetUnitFlyHeight(s__KillerBeNewBijuuDama___chakra[(this)*(1)+i], Parabola(0 , 350 , 160 , 300 , 10 * s__KillerBeNewBijuuDama___Spell_count[this]), 0)
             endloop
-            if ModuloInteger(s__KillerBeNewBijuuDama__Spell_count[this], 3) == 0 then
-                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__KillerBeNewBijuuDama__Spell_caster[this]) ), ( 'e015' ), (( GetUnitX(s__KillerBeNewBijuuDama__Spell_ball[this]) )*1.0), (( GetUnitY(s__KillerBeNewBijuuDama__Spell_ball[this]) )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
+            if ModuloInteger(s__KillerBeNewBijuuDama___Spell_count[this], 3) == 0 then
+                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__KillerBeNewBijuuDama___Spell_caster[this]) ), ( 'e015' ), (( GetUnitX(s__KillerBeNewBijuuDama___Spell_ball[this]) )*1.0), (( GetUnitY(s__KillerBeNewBijuuDama___Spell_ball[this]) )*1.0), (( GetRandomReal(0, 360))*1.0))) // INLINED!!
                 call SetUnitTimeScale(bj_lastCreatedUnit, 1.5)
                 call SetUnitVertexColor(bj_lastCreatedUnit, 100, 100, 200, 150)
                 call SetUnitScale(bj_lastCreatedUnit, 2.5, 2.5, 2.5)
                 call KillUnit(bj_lastCreatedUnit)
             endif
-            call SetUnitScale(s__KillerBeNewBijuuDama__Spell_ball[this], 0.01 * s__KillerBeNewBijuuDama__Spell_count[this], 0.01 * s__KillerBeNewBijuuDama__Spell_count[this], 0.01 * s__KillerBeNewBijuuDama__Spell_count[this])
-            if s__KillerBeNewBijuuDama__Spell_count[this] > 30 then
+            call SetUnitScale(s__KillerBeNewBijuuDama___Spell_ball[this], 0.01 * s__KillerBeNewBijuuDama___Spell_count[this], 0.01 * s__KillerBeNewBijuuDama___Spell_count[this], 0.01 * s__KillerBeNewBijuuDama___Spell_count[this])
+            if s__KillerBeNewBijuuDama___Spell_count[this] > 30 then
                 set i=0
                  loop
                     set i=i + 1
                     exitwhen i > 20
-                    call KillUnit(s__KillerBeNewBijuuDama__chakra[(this)*(1)+i])
-                    set s__KillerBeNewBijuuDama__chakra[(this)*(1)+i]= null
+                    call KillUnit(s__KillerBeNewBijuuDama___chakra[(this)*(1)+i])
+                    set s__KillerBeNewBijuuDama___chakra[(this)*(1)+i]= null
                 endloop
-                call TimerStart(NewTimerEx(this), 0.2, false, function s__KillerBeNewBijuuDama__Spell_delayBeforeThrow)
+                call TimerStart(NewTimerEx(this), 0.2, false, function s__KillerBeNewBijuuDama___Spell_delayBeforeThrow)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction 
         
-        function s__KillerBeNewBijuuDama__Spell_pause takes nothing returns nothing
+        function s__KillerBeNewBijuuDama___Spell_pause takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local integer i= 0
             loop
                 set i=i + 1
                 exitwhen i > 10
-                call ShowUnit(s__KillerBeNewBijuuDama__chakra[(this)*(1)+i], true)
+                call ShowUnit(s__KillerBeNewBijuuDama___chakra[(this)*(1)+i], true)
             endloop
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__KillerBeNewBijuuDama__Spell_growBall)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__KillerBeNewBijuuDama___Spell_growBall)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__KillerBeNewBijuuDama__Spell_actions takes nothing returns nothing
-            local integer this= s__KillerBeNewBijuuDama__Spell_allocate()
+        function s__KillerBeNewBijuuDama___Spell_actions takes nothing returns nothing
+            local integer this= s__KillerBeNewBijuuDama___Spell_allocate()
             local real caster_x
             local real caster_y
             local real target_x= GetSpellTargetX()
@@ -79119,16 +79411,16 @@ endfunction
             local real new_x_2
             local real new_y_2
             local integer i= 0
-            set s__KillerBeNewBijuuDama__Spell_damaged[this]=CreateGroup()
-            set s__KillerBeNewBijuuDama__Spell_caster[this]=GetTriggerUnit()
-            set caster_x=GetUnitX(s__KillerBeNewBijuuDama__Spell_caster[this])
-            set caster_y=GetUnitY(s__KillerBeNewBijuuDama__Spell_caster[this])
-            set s__KillerBeNewBijuuDama__Spell_angle[this]=Atan3(caster_x , caster_y , target_x , target_y)
-            set new_x=(((caster_x )*1.0) + Cos((( s__KillerBeNewBijuuDama__Spell_angle[this] )*1.0)) * (( 300)*1.0)) // INLINED!!
-            set new_y=(((caster_y )*1.0) + Sin((( s__KillerBeNewBijuuDama__Spell_angle[this] )*1.0)) * (( 300)*1.0)) // INLINED!!
-            set s__KillerBeNewBijuuDama__Spell_ball[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e013' ), (( new_x )*1.0), (( new_y )*1.0), (( 270)*1.0))) // INLINED!!
-            call SetUnitScale(s__KillerBeNewBijuuDama__Spell_ball[this], 0.0001, 0.0001, 0.0001)
-            call SetUnitFlyHeight(s__KillerBeNewBijuuDama__Spell_ball[this], 150, 0)
+            set s__KillerBeNewBijuuDama___Spell_damaged[this]=CreateGroup()
+            set s__KillerBeNewBijuuDama___Spell_caster[this]=GetTriggerUnit()
+            set caster_x=GetUnitX(s__KillerBeNewBijuuDama___Spell_caster[this])
+            set caster_y=GetUnitY(s__KillerBeNewBijuuDama___Spell_caster[this])
+            set s__KillerBeNewBijuuDama___Spell_angle[this]=Atan3(caster_x , caster_y , target_x , target_y)
+            set new_x=(((caster_x )*1.0) + Cos((( s__KillerBeNewBijuuDama___Spell_angle[this] )*1.0)) * (( 300)*1.0)) // INLINED!!
+            set new_y=(((caster_y )*1.0) + Sin((( s__KillerBeNewBijuuDama___Spell_angle[this] )*1.0)) * (( 300)*1.0)) // INLINED!!
+            set s__KillerBeNewBijuuDama___Spell_ball[this]=(CreateUnit((GetTriggerPlayer() ), ( 'e013' ), (( new_x )*1.0), (( new_y )*1.0), (( 270)*1.0))) // INLINED!!
+            call SetUnitScale(s__KillerBeNewBijuuDama___Spell_ball[this], 0.0001, 0.0001, 0.0001)
+            call SetUnitFlyHeight(s__KillerBeNewBijuuDama___Spell_ball[this], 150, 0)
             set i=0
             loop
                 set i=i + 1
@@ -79136,17 +79428,17 @@ endfunction
                 set new_x_2=(((new_x )*1.0) + Cos((( Deg2Rad(18 * i) )*1.0)) * (( 600)*1.0)) // INLINED!!
                 set new_y_2=(((new_y )*1.0) + Sin((( Deg2Rad(18 * i) )*1.0)) * (( 600)*1.0)) // INLINED!!
                 set bj_lastCreatedUnit=(CreateUnit((GetTriggerPlayer() ), ( 'e014' ), (( new_x_2 )*1.0), (( new_y_2 )*1.0), (( 270)*1.0))) // INLINED!!
-                call ShowUnit(s__KillerBeNewBijuuDama__chakra[(this)*(1)+i], false)
-                set s__KillerBeNewBijuuDama__chakra[(this)*(1)+i]= bj_lastCreatedUnit
+                call ShowUnit(s__KillerBeNewBijuuDama___chakra[(this)*(1)+i], false)
+                set s__KillerBeNewBijuuDama___chakra[(this)*(1)+i]= bj_lastCreatedUnit
             endloop
-            set s__KillerBeNewBijuuDama__Spell_count[this]=0
-            call PauseUnit(s__KillerBeNewBijuuDama__Spell_caster[this], true)
-            call SetUnitAnimation(s__KillerBeNewBijuuDama__Spell_caster[this], "spell")
-            call TimerStart(NewTimerEx(this), 0.1, false, function s__KillerBeNewBijuuDama__Spell_pause)
+            set s__KillerBeNewBijuuDama___Spell_count[this]=0
+            call PauseUnit(s__KillerBeNewBijuuDama___Spell_caster[this], true)
+            call SetUnitAnimation(s__KillerBeNewBijuuDama___Spell_caster[this], "spell")
+            call TimerStart(NewTimerEx(this), 0.1, false, function s__KillerBeNewBijuuDama___Spell_pause)
         endfunction
         
-        function s__KillerBeNewBijuuDama__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(42 , s__KillerBeNewBijuuDama__Spell_SPELL_ID , function s__KillerBeNewBijuuDama__Spell_actions)
+        function s__KillerBeNewBijuuDama___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(42 , s__KillerBeNewBijuuDama___Spell_SPELL_ID , function s__KillerBeNewBijuuDama___Spell_actions)
         endfunction
         
     
@@ -79913,90 +80205,90 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__KimimaroTessenkaHana__Spell_allocate takes nothing returns integer
+        function s__KimimaroTessenkaHana___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KimimaroTessenkaHana__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__KimimaroTessenkaHana__Spell_Alloc__instanceCount=s__KimimaroTessenkaHana__Spell_Alloc__instanceCount + 1
-                set this=s__KimimaroTessenkaHana__Spell_Alloc__instanceCount
+            if ( s__KimimaroTessenkaHana___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__KimimaroTessenkaHana___Spell_Alloc__instanceCount=s__KimimaroTessenkaHana___Spell_Alloc__instanceCount + 1
+                set this=s__KimimaroTessenkaHana___Spell_Alloc__instanceCount
             else
-                set this=s__KimimaroTessenkaHana__Spell_Alloc__recycle[(0)]
-                set s__KimimaroTessenkaHana__Spell_Alloc__recycle[(0)]=s__KimimaroTessenkaHana__Spell_Alloc__recycle[s__KimimaroTessenkaHana__Spell_Alloc__recycle[(0)]]
+                set this=s__KimimaroTessenkaHana___Spell_Alloc__recycle[(0)]
+                set s__KimimaroTessenkaHana___Spell_Alloc__recycle[(0)]=s__KimimaroTessenkaHana___Spell_Alloc__recycle[s__KimimaroTessenkaHana___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__KimimaroTessenkaHana__Spell_deallocate takes integer this returns nothing
-            set s__KimimaroTessenkaHana__Spell_Alloc__recycle[this]=s__KimimaroTessenkaHana__Spell_Alloc__recycle[(0)]
-            set s__KimimaroTessenkaHana__Spell_Alloc__recycle[(0)]=this
+        function s__KimimaroTessenkaHana___Spell_deallocate takes integer this returns nothing
+            set s__KimimaroTessenkaHana___Spell_Alloc__recycle[this]=s__KimimaroTessenkaHana___Spell_Alloc__recycle[(0)]
+            set s__KimimaroTessenkaHana___Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__KimimaroTessenkaHana__Spell_periodic takes nothing returns nothing
+        function s__KimimaroTessenkaHana___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real caster_x= GetUnitX(s__KimimaroTessenkaHana__Spell_caster[this])
-            local real caster_y= GetUnitY(s__KimimaroTessenkaHana__Spell_caster[this])
-            local real new_x= (((caster_x )*1.0) + Cos((( s__KimimaroTessenkaHana__Spell_angle[this] )*1.0)) * (( 35)*1.0)) // INLINED!!
-            local real new_y= (((caster_y )*1.0) + Sin((( s__KimimaroTessenkaHana__Spell_angle[this] )*1.0)) * (( 35)*1.0)) // INLINED!!
+            local real caster_x= GetUnitX(s__KimimaroTessenkaHana___Spell_caster[this])
+            local real caster_y= GetUnitY(s__KimimaroTessenkaHana___Spell_caster[this])
+            local real new_x= (((caster_x )*1.0) + Cos((( s__KimimaroTessenkaHana___Spell_angle[this] )*1.0)) * (( 35)*1.0)) // INLINED!!
+            local real new_y= (((caster_y )*1.0) + Sin((( s__KimimaroTessenkaHana___Spell_angle[this] )*1.0)) * (( 35)*1.0)) // INLINED!!
             if not IsTerrainPathable(new_x, new_y, PATHING_TYPE_WALKABILITY) then
-                call SetUnitX(s__KimimaroTessenkaHana__Spell_caster[this], new_x)
-                call SetUnitY(s__KimimaroTessenkaHana__Spell_caster[this], new_y)
-                call SetUnitFacing(s__KimimaroTessenkaHana__Spell_caster[this], Rad2Deg(s__KimimaroTessenkaHana__Spell_angle[this]))
+                call SetUnitX(s__KimimaroTessenkaHana___Spell_caster[this], new_x)
+                call SetUnitY(s__KimimaroTessenkaHana___Spell_caster[this], new_y)
+                call SetUnitFacing(s__KimimaroTessenkaHana___Spell_caster[this], Rad2Deg(s__KimimaroTessenkaHana___Spell_angle[this]))
                 call DestroyEffect(AddSpecialEffect(("Effects\\s_Earth_Smash.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                 set bj_lastCreatedGroup=CreateGroup()
                 call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 200, null)
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__KimimaroTessenkaHana__Spell_caster[this])) and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
-                        set new_x=(((GetUnitX(bj_lastCreatedUnit) )*1.0) + Cos((( s__KimimaroTessenkaHana__Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
-                        set new_y=(((GetUnitY(bj_lastCreatedUnit) )*1.0) + Sin((( s__KimimaroTessenkaHana__Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__KimimaroTessenkaHana___Spell_caster[this])) and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
+                        set new_x=(((GetUnitX(bj_lastCreatedUnit) )*1.0) + Cos((( s__KimimaroTessenkaHana___Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
+                        set new_y=(((GetUnitY(bj_lastCreatedUnit) )*1.0) + Sin((( s__KimimaroTessenkaHana___Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
                         if not IsTerrainPathable(new_x, new_y, PATHING_TYPE_WALKABILITY) then
                             call SetUnitPosition(bj_lastCreatedUnit, new_x, new_y)
                         endif
-                        if not IsUnitInGroup(bj_lastCreatedUnit, s__KimimaroTessenkaHana__Spell_damaged[this]) then
-                            call UnitDamageTarget(s__KimimaroTessenkaHana__Spell_caster[this], bj_lastCreatedUnit, ( 350 + 2.5 * GetHeroStr(s__KimimaroTessenkaHana__Spell_caster[this], true) + GetHeroAgi(s__KimimaroTessenkaHana__Spell_caster[this], true) ) * GetUnitAbilityLevel(s__KimimaroTessenkaHana__Spell_caster[this], 'A0FJ'), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-                            call GroupAddUnit(s__KimimaroTessenkaHana__Spell_damaged[this], bj_lastCreatedUnit)
+                        if not IsUnitInGroup(bj_lastCreatedUnit, s__KimimaroTessenkaHana___Spell_damaged[this]) then
+                            call UnitDamageTarget(s__KimimaroTessenkaHana___Spell_caster[this], bj_lastCreatedUnit, ( 350 + 2.5 * GetHeroStr(s__KimimaroTessenkaHana___Spell_caster[this], true) + GetHeroAgi(s__KimimaroTessenkaHana___Spell_caster[this], true) ) * GetUnitAbilityLevel(s__KimimaroTessenkaHana___Spell_caster[this], 'A0FJ'), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
+                            call GroupAddUnit(s__KimimaroTessenkaHana___Spell_damaged[this], bj_lastCreatedUnit)
                         endif
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
             else
-                set s__KimimaroTessenkaHana__Spell_count[this]=21
+                set s__KimimaroTessenkaHana___Spell_count[this]=21
             endif
-            set s__KimimaroTessenkaHana__Spell_count[this]=s__KimimaroTessenkaHana__Spell_count[this] + 1
-            if s__KimimaroTessenkaHana__Spell_count[this] > 20 then
-                call PauseUnit(s__KimimaroTessenkaHana__Spell_caster[this], false)
-                call DestroyGroup(s__KimimaroTessenkaHana__Spell_damaged[this])
-                set s__KimimaroTessenkaHana__Spell_damaged[this]=null
-                call s__KimimaroTessenkaHana__Spell_deallocate(this)
+            set s__KimimaroTessenkaHana___Spell_count[this]=s__KimimaroTessenkaHana___Spell_count[this] + 1
+            if s__KimimaroTessenkaHana___Spell_count[this] > 20 then
+                call PauseUnit(s__KimimaroTessenkaHana___Spell_caster[this], false)
+                call DestroyGroup(s__KimimaroTessenkaHana___Spell_damaged[this])
+                set s__KimimaroTessenkaHana___Spell_damaged[this]=null
+                call s__KimimaroTessenkaHana___Spell_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__KimimaroTessenkaHana__Spell_actions takes nothing returns nothing
-            local integer this= s__KimimaroTessenkaHana__Spell_allocate()
-            set s__KimimaroTessenkaHana__Spell_caster[this]=GetTriggerUnit()
-            set s__KimimaroTessenkaHana__Spell_angle[this]=Atan3(GetUnitX(s__KimimaroTessenkaHana__Spell_caster[this]) , GetUnitY(s__KimimaroTessenkaHana__Spell_caster[this]) , GetSpellTargetX() , GetSpellTargetY())
-            call SetUnitTimeScale(s__KimimaroTessenkaHana__Spell_caster[this], 0)
-            call PauseUnit(s__KimimaroTessenkaHana__Spell_caster[this], true)
-            call SetUnitAnimation(s__KimimaroTessenkaHana__Spell_caster[this], "spell alternate four")
-            set s__KimimaroTessenkaHana__Spell_count[this]=0
-            set s__KimimaroTessenkaHana__Spell_damaged[this]=CreateGroup()
+        function s__KimimaroTessenkaHana___Spell_actions takes nothing returns nothing
+            local integer this= s__KimimaroTessenkaHana___Spell_allocate()
+            set s__KimimaroTessenkaHana___Spell_caster[this]=GetTriggerUnit()
+            set s__KimimaroTessenkaHana___Spell_angle[this]=Atan3(GetUnitX(s__KimimaroTessenkaHana___Spell_caster[this]) , GetUnitY(s__KimimaroTessenkaHana___Spell_caster[this]) , GetSpellTargetX() , GetSpellTargetY())
+            call SetUnitTimeScale(s__KimimaroTessenkaHana___Spell_caster[this], 0)
+            call PauseUnit(s__KimimaroTessenkaHana___Spell_caster[this], true)
+            call SetUnitAnimation(s__KimimaroTessenkaHana___Spell_caster[this], "spell alternate four")
+            set s__KimimaroTessenkaHana___Spell_count[this]=0
+            set s__KimimaroTessenkaHana___Spell_damaged[this]=CreateGroup()
 
-	set bj_lastCreatedEffect=AddSpecialEffect("GoodDashWave.mdl", GetUnitX(s__KimimaroTessenkaHana__Spell_caster[this]), GetUnitY(s__KimimaroTessenkaHana__Spell_caster[this]))
-	call BlzSetSpecialEffectYaw(bj_lastCreatedEffect, s__KimimaroTessenkaHana__Spell_angle[this])
+	set bj_lastCreatedEffect=AddSpecialEffect("GoodDashWave.mdl", GetUnitX(s__KimimaroTessenkaHana___Spell_caster[this]), GetUnitY(s__KimimaroTessenkaHana___Spell_caster[this]))
+	call BlzSetSpecialEffectYaw(bj_lastCreatedEffect, s__KimimaroTessenkaHana___Spell_angle[this])
 	call DestroyEffect(bj_lastCreatedEffect)
 
-            call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__KimimaroTessenkaHana__Spell_periodic , "KimimaroHana_periodic")
+            call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__KimimaroTessenkaHana___Spell_periodic , "KimimaroHana_periodic")
         endfunction
         
-        function s__KimimaroTessenkaHana__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(54 , s__KimimaroTessenkaHana__Spell_SPELL_ID , function s__KimimaroTessenkaHana__Spell_actions)
+        function s__KimimaroTessenkaHana___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(54 , s__KimimaroTessenkaHana___Spell_SPELL_ID , function s__KimimaroTessenkaHana___Spell_actions)
         endfunction
         
     
@@ -80174,43 +80466,43 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__BrotherBashosen__Item_allocate takes nothing returns integer
+        function s__BrotherBashosen___Item_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__BrotherBashosen__Item_Alloc__recycle[(0)] == 0 ) then
-                set s__BrotherBashosen__Item_Alloc__instanceCount=s__BrotherBashosen__Item_Alloc__instanceCount + 1
-                set this=s__BrotherBashosen__Item_Alloc__instanceCount
+            if ( s__BrotherBashosen___Item_Alloc__recycle[(0)] == 0 ) then
+                set s__BrotherBashosen___Item_Alloc__instanceCount=s__BrotherBashosen___Item_Alloc__instanceCount + 1
+                set this=s__BrotherBashosen___Item_Alloc__instanceCount
             else
-                set this=s__BrotherBashosen__Item_Alloc__recycle[(0)]
-                set s__BrotherBashosen__Item_Alloc__recycle[(0)]=s__BrotherBashosen__Item_Alloc__recycle[s__BrotherBashosen__Item_Alloc__recycle[(0)]]
+                set this=s__BrotherBashosen___Item_Alloc__recycle[(0)]
+                set s__BrotherBashosen___Item_Alloc__recycle[(0)]=s__BrotherBashosen___Item_Alloc__recycle[s__BrotherBashosen___Item_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__BrotherBashosen__Item_deallocate takes integer this returns nothing
-            set s__BrotherBashosen__Item_Alloc__recycle[this]=s__BrotherBashosen__Item_Alloc__recycle[(0)]
-            set s__BrotherBashosen__Item_Alloc__recycle[(0)]=this
+        function s__BrotherBashosen___Item_deallocate takes integer this returns nothing
+            set s__BrotherBashosen___Item_Alloc__recycle[this]=s__BrotherBashosen___Item_Alloc__recycle[(0)]
+            set s__BrotherBashosen___Item_Alloc__recycle[(0)]=this
         endfunction
         
     
-        function s__BrotherBashosen__Item_destroy takes integer this returns nothing
+        function s__BrotherBashosen___Item_destroy takes integer this returns nothing
             local integer i= 0
-            call DestroyGroup(s__BrotherBashosen__Item_damaged[this])
+            call DestroyGroup(s__BrotherBashosen___Item_damaged[this])
             loop
                 set i=i + 1
                 exitwhen i > 6
-                call RecycleUnit(s__BrotherBashosen__dummies[(this)*(1)+i])
-                set s__BrotherBashosen__dummies[(this)*(1)+i]= null
+                call RecycleUnit(s__BrotherBashosen___dummies[(this)*(1)+i])
+                set s__BrotherBashosen___dummies[(this)*(1)+i]= null
             endloop
-            set s__BrotherBashosen__Item_damaged[this]=null
-            set s__BrotherBashosen__Item_caster[this]=null
-            call s__BrotherBashosen__Item_deallocate(this)
+            set s__BrotherBashosen___Item_damaged[this]=null
+            set s__BrotherBashosen___Item_caster[this]=null
+            call s__BrotherBashosen___Item_deallocate(this)
         endfunction
         
-        function s__BrotherBashosen__Item_periodic takes nothing returns nothing
+        function s__BrotherBashosen___Item_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real unit_x
             local real unit_y
@@ -80219,26 +80511,26 @@ endfunction
             local real new_x
             local real new_y
             local integer i= 0
-            set s__BrotherBashosen__Item_count[this]=s__BrotherBashosen__Item_count[this] + 1
+            set s__BrotherBashosen___Item_count[this]=s__BrotherBashosen___Item_count[this] + 1
             loop
                 set i=i + 1
                 exitwhen i > 6
-                set unit_x=GetUnitX(s__BrotherBashosen__dummies[(this)*(1)+i])
-                set unit_y=GetUnitY(s__BrotherBashosen__dummies[(this)*(1)+i])
-                set new_x=unit_x + Cos(Deg2Rad(GetUnitFacing(s__BrotherBashosen__dummies[(this)*(1)+i]))) * 30
-                set new_y=unit_y + Sin(Deg2Rad(GetUnitFacing(s__BrotherBashosen__dummies[(this)*(1)+i]))) * 30
-                call SetUnitX(s__BrotherBashosen__dummies[(this)*(1)+i], new_x)
-                call SetUnitY(s__BrotherBashosen__dummies[(this)*(1)+i], new_y)
-                if ModuloInteger(s__BrotherBashosen__Item_count[this], 4) == 0 then
-                    if s__BrotherBashosen__Item_element[this] == 1 then
+                set unit_x=GetUnitX(s__BrotherBashosen___dummies[(this)*(1)+i])
+                set unit_y=GetUnitY(s__BrotherBashosen___dummies[(this)*(1)+i])
+                set new_x=unit_x + Cos(Deg2Rad(GetUnitFacing(s__BrotherBashosen___dummies[(this)*(1)+i]))) * 30
+                set new_y=unit_y + Sin(Deg2Rad(GetUnitFacing(s__BrotherBashosen___dummies[(this)*(1)+i]))) * 30
+                call SetUnitX(s__BrotherBashosen___dummies[(this)*(1)+i], new_x)
+                call SetUnitY(s__BrotherBashosen___dummies[(this)*(1)+i], new_y)
+                if ModuloInteger(s__BrotherBashosen___Item_count[this], 4) == 0 then
+                    if s__BrotherBashosen___Item_element[this] == 1 then
                         call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Other\\NeutralBuildingExplosion\\NeutralBuildingExplosion.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
-                    elseif s__BrotherBashosen__Item_element[this] == 2 then
+                    elseif s__BrotherBashosen___Item_element[this] == 2 then
                         call DestroyEffect(AddSpecialEffect(("Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
-                    elseif s__BrotherBashosen__Item_element[this] == 3 then
+                    elseif s__BrotherBashosen___Item_element[this] == 3 then
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
-                    elseif s__BrotherBashosen__Item_element[this] == 4 then
+                    elseif s__BrotherBashosen___Item_element[this] == 4 then
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
-                    elseif s__BrotherBashosen__Item_element[this] == 5 then
+                    elseif s__BrotherBashosen___Item_element[this] == 5 then
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                     endif
                 endif
@@ -80247,25 +80539,25 @@ endfunction
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__BrotherBashosen__Item_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__BrotherBashosen__Item_damaged[this]) then
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__BrotherBashosen___Item_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__BrotherBashosen___Item_damaged[this]) then
                         set unit_x_2=GetUnitX(bj_lastCreatedUnit)
                         set unit_y_2=GetUnitY(bj_lastCreatedUnit)
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" ), (( unit_x_2 )*1.0), (( unit_y_2)*1.0))) // INLINED!!
-                        call UnitDamageTarget(s__BrotherBashosen__Item_caster[this], bj_lastCreatedUnit, GetHeroStr(s__BrotherBashosen__Item_caster[this], true) / 2 * GetUnitAbilityLevel(s__BrotherBashosen__Item_caster[this], s__BrotherBashosen__Item_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                        call GroupAddUnit(s__BrotherBashosen__Item_damaged[this], bj_lastCreatedUnit)
+                        call UnitDamageTarget(s__BrotherBashosen___Item_caster[this], bj_lastCreatedUnit, GetHeroStr(s__BrotherBashosen___Item_caster[this], true) / 2 * GetUnitAbilityLevel(s__BrotherBashosen___Item_caster[this], s__BrotherBashosen___Item_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                        call GroupAddUnit(s__BrotherBashosen___Item_damaged[this], bj_lastCreatedUnit)
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
             endloop
-            if s__BrotherBashosen__Item_count[this] >= 25 then
-                call s__BrotherBashosen__Item_destroy(this)
+            if s__BrotherBashosen___Item_count[this] >= 25 then
+                call s__BrotherBashosen___Item_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__BrotherBashosen__Item_actions takes nothing returns nothing
-            local integer this= s__BrotherBashosen__Item_allocate()
+        function s__BrotherBashosen___Item_actions takes nothing returns nothing
+            local integer this= s__BrotherBashosen___Item_allocate()
             local real caster_x
             local real caster_y
             local real target_x= GetSpellTargetX()
@@ -80276,10 +80568,10 @@ endfunction
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
                 call PlaySoundOnUnitBJ(gg_snd_Kinkaku_Q, 100, GetTriggerUnit())
             endif
-            set s__BrotherBashosen__Item_damaged[this]=CreateGroup()
-            set s__BrotherBashosen__Item_caster[this]=GetTriggerUnit()
-            set caster_x=GetUnitX(s__BrotherBashosen__Item_caster[this])
-            set caster_y=GetUnitY(s__BrotherBashosen__Item_caster[this])
+            set s__BrotherBashosen___Item_damaged[this]=CreateGroup()
+            set s__BrotherBashosen___Item_caster[this]=GetTriggerUnit()
+            set caster_x=GetUnitX(s__BrotherBashosen___Item_caster[this])
+            set caster_y=GetUnitY(s__BrotherBashosen___Item_caster[this])
             set angle=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
             loop
                 set i=i + 1
@@ -80289,15 +80581,15 @@ endfunction
                 call SetUnitFacing(bj_lastCreatedUnit, facing)
                 call SetUnitX(bj_lastCreatedUnit, caster_x)
                 call SetUnitY(bj_lastCreatedUnit, caster_y)
-                set s__BrotherBashosen__dummies[(this)*(1)+i]= bj_lastCreatedUnit
+                set s__BrotherBashosen___dummies[(this)*(1)+i]= bj_lastCreatedUnit
             endloop
-            set s__BrotherBashosen__Item_count[this]=0
-            set s__BrotherBashosen__Item_element[this]=GetRandomInt(1, 5)
-            call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__BrotherBashosen__Item_periodic , "BrotherBashosen_periodic")
+            set s__BrotherBashosen___Item_count[this]=0
+            set s__BrotherBashosen___Item_element[this]=GetRandomInt(1, 5)
+            call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__BrotherBashosen___Item_periodic , "BrotherBashosen_periodic")
         endfunction
         
-        function s__BrotherBashosen__Item_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2((s__BrotherBashosen__Item_SPELL_ID ) , Filter(( function s__BrotherBashosen__Item_actions))) // INLINED!!
+        function s__BrotherBashosen___Item_onInit takes nothing returns nothing
+            call RegisterSpellEffectEvent2((s__BrotherBashosen___Item_SPELL_ID ) , Filter(( function s__BrotherBashosen___Item_actions))) // INLINED!!
         endfunction
         
     
@@ -80504,7 +80796,7 @@ endfunction
         set s__GinkakuPot_caster[this]=GetTriggerUnit()
         set s__GinkakuPot_target_x[this]=GetSpellTargetX()
         set s__GinkakuPot_target_y[this]=GetSpellTargetY()
-        set s__GinkakuPot__instances[(GetUnitUserData((s__GinkakuPot_caster[this])))]= this // INLINED!!
+        set s__GinkakuPot___instances[(GetUnitUserData((s__GinkakuPot_caster[this])))]= this // INLINED!!
         call SetUnitAnimation(s__GinkakuPot_caster[this], "spell slam")
         call TimerStart(NewTimerEx(this), 0.5, false, function s__GinkakuPot_pause)
     endfunction
@@ -80851,52 +81143,52 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__UltimateRoar__Spell_allocate takes nothing returns integer
+        function s__UltimateRoar___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__UltimateRoar__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__UltimateRoar__Spell_Alloc__instanceCount=s__UltimateRoar__Spell_Alloc__instanceCount + 1
-                set this=s__UltimateRoar__Spell_Alloc__instanceCount
+            if ( s__UltimateRoar___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__UltimateRoar___Spell_Alloc__instanceCount=s__UltimateRoar___Spell_Alloc__instanceCount + 1
+                set this=s__UltimateRoar___Spell_Alloc__instanceCount
             else
-                set this=s__UltimateRoar__Spell_Alloc__recycle[(0)]
-                set s__UltimateRoar__Spell_Alloc__recycle[(0)]=s__UltimateRoar__Spell_Alloc__recycle[s__UltimateRoar__Spell_Alloc__recycle[(0)]]
+                set this=s__UltimateRoar___Spell_Alloc__recycle[(0)]
+                set s__UltimateRoar___Spell_Alloc__recycle[(0)]=s__UltimateRoar___Spell_Alloc__recycle[s__UltimateRoar___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__UltimateRoar__Spell_deallocate takes integer this returns nothing
-            set s__UltimateRoar__Spell_Alloc__recycle[this]=s__UltimateRoar__Spell_Alloc__recycle[(0)]
-            set s__UltimateRoar__Spell_Alloc__recycle[(0)]=this
+        function s__UltimateRoar___Spell_deallocate takes integer this returns nothing
+            set s__UltimateRoar___Spell_Alloc__recycle[this]=s__UltimateRoar___Spell_Alloc__recycle[(0)]
+            set s__UltimateRoar___Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__UltimateRoar__Spell_destroy takes integer this returns nothing
+        function s__UltimateRoar___Spell_destroy takes integer this returns nothing
             local integer i= 0
             loop
                 set i=i + 1
                 exitwhen i > 12
-                call RecycleUnit(s__UltimateRoar__wave[(this)*(1)+i])
-                set s__UltimateRoar__wave[(this)*(1)+i]= null
+                call RecycleUnit(s__UltimateRoar___wave[(this)*(1)+i])
+                set s__UltimateRoar___wave[(this)*(1)+i]= null
             endloop
-	    call KillUnit(s__UltimateRoar__Spell_bijuu[this])
-            call ShowUnit(s__UltimateRoar__Spell_bijuu[this], false)
-	    call KillUnit(s__UltimateRoar__Spell_bijuu2[this])
-            call ShowUnit(s__UltimateRoar__Spell_bijuu2[this], false)
+	    call KillUnit(s__UltimateRoar___Spell_bijuu[this])
+            call ShowUnit(s__UltimateRoar___Spell_bijuu[this], false)
+	    call KillUnit(s__UltimateRoar___Spell_bijuu2[this])
+            call ShowUnit(s__UltimateRoar___Spell_bijuu2[this], false)
 	    //call PauseUnit(this.caster, false)
-	    call ShowUnit(s__UltimateRoar__Spell_caster[this], true)
-            call SelectUnitForPlayerSingle(s__UltimateRoar__Spell_caster[this], GetOwningPlayer(s__UltimateRoar__Spell_caster[this]))
+	    call ShowUnit(s__UltimateRoar___Spell_caster[this], true)
+            call SelectUnitForPlayerSingle(s__UltimateRoar___Spell_caster[this], GetOwningPlayer(s__UltimateRoar___Spell_caster[this]))
 
 
-            call DestroyGroup(s__UltimateRoar__Spell_damaged[this])
-            set s__UltimateRoar__Spell_damaged[this]=null
-            set s__UltimateRoar__Spell_caster[this]=null
-            call s__UltimateRoar__Spell_deallocate(this)
+            call DestroyGroup(s__UltimateRoar___Spell_damaged[this])
+            set s__UltimateRoar___Spell_damaged[this]=null
+            set s__UltimateRoar___Spell_caster[this]=null
+            call s__UltimateRoar___Spell_deallocate(this)
         endfunction
         
-        function s__UltimateRoar__Spell_periodic takes nothing returns nothing
+        function s__UltimateRoar___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real wave_x
             local real wave_y
@@ -80907,13 +81199,13 @@ endfunction
             local integer i= 0
      local integer j
             local unit u
-            set s__UltimateRoar__Spell_count[this]=s__UltimateRoar__Spell_count[this] + 1
+            set s__UltimateRoar___Spell_count[this]=s__UltimateRoar___Spell_count[this] + 1
             set j=0
             loop
                 set j=j + 1
                 exitwhen j > 6
-                set x=(((GetUnitX(s__UltimateRoar__Spell_bijuu[this]) )*1.0) + Cos((( Deg2Rad(72 * j) )*1.0)) * (( 60 * ( j + 1 ))*1.0)) // INLINED!!
-                set y=(((GetUnitY(s__UltimateRoar__Spell_bijuu[this]) )*1.0) + Sin((( Deg2Rad(72 * j) )*1.0)) * (( 60 * ( j + 1 ))*1.0)) // INLINED!!
+                set x=(((GetUnitX(s__UltimateRoar___Spell_bijuu[this]) )*1.0) + Cos((( Deg2Rad(72 * j) )*1.0)) * (( 60 * ( j + 1 ))*1.0)) // INLINED!!
+                set y=(((GetUnitY(s__UltimateRoar___Spell_bijuu[this]) )*1.0) + Sin((( Deg2Rad(72 * j) )*1.0)) * (( 60 * ( j + 1 ))*1.0)) // INLINED!!
 		call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl" ), (( x )*1.0), (( y)*1.0))) // INLINED!!
 		call BlzSetSpecialEffectColor(bj_lastCreatedEffect, 255, 0, 0)
 		call DestroyEffect(bj_lastCreatedEffect)
@@ -80921,13 +81213,13 @@ endfunction
             loop
                 set i=i + 1
                 exitwhen i > 12
-                set wave_x=GetUnitX(s__UltimateRoar__wave[(this)*(1)+i])
-                set wave_y=GetUnitY(s__UltimateRoar__wave[(this)*(1)+i])
-                set new_x=wave_x + Cos(Deg2Rad(GetUnitFacing(s__UltimateRoar__wave[(this)*(1)+i]))) * 60
-                set new_y=wave_y + Sin(Deg2Rad(GetUnitFacing(s__UltimateRoar__wave[(this)*(1)+i]))) * 60
-                call SetUnitX(s__UltimateRoar__wave[(this)*(1)+i], new_x)
-                call SetUnitY(s__UltimateRoar__wave[(this)*(1)+i], new_y)
-                if ModuloInteger(s__UltimateRoar__Spell_count[this], 2) == 0 then
+                set wave_x=GetUnitX(s__UltimateRoar___wave[(this)*(1)+i])
+                set wave_y=GetUnitY(s__UltimateRoar___wave[(this)*(1)+i])
+                set new_x=wave_x + Cos(Deg2Rad(GetUnitFacing(s__UltimateRoar___wave[(this)*(1)+i]))) * 60
+                set new_y=wave_y + Sin(Deg2Rad(GetUnitFacing(s__UltimateRoar___wave[(this)*(1)+i]))) * 60
+                call SetUnitX(s__UltimateRoar___wave[(this)*(1)+i], new_x)
+                call SetUnitY(s__UltimateRoar___wave[(this)*(1)+i], new_y)
+                if ModuloInteger(s__UltimateRoar___Spell_count[this], 2) == 0 then
 			//call AddSpecialEffectEx("Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl", new_x, new_y)
                 endif
                 set bj_lastCreatedGroup=CreateGroup()
@@ -80935,23 +81227,23 @@ endfunction
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__UltimateRoar__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__UltimateRoar__Spell_damaged[this]) then
-                        call UnitDamageTarget(s__UltimateRoar__Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroStr(s__UltimateRoar__Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
-                        call GroupAddUnit(s__UltimateRoar__Spell_damaged[this], bj_lastCreatedUnit)
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__UltimateRoar___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__UltimateRoar___Spell_damaged[this]) then
+                        call UnitDamageTarget(s__UltimateRoar___Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroStr(s__UltimateRoar___Spell_caster[this], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+                        call GroupAddUnit(s__UltimateRoar___Spell_damaged[this], bj_lastCreatedUnit)
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
             endloop
-            if s__UltimateRoar__Spell_count[this] > 25 then
-                call s__UltimateRoar__Spell_destroy(this)
+            if s__UltimateRoar___Spell_count[this] > 25 then
+                call s__UltimateRoar___Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
             set u=null
         endfunction
         
-        function s__UltimateRoar__Spell_actions takes nothing returns nothing
-            local integer this= s__UltimateRoar__Spell_allocate()
+        function s__UltimateRoar___Spell_actions takes nothing returns nothing
+            local integer this= s__UltimateRoar___Spell_allocate()
             local real caster_x
             local real caster_y
             local real target_x= GetSpellTargetX()
@@ -80964,40 +81256,40 @@ endfunction
             local real new_y1= (((new_y )*1.0) + Sin((( Deg2Rad(GetUnitFacing(GetTriggerUnit()) + 90) )*1.0)) * (( 100)*1.0)) // INLINED!!
             local real angle
             local integer i= 0
-            set s__UltimateRoar__Spell_damaged[this]=CreateGroup()
-            set s__UltimateRoar__Spell_caster[this]=GetTriggerUnit()
-            set caster_x=GetUnitX(s__UltimateRoar__Spell_caster[this])
-            set caster_y=GetUnitY(s__UltimateRoar__Spell_caster[this])
+            set s__UltimateRoar___Spell_damaged[this]=CreateGroup()
+            set s__UltimateRoar___Spell_caster[this]=GetTriggerUnit()
+            set caster_x=GetUnitX(s__UltimateRoar___Spell_caster[this])
+            set caster_y=GetUnitY(s__UltimateRoar___Spell_caster[this])
             set angle=Atan3(GetUnitX(GetTriggerUnit()) , GetUnitY(GetTriggerUnit()) , GetSpellTargetX() , GetSpellTargetY())
             loop
                 set i=i + 1
                 exitwhen i > 6
-                set s__UltimateRoar__wave[(this)*(1)+i]= CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, Rad2Deg(angle) + ( 10 - 3.33 * i ))
-                call SetUnitX(s__UltimateRoar__wave[(this)*(1)+i], caster_x)
-                call SetUnitY(s__UltimateRoar__wave[(this)*(1)+i], caster_y)
+                set s__UltimateRoar___wave[(this)*(1)+i]= CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, Rad2Deg(angle) + ( 10 - 3.33 * i ))
+                call SetUnitX(s__UltimateRoar___wave[(this)*(1)+i], caster_x)
+                call SetUnitY(s__UltimateRoar___wave[(this)*(1)+i], caster_y)
             endloop
 
-	set s__UltimateRoar__Spell_bijuu[this]=CreateUnit(GetTriggerPlayer(), 'n00A', caster_x, caster_y, Rad2Deg(angle) + ( 10 - 3.33 * i ))
-	set s__UltimateRoar__Spell_bijuu2[this]=CreateUnit(GetTriggerPlayer(), 'n00A', new_x1, new_y1, GetUnitFacing(GetTriggerUnit()))
+	set s__UltimateRoar___Spell_bijuu[this]=CreateUnit(GetTriggerPlayer(), 'n00A', caster_x, caster_y, Rad2Deg(angle) + ( 10 - 3.33 * i ))
+	set s__UltimateRoar___Spell_bijuu2[this]=CreateUnit(GetTriggerPlayer(), 'n00A', new_x1, new_y1, GetUnitFacing(GetTriggerUnit()))
 	//call PauseUnit(this.caster, true)
-	call ShowUnit(s__UltimateRoar__Spell_caster[this], false)
-	call SetUnitAnimation(s__UltimateRoar__Spell_bijuu[this], "spell")
-	call SetUnitAnimation(s__UltimateRoar__Spell_bijuu2[this], "spell")
+	call ShowUnit(s__UltimateRoar___Spell_caster[this], false)
+	call SetUnitAnimation(s__UltimateRoar___Spell_bijuu[this], "spell")
+	call SetUnitAnimation(s__UltimateRoar___Spell_bijuu2[this], "spell")
 	set bj_lastCreatedEffect=AddSpecialEffect("war3mapImported\\Chakra Blast Biju.mdl", caster_x, caster_y)
 	call BlzSetSpecialEffectYaw(bj_lastCreatedEffect, angle)
 	call BlzSetSpecialEffectHeight(bj_lastCreatedEffect, 100)
 	call DestroyEffect(bj_lastCreatedEffect)
-	set bj_lastCreatedEffect=AddSpecialEffect("war3mapImported\\Chakra Blast Biju.mdl", GetUnitX(s__UltimateRoar__Spell_bijuu2[this]), GetUnitY(s__UltimateRoar__Spell_bijuu2[this]))
+	set bj_lastCreatedEffect=AddSpecialEffect("war3mapImported\\Chakra Blast Biju.mdl", GetUnitX(s__UltimateRoar___Spell_bijuu2[this]), GetUnitY(s__UltimateRoar___Spell_bijuu2[this]))
 	call BlzSetSpecialEffectYaw(bj_lastCreatedEffect, angle)
 	call BlzSetSpecialEffectHeight(bj_lastCreatedEffect, 100)
 	call DestroyEffect(bj_lastCreatedEffect)
 
-            set s__UltimateRoar__Spell_count[this]=0
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__UltimateRoar__Spell_periodic)
+            set s__UltimateRoar___Spell_count[this]=0
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__UltimateRoar___Spell_periodic)
         endfunction
         
-        function s__UltimateRoar__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2((s__UltimateRoar__Spell_SPELL_ID ) , Filter(( function s__UltimateRoar__Spell_actions))) // INLINED!!
+        function s__UltimateRoar___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEvent2((s__UltimateRoar___Spell_SPELL_ID ) , Filter(( function s__UltimateRoar___Spell_actions))) // INLINED!!
         endfunction
         
     
@@ -81713,62 +82005,62 @@ call UnitAddAbility((bj_lastCreatedUnit ), ( 'A0I1')) // INLINED!!
     
 //Implemented from module Alloc:
     
-        function s__KisameDaikoudan__Spell_allocate takes nothing returns integer
+        function s__KisameDaikoudan___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KisameDaikoudan__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__KisameDaikoudan__Spell_Alloc__instanceCount=s__KisameDaikoudan__Spell_Alloc__instanceCount + 1
-                set this=s__KisameDaikoudan__Spell_Alloc__instanceCount
+            if ( s__KisameDaikoudan___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__KisameDaikoudan___Spell_Alloc__instanceCount=s__KisameDaikoudan___Spell_Alloc__instanceCount + 1
+                set this=s__KisameDaikoudan___Spell_Alloc__instanceCount
             else
-                set this=s__KisameDaikoudan__Spell_Alloc__recycle[(0)]
-                set s__KisameDaikoudan__Spell_Alloc__recycle[(0)]=s__KisameDaikoudan__Spell_Alloc__recycle[s__KisameDaikoudan__Spell_Alloc__recycle[(0)]]
+                set this=s__KisameDaikoudan___Spell_Alloc__recycle[(0)]
+                set s__KisameDaikoudan___Spell_Alloc__recycle[(0)]=s__KisameDaikoudan___Spell_Alloc__recycle[s__KisameDaikoudan___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__KisameDaikoudan__Spell_deallocate takes integer this returns nothing
-            set s__KisameDaikoudan__Spell_Alloc__recycle[this]=s__KisameDaikoudan__Spell_Alloc__recycle[(0)]
-            set s__KisameDaikoudan__Spell_Alloc__recycle[(0)]=this
+        function s__KisameDaikoudan___Spell_deallocate takes integer this returns nothing
+            set s__KisameDaikoudan___Spell_Alloc__recycle[this]=s__KisameDaikoudan___Spell_Alloc__recycle[(0)]
+            set s__KisameDaikoudan___Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-  function s__KisameDaikoudan__Spell_dealDamage takes nothing returns boolean
-                    if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__KisameDaikoudan__Spell_caster[s__KisameDaikoudan__Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) then
-                        call UnitDamageTarget(s__KisameDaikoudan__Spell_caster[s__KisameDaikoudan__Spell_instance], GetFilterUnit(), GetUnitState(GetFilterUnit(), UNIT_STATE_MAX_MANA), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+  function s__KisameDaikoudan___Spell_dealDamage takes nothing returns boolean
+                    if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__KisameDaikoudan___Spell_caster[s__KisameDaikoudan___Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) then
+                        call UnitDamageTarget(s__KisameDaikoudan___Spell_caster[s__KisameDaikoudan___Spell_instance], GetFilterUnit(), GetUnitState(GetFilterUnit(), UNIT_STATE_MAX_MANA), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
                     endif
 		    return false
   endfunction
 		
-        function s__KisameDaikoudan__Spell_destroy takes integer this returns nothing
-            set s__KisameDaikoudan__Spell_caster[this]=null
-            set s__KisameDaikoudan__Spell_target[this]=null
-            set s__KisameDaikoudan__Spell_shark[this]=null
-            call s__KisameDaikoudan__Spell_deallocate(this)
+        function s__KisameDaikoudan___Spell_destroy takes integer this returns nothing
+            set s__KisameDaikoudan___Spell_caster[this]=null
+            set s__KisameDaikoudan___Spell_target[this]=null
+            set s__KisameDaikoudan___Spell_shark[this]=null
+            call s__KisameDaikoudan___Spell_deallocate(this)
         endfunction
         
-        function s__KisameDaikoudan__Spell_knockback takes nothing returns nothing
+        function s__KisameDaikoudan___Spell_knockback takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real target_x= GetUnitX(s__KisameDaikoudan__Spell_target[this])
-            local real target_y= GetUnitY(s__KisameDaikoudan__Spell_target[this])
-            local real new_x= target_x + Cos(s__KisameDaikoudan__Spell_angle[this]) * 30
-            local real new_y= target_y + Sin(s__KisameDaikoudan__Spell_angle[this]) * 30
+            local real target_x= GetUnitX(s__KisameDaikoudan___Spell_target[this])
+            local real target_y= GetUnitY(s__KisameDaikoudan___Spell_target[this])
+            local real new_x= target_x + Cos(s__KisameDaikoudan___Spell_angle[this]) * 30
+            local real new_y= target_y + Sin(s__KisameDaikoudan___Spell_angle[this]) * 30
             local real water_x
             local real water_y
             local integer i= 0
             local integer i_2= 0
-            set s__KisameDaikoudan__Spell_count[this]=s__KisameDaikoudan__Spell_count[this] + 1
+            set s__KisameDaikoudan___Spell_count[this]=s__KisameDaikoudan___Spell_count[this] + 1
             if not IsTerrainPathable(new_x, new_y, PATHING_TYPE_WALKABILITY) then
-                call SetUnitX(s__KisameDaikoudan__Spell_target[this], new_x)
-                call SetUnitY(s__KisameDaikoudan__Spell_target[this], new_y)
-                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__KisameDaikoudan__Spell_caster[this]), 'e00T', new_x, new_y, GetUnitFacing(s__KisameDaikoudan__Spell_shark[this]))
+                call SetUnitX(s__KisameDaikoudan___Spell_target[this], new_x)
+                call SetUnitY(s__KisameDaikoudan___Spell_target[this], new_y)
+                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__KisameDaikoudan___Spell_caster[this]), 'e00T', new_x, new_y, GetUnitFacing(s__KisameDaikoudan___Spell_shark[this]))
                 call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 1.0)
             else
-                set s__KisameDaikoudan__Spell_count[this]=11
+                set s__KisameDaikoudan___Spell_count[this]=11
             endif
-            if s__KisameDaikoudan__Spell_count[this] > 10 then
+            if s__KisameDaikoudan___Spell_count[this] > 10 then
                 loop
                     set i=i + 1
                     exitwhen i > 3
@@ -81778,7 +82070,7 @@ call UnitAddAbility((bj_lastCreatedUnit ), ( 'A0I1')) // INLINED!!
                         exitwhen i_2 > 5
                         set water_x=new_x + Cos(Deg2Rad(72 * i_2)) * ( i * 75 )
                         set water_y=new_y + Sin(Deg2Rad(72 * i_2)) * ( i * 75 )
-			set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__KisameDaikoudan__Spell_caster[this]), 'h032', water_x, water_y, GetRandomReal(0, 360))
+			set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__KisameDaikoudan___Spell_caster[this]), 'h032', water_x, water_y, GetRandomReal(0, 360))
         		call SetUnitScale(bj_lastCreatedUnit, 2, 0, 0)
         		call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 2.0)
                         set bj_lastCreatedEffect=AddSpecialEffect("war3mapImported\\AquaSpikeVersion2.mdx", water_x, water_y)
@@ -81787,60 +82079,60 @@ call UnitAddAbility((bj_lastCreatedUnit ), ( 'A0I1')) // INLINED!!
                     endloop
                 endloop
                 set bj_lastCreatedGroup=CreateGroup()
-				set s__KisameDaikoudan__Spell_instance=this
-                call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 250.0, Filter(function s__KisameDaikoudan__Spell_dealDamage))
+				set s__KisameDaikoudan___Spell_instance=this
+                call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 250.0, Filter(function s__KisameDaikoudan___Spell_dealDamage))
                 call DestroyGroup(bj_lastCreatedGroup)
                 //call StunUnitTimed(this.target, 2.0)
-                call s__KisameDaikoudan__Spell_destroy(this)
+                call s__KisameDaikoudan___Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__KisameDaikoudan__Spell_periodic takes nothing returns nothing
+        function s__KisameDaikoudan___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real shark_x= GetUnitX(s__KisameDaikoudan__Spell_shark[this])
-            local real shark_y= GetUnitY(s__KisameDaikoudan__Spell_shark[this])
-            local real target_x= GetUnitX(s__KisameDaikoudan__Spell_target[this])
-            local real target_y= GetUnitY(s__KisameDaikoudan__Spell_target[this])
+            local real shark_x= GetUnitX(s__KisameDaikoudan___Spell_shark[this])
+            local real shark_y= GetUnitY(s__KisameDaikoudan___Spell_shark[this])
+            local real target_x= GetUnitX(s__KisameDaikoudan___Spell_target[this])
+            local real target_y= GetUnitY(s__KisameDaikoudan___Spell_target[this])
             local real angle= Atan2(( target_y - shark_y ), ( target_x - shark_x ))
             local real new_x= shark_x + Cos(angle) * 30
             local real new_y= shark_y + Sin(angle) * 30
             local real distance_x= target_x - new_x
             local real distance_y= target_y - new_y
             local real distance= SquareRoot(distance_x * distance_x + distance_y * distance_y)
-            call SetUnitX(s__KisameDaikoudan__Spell_shark[this], new_x)
-            call SetUnitY(s__KisameDaikoudan__Spell_shark[this], new_y)
-            call SetUnitFacing(s__KisameDaikoudan__Spell_shark[this], Rad2Deg(angle))
-            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__KisameDaikoudan__Spell_caster[this]), 'e03K', new_x, new_y, GetUnitFacing(s__KisameDaikoudan__Spell_shark[this]))
+            call SetUnitX(s__KisameDaikoudan___Spell_shark[this], new_x)
+            call SetUnitY(s__KisameDaikoudan___Spell_shark[this], new_y)
+            call SetUnitFacing(s__KisameDaikoudan___Spell_shark[this], Rad2Deg(angle))
+            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__KisameDaikoudan___Spell_caster[this]), 'e03K', new_x, new_y, GetUnitFacing(s__KisameDaikoudan___Spell_shark[this]))
 	    call SetUnitTimeScale(bj_lastCreatedUnit, 0.33)
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 1.0)
             if distance <= 50 then
-                call KillUnit(s__KisameDaikoudan__Spell_shark[this])
-                set s__KisameDaikoudan__Spell_angle[this]=angle
-                call TimerStart(NewTimerEx(this), 0.03, true, function s__KisameDaikoudan__Spell_knockback)
+                call KillUnit(s__KisameDaikoudan___Spell_shark[this])
+                set s__KisameDaikoudan___Spell_angle[this]=angle
+                call TimerStart(NewTimerEx(this), 0.03, true, function s__KisameDaikoudan___Spell_knockback)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__KisameDaikoudan__Spell_actions takes nothing returns nothing
-            local integer this= s__KisameDaikoudan__Spell_allocate()
+        function s__KisameDaikoudan___Spell_actions takes nothing returns nothing
+            local integer this= s__KisameDaikoudan___Spell_allocate()
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
                 call PlaySoundOnUnitBJ(gg_snd_Kisame_D_Daikoudan, 100.0, GetTriggerUnit())
             endif
-            set s__KisameDaikoudan__Spell_caster[this]=GetTriggerUnit()
-            set s__KisameDaikoudan__Spell_target[this]=GetSpellTargetUnit()
-            set s__KisameDaikoudan__Spell_shark[this]=CreateUnit(GetTriggerPlayer(), 'e00S', GetUnitX(s__KisameDaikoudan__Spell_caster[this]), GetUnitY(s__KisameDaikoudan__Spell_caster[this]), GetUnitFacing(s__KisameDaikoudan__Spell_caster[this]))
-            call SetUnitTimeScale(s__KisameDaikoudan__Spell_shark[this], 0.5)
-            set s__KisameDaikoudan__Spell_count[this]=0
-            if IsUnitVisible(s__KisameDaikoudan__Spell_caster[this], GetLocalPlayer()) then
+            set s__KisameDaikoudan___Spell_caster[this]=GetTriggerUnit()
+            set s__KisameDaikoudan___Spell_target[this]=GetSpellTargetUnit()
+            set s__KisameDaikoudan___Spell_shark[this]=CreateUnit(GetTriggerPlayer(), 'e00S', GetUnitX(s__KisameDaikoudan___Spell_caster[this]), GetUnitY(s__KisameDaikoudan___Spell_caster[this]), GetUnitFacing(s__KisameDaikoudan___Spell_caster[this]))
+            call SetUnitTimeScale(s__KisameDaikoudan___Spell_shark[this], 0.5)
+            set s__KisameDaikoudan___Spell_count[this]=0
+            if IsUnitVisible(s__KisameDaikoudan___Spell_caster[this], GetLocalPlayer()) then
                 //call PlaySoundOnUnitBJ(gg_snd_Kisame_R, 100.0, this.caster)
             endif
-            call AddSpecialEffectTarget("SuperShinyThingy.mdx", s__KisameDaikoudan__Spell_shark[this], "origin")
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__KisameDaikoudan__Spell_periodic)
+            call AddSpecialEffectTarget("SuperShinyThingy.mdx", s__KisameDaikoudan___Spell_shark[this], "origin")
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__KisameDaikoudan___Spell_periodic)
         endfunction
         
-        function s__KisameDaikoudan__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(23 , s__KisameDaikoudan__Spell_SPELL_ID , function s__KisameDaikoudan__Spell_actions)
+        function s__KisameDaikoudan___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(23 , s__KisameDaikoudan___Spell_SPELL_ID , function s__KisameDaikoudan___Spell_actions)
         endfunction
         
     
@@ -83421,53 +83713,53 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__KonohamaruOodamaRasengan__Spell_allocate takes nothing returns integer
+        function s__KonohamaruOodamaRasengan___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KonohamaruOodamaRasengan__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__KonohamaruOodamaRasengan__Spell_Alloc__instanceCount=s__KonohamaruOodamaRasengan__Spell_Alloc__instanceCount + 1
-                set this=s__KonohamaruOodamaRasengan__Spell_Alloc__instanceCount
+            if ( s__KonohamaruOodamaRasengan___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__KonohamaruOodamaRasengan___Spell_Alloc__instanceCount=s__KonohamaruOodamaRasengan___Spell_Alloc__instanceCount + 1
+                set this=s__KonohamaruOodamaRasengan___Spell_Alloc__instanceCount
             else
-                set this=s__KonohamaruOodamaRasengan__Spell_Alloc__recycle[(0)]
-                set s__KonohamaruOodamaRasengan__Spell_Alloc__recycle[(0)]=s__KonohamaruOodamaRasengan__Spell_Alloc__recycle[s__KonohamaruOodamaRasengan__Spell_Alloc__recycle[(0)]]
+                set this=s__KonohamaruOodamaRasengan___Spell_Alloc__recycle[(0)]
+                set s__KonohamaruOodamaRasengan___Spell_Alloc__recycle[(0)]=s__KonohamaruOodamaRasengan___Spell_Alloc__recycle[s__KonohamaruOodamaRasengan___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__KonohamaruOodamaRasengan__Spell_deallocate takes integer this returns nothing
-            set s__KonohamaruOodamaRasengan__Spell_Alloc__recycle[this]=s__KonohamaruOodamaRasengan__Spell_Alloc__recycle[(0)]
-            set s__KonohamaruOodamaRasengan__Spell_Alloc__recycle[(0)]=this
+        function s__KonohamaruOodamaRasengan___Spell_deallocate takes integer this returns nothing
+            set s__KonohamaruOodamaRasengan___Spell_Alloc__recycle[this]=s__KonohamaruOodamaRasengan___Spell_Alloc__recycle[(0)]
+            set s__KonohamaruOodamaRasengan___Spell_Alloc__recycle[(0)]=this
         endfunction
     
         
-        function s__KonohamaruOodamaRasengan__Spell_destroy takes integer this returns nothing
-            call KillUnit(s__KonohamaruOodamaRasengan__Spell_stunUnit[this])
-            set s__KonohamaruOodamaRasengan__Spell_stunUnit[this]=null
-            call DestroyEffect(s__KonohamaruOodamaRasengan__Spell_rasengan[this])
-            call SetUnitTimeScale(s__KonohamaruOodamaRasengan__Spell_caster[this], 1.0)
-            call PauseUnit(s__KonohamaruOodamaRasengan__Spell_caster[this], false)
-            call SetUnitAnimation(s__KonohamaruOodamaRasengan__Spell_caster[this], "stand")
-            call SetUnitFlyHeight(s__KonohamaruOodamaRasengan__Spell_caster[this], 0, 0)
-            set s__KonohamaruOodamaRasengan__Spell_caster[this]=null
-            set s__KonohamaruOodamaRasengan__Spell_rasengan[this]=null
-            call s__KonohamaruOodamaRasengan__Spell_deallocate(this)
+        function s__KonohamaruOodamaRasengan___Spell_destroy takes integer this returns nothing
+            call KillUnit(s__KonohamaruOodamaRasengan___Spell_stunUnit[this])
+            set s__KonohamaruOodamaRasengan___Spell_stunUnit[this]=null
+            call DestroyEffect(s__KonohamaruOodamaRasengan___Spell_rasengan[this])
+            call SetUnitTimeScale(s__KonohamaruOodamaRasengan___Spell_caster[this], 1.0)
+            call PauseUnit(s__KonohamaruOodamaRasengan___Spell_caster[this], false)
+            call SetUnitAnimation(s__KonohamaruOodamaRasengan___Spell_caster[this], "stand")
+            call SetUnitFlyHeight(s__KonohamaruOodamaRasengan___Spell_caster[this], 0, 0)
+            set s__KonohamaruOodamaRasengan___Spell_caster[this]=null
+            set s__KonohamaruOodamaRasengan___Spell_rasengan[this]=null
+            call s__KonohamaruOodamaRasengan___Spell_deallocate(this)
         endfunction
         
-        function s__KonohamaruOodamaRasengan__Spell_damagePeriodic takes nothing returns nothing
+        function s__KonohamaruOodamaRasengan___Spell_damagePeriodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local integer i
             local integer j
             local real new_x
             local real new_y
             local real scale
-            set s__KonohamaruOodamaRasengan__Spell_count[this]=s__KonohamaruOodamaRasengan__Spell_count[this] + 1
-            if s__KonohamaruOodamaRasengan__Spell_count[this] == 30 then
-                call SetUnitAnimation(s__KonohamaruOodamaRasengan__Spell_caster[this], "spell five")
+            set s__KonohamaruOodamaRasengan___Spell_count[this]=s__KonohamaruOodamaRasengan___Spell_count[this] + 1
+            if s__KonohamaruOodamaRasengan___Spell_count[this] == 30 then
+                call SetUnitAnimation(s__KonohamaruOodamaRasengan___Spell_caster[this], "spell five")
             endif
-            if ModuloInteger(s__KonohamaruOodamaRasengan__Spell_count[this], 10) == 0 then
+            if ModuloInteger(s__KonohamaruOodamaRasengan___Spell_count[this], 10) == 0 then
                 set i=0
                 loop
                     set i=i + 1
@@ -83475,8 +83767,8 @@ endfunction
                     loop
                         set j=j + 1
                         exitwhen j > 10
-                        set new_x=(((s__KonohamaruOodamaRasengan__Spell_target_x[this] )*1.0) + Cos((( Deg2Rad(36 * j) )*1.0)) * (( 50 + 100 * i)*1.0)) // INLINED!!
-                        set new_y=(((s__KonohamaruOodamaRasengan__Spell_target_y[this] )*1.0) + Sin((( Deg2Rad(36 * j) )*1.0)) * (( 50 + 100 * i)*1.0)) // INLINED!!
+                        set new_x=(((s__KonohamaruOodamaRasengan___Spell_target_x[this] )*1.0) + Cos((( Deg2Rad(36 * j) )*1.0)) * (( 50 + 100 * i)*1.0)) // INLINED!!
+                        set new_y=(((s__KonohamaruOodamaRasengan___Spell_target_y[this] )*1.0) + Sin((( Deg2Rad(36 * j) )*1.0)) * (( 50 + 100 * i)*1.0)) // INLINED!!
                         //call AddSpecialEffectEx("Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl", new_x, new_y)
                         call DestroyEffect(AddSpecialEffect(("war3mapImported\\Ground Crack.mdx" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                         if i == 1 then
@@ -83487,98 +83779,98 @@ endfunction
                 endloop
                 
             endif
-            if ModuloInteger(s__KonohamaruOodamaRasengan__Spell_count[this], 5) == 0 then
-                call IssueImmediateOrder(s__KonohamaruOodamaRasengan__Spell_stunUnit[this], "stomp")
-                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__KonohamaruOodamaRasengan__Spell_caster[this]), 'e015', s__KonohamaruOodamaRasengan__Spell_target_x[this], s__KonohamaruOodamaRasengan__Spell_target_y[this], GetRandomReal(0, 360))
-                call SetUnitX(bj_lastCreatedUnit, s__KonohamaruOodamaRasengan__Spell_target_x[this])
-                call SetUnitY(bj_lastCreatedUnit, s__KonohamaruOodamaRasengan__Spell_target_y[this])
+            if ModuloInteger(s__KonohamaruOodamaRasengan___Spell_count[this], 5) == 0 then
+                call IssueImmediateOrder(s__KonohamaruOodamaRasengan___Spell_stunUnit[this], "stomp")
+                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__KonohamaruOodamaRasengan___Spell_caster[this]), 'e015', s__KonohamaruOodamaRasengan___Spell_target_x[this], s__KonohamaruOodamaRasengan___Spell_target_y[this], GetRandomReal(0, 360))
+                call SetUnitX(bj_lastCreatedUnit, s__KonohamaruOodamaRasengan___Spell_target_x[this])
+                call SetUnitY(bj_lastCreatedUnit, s__KonohamaruOodamaRasengan___Spell_target_y[this])
                 call SetUnitTimeScale(bj_lastCreatedUnit, 1.5)
                 call SetUnitVertexColor((bj_lastCreatedUnit ), ( 100 ), ( 100 ), ( 200 ), ( 150)) // INLINED!!
                 call SetUnitScale(bj_lastCreatedUnit, 1.5, 1.5, 1.5)
                 call KillUnit(bj_lastCreatedUnit)
             endif
             set bj_lastCreatedGroup=CreateGroup()
-            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__KonohamaruOodamaRasengan__Spell_target_x[this], s__KonohamaruOodamaRasengan__Spell_target_y[this], 400.0, null)
+            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__KonohamaruOodamaRasengan___Spell_target_x[this], s__KonohamaruOodamaRasengan___Spell_target_y[this], 400.0, null)
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
-                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__KonohamaruOodamaRasengan__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
-                    call UnitDamageTarget(s__KonohamaruOodamaRasengan__Spell_caster[this], bj_lastCreatedUnit, ( ( 9 * GetHeroStr(s__KonohamaruOodamaRasengan__Spell_caster[this], true) + 2000 ) ) / 66.0, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__KonohamaruOodamaRasengan___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
+                    call UnitDamageTarget(s__KonohamaruOodamaRasengan___Spell_caster[this], bj_lastCreatedUnit, ( ( 9 * GetHeroStr(s__KonohamaruOodamaRasengan___Spell_caster[this], true) + 2000 ) ) / 66.0, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            if s__KonohamaruOodamaRasengan__Spell_count[this] > 66 then
+            if s__KonohamaruOodamaRasengan___Spell_count[this] > 66 then
                 set i=0
                 loop
                     set i=i + 1
                     exitwhen i > 10
-                    set new_x=s__KonohamaruOodamaRasengan__Spell_target_x[this] + Cos(Deg2Rad(36 * i)) * 150
-                    set new_y=s__KonohamaruOodamaRasengan__Spell_target_y[this] + Sin(Deg2Rad(36 * i)) * 150
+                    set new_x=s__KonohamaruOodamaRasengan___Spell_target_x[this] + Cos(Deg2Rad(36 * i)) * 150
+                    set new_y=s__KonohamaruOodamaRasengan___Spell_target_y[this] + Sin(Deg2Rad(36 * i)) * 150
                     //call AddSpecialEffectEx("Energy Release.mdl", new_x, new_y)
                     call DestroyEffect(AddSpecialEffect(("war3mapImported\\slam.mdx" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                     call DestroyEffect(AddSpecialEffect(("Effects\\s_Earth_Smash.mdl" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                 endloop
-                call s__KonohamaruOodamaRasengan__Spell_destroy(this)
+                call s__KonohamaruOodamaRasengan___Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction 
         
-        function s__KonohamaruOodamaRasengan__Spell_periodic takes nothing returns nothing
+        function s__KonohamaruOodamaRasengan___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real caster_x= GetUnitX(s__KonohamaruOodamaRasengan__Spell_caster[this])
-            local real caster_y= GetUnitY(s__KonohamaruOodamaRasengan__Spell_caster[this])
-            local real angle= Atan2(( s__KonohamaruOodamaRasengan__Spell_target_y[this] - GetUnitY(s__KonohamaruOodamaRasengan__Spell_caster[this]) ), ( s__KonohamaruOodamaRasengan__Spell_target_x[this] - GetUnitX(s__KonohamaruOodamaRasengan__Spell_caster[this]) ))
+            local real caster_x= GetUnitX(s__KonohamaruOodamaRasengan___Spell_caster[this])
+            local real caster_y= GetUnitY(s__KonohamaruOodamaRasengan___Spell_caster[this])
+            local real angle= Atan2(( s__KonohamaruOodamaRasengan___Spell_target_y[this] - GetUnitY(s__KonohamaruOodamaRasengan___Spell_caster[this]) ), ( s__KonohamaruOodamaRasengan___Spell_target_x[this] - GetUnitX(s__KonohamaruOodamaRasengan___Spell_caster[this]) ))
             local real new_x= caster_x + Cos(angle) * 30
             local real new_y= caster_y + Sin(angle) * 30
-            local real distance_x= s__KonohamaruOodamaRasengan__Spell_target_x[this] - new_x
-            local real distance_y= s__KonohamaruOodamaRasengan__Spell_target_y[this] - new_y
+            local real distance_x= s__KonohamaruOodamaRasengan___Spell_target_x[this] - new_x
+            local real distance_y= s__KonohamaruOodamaRasengan___Spell_target_y[this] - new_y
             local real distance= SquareRoot(distance_x * distance_x + distance_y * distance_y)
             local integer i= 0
-            set s__KonohamaruOodamaRasengan__Spell_count[this]=s__KonohamaruOodamaRasengan__Spell_count[this] + 1
-            call SetUnitX(s__KonohamaruOodamaRasengan__Spell_caster[this], new_x)
-            call SetUnitY(s__KonohamaruOodamaRasengan__Spell_caster[this], new_y)
-            call SetUnitFacing(s__KonohamaruOodamaRasengan__Spell_caster[this], Rad2Deg(angle))
-            call UnitAddAbility(s__KonohamaruOodamaRasengan__Spell_caster[this], 'Arav')
-            call SetUnitFlyHeight(s__KonohamaruOodamaRasengan__Spell_caster[this], Parabola(0 , 0 , 300 , s__KonohamaruOodamaRasengan__Spell_distance[this] , s__KonohamaruOodamaRasengan__Spell_distance[this] - distance), 0)
-            call UnitRemoveAbility(s__KonohamaruOodamaRasengan__Spell_caster[this], 'Arav')
-            if distance <= 100 or s__KonohamaruOodamaRasengan__Spell_count[this] > 40 then
-                set s__KonohamaruOodamaRasengan__Spell_count[this]=0
-                set s__KonohamaruOodamaRasengan__Spell_stunUnit[this]=CreateUnit(GetOwningPlayer(s__KonohamaruOodamaRasengan__Spell_caster[this]), 'h02R', GetUnitX(s__KonohamaruOodamaRasengan__Spell_caster[this]), GetUnitY(s__KonohamaruOodamaRasengan__Spell_caster[this]), 270.0)
-                call SetUnitAnimation(s__KonohamaruOodamaRasengan__Spell_caster[this], "spell throw")
-                call SetUnitFlyHeight(s__KonohamaruOodamaRasengan__Spell_caster[this], 0, GetUnitFlyHeight(s__KonohamaruOodamaRasengan__Spell_caster[this]) * 2.0)
-                call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__KonohamaruOodamaRasengan__Spell_damagePeriodic , "KonohamaruOodamaRasengan_damagePeriodic")
+            set s__KonohamaruOodamaRasengan___Spell_count[this]=s__KonohamaruOodamaRasengan___Spell_count[this] + 1
+            call SetUnitX(s__KonohamaruOodamaRasengan___Spell_caster[this], new_x)
+            call SetUnitY(s__KonohamaruOodamaRasengan___Spell_caster[this], new_y)
+            call SetUnitFacing(s__KonohamaruOodamaRasengan___Spell_caster[this], Rad2Deg(angle))
+            call UnitAddAbility(s__KonohamaruOodamaRasengan___Spell_caster[this], 'Arav')
+            call SetUnitFlyHeight(s__KonohamaruOodamaRasengan___Spell_caster[this], Parabola(0 , 0 , 300 , s__KonohamaruOodamaRasengan___Spell_distance[this] , s__KonohamaruOodamaRasengan___Spell_distance[this] - distance), 0)
+            call UnitRemoveAbility(s__KonohamaruOodamaRasengan___Spell_caster[this], 'Arav')
+            if distance <= 100 or s__KonohamaruOodamaRasengan___Spell_count[this] > 40 then
+                set s__KonohamaruOodamaRasengan___Spell_count[this]=0
+                set s__KonohamaruOodamaRasengan___Spell_stunUnit[this]=CreateUnit(GetOwningPlayer(s__KonohamaruOodamaRasengan___Spell_caster[this]), 'h02R', GetUnitX(s__KonohamaruOodamaRasengan___Spell_caster[this]), GetUnitY(s__KonohamaruOodamaRasengan___Spell_caster[this]), 270.0)
+                call SetUnitAnimation(s__KonohamaruOodamaRasengan___Spell_caster[this], "spell throw")
+                call SetUnitFlyHeight(s__KonohamaruOodamaRasengan___Spell_caster[this], 0, GetUnitFlyHeight(s__KonohamaruOodamaRasengan___Spell_caster[this]) * 2.0)
+                call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__KonohamaruOodamaRasengan___Spell_damagePeriodic , "KonohamaruOodamaRasengan_damagePeriodic")
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__KonohamaruOodamaRasengan__Spell_actions takes nothing returns nothing
-            local integer this= s__KonohamaruOodamaRasengan__Spell_allocate()
+        function s__KonohamaruOodamaRasengan___Spell_actions takes nothing returns nothing
+            local integer this= s__KonohamaruOodamaRasengan___Spell_allocate()
             local real distance_x
             local real distance_y
-            set s__KonohamaruOodamaRasengan__Spell_caster[this]=GetTriggerUnit()
-            set s__KonohamaruOodamaRasengan__Spell_target_x[this]=GetSpellTargetX()
-            set s__KonohamaruOodamaRasengan__Spell_target_y[this]=GetSpellTargetY()
-            set s__KonohamaruOodamaRasengan__Spell_count[this]=0
+            set s__KonohamaruOodamaRasengan___Spell_caster[this]=GetTriggerUnit()
+            set s__KonohamaruOodamaRasengan___Spell_target_x[this]=GetSpellTargetX()
+            set s__KonohamaruOodamaRasengan___Spell_target_y[this]=GetSpellTargetY()
+            set s__KonohamaruOodamaRasengan___Spell_count[this]=0
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
                 call PlaySoundOnUnitBJ(gg_snd_Konohamaru_T, 80, GetTriggerUnit())
             endif
-            call PauseUnit(s__KonohamaruOodamaRasengan__Spell_caster[this], true)
-            call UnitAddAbility(s__KonohamaruOodamaRasengan__Spell_caster[this], 'Arav')
-            call UnitRemoveAbility(s__KonohamaruOodamaRasengan__Spell_caster[this], 'Arav')
-            call SetUnitAnimation(s__KonohamaruOodamaRasengan__Spell_caster[this], "spell one")
+            call PauseUnit(s__KonohamaruOodamaRasengan___Spell_caster[this], true)
+            call UnitAddAbility(s__KonohamaruOodamaRasengan___Spell_caster[this], 'Arav')
+            call UnitRemoveAbility(s__KonohamaruOodamaRasengan___Spell_caster[this], 'Arav')
+            call SetUnitAnimation(s__KonohamaruOodamaRasengan___Spell_caster[this], "spell one")
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff0000Konohamaru: I'll be the next Hokage!!!|r")
             endif
-            set s__KonohamaruOodamaRasengan__Spell_rasengan[this]=AddSpecialEffectTarget("Effects\\s_Odama Rasengan.mdx", s__KonohamaruOodamaRasengan__Spell_caster[this], "right hand")
-            set distance_x=s__KonohamaruOodamaRasengan__Spell_target_x[this] - GetUnitX(s__KonohamaruOodamaRasengan__Spell_caster[this])
-            set distance_y=s__KonohamaruOodamaRasengan__Spell_target_y[this] - GetUnitY(s__KonohamaruOodamaRasengan__Spell_caster[this])
-            set s__KonohamaruOodamaRasengan__Spell_distance[this]=SquareRoot(distance_x * distance_x + distance_y * distance_y)
-            call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__KonohamaruOodamaRasengan__Spell_periodic , "KonohamaruOodamaRasegan_periodic")
+            set s__KonohamaruOodamaRasengan___Spell_rasengan[this]=AddSpecialEffectTarget("Effects\\s_Odama Rasengan.mdx", s__KonohamaruOodamaRasengan___Spell_caster[this], "right hand")
+            set distance_x=s__KonohamaruOodamaRasengan___Spell_target_x[this] - GetUnitX(s__KonohamaruOodamaRasengan___Spell_caster[this])
+            set distance_y=s__KonohamaruOodamaRasengan___Spell_target_y[this] - GetUnitY(s__KonohamaruOodamaRasengan___Spell_caster[this])
+            set s__KonohamaruOodamaRasengan___Spell_distance[this]=SquareRoot(distance_x * distance_x + distance_y * distance_y)
+            call TimerStartEx(NewTimerEx(this) , 0.03 , true , function s__KonohamaruOodamaRasengan___Spell_periodic , "KonohamaruOodamaRasegan_periodic")
         endfunction
         
-        function s__KonohamaruOodamaRasengan__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(66 , s__KonohamaruOodamaRasengan__Spell_SPELL_ID , function s__KonohamaruOodamaRasengan__Spell_actions)
+        function s__KonohamaruOodamaRasengan___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(66 , s__KonohamaruOodamaRasengan___Spell_SPELL_ID , function s__KonohamaruOodamaRasengan___Spell_actions)
         endfunction
         
     
@@ -84352,7 +84644,7 @@ endfunction
         call DestroyTimer(t)
     endfunction
     
-    function KurotsuchiShared__onInit takes nothing returns nothing
+    function KurotsuchiShared___onInit takes nothing returns nothing
         set QHitTable=s__Table_create()
     endfunction
 // scope KurotsuchiShared ends
@@ -84547,7 +84839,7 @@ endfunction
 // scope KurotsuchiWaterTrumpet begins
 
 
-    function KurotsuchiWaterTrumpet__HasTrumpetHit takes unit u returns boolean
+    function KurotsuchiWaterTrumpet___HasTrumpetHit takes unit u returns boolean
         local integer i= 0
         loop
             exitwhen i >= TrumpetHitCount
@@ -84569,7 +84861,7 @@ endfunction
         set TrumpetHitCount=0
     endfunction
 
-    function KurotsuchiWaterTrumpet__RegisterTrumpetHit takes unit u returns nothing
+    function KurotsuchiWaterTrumpet___RegisterTrumpetHit takes unit u returns nothing
         local integer i= 0
         loop
             exitwhen i >= TrumpetHitCount
@@ -84578,13 +84870,13 @@ endfunction
             endif
             set i=i + 1
         endloop
-        if TrumpetHitCount < KurotsuchiWaterTrumpet__MAX_TRUMPET_HITS then
+        if TrumpetHitCount < KurotsuchiWaterTrumpet___MAX_TRUMPET_HITS then
             set TrumpetHitUnits[TrumpetHitCount]=u
             set TrumpetHitCount=TrumpetHitCount + 1
         endif
     endfunction
 
-    function KurotsuchiWaterTrumpet__TryHardenRBlobs takes real x,real y,unit caster returns nothing
+    function KurotsuchiWaterTrumpet___TryHardenRBlobs takes real x,real y,unit caster returns nothing
         local integer instIdx= 0
         local integer rInst
         local integer blobTable
@@ -84660,215 +84952,215 @@ endfunction
 
 //Implemented from module Alloc:
     
-        function s__KurotsuchiWaterTrumpet__TrumpetFan_allocate takes nothing returns integer
+        function s__KurotsuchiWaterTrumpet___TrumpetFan_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__recycle[(0)] == 0 ) then
-                set s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__instanceCount=s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__instanceCount + 1
-                set this=s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__instanceCount
+            if ( s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__recycle[(0)] == 0 ) then
+                set s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__instanceCount=s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__instanceCount + 1
+                set this=s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__instanceCount
             else
-                set this=s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__recycle[(0)]
-                set s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__recycle[(0)]=s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__recycle[s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__recycle[(0)]]
+                set this=s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__recycle[(0)]
+                set s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__recycle[(0)]=s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__recycle[s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__KurotsuchiWaterTrumpet__TrumpetFan_deallocate takes integer this returns nothing
-            set s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__recycle[this]=s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__recycle[(0)]
-            set s__KurotsuchiWaterTrumpet__TrumpetFan_Alloc__recycle[(0)]=this
+        function s__KurotsuchiWaterTrumpet___TrumpetFan_deallocate takes integer this returns nothing
+            set s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__recycle[this]=s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__recycle[(0)]
+            set s__KurotsuchiWaterTrumpet___TrumpetFan_Alloc__recycle[(0)]=this
         endfunction
 
 
-        function s__KurotsuchiWaterTrumpet__TrumpetFan_periodic takes nothing returns nothing
+        function s__KurotsuchiWaterTrumpet___TrumpetFan_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real x= GetUnitX(s__KurotsuchiWaterTrumpet__TrumpetFan_dummy[this]) + Cos(s__KurotsuchiWaterTrumpet__TrumpetFan_angle[this]) * KurotsuchiWaterTrumpet__PROJECTILE_SPEED
-            local real y= GetUnitY(s__KurotsuchiWaterTrumpet__TrumpetFan_dummy[this]) + Sin(s__KurotsuchiWaterTrumpet__TrumpetFan_angle[this]) * KurotsuchiWaterTrumpet__PROJECTILE_SPEED
-            local real t= s__KurotsuchiWaterTrumpet__TrumpetFan_distance[this] / KurotsuchiWaterTrumpet__FAN_DISTANCE
-            local real z= s__KurotsuchiWaterTrumpet__TrumpetFan_zStart[this] + ( s__KurotsuchiWaterTrumpet__TrumpetFan_zEnd[this] - s__KurotsuchiWaterTrumpet__TrumpetFan_zStart[this] ) * t
+            local real x= GetUnitX(s__KurotsuchiWaterTrumpet___TrumpetFan_dummy[this]) + Cos(s__KurotsuchiWaterTrumpet___TrumpetFan_angle[this]) * KurotsuchiWaterTrumpet___PROJECTILE_SPEED
+            local real y= GetUnitY(s__KurotsuchiWaterTrumpet___TrumpetFan_dummy[this]) + Sin(s__KurotsuchiWaterTrumpet___TrumpetFan_angle[this]) * KurotsuchiWaterTrumpet___PROJECTILE_SPEED
+            local real t= s__KurotsuchiWaterTrumpet___TrumpetFan_distance[this] / KurotsuchiWaterTrumpet___FAN_DISTANCE
+            local real z= s__KurotsuchiWaterTrumpet___TrumpetFan_zStart[this] + ( s__KurotsuchiWaterTrumpet___TrumpetFan_zEnd[this] - s__KurotsuchiWaterTrumpet___TrumpetFan_zStart[this] ) * t
 
             local group g= CreateGroup()
             local unit u
             local effect e
             local timer time
-            set s__KurotsuchiWaterTrumpet__TrumpetFan_distance[this]=s__KurotsuchiWaterTrumpet__TrumpetFan_distance[this] + KurotsuchiWaterTrumpet__PROJECTILE_SPEED
+            set s__KurotsuchiWaterTrumpet___TrumpetFan_distance[this]=s__KurotsuchiWaterTrumpet___TrumpetFan_distance[this] + KurotsuchiWaterTrumpet___PROJECTILE_SPEED
 
-            call SetUnitX(s__KurotsuchiWaterTrumpet__TrumpetFan_dummy[this], x)
-            call SetUnitY(s__KurotsuchiWaterTrumpet__TrumpetFan_dummy[this], y)
+            call SetUnitX(s__KurotsuchiWaterTrumpet___TrumpetFan_dummy[this], x)
+            call SetUnitY(s__KurotsuchiWaterTrumpet___TrumpetFan_dummy[this], y)
 
-            set e=AddSpecialEffect(KurotsuchiWaterTrumpet__SFX_LINE, x, y)
+            set e=AddSpecialEffect(KurotsuchiWaterTrumpet___SFX_LINE, x, y)
             call BlzSetSpecialEffectZ(e, z)
-            call BlzSetSpecialEffectYaw(e, s__KurotsuchiWaterTrumpet__TrumpetFan_angle[this])
+            call BlzSetSpecialEffectYaw(e, s__KurotsuchiWaterTrumpet___TrumpetFan_angle[this])
             call BlzSetSpecialEffectRoll(e, t * 2.0 * bj_PI)
             call DestroyEffect(e)
 
-            call GroupEnumUnitsInRange(g, x, y, KurotsuchiWaterTrumpet__DAMAGE_RADIUS, null)
+            call GroupEnumUnitsInRange(g, x, y, KurotsuchiWaterTrumpet___DAMAGE_RADIUS, null)
             loop
                 set u=FirstOfGroup(g)
                 exitwhen u == null
                 call GroupRemoveUnit(g, u)
-                if IsUnitEnemy(u, GetOwningPlayer(s__KurotsuchiWaterTrumpet__TrumpetFan_caster[this])) and not KurotsuchiWaterTrumpet__HasTrumpetHit(u) then
-                    call SlowedUnit(s__KurotsuchiWaterTrumpet__TrumpetFan_caster[this] , u , 1.5)
-                    call UnitDamageTarget(s__KurotsuchiWaterTrumpet__TrumpetFan_caster[this], u, GetHeroStr(s__KurotsuchiWaterTrumpet__TrumpetFan_caster[this], true) * s__KurotsuchiWaterTrumpet__TrumpetFan_level[this], false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                    call KurotsuchiWaterTrumpet__RegisterTrumpetHit(u)
+                if IsUnitEnemy(u, GetOwningPlayer(s__KurotsuchiWaterTrumpet___TrumpetFan_caster[this])) and not KurotsuchiWaterTrumpet___HasTrumpetHit(u) then
+                    call SlowedUnit(s__KurotsuchiWaterTrumpet___TrumpetFan_caster[this] , u , 1.5)
+                    call UnitDamageTarget(s__KurotsuchiWaterTrumpet___TrumpetFan_caster[this], u, GetHeroStr(s__KurotsuchiWaterTrumpet___TrumpetFan_caster[this], true) * s__KurotsuchiWaterTrumpet___TrumpetFan_level[this], false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                    call KurotsuchiWaterTrumpet___RegisterTrumpetHit(u)
                     call SaveInteger(Table__ht, (QHitTable), (GetHandleId(u)), ( 1)) // INLINED!!
                     set time=(NewTimerEx(0)) // INLINED!!
                     call SaveInteger(KurotsuchiHash, GetHandleId(time), 0, GetHandleId(u))
                     call TimerStart(time, 3.0, false, function ClearSoakedFlag)
-                    call GroupAddUnit(s__KurotsuchiWaterTrumpet__TrumpetFan_damaged[this], u)
+                    call GroupAddUnit(s__KurotsuchiWaterTrumpet___TrumpetFan_damaged[this], u)
                 endif
             endloop
             call DestroyGroup(g)
 
-            call KurotsuchiWaterTrumpet__TryHardenRBlobs(x , y , s__KurotsuchiWaterTrumpet__TrumpetFan_caster[this])
+            call KurotsuchiWaterTrumpet___TryHardenRBlobs(x , y , s__KurotsuchiWaterTrumpet___TrumpetFan_caster[this])
 
-            if s__KurotsuchiWaterTrumpet__TrumpetFan_distance[this] >= KurotsuchiWaterTrumpet__FAN_DISTANCE then
-                call KillUnit(s__KurotsuchiWaterTrumpet__TrumpetFan_dummy[this])
-                call DestroyGroup(s__KurotsuchiWaterTrumpet__TrumpetFan_damaged[this])
-                call s__KurotsuchiWaterTrumpet__TrumpetFan_deallocate(this)
+            if s__KurotsuchiWaterTrumpet___TrumpetFan_distance[this] >= KurotsuchiWaterTrumpet___FAN_DISTANCE then
+                call KillUnit(s__KurotsuchiWaterTrumpet___TrumpetFan_dummy[this])
+                call DestroyGroup(s__KurotsuchiWaterTrumpet___TrumpetFan_damaged[this])
+                call s__KurotsuchiWaterTrumpet___TrumpetFan_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
 
-        function s__KurotsuchiWaterTrumpet__TrumpetFan_launch takes unit caster,real x,real y,real angle,integer level,group damaged,real zStart,real zEnd returns nothing
-            local integer this= s__KurotsuchiWaterTrumpet__TrumpetFan_allocate()
-            set s__KurotsuchiWaterTrumpet__TrumpetFan_caster[this]=caster
-            set s__KurotsuchiWaterTrumpet__TrumpetFan_angle[this]=angle
-            set s__KurotsuchiWaterTrumpet__TrumpetFan_level[this]=level
-            set s__KurotsuchiWaterTrumpet__TrumpetFan_distance[this]=0.0
-            set s__KurotsuchiWaterTrumpet__TrumpetFan_damaged[this]=damaged
-            set s__KurotsuchiWaterTrumpet__TrumpetFan_zStart[this]=zStart
-            set s__KurotsuchiWaterTrumpet__TrumpetFan_zEnd[this]=zEnd
-            set s__KurotsuchiWaterTrumpet__TrumpetFan_dummy[this]=CreateUnit(GetOwningPlayer(caster), 'e007', x, y, 0)
-            call SetUnitFlyHeight(s__KurotsuchiWaterTrumpet__TrumpetFan_dummy[this], zStart - 30, 0)
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__KurotsuchiWaterTrumpet__TrumpetFan_periodic)
+        function s__KurotsuchiWaterTrumpet___TrumpetFan_launch takes unit caster,real x,real y,real angle,integer level,group damaged,real zStart,real zEnd returns nothing
+            local integer this= s__KurotsuchiWaterTrumpet___TrumpetFan_allocate()
+            set s__KurotsuchiWaterTrumpet___TrumpetFan_caster[this]=caster
+            set s__KurotsuchiWaterTrumpet___TrumpetFan_angle[this]=angle
+            set s__KurotsuchiWaterTrumpet___TrumpetFan_level[this]=level
+            set s__KurotsuchiWaterTrumpet___TrumpetFan_distance[this]=0.0
+            set s__KurotsuchiWaterTrumpet___TrumpetFan_damaged[this]=damaged
+            set s__KurotsuchiWaterTrumpet___TrumpetFan_zStart[this]=zStart
+            set s__KurotsuchiWaterTrumpet___TrumpetFan_zEnd[this]=zEnd
+            set s__KurotsuchiWaterTrumpet___TrumpetFan_dummy[this]=CreateUnit(GetOwningPlayer(caster), 'e007', x, y, 0)
+            call SetUnitFlyHeight(s__KurotsuchiWaterTrumpet___TrumpetFan_dummy[this], zStart - 30, 0)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__KurotsuchiWaterTrumpet___TrumpetFan_periodic)
         endfunction
 
 //Implemented from module Alloc:
     
-        function s__KurotsuchiWaterTrumpet__TrumpetSpell_allocate takes nothing returns integer
+        function s__KurotsuchiWaterTrumpet___TrumpetSpell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__recycle[(0)] == 0 ) then
-                set s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__instanceCount=s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__instanceCount + 1
-                set this=s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__instanceCount
+            if ( s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__recycle[(0)] == 0 ) then
+                set s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__instanceCount=s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__instanceCount + 1
+                set this=s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__instanceCount
             else
-                set this=s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__recycle[(0)]
-                set s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__recycle[(0)]=s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__recycle[s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__recycle[(0)]]
+                set this=s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__recycle[(0)]
+                set s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__recycle[(0)]=s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__recycle[s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__KurotsuchiWaterTrumpet__TrumpetSpell_deallocate takes integer this returns nothing
-            set s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__recycle[this]=s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__recycle[(0)]
-            set s__KurotsuchiWaterTrumpet__TrumpetSpell_Alloc__recycle[(0)]=this
+        function s__KurotsuchiWaterTrumpet___TrumpetSpell_deallocate takes integer this returns nothing
+            set s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__recycle[this]=s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__recycle[(0)]
+            set s__KurotsuchiWaterTrumpet___TrumpetSpell_Alloc__recycle[(0)]=this
         endfunction
 
 
-        function s__KurotsuchiWaterTrumpet__TrumpetSpell_createFan takes real x,real y,real baseAngle,unit caster,integer level,group damaged returns nothing
+        function s__KurotsuchiWaterTrumpet___TrumpetSpell_createFan takes real x,real y,real baseAngle,unit caster,integer level,group damaged returns nothing
             local integer i= 0
             local real step= bj_PI / 16
             local real angle
-            local integer mid= ( KurotsuchiWaterTrumpet__NUM_FAN_PROJECTILES - 1 ) / 2
+            local integer mid= ( KurotsuchiWaterTrumpet___NUM_FAN_PROJECTILES - 1 ) / 2
             local real offsetFactor
             local real zOffset
             local real baseZ= GetPointZ(GetUnitX(caster) , GetUnitY(caster)) + 60.0
 
             loop
-                exitwhen i >= KurotsuchiWaterTrumpet__NUM_FAN_PROJECTILES
+                exitwhen i >= KurotsuchiWaterTrumpet___NUM_FAN_PROJECTILES
                 set angle=baseAngle - ( step * mid ) + ( step * i )
                 set offsetFactor=1.0 - ( Abs(i - mid) / mid )
-                set zOffset=KurotsuchiWaterTrumpet__FAN_Z_MAX * offsetFactor
-                call s__KurotsuchiWaterTrumpet__TrumpetFan_launch(caster , x , y , angle , level , damaged , baseZ , baseZ + zOffset)
-                call s__KurotsuchiWaterTrumpet__TrumpetFan_launch(caster , x , y , angle , level , damaged , baseZ , baseZ - zOffset)
+                set zOffset=KurotsuchiWaterTrumpet___FAN_Z_MAX * offsetFactor
+                call s__KurotsuchiWaterTrumpet___TrumpetFan_launch(caster , x , y , angle , level , damaged , baseZ , baseZ + zOffset)
+                call s__KurotsuchiWaterTrumpet___TrumpetFan_launch(caster , x , y , angle , level , damaged , baseZ , baseZ - zOffset)
                 set i=i + 1
             endloop
         endfunction
 
-        function s__KurotsuchiWaterTrumpet__TrumpetSpell_periodic takes nothing returns nothing
+        function s__KurotsuchiWaterTrumpet___TrumpetSpell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real x= GetUnitX(s__KurotsuchiWaterTrumpet__TrumpetSpell_proj[this])
-            local real y= GetUnitY(s__KurotsuchiWaterTrumpet__TrumpetSpell_proj[this])
-            local real nx= x + Cos(s__KurotsuchiWaterTrumpet__TrumpetSpell_angle[this]) * KurotsuchiWaterTrumpet__PROJECTILE_SPEED
-            local real ny= y + Sin(s__KurotsuchiWaterTrumpet__TrumpetSpell_angle[this]) * KurotsuchiWaterTrumpet__PROJECTILE_SPEED
+            local real x= GetUnitX(s__KurotsuchiWaterTrumpet___TrumpetSpell_proj[this])
+            local real y= GetUnitY(s__KurotsuchiWaterTrumpet___TrumpetSpell_proj[this])
+            local real nx= x + Cos(s__KurotsuchiWaterTrumpet___TrumpetSpell_angle[this]) * KurotsuchiWaterTrumpet___PROJECTILE_SPEED
+            local real ny= y + Sin(s__KurotsuchiWaterTrumpet___TrumpetSpell_angle[this]) * KurotsuchiWaterTrumpet___PROJECTILE_SPEED
             local unit u
             local group g= CreateGroup()
             local timer t
             local effect e
 
-            set s__KurotsuchiWaterTrumpet__TrumpetSpell_distance[this]=s__KurotsuchiWaterTrumpet__TrumpetSpell_distance[this] + KurotsuchiWaterTrumpet__PROJECTILE_SPEED
-            call SetUnitX(s__KurotsuchiWaterTrumpet__TrumpetSpell_proj[this], nx)
-            call SetUnitY(s__KurotsuchiWaterTrumpet__TrumpetSpell_proj[this], ny)
+            set s__KurotsuchiWaterTrumpet___TrumpetSpell_distance[this]=s__KurotsuchiWaterTrumpet___TrumpetSpell_distance[this] + KurotsuchiWaterTrumpet___PROJECTILE_SPEED
+            call SetUnitX(s__KurotsuchiWaterTrumpet___TrumpetSpell_proj[this], nx)
+            call SetUnitY(s__KurotsuchiWaterTrumpet___TrumpetSpell_proj[this], ny)
 
-            set e=AddSpecialEffect(KurotsuchiWaterTrumpet__SFX_LINE, nx, ny)
+            set e=AddSpecialEffect(KurotsuchiWaterTrumpet___SFX_LINE, nx, ny)
             call BlzSetSpecialEffectZ(e, GetPointZ(nx , ny) + 60)
             call DestroyEffect(e)
 
-            call KurotsuchiWaterTrumpet__TryHardenRBlobs(nx , ny , s__KurotsuchiWaterTrumpet__TrumpetSpell_caster[this])
-            call GroupEnumUnitsInRange(g, nx, ny, KurotsuchiWaterTrumpet__DAMAGE_RADIUS, null)
+            call KurotsuchiWaterTrumpet___TryHardenRBlobs(nx , ny , s__KurotsuchiWaterTrumpet___TrumpetSpell_caster[this])
+            call GroupEnumUnitsInRange(g, nx, ny, KurotsuchiWaterTrumpet___DAMAGE_RADIUS, null)
             loop
                 set u=FirstOfGroup(g)
                 exitwhen u == null
                 call GroupRemoveUnit(g, u)
-                if IsUnitEnemy(u, GetOwningPlayer(s__KurotsuchiWaterTrumpet__TrumpetSpell_caster[this])) and not KurotsuchiWaterTrumpet__HasTrumpetHit(u) then
-                    call SlowedUnit(s__KurotsuchiWaterTrumpet__TrumpetSpell_caster[this] , u , 1.5)
-                    call UnitDamageTarget(s__KurotsuchiWaterTrumpet__TrumpetSpell_caster[this], u, GetHeroStr(s__KurotsuchiWaterTrumpet__TrumpetSpell_caster[this], true) * s__KurotsuchiWaterTrumpet__TrumpetSpell_level[this], false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                    call KurotsuchiWaterTrumpet__RegisterTrumpetHit(u)
+                if IsUnitEnemy(u, GetOwningPlayer(s__KurotsuchiWaterTrumpet___TrumpetSpell_caster[this])) and not KurotsuchiWaterTrumpet___HasTrumpetHit(u) then
+                    call SlowedUnit(s__KurotsuchiWaterTrumpet___TrumpetSpell_caster[this] , u , 1.5)
+                    call UnitDamageTarget(s__KurotsuchiWaterTrumpet___TrumpetSpell_caster[this], u, GetHeroStr(s__KurotsuchiWaterTrumpet___TrumpetSpell_caster[this], true) * s__KurotsuchiWaterTrumpet___TrumpetSpell_level[this], false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                    call KurotsuchiWaterTrumpet___RegisterTrumpetHit(u)
                     call SaveInteger(Table__ht, (QHitTable), (GetHandleId(u)), ( 1)) // INLINED!!
                     set t=(NewTimerEx(0)) // INLINED!!
                     call SaveInteger(KurotsuchiHash, GetHandleId(t), 0, GetHandleId(u))
                     call TimerStart(t, 3.0, false, function ClearSoakedFlag)
-                    call GroupAddUnit(s__KurotsuchiWaterTrumpet__TrumpetSpell_damaged[this], u)
+                    call GroupAddUnit(s__KurotsuchiWaterTrumpet___TrumpetSpell_damaged[this], u)
                 endif
             endloop
             call DestroyGroup(g)
 
-            if not s__KurotsuchiWaterTrumpet__TrumpetSpell_fanTriggered[this] and s__KurotsuchiWaterTrumpet__TrumpetSpell_distance[this] >= KurotsuchiWaterTrumpet__LINE_DISTANCE then
-                set s__KurotsuchiWaterTrumpet__TrumpetSpell_fanTriggered[this]=true
-                call s__KurotsuchiWaterTrumpet__TrumpetSpell_createFan(nx , ny , s__KurotsuchiWaterTrumpet__TrumpetSpell_angle[this] , s__KurotsuchiWaterTrumpet__TrumpetSpell_caster[this] , s__KurotsuchiWaterTrumpet__TrumpetSpell_level[this] , s__KurotsuchiWaterTrumpet__TrumpetSpell_damaged[this])
+            if not s__KurotsuchiWaterTrumpet___TrumpetSpell_fanTriggered[this] and s__KurotsuchiWaterTrumpet___TrumpetSpell_distance[this] >= KurotsuchiWaterTrumpet___LINE_DISTANCE then
+                set s__KurotsuchiWaterTrumpet___TrumpetSpell_fanTriggered[this]=true
+                call s__KurotsuchiWaterTrumpet___TrumpetSpell_createFan(nx , ny , s__KurotsuchiWaterTrumpet___TrumpetSpell_angle[this] , s__KurotsuchiWaterTrumpet___TrumpetSpell_caster[this] , s__KurotsuchiWaterTrumpet___TrumpetSpell_level[this] , s__KurotsuchiWaterTrumpet___TrumpetSpell_damaged[this])
             endif
 
-            if s__KurotsuchiWaterTrumpet__TrumpetSpell_distance[this] >= KurotsuchiWaterTrumpet__LINE_DISTANCE + KurotsuchiWaterTrumpet__FAN_DISTANCE then
-                call KillUnit(s__KurotsuchiWaterTrumpet__TrumpetSpell_proj[this])
-                call DestroyGroup(s__KurotsuchiWaterTrumpet__TrumpetSpell_damaged[this])
-                call s__KurotsuchiWaterTrumpet__TrumpetSpell_deallocate(this)
+            if s__KurotsuchiWaterTrumpet___TrumpetSpell_distance[this] >= KurotsuchiWaterTrumpet___LINE_DISTANCE + KurotsuchiWaterTrumpet___FAN_DISTANCE then
+                call KillUnit(s__KurotsuchiWaterTrumpet___TrumpetSpell_proj[this])
+                call DestroyGroup(s__KurotsuchiWaterTrumpet___TrumpetSpell_damaged[this])
+                call s__KurotsuchiWaterTrumpet___TrumpetSpell_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
 
-        function s__KurotsuchiWaterTrumpet__TrumpetSpell_onCast takes nothing returns nothing
-            local integer this= s__KurotsuchiWaterTrumpet__TrumpetSpell_allocate()
+        function s__KurotsuchiWaterTrumpet___TrumpetSpell_onCast takes nothing returns nothing
+            local integer this= s__KurotsuchiWaterTrumpet___TrumpetSpell_allocate()
             local unit caster= GetTriggerUnit()
             local real x= GetUnitX(caster)
             local real y= GetUnitY(caster)
             local real tx= GetSpellTargetX()
             local real ty= GetSpellTargetY()
 
-            set s__KurotsuchiWaterTrumpet__TrumpetSpell_caster[this]=caster
-            set s__KurotsuchiWaterTrumpet__TrumpetSpell_level[this]=GetUnitAbilityLevel(caster, KurotsuchiWaterTrumpet__SPELL_ID)
-            set s__KurotsuchiWaterTrumpet__TrumpetSpell_angle[this]=Atan2(ty - y, tx - x)
-            set s__KurotsuchiWaterTrumpet__TrumpetSpell_proj[this]=CreateUnit(GetOwningPlayer(caster), 'e007', x, y, 0)
-            set s__KurotsuchiWaterTrumpet__TrumpetSpell_damaged[this]=CreateGroup()
-            set s__KurotsuchiWaterTrumpet__TrumpetSpell_distance[this]=0.0
-            set s__KurotsuchiWaterTrumpet__TrumpetSpell_fanTriggered[this]=false
+            set s__KurotsuchiWaterTrumpet___TrumpetSpell_caster[this]=caster
+            set s__KurotsuchiWaterTrumpet___TrumpetSpell_level[this]=GetUnitAbilityLevel(caster, KurotsuchiWaterTrumpet___SPELL_ID)
+            set s__KurotsuchiWaterTrumpet___TrumpetSpell_angle[this]=Atan2(ty - y, tx - x)
+            set s__KurotsuchiWaterTrumpet___TrumpetSpell_proj[this]=CreateUnit(GetOwningPlayer(caster), 'e007', x, y, 0)
+            set s__KurotsuchiWaterTrumpet___TrumpetSpell_damaged[this]=CreateGroup()
+            set s__KurotsuchiWaterTrumpet___TrumpetSpell_distance[this]=0.0
+            set s__KurotsuchiWaterTrumpet___TrumpetSpell_fanTriggered[this]=false
             call ClearTrumpetHits()
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__KurotsuchiWaterTrumpet__TrumpetSpell_periodic)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__KurotsuchiWaterTrumpet___TrumpetSpell_periodic)
         endfunction
 
-        function s__KurotsuchiWaterTrumpet__TrumpetSpell_condition takes nothing returns boolean
-            return GetSpellAbilityId() == KurotsuchiWaterTrumpet__SPELL_ID
+        function s__KurotsuchiWaterTrumpet___TrumpetSpell_condition takes nothing returns boolean
+            return GetSpellAbilityId() == KurotsuchiWaterTrumpet___SPELL_ID
         endfunction
 
-        function s__KurotsuchiWaterTrumpet__TrumpetSpell_onInit takes nothing returns nothing
+        function s__KurotsuchiWaterTrumpet___TrumpetSpell_onInit takes nothing returns nothing
             local trigger t= CreateTrigger()
             call TriggerRegisterAnyUnitEventBJ(t, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-            call TriggerAddCondition(t, Condition(function s__KurotsuchiWaterTrumpet__TrumpetSpell_condition))
-            call TriggerAddAction(t, function s__KurotsuchiWaterTrumpet__TrumpetSpell_onCast)
+            call TriggerAddCondition(t, Condition(function s__KurotsuchiWaterTrumpet___TrumpetSpell_condition))
+            call TriggerAddAction(t, function s__KurotsuchiWaterTrumpet___TrumpetSpell_onCast)
         endfunction
 
 // scope KurotsuchiWaterTrumpet ends
@@ -84883,69 +85175,69 @@ endfunction
 
 
 
-        function s__KaidoShock__Knockup_create takes unit u,unit source,real duration,real height returns integer
-            local integer this= s__KaidoShock__Knockup__allocate()
-            set s__KaidoShock__Knockup_u[this]=u
-            set s__KaidoShock__Knockup_source[this]=source
-            set s__KaidoShock__Knockup_duration[this]=duration
-            set s__KaidoShock__Knockup_height[this]=height
-            set s__KaidoShock__Knockup_elapsed[this]=0.0
+        function s__KaidoShock___Knockup_create takes unit u,unit source,real duration,real height returns integer
+            local integer this= s__KaidoShock___Knockup__allocate()
+            set s__KaidoShock___Knockup_u[this]=u
+            set s__KaidoShock___Knockup_source[this]=source
+            set s__KaidoShock___Knockup_duration[this]=duration
+            set s__KaidoShock___Knockup_height[this]=height
+            set s__KaidoShock___Knockup_elapsed[this]=0.0
             call PauseUnit(u, true)
-            set s__KaidoShock__Knockup_t[this]=NewTimerEx(this)
-            call TimerStart(s__KaidoShock__Knockup_t[this], 0.03, true, function sc__KaidoShock__Knockup_periodic)
+            set s__KaidoShock___Knockup_t[this]=NewTimerEx(this)
+            call TimerStart(s__KaidoShock___Knockup_t[this], 0.03, true, function sc__KaidoShock___Knockup_periodic)
             return this
         endfunction
 
-        function s__KaidoShock__Knockup_periodic takes nothing returns nothing
+        function s__KaidoShock___Knockup_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real t
             local real z
 
-            set s__KaidoShock__Knockup_elapsed[this]=s__KaidoShock__Knockup_elapsed[this] + 0.03
-            set t=s__KaidoShock__Knockup_elapsed[this] / s__KaidoShock__Knockup_duration[this]
+            set s__KaidoShock___Knockup_elapsed[this]=s__KaidoShock___Knockup_elapsed[this] + 0.03
+            set t=s__KaidoShock___Knockup_elapsed[this] / s__KaidoShock___Knockup_duration[this]
 
             if t >= 1.0 then
-                call SetUnitFlyHeight(s__KaidoShock__Knockup_u[this], 0.0, 0.0)
-                call PauseUnit(s__KaidoShock__Knockup_u[this], false)
-                call DestroyTimer(s__KaidoShock__Knockup_t[this])
-                call s__KaidoShock__Knockup_deallocate(this)
+                call SetUnitFlyHeight(s__KaidoShock___Knockup_u[this], 0.0, 0.0)
+                call PauseUnit(s__KaidoShock___Knockup_u[this], false)
+                call DestroyTimer(s__KaidoShock___Knockup_t[this])
+                call s__KaidoShock___Knockup_deallocate(this)
             else
-                set z=s__KaidoShock__Knockup_height[this] * Sin(t * bj_PI)
-                call SetUnitFlyHeight(s__KaidoShock__Knockup_u[this], z, 0.0)
+                set z=s__KaidoShock___Knockup_height[this] * Sin(t * bj_PI)
+                call SetUnitFlyHeight(s__KaidoShock___Knockup_u[this], z, 0.0)
             endif
         endfunction
 
 
-        function s__KaidoShock__KaidoShockSpell_create takes unit caster,real x,real y,integer lvl returns integer
-            local integer this= s__KaidoShock__KaidoShockSpell__allocate()
-            set s__KaidoShock__KaidoShockSpell_caster[this]=caster
-            set s__KaidoShock__KaidoShockSpell_x[this]=x
-            set s__KaidoShock__KaidoShockSpell_y[this]=y
-            set s__KaidoShock__KaidoShockSpell_lvl[this]=lvl
-            set s__KaidoShock__KaidoShockSpell_elapsed[this]=0.0
-            set s__KaidoShock__KaidoShockSpell_height[this]=0.0
-            set s__KaidoShock__KaidoShockSpell_phase[this]=0
-            set s__KaidoShock__KaidoShockSpell_dummy[this]=CreateUnit(GetOwningPlayer(caster), KaidoShock__DUMMY_ID, 10710, 6648, GetRandomReal(0.00, 359.99))
-            call SetUnitFlyHeight(s__KaidoShock__KaidoShockSpell_dummy[this], s__KaidoShock__KaidoShockSpell_height[this], 0.0)
-            call SetUnitPathing(s__KaidoShock__KaidoShockSpell_dummy[this], false)
-            set s__RockData_rock[s__RockData_count]=s__KaidoShock__KaidoShockSpell_dummy[this]
-            set s__RockData_rx[s__RockData_count]=s__KaidoShock__KaidoShockSpell_x[this]
-            set s__RockData_ry[s__RockData_count]=s__KaidoShock__KaidoShockSpell_y[this]
+        function s__KaidoShock___KaidoShockSpell_create takes unit caster,real x,real y,integer lvl returns integer
+            local integer this= s__KaidoShock___KaidoShockSpell__allocate()
+            set s__KaidoShock___KaidoShockSpell_caster[this]=caster
+            set s__KaidoShock___KaidoShockSpell_x[this]=x
+            set s__KaidoShock___KaidoShockSpell_y[this]=y
+            set s__KaidoShock___KaidoShockSpell_lvl[this]=lvl
+            set s__KaidoShock___KaidoShockSpell_elapsed[this]=0.0
+            set s__KaidoShock___KaidoShockSpell_height[this]=0.0
+            set s__KaidoShock___KaidoShockSpell_phase[this]=0
+            set s__KaidoShock___KaidoShockSpell_dummy[this]=CreateUnit(GetOwningPlayer(caster), KaidoShock___DUMMY_ID, 10710, 6648, GetRandomReal(0.00, 359.99))
+            call SetUnitFlyHeight(s__KaidoShock___KaidoShockSpell_dummy[this], s__KaidoShock___KaidoShockSpell_height[this], 0.0)
+            call SetUnitPathing(s__KaidoShock___KaidoShockSpell_dummy[this], false)
+            set s__RockData_rock[s__RockData_count]=s__KaidoShock___KaidoShockSpell_dummy[this]
+            set s__RockData_rx[s__RockData_count]=s__KaidoShock___KaidoShockSpell_x[this]
+            set s__RockData_ry[s__RockData_count]=s__KaidoShock___KaidoShockSpell_y[this]
             set s__RockData_count=s__RockData_count + 1
-            set bj_lastCreatedEffect=AddSpecialEffect("DustWithWave.mdl", s__KaidoShock__KaidoShockSpell_x[this], s__KaidoShock__KaidoShockSpell_y[this])
+            set bj_lastCreatedEffect=AddSpecialEffect("DustWithWave.mdl", s__KaidoShock___KaidoShockSpell_x[this], s__KaidoShock___KaidoShockSpell_y[this])
             call BlzSetSpecialEffectTimeScale(bj_lastCreatedEffect, 2.0)
             call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 3.0)
             call s__EffectUtils__EffectTimer_create((bj_lastCreatedEffect ) , (( 0.5)*1.0) , false) // INLINED!!
-            set s__KaidoShock__KaidoShockSpell_t[this]=NewTimerEx(this)
-            call TimerStart(s__KaidoShock__KaidoShockSpell_t[this], 0.03, true, function sc__KaidoShock__KaidoShockSpell_periodic)
+            set s__KaidoShock___KaidoShockSpell_t[this]=NewTimerEx(this)
+            call TimerStart(s__KaidoShock___KaidoShockSpell_t[this], 0.03, true, function sc__KaidoShock___KaidoShockSpell_periodic)
             return this
         endfunction
 
-        function s__KaidoShock__KaidoShockSpell_knockupUnits takes unit caster,real x,real y,integer lvl returns nothing
+        function s__KaidoShock___KaidoShockSpell_knockupUnits takes unit caster,real x,real y,integer lvl returns nothing
             local group g= CreateGroup()
             local unit u
             local real airTime= 0.1 * lvl * 2
-            call GroupEnumUnitsInRange(g, x, y, KaidoShock__KS_RADIUS, null)
+            call GroupEnumUnitsInRange(g, x, y, KaidoShock___KS_RADIUS, null)
             loop
                 set u=FirstOfGroup(g)
                 exitwhen u == null
@@ -84953,16 +85245,16 @@ endfunction
                 if IsUnitEnemy(u, GetOwningPlayer(caster)) and GetWidgetLife(u) > 0.405 and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
                     call UnitDamageTarget(caster, u, 120 * lvl, false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
                     //call StunUnitTimed(caster, u, airTime)
-                    call s__KaidoShock__Knockup_create(u , caster , airTime , KaidoShock__KS_KNOCKUP_HEIGHT + ( lvl * 10 ))
-                    call SaveUnitHandle(KaidoShock__RockHT, GetHandleId(u), 1, u)
+                    call s__KaidoShock___Knockup_create(u , caster , airTime , KaidoShock___KS_KNOCKUP_HEIGHT + ( lvl * 10 ))
+                    call SaveUnitHandle(KaidoShock___RockHT, GetHandleId(u), 1, u)
                 endif
             endloop
             call DestroyGroup(g)
         endfunction
 
-        function s__KaidoShock__KaidoShockSpell_releaseUnit takes nothing returns nothing
+        function s__KaidoShock___KaidoShockSpell_releaseUnit takes nothing returns nothing
             local timer t= GetExpiredTimer()
-            local unit u= LoadUnitHandle(KaidoShock__RockHT, GetHandleId(t), 1)
+            local unit u= LoadUnitHandle(KaidoShock___RockHT, GetHandleId(t), 1)
             if u != null then
                 call SetUnitFlyHeight(u, 0., 0.)
                 call PauseUnit(u, false)
@@ -84970,7 +85262,7 @@ endfunction
             call DestroyTimer(t)
         endfunction
 
-        function s__KaidoShock__KaidoShockSpell_periodic takes nothing returns nothing
+        function s__KaidoShock___KaidoShockSpell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real dx
             local real dy
@@ -84978,91 +85270,91 @@ endfunction
             local real t
             local integer i
             local real sinkT
-            set s__KaidoShock__KaidoShockSpell_elapsed[this]=s__KaidoShock__KaidoShockSpell_elapsed[this] + 0.03
-            if s__KaidoShock__KaidoShockSpell_phase[this] == 0 then
-                if ModuloReal(s__KaidoShock__KaidoShockSpell_elapsed[this], 0.10) == 0.0 then
+            set s__KaidoShock___KaidoShockSpell_elapsed[this]=s__KaidoShock___KaidoShockSpell_elapsed[this] + 0.03
+            if s__KaidoShock___KaidoShockSpell_phase[this] == 0 then
+                if ModuloReal(s__KaidoShock___KaidoShockSpell_elapsed[this], 0.10) == 0.0 then
                     set dx=GetRandomReal(- 15.0, 15.0)
                     set dy=GetRandomReal(- 15.0, 15.0)
                     set dz=GetRandomReal(5.0, 20.0)
                     //call SetUnitX(this.dummy, this.x + dx)
                     //call SetUnitY(this.dummy, this.y + dy)
-                    call SetUnitFlyHeight(s__KaidoShock__KaidoShockSpell_dummy[this], dz, 0.0)
+                    call SetUnitFlyHeight(s__KaidoShock___KaidoShockSpell_dummy[this], dz, 0.0)
                 endif
-                if s__KaidoShock__KaidoShockSpell_elapsed[this] >= KaidoShock__KS_DELAY then
-                    set s__KaidoShock__KaidoShockSpell_phase[this]=1
-                    set s__KaidoShock__KaidoShockSpell_elapsed[this]=0.0
+                if s__KaidoShock___KaidoShockSpell_elapsed[this] >= KaidoShock___KS_DELAY then
+                    set s__KaidoShock___KaidoShockSpell_phase[this]=1
+                    set s__KaidoShock___KaidoShockSpell_elapsed[this]=0.0
                     set i=0
                     loop
                         exitwhen i > 5
-                        set dx=(((s__KaidoShock__KaidoShockSpell_x[this] )*1.0) + Cos((( Deg2Rad(60 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
-                        set dy=(((s__KaidoShock__KaidoShockSpell_y[this] )*1.0) + Sin((( Deg2Rad(60 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
+                        set dx=(((s__KaidoShock___KaidoShockSpell_x[this] )*1.0) + Cos((( Deg2Rad(60 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
+                        set dy=(((s__KaidoShock___KaidoShockSpell_y[this] )*1.0) + Sin((( Deg2Rad(60 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
                         set bj_lastCreatedEffect=AddSpecialEffect("Effects//s_War_Stomp.mdl", dx, dy)
                         call BlzSetSpecialEffectTimeScale(bj_lastCreatedEffect, 3.0)
                         call DestroyEffect(bj_lastCreatedEffect)
                         set i=i + 1
                     endloop
-                    call SetUnitX(s__KaidoShock__KaidoShockSpell_dummy[this], s__KaidoShock__KaidoShockSpell_x[this])
-                    call SetUnitY(s__KaidoShock__KaidoShockSpell_dummy[this], s__KaidoShock__KaidoShockSpell_y[this])
-                    call SetUnitFlyHeight(s__KaidoShock__KaidoShockSpell_dummy[this], 5.0, 0.0)
-                    call SetUnitAnimation(s__KaidoShock__KaidoShockSpell_dummy[this], "birth")
-                    call SetUnitScale(s__KaidoShock__KaidoShockSpell_dummy[this], 1.1, 1.1, 1.1)
-                    call SaveUnitHandle(KaidoShock__RockHT, GetHandleId(s__KaidoShock__KaidoShockSpell_dummy[this]), 0, s__KaidoShock__KaidoShockSpell_caster[this])
-                    call s__KaidoShock__KaidoShockSpell_knockupUnits(s__KaidoShock__KaidoShockSpell_caster[this] , s__KaidoShock__KaidoShockSpell_x[this] , s__KaidoShock__KaidoShockSpell_y[this] , s__KaidoShock__KaidoShockSpell_lvl[this])
+                    call SetUnitX(s__KaidoShock___KaidoShockSpell_dummy[this], s__KaidoShock___KaidoShockSpell_x[this])
+                    call SetUnitY(s__KaidoShock___KaidoShockSpell_dummy[this], s__KaidoShock___KaidoShockSpell_y[this])
+                    call SetUnitFlyHeight(s__KaidoShock___KaidoShockSpell_dummy[this], 5.0, 0.0)
+                    call SetUnitAnimation(s__KaidoShock___KaidoShockSpell_dummy[this], "birth")
+                    call SetUnitScale(s__KaidoShock___KaidoShockSpell_dummy[this], 1.1, 1.1, 1.1)
+                    call SaveUnitHandle(KaidoShock___RockHT, GetHandleId(s__KaidoShock___KaidoShockSpell_dummy[this]), 0, s__KaidoShock___KaidoShockSpell_caster[this])
+                    call s__KaidoShock___KaidoShockSpell_knockupUnits(s__KaidoShock___KaidoShockSpell_caster[this] , s__KaidoShock___KaidoShockSpell_x[this] , s__KaidoShock___KaidoShockSpell_y[this] , s__KaidoShock___KaidoShockSpell_lvl[this])
                 endif
-            elseif s__KaidoShock__KaidoShockSpell_phase[this] == 1 then
-                set t=s__KaidoShock__KaidoShockSpell_elapsed[this] / KaidoShock__KS_RISE_DURATION
+            elseif s__KaidoShock___KaidoShockSpell_phase[this] == 1 then
+                set t=s__KaidoShock___KaidoShockSpell_elapsed[this] / KaidoShock___KS_RISE_DURATION
                 if t >= 1.0 then
-                    set s__KaidoShock__KaidoShockSpell_height[this]=KaidoShock__KS_RISE_HEIGHT
-                    call SetUnitFlyHeight(s__KaidoShock__KaidoShockSpell_dummy[this], s__KaidoShock__KaidoShockSpell_height[this], 0.0)
-                    set s__KaidoShock__KaidoShockSpell_phase[this]=2
-                    set s__KaidoShock__KaidoShockSpell_elapsed[this]=0.
+                    set s__KaidoShock___KaidoShockSpell_height[this]=KaidoShock___KS_RISE_HEIGHT
+                    call SetUnitFlyHeight(s__KaidoShock___KaidoShockSpell_dummy[this], s__KaidoShock___KaidoShockSpell_height[this], 0.0)
+                    set s__KaidoShock___KaidoShockSpell_phase[this]=2
+                    set s__KaidoShock___KaidoShockSpell_elapsed[this]=0.
                 else
-                    set s__KaidoShock__KaidoShockSpell_height[this]=KaidoShock__KS_RISE_HEIGHT * t * t
-                    call SetUnitFlyHeight(s__KaidoShock__KaidoShockSpell_dummy[this], s__KaidoShock__KaidoShockSpell_height[this], 0.0)
+                    set s__KaidoShock___KaidoShockSpell_height[this]=KaidoShock___KS_RISE_HEIGHT * t * t
+                    call SetUnitFlyHeight(s__KaidoShock___KaidoShockSpell_dummy[this], s__KaidoShock___KaidoShockSpell_height[this], 0.0)
                 endif
 
-            elseif s__KaidoShock__KaidoShockSpell_phase[this] == 2 then
-                if s__KaidoShock__KaidoShockSpell_elapsed[this] >= KaidoShock__KS_DURATION then
-                    set s__KaidoShock__KaidoShockSpell_phase[this]=3
-                    set s__KaidoShock__KaidoShockSpell_elapsed[this]=0.
+            elseif s__KaidoShock___KaidoShockSpell_phase[this] == 2 then
+                if s__KaidoShock___KaidoShockSpell_elapsed[this] >= KaidoShock___KS_DURATION then
+                    set s__KaidoShock___KaidoShockSpell_phase[this]=3
+                    set s__KaidoShock___KaidoShockSpell_elapsed[this]=0.
                 endif
-            elseif s__KaidoShock__KaidoShockSpell_phase[this] == 3 then
-                set sinkT=s__KaidoShock__KaidoShockSpell_elapsed[this] / KaidoShock__KS_RISE_DURATION
+            elseif s__KaidoShock___KaidoShockSpell_phase[this] == 3 then
+                set sinkT=s__KaidoShock___KaidoShockSpell_elapsed[this] / KaidoShock___KS_RISE_DURATION
                 if sinkT >= 1.0 then
-                    call FlushChildHashtable(KaidoShock__RockHT, GetHandleId(s__KaidoShock__KaidoShockSpell_dummy[this]))
-                    call KillUnit(s__KaidoShock__KaidoShockSpell_dummy[this])
-                    call RemoveUnit(s__KaidoShock__KaidoShockSpell_dummy[this])
-                    call DestroyTimer(s__KaidoShock__KaidoShockSpell_t[this])
-                    call s__KaidoShock__KaidoShockSpell_deallocate(this)
+                    call FlushChildHashtable(KaidoShock___RockHT, GetHandleId(s__KaidoShock___KaidoShockSpell_dummy[this]))
+                    call KillUnit(s__KaidoShock___KaidoShockSpell_dummy[this])
+                    call RemoveUnit(s__KaidoShock___KaidoShockSpell_dummy[this])
+                    call DestroyTimer(s__KaidoShock___KaidoShockSpell_t[this])
+                    call s__KaidoShock___KaidoShockSpell_deallocate(this)
                     return
                 else
-                    set s__KaidoShock__KaidoShockSpell_height[this]=KaidoShock__KS_RISE_HEIGHT * ( 1.0 - sinkT * sinkT )
-                    call SetUnitFlyHeight(s__KaidoShock__KaidoShockSpell_dummy[this], s__KaidoShock__KaidoShockSpell_height[this], 0.0)
+                    set s__KaidoShock___KaidoShockSpell_height[this]=KaidoShock___KS_RISE_HEIGHT * ( 1.0 - sinkT * sinkT )
+                    call SetUnitFlyHeight(s__KaidoShock___KaidoShockSpell_dummy[this], s__KaidoShock___KaidoShockSpell_height[this], 0.0)
                 endif
             endif
         endfunction
 
-        function s__KaidoShock__KaidoShockSpell_onCast takes nothing returns boolean
-            if GetSpellAbilityId() != KaidoShock__ABILITY_ID then
+        function s__KaidoShock___KaidoShockSpell_onCast takes nothing returns boolean
+            if GetSpellAbilityId() != KaidoShock___ABILITY_ID then
                 return false
             endif
-            call s__KaidoShock__KaidoShockSpell_create(GetTriggerUnit() , GetSpellTargetX() , GetSpellTargetY() , GetUnitAbilityLevel(GetTriggerUnit(), KaidoShock__ABILITY_ID))
+            call s__KaidoShock___KaidoShockSpell_create(GetTriggerUnit() , GetSpellTargetX() , GetSpellTargetY() , GetUnitAbilityLevel(GetTriggerUnit(), KaidoShock___ABILITY_ID))
             return false
         endfunction
 
     function KaidoShock_CleanupEffect takes nothing returns nothing
         local timer t= GetExpiredTimer()
-        call DestroyEffect(KaidoShock__explosion)
-        call DestroyEffect(KaidoShock__explosion2)
-        call DestroyEffect(KaidoShock__explosion3)
-        set KaidoShock__explosion=null
-        set KaidoShock__explosion2=null
-        set KaidoShock__explosion3=null
+        call DestroyEffect(KaidoShock___explosion)
+        call DestroyEffect(KaidoShock___explosion2)
+        call DestroyEffect(KaidoShock___explosion3)
+        set KaidoShock___explosion=null
+        set KaidoShock___explosion2=null
+        set KaidoShock___explosion3=null
         call DestroyTimer(t)
     endfunction
 
     function KaidoShock_ExplodeRock takes unit rock,unit tCaster returns boolean
-        local unit caster= LoadUnitHandle(KaidoShock__RockHT, GetHandleId(rock), 0)
+        local unit caster= LoadUnitHandle(KaidoShock___RockHT, GetHandleId(rock), 0)
         local real x= GetUnitX(rock)
         local real y= GetUnitY(rock)
         local group g= CreateGroup()
@@ -85074,7 +85366,7 @@ endfunction
             return false
         endif
 
-        call GroupEnumUnitsInRange(g, x, y, KaidoShock__KS_RADIUS, null)
+        call GroupEnumUnitsInRange(g, x, y, KaidoShock___KS_RADIUS, null)
         loop
             set u=FirstOfGroup(g)
             exitwhen u == null
@@ -85085,36 +85377,36 @@ endfunction
         endloop
         call DestroyGroup(g)
 
-        set KaidoShock__explosion=AddSpecialEffect(KaidoShock__SFX_IMPACT, x, y)
+        set KaidoShock___explosion=AddSpecialEffect(KaidoShock___SFX_IMPACT, x, y)
         //call BlzSetSpecialEffectScale(explosion, 2.0)
-        call BlzSetSpecialEffectTime(KaidoShock__explosion, 0.85)
-        call BlzSetSpecialEffectHeight(KaidoShock__explosion, GetPointZ(x , y) + 10)
-        call BlzSetSpecialEffectMatrixScale(KaidoShock__explosion, 2.0, 2.0, 3.0)
-        set KaidoShock__explosion2=AddSpecialEffect(KaidoShock__SFX_IMPACT, x, y)
+        call BlzSetSpecialEffectTime(KaidoShock___explosion, 0.85)
+        call BlzSetSpecialEffectHeight(KaidoShock___explosion, GetPointZ(x , y) + 10)
+        call BlzSetSpecialEffectMatrixScale(KaidoShock___explosion, 2.0, 2.0, 3.0)
+        set KaidoShock___explosion2=AddSpecialEffect(KaidoShock___SFX_IMPACT, x, y)
         //call BlzSetSpecialEffectScale(explosion2, 3.0)
-        call BlzSetSpecialEffectTime(KaidoShock__explosion2, 0.60)
-        call BlzSetSpecialEffectHeight(KaidoShock__explosion2, GetPointZ(x , y) + 10)
-        call BlzSetSpecialEffectMatrixScale(KaidoShock__explosion2, 3.0, 3.0, 4.0)
-        set KaidoShock__explosion3=AddSpecialEffect(KaidoShock__SFX_IMPACT2, x, y)
-        call BlzSetSpecialEffectHeight(KaidoShock__explosion3, GetPointZ(x , y) + 10)
+        call BlzSetSpecialEffectTime(KaidoShock___explosion2, 0.60)
+        call BlzSetSpecialEffectHeight(KaidoShock___explosion2, GetPointZ(x , y) + 10)
+        call BlzSetSpecialEffectMatrixScale(KaidoShock___explosion2, 3.0, 3.0, 4.0)
+        set KaidoShock___explosion3=AddSpecialEffect(KaidoShock___SFX_IMPACT2, x, y)
+        call BlzSetSpecialEffectHeight(KaidoShock___explosion3, GetPointZ(x , y) + 10)
 
         set cleanupT=(NewTimerEx(0)) // INLINED!!
         call TimerStart(cleanupT, 0.5, false, function KaidoShock_CleanupEffect)
 
-        call FlushChildHashtable(KaidoShock__RockHT, GetHandleId(rock))
+        call FlushChildHashtable(KaidoShock___RockHT, GetHandleId(rock))
         call KillUnit(rock)
         call RemoveUnit(rock)
         return true
     endfunction
 
-    function KaidoShock__onInit takes nothing returns nothing
+    function KaidoShock___onInit takes nothing returns nothing
         local trigger t= CreateTrigger()
         call TriggerRegisterAnyUnitEventBJ(t, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-        call TriggerAddCondition(t, Condition(function s__KaidoShock__KaidoShockSpell_onCast))
-        set KaidoShock__RockHT=InitHashtable()
-        set KaidoShock__explosion=null
-        set KaidoShock__explosion2=null
-        set KaidoShock__explosion3=null
+        call TriggerAddCondition(t, Condition(function s__KaidoShock___KaidoShockSpell_onCast))
+        set KaidoShock___RockHT=InitHashtable()
+        set KaidoShock___explosion=null
+        set KaidoShock___explosion2=null
+        set KaidoShock___explosion3=null
     endfunction
 
 // scope KaidoShock ends
@@ -85127,41 +85419,41 @@ endfunction
 // scope KurotsuchiQuicklimeE begins
 
 
-    function KurotsuchiQuicklimeE__CreateTetherSegment takes real x,real y returns effect
-        local effect e= AddSpecialEffect(KurotsuchiQuicklimeE__SFX_TETHER, x, y)
+    function KurotsuchiQuicklimeE___CreateTetherSegment takes real x,real y returns effect
+        local effect e= AddSpecialEffect(KurotsuchiQuicklimeE___SFX_TETHER, x, y)
         return e
     endfunction
 
 //Implemented from module Alloc:
     
-        function s__KurotsuchiQuicklimeE__QuicklimeTether_allocate takes nothing returns integer
+        function s__KurotsuchiQuicklimeE___QuicklimeTether_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__recycle[(0)] == 0 ) then
-                set s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__instanceCount=s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__instanceCount + 1
-                set this=s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__instanceCount
+            if ( s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__recycle[(0)] == 0 ) then
+                set s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__instanceCount=s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__instanceCount + 1
+                set this=s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__instanceCount
             else
-                set this=s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__recycle[(0)]
-                set s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__recycle[(0)]=s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__recycle[s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__recycle[(0)]]
+                set this=s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__recycle[(0)]
+                set s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__recycle[(0)]=s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__recycle[s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__KurotsuchiQuicklimeE__QuicklimeTether_deallocate takes integer this returns nothing
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__recycle[this]=s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__recycle[(0)]
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_Alloc__recycle[(0)]=this
+        function s__KurotsuchiQuicklimeE___QuicklimeTether_deallocate takes integer this returns nothing
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__recycle[this]=s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__recycle[(0)]
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_Alloc__recycle[(0)]=this
         endfunction
 
 
 
-        function s__KurotsuchiQuicklimeE__QuicklimeTether_segIndex takes integer this,integer i returns integer
+        function s__KurotsuchiQuicklimeE___QuicklimeTether_segIndex takes integer this,integer i returns integer
             return this * 32 + i
         endfunction
 
-        function s__KurotsuchiQuicklimeE__QuicklimeTether_snapBack takes integer this returns nothing
+        function s__KurotsuchiQuicklimeE___QuicklimeTether_snapBack takes integer this returns nothing
             local integer i= 0
             local integer idx
             local real x
@@ -85169,65 +85461,65 @@ endfunction
             local real scale
             local real snapDistance
             
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_snapProgress[this]=s__KurotsuchiQuicklimeE__QuicklimeTether_snapProgress[this] + 0.05
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_snapProgress[this]=s__KurotsuchiQuicklimeE___QuicklimeTether_snapProgress[this] + 0.05
             
             loop
-                exitwhen i >= s__KurotsuchiQuicklimeE__QuicklimeTether_segCount[this]
+                exitwhen i >= s__KurotsuchiQuicklimeE___QuicklimeTether_segCount[this]
                 set idx=((this ) * 32 + ( i)) // INLINED!!
                 
-                if s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx] != null then
-                    set snapDistance=( I2R(i) / I2R(s__KurotsuchiQuicklimeE__QuicklimeTether_segCount[this]) ) * ( 1.0 - s__KurotsuchiQuicklimeE__QuicklimeTether_snapProgress[this] )
-                    set x=s__KurotsuchiQuicklimeE__QuicklimeTether_anchorX[this] + ( s__KurotsuchiQuicklimeE__QuicklimeTether_anchorX[this] - s__KurotsuchiQuicklimeE__QuicklimeTether_anchorX[this] ) * snapDistance
-                    set y=s__KurotsuchiQuicklimeE__QuicklimeTether_anchorY[this] + ( s__KurotsuchiQuicklimeE__QuicklimeTether_anchorY[this] - s__KurotsuchiQuicklimeE__QuicklimeTether_anchorY[this] ) * snapDistance
+                if s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx] != null then
+                    set snapDistance=( I2R(i) / I2R(s__KurotsuchiQuicklimeE___QuicklimeTether_segCount[this]) ) * ( 1.0 - s__KurotsuchiQuicklimeE___QuicklimeTether_snapProgress[this] )
+                    set x=s__KurotsuchiQuicklimeE___QuicklimeTether_anchorX[this] + ( s__KurotsuchiQuicklimeE___QuicklimeTether_anchorX[this] - s__KurotsuchiQuicklimeE___QuicklimeTether_anchorX[this] ) * snapDistance
+                    set y=s__KurotsuchiQuicklimeE___QuicklimeTether_anchorY[this] + ( s__KurotsuchiQuicklimeE___QuicklimeTether_anchorY[this] - s__KurotsuchiQuicklimeE___QuicklimeTether_anchorY[this] ) * snapDistance
                     
-                    set x=s__KurotsuchiQuicklimeE__QuicklimeTether_anchorX[this]
-                    set y=s__KurotsuchiQuicklimeE__QuicklimeTether_anchorY[this]
+                    set x=s__KurotsuchiQuicklimeE___QuicklimeTether_anchorX[this]
+                    set y=s__KurotsuchiQuicklimeE___QuicklimeTether_anchorY[this]
                     
-                    set scale=( 1.0 - s__KurotsuchiQuicklimeE__QuicklimeTether_snapProgress[this] ) * 0.5
+                    set scale=( 1.0 - s__KurotsuchiQuicklimeE___QuicklimeTether_snapProgress[this] ) * 0.5
                     
-                    call BlzSetSpecialEffectX(s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx], x)
-                    call BlzSetSpecialEffectY(s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx], y)
-                    call BlzSetSpecialEffectScale(s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx], scale)
+                    call BlzSetSpecialEffectX(s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx], x)
+                    call BlzSetSpecialEffectY(s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx], y)
+                    call BlzSetSpecialEffectScale(s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx], scale)
                     
-                    if s__KurotsuchiQuicklimeE__QuicklimeTether_snapProgress[this] >= 1.0 then
-                        call BlzSetSpecialEffectZ(s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx], - 200.0)
+                    if s__KurotsuchiQuicklimeE___QuicklimeTether_snapProgress[this] >= 1.0 then
+                        call BlzSetSpecialEffectZ(s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx], - 200.0)
                     endif
                 endif
                 
                 set i=i + 1
             endloop
             
-            if s__KurotsuchiQuicklimeE__QuicklimeTether_snapProgress[this] >= 1.0 then
-                call sc__KurotsuchiQuicklimeE__QuicklimeTether_destroy(this)
+            if s__KurotsuchiQuicklimeE___QuicklimeTether_snapProgress[this] >= 1.0 then
+                call sc__KurotsuchiQuicklimeE___QuicklimeTether_destroy(this)
             endif
         endfunction
 
-        function s__KurotsuchiQuicklimeE__QuicklimeTether_startSnapBack takes integer this returns nothing
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_isSnapping[this]=true
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_snapProgress[this]=0.0
+        function s__KurotsuchiQuicklimeE___QuicklimeTether_startSnapBack takes integer this returns nothing
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_isSnapping[this]=true
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_snapProgress[this]=0.0
         endfunction
 
-        function s__KurotsuchiQuicklimeE__QuicklimeTether_destroy takes integer this returns nothing
+        function s__KurotsuchiQuicklimeE___QuicklimeTether_destroy takes integer this returns nothing
             local integer i= 0
             local integer idx
             loop
-                exitwhen i >= s__KurotsuchiQuicklimeE__QuicklimeTether_segCount[this]
+                exitwhen i >= s__KurotsuchiQuicklimeE___QuicklimeTether_segCount[this]
                 set idx=((this ) * 32 + ( i)) // INLINED!!
-                if s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx] != null then
-                    call DestroyEffect(s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx])
-                    set s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx]=null
+                if s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx] != null then
+                    call DestroyEffect(s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx])
+                    set s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx]=null
                 endif
                 set i=i + 1
             endloop
-            call DestroyTimer(s__KurotsuchiQuicklimeE__QuicklimeTether_t[this])
-            call s__KurotsuchiQuicklimeE__QuicklimeTether_deallocate(this)
+            call DestroyTimer(s__KurotsuchiQuicklimeE___QuicklimeTether_t[this])
+            call s__KurotsuchiQuicklimeE___QuicklimeTether_deallocate(this)
         endfunction
 
-        function s__KurotsuchiQuicklimeE__QuicklimeTether_updateVisuals takes integer this returns nothing
-            local real targetX= GetUnitX(s__KurotsuchiQuicklimeE__QuicklimeTether_target[this])
-            local real targetY= GetUnitY(s__KurotsuchiQuicklimeE__QuicklimeTether_target[this])
-            local real dx= targetX - s__KurotsuchiQuicklimeE__QuicklimeTether_anchorX[this]
-            local real dy= targetY - s__KurotsuchiQuicklimeE__QuicklimeTether_anchorY[this]
+        function s__KurotsuchiQuicklimeE___QuicklimeTether_updateVisuals takes integer this returns nothing
+            local real targetX= GetUnitX(s__KurotsuchiQuicklimeE___QuicklimeTether_target[this])
+            local real targetY= GetUnitY(s__KurotsuchiQuicklimeE___QuicklimeTether_target[this])
+            local real dx= targetX - s__KurotsuchiQuicklimeE___QuicklimeTether_anchorX[this]
+            local real dy= targetY - s__KurotsuchiQuicklimeE___QuicklimeTether_anchorY[this]
             local real dist= SquareRoot(dx * dx + dy * dy)
             local real angle
             local real x
@@ -85246,18 +85538,18 @@ endfunction
 
             set angle=Atan2(dy, dx)
             
-            set compression=RMinBJ(dist / KurotsuchiQuicklimeE__MAX_TETHER_DIST, 1.0)
+            set compression=RMinBJ(dist / KurotsuchiQuicklimeE___MAX_TETHER_DIST, 1.0)
             set compression=SquareRoot(compression)
 
             loop
-                exitwhen i >= s__KurotsuchiQuicklimeE__QuicklimeTether_segCount[this]
+                exitwhen i >= s__KurotsuchiQuicklimeE___QuicklimeTether_segCount[this]
 
-                set progress=I2R(i) / I2R(s__KurotsuchiQuicklimeE__QuicklimeTether_segCount[this])
+                set progress=I2R(i) / I2R(s__KurotsuchiQuicklimeE___QuicklimeTether_segCount[this])
                 
                 set compressedProgress=1.0 - Pow(1.0 - progress, 1.0 / compression)
                 
-                set x=s__KurotsuchiQuicklimeE__QuicklimeTether_anchorX[this] + dx * compressedProgress
-                set y=s__KurotsuchiQuicklimeE__QuicklimeTether_anchorY[this] + dy * compressedProgress
+                set x=s__KurotsuchiQuicklimeE___QuicklimeTether_anchorX[this] + dx * compressedProgress
+                set y=s__KurotsuchiQuicklimeE___QuicklimeTether_anchorY[this] + dy * compressedProgress
                 
                 set z=GetPointZ(x , y) + 60.0
                 
@@ -85265,22 +85557,22 @@ endfunction
 
                 set idx=((this ) * 32 + ( i)) // INLINED!!
 
-                call BlzSetSpecialEffectX(s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx], x)
-                call BlzSetSpecialEffectY(s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx], y)
-                call BlzSetSpecialEffectZ(s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx], z)
-                call BlzSetSpecialEffectScale(s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx], scale)
-                call BlzSetSpecialEffectYaw(s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx], angle)
+                call BlzSetSpecialEffectX(s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx], x)
+                call BlzSetSpecialEffectY(s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx], y)
+                call BlzSetSpecialEffectZ(s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx], z)
+                call BlzSetSpecialEffectScale(s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx], scale)
+                call BlzSetSpecialEffectYaw(s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx], angle)
 
                 set i=i + 1
             endloop
         endfunction
 
-        function s__KurotsuchiQuicklimeE__QuicklimeTether_periodic takes nothing returns nothing
+        function s__KurotsuchiQuicklimeE___QuicklimeTether_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real x= GetUnitX(s__KurotsuchiQuicklimeE__QuicklimeTether_target[this])
-            local real y= GetUnitY(s__KurotsuchiQuicklimeE__QuicklimeTether_target[this])
-            local real dx= s__KurotsuchiQuicklimeE__QuicklimeTether_anchorX[this] - x
-            local real dy= s__KurotsuchiQuicklimeE__QuicklimeTether_anchorY[this] - y
+            local real x= GetUnitX(s__KurotsuchiQuicklimeE___QuicklimeTether_target[this])
+            local real y= GetUnitY(s__KurotsuchiQuicklimeE___QuicklimeTether_target[this])
+            local real dx= s__KurotsuchiQuicklimeE___QuicklimeTether_anchorX[this] - x
+            local real dy= s__KurotsuchiQuicklimeE___QuicklimeTether_anchorY[this] - y
             local real dist= SquareRoot(dx * dx + dy * dy)
             local real nx
             local real ny
@@ -85288,8 +85580,8 @@ endfunction
             local real moveSpeed
             local real pullSpeed
 
-            if GetWidgetLife(s__KurotsuchiQuicklimeE__QuicklimeTether_target[this]) <= 0.405 or s__KurotsuchiQuicklimeE__QuicklimeTether_isSnapping[this] then
-                call s__KurotsuchiQuicklimeE__QuicklimeTether_snapBack(this)
+            if GetWidgetLife(s__KurotsuchiQuicklimeE___QuicklimeTether_target[this]) <= 0.405 or s__KurotsuchiQuicklimeE___QuicklimeTether_isSnapping[this] then
+                call s__KurotsuchiQuicklimeE___QuicklimeTether_snapBack(this)
                 return
             endif
 
@@ -85297,96 +85589,96 @@ endfunction
                 set nx=dx / dist
                 set ny=dy / dist
 
-                set moveSpeed=GetUnitMoveSpeed(s__KurotsuchiQuicklimeE__QuicklimeTether_target[this])
-                set distanceScale=RMinBJ(dist / KurotsuchiQuicklimeE__MAX_TETHER_DIST, 1.0)
+                set moveSpeed=GetUnitMoveSpeed(s__KurotsuchiQuicklimeE___QuicklimeTether_target[this])
+                set distanceScale=RMinBJ(dist / KurotsuchiQuicklimeE___MAX_TETHER_DIST, 1.0)
 
                 set pullSpeed=( moveSpeed * 0.5 ) + ( moveSpeed * 0.5 * distanceScale )
-                set pullSpeed=pullSpeed + ( KurotsuchiQuicklimeE__BASE_PULL_SPEED * ( 0.5 + distanceScale * 0.5 ) )
+                set pullSpeed=pullSpeed + ( KurotsuchiQuicklimeE___BASE_PULL_SPEED * ( 0.5 + distanceScale * 0.5 ) )
 
-                call SetUnitX(s__KurotsuchiQuicklimeE__QuicklimeTether_target[this], x + nx * pullSpeed * KurotsuchiQuicklimeE__PULL_INTERVAL)
-                call SetUnitY(s__KurotsuchiQuicklimeE__QuicklimeTether_target[this], y + ny * pullSpeed * KurotsuchiQuicklimeE__PULL_INTERVAL)
+                call SetUnitX(s__KurotsuchiQuicklimeE___QuicklimeTether_target[this], x + nx * pullSpeed * KurotsuchiQuicklimeE___PULL_INTERVAL)
+                call SetUnitY(s__KurotsuchiQuicklimeE___QuicklimeTether_target[this], y + ny * pullSpeed * KurotsuchiQuicklimeE___PULL_INTERVAL)
             endif
 
-            call s__KurotsuchiQuicklimeE__QuicklimeTether_updateVisuals(this)
+            call s__KurotsuchiQuicklimeE___QuicklimeTether_updateVisuals(this)
 
-            if dist > KurotsuchiQuicklimeE__MAX_TETHER_DIST - 100 then
-                set s__KurotsuchiQuicklimeE__QuicklimeTether_heldOutsideTime[this]=s__KurotsuchiQuicklimeE__QuicklimeTether_heldOutsideTime[this] + KurotsuchiQuicklimeE__PULL_INTERVAL
+            if dist > KurotsuchiQuicklimeE___MAX_TETHER_DIST - 100 then
+                set s__KurotsuchiQuicklimeE___QuicklimeTether_heldOutsideTime[this]=s__KurotsuchiQuicklimeE___QuicklimeTether_heldOutsideTime[this] + KurotsuchiQuicklimeE___PULL_INTERVAL
             else
-                set s__KurotsuchiQuicklimeE__QuicklimeTether_heldOutsideTime[this]=0
+                set s__KurotsuchiQuicklimeE___QuicklimeTether_heldOutsideTime[this]=0
             endif
 
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_time[this]=s__KurotsuchiQuicklimeE__QuicklimeTether_time[this] + KurotsuchiQuicklimeE__PULL_INTERVAL
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_time[this]=s__KurotsuchiQuicklimeE___QuicklimeTether_time[this] + KurotsuchiQuicklimeE___PULL_INTERVAL
 
-            if not s__KurotsuchiQuicklimeE__QuicklimeTether_isSnapping[this] and ( s__KurotsuchiQuicklimeE__QuicklimeTether_time[this] >= KurotsuchiQuicklimeE__TETHER_DURATION or s__KurotsuchiQuicklimeE__QuicklimeTether_heldOutsideTime[this] >= KurotsuchiQuicklimeE__BREAK_HOLD_TIME ) then
-                call s__KurotsuchiQuicklimeE__QuicklimeTether_startSnapBack(this)
+            if not s__KurotsuchiQuicklimeE___QuicklimeTether_isSnapping[this] and ( s__KurotsuchiQuicklimeE___QuicklimeTether_time[this] >= KurotsuchiQuicklimeE___TETHER_DURATION or s__KurotsuchiQuicklimeE___QuicklimeTether_heldOutsideTime[this] >= KurotsuchiQuicklimeE___BREAK_HOLD_TIME ) then
+                call s__KurotsuchiQuicklimeE___QuicklimeTether_startSnapBack(this)
             endif
         endfunction
 
-        function s__KurotsuchiQuicklimeE__QuicklimeTether_create takes unit caster,unit target,real x,real y returns integer
-            local integer this= s__KurotsuchiQuicklimeE__QuicklimeTether_allocate()
+        function s__KurotsuchiQuicklimeE___QuicklimeTether_create takes unit caster,unit target,real x,real y returns integer
+            local integer this= s__KurotsuchiQuicklimeE___QuicklimeTether_allocate()
             local integer i= 0
             local integer idx
 
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_caster[this]=caster
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_target[this]=target
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_anchorX[this]=x
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_anchorY[this]=y
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_anchorZ[this]=GetPointZ(x , y)
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_time[this]=0.0
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_heldOutsideTime[this]=0.0
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_segCount[this]=20
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_t[this]=NewTimerEx(this)
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_isSnapping[this]=false
-            set s__KurotsuchiQuicklimeE__QuicklimeTether_snapProgress[this]=0.0
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_caster[this]=caster
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_target[this]=target
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_anchorX[this]=x
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_anchorY[this]=y
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_anchorZ[this]=GetPointZ(x , y)
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_time[this]=0.0
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_heldOutsideTime[this]=0.0
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_segCount[this]=20
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_t[this]=NewTimerEx(this)
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_isSnapping[this]=false
+            set s__KurotsuchiQuicklimeE___QuicklimeTether_snapProgress[this]=0.0
 
             loop
-                exitwhen i >= s__KurotsuchiQuicklimeE__QuicklimeTether_segCount[this]
+                exitwhen i >= s__KurotsuchiQuicklimeE___QuicklimeTether_segCount[this]
                 set idx=((this ) * 32 + ( i)) // INLINED!!
-                set s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx]=KurotsuchiQuicklimeE__CreateTetherSegment(x , y)
+                set s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx]=KurotsuchiQuicklimeE___CreateTetherSegment(x , y)
                 set i=i + 1
             endloop
 
-            call TimerStart(s__KurotsuchiQuicklimeE__QuicklimeTether_t[this], KurotsuchiQuicklimeE__PULL_INTERVAL, true, function s__KurotsuchiQuicklimeE__QuicklimeTether_periodic)
+            call TimerStart(s__KurotsuchiQuicklimeE___QuicklimeTether_t[this], KurotsuchiQuicklimeE___PULL_INTERVAL, true, function s__KurotsuchiQuicklimeE___QuicklimeTether_periodic)
             return this
         endfunction
 
 //Implemented from module Alloc:
     
-        function s__KurotsuchiQuicklimeE__QuicklimeProjectile_allocate takes nothing returns integer
+        function s__KurotsuchiQuicklimeE___QuicklimeProjectile_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__recycle[(0)] == 0 ) then
-                set s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__instanceCount=s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__instanceCount + 1
-                set this=s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__instanceCount
+            if ( s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__recycle[(0)] == 0 ) then
+                set s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__instanceCount=s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__instanceCount + 1
+                set this=s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__instanceCount
             else
-                set this=s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__recycle[(0)]
-                set s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__recycle[(0)]=s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__recycle[s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__recycle[(0)]]
+                set this=s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__recycle[(0)]
+                set s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__recycle[(0)]=s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__recycle[s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__KurotsuchiQuicklimeE__QuicklimeProjectile_deallocate takes integer this returns nothing
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__recycle[this]=s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__recycle[(0)]
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_Alloc__recycle[(0)]=this
+        function s__KurotsuchiQuicklimeE___QuicklimeProjectile_deallocate takes integer this returns nothing
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__recycle[this]=s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__recycle[(0)]
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_Alloc__recycle[(0)]=this
         endfunction
 
 
-        function s__KurotsuchiQuicklimeE__QuicklimeProjectile_destroy takes integer this returns nothing
-            if s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx[this] != null then
-                call BlzSetSpecialEffectX(s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx[this], 9861.00)
-                call BlzSetSpecialEffectY(s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx[this], 6777.00)
-                call DestroyEffect(s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx[this])
+        function s__KurotsuchiQuicklimeE___QuicklimeProjectile_destroy takes integer this returns nothing
+            if s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx[this] != null then
+                call BlzSetSpecialEffectX(s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx[this], 9861.00)
+                call BlzSetSpecialEffectY(s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx[this], 6777.00)
+                call DestroyEffect(s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx[this])
             endif
-            call KillUnit(s__KurotsuchiQuicklimeE__QuicklimeProjectile_dummy[this])
-            call RemoveUnit(s__KurotsuchiQuicklimeE__QuicklimeProjectile_dummy[this])
-            call DestroyTimer(s__KurotsuchiQuicklimeE__QuicklimeProjectile_t[this])
-            call s__KurotsuchiQuicklimeE__QuicklimeProjectile_deallocate(this)
+            call KillUnit(s__KurotsuchiQuicklimeE___QuicklimeProjectile_dummy[this])
+            call RemoveUnit(s__KurotsuchiQuicklimeE___QuicklimeProjectile_dummy[this])
+            call DestroyTimer(s__KurotsuchiQuicklimeE___QuicklimeProjectile_t[this])
+            call s__KurotsuchiQuicklimeE___QuicklimeProjectile_deallocate(this)
         endfunction
         
-        function s__KurotsuchiQuicklimeE__QuicklimeProjectile_periodic takes nothing returns nothing
+        function s__KurotsuchiQuicklimeE___QuicklimeProjectile_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real step
             local real a
@@ -85398,31 +85690,31 @@ endfunction
             local unit u
             local unit u2
 
-            if s__KurotsuchiQuicklimeE__QuicklimeProjectile_landed[this] then
-                set s__KurotsuchiQuicklimeE__QuicklimeProjectile_landTime[this]=s__KurotsuchiQuicklimeE__QuicklimeProjectile_landTime[this] + 0.03
-                if s__KurotsuchiQuicklimeE__QuicklimeProjectile_landTime[this] >= KurotsuchiQuicklimeE__LANDMINE_DURATION then
-                    call s__KurotsuchiQuicklimeE__QuicklimeProjectile_destroy(this)
+            if s__KurotsuchiQuicklimeE___QuicklimeProjectile_landed[this] then
+                set s__KurotsuchiQuicklimeE___QuicklimeProjectile_landTime[this]=s__KurotsuchiQuicklimeE___QuicklimeProjectile_landTime[this] + 0.03
+                if s__KurotsuchiQuicklimeE___QuicklimeProjectile_landTime[this] >= KurotsuchiQuicklimeE___LANDMINE_DURATION then
+                    call s__KurotsuchiQuicklimeE___QuicklimeProjectile_destroy(this)
                     return
                 endif
 
                 set g=CreateGroup()
-                call GroupEnumUnitsInRange(g, s__KurotsuchiQuicklimeE__QuicklimeProjectile_landX[this], s__KurotsuchiQuicklimeE__QuicklimeProjectile_landY[this], 100.0, null)
+                call GroupEnumUnitsInRange(g, s__KurotsuchiQuicklimeE___QuicklimeProjectile_landX[this], s__KurotsuchiQuicklimeE___QuicklimeProjectile_landY[this], 100.0, null)
                 loop
                     set u=FirstOfGroup(g)
                     exitwhen u == null
                     call GroupRemoveUnit(g, u)
 
-                    if IsUnitEnemy(u, GetOwningPlayer(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this])) and GetWidgetLife(u) > 0.405 and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
-                        call s__KurotsuchiQuicklimeE__QuicklimeTether_create(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this] , u , s__KurotsuchiQuicklimeE__QuicklimeProjectile_landX[this] , s__KurotsuchiQuicklimeE__QuicklimeProjectile_landY[this])
-                        call UnitDamageTarget(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this], u, ( GetHeroStr(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this], true) / 2 ) * GetUnitAbilityLevel(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this], KurotsuchiQuicklimeE__SPELL_ID), false, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
+                    if IsUnitEnemy(u, GetOwningPlayer(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this])) and GetWidgetLife(u) > 0.405 and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
+                        call s__KurotsuchiQuicklimeE___QuicklimeTether_create(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this] , u , s__KurotsuchiQuicklimeE___QuicklimeProjectile_landX[this] , s__KurotsuchiQuicklimeE___QuicklimeProjectile_landY[this])
+                        call UnitDamageTarget(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this], u, ( GetHeroStr(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this], true) / 2 ) * GetUnitAbilityLevel(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this], KurotsuchiQuicklimeE___SPELL_ID), false, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
 
-                        set u2=CreateUnit(GetOwningPlayer(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this]), 'e007', GetUnitX(u), GetUnitY(u), 270.0)
+                        set u2=CreateUnit(GetOwningPlayer(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this]), 'e007', GetUnitX(u), GetUnitY(u), 270.0)
                         call UnitAddAbility(u2, 'A0X4')
                         call IssueTargetOrder(u2, "faeriefire", u)
                         call UnitApplyTimedLife(u2, 'BTLF', 1.0)
 
                         call DestroyGroup(g)
-                        call s__KurotsuchiQuicklimeE__QuicklimeProjectile_destroy(this)
+                        call s__KurotsuchiQuicklimeE___QuicklimeProjectile_destroy(this)
                         return
                     endif
                 endloop
@@ -85430,26 +85722,26 @@ endfunction
                 return
             endif
 
-            set step=KurotsuchiQuicklimeE__PROJECTILE_SPEED * 0.03
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_traveled[this]=s__KurotsuchiQuicklimeE__QuicklimeProjectile_traveled[this] + step
+            set step=KurotsuchiQuicklimeE___PROJECTILE_SPEED * 0.03
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_traveled[this]=s__KurotsuchiQuicklimeE___QuicklimeProjectile_traveled[this] + step
 
-            if s__KurotsuchiQuicklimeE__QuicklimeProjectile_traveled[this] > s__KurotsuchiQuicklimeE__QuicklimeProjectile_totalDist[this] then
-                set s__KurotsuchiQuicklimeE__QuicklimeProjectile_traveled[this]=s__KurotsuchiQuicklimeE__QuicklimeProjectile_totalDist[this]
+            if s__KurotsuchiQuicklimeE___QuicklimeProjectile_traveled[this] > s__KurotsuchiQuicklimeE___QuicklimeProjectile_totalDist[this] then
+                set s__KurotsuchiQuicklimeE___QuicklimeProjectile_traveled[this]=s__KurotsuchiQuicklimeE___QuicklimeProjectile_totalDist[this]
             endif
 
-            set x=s__KurotsuchiQuicklimeE__QuicklimeProjectile_startX[this] + s__KurotsuchiQuicklimeE__QuicklimeProjectile_dirX[this] * s__KurotsuchiQuicklimeE__QuicklimeProjectile_traveled[this]
-            set y=s__KurotsuchiQuicklimeE__QuicklimeProjectile_startY[this] + s__KurotsuchiQuicklimeE__QuicklimeProjectile_dirY[this] * s__KurotsuchiQuicklimeE__QuicklimeProjectile_traveled[this]
+            set x=s__KurotsuchiQuicklimeE___QuicklimeProjectile_startX[this] + s__KurotsuchiQuicklimeE___QuicklimeProjectile_dirX[this] * s__KurotsuchiQuicklimeE___QuicklimeProjectile_traveled[this]
+            set y=s__KurotsuchiQuicklimeE___QuicklimeProjectile_startY[this] + s__KurotsuchiQuicklimeE___QuicklimeProjectile_dirY[this] * s__KurotsuchiQuicklimeE___QuicklimeProjectile_traveled[this]
 
-            set a=s__KurotsuchiQuicklimeE__QuicklimeProjectile_traveled[this] / s__KurotsuchiQuicklimeE__QuicklimeProjectile_totalDist[this]
-            set z=s__KurotsuchiQuicklimeE__QuicklimeProjectile_startZ[this] + ( s__KurotsuchiQuicklimeE__QuicklimeProjectile_endZ[this] - s__KurotsuchiQuicklimeE__QuicklimeProjectile_startZ[this] ) * a + 80.0 * ( 1.0 - a ) * ( 1.0 - a )
-            set sc=0.01 + ( s__KurotsuchiQuicklimeE__QuicklimeProjectile_maxScale[this] - 0.01 ) * RMinBJ(a * 3.0, 1.0)
+            set a=s__KurotsuchiQuicklimeE___QuicklimeProjectile_traveled[this] / s__KurotsuchiQuicklimeE___QuicklimeProjectile_totalDist[this]
+            set z=s__KurotsuchiQuicklimeE___QuicklimeProjectile_startZ[this] + ( s__KurotsuchiQuicklimeE___QuicklimeProjectile_endZ[this] - s__KurotsuchiQuicklimeE___QuicklimeProjectile_startZ[this] ) * a + 80.0 * ( 1.0 - a ) * ( 1.0 - a )
+            set sc=0.01 + ( s__KurotsuchiQuicklimeE___QuicklimeProjectile_maxScale[this] - 0.01 ) * RMinBJ(a * 3.0, 1.0)
 
-            call SetUnitX(s__KurotsuchiQuicklimeE__QuicklimeProjectile_dummy[this], x)
-            call SetUnitY(s__KurotsuchiQuicklimeE__QuicklimeProjectile_dummy[this], y)
-            call BlzSetSpecialEffectX(s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx[this], x)
-            call BlzSetSpecialEffectY(s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx[this], y)
-            call BlzSetSpecialEffectZ(s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx[this], z)
-            call BlzSetSpecialEffectScale(s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx[this], sc)
+            call SetUnitX(s__KurotsuchiQuicklimeE___QuicklimeProjectile_dummy[this], x)
+            call SetUnitY(s__KurotsuchiQuicklimeE___QuicklimeProjectile_dummy[this], y)
+            call BlzSetSpecialEffectX(s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx[this], x)
+            call BlzSetSpecialEffectY(s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx[this], y)
+            call BlzSetSpecialEffectZ(s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx[this], z)
+            call BlzSetSpecialEffectScale(s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx[this], sc)
 
             set g=CreateGroup()
             call GroupEnumUnitsInRange(g, x, y, 100.0, null)
@@ -85458,37 +85750,37 @@ endfunction
                 exitwhen u == null
                 call GroupRemoveUnit(g, u)
 
-                if IsUnitEnemy(u, GetOwningPlayer(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this])) and GetWidgetLife(u) > 0.405 and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
-                    call s__KurotsuchiQuicklimeE__QuicklimeTether_create(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this] , u , x , y)
-                    call UnitDamageTarget(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this], u, ( GetHeroStr(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this], true) / 2 ) * GetUnitAbilityLevel(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this], KurotsuchiQuicklimeE__SPELL_ID), false, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
+                if IsUnitEnemy(u, GetOwningPlayer(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this])) and GetWidgetLife(u) > 0.405 and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
+                    call s__KurotsuchiQuicklimeE___QuicklimeTether_create(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this] , u , x , y)
+                    call UnitDamageTarget(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this], u, ( GetHeroStr(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this], true) / 2 ) * GetUnitAbilityLevel(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this], KurotsuchiQuicklimeE___SPELL_ID), false, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
 
-                    set u2=CreateUnit(GetOwningPlayer(s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this]), 'e007', GetUnitX(u), GetUnitY(u), 270.0)
+                    set u2=CreateUnit(GetOwningPlayer(s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this]), 'e007', GetUnitX(u), GetUnitY(u), 270.0)
                     call UnitAddAbility(u2, 'A0X4')
                     call IssueTargetOrder(u2, "faeriefire", u)
                     call UnitApplyTimedLife(u2, 'BTLF', 1.0)
 
                     call DestroyGroup(g)
-                    call s__KurotsuchiQuicklimeE__QuicklimeProjectile_destroy(this)
+                    call s__KurotsuchiQuicklimeE___QuicklimeProjectile_destroy(this)
                     return
                 endif
             endloop
             call DestroyGroup(g)
 
-            if s__KurotsuchiQuicklimeE__QuicklimeProjectile_traveled[this] >= s__KurotsuchiQuicklimeE__QuicklimeProjectile_totalDist[this] then
-                set s__KurotsuchiQuicklimeE__QuicklimeProjectile_landed[this]=true
-                set s__KurotsuchiQuicklimeE__QuicklimeProjectile_landX[this]=x
-                set s__KurotsuchiQuicklimeE__QuicklimeProjectile_landY[this]=y
-                set s__KurotsuchiQuicklimeE__QuicklimeProjectile_landZ[this]=GetPointZ(x , y)
-                set s__KurotsuchiQuicklimeE__QuicklimeProjectile_landTime[this]=0.0
+            if s__KurotsuchiQuicklimeE___QuicklimeProjectile_traveled[this] >= s__KurotsuchiQuicklimeE___QuicklimeProjectile_totalDist[this] then
+                set s__KurotsuchiQuicklimeE___QuicklimeProjectile_landed[this]=true
+                set s__KurotsuchiQuicklimeE___QuicklimeProjectile_landX[this]=x
+                set s__KurotsuchiQuicklimeE___QuicklimeProjectile_landY[this]=y
+                set s__KurotsuchiQuicklimeE___QuicklimeProjectile_landZ[this]=GetPointZ(x , y)
+                set s__KurotsuchiQuicklimeE___QuicklimeProjectile_landTime[this]=0.0
 
-                call SetUnitX(s__KurotsuchiQuicklimeE__QuicklimeProjectile_dummy[this], x)
-                call SetUnitY(s__KurotsuchiQuicklimeE__QuicklimeProjectile_dummy[this], y)
-                call BlzSetSpecialEffectZ(s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx[this], s__KurotsuchiQuicklimeE__QuicklimeProjectile_landZ[this])
+                call SetUnitX(s__KurotsuchiQuicklimeE___QuicklimeProjectile_dummy[this], x)
+                call SetUnitY(s__KurotsuchiQuicklimeE___QuicklimeProjectile_dummy[this], y)
+                call BlzSetSpecialEffectZ(s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx[this], s__KurotsuchiQuicklimeE___QuicklimeProjectile_landZ[this])
             endif
         endfunction
 
-        function s__KurotsuchiQuicklimeE__QuicklimeProjectile_launch takes unit caster,real tx,real ty returns nothing
-            local integer this= s__KurotsuchiQuicklimeE__QuicklimeProjectile_allocate()
+        function s__KurotsuchiQuicklimeE___QuicklimeProjectile_launch takes unit caster,real tx,real ty returns nothing
+            local integer this= s__KurotsuchiQuicklimeE___QuicklimeProjectile_allocate()
 
             local real sx
             local real sy
@@ -85512,45 +85804,45 @@ endfunction
 
             set angle=Atan2(dy, dx)
 
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_caster[this]=caster
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_startX[this]=sx
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_startY[this]=sy
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_startZ[this]=sz
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_endX[this]=tx
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_endY[this]=ty
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_endZ[this]=GetPointZ(tx , ty)
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_dirX[this]=dx / dist
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_dirY[this]=dy / dist
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_totalDist[this]=dist
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_traveled[this]=0.0
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_angle[this]=angle
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_landed[this]=false
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_landTime[this]=0.0
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_maxScale[this]=1.3
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_caster[this]=caster
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_startX[this]=sx
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_startY[this]=sy
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_startZ[this]=sz
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_endX[this]=tx
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_endY[this]=ty
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_endZ[this]=GetPointZ(tx , ty)
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_dirX[this]=dx / dist
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_dirY[this]=dy / dist
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_totalDist[this]=dist
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_traveled[this]=0.0
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_angle[this]=angle
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_landed[this]=false
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_landTime[this]=0.0
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_maxScale[this]=1.3
 
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_dummy[this]=CreateUnit(GetOwningPlayer(caster), KurotsuchiQuicklimeE__DUMMY_PROJECTILE, sx, sy, angle * bj_RADTODEG)
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx[this]=AddSpecialEffect(KurotsuchiQuicklimeE__SFX_PROJECTILE, sx, sy)
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_dummy[this]=CreateUnit(GetOwningPlayer(caster), KurotsuchiQuicklimeE___DUMMY_PROJECTILE, sx, sy, angle * bj_RADTODEG)
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx[this]=AddSpecialEffect(KurotsuchiQuicklimeE___SFX_PROJECTILE, sx, sy)
 
-            call BlzSetSpecialEffectYaw(s__KurotsuchiQuicklimeE__QuicklimeProjectile_sfx[this], angle)
-            call BlzSetUnitFacingEx(s__KurotsuchiQuicklimeE__QuicklimeProjectile_dummy[this], Rad2Deg(angle))
+            call BlzSetSpecialEffectYaw(s__KurotsuchiQuicklimeE___QuicklimeProjectile_sfx[this], angle)
+            call BlzSetUnitFacingEx(s__KurotsuchiQuicklimeE___QuicklimeProjectile_dummy[this], Rad2Deg(angle))
 
-            set s__KurotsuchiQuicklimeE__QuicklimeProjectile_t[this]=NewTimerEx(this)
-            call TimerStart(s__KurotsuchiQuicklimeE__QuicklimeProjectile_t[this], 0.03, true, function s__KurotsuchiQuicklimeE__QuicklimeProjectile_periodic)
+            set s__KurotsuchiQuicklimeE___QuicklimeProjectile_t[this]=NewTimerEx(this)
+            call TimerStart(s__KurotsuchiQuicklimeE___QuicklimeProjectile_t[this], 0.03, true, function s__KurotsuchiQuicklimeE___QuicklimeProjectile_periodic)
         endfunction
 
-    function KurotsuchiQuicklimeE__action takes nothing returns nothing
-        call s__KurotsuchiQuicklimeE__QuicklimeProjectile_launch(GetTriggerUnit() , GetSpellTargetX() , GetSpellTargetY())
+    function KurotsuchiQuicklimeE___action takes nothing returns nothing
+        call s__KurotsuchiQuicklimeE___QuicklimeProjectile_launch(GetTriggerUnit() , GetSpellTargetX() , GetSpellTargetY())
     endfunction
 
-    function KurotsuchiQuicklimeE__condition takes nothing returns boolean
-        return GetSpellAbilityId() == KurotsuchiQuicklimeE__SPELL_ID
+    function KurotsuchiQuicklimeE___condition takes nothing returns boolean
+        return GetSpellAbilityId() == KurotsuchiQuicklimeE___SPELL_ID
     endfunction
 
-    function KurotsuchiQuicklimeE__onInit takes nothing returns nothing
+    function KurotsuchiQuicklimeE___onInit takes nothing returns nothing
         local trigger t= CreateTrigger()
         call TriggerRegisterAnyUnitEventBJ(t, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-        call TriggerAddCondition(t, Condition(function KurotsuchiQuicklimeE__condition))
-        call TriggerAddAction(t, function KurotsuchiQuicklimeE__action)
+        call TriggerAddCondition(t, Condition(function KurotsuchiQuicklimeE___condition))
+        call TriggerAddAction(t, function KurotsuchiQuicklimeE___action)
     endfunction
 
 // scope KurotsuchiQuicklimeE ends
@@ -85566,51 +85858,51 @@ endfunction
 
 //Implemented from module Alloc:
     
-        function s__KurotsuchiR__YokaiSpray_allocate takes nothing returns integer
+        function s__KurotsuchiR___YokaiSpray_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__KurotsuchiR__YokaiSpray_Alloc__recycle[(0)] == 0 ) then
-                set s__KurotsuchiR__YokaiSpray_Alloc__instanceCount=s__KurotsuchiR__YokaiSpray_Alloc__instanceCount + 1
-                set this=s__KurotsuchiR__YokaiSpray_Alloc__instanceCount
+            if ( s__KurotsuchiR___YokaiSpray_Alloc__recycle[(0)] == 0 ) then
+                set s__KurotsuchiR___YokaiSpray_Alloc__instanceCount=s__KurotsuchiR___YokaiSpray_Alloc__instanceCount + 1
+                set this=s__KurotsuchiR___YokaiSpray_Alloc__instanceCount
             else
-                set this=s__KurotsuchiR__YokaiSpray_Alloc__recycle[(0)]
-                set s__KurotsuchiR__YokaiSpray_Alloc__recycle[(0)]=s__KurotsuchiR__YokaiSpray_Alloc__recycle[s__KurotsuchiR__YokaiSpray_Alloc__recycle[(0)]]
+                set this=s__KurotsuchiR___YokaiSpray_Alloc__recycle[(0)]
+                set s__KurotsuchiR___YokaiSpray_Alloc__recycle[(0)]=s__KurotsuchiR___YokaiSpray_Alloc__recycle[s__KurotsuchiR___YokaiSpray_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__KurotsuchiR__YokaiSpray_deallocate takes integer this returns nothing
-            set s__KurotsuchiR__YokaiSpray_Alloc__recycle[this]=s__KurotsuchiR__YokaiSpray_Alloc__recycle[(0)]
-            set s__KurotsuchiR__YokaiSpray_Alloc__recycle[(0)]=this
+        function s__KurotsuchiR___YokaiSpray_deallocate takes integer this returns nothing
+            set s__KurotsuchiR___YokaiSpray_Alloc__recycle[this]=s__KurotsuchiR___YokaiSpray_Alloc__recycle[(0)]
+            set s__KurotsuchiR___YokaiSpray_Alloc__recycle[(0)]=this
         endfunction
 
 
 
-        function s__KurotsuchiR__YokaiSpray_getMouthX takes integer this returns real
-            return GetUnitX(s__KurotsuchiR__YokaiSpray_caster[this]) + KurotsuchiR__R_MOUTH_FORWARD * Cos(s__KurotsuchiR__YokaiSpray_baseAngle[this])
+        function s__KurotsuchiR___YokaiSpray_getMouthX takes integer this returns real
+            return GetUnitX(s__KurotsuchiR___YokaiSpray_caster[this]) + KurotsuchiR___R_MOUTH_FORWARD * Cos(s__KurotsuchiR___YokaiSpray_baseAngle[this])
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_getMouthY takes integer this returns real
-            return GetUnitY(s__KurotsuchiR__YokaiSpray_caster[this]) + KurotsuchiR__R_MOUTH_FORWARD * Sin(s__KurotsuchiR__YokaiSpray_baseAngle[this])
+        function s__KurotsuchiR___YokaiSpray_getMouthY takes integer this returns real
+            return GetUnitY(s__KurotsuchiR___YokaiSpray_caster[this]) + KurotsuchiR___R_MOUTH_FORWARD * Sin(s__KurotsuchiR___YokaiSpray_baseAngle[this])
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_getMouthZ takes integer this returns real
-            return GetUnitFlyHeight(s__KurotsuchiR__YokaiSpray_caster[this]) + GetPointZ(GetUnitX(s__KurotsuchiR__YokaiSpray_caster[this]) , GetUnitY(s__KurotsuchiR__YokaiSpray_caster[this])) + KurotsuchiR__R_MOUTH_HEIGHT
+        function s__KurotsuchiR___YokaiSpray_getMouthZ takes integer this returns real
+            return GetUnitFlyHeight(s__KurotsuchiR___YokaiSpray_caster[this]) + GetPointZ(GetUnitX(s__KurotsuchiR___YokaiSpray_caster[this]) , GetUnitY(s__KurotsuchiR___YokaiSpray_caster[this])) + KurotsuchiR___R_MOUTH_HEIGHT
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_placeBlob takes integer this,real ex,real ey,real ez,real scale returns nothing
-            local integer i= s__KurotsuchiR__YokaiSpray_totalEmitted[this]
-            local real mx= s__KurotsuchiR__YokaiSpray_getMouthX(this)
-            local real my= s__KurotsuchiR__YokaiSpray_getMouthY(this)
-            local real mz= s__KurotsuchiR__YokaiSpray_getMouthZ(this)
-            local effect fx= AddSpecialEffect(KurotsuchiR__R_BLOB_SFX, mx, my)
-            local real dist= SquareRoot(( ex - s__KurotsuchiR__YokaiSpray_baseX[this] ) * ( ex - s__KurotsuchiR__YokaiSpray_baseX[this] ) + ( ey - s__KurotsuchiR__YokaiSpray_baseY[this] ) * ( ey - s__KurotsuchiR__YokaiSpray_baseY[this] ))
+        function s__KurotsuchiR___YokaiSpray_placeBlob takes integer this,real ex,real ey,real ez,real scale returns nothing
+            local integer i= s__KurotsuchiR___YokaiSpray_totalEmitted[this]
+            local real mx= s__KurotsuchiR___YokaiSpray_getMouthX(this)
+            local real my= s__KurotsuchiR___YokaiSpray_getMouthY(this)
+            local real mz= s__KurotsuchiR___YokaiSpray_getMouthZ(this)
+            local effect fx= AddSpecialEffect(KurotsuchiR___R_BLOB_SFX, mx, my)
+            local real dist= SquareRoot(( ex - s__KurotsuchiR___YokaiSpray_baseX[this] ) * ( ex - s__KurotsuchiR___YokaiSpray_baseX[this] ) + ( ey - s__KurotsuchiR___YokaiSpray_baseY[this] ) * ( ey - s__KurotsuchiR___YokaiSpray_baseY[this] ))
 
-            if dist > s__KurotsuchiR__YokaiSpray_maxReachedDistance[this] then
-                set s__KurotsuchiR__YokaiSpray_maxReachedDistance[this]=dist
+            if dist > s__KurotsuchiR___YokaiSpray_maxReachedDistance[this] then
+                set s__KurotsuchiR___YokaiSpray_maxReachedDistance[this]=dist
             endif
 
             call BlzSetSpecialEffectZ(fx, mz)
@@ -85631,10 +85923,10 @@ endfunction
             call SaveReal(KurotsuchiHash, this, i * 20 + 12, my)
             call SaveReal(KurotsuchiHash, this, i * 20 + 13, mz)
 
-            set s__KurotsuchiR__YokaiSpray_totalEmitted[this]=s__KurotsuchiR__YokaiSpray_totalEmitted[this] + 1
+            set s__KurotsuchiR___YokaiSpray_totalEmitted[this]=s__KurotsuchiR___YokaiSpray_totalEmitted[this] + 1
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_emitBlob takes integer this returns nothing
+        function s__KurotsuchiR___YokaiSpray_emitBlob takes integer this returns nothing
             local real alpha
             local real spacing
             local real lateral
@@ -85645,66 +85937,66 @@ endfunction
             local real forwardStep
             local integer idx
 
-            if s__KurotsuchiR__YokaiSpray_totalEmitted[this] >= KurotsuchiR__R_TOTAL_BLOBS then
+            if s__KurotsuchiR___YokaiSpray_totalEmitted[this] >= KurotsuchiR___R_TOTAL_BLOBS then
                 return
             endif
-            if s__KurotsuchiR__YokaiSpray_row[this] >= KurotsuchiR__R_TOTAL_ROWS + KurotsuchiR__R_EXTRA_ROWS then
+            if s__KurotsuchiR___YokaiSpray_row[this] >= KurotsuchiR___R_TOTAL_ROWS + KurotsuchiR___R_EXTRA_ROWS then
                 return
             endif
 
-            if s__KurotsuchiR__YokaiSpray_blobsInRow[this] == 0 then
-                if s__KurotsuchiR__YokaiSpray_row[this] < KurotsuchiR__R_TOTAL_ROWS then
-                    set s__KurotsuchiR__YokaiSpray_rowSize[this]=1 + s__KurotsuchiR__YokaiSpray_row[this]
+            if s__KurotsuchiR___YokaiSpray_blobsInRow[this] == 0 then
+                if s__KurotsuchiR___YokaiSpray_row[this] < KurotsuchiR___R_TOTAL_ROWS then
+                    set s__KurotsuchiR___YokaiSpray_rowSize[this]=1 + s__KurotsuchiR___YokaiSpray_row[this]
                 else
-                    set s__KurotsuchiR__YokaiSpray_rowSize[this]=KurotsuchiR__R_TOTAL_ROWS - 3 * ( s__KurotsuchiR__YokaiSpray_row[this] - KurotsuchiR__R_TOTAL_ROWS + 1 )
-                    if s__KurotsuchiR__YokaiSpray_rowSize[this] <= 0 then
+                    set s__KurotsuchiR___YokaiSpray_rowSize[this]=KurotsuchiR___R_TOTAL_ROWS - 3 * ( s__KurotsuchiR___YokaiSpray_row[this] - KurotsuchiR___R_TOTAL_ROWS + 1 )
+                    if s__KurotsuchiR___YokaiSpray_rowSize[this] <= 0 then
                         return
                     endif
                 endif
 
-                set s__KurotsuchiR__YokaiSpray_rowIndex[this]=0
-                set s__KurotsuchiR__YokaiSpray_blobsInRow[this]=s__KurotsuchiR__YokaiSpray_rowSize[this]
+                set s__KurotsuchiR___YokaiSpray_rowIndex[this]=0
+                set s__KurotsuchiR___YokaiSpray_blobsInRow[this]=s__KurotsuchiR___YokaiSpray_rowSize[this]
 
-                if s__KurotsuchiR__YokaiSpray_row[this] < KurotsuchiR__R_TOTAL_ROWS then
-                    set alpha=( s__KurotsuchiR__YokaiSpray_row[this] + 0.5 ) / KurotsuchiR__R_TOTAL_ROWS
+                if s__KurotsuchiR___YokaiSpray_row[this] < KurotsuchiR___R_TOTAL_ROWS then
+                    set alpha=( s__KurotsuchiR___YokaiSpray_row[this] + 0.5 ) / KurotsuchiR___R_TOTAL_ROWS
                 else
-                    set alpha=s__KurotsuchiR__YokaiSpray_rowSize[this] / KurotsuchiR__R_TOTAL_ROWS
+                    set alpha=s__KurotsuchiR___YokaiSpray_rowSize[this] / KurotsuchiR___R_TOTAL_ROWS
                 endif
 
                 set scale=0.6 + 1.4 * alpha
                 set forwardStep=scale * 48.0
-                set s__KurotsuchiR__YokaiSpray_forwardSoFar[this]=s__KurotsuchiR__YokaiSpray_forwardSoFar[this] + forwardStep
+                set s__KurotsuchiR___YokaiSpray_forwardSoFar[this]=s__KurotsuchiR___YokaiSpray_forwardSoFar[this] + forwardStep
             endif
 
-            if s__KurotsuchiR__YokaiSpray_row[this] < KurotsuchiR__R_TOTAL_ROWS then
-                set alpha=( s__KurotsuchiR__YokaiSpray_row[this] + 0.5 ) / KurotsuchiR__R_TOTAL_ROWS
+            if s__KurotsuchiR___YokaiSpray_row[this] < KurotsuchiR___R_TOTAL_ROWS then
+                set alpha=( s__KurotsuchiR___YokaiSpray_row[this] + 0.5 ) / KurotsuchiR___R_TOTAL_ROWS
             else
-                set alpha=s__KurotsuchiR__YokaiSpray_rowSize[this] / KurotsuchiR__R_TOTAL_ROWS
+                set alpha=s__KurotsuchiR___YokaiSpray_rowSize[this] / KurotsuchiR___R_TOTAL_ROWS
             endif
             set scale=0.6 + 1.4 * alpha
             set spacing=scale * 24.0
 
-            if ModuloInteger(s__KurotsuchiR__YokaiSpray_row[this], 2) == 0 then
-                set idx=s__KurotsuchiR__YokaiSpray_rowIndex[this]
+            if ModuloInteger(s__KurotsuchiR___YokaiSpray_row[this], 2) == 0 then
+                set idx=s__KurotsuchiR___YokaiSpray_rowIndex[this]
             else
-                set idx=( s__KurotsuchiR__YokaiSpray_rowSize[this] - 1 ) - s__KurotsuchiR__YokaiSpray_rowIndex[this]
+                set idx=( s__KurotsuchiR___YokaiSpray_rowSize[this] - 1 ) - s__KurotsuchiR___YokaiSpray_rowIndex[this]
             endif
 
-            set lateral=- spacing * ( s__KurotsuchiR__YokaiSpray_rowSize[this] - 1 ) * 0.5 + idx * spacing
-            set px=s__KurotsuchiR__YokaiSpray_baseX[this] + s__KurotsuchiR__YokaiSpray_forwardSoFar[this] * Cos(s__KurotsuchiR__YokaiSpray_baseAngle[this]) - lateral * Sin(s__KurotsuchiR__YokaiSpray_baseAngle[this])
-            set py=s__KurotsuchiR__YokaiSpray_baseY[this] + s__KurotsuchiR__YokaiSpray_forwardSoFar[this] * Sin(s__KurotsuchiR__YokaiSpray_baseAngle[this]) + lateral * Cos(s__KurotsuchiR__YokaiSpray_baseAngle[this])
+            set lateral=- spacing * ( s__KurotsuchiR___YokaiSpray_rowSize[this] - 1 ) * 0.5 + idx * spacing
+            set px=s__KurotsuchiR___YokaiSpray_baseX[this] + s__KurotsuchiR___YokaiSpray_forwardSoFar[this] * Cos(s__KurotsuchiR___YokaiSpray_baseAngle[this]) - lateral * Sin(s__KurotsuchiR___YokaiSpray_baseAngle[this])
+            set py=s__KurotsuchiR___YokaiSpray_baseY[this] + s__KurotsuchiR___YokaiSpray_forwardSoFar[this] * Sin(s__KurotsuchiR___YokaiSpray_baseAngle[this]) + lateral * Cos(s__KurotsuchiR___YokaiSpray_baseAngle[this])
             set pz=GetPointZ(px , py)
 
-            call s__KurotsuchiR__YokaiSpray_placeBlob(this,px , py , pz , scale)
+            call s__KurotsuchiR___YokaiSpray_placeBlob(this,px , py , pz , scale)
 
-            set s__KurotsuchiR__YokaiSpray_rowIndex[this]=s__KurotsuchiR__YokaiSpray_rowIndex[this] + 1
-            set s__KurotsuchiR__YokaiSpray_blobsInRow[this]=s__KurotsuchiR__YokaiSpray_blobsInRow[this] - 1
-            if s__KurotsuchiR__YokaiSpray_blobsInRow[this] == 0 then
-                set s__KurotsuchiR__YokaiSpray_row[this]=s__KurotsuchiR__YokaiSpray_row[this] + 1
+            set s__KurotsuchiR___YokaiSpray_rowIndex[this]=s__KurotsuchiR___YokaiSpray_rowIndex[this] + 1
+            set s__KurotsuchiR___YokaiSpray_blobsInRow[this]=s__KurotsuchiR___YokaiSpray_blobsInRow[this] - 1
+            if s__KurotsuchiR___YokaiSpray_blobsInRow[this] == 0 then
+                set s__KurotsuchiR___YokaiSpray_row[this]=s__KurotsuchiR___YokaiSpray_row[this] + 1
             endif
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_updateBlobProjectiles takes integer this returns nothing
+        function s__KurotsuchiR___YokaiSpray_updateBlobProjectiles takes integer this returns nothing
             local integer i= 0
             local real t
             local real a
@@ -85722,12 +86014,12 @@ endfunction
             local effect fx
 
             loop
-                exitwhen i >= s__KurotsuchiR__YokaiSpray_totalEmitted[this]
+                exitwhen i >= s__KurotsuchiR___YokaiSpray_totalEmitted[this]
 
                 if LoadInteger(KurotsuchiHash, this, i * 20 + 9) == 0 then
-                    set t=LoadReal(KurotsuchiHash, this, i * 20 + 7) + KurotsuchiR__R_TICK_PERIOD
-                    if t >= KurotsuchiR__R_BLOB_TRAVEL_TIME then
-                        set t=KurotsuchiR__R_BLOB_TRAVEL_TIME
+                    set t=LoadReal(KurotsuchiHash, this, i * 20 + 7) + KurotsuchiR___R_TICK_PERIOD
+                    if t >= KurotsuchiR___R_BLOB_TRAVEL_TIME then
+                        set t=KurotsuchiR___R_BLOB_TRAVEL_TIME
                         call SaveInteger(KurotsuchiHash, this, i * 20 + 9, 1)
 
                         set fx=LoadEffectHandle(KurotsuchiHash, this, i * 20 + 10)
@@ -85737,7 +86029,7 @@ endfunction
                     endif
 
                     call SaveReal(KurotsuchiHash, this, i * 20 + 7, t)
-                    set a=t / KurotsuchiR__R_BLOB_TRAVEL_TIME
+                    set a=t / KurotsuchiR___R_BLOB_TRAVEL_TIME
 
                     set sx=LoadReal(KurotsuchiHash, this, i * 20 + 1)
                     set sy=LoadReal(KurotsuchiHash, this, i * 20 + 2)
@@ -85750,7 +86042,7 @@ endfunction
 
                     set nx=sx + ( ex - sx ) * a
                     set ny=sy + ( ey - sy ) * a
-                    set nz=sz + ( ez - sz ) * a + KurotsuchiR__R_BLOB_ARC_HEIGHT * ( 1.0 - a ) * ( 1.0 - a )
+                    set nz=sz + ( ez - sz ) * a + KurotsuchiR___R_BLOB_ARC_HEIGHT * ( 1.0 - a ) * ( 1.0 - a )
                     set sc=0.01 + ( scEnd - 0.01 ) * a
 
                     call SaveReal(KurotsuchiHash, this, i * 20 + 11, nx)
@@ -85762,15 +86054,15 @@ endfunction
                     call BlzSetSpecialEffectZ(fx, nz)
                     call BlzSetSpecialEffectScale(fx, sc)
 
-                    call SetUnitX(s__KurotsuchiR__YokaiSpray_lookatDummy[this], ex)
-                    call SetUnitY(s__KurotsuchiR__YokaiSpray_lookatDummy[this], ey)
+                    call SetUnitX(s__KurotsuchiR___YokaiSpray_lookatDummy[this], ex)
+                    call SetUnitY(s__KurotsuchiR___YokaiSpray_lookatDummy[this], ey)
                 endif
 
                 set i=i + 1
             endloop
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_hardenBlob takes integer inst,integer blobIndex returns nothing
+        function s__KurotsuchiR___YokaiSpray_hardenBlob takes integer inst,integer blobIndex returns nothing
             local integer state= LoadInteger(KurotsuchiHash, inst, blobIndex * 20 + 9)
             local effect fx
             
@@ -85785,8 +86077,8 @@ endfunction
             endif
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_findTrackedUnit takes integer this,unit u returns integer
-            local integer baseIndex= this * KurotsuchiR__MAX_TRACKED_UNITS
+        function s__KurotsuchiR___YokaiSpray_findTrackedUnit takes integer this,unit u returns integer
+            local integer baseIndex= this * KurotsuchiR___MAX_TRACKED_UNITS
             local integer i= 0
             loop
                 exitwhen i >= trackedCounts[this]
@@ -85798,7 +86090,7 @@ endfunction
             return - 1
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_isUnitInAnyBlob takes integer this,unit u returns boolean
+        function s__KurotsuchiR___YokaiSpray_isUnitInAnyBlob takes integer this,unit u returns boolean
             local real ux= GetUnitX(u)
             local real uy= GetUnitY(u)
             local real bx
@@ -85809,7 +86101,7 @@ endfunction
             local integer i= 0
             
             loop
-                exitwhen i >= s__KurotsuchiR__YokaiSpray_totalEmitted[this]
+                exitwhen i >= s__KurotsuchiR___YokaiSpray_totalEmitted[this]
                 set bx=LoadReal(KurotsuchiHash, this, i * 20 + 11)
                 set by=LoadReal(KurotsuchiHash, this, i * 20 + 12)
                 
@@ -85817,7 +86109,7 @@ endfunction
                 set dy=uy - by
                 set dist=dx * dx + dy * dy
                 
-                if dist <= KurotsuchiR__R_DRAG_RADIUS * KurotsuchiR__R_DRAG_RADIUS then
+                if dist <= KurotsuchiR___R_DRAG_RADIUS * KurotsuchiR___R_DRAG_RADIUS then
                     return true
                 endif
                 
@@ -85827,20 +86119,20 @@ endfunction
             return false
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_updateAffectedUnits takes integer this returns nothing
+        function s__KurotsuchiR___YokaiSpray_updateAffectedUnits takes integer this returns nothing
             local unit u
             local group tempG= CreateGroup()
             
-            call GroupEnumUnitsInRange(tempG, s__KurotsuchiR__YokaiSpray_baseX[this], s__KurotsuchiR__YokaiSpray_baseY[this], s__KurotsuchiR__YokaiSpray_maxReachedDistance[this] + KurotsuchiR__R_DRAG_RADIUS, null)
+            call GroupEnumUnitsInRange(tempG, s__KurotsuchiR___YokaiSpray_baseX[this], s__KurotsuchiR___YokaiSpray_baseY[this], s__KurotsuchiR___YokaiSpray_maxReachedDistance[this] + KurotsuchiR___R_DRAG_RADIUS, null)
             
             loop
                 set u=FirstOfGroup(tempG)
                 exitwhen u == null
                 call GroupRemoveUnit(tempG, u)
                 
-                if IsUnitEnemy(u, GetOwningPlayer(s__KurotsuchiR__YokaiSpray_caster[this])) and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_DEAD) then
-                    if s__KurotsuchiR__YokaiSpray_isUnitInAnyBlob(this,u) and not IsUnitInGroup(u, s__KurotsuchiR__YokaiSpray_affectedUnits[this]) then
-                        call GroupAddUnit(s__KurotsuchiR__YokaiSpray_affectedUnits[this], u)
+                if IsUnitEnemy(u, GetOwningPlayer(s__KurotsuchiR___YokaiSpray_caster[this])) and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_DEAD) then
+                    if s__KurotsuchiR___YokaiSpray_isUnitInAnyBlob(this,u) and not IsUnitInGroup(u, s__KurotsuchiR___YokaiSpray_affectedUnits[this]) then
+                        call GroupAddUnit(s__KurotsuchiR___YokaiSpray_affectedUnits[this], u)
                     endif
                 endif
             endloop
@@ -85848,41 +86140,41 @@ endfunction
             call DestroyGroup(tempG)
             
             set tempG=CreateGroup()
-            call BlzGroupAddGroupFast(s__KurotsuchiR__YokaiSpray_affectedUnits[this], tempG)
+            call BlzGroupAddGroupFast(s__KurotsuchiR___YokaiSpray_affectedUnits[this], tempG)
             loop
                 set u=FirstOfGroup(tempG)
                 exitwhen u == null
                 call GroupRemoveUnit(tempG, u)
                 
-                if IsUnitType(u, UNIT_TYPE_DEAD) or not s__KurotsuchiR__YokaiSpray_isUnitInAnyBlob(this,u) then
-                    call GroupRemoveUnit(s__KurotsuchiR__YokaiSpray_affectedUnits[this], u)
+                if IsUnitType(u, UNIT_TYPE_DEAD) or not s__KurotsuchiR___YokaiSpray_isUnitInAnyBlob(this,u) then
+                    call GroupRemoveUnit(s__KurotsuchiR___YokaiSpray_affectedUnits[this], u)
                 endif
             endloop
             call DestroyGroup(tempG)
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_addTrackedUnit takes integer this,unit u returns nothing
-            local integer baseIdx= s__KurotsuchiR__YokaiSpray_instanceIndex[this] * KurotsuchiR__MAX_TRACKED_UNITS
+        function s__KurotsuchiR___YokaiSpray_addTrackedUnit takes integer this,unit u returns nothing
+            local integer baseIdx= s__KurotsuchiR___YokaiSpray_instanceIndex[this] * KurotsuchiR___MAX_TRACKED_UNITS
             local integer i= 0
 
             loop
-                exitwhen i >= trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]
+                exitwhen i >= trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]
                 if trackedUnits[baseIdx + i] == u then
                     return
                 endif
                 set i=i + 1
             endloop
 
-            if trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]] < KurotsuchiR__MAX_TRACKED_UNITS then
-                set trackedUnits[baseIdx + trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]]=u
-                set trackedPrevX[baseIdx + trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]]=GetUnitX(u)
-                set trackedPrevY[baseIdx + trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]]=GetUnitY(u)
-                set trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]=trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]] + 1
+            if trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]] < KurotsuchiR___MAX_TRACKED_UNITS then
+                set trackedUnits[baseIdx + trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]]=u
+                set trackedPrevX[baseIdx + trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]]=GetUnitX(u)
+                set trackedPrevY[baseIdx + trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]]=GetUnitY(u)
+                set trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]=trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]] + 1
             endif
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_applyPull takes integer this returns nothing
-            local integer baseIdx= s__KurotsuchiR__YokaiSpray_instanceIndex[this] * KurotsuchiR__MAX_TRACKED_UNITS
+        function s__KurotsuchiR___YokaiSpray_applyPull takes integer this returns nothing
+            local integer baseIdx= s__KurotsuchiR___YokaiSpray_instanceIndex[this] * KurotsuchiR___MAX_TRACKED_UNITS
             local integer i= 0
             local unit u
             local real ux
@@ -85897,20 +86189,20 @@ endfunction
             local real tgtX
             local real tgtY
     
-            set s__KurotsuchiR__YokaiSpray_pullAccum[this]=s__KurotsuchiR__YokaiSpray_pullAccum[this] + KurotsuchiR__R_TICK_PERIOD
-            if s__KurotsuchiR__YokaiSpray_pullAccum[this] >= 0.03 then
-                set s__KurotsuchiR__YokaiSpray_pullAccum[this]=s__KurotsuchiR__YokaiSpray_pullAccum[this] - 0.03
-                set baseIdx=s__KurotsuchiR__YokaiSpray_instanceIndex[this] * KurotsuchiR__MAX_TRACKED_UNITS
+            set s__KurotsuchiR___YokaiSpray_pullAccum[this]=s__KurotsuchiR___YokaiSpray_pullAccum[this] + KurotsuchiR___R_TICK_PERIOD
+            if s__KurotsuchiR___YokaiSpray_pullAccum[this] >= 0.03 then
+                set s__KurotsuchiR___YokaiSpray_pullAccum[this]=s__KurotsuchiR___YokaiSpray_pullAccum[this] - 0.03
+                set baseIdx=s__KurotsuchiR___YokaiSpray_instanceIndex[this] * KurotsuchiR___MAX_TRACKED_UNITS
                 set i=0
                 loop
-                    exitwhen i >= trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]
+                    exitwhen i >= trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]
                     set u=trackedUnits[baseIdx + i]
             
-                    if u == null or IsUnitType(u, UNIT_TYPE_DEAD) or not IsUnitInGroup(u, s__KurotsuchiR__YokaiSpray_affectedUnits[this]) then
-                        set trackedUnits[baseIdx + i]=trackedUnits[baseIdx + trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]] - 1]
-                        set trackedPrevX[baseIdx + i]=trackedPrevX[baseIdx + trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]] - 1]
-                        set trackedPrevY[baseIdx + i]=trackedPrevY[baseIdx + trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]] - 1]
-                        set trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]=trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]] - 1
+                    if u == null or IsUnitType(u, UNIT_TYPE_DEAD) or not IsUnitInGroup(u, s__KurotsuchiR___YokaiSpray_affectedUnits[this]) then
+                        set trackedUnits[baseIdx + i]=trackedUnits[baseIdx + trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]] - 1]
+                        set trackedPrevX[baseIdx + i]=trackedPrevX[baseIdx + trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]] - 1]
+                        set trackedPrevY[baseIdx + i]=trackedPrevY[baseIdx + trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]] - 1]
+                        set trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]=trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]] - 1
                     else
                         set px=trackedPrevX[baseIdx + i]
                         set py=trackedPrevY[baseIdx + i]
@@ -85938,10 +86230,10 @@ endfunction
             endif
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_checkUnits takes integer this returns nothing
+        function s__KurotsuchiR___YokaiSpray_checkUnits takes integer this returns nothing
             local unit u
-            local real dmg= KurotsuchiR__R_BASE_DAMAGE + KurotsuchiR__R_STR_MULTIPLIER * I2R(GetHeroStr(s__KurotsuchiR__YokaiSpray_caster[this], true)) * I2R(GetUnitAbilityLevel(s__KurotsuchiR__YokaiSpray_caster[this], KurotsuchiR__R_SPELL_ID))
-            local real tickDmg= dmg / ( ( KurotsuchiR__R_CAST_DURATION + 5.0 ) / KurotsuchiR__R_TICK_PERIOD )
+            local real dmg= KurotsuchiR___R_BASE_DAMAGE + KurotsuchiR___R_STR_MULTIPLIER * I2R(GetHeroStr(s__KurotsuchiR___YokaiSpray_caster[this], true)) * I2R(GetUnitAbilityLevel(s__KurotsuchiR___YokaiSpray_caster[this], KurotsuchiR___R_SPELL_ID))
+            local real tickDmg= dmg / ( ( KurotsuchiR___R_CAST_DURATION + 5.0 ) / KurotsuchiR___R_TICK_PERIOD )
             local integer uid
             local integer i
             local integer state
@@ -85956,8 +86248,8 @@ endfunction
             local real distSq
             local group tempG= CreateGroup()
             
-            call FlushChildHashtable(Table__ht, (s__KurotsuchiR__YokaiSpray_hitThisTick[this])) // INLINED!!
-            call BlzGroupAddGroupFast(s__KurotsuchiR__YokaiSpray_affectedUnits[this], tempG)
+            call FlushChildHashtable(Table__ht, (s__KurotsuchiR___YokaiSpray_hitThisTick[this])) // INLINED!!
+            call BlzGroupAddGroupFast(s__KurotsuchiR___YokaiSpray_affectedUnits[this], tempG)
             
             loop
                 set u=FirstOfGroup(tempG)
@@ -85965,42 +86257,42 @@ endfunction
                 call GroupRemoveUnit(tempG, u)
                 
                 set uid=GetHandleId(u)
-                if not (HaveSavedInteger(Table__ht, (s__KurotsuchiR__YokaiSpray_hitThisTick[this]), (uid))) then // INLINED!!
-                    call SaveInteger(Table__ht, (s__KurotsuchiR__YokaiSpray_hitThisTick[this]), (uid), ( 1)) // INLINED!!
-                    call s__KurotsuchiR__YokaiSpray_addTrackedUnit(this,u)
+                if not (HaveSavedInteger(Table__ht, (s__KurotsuchiR___YokaiSpray_hitThisTick[this]), (uid))) then // INLINED!!
+                    call SaveInteger(Table__ht, (s__KurotsuchiR___YokaiSpray_hitThisTick[this]), (uid), ( 1)) // INLINED!!
+                    call s__KurotsuchiR___YokaiSpray_addTrackedUnit(this,u)
                     
                     set ux=GetUnitX(u)
                     set uy=GetUnitY(u)
                     set i=0
                     set state=0
                     loop
-                        exitwhen i >= s__KurotsuchiR__YokaiSpray_totalEmitted[this]
+                        exitwhen i >= s__KurotsuchiR___YokaiSpray_totalEmitted[this]
                         set bx=LoadReal(KurotsuchiHash, this, i * 20 + 11)
                         set by=LoadReal(KurotsuchiHash, this, i * 20 + 12)
                         set dx=ux - bx
                         set dy=uy - by
                         set distSq=dx * dx + dy * dy
                         
-                        if distSq <= KurotsuchiR__R_DRAG_RADIUS * KurotsuchiR__R_DRAG_RADIUS then
+                        if distSq <= KurotsuchiR___R_DRAG_RADIUS * KurotsuchiR___R_DRAG_RADIUS then
                             set state=LoadInteger(KurotsuchiHash, this, i * 20 + 9)
                             
-                            if (HaveSavedInteger(Table__ht, (s__KurotsuchiR__YokaiSpray_unitsFullyDamaged[this]), (uid))) then // INLINED!!
+                            if (HaveSavedInteger(Table__ht, (s__KurotsuchiR___YokaiSpray_unitsFullyDamaged[this]), (uid))) then // INLINED!!
                                 // Already took full damage
                             elseif (HaveSavedInteger(Table__ht, (QHitTable), (uid))) and state != 2 then // INLINED!!
-                                set dealt=(LoadReal(Table__ht, (((s__KurotsuchiR__YokaiSpray_blobDamageDone[this]))), (i * 1000 + uid))) // INLINED!!
+                                set dealt=(LoadReal(Table__ht, (((s__KurotsuchiR___YokaiSpray_blobDamageDone[this]))), (i * 1000 + uid))) // INLINED!!
                                 set remaining=dmg - dealt
-                                call EsnareUnitTimed(s__KurotsuchiR__YokaiSpray_caster[this] , u , 1.0)
-                                call UnitDamageTarget(s__KurotsuchiR__YokaiSpray_caster[this], u, remaining, false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                                call EsnareUnitTimed(s__KurotsuchiR___YokaiSpray_caster[this] , u , 1.0)
+                                call UnitDamageTarget(s__KurotsuchiR___YokaiSpray_caster[this], u, remaining, false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
                                 call YokaiSpray_HardenBlob(this , i)
                                 call RemoveSavedInteger(Table__ht, (QHitTable), (uid)) // INLINED!!
-                                call SaveInteger(Table__ht, (s__KurotsuchiR__YokaiSpray_unitsFullyDamaged[this]), (uid), ( 1)) // INLINED!!
+                                call SaveInteger(Table__ht, (s__KurotsuchiR___YokaiSpray_unitsFullyDamaged[this]), (uid), ( 1)) // INLINED!!
                                 exitwhen true
                             elseif state == 2 then
-                                call SaveInteger(Table__ht, (s__KurotsuchiR__YokaiSpray_unitsFullyDamaged[this]), (uid), ( 1)) // INLINED!!
+                                call SaveInteger(Table__ht, (s__KurotsuchiR___YokaiSpray_unitsFullyDamaged[this]), (uid), ( 1)) // INLINED!!
                                 exitwhen true
                             else
-                                call UnitDamageTarget(s__KurotsuchiR__YokaiSpray_caster[this], u, tickDmg, false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                                call SaveReal(Table__ht, (((s__KurotsuchiR__YokaiSpray_blobDamageDone[this]))), (i * 1000 + uid), (( (LoadReal(Table__ht, (((s__KurotsuchiR__YokaiSpray_blobDamageDone[this]))), (i * 1000 + uid))) + tickDmg)*1.0)) // INLINED!!
+                                call UnitDamageTarget(s__KurotsuchiR___YokaiSpray_caster[this], u, tickDmg, false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                                call SaveReal(Table__ht, (((s__KurotsuchiR___YokaiSpray_blobDamageDone[this]))), (i * 1000 + uid), (( (LoadReal(Table__ht, (((s__KurotsuchiR___YokaiSpray_blobDamageDone[this]))), (i * 1000 + uid))) + tickDmg)*1.0)) // INLINED!!
                                 exitwhen true
                             endif
                         endif
@@ -86012,67 +86304,67 @@ endfunction
             call DestroyGroup(tempG)
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_periodic takes nothing returns nothing
+        function s__KurotsuchiR___YokaiSpray_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             
-            call s__KurotsuchiR__YokaiSpray_updateBlobProjectiles(this)
+            call s__KurotsuchiR___YokaiSpray_updateBlobProjectiles(this)
             
-            if s__KurotsuchiR__YokaiSpray_elapsed[this] <= KurotsuchiR__R_CAST_DURATION then
-                call s__KurotsuchiR__YokaiSpray_emitBlob(this)
-            elseif not s__KurotsuchiR__YokaiSpray_disabled[this] then
-                set s__KurotsuchiR__YokaiSpray_disabled[this]=true
-                call DestroyEffect(s__KurotsuchiR__YokaiSpray_mouthStream[this])
-                call ResetUnitLookAt(s__KurotsuchiR__YokaiSpray_caster[this])
-                call RemoveUnit(s__KurotsuchiR__YokaiSpray_lookatDummy[this])
-                set s__KurotsuchiR__YokaiSpray_lookatDummy[this]=null
+            if s__KurotsuchiR___YokaiSpray_elapsed[this] <= KurotsuchiR___R_CAST_DURATION then
+                call s__KurotsuchiR___YokaiSpray_emitBlob(this)
+            elseif not s__KurotsuchiR___YokaiSpray_disabled[this] then
+                set s__KurotsuchiR___YokaiSpray_disabled[this]=true
+                call DestroyEffect(s__KurotsuchiR___YokaiSpray_mouthStream[this])
+                call ResetUnitLookAt(s__KurotsuchiR___YokaiSpray_caster[this])
+                call RemoveUnit(s__KurotsuchiR___YokaiSpray_lookatDummy[this])
+                set s__KurotsuchiR___YokaiSpray_lookatDummy[this]=null
                 //call PauseUnit(this.caster, false)
             endif
             
-            set s__KurotsuchiR__YokaiSpray_areaCheckAccum[this]=s__KurotsuchiR__YokaiSpray_areaCheckAccum[this] + KurotsuchiR__R_TICK_PERIOD
-            if s__KurotsuchiR__YokaiSpray_areaCheckAccum[this] >= KurotsuchiR__R_AREA_CHECK_INTERVAL then
-                set s__KurotsuchiR__YokaiSpray_areaCheckAccum[this]=s__KurotsuchiR__YokaiSpray_areaCheckAccum[this] - KurotsuchiR__R_AREA_CHECK_INTERVAL
-                call s__KurotsuchiR__YokaiSpray_updateAffectedUnits(this)
+            set s__KurotsuchiR___YokaiSpray_areaCheckAccum[this]=s__KurotsuchiR___YokaiSpray_areaCheckAccum[this] + KurotsuchiR___R_TICK_PERIOD
+            if s__KurotsuchiR___YokaiSpray_areaCheckAccum[this] >= KurotsuchiR___R_AREA_CHECK_INTERVAL then
+                set s__KurotsuchiR___YokaiSpray_areaCheckAccum[this]=s__KurotsuchiR___YokaiSpray_areaCheckAccum[this] - KurotsuchiR___R_AREA_CHECK_INTERVAL
+                call s__KurotsuchiR___YokaiSpray_updateAffectedUnits(this)
             endif
             
-            call s__KurotsuchiR__YokaiSpray_checkUnits(this)
-            call s__KurotsuchiR__YokaiSpray_applyPull(this)
+            call s__KurotsuchiR___YokaiSpray_checkUnits(this)
+            call s__KurotsuchiR___YokaiSpray_applyPull(this)
             
-            set s__KurotsuchiR__YokaiSpray_elapsed[this]=s__KurotsuchiR__YokaiSpray_elapsed[this] + KurotsuchiR__R_TICK_PERIOD
-            if s__KurotsuchiR__YokaiSpray_elapsed[this] >= KurotsuchiR__R_CAST_DURATION + 5.0 then
-                call DestroyTimer(s__KurotsuchiR__YokaiSpray_t[this])
-                call sc__KurotsuchiR__YokaiSpray_cleanup(this)
+            set s__KurotsuchiR___YokaiSpray_elapsed[this]=s__KurotsuchiR___YokaiSpray_elapsed[this] + KurotsuchiR___R_TICK_PERIOD
+            if s__KurotsuchiR___YokaiSpray_elapsed[this] >= KurotsuchiR___R_CAST_DURATION + 5.0 then
+                call DestroyTimer(s__KurotsuchiR___YokaiSpray_t[this])
+                call sc__KurotsuchiR___YokaiSpray_cleanup(this)
             endif
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_cleanup takes integer this returns nothing
+        function s__KurotsuchiR___YokaiSpray_cleanup takes integer this returns nothing
             local integer i
             local integer baseIdx
             local effect e
             local integer movedInst
 
-            set baseIdx=s__KurotsuchiR__YokaiSpray_instanceIndex[this] * KurotsuchiR__MAX_TRACKED_UNITS
+            set baseIdx=s__KurotsuchiR___YokaiSpray_instanceIndex[this] * KurotsuchiR___MAX_TRACKED_UNITS
             set i=0
             loop
-                exitwhen i >= trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]
+                exitwhen i >= trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]
                 set trackedUnits[baseIdx + i]=null
                 set i=i + 1
             endloop
-            set trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]=0
+            set trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]=0
 
-            set i=s__KurotsuchiR__YokaiSpray_instanceIndex[this]
+            set i=s__KurotsuchiR___YokaiSpray_instanceIndex[this]
             set activeInstanceCount=activeInstanceCount - 1
             if i < activeInstanceCount then
                 set movedInst=activeInstances[activeInstanceCount]
                 set activeInstances[i]=movedInst
-                set s__KurotsuchiR__YokaiSpray_instanceIndex[movedInst]=i
+                set s__KurotsuchiR___YokaiSpray_instanceIndex[movedInst]=i
             endif
         
             set activeInstances[activeInstanceCount]=0
 
-            call DestroyGroup(s__KurotsuchiR__YokaiSpray_affectedUnits[this])
-            call s__Table_destroy(s__KurotsuchiR__YokaiSpray_hitThisTick[this])
-            call s__Table_destroy(s__KurotsuchiR__YokaiSpray_blobDamageDone[this])
-            call s__Table_destroy(s__KurotsuchiR__YokaiSpray_unitsFullyDamaged[this])
+            call DestroyGroup(s__KurotsuchiR___YokaiSpray_affectedUnits[this])
+            call s__Table_destroy(s__KurotsuchiR___YokaiSpray_hitThisTick[this])
+            call s__Table_destroy(s__KurotsuchiR___YokaiSpray_blobDamageDone[this])
+            call s__Table_destroy(s__KurotsuchiR___YokaiSpray_unitsFullyDamaged[this])
             call s__Table_destroy((LoadInteger(Table__ht, (YokaiSpray_blobDamageDone), (this)))) // INLINED!!
             call s__Table_destroy((LoadInteger(Table__ht, (YokaiSpray_unitsFullyDamaged), (this)))) // INLINED!!
             call RemoveSavedInteger(Table__ht, (YokaiSpray_blobDamageDone), (this)) // INLINED!!
@@ -86080,7 +86372,7 @@ endfunction
 
             set i=0
             loop
-                exitwhen i >= s__KurotsuchiR__YokaiSpray_totalEmitted[this]
+                exitwhen i >= s__KurotsuchiR___YokaiSpray_totalEmitted[this]
                 set e=LoadEffectHandle(KurotsuchiHash, this, i * 20 + 10)
                 if e != null then
                     call BlzSetSpecialEffectX(e, 9861.0)
@@ -86090,11 +86382,11 @@ endfunction
                 set i=i + 1
             endloop
             call FlushChildHashtable(KurotsuchiHash, this)
-            call s__KurotsuchiR__YokaiSpray_deallocate(this)
+            call s__KurotsuchiR___YokaiSpray_deallocate(this)
         endfunction
 
-        function s__KurotsuchiR__YokaiSpray_start takes unit caster,real tx,real ty returns integer
-            local integer this= s__KurotsuchiR__YokaiSpray_allocate()
+        function s__KurotsuchiR___YokaiSpray_start takes unit caster,real tx,real ty returns integer
+            local integer this= s__KurotsuchiR___YokaiSpray_allocate()
             local real angle
             local unit dummy
             local unit vis
@@ -86105,78 +86397,78 @@ endfunction
 
             //call PauseUnit(caster, true)
             set angle=Atan2(ty - GetUnitY(caster), tx - GetUnitX(caster))
-            set s__KurotsuchiR__YokaiSpray_caster[this]=caster
-            set s__KurotsuchiR__YokaiSpray_baseX[this]=(((GetUnitX(caster) )*1.0) + Cos((( angle )*1.0)) * (( 100.0)*1.0)) // INLINED!!
-            set s__KurotsuchiR__YokaiSpray_baseY[this]=(((GetUnitY(caster) )*1.0) + Sin((( angle )*1.0)) * (( 100.0)*1.0)) // INLINED!!
-            set s__KurotsuchiR__YokaiSpray_baseAngle[this]=angle
-            set s__KurotsuchiR__YokaiSpray_elapsed[this]=0.0
-            set s__KurotsuchiR__YokaiSpray_row[this]=0
-            set s__KurotsuchiR__YokaiSpray_rowIndex[this]=0
-            set s__KurotsuchiR__YokaiSpray_rowSize[this]=1
-            set s__KurotsuchiR__YokaiSpray_blobsInRow[this]=0
-            set s__KurotsuchiR__YokaiSpray_totalEmitted[this]=0
-            set s__KurotsuchiR__YokaiSpray_forwardSoFar[this]=0.0
-            set s__KurotsuchiR__YokaiSpray_pullAccum[this]=0.0
-            set s__KurotsuchiR__YokaiSpray_areaCheckAccum[this]=0.0
-            set s__KurotsuchiR__YokaiSpray_maxReachedDistance[this]=0.0
-            set s__KurotsuchiR__YokaiSpray_disabled[this]=false
-            set s__KurotsuchiR__YokaiSpray_affectedUnits[this]=CreateGroup()
-            set s__KurotsuchiR__YokaiSpray_hitThisTick[this]=s__Table_create()
-            set s__KurotsuchiR__YokaiSpray_blobDamageDone[this]=s__Table_create()
-            set s__KurotsuchiR__YokaiSpray_unitsFullyDamaged[this]=s__Table_create()
+            set s__KurotsuchiR___YokaiSpray_caster[this]=caster
+            set s__KurotsuchiR___YokaiSpray_baseX[this]=(((GetUnitX(caster) )*1.0) + Cos((( angle )*1.0)) * (( 100.0)*1.0)) // INLINED!!
+            set s__KurotsuchiR___YokaiSpray_baseY[this]=(((GetUnitY(caster) )*1.0) + Sin((( angle )*1.0)) * (( 100.0)*1.0)) // INLINED!!
+            set s__KurotsuchiR___YokaiSpray_baseAngle[this]=angle
+            set s__KurotsuchiR___YokaiSpray_elapsed[this]=0.0
+            set s__KurotsuchiR___YokaiSpray_row[this]=0
+            set s__KurotsuchiR___YokaiSpray_rowIndex[this]=0
+            set s__KurotsuchiR___YokaiSpray_rowSize[this]=1
+            set s__KurotsuchiR___YokaiSpray_blobsInRow[this]=0
+            set s__KurotsuchiR___YokaiSpray_totalEmitted[this]=0
+            set s__KurotsuchiR___YokaiSpray_forwardSoFar[this]=0.0
+            set s__KurotsuchiR___YokaiSpray_pullAccum[this]=0.0
+            set s__KurotsuchiR___YokaiSpray_areaCheckAccum[this]=0.0
+            set s__KurotsuchiR___YokaiSpray_maxReachedDistance[this]=0.0
+            set s__KurotsuchiR___YokaiSpray_disabled[this]=false
+            set s__KurotsuchiR___YokaiSpray_affectedUnits[this]=CreateGroup()
+            set s__KurotsuchiR___YokaiSpray_hitThisTick[this]=s__Table_create()
+            set s__KurotsuchiR___YokaiSpray_blobDamageDone[this]=s__Table_create()
+            set s__KurotsuchiR___YokaiSpray_unitsFullyDamaged[this]=s__Table_create()
             call SaveInteger(Table__ht, (YokaiSpray_blobDamageDone), (this), ( s__Table_create())) // INLINED!!
             call SaveInteger(Table__ht, (YokaiSpray_unitsFullyDamaged), (this), ( s__Table_create())) // INLINED!!
-            set s__KurotsuchiR__YokaiSpray_t[this]=NewTimerEx(this)
-            set dummy=CreateUnit(GetOwningPlayer(caster), KurotsuchiR__R_VISION_DUMMY, GetUnitX(caster), GetUnitY(caster), angle * bj_RADTODEG)
-            set s__KurotsuchiR__YokaiSpray_lookatDummy[this]=dummy
+            set s__KurotsuchiR___YokaiSpray_t[this]=NewTimerEx(this)
+            set dummy=CreateUnit(GetOwningPlayer(caster), KurotsuchiR___R_VISION_DUMMY, GetUnitX(caster), GetUnitY(caster), angle * bj_RADTODEG)
+            set s__KurotsuchiR___YokaiSpray_lookatDummy[this]=dummy
             
-            if activeInstanceCount < KurotsuchiR__MAX_INSTANCES then
-                set s__KurotsuchiR__YokaiSpray_instanceIndex[this]=activeInstanceCount
+            if activeInstanceCount < KurotsuchiR___MAX_INSTANCES then
+                set s__KurotsuchiR___YokaiSpray_instanceIndex[this]=activeInstanceCount
                 set activeInstances[activeInstanceCount]=this
                 set activeInstanceCount=activeInstanceCount + 1
             else
-                set s__KurotsuchiR__YokaiSpray_instanceIndex[this]=0
+                set s__KurotsuchiR___YokaiSpray_instanceIndex[this]=0
             endif
-            set trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]=0
+            set trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]=0
 
-            call SetUnitLookAt(caster, KurotsuchiR__R_LOOKAT_ATTACH, dummy, 0.0, 0.0, 0.0)
+            call SetUnitLookAt(caster, KurotsuchiR___R_LOOKAT_ATTACH, dummy, 0.0, 0.0, 0.0)
 
             set vi=1
             loop
                 exitwhen vi > 3
                 set dist=vi * 300.0
-                set vx=s__KurotsuchiR__YokaiSpray_baseX[this] + Cos(angle) * dist
-                set vy=s__KurotsuchiR__YokaiSpray_baseY[this] + Sin(angle) * dist
-                set vis=CreateUnit(GetOwningPlayer(caster), KurotsuchiR__R_VISION_DUMMY, vx, vy, angle * bj_RADTODEG)
+                set vx=s__KurotsuchiR___YokaiSpray_baseX[this] + Cos(angle) * dist
+                set vy=s__KurotsuchiR___YokaiSpray_baseY[this] + Sin(angle) * dist
+                set vis=CreateUnit(GetOwningPlayer(caster), KurotsuchiR___R_VISION_DUMMY, vx, vy, angle * bj_RADTODEG)
                 call UnitApplyTimedLife(vis, 'BTLF', 3.5)
                 set vis=null
                 set vi=vi + 1
             endloop
 
-            set s__KurotsuchiR__YokaiSpray_mouthStream[this]=AddSpecialEffectTarget("Abilities\\Weapons\\RedDragonBreath\\RedDragonMissile.mdl", caster, "head")
-            call BlzSetSpecialEffectScale(s__KurotsuchiR__YokaiSpray_mouthStream[this], 0.01)
+            set s__KurotsuchiR___YokaiSpray_mouthStream[this]=AddSpecialEffectTarget("Abilities\\Weapons\\RedDragonBreath\\RedDragonMissile.mdl", caster, "head")
+            call BlzSetSpecialEffectScale(s__KurotsuchiR___YokaiSpray_mouthStream[this], 0.01)
 
-            call TimerStart(s__KurotsuchiR__YokaiSpray_t[this], KurotsuchiR__R_TICK_PERIOD, true, function s__KurotsuchiR__YokaiSpray_periodic)
+            call TimerStart(s__KurotsuchiR___YokaiSpray_t[this], KurotsuchiR___R_TICK_PERIOD, true, function s__KurotsuchiR___YokaiSpray_periodic)
 
             return this
         endfunction
 
-    function KurotsuchiR__onCastR takes nothing returns nothing
-        call s__KurotsuchiR__YokaiSpray_start(GetTriggerUnit() , GetSpellTargetX() , GetSpellTargetY())
+    function KurotsuchiR___onCastR takes nothing returns nothing
+        call s__KurotsuchiR___YokaiSpray_start(GetTriggerUnit() , GetSpellTargetX() , GetSpellTargetY())
         if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
             call PlaySoundOnUnitBJ(gg_snd_Kurotsuchi_R, 80.0, GetTriggerUnit())
         endif
     endfunction
 
-    function KurotsuchiR__conditionR takes nothing returns boolean
-        return GetSpellAbilityId() == KurotsuchiR__R_SPELL_ID
+    function KurotsuchiR___conditionR takes nothing returns boolean
+        return GetSpellAbilityId() == KurotsuchiR___R_SPELL_ID
     endfunction
 
-    function KurotsuchiR__onInit takes nothing returns nothing
+    function KurotsuchiR___onInit takes nothing returns nothing
         local trigger t= CreateTrigger()
         call TriggerRegisterAnyUnitEventBJ(t, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-        call TriggerAddCondition(t, Condition(function KurotsuchiR__conditionR))
-        call TriggerAddAction(t, function KurotsuchiR__onCastR)
+        call TriggerAddCondition(t, Condition(function KurotsuchiR___conditionR))
+        call TriggerAddAction(t, function KurotsuchiR___onCastR)
         set YokaiSpray_blobDamageDone=s__Table_create()
         set YokaiSpray_unitsFullyDamaged=s__Table_create()
         set activeInstanceCount=0
@@ -86189,113 +86481,113 @@ endfunction
 
 
 
-        function s__KaidoLeap__LeapSpell_destroyEffects takes nothing returns nothing
+        function s__KaidoLeap___LeapSpell_destroyEffects takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            call DestroyEffect(s__KaidoLeap__LeapSpell_e1[this])
-            call DestroyEffect(s__KaidoLeap__LeapSpell_e2[this])
-            set s__KaidoLeap__LeapSpell_e1[this]=null
-            set s__KaidoLeap__LeapSpell_e2[this]=null
+            call DestroyEffect(s__KaidoLeap___LeapSpell_e1[this])
+            call DestroyEffect(s__KaidoLeap___LeapSpell_e2[this])
+            set s__KaidoLeap___LeapSpell_e1[this]=null
+            set s__KaidoLeap___LeapSpell_e2[this]=null
             
             call DestroyTimer(GetExpiredTimer())
-            call s__KaidoLeap__LeapSpell_deallocate(this)
+            call s__KaidoLeap___LeapSpell_deallocate(this)
         endfunction
 
-        function s__KaidoLeap__LeapSpell_delay takes nothing returns nothing
-            local integer this= s__KaidoLeap__LeapSpell__allocate()
+        function s__KaidoLeap___LeapSpell_delay takes nothing returns nothing
+            local integer this= s__KaidoLeap___LeapSpell__allocate()
             local integer this2= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            set s__KaidoLeap__LeapSpell_caster[this]=s__KaidoLeap__LeapSpell_caster[this2]
-            set s__KaidoLeap__LeapSpell_startX[this]=GetUnitX(s__KaidoLeap__LeapSpell_caster[this2])
-            set s__KaidoLeap__LeapSpell_startY[this]=GetUnitY(s__KaidoLeap__LeapSpell_caster[this2])
-            set s__KaidoLeap__LeapSpell_targetX[this]=s__KaidoLeap__LeapSpell_targetX[this2]
-            set s__KaidoLeap__LeapSpell_targetY[this]=s__KaidoLeap__LeapSpell_targetY[this2]
-            set s__KaidoLeap__LeapSpell_angle[this]=Atan2(s__KaidoLeap__LeapSpell_targetY[this] - s__KaidoLeap__LeapSpell_startY[this], s__KaidoLeap__LeapSpell_targetX[this] - s__KaidoLeap__LeapSpell_startX[this])
-            set s__KaidoLeap__LeapSpell_elapsed[this]=0.0
-            set s__KaidoLeap__LeapSpell_e3[this]=AddSpecialEffectTarget(KaidoLeap__SFX_HAND, s__KaidoLeap__LeapSpell_caster[this], "hand,right")
-            call BlzSetSpecialEffectScale(s__KaidoLeap__LeapSpell_e3[this], 0.1)
-            set s__KaidoLeap__LeapSpell_t[this]=NewTimerEx(this)
+            set s__KaidoLeap___LeapSpell_caster[this]=s__KaidoLeap___LeapSpell_caster[this2]
+            set s__KaidoLeap___LeapSpell_startX[this]=GetUnitX(s__KaidoLeap___LeapSpell_caster[this2])
+            set s__KaidoLeap___LeapSpell_startY[this]=GetUnitY(s__KaidoLeap___LeapSpell_caster[this2])
+            set s__KaidoLeap___LeapSpell_targetX[this]=s__KaidoLeap___LeapSpell_targetX[this2]
+            set s__KaidoLeap___LeapSpell_targetY[this]=s__KaidoLeap___LeapSpell_targetY[this2]
+            set s__KaidoLeap___LeapSpell_angle[this]=Atan2(s__KaidoLeap___LeapSpell_targetY[this] - s__KaidoLeap___LeapSpell_startY[this], s__KaidoLeap___LeapSpell_targetX[this] - s__KaidoLeap___LeapSpell_startX[this])
+            set s__KaidoLeap___LeapSpell_elapsed[this]=0.0
+            set s__KaidoLeap___LeapSpell_e3[this]=AddSpecialEffectTarget(KaidoLeap___SFX_HAND, s__KaidoLeap___LeapSpell_caster[this], "hand,right")
+            call BlzSetSpecialEffectScale(s__KaidoLeap___LeapSpell_e3[this], 0.1)
+            set s__KaidoLeap___LeapSpell_t[this]=NewTimerEx(this)
 
-            call SetUnitAnimationByIndex(s__KaidoLeap__LeapSpell_caster[this], 9)
-            call TimerStart(s__KaidoLeap__LeapSpell_t[this], 0.03, true, function sc__KaidoLeap__LeapSpell_periodic)
+            call SetUnitAnimationByIndex(s__KaidoLeap___LeapSpell_caster[this], 9)
+            call TimerStart(s__KaidoLeap___LeapSpell_t[this], 0.03, true, function sc__KaidoLeap___LeapSpell_periodic)
 
-            call DestroyTimer(s__KaidoLeap__LeapSpell_t[this2])
-            call s__KaidoLeap__LeapSpell_deallocate(this2)
+            call DestroyTimer(s__KaidoLeap___LeapSpell_t[this2])
+            call s__KaidoLeap___LeapSpell_deallocate(this2)
         endfunction
 
-        function s__KaidoLeap__LeapSpell_create takes unit caster,real targetX,real targetY returns integer
-            local integer this= s__KaidoLeap__LeapSpell__allocate()
-            set s__KaidoLeap__LeapSpell_caster[this]=caster
-            set s__KaidoLeap__LeapSpell_startX[this]=GetUnitX(caster)
-            set s__KaidoLeap__LeapSpell_startY[this]=GetUnitY(caster)
-            set s__KaidoLeap__LeapSpell_targetX[this]=targetX
-            set s__KaidoLeap__LeapSpell_targetY[this]=targetY
-            set s__KaidoLeap__LeapSpell_angle[this]=Atan2(targetY - s__KaidoLeap__LeapSpell_startY[this], targetX - s__KaidoLeap__LeapSpell_startX[this])
-            set s__KaidoLeap__LeapSpell_elapsed[this]=0.0
+        function s__KaidoLeap___LeapSpell_create takes unit caster,real targetX,real targetY returns integer
+            local integer this= s__KaidoLeap___LeapSpell__allocate()
+            set s__KaidoLeap___LeapSpell_caster[this]=caster
+            set s__KaidoLeap___LeapSpell_startX[this]=GetUnitX(caster)
+            set s__KaidoLeap___LeapSpell_startY[this]=GetUnitY(caster)
+            set s__KaidoLeap___LeapSpell_targetX[this]=targetX
+            set s__KaidoLeap___LeapSpell_targetY[this]=targetY
+            set s__KaidoLeap___LeapSpell_angle[this]=Atan2(targetY - s__KaidoLeap___LeapSpell_startY[this], targetX - s__KaidoLeap___LeapSpell_startX[this])
+            set s__KaidoLeap___LeapSpell_elapsed[this]=0.0
             call PauseUnit(caster, true)
             call SetUnitTimeScalePercent(caster, 40)
             call SetUnitFlyHeight(caster, 0.0, 0.0)
-            set s__KaidoLeap__LeapSpell_t[this]=NewTimerEx(this)
+            set s__KaidoLeap___LeapSpell_t[this]=NewTimerEx(this)
 
-            call TimerStart(s__KaidoLeap__LeapSpell_t[this], 0.03, false, function s__KaidoLeap__LeapSpell_delay)
+            call TimerStart(s__KaidoLeap___LeapSpell_t[this], 0.03, false, function s__KaidoLeap___LeapSpell_delay)
             return this
         endfunction
 
-        function s__KaidoLeap__LeapSpell_periodic takes nothing returns nothing
+        function s__KaidoLeap___LeapSpell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real t= s__KaidoLeap__LeapSpell_elapsed[this] / KaidoLeap__LEAP_DURATION
-            local player p= GetOwningPlayer(s__KaidoLeap__LeapSpell_caster[this])
+            local real t= s__KaidoLeap___LeapSpell_elapsed[this] / KaidoLeap___LEAP_DURATION
+            local player p= GetOwningPlayer(s__KaidoLeap___LeapSpell_caster[this])
             local real step
             local real newX
             local real newY
             local real mouseX= (s__UserMouse_mouseX[s__UserMouse__staticgetindex((p))]) // INLINED!!
             local real mouseY= (s__UserMouse_mouseY[s__UserMouse__staticgetindex((p))]) // INLINED!!
-            local real currentX= GetUnitX(s__KaidoLeap__LeapSpell_caster[this])
-            local real currentY= GetUnitY(s__KaidoLeap__LeapSpell_caster[this])
+            local real currentX= GetUnitX(s__KaidoLeap___LeapSpell_caster[this])
+            local real currentY= GetUnitY(s__KaidoLeap___LeapSpell_caster[this])
             local real dx= mouseX - currentX
             local real dy= mouseY - currentY
             local real dist= SquareRoot(dx * dx + dy * dy)
             local real angle= Atan2(dy, dx)
-            local real height= KaidoLeap__LEAP_HEIGHT * Sin(t * bj_PI)
+            local real height= KaidoLeap___LEAP_HEIGHT * Sin(t * bj_PI)
             local real baseDmg
             local group g
             local unit u
             local integer i
             
-            set s__KaidoLeap__LeapSpell_elapsed[this]=s__KaidoLeap__LeapSpell_elapsed[this] + 0.03
+            set s__KaidoLeap___LeapSpell_elapsed[this]=s__KaidoLeap___LeapSpell_elapsed[this] + 0.03
 
-            set step=800.0 / KaidoLeap__LEAP_DURATION * 0.03
+            set step=800.0 / KaidoLeap___LEAP_DURATION * 0.03
             set newX=currentX + step * Cos(angle)
             set newY=currentY + step * Sin(angle)
 
-            if dist >= KaidoLeap__LEAP_DEADZONE then
-                call SetUnitX(s__KaidoLeap__LeapSpell_caster[this], newX)
-                call SetUnitY(s__KaidoLeap__LeapSpell_caster[this], newY)
+            if dist >= KaidoLeap___LEAP_DEADZONE then
+                call SetUnitX(s__KaidoLeap___LeapSpell_caster[this], newX)
+                call SetUnitY(s__KaidoLeap___LeapSpell_caster[this], newY)
             endif
 
-            call SetUnitFlyHeight(s__KaidoLeap__LeapSpell_caster[this], height, 0)
-            call BlzSetUnitFacingEx(s__KaidoLeap__LeapSpell_caster[this], Rad2Deg(angle))
+            call SetUnitFlyHeight(s__KaidoLeap___LeapSpell_caster[this], height, 0)
+            call BlzSetUnitFacingEx(s__KaidoLeap___LeapSpell_caster[this], Rad2Deg(angle))
 
             if t >= 1.0 then
-                call PauseUnit(s__KaidoLeap__LeapSpell_caster[this], false)
-                call SetUnitFlyHeight(s__KaidoLeap__LeapSpell_caster[this], 0.0, 0.0)
-                set s__KaidoLeap__LeapSpell_e1[this]=AddSpecialEffect(KaidoLeap__SFX_IMPACT, newX, newY)
-                call BlzSetSpecialEffectScale(s__KaidoLeap__LeapSpell_e1[this], 1.0)
-                call BlzSetSpecialEffectHeight(s__KaidoLeap__LeapSpell_e1[this], GetPointZ(newX , newY) + 10)
-                set s__KaidoLeap__LeapSpell_e2[this]=AddSpecialEffect(KaidoLeap__SFX_IMPACT, newX, newY)
-                call BlzSetSpecialEffectScale(s__KaidoLeap__LeapSpell_e2[this], 1.0)
-                call DestroyEffect(s__KaidoLeap__LeapSpell_e3[this])
-                set s__KaidoLeap__LeapSpell_e3[this]=null
+                call PauseUnit(s__KaidoLeap___LeapSpell_caster[this], false)
+                call SetUnitFlyHeight(s__KaidoLeap___LeapSpell_caster[this], 0.0, 0.0)
+                set s__KaidoLeap___LeapSpell_e1[this]=AddSpecialEffect(KaidoLeap___SFX_IMPACT, newX, newY)
+                call BlzSetSpecialEffectScale(s__KaidoLeap___LeapSpell_e1[this], 1.0)
+                call BlzSetSpecialEffectHeight(s__KaidoLeap___LeapSpell_e1[this], GetPointZ(newX , newY) + 10)
+                set s__KaidoLeap___LeapSpell_e2[this]=AddSpecialEffect(KaidoLeap___SFX_IMPACT, newX, newY)
+                call BlzSetSpecialEffectScale(s__KaidoLeap___LeapSpell_e2[this], 1.0)
+                call DestroyEffect(s__KaidoLeap___LeapSpell_e3[this])
+                set s__KaidoLeap___LeapSpell_e3[this]=null
 
                 set g=CreateGroup()
-                set baseDmg=10.0 * I2R(GetHeroStr(s__KaidoLeap__LeapSpell_caster[this], true))
+                set baseDmg=10.0 * I2R(GetHeroStr(s__KaidoLeap___LeapSpell_caster[this], true))
 
-                call GroupEnumUnitsInRange(g, newX, newY, KaidoLeap__DAMAGE_RADIUS, null)
+                call GroupEnumUnitsInRange(g, newX, newY, KaidoLeap___DAMAGE_RADIUS, null)
                 loop
                     set u=FirstOfGroup(g)
                     exitwhen u == null
                     call GroupRemoveUnit(g, u)
-                    if IsUnitEnemy(u, GetOwningPlayer(s__KaidoLeap__LeapSpell_caster[this])) and GetWidgetLife(u) > 0.405 and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
-                        call UnitDamageTarget(s__KaidoLeap__LeapSpell_caster[this], u, 10.0 * I2R(GetHeroStr(s__KaidoLeap__LeapSpell_caster[this], true)), false, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-                        call StunUnitTimed(s__KaidoLeap__LeapSpell_caster[this] , u , 0.75)
+                    if IsUnitEnemy(u, GetOwningPlayer(s__KaidoLeap___LeapSpell_caster[this])) and GetWidgetLife(u) > 0.405 and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
+                        call UnitDamageTarget(s__KaidoLeap___LeapSpell_caster[this], u, 10.0 * I2R(GetHeroStr(s__KaidoLeap___LeapSpell_caster[this], true)), false, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                        call StunUnitTimed(s__KaidoLeap___LeapSpell_caster[this] , u , 0.75)
                     endif
                 endloop
                 call DestroyGroup(g)
@@ -86306,24 +86598,24 @@ endfunction
                     set dx=s__RockData_rx[i] - newX
                     set dy=s__RockData_ry[i] - newY
                     set dist=dx * dx + dy * dy
-                    if dist <= KaidoLeap__DAMAGE_RADIUS * KaidoLeap__DAMAGE_RADIUS then
-                        if KaidoShock_ExplodeRock(s__RockData_rock[i] , s__KaidoLeap__LeapSpell_caster[this]) then
+                    if dist <= KaidoLeap___DAMAGE_RADIUS * KaidoLeap___DAMAGE_RADIUS then
+                        if KaidoShock_ExplodeRock(s__RockData_rock[i] , s__KaidoLeap___LeapSpell_caster[this]) then
                             exitwhen true
                         endif
                     endif
                     set i=i + 1
                 endloop
 
-                call TimerStart(NewTimerEx(this), 0.5, false, function s__KaidoLeap__LeapSpell_destroyEffects)
+                call TimerStart(NewTimerEx(this), 0.5, false, function s__KaidoLeap___LeapSpell_destroyEffects)
 
-                call SetUnitTimeScalePercent(s__KaidoLeap__LeapSpell_caster[this], 100)
-                call DestroyTimer(s__KaidoLeap__LeapSpell_t[this])
-                call s__KaidoLeap__LeapSpell_deallocate(this)
+                call SetUnitTimeScalePercent(s__KaidoLeap___LeapSpell_caster[this], 100)
+                call DestroyTimer(s__KaidoLeap___LeapSpell_t[this])
+                call s__KaidoLeap___LeapSpell_deallocate(this)
             endif
         endfunction
 
-        function s__KaidoLeap__LeapSpell_onCast takes nothing returns boolean
-            if GetSpellAbilityId() != KaidoLeap__ABILITY_ID then
+        function s__KaidoLeap___LeapSpell_onCast takes nothing returns boolean
+            if GetSpellAbilityId() != KaidoLeap___ABILITY_ID then
                 return false
             endif
             
@@ -86331,14 +86623,14 @@ endfunction
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff0000Kurotsuchi: This is our chance to end it all at once.|r")
                 call PlaySoundOnUnitBJ(gg_snd_Kurotsuchi_T, 80, GetTriggerUnit())
             endif
-            call s__KaidoLeap__LeapSpell_create(GetTriggerUnit() , (s__UserMouse_mouseX[s__UserMouse__staticgetindex((GetTriggerPlayer()))]) , (s__UserMouse_mouseY[s__UserMouse__staticgetindex((GetTriggerPlayer()))])) // INLINED!!
+            call s__KaidoLeap___LeapSpell_create(GetTriggerUnit() , (s__UserMouse_mouseX[s__UserMouse__staticgetindex((GetTriggerPlayer()))]) , (s__UserMouse_mouseY[s__UserMouse__staticgetindex((GetTriggerPlayer()))])) // INLINED!!
             return false
         endfunction
 
-    function KaidoLeap__onInit takes nothing returns nothing
+    function KaidoLeap___onInit takes nothing returns nothing
         local trigger t= CreateTrigger()
         call TriggerRegisterAnyUnitEventBJ(t, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-        call TriggerAddCondition(t, Condition(function s__KaidoLeap__LeapSpell_onCast))
+        call TriggerAddCondition(t, Condition(function s__KaidoLeap___LeapSpell_onCast))
     endfunction
 
 // scope KaidoLeap ends
@@ -86559,9 +86851,9 @@ endfunction
         set i=0
         loop
             exitwhen i > 4
-            call KillUnit(s__KushinaChains__kushinaChains[(this)*(1)+i])
-            call ShowUnit(s__KushinaChains__kushinaChains[(this)*(1)+i], false)
-            set s__KushinaChains__kushinaChains[(this)*(1)+i]= null
+            call KillUnit(s__KushinaChains___kushinaChains[(this)*(1)+i])
+            call ShowUnit(s__KushinaChains___kushinaChains[(this)*(1)+i], false)
+            set s__KushinaChains___kushinaChains[(this)*(1)+i]= null
             set i=i + 1
         endloop
         call DestroyGroup(s__KushinaChains_damaged[this])
@@ -86580,11 +86872,11 @@ endfunction
         set i=0
         loop
             exitwhen i > 4
-            set x=(((GetUnitX(s__KushinaChains__kushinaChains[(this)*(1)+i]) )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__KushinaChains__kushinaChains[(this)*(1)+i])) )*1.0)) * (( 80.0)*1.0)) // INLINED!!
-            set y=(((GetUnitY(s__KushinaChains__kushinaChains[(this)*(1)+i]) )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__KushinaChains__kushinaChains[(this)*(1)+i])) )*1.0)) * (( 80.0)*1.0)) // INLINED!!
-            call SetUnitX(s__KushinaChains__kushinaChains[(this)*(1)+i], x)
-            call SetUnitY(s__KushinaChains__kushinaChains[(this)*(1)+i], y)
-            call SetUnitFlyHeight(s__KushinaChains__kushinaChains[(this)*(1)+i], GetUnitFlyHeight(s__KushinaChains__kushinaChains[(this)*(1)+i]) + 8, 0)
+            set x=(((GetUnitX(s__KushinaChains___kushinaChains[(this)*(1)+i]) )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__KushinaChains___kushinaChains[(this)*(1)+i])) )*1.0)) * (( 80.0)*1.0)) // INLINED!!
+            set y=(((GetUnitY(s__KushinaChains___kushinaChains[(this)*(1)+i]) )*1.0) + Sin((( Deg2Rad(GetUnitFacing(s__KushinaChains___kushinaChains[(this)*(1)+i])) )*1.0)) * (( 80.0)*1.0)) // INLINED!!
+            call SetUnitX(s__KushinaChains___kushinaChains[(this)*(1)+i], x)
+            call SetUnitY(s__KushinaChains___kushinaChains[(this)*(1)+i], y)
+            call SetUnitFlyHeight(s__KushinaChains___kushinaChains[(this)*(1)+i], GetUnitFlyHeight(s__KushinaChains___kushinaChains[(this)*(1)+i]) + 8, 0)
             set bj_lastCreatedGroup=CreateGroup()
             call GroupEnumUnitsInRange(bj_lastCreatedGroup, x, y, 150.0, null)
             loop
@@ -86620,34 +86912,34 @@ endfunction
         set i=0
         loop
             exitwhen i > 4
-            set s__KushinaChains__kushinaChains[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__KushinaChains_caster[this]), 'e007', GetUnitX(s__KushinaChains_caster[this]), GetUnitY(s__KushinaChains_caster[this]), Rad2Deg(angle) - 30 + 15 * i)
+            set s__KushinaChains___kushinaChains[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__KushinaChains_caster[this]), 'e007', GetUnitX(s__KushinaChains_caster[this]), GetUnitY(s__KushinaChains_caster[this]), Rad2Deg(angle) - 30 + 15 * i)
             set i=i + 1
         endloop
 
         set s__KushinaChains_chain[this]=s__Lightning_create("YECH" , true , 0.5)
         call s__Lightning_recolor(s__KushinaChains_chain[this],1 , 1 , 0.7 , 0.8)
         call s__Lightning_attachToUnit(s__KushinaChains_chain[this],false , s__KushinaChains_caster[this] , 60)
-        call s__Lightning_attachToUnit(s__KushinaChains_chain[this],true , s__KushinaChains__kushinaChains[(this)*(1)+0] , 60)
+        call s__Lightning_attachToUnit(s__KushinaChains_chain[this],true , s__KushinaChains___kushinaChains[(this)*(1)+0] , 60)
 
         set s__KushinaChains_chain1[this]=s__Lightning_create("YECH" , true , 0.5)
         call s__Lightning_recolor(s__KushinaChains_chain1[this],1 , 1 , 0.7 , 0.8)
         call s__Lightning_attachToUnit(s__KushinaChains_chain1[this],false , s__KushinaChains_caster[this] , 60)
-        call s__Lightning_attachToUnit(s__KushinaChains_chain1[this],true , s__KushinaChains__kushinaChains[(this)*(1)+1] , 60)
+        call s__Lightning_attachToUnit(s__KushinaChains_chain1[this],true , s__KushinaChains___kushinaChains[(this)*(1)+1] , 60)
 
         set s__KushinaChains_chain2[this]=s__Lightning_create("YECH" , true , 0.5)
         call s__Lightning_recolor(s__KushinaChains_chain2[this],1 , 1 , 0.7 , 0.8)
         call s__Lightning_attachToUnit(s__KushinaChains_chain2[this],false , s__KushinaChains_caster[this] , 60)
-        call s__Lightning_attachToUnit(s__KushinaChains_chain2[this],true , s__KushinaChains__kushinaChains[(this)*(1)+2] , 60)
+        call s__Lightning_attachToUnit(s__KushinaChains_chain2[this],true , s__KushinaChains___kushinaChains[(this)*(1)+2] , 60)
 
         set s__KushinaChains_chain3[this]=s__Lightning_create("YECH" , true , 0.5)
         call s__Lightning_recolor(s__KushinaChains_chain3[this],1 , 1 , 0.7 , 0.8)
         call s__Lightning_attachToUnit(s__KushinaChains_chain3[this],false , s__KushinaChains_caster[this] , 60)
-        call s__Lightning_attachToUnit(s__KushinaChains_chain3[this],true , s__KushinaChains__kushinaChains[(this)*(1)+3] , 60)
+        call s__Lightning_attachToUnit(s__KushinaChains_chain3[this],true , s__KushinaChains___kushinaChains[(this)*(1)+3] , 60)
 
         set s__KushinaChains_chain4[this]=s__Lightning_create("YECH" , true , 0.5)
         call s__Lightning_recolor(s__KushinaChains_chain4[this],1 , 1 , 0.7 , 0.8)
         call s__Lightning_attachToUnit(s__KushinaChains_chain4[this],false , s__KushinaChains_caster[this] , 60)
-        call s__Lightning_attachToUnit(s__KushinaChains_chain4[this],true , s__KushinaChains__kushinaChains[(this)*(1)+4] , 60)
+        call s__Lightning_attachToUnit(s__KushinaChains_chain4[this],true , s__KushinaChains___kushinaChains[(this)*(1)+4] , 60)
 
 	
         call SetUnitAnimation(s__KushinaChains_caster[this], "attack")
@@ -87070,9 +87362,9 @@ endfunction
             set i=0
             loop
                 exitwhen i > 5
-                call KillUnit(s__KushinaChainsArea__KushinaChain[(this)*(1)+i])
-                call ShowUnit(s__KushinaChainsArea__KushinaChain[(this)*(1)+i], false)
-                set s__KushinaChainsArea__KushinaChain[(this)*(1)+i]= null
+                call KillUnit(s__KushinaChainsArea___KushinaChain[(this)*(1)+i])
+                call ShowUnit(s__KushinaChainsArea___KushinaChain[(this)*(1)+i], false)
+                set s__KushinaChainsArea___KushinaChain[(this)*(1)+i]= null
                 set i=i + 1
             endloop
             call ShowUnit(s__KushinaChainsArea_dummy[this], false)
@@ -87098,34 +87390,34 @@ endfunction
                 exitwhen i > 4
                 set x=(((s__KushinaChainsArea_target_x[this] )*1.0) + Cos((( Deg2Rad(72 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
                 set y=(((s__KushinaChainsArea_target_y[this] )*1.0) + Sin((( Deg2Rad(72 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
-                call SetUnitX(s__KushinaChainsArea__KushinaChain[(this)*(1)+i], x)
-                call SetUnitY(s__KushinaChainsArea__KushinaChain[(this)*(1)+i], y)
+                call SetUnitX(s__KushinaChainsArea___KushinaChain[(this)*(1)+i], x)
+                call SetUnitY(s__KushinaChainsArea___KushinaChain[(this)*(1)+i], y)
                 set i=i + 1
             endloop
             set s__KushinaChainsArea_chain[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KushinaChainsArea_chain[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KushinaChainsArea_chain[this],false , s__KushinaChainsArea_dummy[this] , 60)
-            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain[this],true , s__KushinaChainsArea__KushinaChain[(this)*(1)+0] , 60)
+            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain[this],true , s__KushinaChainsArea___KushinaChain[(this)*(1)+0] , 60)
 
             set s__KushinaChainsArea_chain1[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KushinaChainsArea_chain1[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KushinaChainsArea_chain1[this],false , s__KushinaChainsArea_dummy[this] , 60)
-            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain1[this],true , s__KushinaChainsArea__KushinaChain[(this)*(1)+1] , 60)
+            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain1[this],true , s__KushinaChainsArea___KushinaChain[(this)*(1)+1] , 60)
 
             set s__KushinaChainsArea_chain2[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KushinaChainsArea_chain2[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KushinaChainsArea_chain2[this],false , s__KushinaChainsArea_dummy[this] , 60)
-            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain2[this],true , s__KushinaChainsArea__KushinaChain[(this)*(1)+2] , 60)
+            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain2[this],true , s__KushinaChainsArea___KushinaChain[(this)*(1)+2] , 60)
 
             set s__KushinaChainsArea_chain3[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KushinaChainsArea_chain3[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KushinaChainsArea_chain3[this],false , s__KushinaChainsArea_dummy[this] , 60)
-            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain3[this],true , s__KushinaChainsArea__KushinaChain[(this)*(1)+3] , 60)
+            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain3[this],true , s__KushinaChainsArea___KushinaChain[(this)*(1)+3] , 60)
 
             set s__KushinaChainsArea_chain4[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KushinaChainsArea_chain4[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KushinaChainsArea_chain4[this],false , s__KushinaChainsArea_dummy[this] , 60)
-            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain4[this],true , s__KushinaChainsArea__KushinaChain[(this)*(1)+4] , 60)
+            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain4[this],true , s__KushinaChainsArea___KushinaChain[(this)*(1)+4] , 60)
             
             call SetUnitFlyHeight(s__KushinaChainsArea_dummy[this], 1000, 10000)
             set bj_lastCreatedGroup=CreateGroup()
@@ -87153,34 +87445,34 @@ endfunction
                 exitwhen i > 4
                 set x=(((GetUnitX(s__KushinaChainsArea_caster[this]) )*1.0) + Cos((( Deg2Rad(72 * i) )*1.0)) * (( 250)*1.0)) // INLINED!!
                 set y=(((GetUnitY(s__KushinaChainsArea_caster[this]) )*1.0) + Sin((( Deg2Rad(72 * i) )*1.0)) * (( 250)*1.0)) // INLINED!!
-                set s__KushinaChainsArea__KushinaChain[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__KushinaChainsArea_caster[this]), 'e007', x, y, 270)
-                call SetUnitFlyHeight(s__KushinaChainsArea__KushinaChain[(this)*(1)+i], - 200, 0)
+                set s__KushinaChainsArea___KushinaChain[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__KushinaChainsArea_caster[this]), 'e007', x, y, 270)
+                call SetUnitFlyHeight(s__KushinaChainsArea___KushinaChain[(this)*(1)+i], - 200, 0)
                 set i=i + 1
             endloop
             set s__KushinaChainsArea_chain[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KushinaChainsArea_chain[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KushinaChainsArea_chain[this],false , s__KushinaChainsArea_caster[this] , 60)
-            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain[this],true , s__KushinaChainsArea__KushinaChain[(this)*(1)+0] , 60)
+            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain[this],true , s__KushinaChainsArea___KushinaChain[(this)*(1)+0] , 60)
 
             set s__KushinaChainsArea_chain1[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KushinaChainsArea_chain1[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KushinaChainsArea_chain1[this],false , s__KushinaChainsArea_caster[this] , 60)
-            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain1[this],true , s__KushinaChainsArea__KushinaChain[(this)*(1)+1] , 60)
+            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain1[this],true , s__KushinaChainsArea___KushinaChain[(this)*(1)+1] , 60)
 
             set s__KushinaChainsArea_chain2[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KushinaChainsArea_chain2[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KushinaChainsArea_chain2[this],false , s__KushinaChainsArea_caster[this] , 60)
-            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain2[this],true , s__KushinaChainsArea__KushinaChain[(this)*(1)+2] , 60)
+            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain2[this],true , s__KushinaChainsArea___KushinaChain[(this)*(1)+2] , 60)
 
             set s__KushinaChainsArea_chain3[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KushinaChainsArea_chain3[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KushinaChainsArea_chain3[this],false , s__KushinaChainsArea_caster[this] , 60)
-            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain3[this],true , s__KushinaChainsArea__KushinaChain[(this)*(1)+3] , 60)
+            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain3[this],true , s__KushinaChainsArea___KushinaChain[(this)*(1)+3] , 60)
 
             set s__KushinaChainsArea_chain4[this]=s__Lightning_create("YECH" , true , 0.5)
             call s__Lightning_recolor(s__KushinaChainsArea_chain4[this],1 , 1 , 0.7 , 0.8)
             call s__Lightning_attachToUnit(s__KushinaChainsArea_chain4[this],false , s__KushinaChainsArea_caster[this] , 60)
-            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain4[this],true , s__KushinaChainsArea__KushinaChain[(this)*(1)+4] , 60)
+            call s__Lightning_attachToUnit(s__KushinaChainsArea_chain4[this],true , s__KushinaChainsArea___KushinaChain[(this)*(1)+4] , 60)
 	
             call TimerStartEx(NewTimerEx(this) , 0.5 , false , function s__KushinaChainsArea_delay , "KushinaChainsArea_delay")
         endfunction
@@ -87436,49 +87728,49 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__MadaraMokuton__Spell_allocate takes nothing returns integer
+        function s__MadaraMokuton___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__MadaraMokuton__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__MadaraMokuton__Spell_Alloc__instanceCount=s__MadaraMokuton__Spell_Alloc__instanceCount + 1
-                set this=s__MadaraMokuton__Spell_Alloc__instanceCount
+            if ( s__MadaraMokuton___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__MadaraMokuton___Spell_Alloc__instanceCount=s__MadaraMokuton___Spell_Alloc__instanceCount + 1
+                set this=s__MadaraMokuton___Spell_Alloc__instanceCount
             else
-                set this=s__MadaraMokuton__Spell_Alloc__recycle[(0)]
-                set s__MadaraMokuton__Spell_Alloc__recycle[(0)]=s__MadaraMokuton__Spell_Alloc__recycle[s__MadaraMokuton__Spell_Alloc__recycle[(0)]]
+                set this=s__MadaraMokuton___Spell_Alloc__recycle[(0)]
+                set s__MadaraMokuton___Spell_Alloc__recycle[(0)]=s__MadaraMokuton___Spell_Alloc__recycle[s__MadaraMokuton___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__MadaraMokuton__Spell_deallocate takes integer this returns nothing
-            set s__MadaraMokuton__Spell_Alloc__recycle[this]=s__MadaraMokuton__Spell_Alloc__recycle[(0)]
-            set s__MadaraMokuton__Spell_Alloc__recycle[(0)]=this
+        function s__MadaraMokuton___Spell_deallocate takes integer this returns nothing
+            set s__MadaraMokuton___Spell_Alloc__recycle[this]=s__MadaraMokuton___Spell_Alloc__recycle[(0)]
+            set s__MadaraMokuton___Spell_Alloc__recycle[(0)]=this
         endfunction
         
 
-        function s__MadaraMokuton__Spell_cleanup takes nothing returns nothing
+        function s__MadaraMokuton___Spell_cleanup takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             loop
-                set bj_lastCreatedUnit=FirstOfGroup(s__MadaraMokuton__Spell_dummies_effect[this])
+                set bj_lastCreatedUnit=FirstOfGroup(s__MadaraMokuton___Spell_dummies_effect[this])
                 exitwhen bj_lastCreatedUnit == null
                 call ShowUnit(bj_lastCreatedUnit, false)
                 call KillUnit(bj_lastCreatedUnit)
-                call GroupRemoveUnit(s__MadaraMokuton__Spell_dummies_effect[this], bj_lastCreatedUnit)
+                call GroupRemoveUnit(s__MadaraMokuton___Spell_dummies_effect[this], bj_lastCreatedUnit)
             endloop
-            call DestroyGroup(s__MadaraMokuton__Spell_dummies_effect[this])
-            set s__MadaraMokuton__Spell_dummies_effect[this]=null
-            call DestroyGroup(s__MadaraMokuton__Spell_damaged[this])
-            call KillUnit(s__MadaraMokuton__Spell_dummy[this])
-            set s__MadaraMokuton__Spell_damaged[this]=null
-            set s__MadaraMokuton__Spell_caster[this]=null
-            set s__MadaraMokuton__Spell_dummy[this]=null
-            call s__MadaraMokuton__Spell_deallocate(this)
+            call DestroyGroup(s__MadaraMokuton___Spell_dummies_effect[this])
+            set s__MadaraMokuton___Spell_dummies_effect[this]=null
+            call DestroyGroup(s__MadaraMokuton___Spell_damaged[this])
+            call KillUnit(s__MadaraMokuton___Spell_dummy[this])
+            set s__MadaraMokuton___Spell_damaged[this]=null
+            set s__MadaraMokuton___Spell_caster[this]=null
+            set s__MadaraMokuton___Spell_dummy[this]=null
+            call s__MadaraMokuton___Spell_deallocate(this)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__MadaraMokuton__Spell_periodic takes nothing returns nothing
+        function s__MadaraMokuton___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real dummy_x
             local real dummy_y
@@ -87486,14 +87778,14 @@ endfunction
             local real new_y
             local real new_x1
             local real new_y1
-            set s__MadaraMokuton__Spell_count[this]=s__MadaraMokuton__Spell_count[this] + 1
-            set dummy_x=GetUnitX(s__MadaraMokuton__Spell_dummy[this])
-            set dummy_y=GetUnitY(s__MadaraMokuton__Spell_dummy[this])
-            set new_x=dummy_x + Cos(Deg2Rad(GetUnitFacing(s__MadaraMokuton__Spell_dummy[this]))) * 30
-            set new_y=dummy_y + Sin(Deg2Rad(GetUnitFacing(s__MadaraMokuton__Spell_dummy[this]))) * 30
-            call SetUnitX(s__MadaraMokuton__Spell_dummy[this], new_x)
-            call SetUnitY(s__MadaraMokuton__Spell_dummy[this], new_y)
-            if ModuloInteger(s__MadaraMokuton__Spell_count[this], 4) == 0 then
+            set s__MadaraMokuton___Spell_count[this]=s__MadaraMokuton___Spell_count[this] + 1
+            set dummy_x=GetUnitX(s__MadaraMokuton___Spell_dummy[this])
+            set dummy_y=GetUnitY(s__MadaraMokuton___Spell_dummy[this])
+            set new_x=dummy_x + Cos(Deg2Rad(GetUnitFacing(s__MadaraMokuton___Spell_dummy[this]))) * 30
+            set new_y=dummy_y + Sin(Deg2Rad(GetUnitFacing(s__MadaraMokuton___Spell_dummy[this]))) * 30
+            call SetUnitX(s__MadaraMokuton___Spell_dummy[this], new_x)
+            call SetUnitY(s__MadaraMokuton___Spell_dummy[this], new_y)
+            if ModuloInteger(s__MadaraMokuton___Spell_count[this], 4) == 0 then
                 set bj_lastCreatedEffect=AddSpecialEffect("war3mapImported\\BrownRoots.mdx", new_x, new_y)
                 call BlzSetSpecialEffectYaw(bj_lastCreatedEffect, Deg2Rad(GetRandomInt(0, 360)))
                 call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 2.3)
@@ -87506,76 +87798,76 @@ endfunction
                 call DestroyEffect(bj_lastCreatedEffect)
                 call DestroyEffect(AddSpecialEffect(("Effects\\s_Earth_Smash.mdx" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
             endif
-            if ( s__MadaraMokuton__Spell_count[this] == 3 or s__MadaraMokuton__Spell_count[this] == 17 ) then
-                set new_x1=(((new_x )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__MadaraMokuton__Spell_dummy[this]) + 90) )*1.0)) * (( 100)*1.0)) // INLINED!!
-                set new_y1=(((new_y )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__MadaraMokuton__Spell_dummy[this]) + 90) )*1.0)) * (( 100)*1.0)) // INLINED!!
-                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__MadaraMokuton__Spell_caster[this]) ), ( 'h05P' ), (( new_x1 )*1.0), (( new_y1 )*1.0), (( 270.0)*1.0))) // INLINED!!
+            if ( s__MadaraMokuton___Spell_count[this] == 3 or s__MadaraMokuton___Spell_count[this] == 17 ) then
+                set new_x1=(((new_x )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__MadaraMokuton___Spell_dummy[this]) + 90) )*1.0)) * (( 100)*1.0)) // INLINED!!
+                set new_y1=(((new_y )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__MadaraMokuton___Spell_dummy[this]) + 90) )*1.0)) * (( 100)*1.0)) // INLINED!!
+                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__MadaraMokuton___Spell_caster[this]) ), ( 'h05P' ), (( new_x1 )*1.0), (( new_y1 )*1.0), (( 270.0)*1.0))) // INLINED!!
                 call SetUnitScale(bj_lastCreatedUnit, 1.3, 1.0, 1.0)
                 call SetUnitTimeScale(bj_lastCreatedUnit, 10.0)
                 call IssueImmediateOrder(bj_lastCreatedUnit, "stand")
-                call GroupAddUnit(s__MadaraMokuton__Spell_dummies_effect[this], bj_lastCreatedUnit)
-            elseif s__MadaraMokuton__Spell_count[this] == 8 then
-                set new_x1=(((new_x )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__MadaraMokuton__Spell_dummy[this]) - 90) )*1.0)) * (( 70)*1.0)) // INLINED!!
-                set new_y1=(((new_y )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__MadaraMokuton__Spell_dummy[this]) - 90) )*1.0)) * (( 70)*1.0)) // INLINED!!
-                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__MadaraMokuton__Spell_caster[this]) ), ( 'h05P' ), (( new_x1 )*1.0), (( new_y1 )*1.0), (( 270.0)*1.0))) // INLINED!!
+                call GroupAddUnit(s__MadaraMokuton___Spell_dummies_effect[this], bj_lastCreatedUnit)
+            elseif s__MadaraMokuton___Spell_count[this] == 8 then
+                set new_x1=(((new_x )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__MadaraMokuton___Spell_dummy[this]) - 90) )*1.0)) * (( 70)*1.0)) // INLINED!!
+                set new_y1=(((new_y )*1.0) + Cos((( Deg2Rad(GetUnitFacing(s__MadaraMokuton___Spell_dummy[this]) - 90) )*1.0)) * (( 70)*1.0)) // INLINED!!
+                set bj_lastCreatedUnit=(CreateUnit((GetOwningPlayer(s__MadaraMokuton___Spell_caster[this]) ), ( 'h05P' ), (( new_x1 )*1.0), (( new_y1 )*1.0), (( 270.0)*1.0))) // INLINED!!
                 call SetUnitScale(bj_lastCreatedUnit, 1.3, 1.0, 1.0)
                 call SetUnitTimeScale(bj_lastCreatedUnit, 10.0)
                 call IssueImmediateOrder(bj_lastCreatedUnit, "stand")
-                call GroupAddUnit(s__MadaraMokuton__Spell_dummies_effect[this], bj_lastCreatedUnit)
+                call GroupAddUnit(s__MadaraMokuton___Spell_dummies_effect[this], bj_lastCreatedUnit)
             endif
             set bj_lastCreatedGroup=CreateGroup()
             call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 180, null)
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
-                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__MadaraMokuton__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false and not IsUnitInGroup(bj_lastCreatedUnit, s__MadaraMokuton__Spell_damaged[this]) then
-			if GetUnitAbilityLevel(s__MadaraMokuton__Spell_caster[this], 'A0HQ') > 0 then
-                        	call UnitDamageTarget(s__MadaraMokuton__Spell_caster[this], bj_lastCreatedUnit, GetHeroInt(s__MadaraMokuton__Spell_caster[this], true) * GetUnitAbilityLevel(s__MadaraMokuton__Spell_caster[this], s__MadaraMokuton__Spell_SPELL_ID), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__MadaraMokuton___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false and not IsUnitInGroup(bj_lastCreatedUnit, s__MadaraMokuton___Spell_damaged[this]) then
+			if GetUnitAbilityLevel(s__MadaraMokuton___Spell_caster[this], 'A0HQ') > 0 then
+                        	call UnitDamageTarget(s__MadaraMokuton___Spell_caster[this], bj_lastCreatedUnit, GetHeroInt(s__MadaraMokuton___Spell_caster[this], true) * GetUnitAbilityLevel(s__MadaraMokuton___Spell_caster[this], s__MadaraMokuton___Spell_SPELL_ID), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
 			else
-                        	call UnitDamageTarget(s__MadaraMokuton__Spell_caster[this], bj_lastCreatedUnit, GetHeroInt(s__MadaraMokuton__Spell_caster[this], true) * GetUnitAbilityLevel(s__MadaraMokuton__Spell_caster[this], s__MadaraMokuton__Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+                        	call UnitDamageTarget(s__MadaraMokuton___Spell_caster[this], bj_lastCreatedUnit, GetHeroInt(s__MadaraMokuton___Spell_caster[this], true) * GetUnitAbilityLevel(s__MadaraMokuton___Spell_caster[this], s__MadaraMokuton___Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
 			endif
-                    call GroupAddUnit(s__MadaraMokuton__Spell_damaged[this], bj_lastCreatedUnit)
+                    call GroupAddUnit(s__MadaraMokuton___Spell_damaged[this], bj_lastCreatedUnit)
                     if GetWidgetLife(bj_lastCreatedUnit) > 0.405 then
-			call EsnareUnitTimed(s__MadaraMokuton__Spell_caster[this] , bj_lastCreatedUnit , 1.0)
+			call EsnareUnitTimed(s__MadaraMokuton___Spell_caster[this] , bj_lastCreatedUnit , 1.0)
                     endif
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            if s__MadaraMokuton__Spell_count[this] > 20 then
-                call SetUnitTimeScale(s__MadaraMokuton__Spell_caster[this], 1.0)
-                call TimerStart(NewTimerEx(this), 1.0, false, function s__MadaraMokuton__Spell_cleanup)
+            if s__MadaraMokuton___Spell_count[this] > 20 then
+                call SetUnitTimeScale(s__MadaraMokuton___Spell_caster[this], 1.0)
+                call TimerStart(NewTimerEx(this), 1.0, false, function s__MadaraMokuton___Spell_cleanup)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__MadaraMokuton__Spell_actions takes nothing returns nothing
-            local integer this= s__MadaraMokuton__Spell_allocate()
+        function s__MadaraMokuton___Spell_actions takes nothing returns nothing
+            local integer this= s__MadaraMokuton___Spell_allocate()
             local real caster_x
             local real caster_y
             local real target_x
             local real target_y
             local real angle
-            set s__MadaraMokuton__Spell_damaged[this]=CreateGroup()
-            set s__MadaraMokuton__Spell_caster[this]=GetTriggerUnit()
-            set caster_x=GetUnitX(s__MadaraMokuton__Spell_caster[this])
-            set caster_y=GetUnitY(s__MadaraMokuton__Spell_caster[this])
+            set s__MadaraMokuton___Spell_damaged[this]=CreateGroup()
+            set s__MadaraMokuton___Spell_caster[this]=GetTriggerUnit()
+            set caster_x=GetUnitX(s__MadaraMokuton___Spell_caster[this])
+            set caster_y=GetUnitY(s__MadaraMokuton___Spell_caster[this])
             set target_x=GetSpellTargetX()
             set target_y=GetSpellTargetY()
-            set s__MadaraMokuton__Spell_dummies_effect[this]=CreateGroup()
+            set s__MadaraMokuton___Spell_dummies_effect[this]=CreateGroup()
             set angle=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
-            set s__MadaraMokuton__Spell_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, Rad2Deg(angle))
-            call SetUnitX(s__MadaraMokuton__Spell_dummy[this], caster_x)
-            call SetUnitY(s__MadaraMokuton__Spell_dummy[this], caster_y)
-            set s__MadaraMokuton__Spell_count[this]=0
-            if GetUnitTypeId(s__MadaraMokuton__Spell_caster[this]) == 'N00V' then
-                call SetUnitAnimation(s__MadaraMokuton__Spell_caster[this], "spell gold")
+            set s__MadaraMokuton___Spell_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, Rad2Deg(angle))
+            call SetUnitX(s__MadaraMokuton___Spell_dummy[this], caster_x)
+            call SetUnitY(s__MadaraMokuton___Spell_dummy[this], caster_y)
+            set s__MadaraMokuton___Spell_count[this]=0
+            if GetUnitTypeId(s__MadaraMokuton___Spell_caster[this]) == 'N00V' then
+                call SetUnitAnimation(s__MadaraMokuton___Spell_caster[this], "spell gold")
             endif
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraMokuton__Spell_periodic)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraMokuton___Spell_periodic)
         endfunction
         
-        function s__MadaraMokuton__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2((s__MadaraMokuton__Spell_SPELL_ID ) , Filter(( function s__MadaraMokuton__Spell_actions))) // INLINED!!
+        function s__MadaraMokuton___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEvent2((s__MadaraMokuton___Spell_SPELL_ID ) , Filter(( function s__MadaraMokuton___Spell_actions))) // INLINED!!
         endfunction
         
     
@@ -87589,40 +87881,40 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__MadaraKaton__Spell_allocate takes nothing returns integer
+        function s__MadaraKaton___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__MadaraKaton__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__MadaraKaton__Spell_Alloc__instanceCount=s__MadaraKaton__Spell_Alloc__instanceCount + 1
-                set this=s__MadaraKaton__Spell_Alloc__instanceCount
+            if ( s__MadaraKaton___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__MadaraKaton___Spell_Alloc__instanceCount=s__MadaraKaton___Spell_Alloc__instanceCount + 1
+                set this=s__MadaraKaton___Spell_Alloc__instanceCount
             else
-                set this=s__MadaraKaton__Spell_Alloc__recycle[(0)]
-                set s__MadaraKaton__Spell_Alloc__recycle[(0)]=s__MadaraKaton__Spell_Alloc__recycle[s__MadaraKaton__Spell_Alloc__recycle[(0)]]
+                set this=s__MadaraKaton___Spell_Alloc__recycle[(0)]
+                set s__MadaraKaton___Spell_Alloc__recycle[(0)]=s__MadaraKaton___Spell_Alloc__recycle[s__MadaraKaton___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__MadaraKaton__Spell_deallocate takes integer this returns nothing
-            set s__MadaraKaton__Spell_Alloc__recycle[this]=s__MadaraKaton__Spell_Alloc__recycle[(0)]
-            set s__MadaraKaton__Spell_Alloc__recycle[(0)]=this
+        function s__MadaraKaton___Spell_deallocate takes integer this returns nothing
+            set s__MadaraKaton___Spell_Alloc__recycle[this]=s__MadaraKaton___Spell_Alloc__recycle[(0)]
+            set s__MadaraKaton___Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__MadaraKaton__Spell_destroy takes integer this returns nothing
-            call DestroyGroup(s__MadaraKaton__Spell_katon[this])
-            call DestroyGroup(s__MadaraKaton__Spell_damaged[this])
-            call KillUnit(s__MadaraKaton__Spell_dummy[this])
-            set s__MadaraKaton__Spell_katon[this]=null
-            set s__MadaraKaton__Spell_damaged[this]=null
-            set s__MadaraKaton__Spell_caster[this]=null
-            set s__MadaraKaton__Spell_dummy[this]=null
-            call s__MadaraKaton__Spell_deallocate(this)
+        function s__MadaraKaton___Spell_destroy takes integer this returns nothing
+            call DestroyGroup(s__MadaraKaton___Spell_katon[this])
+            call DestroyGroup(s__MadaraKaton___Spell_damaged[this])
+            call KillUnit(s__MadaraKaton___Spell_dummy[this])
+            set s__MadaraKaton___Spell_katon[this]=null
+            set s__MadaraKaton___Spell_damaged[this]=null
+            set s__MadaraKaton___Spell_caster[this]=null
+            set s__MadaraKaton___Spell_dummy[this]=null
+            call s__MadaraKaton___Spell_deallocate(this)
         endfunction
         
-        function s__MadaraKaton__Spell_periodic takes nothing returns nothing
+        function s__MadaraKaton___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real fire_x
             local real fire_y
@@ -87636,63 +87928,63 @@ endfunction
             local real new_y_2
             local real size
             local integer i= 0
-            set s__MadaraKaton__Spell_count[this]=s__MadaraKaton__Spell_count[this] + 1
-            set size=0.8 + 0.07 * s__MadaraKaton__Spell_count[this]
+            set s__MadaraKaton___Spell_count[this]=s__MadaraKaton___Spell_count[this] + 1
+            set size=0.8 + 0.07 * s__MadaraKaton___Spell_count[this]
             loop
                 set i=i + 1
                 exitwhen i > 10
-                set fire_x=GetUnitX(s__MadaraKaton__firewall[(this)*(1)+i])
-                set fire_y=GetUnitY(s__MadaraKaton__firewall[(this)*(1)+i])
-                set new_x=fire_x + Cos(Deg2Rad(GetUnitFacing(s__MadaraKaton__firewall[(this)*(1)+i]))) * 25
-                set new_y=fire_y + Sin(Deg2Rad(GetUnitFacing(s__MadaraKaton__firewall[(this)*(1)+i]))) * 25
-                call SetUnitX(s__MadaraKaton__firewall[(this)*(1)+i], new_x)
-                call SetUnitY(s__MadaraKaton__firewall[(this)*(1)+i], new_y)
+                set fire_x=GetUnitX(s__MadaraKaton___firewall[(this)*(1)+i])
+                set fire_y=GetUnitY(s__MadaraKaton___firewall[(this)*(1)+i])
+                set new_x=fire_x + Cos(Deg2Rad(GetUnitFacing(s__MadaraKaton___firewall[(this)*(1)+i]))) * 25
+                set new_y=fire_y + Sin(Deg2Rad(GetUnitFacing(s__MadaraKaton___firewall[(this)*(1)+i]))) * 25
+                call SetUnitX(s__MadaraKaton___firewall[(this)*(1)+i], new_x)
+                call SetUnitY(s__MadaraKaton___firewall[(this)*(1)+i], new_y)
                 set bj_lastCreatedGroup=CreateGroup()
                 call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 150, null)
                 loop
                     set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                     exitwhen bj_lastCreatedUnit == null
-                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__MadaraKaton__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__MadaraKaton__Spell_damaged[this]) then
+                    if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__MadaraKaton___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and not IsUnitInGroup(bj_lastCreatedUnit, s__MadaraKaton___Spell_damaged[this]) then
                         set unit_x=GetUnitX(bj_lastCreatedUnit)
                         set unit_y=GetUnitY(bj_lastCreatedUnit)
                         call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" ), (( unit_x )*1.0), (( unit_y)*1.0))) // INLINED!!
-                        call UnitDamageTarget(s__MadaraKaton__Spell_caster[this], bj_lastCreatedUnit, 90 * GetUnitAbilityLevel(s__MadaraKaton__Spell_caster[this], s__MadaraKaton__Spell_SPELL_ID), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+                        call UnitDamageTarget(s__MadaraKaton___Spell_caster[this], bj_lastCreatedUnit, 90 * GetUnitAbilityLevel(s__MadaraKaton___Spell_caster[this], s__MadaraKaton___Spell_SPELL_ID), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
                         if GetUnitAbilityLevel(bj_lastCreatedUnit, 'B017') > 0 then
-                  		call UnitDamageTarget(s__MadaraKaton__Spell_caster[this], bj_lastCreatedUnit, 10 * GetUnitAbilityLevel(s__MadaraKaton__Spell_caster[this], s__MadaraKaton__Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+                  		call UnitDamageTarget(s__MadaraKaton___Spell_caster[this], bj_lastCreatedUnit, 10 * GetUnitAbilityLevel(s__MadaraKaton___Spell_caster[this], s__MadaraKaton___Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
                         endif
-                        call GroupAddUnit(s__MadaraKaton__Spell_damaged[this], bj_lastCreatedUnit)
+                        call GroupAddUnit(s__MadaraKaton___Spell_damaged[this], bj_lastCreatedUnit)
                     endif
                     call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 endloop
                 call DestroyGroup(bj_lastCreatedGroup)
             endloop
-            set dummy_x=GetUnitX(s__MadaraKaton__Spell_dummy[this])
-            set dummy_y=GetUnitY(s__MadaraKaton__Spell_dummy[this])
-            set new_x_2=dummy_x + Cos(Deg2Rad(GetUnitFacing(s__MadaraKaton__Spell_dummy[this]))) * 25
-            set new_y_2=dummy_y + Sin(Deg2Rad(GetUnitFacing(s__MadaraKaton__Spell_dummy[this]))) * 25
-            call SetUnitX(s__MadaraKaton__Spell_dummy[this], new_x_2)
-            call SetUnitY(s__MadaraKaton__Spell_dummy[this], new_y_2)
-            if s__MadaraKaton__Spell_count[this] > 28 then
+            set dummy_x=GetUnitX(s__MadaraKaton___Spell_dummy[this])
+            set dummy_y=GetUnitY(s__MadaraKaton___Spell_dummy[this])
+            set new_x_2=dummy_x + Cos(Deg2Rad(GetUnitFacing(s__MadaraKaton___Spell_dummy[this]))) * 25
+            set new_y_2=dummy_y + Sin(Deg2Rad(GetUnitFacing(s__MadaraKaton___Spell_dummy[this]))) * 25
+            call SetUnitX(s__MadaraKaton___Spell_dummy[this], new_x_2)
+            call SetUnitY(s__MadaraKaton___Spell_dummy[this], new_y_2)
+            if s__MadaraKaton___Spell_count[this] > 28 then
                 set i=0
                 loop
                     set i=i + 1
                     exitwhen i > 10
-                    call KillUnit(s__MadaraKaton__firewall[(this)*(1)+i])
-                    set s__MadaraKaton__firewall[(this)*(1)+i]= null
+                    call KillUnit(s__MadaraKaton___firewall[(this)*(1)+i])
+                    set s__MadaraKaton___firewall[(this)*(1)+i]= null
                 endloop
                 loop
-                    set bj_lastCreatedUnit=FirstOfGroup(s__MadaraKaton__Spell_katon[this])
+                    set bj_lastCreatedUnit=FirstOfGroup(s__MadaraKaton___Spell_katon[this])
                     exitwhen bj_lastCreatedUnit == null
                     call KillUnit(bj_lastCreatedUnit)
-                    call GroupRemoveUnit(s__MadaraKaton__Spell_katon[this], bj_lastCreatedUnit)
+                    call GroupRemoveUnit(s__MadaraKaton___Spell_katon[this], bj_lastCreatedUnit)
                 endloop
-                call s__MadaraKaton__Spell_destroy(this)
+                call s__MadaraKaton___Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__MadaraKaton__Spell_actions takes nothing returns nothing
-            local integer this= s__MadaraKaton__Spell_allocate()
+        function s__MadaraKaton___Spell_actions takes nothing returns nothing
+            local integer this= s__MadaraKaton___Spell_allocate()
             local real caster_x
             local real caster_y
             local real target_x
@@ -87700,33 +87992,33 @@ endfunction
             local real angle
             local real angle_2
             local integer i= 0
-            set s__MadaraKaton__Spell_katon[this]=CreateGroup()
-            set s__MadaraKaton__Spell_damaged[this]=CreateGroup()
-            set s__MadaraKaton__Spell_caster[this]=GetTriggerUnit()
-            set caster_x=GetUnitX(s__MadaraKaton__Spell_caster[this])
-            set caster_y=GetUnitY(s__MadaraKaton__Spell_caster[this])
+            set s__MadaraKaton___Spell_katon[this]=CreateGroup()
+            set s__MadaraKaton___Spell_damaged[this]=CreateGroup()
+            set s__MadaraKaton___Spell_caster[this]=GetTriggerUnit()
+            set caster_x=GetUnitX(s__MadaraKaton___Spell_caster[this])
+            set caster_y=GetUnitY(s__MadaraKaton___Spell_caster[this])
             set target_x=GetSpellTargetX()
             set target_y=GetSpellTargetY()
             set angle=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
-            set s__MadaraKaton__Spell_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, Rad2Deg(angle))
-            call SetUnitX(s__MadaraKaton__Spell_dummy[this], caster_x)
-            call SetUnitY(s__MadaraKaton__Spell_dummy[this], caster_y)
+            set s__MadaraKaton___Spell_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, Rad2Deg(angle))
+            call SetUnitX(s__MadaraKaton___Spell_dummy[this], caster_x)
+            call SetUnitY(s__MadaraKaton___Spell_dummy[this], caster_y)
             loop
                 set i=i + 1
                 exitwhen i > 10
                 set angle_2=Rad2Deg(angle) + ( - 36 + 6.66 * i )
-                set s__MadaraKaton__firewall[(this)*(1)+i]= CreateUnit(GetTriggerPlayer(), 'e05A', caster_x, caster_y, angle_2)
-                call SetUnitX(s__MadaraKaton__firewall[(this)*(1)+i], caster_x)
-                call SetUnitY(s__MadaraKaton__firewall[(this)*(1)+i], caster_y)
+                set s__MadaraKaton___firewall[(this)*(1)+i]= CreateUnit(GetTriggerPlayer(), 'e05A', caster_x, caster_y, angle_2)
+                call SetUnitX(s__MadaraKaton___firewall[(this)*(1)+i], caster_x)
+                call SetUnitY(s__MadaraKaton___firewall[(this)*(1)+i], caster_y)
                 //call SetUnitTimeScale(firewall[this][i], 5.0)
-                call UnitApplyTimedLife(s__MadaraKaton__firewall[(this)*(1)+i], 'BTLF', 2.0)
+                call UnitApplyTimedLife(s__MadaraKaton___firewall[(this)*(1)+i], 'BTLF', 2.0)
             endloop
-            set s__MadaraKaton__Spell_count[this]=0
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraKaton__Spell_periodic)
+            set s__MadaraKaton___Spell_count[this]=0
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraKaton___Spell_periodic)
         endfunction
         
-        function s__MadaraKaton__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(44 , s__MadaraKaton__Spell_SPELL_ID , function s__MadaraKaton__Spell_actions)
+        function s__MadaraKaton___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(44 , s__MadaraKaton___Spell_SPELL_ID , function s__MadaraKaton___Spell_actions)
         endfunction
         
     
@@ -87739,46 +88031,46 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__PenRemoveSoul__Spell_allocate takes nothing returns integer
+        function s__PenRemoveSoul___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__PenRemoveSoul__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__PenRemoveSoul__Spell_Alloc__instanceCount=s__PenRemoveSoul__Spell_Alloc__instanceCount + 1
-                set this=s__PenRemoveSoul__Spell_Alloc__instanceCount
+            if ( s__PenRemoveSoul___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__PenRemoveSoul___Spell_Alloc__instanceCount=s__PenRemoveSoul___Spell_Alloc__instanceCount + 1
+                set this=s__PenRemoveSoul___Spell_Alloc__instanceCount
             else
-                set this=s__PenRemoveSoul__Spell_Alloc__recycle[(0)]
-                set s__PenRemoveSoul__Spell_Alloc__recycle[(0)]=s__PenRemoveSoul__Spell_Alloc__recycle[s__PenRemoveSoul__Spell_Alloc__recycle[(0)]]
+                set this=s__PenRemoveSoul___Spell_Alloc__recycle[(0)]
+                set s__PenRemoveSoul___Spell_Alloc__recycle[(0)]=s__PenRemoveSoul___Spell_Alloc__recycle[s__PenRemoveSoul___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__PenRemoveSoul__Spell_deallocate takes integer this returns nothing
-            set s__PenRemoveSoul__Spell_Alloc__recycle[this]=s__PenRemoveSoul__Spell_Alloc__recycle[(0)]
-            set s__PenRemoveSoul__Spell_Alloc__recycle[(0)]=this
+        function s__PenRemoveSoul___Spell_deallocate takes integer this returns nothing
+            set s__PenRemoveSoul___Spell_Alloc__recycle[this]=s__PenRemoveSoul___Spell_Alloc__recycle[(0)]
+            set s__PenRemoveSoul___Spell_Alloc__recycle[(0)]=this
         endfunction
         
 
-        function s__PenRemoveSoul__Spell_destroy takes integer this returns nothing
-            if s__PenRemoveSoul__Spell_light[this] != null then
-                call DestroyLightning(s__PenRemoveSoul__Spell_light[this])
+        function s__PenRemoveSoul___Spell_destroy takes integer this returns nothing
+            if s__PenRemoveSoul___Spell_light[this] != null then
+                call DestroyLightning(s__PenRemoveSoul___Spell_light[this])
             endif
-            call DestroyEffect(s__PenRemoveSoul__Spell_e[this])
-            set s__PenRemoveSoul__Spell_caster[this]=null
-            set s__PenRemoveSoul__Spell_target[this]=null
-            set s__PenRemoveSoul__Spell_light[this]=null
-            set s__PenRemoveSoul__Spell_e[this]=null
-            call s__PenRemoveSoul__Spell_deallocate(this)
+            call DestroyEffect(s__PenRemoveSoul___Spell_e[this])
+            set s__PenRemoveSoul___Spell_caster[this]=null
+            set s__PenRemoveSoul___Spell_target[this]=null
+            set s__PenRemoveSoul___Spell_light[this]=null
+            set s__PenRemoveSoul___Spell_e[this]=null
+            call s__PenRemoveSoul___Spell_deallocate(this)
         endfunction
         
-        function s__PenRemoveSoul__Spell_periodic takes nothing returns nothing
+        function s__PenRemoveSoul___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real caster_x= GetUnitX(s__PenRemoveSoul__Spell_caster[this])
-            local real caster_y= GetUnitY(s__PenRemoveSoul__Spell_caster[this])
-            local real target_x= GetUnitX(s__PenRemoveSoul__Spell_target[this])
-            local real target_y= GetUnitY(s__PenRemoveSoul__Spell_target[this])
+            local real caster_x= GetUnitX(s__PenRemoveSoul___Spell_caster[this])
+            local real caster_y= GetUnitY(s__PenRemoveSoul___Spell_caster[this])
+            local real target_x= GetUnitX(s__PenRemoveSoul___Spell_target[this])
+            local real target_y= GetUnitY(s__PenRemoveSoul___Spell_target[this])
             local real angle= Atan2(( caster_y - target_y ), ( caster_x - target_x ))
             local real new_x= target_x + Cos(angle) * 30
             local real new_y= target_y + Sin(angle) * 30
@@ -87789,40 +88081,40 @@ endfunction
             local real distance= SquareRoot(distance_x * distance_x + distance_y * distance_y)
      local unit u
             local integer i= 0
-	    set s__PenRemoveSoul__Spell_count[this]=s__PenRemoveSoul__Spell_count[this] + 1
-            call SetUnitX(s__PenRemoveSoul__Spell_target[this], new_x)
-            call SetUnitY(s__PenRemoveSoul__Spell_target[this], new_y)
-            if s__PenRemoveSoul__Spell_d[this] == 0 then
-                set s__PenRemoveSoul__Spell_d[this]=distance
-                set s__PenRemoveSoul__Spell_light[this]=AddLightningEx("AFOD", true, caster_x, caster_y, 100, new_x, new_y, 100)
-                set s__PenRemoveSoul__Spell_e[this]=AddSpecialEffectTarget("Abilities\\Weapons\\AvengerMissile\\AvengerMissile.mdl", s__PenRemoveSoul__Spell_target[this], "chest")
+	    set s__PenRemoveSoul___Spell_count[this]=s__PenRemoveSoul___Spell_count[this] + 1
+            call SetUnitX(s__PenRemoveSoul___Spell_target[this], new_x)
+            call SetUnitY(s__PenRemoveSoul___Spell_target[this], new_y)
+            if s__PenRemoveSoul___Spell_d[this] == 0 then
+                set s__PenRemoveSoul___Spell_d[this]=distance
+                set s__PenRemoveSoul___Spell_light[this]=AddLightningEx("AFOD", true, caster_x, caster_y, 100, new_x, new_y, 100)
+                set s__PenRemoveSoul___Spell_e[this]=AddSpecialEffectTarget("Abilities\\Weapons\\AvengerMissile\\AvengerMissile.mdl", s__PenRemoveSoul___Spell_target[this], "chest")
             endif
-            call MoveLightningEx(s__PenRemoveSoul__Spell_light[this], true, caster_x, caster_y, 100, new_x, new_y, 100)
-            if distance <= 100 or s__PenRemoveSoul__Spell_count[this] > 25 then
-                call UnitDamageTarget(s__PenRemoveSoul__Spell_caster[this], s__PenRemoveSoul__Spell_target[this], 50 * GetUnitAbilityLevel(s__PenRemoveSoul__Spell_caster[this], s__PenRemoveSoul__Spell_SPELL_ID), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
-                call SetUnitLifeBJ(s__PenRemoveSoul__Spell_caster[this], GetUnitState(s__PenRemoveSoul__Spell_caster[this], UNIT_STATE_LIFE) + ( 50 * GetUnitAbilityLevel(s__PenRemoveSoul__Spell_caster[this], s__PenRemoveSoul__Spell_SPELL_ID) ))
+            call MoveLightningEx(s__PenRemoveSoul___Spell_light[this], true, caster_x, caster_y, 100, new_x, new_y, 100)
+            if distance <= 100 or s__PenRemoveSoul___Spell_count[this] > 25 then
+                call UnitDamageTarget(s__PenRemoveSoul___Spell_caster[this], s__PenRemoveSoul___Spell_target[this], 50 * GetUnitAbilityLevel(s__PenRemoveSoul___Spell_caster[this], s__PenRemoveSoul___Spell_SPELL_ID), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
+                call SetUnitLifeBJ(s__PenRemoveSoul___Spell_caster[this], GetUnitState(s__PenRemoveSoul___Spell_caster[this], UNIT_STATE_LIFE) + ( 50 * GetUnitAbilityLevel(s__PenRemoveSoul___Spell_caster[this], s__PenRemoveSoul___Spell_SPELL_ID) ))
                 call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Items\\AIma\\AImaTarget.mdl" ), (( caster_x )*1.0), (( caster_y)*1.0))) // INLINED!!
 
-		set u=CreateAbilityDummy(s__PenRemoveSoul__Spell_caster[this] , 'A0CZ')
-		call IssueTargetOrder(u, "soulburn", s__PenRemoveSoul__Spell_target[this])
+		set u=CreateAbilityDummy(s__PenRemoveSoul___Spell_caster[this] , 'A0CZ')
+		call IssueTargetOrder(u, "soulburn", s__PenRemoveSoul___Spell_target[this])
                 call UnitApplyTimedLife(u, 'BTLF', 1.0)
 
-                call s__PenRemoveSoul__Spell_destroy(this)
+                call s__PenRemoveSoul___Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__PenRemoveSoul__Spell_actions takes nothing returns nothing
-            local integer this= s__PenRemoveSoul__Spell_allocate()
-            set s__PenRemoveSoul__Spell_caster[this]=GetTriggerUnit()
-            set s__PenRemoveSoul__Spell_target[this]=GetSpellTargetUnit()
-            set s__PenRemoveSoul__Spell_d[this]=0
-	    set s__PenRemoveSoul__Spell_count[this]=0
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__PenRemoveSoul__Spell_periodic)
+        function s__PenRemoveSoul___Spell_actions takes nothing returns nothing
+            local integer this= s__PenRemoveSoul___Spell_allocate()
+            set s__PenRemoveSoul___Spell_caster[this]=GetTriggerUnit()
+            set s__PenRemoveSoul___Spell_target[this]=GetSpellTargetUnit()
+            set s__PenRemoveSoul___Spell_d[this]=0
+	    set s__PenRemoveSoul___Spell_count[this]=0
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__PenRemoveSoul___Spell_periodic)
         endfunction
         
-        function s__PenRemoveSoul__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEvent2((s__PenRemoveSoul__Spell_SPELL_ID ) , Filter(( function s__PenRemoveSoul__Spell_actions))) // INLINED!!
+        function s__PenRemoveSoul___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEvent2((s__PenRemoveSoul___Spell_SPELL_ID ) , Filter(( function s__PenRemoveSoul___Spell_actions))) // INLINED!!
             //call RegisterSpellEffectEvent('A0KH', function thistype.actions)
         endfunction
         
@@ -87836,29 +88128,29 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__MadaraAnnihilation__Spell_allocate takes nothing returns integer
+        function s__MadaraAnnihilation___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__MadaraAnnihilation__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__MadaraAnnihilation__Spell_Alloc__instanceCount=s__MadaraAnnihilation__Spell_Alloc__instanceCount + 1
-                set this=s__MadaraAnnihilation__Spell_Alloc__instanceCount
+            if ( s__MadaraAnnihilation___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__MadaraAnnihilation___Spell_Alloc__instanceCount=s__MadaraAnnihilation___Spell_Alloc__instanceCount + 1
+                set this=s__MadaraAnnihilation___Spell_Alloc__instanceCount
             else
-                set this=s__MadaraAnnihilation__Spell_Alloc__recycle[(0)]
-                set s__MadaraAnnihilation__Spell_Alloc__recycle[(0)]=s__MadaraAnnihilation__Spell_Alloc__recycle[s__MadaraAnnihilation__Spell_Alloc__recycle[(0)]]
+                set this=s__MadaraAnnihilation___Spell_Alloc__recycle[(0)]
+                set s__MadaraAnnihilation___Spell_Alloc__recycle[(0)]=s__MadaraAnnihilation___Spell_Alloc__recycle[s__MadaraAnnihilation___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__MadaraAnnihilation__Spell_deallocate takes integer this returns nothing
-            set s__MadaraAnnihilation__Spell_Alloc__recycle[this]=s__MadaraAnnihilation__Spell_Alloc__recycle[(0)]
-            set s__MadaraAnnihilation__Spell_Alloc__recycle[(0)]=this
+        function s__MadaraAnnihilation___Spell_deallocate takes integer this returns nothing
+            set s__MadaraAnnihilation___Spell_Alloc__recycle[this]=s__MadaraAnnihilation___Spell_Alloc__recycle[(0)]
+            set s__MadaraAnnihilation___Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__MadaraAnnihilation__Spell_shake takes nothing returns nothing
+        function s__MadaraAnnihilation___Spell_shake takes nothing returns nothing
             local integer i= 0
             loop
                 exitwhen i > 11
@@ -87868,23 +88160,23 @@ endfunction
             call ReleaseTimer(GetExpiredTimer())
         endfunction
 	
- function s__MadaraAnnihilation__Spell_madaraenumunit takes nothing returns boolean
+ function s__MadaraAnnihilation___Spell_madaraenumunit takes nothing returns boolean
      local real unit_x
             local real unit_y
-	        if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__MadaraAnnihilation__Spell_caster[s__MadaraAnnihilation__Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 then
+	        if IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(s__MadaraAnnihilation___Spell_caster[s__MadaraAnnihilation___Spell_instance])) and GetWidgetLife(GetFilterUnit()) > 0.405 then
                     set unit_x=GetUnitX(GetFilterUnit())
                     set unit_y=GetUnitY(GetFilterUnit())
                     call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl" ), (( unit_x )*1.0), (( unit_y)*1.0))) // INLINED!!
-		if GetUnitAbilityLevel(s__MadaraAnnihilation__Spell_caster[s__MadaraAnnihilation__Spell_instance], 'A0HQ') > 0 then
-                    call UnitDamageTarget(s__MadaraAnnihilation__Spell_caster[s__MadaraAnnihilation__Spell_instance], GetFilterUnit(), 800 * GetUnitAbilityLevel(s__MadaraAnnihilation__Spell_caster[s__MadaraAnnihilation__Spell_instance], s__MadaraAnnihilation__Spell_SPELL_ID) + 2 * GetHeroInt(s__MadaraAnnihilation__Spell_caster[s__MadaraAnnihilation__Spell_instance], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+		if GetUnitAbilityLevel(s__MadaraAnnihilation___Spell_caster[s__MadaraAnnihilation___Spell_instance], 'A0HQ') > 0 then
+                    call UnitDamageTarget(s__MadaraAnnihilation___Spell_caster[s__MadaraAnnihilation___Spell_instance], GetFilterUnit(), 800 * GetUnitAbilityLevel(s__MadaraAnnihilation___Spell_caster[s__MadaraAnnihilation___Spell_instance], s__MadaraAnnihilation___Spell_SPELL_ID) + 2 * GetHeroInt(s__MadaraAnnihilation___Spell_caster[s__MadaraAnnihilation___Spell_instance], true), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
 		else
-		    call UnitDamageTarget(s__MadaraAnnihilation__Spell_caster[s__MadaraAnnihilation__Spell_instance], GetFilterUnit(), 850 * GetUnitAbilityLevel(s__MadaraAnnihilation__Spell_caster[s__MadaraAnnihilation__Spell_instance], s__MadaraAnnihilation__Spell_SPELL_ID), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+		    call UnitDamageTarget(s__MadaraAnnihilation___Spell_caster[s__MadaraAnnihilation___Spell_instance], GetFilterUnit(), 850 * GetUnitAbilityLevel(s__MadaraAnnihilation___Spell_caster[s__MadaraAnnihilation___Spell_instance], s__MadaraAnnihilation___Spell_SPELL_ID), true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
 		endif
                 endif
 		return false
  endfunction
         
-        function s__MadaraAnnihilation__Spell_finish takes nothing returns nothing
+        function s__MadaraAnnihilation___Spell_finish takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real unit_x
             local real unit_y
@@ -87893,105 +88185,105 @@ endfunction
             local real angle
             local real offset
             local integer i
-            call SetUnitFlyHeight(s__MadaraAnnihilation__Spell_caster[this], 0, 3000)
-            call PauseUnit(s__MadaraAnnihilation__Spell_caster[this], false)
+            call SetUnitFlyHeight(s__MadaraAnnihilation___Spell_caster[this], 0, 3000)
+            call PauseUnit(s__MadaraAnnihilation___Spell_caster[this], false)
             set bj_lastCreatedGroup=CreateGroup()
-	    set s__MadaraAnnihilation__Spell_instance=this
-            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__MadaraAnnihilation__Spell_target_x[this], s__MadaraAnnihilation__Spell_target_y[this], 400, Filter(function s__MadaraAnnihilation__Spell_madaraenumunit))
+	    set s__MadaraAnnihilation___Spell_instance=this
+            call GroupEnumUnitsInRange(bj_lastCreatedGroup, s__MadaraAnnihilation___Spell_target_x[this], s__MadaraAnnihilation___Spell_target_y[this], 400, Filter(function s__MadaraAnnihilation___Spell_madaraenumunit))
             call DestroyGroup(bj_lastCreatedGroup)
-            if GetUnitAbilityLevel(s__MadaraAnnihilation__Spell_caster[this], 'A0HQ') > 0 then
-                call BlzEndUnitAbilityCooldown(s__MadaraAnnihilation__Spell_caster[this], 'A0HO')
-                call BlzStartUnitAbilityCooldown(s__MadaraAnnihilation__Spell_caster[this], 'A0HO', 50)
+            if GetUnitAbilityLevel(s__MadaraAnnihilation___Spell_caster[this], 'A0HQ') > 0 then
+                call BlzEndUnitAbilityCooldown(s__MadaraAnnihilation___Spell_caster[this], 'A0HO')
+                call BlzStartUnitAbilityCooldown(s__MadaraAnnihilation___Spell_caster[this], 'A0HO', 50)
             endif
 		
-		set bj_lastCreatedEffect=AddSpecialEffect("DeidaraNewT.mdl", s__MadaraAnnihilation__Spell_target_x[this], s__MadaraAnnihilation__Spell_target_y[this])
+		set bj_lastCreatedEffect=AddSpecialEffect("DeidaraNewT.mdl", s__MadaraAnnihilation___Spell_target_x[this], s__MadaraAnnihilation___Spell_target_y[this])
 		call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 0.7)
 		call BlzSetSpecialEffectTimeScale(bj_lastCreatedEffect, 2.5)
 		call DestroyEffect(bj_lastCreatedEffect)
 
-            set s__MadaraAnnihilation__Spell_caster[this]=null
-            set s__MadaraAnnihilation__Spell_dummy[this]=null
-            call s__MadaraAnnihilation__Spell_deallocate(this)
+            set s__MadaraAnnihilation___Spell_caster[this]=null
+            set s__MadaraAnnihilation___Spell_dummy[this]=null
+            call s__MadaraAnnihilation___Spell_deallocate(this)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__MadaraAnnihilation__Spell_fire takes nothing returns nothing
+        function s__MadaraAnnihilation___Spell_fire takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real caster_x= GetUnitX(s__MadaraAnnihilation__Spell_caster[this])
-            local real caster_y= GetUnitY(s__MadaraAnnihilation__Spell_caster[this])
+            local real caster_x= GetUnitX(s__MadaraAnnihilation___Spell_caster[this])
+            local real caster_y= GetUnitY(s__MadaraAnnihilation___Spell_caster[this])
             local integer i= 0
             loop
                 set i=i + 1
                 exitwhen i > 10
-                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__MadaraAnnihilation__Spell_caster[this]), 'e007', caster_x, caster_y, GetUnitFacing(s__MadaraAnnihilation__Spell_caster[this]))
+                set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__MadaraAnnihilation___Spell_caster[this]), 'e007', caster_x, caster_y, GetUnitFacing(s__MadaraAnnihilation___Spell_caster[this]))
                 call SetUnitFlyHeight(bj_lastCreatedUnit, 600, 0)
                 call UnitAddAbility(bj_lastCreatedUnit, 'A0HP')
-                call IssuePointOrder(bj_lastCreatedUnit, "clusterrockets", s__MadaraAnnihilation__Spell_target_x[this], s__MadaraAnnihilation__Spell_target_y[this])
+                call IssuePointOrder(bj_lastCreatedUnit, "clusterrockets", s__MadaraAnnihilation___Spell_target_x[this], s__MadaraAnnihilation___Spell_target_y[this])
                 call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 0.7)
             endloop
-            call SetUnitAnimation(s__MadaraAnnihilation__Spell_caster[this], "spell")
-            if IsUnitVisible(s__MadaraAnnihilation__Spell_caster[this], GetLocalPlayer()) then
+            call SetUnitAnimation(s__MadaraAnnihilation___Spell_caster[this], "spell")
+            if IsUnitVisible(s__MadaraAnnihilation___Spell_caster[this], GetLocalPlayer()) then
                 call PlaySoundOnUnitBJ(gg_snd_Madara_R, 100.0, GetTriggerUnit())
             endif
-            call TimerStart(NewTimerEx(this), 0.5, false, function s__MadaraAnnihilation__Spell_finish)
+            call TimerStart(NewTimerEx(this), 0.5, false, function s__MadaraAnnihilation___Spell_finish)
         endfunction
         
-        function s__MadaraAnnihilation__Spell_forest takes nothing returns nothing
+        function s__MadaraAnnihilation___Spell_forest takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real dummy_x= GetUnitX(s__MadaraAnnihilation__Spell_dummy[this])
-            local real dummy_y= GetUnitY(s__MadaraAnnihilation__Spell_dummy[this])
-            local real angle= Atan2(( s__MadaraAnnihilation__Spell_target_y[this] - dummy_y ), ( s__MadaraAnnihilation__Spell_target_x[this] - dummy_x ))
+            local real dummy_x= GetUnitX(s__MadaraAnnihilation___Spell_dummy[this])
+            local real dummy_y= GetUnitY(s__MadaraAnnihilation___Spell_dummy[this])
+            local real angle= Atan2(( s__MadaraAnnihilation___Spell_target_y[this] - dummy_y ), ( s__MadaraAnnihilation___Spell_target_x[this] - dummy_x ))
             local real new_x= dummy_x + Cos(angle) * 100
             local real new_y= dummy_y + Sin(angle) * 100
             local real new_x_2= new_x + Cos(angle + bj_PI / 2) * 200
             local real new_y_2= new_y + Sin(angle + bj_PI / 2) * 200
             local real new_x_3= new_x + Cos(angle - bj_PI / 2) * 200
             local real new_y_3= new_y + Sin(angle - bj_PI / 2) * 200
-            local real distance_x= new_x - s__MadaraAnnihilation__Spell_target_x[this]
-            local real distance_y= new_y - s__MadaraAnnihilation__Spell_target_y[this]
+            local real distance_x= new_x - s__MadaraAnnihilation___Spell_target_x[this]
+            local real distance_y= new_y - s__MadaraAnnihilation___Spell_target_y[this]
             local real size
             local real distance= SquareRoot(distance_x * distance_x + distance_y * distance_y)
-            call SetUnitX(s__MadaraAnnihilation__Spell_dummy[this], new_x)
-            call SetUnitY(s__MadaraAnnihilation__Spell_dummy[this], new_y)
+            call SetUnitX(s__MadaraAnnihilation___Spell_dummy[this], new_x)
+            call SetUnitY(s__MadaraAnnihilation___Spell_dummy[this], new_y)
             set size=GetRandomReal(0.5, 1.5)
-            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__MadaraAnnihilation__Spell_caster[this]), 'e00D', new_x, new_y, Rad2Deg(angle))
+            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__MadaraAnnihilation___Spell_caster[this]), 'e00D', new_x, new_y, Rad2Deg(angle))
             call SetUnitScale(bj_lastCreatedUnit, size, size, size)
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 0.5)
             set size=GetRandomReal(0.5, 1.5)
-            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__MadaraAnnihilation__Spell_caster[this]), 'e00D', new_x_2, new_y_2, Rad2Deg(angle))
+            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__MadaraAnnihilation___Spell_caster[this]), 'e00D', new_x_2, new_y_2, Rad2Deg(angle))
             call SetUnitScale(bj_lastCreatedUnit, size, size, size)
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 0.5)
             set size=GetRandomReal(0.5, 1.5)
-            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__MadaraAnnihilation__Spell_caster[this]), 'e00D', new_x_3, new_y_3, Rad2Deg(angle))
+            set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__MadaraAnnihilation___Spell_caster[this]), 'e00D', new_x_3, new_y_3, Rad2Deg(angle))
             call SetUnitScale(bj_lastCreatedUnit, size, size, size)
             call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 0.5)
             if distance <= 50 then
-                call RemoveUnit(s__MadaraAnnihilation__Spell_dummy[this])
-                call SetUnitFlyHeight(s__MadaraAnnihilation__Spell_caster[this], 500, 3000)
-                call TimerStart(NewTimerEx(this), 0.1, false, function s__MadaraAnnihilation__Spell_fire)
+                call RemoveUnit(s__MadaraAnnihilation___Spell_dummy[this])
+                call SetUnitFlyHeight(s__MadaraAnnihilation___Spell_caster[this], 500, 3000)
+                call TimerStart(NewTimerEx(this), 0.1, false, function s__MadaraAnnihilation___Spell_fire)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__MadaraAnnihilation__Spell_actions takes nothing returns nothing
-            local integer this= s__MadaraAnnihilation__Spell_allocate()
+        function s__MadaraAnnihilation___Spell_actions takes nothing returns nothing
+            local integer this= s__MadaraAnnihilation___Spell_allocate()
             local real caster_x
             local real caster_y
-            set s__MadaraAnnihilation__Spell_caster[this]=GetTriggerUnit()
-            set s__MadaraAnnihilation__Spell_target_x[this]=GetSpellTargetX()
-            set s__MadaraAnnihilation__Spell_target_y[this]=GetSpellTargetY()
-            set caster_x=GetUnitX(s__MadaraAnnihilation__Spell_caster[this])
-            set caster_y=GetUnitY(s__MadaraAnnihilation__Spell_caster[this])
-            call UnitAddAbility(s__MadaraAnnihilation__Spell_caster[this], 'Arav')
-            call UnitRemoveAbility(s__MadaraAnnihilation__Spell_caster[this], 'Arav')
-            set s__MadaraAnnihilation__Spell_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, 0)
-            call PauseUnit(s__MadaraAnnihilation__Spell_caster[this], true)
-            call SetUnitAnimation(s__MadaraAnnihilation__Spell_caster[this], "spell slam")
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraAnnihilation__Spell_forest)
+            set s__MadaraAnnihilation___Spell_caster[this]=GetTriggerUnit()
+            set s__MadaraAnnihilation___Spell_target_x[this]=GetSpellTargetX()
+            set s__MadaraAnnihilation___Spell_target_y[this]=GetSpellTargetY()
+            set caster_x=GetUnitX(s__MadaraAnnihilation___Spell_caster[this])
+            set caster_y=GetUnitY(s__MadaraAnnihilation___Spell_caster[this])
+            call UnitAddAbility(s__MadaraAnnihilation___Spell_caster[this], 'Arav')
+            call UnitRemoveAbility(s__MadaraAnnihilation___Spell_caster[this], 'Arav')
+            set s__MadaraAnnihilation___Spell_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, 0)
+            call PauseUnit(s__MadaraAnnihilation___Spell_caster[this], true)
+            call SetUnitAnimation(s__MadaraAnnihilation___Spell_caster[this], "spell slam")
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraAnnihilation___Spell_forest)
         endfunction
         
-        function s__MadaraAnnihilation__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(44 , s__MadaraAnnihilation__Spell_SPELL_ID , function s__MadaraAnnihilation__Spell_actions)
+        function s__MadaraAnnihilation___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(44 , s__MadaraAnnihilation___Spell_SPELL_ID , function s__MadaraAnnihilation___Spell_actions)
         endfunction
         
     
@@ -88005,77 +88297,77 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__MadaraNewSusanoo__Spell_allocate takes nothing returns integer
+        function s__MadaraNewSusanoo___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__MadaraNewSusanoo__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__MadaraNewSusanoo__Spell_Alloc__instanceCount=s__MadaraNewSusanoo__Spell_Alloc__instanceCount + 1
-                set this=s__MadaraNewSusanoo__Spell_Alloc__instanceCount
+            if ( s__MadaraNewSusanoo___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__MadaraNewSusanoo___Spell_Alloc__instanceCount=s__MadaraNewSusanoo___Spell_Alloc__instanceCount + 1
+                set this=s__MadaraNewSusanoo___Spell_Alloc__instanceCount
             else
-                set this=s__MadaraNewSusanoo__Spell_Alloc__recycle[(0)]
-                set s__MadaraNewSusanoo__Spell_Alloc__recycle[(0)]=s__MadaraNewSusanoo__Spell_Alloc__recycle[s__MadaraNewSusanoo__Spell_Alloc__recycle[(0)]]
+                set this=s__MadaraNewSusanoo___Spell_Alloc__recycle[(0)]
+                set s__MadaraNewSusanoo___Spell_Alloc__recycle[(0)]=s__MadaraNewSusanoo___Spell_Alloc__recycle[s__MadaraNewSusanoo___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__MadaraNewSusanoo__Spell_deallocate takes integer this returns nothing
-            set s__MadaraNewSusanoo__Spell_Alloc__recycle[this]=s__MadaraNewSusanoo__Spell_Alloc__recycle[(0)]
-            set s__MadaraNewSusanoo__Spell_Alloc__recycle[(0)]=this
+        function s__MadaraNewSusanoo___Spell_deallocate takes integer this returns nothing
+            set s__MadaraNewSusanoo___Spell_Alloc__recycle[this]=s__MadaraNewSusanoo___Spell_Alloc__recycle[(0)]
+            set s__MadaraNewSusanoo___Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__MadaraNewSusanoo__Spell_destroy takes integer this returns nothing
-            call DestroyTrigger(s__MadaraNewSusanoo__Spell_dmgTrig[this])
-            set s__MadaraNewSusanoo__Spell_dmgTrig[this]=null
-            call KillUnit(s__MadaraNewSusanoo__Spell_susanoo[this])
-            call ShowUnit(s__MadaraNewSusanoo__Spell_susanoo[this], false)
-            set s__MadaraNewSusanoo__Spell_susanoo[this]=null
-            set s__MadaraNewSusanoo__Spell_caster[this]=null
-            call s__MadaraNewSusanoo__Spell_deallocate(this)
+        function s__MadaraNewSusanoo___Spell_destroy takes integer this returns nothing
+            call DestroyTrigger(s__MadaraNewSusanoo___Spell_dmgTrig[this])
+            set s__MadaraNewSusanoo___Spell_dmgTrig[this]=null
+            call KillUnit(s__MadaraNewSusanoo___Spell_susanoo[this])
+            call ShowUnit(s__MadaraNewSusanoo___Spell_susanoo[this], false)
+            set s__MadaraNewSusanoo___Spell_susanoo[this]=null
+            set s__MadaraNewSusanoo___Spell_caster[this]=null
+            call s__MadaraNewSusanoo___Spell_deallocate(this)
         endfunction
         
-        function s__MadaraNewSusanoo__Spell_periodic takes nothing returns nothing
+        function s__MadaraNewSusanoo___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real fire_x
             local real fire_y
             local integer i= 0
             local integer i_2
-            if s__MadaraNewSusanoo__Spell_count[this] < 150 then
-                set s__MadaraNewSusanoo__Spell_count[this]=s__MadaraNewSusanoo__Spell_count[this] + 10
+            if s__MadaraNewSusanoo___Spell_count[this] < 150 then
+                set s__MadaraNewSusanoo___Spell_count[this]=s__MadaraNewSusanoo___Spell_count[this] + 10
             endif
-            call SetUnitFlyHeight(s__MadaraNewSusanoo__Spell_caster[this], 300, 0)
-            call SetUnitX(s__MadaraNewSusanoo__Spell_susanoo[this], GetUnitX(s__MadaraNewSusanoo__Spell_caster[this]))
-            call SetUnitY(s__MadaraNewSusanoo__Spell_susanoo[this], GetUnitY(s__MadaraNewSusanoo__Spell_caster[this]))
-            call PauseUnit(s__MadaraNewSusanoo__Spell_susanoo[this], true)
-            call SetUnitFacing(s__MadaraNewSusanoo__Spell_susanoo[this], GetUnitFacing(s__MadaraNewSusanoo__Spell_caster[this]))
-            call SetUnitTimeScale(s__MadaraNewSusanoo__Spell_susanoo[this], 2.0)
-            if IsUnitHidden(s__MadaraNewSusanoo__Spell_caster[this]) then
-                call SetUnitVertexColor((s__MadaraNewSusanoo__Spell_susanoo[this] ), ( 255 ), ( 255 ), ( 255 ), ( 0)) // INLINED!!
+            call SetUnitFlyHeight(s__MadaraNewSusanoo___Spell_caster[this], 300, 0)
+            call SetUnitX(s__MadaraNewSusanoo___Spell_susanoo[this], GetUnitX(s__MadaraNewSusanoo___Spell_caster[this]))
+            call SetUnitY(s__MadaraNewSusanoo___Spell_susanoo[this], GetUnitY(s__MadaraNewSusanoo___Spell_caster[this]))
+            call PauseUnit(s__MadaraNewSusanoo___Spell_susanoo[this], true)
+            call SetUnitFacing(s__MadaraNewSusanoo___Spell_susanoo[this], GetUnitFacing(s__MadaraNewSusanoo___Spell_caster[this]))
+            call SetUnitTimeScale(s__MadaraNewSusanoo___Spell_susanoo[this], 2.0)
+            if IsUnitHidden(s__MadaraNewSusanoo___Spell_caster[this]) then
+                call SetUnitVertexColor((s__MadaraNewSusanoo___Spell_susanoo[this] ), ( 255 ), ( 255 ), ( 255 ), ( 0)) // INLINED!!
             else
-                call SetUnitVertexColor((s__MadaraNewSusanoo__Spell_susanoo[this] ), ( 255 ), ( 255 ), ( 255 ), ( s__MadaraNewSusanoo__Spell_count[this])) // INLINED!!
+                call SetUnitVertexColor((s__MadaraNewSusanoo___Spell_susanoo[this] ), ( 255 ), ( 255 ), ( 255 ), ( s__MadaraNewSusanoo___Spell_count[this])) // INLINED!!
             endif
-            if GetUnitCurrentOrder(s__MadaraNewSusanoo__Spell_caster[this]) == String2OrderIdBJ("smart") then
-                call SetUnitAnimationByIndex(s__MadaraNewSusanoo__Spell_susanoo[this], 1)
+            if GetUnitCurrentOrder(s__MadaraNewSusanoo___Spell_caster[this]) == String2OrderIdBJ("smart") then
+                call SetUnitAnimationByIndex(s__MadaraNewSusanoo___Spell_susanoo[this], 1)
             else
-                call SetUnitAnimationByIndex(s__MadaraNewSusanoo__Spell_susanoo[this], 0)
+                call SetUnitAnimationByIndex(s__MadaraNewSusanoo___Spell_susanoo[this], 0)
             endif
-	    set s__MadaraNewSusanoo__Spell_duration[this]=s__MadaraNewSusanoo__Spell_duration[this] + 0.03
-	    if GetWidgetLife(s__MadaraNewSusanoo__Spell_susanoo[this]) < 0.405 then
-                call SetUnitFlyHeight(s__MadaraNewSusanoo__Spell_caster[this], 0, 1500)
-                call SetUnitVertexColor(s__MadaraNewSusanoo__Spell_caster[this], 255, 255, 255, 255)
+	    set s__MadaraNewSusanoo___Spell_duration[this]=s__MadaraNewSusanoo___Spell_duration[this] + 0.03
+	    if GetWidgetLife(s__MadaraNewSusanoo___Spell_susanoo[this]) < 0.405 then
+                call SetUnitFlyHeight(s__MadaraNewSusanoo___Spell_caster[this], 0, 1500)
+                call SetUnitVertexColor(s__MadaraNewSusanoo___Spell_caster[this], 255, 255, 255, 255)
             endif
-            if s__MadaraNewSusanoo__Spell_duration[this] > 25 or GetWidgetLife(s__MadaraNewSusanoo__Spell_caster[this]) < 0.405 then
-                call SetUnitVertexColor(s__MadaraNewSusanoo__Spell_caster[this], 255, 255, 255, 255)
-                call UnitRemoveAbility(s__MadaraNewSusanoo__Spell_caster[this], 'A0C4')
-                call UnitRemoveAbility(s__MadaraNewSusanoo__Spell_caster[this], 'A0HU')
-                call UnitRemoveAbility(s__MadaraNewSusanoo__Spell_caster[this], 'A1B6')
-		call UnitAddAbility(s__MadaraNewSusanoo__Spell_caster[this], 'A0NS')
-                call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraNewSusanoo__Spell_caster[this]), 'A0CX', true)
-                call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraNewSusanoo__Spell_caster[this]), 'A0HM', true)
-                call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraNewSusanoo__Spell_caster[this]), 'A0O0', true)
+            if s__MadaraNewSusanoo___Spell_duration[this] > 25 or GetWidgetLife(s__MadaraNewSusanoo___Spell_caster[this]) < 0.405 then
+                call SetUnitVertexColor(s__MadaraNewSusanoo___Spell_caster[this], 255, 255, 255, 255)
+                call UnitRemoveAbility(s__MadaraNewSusanoo___Spell_caster[this], 'A0C4')
+                call UnitRemoveAbility(s__MadaraNewSusanoo___Spell_caster[this], 'A0HU')
+                call UnitRemoveAbility(s__MadaraNewSusanoo___Spell_caster[this], 'A1B6')
+		call UnitAddAbility(s__MadaraNewSusanoo___Spell_caster[this], 'A0NS')
+                call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraNewSusanoo___Spell_caster[this]), 'A0CX', true)
+                call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraNewSusanoo___Spell_caster[this]), 'A0HM', true)
+                call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraNewSusanoo___Spell_caster[this]), 'A0O0', true)
                 loop
                     set i=i + 1
                     exitwhen i > 2
@@ -88083,80 +88375,80 @@ endfunction
                     loop
                         set i_2=i_2 + 1
                         exitwhen i_2 > 10
-                        set fire_x=GetUnitX(s__MadaraNewSusanoo__Spell_caster[this]) + Cos(Deg2Rad(36 * i_2)) * ( 100 * i )
-                        set fire_y=GetUnitY(s__MadaraNewSusanoo__Spell_caster[this]) + Sin(Deg2Rad(36 * i_2)) * ( 100 * i )
+                        set fire_x=GetUnitX(s__MadaraNewSusanoo___Spell_caster[this]) + Cos(Deg2Rad(36 * i_2)) * ( 100 * i )
+                        set fire_y=GetUnitY(s__MadaraNewSusanoo___Spell_caster[this]) + Sin(Deg2Rad(36 * i_2)) * ( 100 * i )
                         call DestroyEffect(AddSpecialEffect(("Effects\\s_Blue_Fire.mdx" ), (( fire_x )*1.0), (( fire_y)*1.0))) // INLINED!!
                     endloop
                 endloop
-                call SetUnitFlyHeight(s__MadaraNewSusanoo__Spell_caster[this], 0, 1500)
+                call SetUnitFlyHeight(s__MadaraNewSusanoo___Spell_caster[this], 0, 1500)
                 set i=0
-                call s__MadaraNewSusanoo__Spell_destroy(this)
+                call s__MadaraNewSusanoo___Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__MadaraNewSusanoo__Spell_takeDamage takes nothing returns nothing
+        function s__MadaraNewSusanoo___Spell_takeDamage takes nothing returns nothing
             local integer this= s__units_triggers[(GetUnitUserData((GetTriggerUnit())))] // INLINED!!
-            if not s__MadaraNewSusanoo__Spell_firstDmg[this] then
-                set s__MadaraNewSusanoo__Spell_firstDmg[this]=true
+            if not s__MadaraNewSusanoo___Spell_firstDmg[this] then
+                set s__MadaraNewSusanoo___Spell_firstDmg[this]=true
             endif
-            if s__MadaraNewSusanoo__Spell_firstDmg[this] and GetUnitAbilityLevel(GetTriggerUnit(), 'B010') > 0 then
-                if s__MadaraNewSusanoo__Spell_hp[this] == - 1 then
-                    set s__MadaraNewSusanoo__Spell_hp[this]=GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE)
+            if s__MadaraNewSusanoo___Spell_firstDmg[this] and GetUnitAbilityLevel(GetTriggerUnit(), 'B010') > 0 then
+                if s__MadaraNewSusanoo___Spell_hp[this] == - 1 then
+                    set s__MadaraNewSusanoo___Spell_hp[this]=GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE)
                 else
-                    set s__MadaraNewSusanoo__Spell_damage[this]=s__MadaraNewSusanoo__Spell_damage[this] + GetEventDamage()
-                    call SetUnitLifeBJ(s__MadaraNewSusanoo__Spell_susanoo[this], 5000 - s__MadaraNewSusanoo__Spell_damage[this] + 1)
-                    if s__MadaraNewSusanoo__Spell_damage[this] > 5000 then
+                    set s__MadaraNewSusanoo___Spell_damage[this]=s__MadaraNewSusanoo___Spell_damage[this] + GetEventDamage()
+                    call SetUnitLifeBJ(s__MadaraNewSusanoo___Spell_susanoo[this], 5000 - s__MadaraNewSusanoo___Spell_damage[this] + 1)
+                    if s__MadaraNewSusanoo___Spell_damage[this] > 5000 then
                         call UnitRemoveAbility(GetTriggerUnit(), 'B010')
                     endif
-                    call SetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE, s__MadaraNewSusanoo__Spell_hp[this])
+                    call SetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE, s__MadaraNewSusanoo___Spell_hp[this])
                 endif
             endif
         endfunction
         
-        function s__MadaraNewSusanoo__Spell_actions takes nothing returns nothing
-            local integer this= s__MadaraNewSusanoo__Spell_allocate()
+        function s__MadaraNewSusanoo___Spell_actions takes nothing returns nothing
+            local integer this= s__MadaraNewSusanoo___Spell_allocate()
             local integer i= 0
         if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
             call PlaySoundOnUnitBJ(gg_snd_Madara_T2_Susanoo, 100, GetTriggerUnit())
         endif
-            set s__MadaraNewSusanoo__Spell_caster[this]=GetTriggerUnit()
-            set s__MadaraNewSusanoo__Spell_susanoo[this]=CreateUnit(GetTriggerPlayer(), 'h05Z', GetUnitX(s__MadaraNewSusanoo__Spell_caster[this]), GetUnitY(s__MadaraNewSusanoo__Spell_caster[this]), GetUnitFacing(s__MadaraNewSusanoo__Spell_caster[this]))
-            call SetUnitX(s__MadaraNewSusanoo__Spell_susanoo[this], GetUnitX(s__MadaraNewSusanoo__Spell_caster[this]))
-            call SetUnitY(s__MadaraNewSusanoo__Spell_susanoo[this], GetUnitY(s__MadaraNewSusanoo__Spell_caster[this]))
-            call SetUnitVertexColor((s__MadaraNewSusanoo__Spell_susanoo[this] ), ( 255 ), ( 255 ), ( 255 ), ( 0)) // INLINED!!
-            call SetUnitPropWindow(s__MadaraNewSusanoo__Spell_susanoo[this], 0)
-            call SetUnitTimeScale(s__MadaraNewSusanoo__Spell_susanoo[this], 2.0)
-            set madara_susanoo=s__MadaraNewSusanoo__Spell_susanoo[this]
-            set s__MadaraNewSusanoo__Spell_count[this]=0
+            set s__MadaraNewSusanoo___Spell_caster[this]=GetTriggerUnit()
+            set s__MadaraNewSusanoo___Spell_susanoo[this]=CreateUnit(GetTriggerPlayer(), 'h05Z', GetUnitX(s__MadaraNewSusanoo___Spell_caster[this]), GetUnitY(s__MadaraNewSusanoo___Spell_caster[this]), GetUnitFacing(s__MadaraNewSusanoo___Spell_caster[this]))
+            call SetUnitX(s__MadaraNewSusanoo___Spell_susanoo[this], GetUnitX(s__MadaraNewSusanoo___Spell_caster[this]))
+            call SetUnitY(s__MadaraNewSusanoo___Spell_susanoo[this], GetUnitY(s__MadaraNewSusanoo___Spell_caster[this]))
+            call SetUnitVertexColor((s__MadaraNewSusanoo___Spell_susanoo[this] ), ( 255 ), ( 255 ), ( 255 ), ( 0)) // INLINED!!
+            call SetUnitPropWindow(s__MadaraNewSusanoo___Spell_susanoo[this], 0)
+            call SetUnitTimeScale(s__MadaraNewSusanoo___Spell_susanoo[this], 2.0)
+            set madara_susanoo=s__MadaraNewSusanoo___Spell_susanoo[this]
+            set s__MadaraNewSusanoo___Spell_count[this]=0
             call SetPlayerAbilityAvailable(GetTriggerPlayer(), 'A0CX', false)
             call SetPlayerAbilityAvailable(GetTriggerPlayer(), 'A0HM', false)
             call SetPlayerAbilityAvailable(GetTriggerPlayer(), 'A0O0', false)
-	    call UnitRemoveAbility(s__MadaraNewSusanoo__Spell_caster[this], 'A0NS')
-            call UnitAddAbility(s__MadaraNewSusanoo__Spell_caster[this], 'A0C4')
-            call UnitAddAbility(s__MadaraNewSusanoo__Spell_caster[this], 'A0HU')
-            call UnitAddAbility(s__MadaraNewSusanoo__Spell_caster[this], 'A1B6')
-            call UnitAddAbility(s__MadaraNewSusanoo__Spell_caster[this], 'Arav')
-            call UnitRemoveAbility(s__MadaraNewSusanoo__Spell_caster[this], 'Arav')
-            call SetUnitFlyHeight(s__MadaraNewSusanoo__Spell_caster[this], 300, 1500)
-            call SetUnitVertexColor(s__MadaraNewSusanoo__Spell_caster[this], 255, 255, 255, 0)
+	    call UnitRemoveAbility(s__MadaraNewSusanoo___Spell_caster[this], 'A0NS')
+            call UnitAddAbility(s__MadaraNewSusanoo___Spell_caster[this], 'A0C4')
+            call UnitAddAbility(s__MadaraNewSusanoo___Spell_caster[this], 'A0HU')
+            call UnitAddAbility(s__MadaraNewSusanoo___Spell_caster[this], 'A1B6')
+            call UnitAddAbility(s__MadaraNewSusanoo___Spell_caster[this], 'Arav')
+            call UnitRemoveAbility(s__MadaraNewSusanoo___Spell_caster[this], 'Arav')
+            call SetUnitFlyHeight(s__MadaraNewSusanoo___Spell_caster[this], 300, 1500)
+            call SetUnitVertexColor(s__MadaraNewSusanoo___Spell_caster[this], 255, 255, 255, 0)
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
                 call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff0000Madara: Let's see just how much pain you can endure.|r")
             endif
-            set s__MadaraNewSusanoo__Spell_hp[this]=- 1 //GetUnitState(this.caster, UNIT_STATE_LIFE) 
-            set s__MadaraNewSusanoo__Spell_damage[this]=0
-	    set s__MadaraNewSusanoo__Spell_duration[this]=0
-            set s__units_triggers[(GetUnitUserData((s__MadaraNewSusanoo__Spell_caster[this])))]= this // INLINED!!
-            set s__MadaraNewSusanoo__Spell_firstDmg[this]=false
-            set s__MadaraNewSusanoo__Spell_dmgTrig[this]=CreateTrigger()
-            call TriggerRegisterUnitEvent(s__MadaraNewSusanoo__Spell_dmgTrig[this], s__MadaraNewSusanoo__Spell_caster[this], EVENT_UNIT_DAMAGED)
-            call TriggerAddAction(s__MadaraNewSusanoo__Spell_dmgTrig[this], function s__MadaraNewSusanoo__Spell_takeDamage)
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraNewSusanoo__Spell_periodic)
+            set s__MadaraNewSusanoo___Spell_hp[this]=- 1 //GetUnitState(this.caster, UNIT_STATE_LIFE) 
+            set s__MadaraNewSusanoo___Spell_damage[this]=0
+	    set s__MadaraNewSusanoo___Spell_duration[this]=0
+            set s__units_triggers[(GetUnitUserData((s__MadaraNewSusanoo___Spell_caster[this])))]= this // INLINED!!
+            set s__MadaraNewSusanoo___Spell_firstDmg[this]=false
+            set s__MadaraNewSusanoo___Spell_dmgTrig[this]=CreateTrigger()
+            call TriggerRegisterUnitEvent(s__MadaraNewSusanoo___Spell_dmgTrig[this], s__MadaraNewSusanoo___Spell_caster[this], EVENT_UNIT_DAMAGED)
+            call TriggerAddAction(s__MadaraNewSusanoo___Spell_dmgTrig[this], function s__MadaraNewSusanoo___Spell_takeDamage)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraNewSusanoo___Spell_periodic)
             call AddLoadingBar(GetTriggerUnit() , 25.0)
         endfunction
         
         
-        function s__MadaraNewSusanoo__Spell_critical takes nothing returns nothing
+        function s__MadaraNewSusanoo___Spell_critical takes nothing returns nothing
             local integer chance= GetRandomInt(1, 5)
             if chance == 1 and GetUnitAbilityLevel(GetAttacker(), 'B010') > 0 and IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(GetAttacker())) then
                 call UnitDamageTarget(GetAttacker(), GetTriggerUnit(), 2.0 * GetHeroInt(GetAttacker(), true) + 250, true, false, ATTACK_TYPE_HERO, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
@@ -88164,9 +88456,9 @@ endfunction
             endif
         endfunction
         
-        function s__MadaraNewSusanoo__Spell_onInit takes nothing returns nothing
-            call RegisterPlayerUnitEventForId(44 , EVENT_PLAYER_UNIT_ATTACKED , function s__MadaraNewSusanoo__Spell_critical)
-            call RegisterSpellEffectEventForId(44 , s__MadaraNewSusanoo__Spell_SPELL_ID , function s__MadaraNewSusanoo__Spell_actions)
+        function s__MadaraNewSusanoo___Spell_onInit takes nothing returns nothing
+            call RegisterPlayerUnitEventForId(44 , EVENT_PLAYER_UNIT_ATTACKED , function s__MadaraNewSusanoo___Spell_critical)
+            call RegisterSpellEffectEventForId(44 , s__MadaraNewSusanoo___Spell_SPELL_ID , function s__MadaraNewSusanoo___Spell_actions)
         endfunction
         
     
@@ -88180,44 +88472,44 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__MadaraYasaka__Spell_allocate takes nothing returns integer
+        function s__MadaraYasaka___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__MadaraYasaka__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__MadaraYasaka__Spell_Alloc__instanceCount=s__MadaraYasaka__Spell_Alloc__instanceCount + 1
-                set this=s__MadaraYasaka__Spell_Alloc__instanceCount
+            if ( s__MadaraYasaka___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__MadaraYasaka___Spell_Alloc__instanceCount=s__MadaraYasaka___Spell_Alloc__instanceCount + 1
+                set this=s__MadaraYasaka___Spell_Alloc__instanceCount
             else
-                set this=s__MadaraYasaka__Spell_Alloc__recycle[(0)]
-                set s__MadaraYasaka__Spell_Alloc__recycle[(0)]=s__MadaraYasaka__Spell_Alloc__recycle[s__MadaraYasaka__Spell_Alloc__recycle[(0)]]
+                set this=s__MadaraYasaka___Spell_Alloc__recycle[(0)]
+                set s__MadaraYasaka___Spell_Alloc__recycle[(0)]=s__MadaraYasaka___Spell_Alloc__recycle[s__MadaraYasaka___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__MadaraYasaka__Spell_deallocate takes integer this returns nothing
-            set s__MadaraYasaka__Spell_Alloc__recycle[this]=s__MadaraYasaka__Spell_Alloc__recycle[(0)]
-            set s__MadaraYasaka__Spell_Alloc__recycle[(0)]=this
+        function s__MadaraYasaka___Spell_deallocate takes integer this returns nothing
+            set s__MadaraYasaka___Spell_Alloc__recycle[this]=s__MadaraYasaka___Spell_Alloc__recycle[(0)]
+            set s__MadaraYasaka___Spell_Alloc__recycle[(0)]=this
         endfunction
     
         
-        function s__MadaraYasaka__Spell_destroy takes integer this returns nothing
+        function s__MadaraYasaka___Spell_destroy takes integer this returns nothing
             local integer i= 0
             loop
                 set i=i + 1
                 exitwhen i > 6
-                call KillUnit(s__MadaraYasaka__yasakas[(this)*(1)+i])
-                call ShowUnit(s__MadaraYasaka__yasakas[(this)*(1)+i], false)
-                set s__MadaraYasaka__yasakas[(this)*(1)+i]= null
+                call KillUnit(s__MadaraYasaka___yasakas[(this)*(1)+i])
+                call ShowUnit(s__MadaraYasaka___yasakas[(this)*(1)+i], false)
+                set s__MadaraYasaka___yasakas[(this)*(1)+i]= null
             endloop
           //  call SetUnitAnimation(madara_susanoo, "stand")
-            set s__MadaraYasaka__Spell_caster[this]=null
-            set s__MadaraYasaka__Spell_target[this]=null
-            call s__MadaraYasaka__Spell_deallocate(this)
+            set s__MadaraYasaka___Spell_caster[this]=null
+            set s__MadaraYasaka___Spell_target[this]=null
+            call s__MadaraYasaka___Spell_deallocate(this)
         endfunction
         
-        function s__MadaraYasaka__Spell_periodic takes nothing returns nothing
+        function s__MadaraYasaka___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real yasaka_x
             local real yasaka_y
@@ -88230,28 +88522,28 @@ endfunction
             local real distances
             local real angle
             local integer i= 0
-            set s__MadaraYasaka__Spell_count[this]=s__MadaraYasaka__Spell_count[this] + 1
-            set target_x=GetUnitX(s__MadaraYasaka__Spell_target[this])
-            set target_y=GetUnitY(s__MadaraYasaka__Spell_target[this])
+            set s__MadaraYasaka___Spell_count[this]=s__MadaraYasaka___Spell_count[this] + 1
+            set target_x=GetUnitX(s__MadaraYasaka___Spell_target[this])
+            set target_y=GetUnitY(s__MadaraYasaka___Spell_target[this])
             loop
                 set i=i + 1
                 exitwhen i > 6
-                set yasaka_x=GetUnitX(s__MadaraYasaka__yasakas[(this)*(1)+i])
-                set yasaka_y=GetUnitY(s__MadaraYasaka__yasakas[(this)*(1)+i])
+                set yasaka_x=GetUnitX(s__MadaraYasaka___yasakas[(this)*(1)+i])
+                set yasaka_y=GetUnitY(s__MadaraYasaka___yasakas[(this)*(1)+i])
                 set angle=Atan2(( target_y - yasaka_y ), ( target_x - yasaka_x ))
                 set new_x=yasaka_x + Cos(angle) * 30
                 set new_y=yasaka_y + Sin(angle) * 30
-                call SetUnitX(s__MadaraYasaka__yasakas[(this)*(1)+i], new_x)
-                call SetUnitY(s__MadaraYasaka__yasakas[(this)*(1)+i], new_y)
-                call SetUnitFlyHeight(s__MadaraYasaka__yasakas[(this)*(1)+i], Parabola(1200 , 200 , 100 , MadaraYasaka__distance[(GetUnitUserData((s__MadaraYasaka__yasakas[(this)*(1)+i])))] , s__MadaraYasaka__Spell_count[this] * 30), 0) // INLINED!!
+                call SetUnitX(s__MadaraYasaka___yasakas[(this)*(1)+i], new_x)
+                call SetUnitY(s__MadaraYasaka___yasakas[(this)*(1)+i], new_y)
+                call SetUnitFlyHeight(s__MadaraYasaka___yasakas[(this)*(1)+i], Parabola(1200 , 200 , 100 , MadaraYasaka___distance[(GetUnitUserData((s__MadaraYasaka___yasakas[(this)*(1)+i])))] , s__MadaraYasaka___Spell_count[this] * 30), 0) // INLINED!!
                 set distance_x=target_x - new_x
                 set distance_y=target_y - new_y
                 set distances=SquareRoot(distance_x * distance_x + distance_y * distance_y)
                 if distances <= 30 then
-                    call ShowUnit(s__MadaraYasaka__yasakas[(this)*(1)+i], false)
+                    call ShowUnit(s__MadaraYasaka___yasakas[(this)*(1)+i], false)
                 endif
             endloop
-            if s__MadaraYasaka__Spell_count[this] * 30 > MadaraYasaka__distance[(GetUnitUserData((s__MadaraYasaka__yasakas[(this)*(1)+1])))] then // INLINED!!
+            if s__MadaraYasaka___Spell_count[this] * 30 > MadaraYasaka___distance[(GetUnitUserData((s__MadaraYasaka___yasakas[(this)*(1)+1])))] then // INLINED!!
                 set i=0
                 loop
                     set i=i + 1
@@ -88260,14 +88552,14 @@ endfunction
                     set new_y=target_y + Sin(Deg2Rad(36 * i)) * 200
                     call DestroyEffect(AddSpecialEffect(("Effects\\s_Blue_Fire.mdx" ), (( new_x )*1.0), (( new_y)*1.0))) // INLINED!!
                 endloop
-                call UnitDamageTarget(s__MadaraYasaka__Spell_caster[this], s__MadaraYasaka__Spell_target[this], 3 * GetHeroInt(s__MadaraYasaka__Spell_caster[this], true) + 600, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
-		call StunUnitTimed(s__MadaraYasaka__Spell_caster[this] , s__MadaraYasaka__Spell_target[this] , 1.5)
-                call s__MadaraYasaka__Spell_destroy(this)
+                call UnitDamageTarget(s__MadaraYasaka___Spell_caster[this], s__MadaraYasaka___Spell_target[this], 3 * GetHeroInt(s__MadaraYasaka___Spell_caster[this], true) + 600, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+		call StunUnitTimed(s__MadaraYasaka___Spell_caster[this] , s__MadaraYasaka___Spell_target[this] , 1.5)
+                call s__MadaraYasaka___Spell_destroy(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__MadaraYasaka__Spell_delay1 takes nothing returns nothing
+        function s__MadaraYasaka___Spell_delay1 takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real yasaka_x
             local real yasaka_y
@@ -88278,38 +88570,38 @@ endfunction
             local real distance_x
             local real distance_y
             local integer i= 0
-            set s__MadaraYasaka__Spell_count[this]=s__MadaraYasaka__Spell_count[this] + 1
+            set s__MadaraYasaka___Spell_count[this]=s__MadaraYasaka___Spell_count[this] + 1
             loop
                 set i=i + 1
                 exitwhen i > 6
-                set yasaka_x=GetUnitX(s__MadaraYasaka__yasakas[(this)*(1)+i])
-                set yasaka_y=GetUnitY(s__MadaraYasaka__yasakas[(this)*(1)+i])
-                set new_x=yasaka_x + Cos(Deg2Rad(GetUnitFacing(s__MadaraYasaka__yasakas[(this)*(1)+i]) + 180)) * 10
-                set new_y=yasaka_y + Sin(Deg2Rad(GetUnitFacing(s__MadaraYasaka__yasakas[(this)*(1)+i]) + 180)) * 10
-                call SetUnitX(s__MadaraYasaka__yasakas[(this)*(1)+i], new_x)
-                call SetUnitY(s__MadaraYasaka__yasakas[(this)*(1)+i], new_y)
+                set yasaka_x=GetUnitX(s__MadaraYasaka___yasakas[(this)*(1)+i])
+                set yasaka_y=GetUnitY(s__MadaraYasaka___yasakas[(this)*(1)+i])
+                set new_x=yasaka_x + Cos(Deg2Rad(GetUnitFacing(s__MadaraYasaka___yasakas[(this)*(1)+i]) + 180)) * 10
+                set new_y=yasaka_y + Sin(Deg2Rad(GetUnitFacing(s__MadaraYasaka___yasakas[(this)*(1)+i]) + 180)) * 10
+                call SetUnitX(s__MadaraYasaka___yasakas[(this)*(1)+i], new_x)
+                call SetUnitY(s__MadaraYasaka___yasakas[(this)*(1)+i], new_y)
             endloop
-            if s__MadaraYasaka__Spell_count[this] > 15 then
-                set target_x=GetUnitX(s__MadaraYasaka__Spell_target[this])
-                set target_y=GetUnitY(s__MadaraYasaka__Spell_target[this])
+            if s__MadaraYasaka___Spell_count[this] > 15 then
+                set target_x=GetUnitX(s__MadaraYasaka___Spell_target[this])
+                set target_y=GetUnitY(s__MadaraYasaka___Spell_target[this])
                 set i=0
                 loop
                     set i=i + 1
                     exitwhen i > 6
-                    set yasaka_x=GetUnitX(s__MadaraYasaka__yasakas[(this)*(1)+i])
-                    set yasaka_y=GetUnitY(s__MadaraYasaka__yasakas[(this)*(1)+i])
+                    set yasaka_x=GetUnitX(s__MadaraYasaka___yasakas[(this)*(1)+i])
+                    set yasaka_y=GetUnitY(s__MadaraYasaka___yasakas[(this)*(1)+i])
                     set distance_x=target_x - yasaka_x
                     set distance_y=target_y - yasaka_y
-                    set MadaraYasaka__distance[(GetUnitUserData((s__MadaraYasaka__yasakas[(this)*(1)+i])))]=SquareRoot(distance_x * distance_x + distance_y * distance_y) // INLINED!!
+                    set MadaraYasaka___distance[(GetUnitUserData((s__MadaraYasaka___yasakas[(this)*(1)+i])))]=SquareRoot(distance_x * distance_x + distance_y * distance_y) // INLINED!!
                 endloop
-                set s__MadaraYasaka__Spell_count[this]=0
-                call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraYasaka__Spell_periodic)
+                set s__MadaraYasaka___Spell_count[this]=0
+                call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraYasaka___Spell_periodic)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__MadaraYasaka__Spell_actions takes nothing returns nothing
-            local integer this= s__MadaraYasaka__Spell_allocate()
+        function s__MadaraYasaka___Spell_actions takes nothing returns nothing
+            local integer this= s__MadaraYasaka___Spell_allocate()
             local real caster_x
             local real caster_y
             local real target_x
@@ -88317,30 +88609,30 @@ endfunction
             local real angle
             local real angle_2
             local integer i= 0
-            set s__MadaraYasaka__Spell_caster[this]=GetTriggerUnit()
-            set s__MadaraYasaka__Spell_target[this]=GetSpellTargetUnit()
-            set s__MadaraYasaka__Spell_count[this]=0
-            set caster_x=GetUnitX(s__MadaraYasaka__Spell_caster[this])
-            set caster_y=GetUnitY(s__MadaraYasaka__Spell_caster[this])
-            set target_x=GetUnitX(s__MadaraYasaka__Spell_target[this])
-            set target_y=GetUnitY(s__MadaraYasaka__Spell_target[this])
+            set s__MadaraYasaka___Spell_caster[this]=GetTriggerUnit()
+            set s__MadaraYasaka___Spell_target[this]=GetSpellTargetUnit()
+            set s__MadaraYasaka___Spell_count[this]=0
+            set caster_x=GetUnitX(s__MadaraYasaka___Spell_caster[this])
+            set caster_y=GetUnitY(s__MadaraYasaka___Spell_caster[this])
+            set target_x=GetUnitX(s__MadaraYasaka___Spell_target[this])
+            set target_y=GetUnitY(s__MadaraYasaka___Spell_target[this])
             set angle=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
             loop
                 set i=i + 1
                 exitwhen i > 6
                 set angle=Rad2Deg(angle) + ( - 84 + 24 * i )
-                set s__MadaraYasaka__yasakas[(this)*(1)+i]= CreateUnit(GetTriggerPlayer(), 'e00G', caster_x, caster_y, angle)
-                call SetUnitX(s__MadaraYasaka__yasakas[(this)*(1)+i], caster_x)
-                call SetUnitY(s__MadaraYasaka__yasakas[(this)*(1)+i], caster_y)
-                call SetUnitFlyHeight(s__MadaraYasaka__yasakas[(this)*(1)+i], 200, 0)
+                set s__MadaraYasaka___yasakas[(this)*(1)+i]= CreateUnit(GetTriggerPlayer(), 'e00G', caster_x, caster_y, angle)
+                call SetUnitX(s__MadaraYasaka___yasakas[(this)*(1)+i], caster_x)
+                call SetUnitY(s__MadaraYasaka___yasakas[(this)*(1)+i], caster_y)
+                call SetUnitFlyHeight(s__MadaraYasaka___yasakas[(this)*(1)+i], 200, 0)
                 //call SetUnitFlyHeight(yasakas[this][i], 500, 2000) 
             endloop
             //call SetUnitAnimation(madara_susanoo, "spell one")
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraYasaka__Spell_delay1)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraYasaka___Spell_delay1)
         endfunction
         
-        function s__MadaraYasaka__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(44 , s__MadaraYasaka__Spell_SPELL_ID , function s__MadaraYasaka__Spell_actions)
+        function s__MadaraYasaka___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(44 , s__MadaraYasaka___Spell_SPELL_ID , function s__MadaraYasaka___Spell_actions)
         endfunction
         
     
@@ -88577,71 +88869,71 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__MadaraRikuudou__Spell_allocate takes nothing returns integer
+        function s__MadaraRikuudou___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__MadaraRikuudou__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__MadaraRikuudou__Spell_Alloc__instanceCount=s__MadaraRikuudou__Spell_Alloc__instanceCount + 1
-                set this=s__MadaraRikuudou__Spell_Alloc__instanceCount
+            if ( s__MadaraRikuudou___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__MadaraRikuudou___Spell_Alloc__instanceCount=s__MadaraRikuudou___Spell_Alloc__instanceCount + 1
+                set this=s__MadaraRikuudou___Spell_Alloc__instanceCount
             else
-                set this=s__MadaraRikuudou__Spell_Alloc__recycle[(0)]
-                set s__MadaraRikuudou__Spell_Alloc__recycle[(0)]=s__MadaraRikuudou__Spell_Alloc__recycle[s__MadaraRikuudou__Spell_Alloc__recycle[(0)]]
+                set this=s__MadaraRikuudou___Spell_Alloc__recycle[(0)]
+                set s__MadaraRikuudou___Spell_Alloc__recycle[(0)]=s__MadaraRikuudou___Spell_Alloc__recycle[s__MadaraRikuudou___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__MadaraRikuudou__Spell_deallocate takes integer this returns nothing
-            set s__MadaraRikuudou__Spell_Alloc__recycle[this]=s__MadaraRikuudou__Spell_Alloc__recycle[(0)]
-            set s__MadaraRikuudou__Spell_Alloc__recycle[(0)]=this
+        function s__MadaraRikuudou___Spell_deallocate takes integer this returns nothing
+            set s__MadaraRikuudou___Spell_Alloc__recycle[this]=s__MadaraRikuudou___Spell_Alloc__recycle[(0)]
+            set s__MadaraRikuudou___Spell_Alloc__recycle[(0)]=this
         endfunction
         
  
         
-        function s__MadaraRikuudou__Spell_periodic takes nothing returns nothing
+        function s__MadaraRikuudou___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            call BlzEndUnitAbilityCooldown(s__MadaraRikuudou__Spell_caster[this], 'A1B8')
-        	call BlzStartUnitAbilityCooldown(s__MadaraRikuudou__Spell_caster[this], 'A1B8', s__MadaraMugenTsukuyomi_madara_cooldown2)
-            if GetUnitTypeId(s__MadaraRikuudou__Spell_caster[this]) != 'N01J' then
-                call TimerStart(NewTimerEx(this), 1, false, function sc__MadaraRikuudou__Spell_delay2)
+            call BlzEndUnitAbilityCooldown(s__MadaraRikuudou___Spell_caster[this], 'A1B8')
+        	call BlzStartUnitAbilityCooldown(s__MadaraRikuudou___Spell_caster[this], 'A1B8', s__MadaraMugenTsukuyomi_madara_cooldown2)
+            if GetUnitTypeId(s__MadaraRikuudou___Spell_caster[this]) != 'N01J' then
+                call TimerStart(NewTimerEx(this), 1, false, function sc__MadaraRikuudou___Spell_delay2)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__MadaraRikuudou__Spell_delay2 takes nothing returns nothing
+        function s__MadaraRikuudou___Spell_delay2 takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0HE', true)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0HM', true)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0CX', true)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0HO', true)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), s__MadaraRikuudou__Spell_SPELL_ID, true)
-            	call s__MadaraRikuudou__Spell_deallocate(this)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0HE', true)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0HM', true)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0CX', true)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0HO', true)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), s__MadaraRikuudou___Spell_SPELL_ID, true)
+            	call s__MadaraRikuudou___Spell_deallocate(this)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
 
-        function s__MadaraRikuudou__Spell_delay takes nothing returns nothing
+        function s__MadaraRikuudou___Spell_delay takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0HE', false)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0HM', false)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0CX', false)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0HO', false)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), s__MadaraRikuudou__Spell_SPELL_ID, false)
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraRikuudou__Spell_periodic)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0HE', false)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0HM', false)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0CX', false)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0HO', false)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), s__MadaraRikuudou___Spell_SPELL_ID, false)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraRikuudou___Spell_periodic)
             call ReleaseTimer(GetExpiredTimer())
         endfunction
         
-        function s__MadaraRikuudou__Spell_actions takes nothing returns nothing
-            local integer this= s__MadaraRikuudou__Spell_allocate()
+        function s__MadaraRikuudou___Spell_actions takes nothing returns nothing
+            local integer this= s__MadaraRikuudou___Spell_allocate()
             local real caster_x
             local real caster_y
             local real new_x
             local real new_y
             local integer i= 0
-            set s__MadaraRikuudou__Spell_caster[this]=GetTriggerUnit()
-            set caster_x=GetUnitX(s__MadaraRikuudou__Spell_caster[this])
-            set caster_y=GetUnitY(s__MadaraRikuudou__Spell_caster[this])
+            set s__MadaraRikuudou___Spell_caster[this]=GetTriggerUnit()
+            set caster_x=GetUnitX(s__MadaraRikuudou___Spell_caster[this])
+            set caster_y=GetUnitY(s__MadaraRikuudou___Spell_caster[this])
             loop
                 set i=i + 1
                 exitwhen i > 5
@@ -88653,17 +88945,17 @@ endfunction
                 call IssuePointOrder(bj_lastCreatedUnit, "move", new_x, new_y)
                 call UnitApplyTimedLife(bj_lastCreatedUnit, 'BTLF', 1.0)
             endloop
-            if GetUnitTypeId(s__MadaraRikuudou__Spell_caster[this]) == 'N011' then
-                if IsUnitVisible(s__MadaraRikuudou__Spell_caster[this], GetLocalPlayer()) then
+            if GetUnitTypeId(s__MadaraRikuudou___Spell_caster[this]) == 'N011' then
+                if IsUnitVisible(s__MadaraRikuudou___Spell_caster[this], GetLocalPlayer()) then
                     call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff0000Madara: I will show you the power of Uchiha Madara, the power of God.|r")
                     call PlaySoundOnUnitBJ(gg_snd_Madara_T_Transform_Juubi, 100, GetTriggerUnit())
                 endif
-                call TimerStart(NewTimerEx(this), 0.01, false, function s__MadaraRikuudou__Spell_delay)
+                call TimerStart(NewTimerEx(this), 0.01, false, function s__MadaraRikuudou___Spell_delay)
             endif
         endfunction
         
-        function s__MadaraRikuudou__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(44 , s__MadaraRikuudou__Spell_SPELL_ID , function s__MadaraRikuudou__Spell_actions)
+        function s__MadaraRikuudou___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(44 , s__MadaraRikuudou___Spell_SPELL_ID , function s__MadaraRikuudou___Spell_actions)
         endfunction
         
     
@@ -88774,38 +89066,38 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__MadaraRantonKouga__Spell_allocate takes nothing returns integer
+        function s__MadaraRantonKouga___Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__MadaraRantonKouga__Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__MadaraRantonKouga__Spell_Alloc__instanceCount=s__MadaraRantonKouga__Spell_Alloc__instanceCount + 1
-                set this=s__MadaraRantonKouga__Spell_Alloc__instanceCount
+            if ( s__MadaraRantonKouga___Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__MadaraRantonKouga___Spell_Alloc__instanceCount=s__MadaraRantonKouga___Spell_Alloc__instanceCount + 1
+                set this=s__MadaraRantonKouga___Spell_Alloc__instanceCount
             else
-                set this=s__MadaraRantonKouga__Spell_Alloc__recycle[(0)]
-                set s__MadaraRantonKouga__Spell_Alloc__recycle[(0)]=s__MadaraRantonKouga__Spell_Alloc__recycle[s__MadaraRantonKouga__Spell_Alloc__recycle[(0)]]
+                set this=s__MadaraRantonKouga___Spell_Alloc__recycle[(0)]
+                set s__MadaraRantonKouga___Spell_Alloc__recycle[(0)]=s__MadaraRantonKouga___Spell_Alloc__recycle[s__MadaraRantonKouga___Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__MadaraRantonKouga__Spell_deallocate takes integer this returns nothing
-            set s__MadaraRantonKouga__Spell_Alloc__recycle[this]=s__MadaraRantonKouga__Spell_Alloc__recycle[(0)]
-            set s__MadaraRantonKouga__Spell_Alloc__recycle[(0)]=this
+        function s__MadaraRantonKouga___Spell_deallocate takes integer this returns nothing
+            set s__MadaraRantonKouga___Spell_Alloc__recycle[this]=s__MadaraRantonKouga___Spell_Alloc__recycle[(0)]
+            set s__MadaraRantonKouga___Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__MadaraRantonKouga__Spell_periodic takes nothing returns nothing
+        function s__MadaraRantonKouga___Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real missile_x= GetUnitX(s__MadaraRantonKouga__Spell_missile[this])
-            local real missile_y= GetUnitY(s__MadaraRantonKouga__Spell_missile[this])
-            local real new_x= missile_x + Cos(GetUnitFacing(s__MadaraRantonKouga__Spell_caster[this]) * bj_DEGTORAD) * 30
-            local real new_y= missile_y + Sin(GetUnitFacing(s__MadaraRantonKouga__Spell_caster[this]) * bj_DEGTORAD) * 30
-            set s__MadaraRantonKouga__Spell_count[this]=s__MadaraRantonKouga__Spell_count[this] + 1
-            call SetUnitX(s__MadaraRantonKouga__Spell_missile[this], new_x)
-            call SetUnitY(s__MadaraRantonKouga__Spell_missile[this], new_y)
-            if ModuloInteger(s__MadaraRantonKouga__Spell_count[this], 3) == 0 then
+            local real missile_x= GetUnitX(s__MadaraRantonKouga___Spell_missile[this])
+            local real missile_y= GetUnitY(s__MadaraRantonKouga___Spell_missile[this])
+            local real new_x= missile_x + Cos(GetUnitFacing(s__MadaraRantonKouga___Spell_caster[this]) * bj_DEGTORAD) * 30
+            local real new_y= missile_y + Sin(GetUnitFacing(s__MadaraRantonKouga___Spell_caster[this]) * bj_DEGTORAD) * 30
+            set s__MadaraRantonKouga___Spell_count[this]=s__MadaraRantonKouga___Spell_count[this] + 1
+            call SetUnitX(s__MadaraRantonKouga___Spell_missile[this], new_x)
+            call SetUnitY(s__MadaraRantonKouga___Spell_missile[this], new_y)
+            if ModuloInteger(s__MadaraRantonKouga___Spell_count[this], 3) == 0 then
                 set bj_lastCreatedEffect=AddSpecialEffect("Abilities\\Weapons\\Bolt\\BoltImpact.mdl", new_x, new_y)
                 call BlzSetSpecialEffectScale(bj_lastCreatedEffect, 0.4)
                 call BlzSetSpecialEffectAlpha(bj_lastCreatedEffect, 120)
@@ -88817,27 +89109,27 @@ endfunction
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
-                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__MadaraRantonKouga__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false and not IsUnitInGroup(bj_lastCreatedUnit, s__MadaraRantonKouga__Spell_damaged[this]) then
+                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__MadaraRantonKouga___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false and not IsUnitInGroup(bj_lastCreatedUnit, s__MadaraRantonKouga___Spell_damaged[this]) then
                     call DestroyEffect(AddSpecialEffect(("Abilities\\Spells\\Other\\Stampede\\StampedeMissileDeath.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
-                    call UnitDamageTarget(s__MadaraRantonKouga__Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroInt(s__MadaraRantonKouga__Spell_caster[this], true), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-                    call GroupAddUnit(s__MadaraRantonKouga__Spell_damaged[this], bj_lastCreatedUnit)
+                    call UnitDamageTarget(s__MadaraRantonKouga___Spell_caster[this], bj_lastCreatedUnit, 10.0 * GetHeroInt(s__MadaraRantonKouga___Spell_caster[this], true), true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
+                    call GroupAddUnit(s__MadaraRantonKouga___Spell_damaged[this], bj_lastCreatedUnit)
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
-            if s__MadaraRantonKouga__Spell_count[this] >= 50 then
-                call s__Lightning_release(s__MadaraRantonKouga__Spell_light[this],0.5)
-                call GroupClear(s__MadaraRantonKouga__Spell_damaged[this])
-                call KillUnit(s__MadaraRantonKouga__Spell_missile[this])
-                call ShowUnit(s__MadaraRantonKouga__Spell_missile[this], false)
-                set s__MadaraRantonKouga__Spell_caster[this]=null
-                set s__MadaraRantonKouga__Spell_missile[this]=null
-                set s__MadaraRantonKouga__Spell_damaged[this]=null
-                call s__MadaraRantonKouga__Spell_deallocate(this)
+            if s__MadaraRantonKouga___Spell_count[this] >= 50 then
+                call s__Lightning_release(s__MadaraRantonKouga___Spell_light[this],0.5)
+                call GroupClear(s__MadaraRantonKouga___Spell_damaged[this])
+                call KillUnit(s__MadaraRantonKouga___Spell_missile[this])
+                call ShowUnit(s__MadaraRantonKouga___Spell_missile[this], false)
+                set s__MadaraRantonKouga___Spell_caster[this]=null
+                set s__MadaraRantonKouga___Spell_missile[this]=null
+                set s__MadaraRantonKouga___Spell_damaged[this]=null
+                call s__MadaraRantonKouga___Spell_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__MadaraRantonKouga__Spell_actions takes nothing returns nothing
+        function s__MadaraRantonKouga___Spell_actions takes nothing returns nothing
             local integer this
             local real caster_x= GetUnitX(GetTriggerUnit())
             local real caster_y= GetUnitY(GetTriggerUnit())
@@ -88846,23 +89138,23 @@ endfunction
             local real angle= Atan2(target_y - caster_y, target_x - caster_x) * bj_RADTODEG
             local real new_angle
             local integer i
-            set this=s__MadaraRantonKouga__Spell_allocate()
-            set s__MadaraRantonKouga__Spell_target_x[this]=target_x
-            set s__MadaraRantonKouga__Spell_target_y[this]=target_y
-            set s__MadaraRantonKouga__Spell_count[this]=0
-            set s__MadaraRantonKouga__Spell_caster[this]=GetTriggerUnit()
-            set s__MadaraRantonKouga__Spell_missile[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, 270)
-            set s__MadaraRantonKouga__Spell_damaged[this]=CreateGroup()
-            call SetUnitX(s__MadaraRantonKouga__Spell_missile[this], caster_x)
-            call SetUnitY(s__MadaraRantonKouga__Spell_missile[this], caster_y)
-            set s__MadaraRantonKouga__Spell_light[this]=s__Lightning_create("MYSB" , true , 0.5)
-            call s__Lightning_attachToUnit(s__MadaraRantonKouga__Spell_light[this],true , s__MadaraRantonKouga__Spell_caster[this] , 60)
-            call s__Lightning_attachToUnit(s__MadaraRantonKouga__Spell_light[this],false , s__MadaraRantonKouga__Spell_missile[this] , 60)
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraRantonKouga__Spell_periodic)
+            set this=s__MadaraRantonKouga___Spell_allocate()
+            set s__MadaraRantonKouga___Spell_target_x[this]=target_x
+            set s__MadaraRantonKouga___Spell_target_y[this]=target_y
+            set s__MadaraRantonKouga___Spell_count[this]=0
+            set s__MadaraRantonKouga___Spell_caster[this]=GetTriggerUnit()
+            set s__MadaraRantonKouga___Spell_missile[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, 270)
+            set s__MadaraRantonKouga___Spell_damaged[this]=CreateGroup()
+            call SetUnitX(s__MadaraRantonKouga___Spell_missile[this], caster_x)
+            call SetUnitY(s__MadaraRantonKouga___Spell_missile[this], caster_y)
+            set s__MadaraRantonKouga___Spell_light[this]=s__Lightning_create("MYSB" , true , 0.5)
+            call s__Lightning_attachToUnit(s__MadaraRantonKouga___Spell_light[this],true , s__MadaraRantonKouga___Spell_caster[this] , 60)
+            call s__Lightning_attachToUnit(s__MadaraRantonKouga___Spell_light[this],false , s__MadaraRantonKouga___Spell_missile[this] , 60)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__MadaraRantonKouga___Spell_periodic)
         endfunction 
         
-        function s__MadaraRantonKouga__Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(44 , s__MadaraRantonKouga__Spell_SPELL_ID , function s__MadaraRantonKouga__Spell_actions)
+        function s__MadaraRantonKouga___Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(44 , s__MadaraRantonKouga___Spell_SPELL_ID , function s__MadaraRantonKouga___Spell_actions)
         endfunction 
         
     
@@ -90499,7 +90791,7 @@ endfunction
 			set angle=Deg2Rad(GetRandomReal(0, 360))
 			set x=(((GetUnitX(s__MeiNewKomu_caster[this]) )*1.0) + Cos((( angle )*1.0)) * (( dist)*1.0)) // INLINED!!
 			set y=(((GetUnitY(s__MeiNewKomu_caster[this]) )*1.0) + Sin((( angle )*1.0)) * (( dist)*1.0)) // INLINED!!
-                	set bj_lastCreatedUnit=CreateUnit(GetOwningPlayer(s__MeiNewKomu_caster[this]), 'z008', x, y, 24 * i)
+                	set bj_lastCreatedUnit=CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'z008', x, y, 24 * i)
                 	set x=GetUnitX(s__MeiNewKomu_caster[this]) + Cos(Deg2Rad(30 * i)) * 800
                 	set y=GetUnitY(s__MeiNewKomu_caster[this]) + Sin(Deg2Rad(30 * i)) * 800
 			call SetUnitScale(bj_lastCreatedUnit, 10, 0, 0)
@@ -128537,34 +128829,34 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__YamatoReleaseCage___Spell_allocate takes nothing returns integer
+        function s__YamatoReleaseCage__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__YamatoReleaseCage___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__YamatoReleaseCage___Spell_Alloc__instanceCount=s__YamatoReleaseCage___Spell_Alloc__instanceCount + 1
-                set this=s__YamatoReleaseCage___Spell_Alloc__instanceCount
+            if ( s__YamatoReleaseCage__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__YamatoReleaseCage__Spell_Alloc__instanceCount=s__YamatoReleaseCage__Spell_Alloc__instanceCount + 1
+                set this=s__YamatoReleaseCage__Spell_Alloc__instanceCount
             else
-                set this=s__YamatoReleaseCage___Spell_Alloc__recycle[(0)]
-                set s__YamatoReleaseCage___Spell_Alloc__recycle[(0)]=s__YamatoReleaseCage___Spell_Alloc__recycle[s__YamatoReleaseCage___Spell_Alloc__recycle[(0)]]
+                set this=s__YamatoReleaseCage__Spell_Alloc__recycle[(0)]
+                set s__YamatoReleaseCage__Spell_Alloc__recycle[(0)]=s__YamatoReleaseCage__Spell_Alloc__recycle[s__YamatoReleaseCage__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__YamatoReleaseCage___Spell_deallocate takes integer this returns nothing
-            set s__YamatoReleaseCage___Spell_Alloc__recycle[this]=s__YamatoReleaseCage___Spell_Alloc__recycle[(0)]
-            set s__YamatoReleaseCage___Spell_Alloc__recycle[(0)]=this
+        function s__YamatoReleaseCage__Spell_deallocate takes integer this returns nothing
+            set s__YamatoReleaseCage__Spell_Alloc__recycle[this]=s__YamatoReleaseCage__Spell_Alloc__recycle[(0)]
+            set s__YamatoReleaseCage__Spell_Alloc__recycle[(0)]=this
         endfunction
         
-        function s__YamatoReleaseCage___Spell_disable takes nothing returns nothing
-            call UnitRemoveAbility(udg_Yamato, s__YamatoReleaseCage___Spell_SPELL_ID)
+        function s__YamatoReleaseCage__Spell_disable takes nothing returns nothing
+            call UnitRemoveAbility(udg_Yamato, s__YamatoReleaseCage__Spell_SPELL_ID)
             call SetPlayerAbilityAvailable(GetOwningPlayer(udg_Yamato), 'A04J', true)
             call ReleaseTimer(GetExpiredTimer())
         endfunction 
         
-        function s__YamatoReleaseCage___Spell_actions takes nothing returns nothing
+        function s__YamatoReleaseCage__Spell_actions takes nothing returns nothing
             if not udg_YamatoRemoved then
                 set bj_forLoopAIndex=1
                 set bj_forLoopAIndexEnd=10
@@ -128587,12 +128879,12 @@ endfunction
                 call ReleaseTimer(udg_YamatoCageTimer)
                 set udg_YamatoCageTimer=null
                 set udg_YamatoRemoved=true
-                call TimerStart((NewTimerEx(0)), 0.1, false, function s__YamatoReleaseCage___Spell_disable) // INLINED!!
+                call TimerStart((NewTimerEx(0)), 0.1, false, function s__YamatoReleaseCage__Spell_disable) // INLINED!!
             endif
         endfunction 
         
-        function s__YamatoReleaseCage___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(21 , s__YamatoReleaseCage___Spell_SPELL_ID , function s__YamatoReleaseCage___Spell_actions)
+        function s__YamatoReleaseCage__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(21 , s__YamatoReleaseCage__Spell_SPELL_ID , function s__YamatoReleaseCage__Spell_actions)
         endfunction
         
     
@@ -128605,31 +128897,31 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__YamatoNewSemi___Spell_allocate takes nothing returns integer
+        function s__YamatoNewSemi__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__YamatoNewSemi___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__YamatoNewSemi___Spell_Alloc__instanceCount=s__YamatoNewSemi___Spell_Alloc__instanceCount + 1
-                set this=s__YamatoNewSemi___Spell_Alloc__instanceCount
+            if ( s__YamatoNewSemi__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__YamatoNewSemi__Spell_Alloc__instanceCount=s__YamatoNewSemi__Spell_Alloc__instanceCount + 1
+                set this=s__YamatoNewSemi__Spell_Alloc__instanceCount
             else
-                set this=s__YamatoNewSemi___Spell_Alloc__recycle[(0)]
-                set s__YamatoNewSemi___Spell_Alloc__recycle[(0)]=s__YamatoNewSemi___Spell_Alloc__recycle[s__YamatoNewSemi___Spell_Alloc__recycle[(0)]]
+                set this=s__YamatoNewSemi__Spell_Alloc__recycle[(0)]
+                set s__YamatoNewSemi__Spell_Alloc__recycle[(0)]=s__YamatoNewSemi__Spell_Alloc__recycle[s__YamatoNewSemi__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__YamatoNewSemi___Spell_deallocate takes integer this returns nothing
-            set s__YamatoNewSemi___Spell_Alloc__recycle[this]=s__YamatoNewSemi___Spell_Alloc__recycle[(0)]
-            set s__YamatoNewSemi___Spell_Alloc__recycle[(0)]=this
+        function s__YamatoNewSemi__Spell_deallocate takes integer this returns nothing
+            set s__YamatoNewSemi__Spell_Alloc__recycle[this]=s__YamatoNewSemi__Spell_Alloc__recycle[(0)]
+            set s__YamatoNewSemi__Spell_Alloc__recycle[(0)]=this
         endfunction
         
-        function s__YamatoNewSemi___Spell_periodic takes nothing returns nothing
+        function s__YamatoNewSemi__Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real x= (((GetUnitX(s__YamatoNewSemi___Spell_wood[this]) )*1.0) + Cos((( s__YamatoNewSemi___Spell_angle[this] )*1.0)) * (( 28 * s__YamatoNewSemi___Spell_count[this])*1.0)) // INLINED!!
-            local real y= (((GetUnitY(s__YamatoNewSemi___Spell_wood[this]) )*1.0) + Sin((( s__YamatoNewSemi___Spell_angle[this] )*1.0)) * (( 28 * s__YamatoNewSemi___Spell_count[this])*1.0)) // INLINED!!
+            local real x= (((GetUnitX(s__YamatoNewSemi__Spell_wood[this]) )*1.0) + Cos((( s__YamatoNewSemi__Spell_angle[this] )*1.0)) * (( 28 * s__YamatoNewSemi__Spell_count[this])*1.0)) // INLINED!!
+            local real y= (((GetUnitY(s__YamatoNewSemi__Spell_wood[this]) )*1.0) + Sin((( s__YamatoNewSemi__Spell_angle[this] )*1.0)) * (( 28 * s__YamatoNewSemi__Spell_count[this])*1.0)) // INLINED!!
             local real new_x
             local real new_y
             set bj_lastCreatedGroup=CreateGroup()
@@ -128637,53 +128929,53 @@ endfunction
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
-                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__YamatoNewSemi___Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
-                    if not IsUnitInGroup(bj_lastCreatedUnit, s__YamatoNewSemi___Spell_damaged[this]) then
-                        call UnitDamageTarget(s__YamatoNewSemi___Spell_caster[this], bj_lastCreatedUnit, 90 * GetUnitAbilityLevel(s__YamatoNewSemi___Spell_caster[this], s__YamatoNewSemi___Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                        call GroupAddUnit(s__YamatoNewSemi___Spell_damaged[this], bj_lastCreatedUnit)
+                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__YamatoNewSemi__Spell_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
+                    if not IsUnitInGroup(bj_lastCreatedUnit, s__YamatoNewSemi__Spell_damaged[this]) then
+                        call UnitDamageTarget(s__YamatoNewSemi__Spell_caster[this], bj_lastCreatedUnit, 90 * GetUnitAbilityLevel(s__YamatoNewSemi__Spell_caster[this], s__YamatoNewSemi__Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                        call GroupAddUnit(s__YamatoNewSemi__Spell_damaged[this], bj_lastCreatedUnit)
                     endif
                     call DestroyEffect(AddSpecialEffect(("Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl" ), (( GetUnitX(bj_lastCreatedUnit) )*1.0), (( GetUnitY(bj_lastCreatedUnit))*1.0))) // INLINED!!
                     if IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_STRUCTURE) == false then
-                        set new_x=(((GetUnitX(bj_lastCreatedUnit) )*1.0) + Cos((( s__YamatoNewSemi___Spell_angle[this] )*1.0)) * (( 28)*1.0)) // INLINED!!
-                        set new_y=(((GetUnitY(bj_lastCreatedUnit) )*1.0) + Sin((( s__YamatoNewSemi___Spell_angle[this] )*1.0)) * (( 28)*1.0)) // INLINED!!
+                        set new_x=(((GetUnitX(bj_lastCreatedUnit) )*1.0) + Cos((( s__YamatoNewSemi__Spell_angle[this] )*1.0)) * (( 28)*1.0)) // INLINED!!
+                        set new_y=(((GetUnitY(bj_lastCreatedUnit) )*1.0) + Sin((( s__YamatoNewSemi__Spell_angle[this] )*1.0)) * (( 28)*1.0)) // INLINED!!
                         call SetUnitPosition(bj_lastCreatedUnit, new_x, new_y)
                     endif
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            set s__YamatoNewSemi___Spell_count[this]=s__YamatoNewSemi___Spell_count[this] + 1
-            if s__YamatoNewSemi___Spell_count[this] > 25 then
-                call KillUnit(s__YamatoNewSemi___Spell_wood[this])
-                call ShowUnit(s__YamatoNewSemi___Spell_wood[this], false)
-                set s__YamatoNewSemi___Spell_wood[this]=null
-                call DestroyGroup(s__YamatoNewSemi___Spell_damaged[this])
-                set s__YamatoNewSemi___Spell_damaged[this]=null
-                call s__YamatoNewSemi___Spell_deallocate(this)
+            set s__YamatoNewSemi__Spell_count[this]=s__YamatoNewSemi__Spell_count[this] + 1
+            if s__YamatoNewSemi__Spell_count[this] > 25 then
+                call KillUnit(s__YamatoNewSemi__Spell_wood[this])
+                call ShowUnit(s__YamatoNewSemi__Spell_wood[this], false)
+                set s__YamatoNewSemi__Spell_wood[this]=null
+                call DestroyGroup(s__YamatoNewSemi__Spell_damaged[this])
+                set s__YamatoNewSemi__Spell_damaged[this]=null
+                call s__YamatoNewSemi__Spell_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__YamatoNewSemi___Spell_actions takes nothing returns nothing
-            local integer this= s__YamatoNewSemi___Spell_allocate()
+        function s__YamatoNewSemi__Spell_actions takes nothing returns nothing
+            local integer this= s__YamatoNewSemi__Spell_allocate()
             local real new_x
             local real new_y
-            set s__YamatoNewSemi___Spell_caster[this]=GetTriggerUnit()
-            set s__YamatoNewSemi___Spell_caster_x[this]=GetUnitX(s__YamatoNewSemi___Spell_caster[this])
-            set s__YamatoNewSemi___Spell_caster_y[this]=GetUnitY(s__YamatoNewSemi___Spell_caster[this])
-            set s__YamatoNewSemi___Spell_target_x[this]=GetSpellTargetX()
-            set s__YamatoNewSemi___Spell_target_y[this]=GetSpellTargetY()
-            set s__YamatoNewSemi___Spell_count[this]=0
-            set s__YamatoNewSemi___Spell_angle[this]=Atan3(s__YamatoNewSemi___Spell_caster_x[this] , s__YamatoNewSemi___Spell_caster_y[this] , s__YamatoNewSemi___Spell_target_x[this] , s__YamatoNewSemi___Spell_target_y[this])
-            set s__YamatoNewSemi___Spell_damaged[this]=CreateGroup()
-            set new_x=(((s__YamatoNewSemi___Spell_caster_x[this] )*1.0) + Cos((( s__YamatoNewSemi___Spell_angle[this] )*1.0)) * (( 120)*1.0)) // INLINED!!
-            set new_y=(((s__YamatoNewSemi___Spell_caster_y[this] )*1.0) + Sin((( s__YamatoNewSemi___Spell_angle[this] )*1.0)) * (( 120)*1.0)) // INLINED!!
-            set s__YamatoNewSemi___Spell_wood[this]=CreateUnit(GetOwningPlayer(s__YamatoNewSemi___Spell_caster[this]), 'e00C', new_x, new_y, Rad2Deg(s__YamatoNewSemi___Spell_angle[this]))
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__YamatoNewSemi___Spell_periodic)
+            set s__YamatoNewSemi__Spell_caster[this]=GetTriggerUnit()
+            set s__YamatoNewSemi__Spell_caster_x[this]=GetUnitX(s__YamatoNewSemi__Spell_caster[this])
+            set s__YamatoNewSemi__Spell_caster_y[this]=GetUnitY(s__YamatoNewSemi__Spell_caster[this])
+            set s__YamatoNewSemi__Spell_target_x[this]=GetSpellTargetX()
+            set s__YamatoNewSemi__Spell_target_y[this]=GetSpellTargetY()
+            set s__YamatoNewSemi__Spell_count[this]=0
+            set s__YamatoNewSemi__Spell_angle[this]=Atan3(s__YamatoNewSemi__Spell_caster_x[this] , s__YamatoNewSemi__Spell_caster_y[this] , s__YamatoNewSemi__Spell_target_x[this] , s__YamatoNewSemi__Spell_target_y[this])
+            set s__YamatoNewSemi__Spell_damaged[this]=CreateGroup()
+            set new_x=(((s__YamatoNewSemi__Spell_caster_x[this] )*1.0) + Cos((( s__YamatoNewSemi__Spell_angle[this] )*1.0)) * (( 120)*1.0)) // INLINED!!
+            set new_y=(((s__YamatoNewSemi__Spell_caster_y[this] )*1.0) + Sin((( s__YamatoNewSemi__Spell_angle[this] )*1.0)) * (( 120)*1.0)) // INLINED!!
+            set s__YamatoNewSemi__Spell_wood[this]=CreateUnit(GetOwningPlayer(s__YamatoNewSemi__Spell_caster[this]), 'e00C', new_x, new_y, Rad2Deg(s__YamatoNewSemi__Spell_angle[this]))
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__YamatoNewSemi__Spell_periodic)
         endfunction 
         
-        function s__YamatoNewSemi___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(21 , s__YamatoNewSemi___Spell_SPELL_ID , function s__YamatoNewSemi___Spell_actions)
+        function s__YamatoNewSemi__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(21 , s__YamatoNewSemi__Spell_SPELL_ID , function s__YamatoNewSemi__Spell_actions)
         endfunction
         
     
@@ -128932,60 +129224,60 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__YamatoNewD___Spell_allocate takes nothing returns integer
+        function s__YamatoNewD__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__YamatoNewD___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__YamatoNewD___Spell_Alloc__instanceCount=s__YamatoNewD___Spell_Alloc__instanceCount + 1
-                set this=s__YamatoNewD___Spell_Alloc__instanceCount
+            if ( s__YamatoNewD__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__YamatoNewD__Spell_Alloc__instanceCount=s__YamatoNewD__Spell_Alloc__instanceCount + 1
+                set this=s__YamatoNewD__Spell_Alloc__instanceCount
             else
-                set this=s__YamatoNewD___Spell_Alloc__recycle[(0)]
-                set s__YamatoNewD___Spell_Alloc__recycle[(0)]=s__YamatoNewD___Spell_Alloc__recycle[s__YamatoNewD___Spell_Alloc__recycle[(0)]]
+                set this=s__YamatoNewD__Spell_Alloc__recycle[(0)]
+                set s__YamatoNewD__Spell_Alloc__recycle[(0)]=s__YamatoNewD__Spell_Alloc__recycle[s__YamatoNewD__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__YamatoNewD___Spell_deallocate takes integer this returns nothing
-            set s__YamatoNewD___Spell_Alloc__recycle[this]=s__YamatoNewD___Spell_Alloc__recycle[(0)]
-            set s__YamatoNewD___Spell_Alloc__recycle[(0)]=this
+        function s__YamatoNewD__Spell_deallocate takes integer this returns nothing
+            set s__YamatoNewD__Spell_Alloc__recycle[this]=s__YamatoNewD__Spell_Alloc__recycle[(0)]
+            set s__YamatoNewD__Spell_Alloc__recycle[(0)]=this
         endfunction
         
-        function s__YamatoNewD___Spell_finish takes nothing returns nothing
+        function s__YamatoNewD__Spell_finish takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            set s__YamatoNewD___Spell_count[this]=s__YamatoNewD___Spell_count[this] + 1
-            if IsUnitPaused(s__YamatoNewD___Spell_caster[this]) == false then
-                call PauseUnit(s__YamatoNewD___Spell_caster[this], true)
+            set s__YamatoNewD__Spell_count[this]=s__YamatoNewD__Spell_count[this] + 1
+            if IsUnitPaused(s__YamatoNewD__Spell_caster[this]) == false then
+                call PauseUnit(s__YamatoNewD__Spell_caster[this], true)
             endif
-            if s__YamatoNewD___Spell_count[this] >= 100 then
-                call PauseUnit(s__YamatoNewD___Spell_caster[this], false)
-                call SetUnitInvulnerable(s__YamatoNewD___Spell_caster[this], false)
-                call KillUnit(s__YamatoNewD___Spell_domo[this])
-                set s__YamatoNewD___Spell_domo[this]=null
-                call s__YamatoNewD___Spell_deallocate(this)
+            if s__YamatoNewD__Spell_count[this] >= 100 then
+                call PauseUnit(s__YamatoNewD__Spell_caster[this], false)
+                call SetUnitInvulnerable(s__YamatoNewD__Spell_caster[this], false)
+                call KillUnit(s__YamatoNewD__Spell_domo[this])
+                set s__YamatoNewD__Spell_domo[this]=null
+                call s__YamatoNewD__Spell_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction 
         
-        function s__YamatoNewD___Spell_actions takes nothing returns nothing
-            local integer this= s__YamatoNewD___Spell_allocate()
+        function s__YamatoNewD__Spell_actions takes nothing returns nothing
+            local integer this= s__YamatoNewD__Spell_allocate()
             if IsUnitVisible(GetTriggerUnit(), GetLocalPlayer()) then
             	call PlaySoundOnUnitBJ(gg_snd_Yamato_D, 100, GetTriggerUnit())
             endif
-            set s__YamatoNewD___Spell_caster[this]=GetTriggerUnit()
-            set s__YamatoNewD___Spell_domo[this]=CreateUnit(GetOwningPlayer(s__YamatoNewD___Spell_caster[this]), 'e002', GetUnitX(s__YamatoNewD___Spell_caster[this]), GetUnitY(s__YamatoNewD___Spell_caster[this]), GetUnitFacing(s__YamatoNewD___Spell_caster[this]))
-            set s__YamatoNewD___Spell_count[this]=0
-            call SetUnitAnimation(s__YamatoNewD___Spell_domo[this], "birth")
-            call PauseUnit(s__YamatoNewD___Spell_caster[this], true)
-            call SetUnitAnimation(s__YamatoNewD___Spell_caster[this], "spell")
-            call SetUnitInvulnerable(s__YamatoNewD___Spell_caster[this], true)
-            call TimerStart(NewTimerEx(this), 0.03, true, function s__YamatoNewD___Spell_finish)
+            set s__YamatoNewD__Spell_caster[this]=GetTriggerUnit()
+            set s__YamatoNewD__Spell_domo[this]=CreateUnit(GetOwningPlayer(s__YamatoNewD__Spell_caster[this]), 'e002', GetUnitX(s__YamatoNewD__Spell_caster[this]), GetUnitY(s__YamatoNewD__Spell_caster[this]), GetUnitFacing(s__YamatoNewD__Spell_caster[this]))
+            set s__YamatoNewD__Spell_count[this]=0
+            call SetUnitAnimation(s__YamatoNewD__Spell_domo[this], "birth")
+            call PauseUnit(s__YamatoNewD__Spell_caster[this], true)
+            call SetUnitAnimation(s__YamatoNewD__Spell_caster[this], "spell")
+            call SetUnitInvulnerable(s__YamatoNewD__Spell_caster[this], true)
+            call TimerStart(NewTimerEx(this), 0.03, true, function s__YamatoNewD__Spell_finish)
         endfunction 
         
-        function s__YamatoNewD___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(21 , s__YamatoNewD___Spell_SPELL_ID , function s__YamatoNewD___Spell_actions)
+        function s__YamatoNewD__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(21 , s__YamatoNewD__Spell_SPELL_ID , function s__YamatoNewD__Spell_actions)
         endfunction
         
     
@@ -129905,87 +130197,87 @@ endfunction
     
 //Implemented from module Alloc:
     
-        function s__YugitoClawsStrike___Spell_allocate takes nothing returns integer
+        function s__YugitoClawsStrike__Spell_allocate takes nothing returns integer
             local integer this
     
             //call BJDebugMsg("Alloc: " + I2S(instanceCount))
-            if ( s__YugitoClawsStrike___Spell_Alloc__recycle[(0)] == 0 ) then
-                set s__YugitoClawsStrike___Spell_Alloc__instanceCount=s__YugitoClawsStrike___Spell_Alloc__instanceCount + 1
-                set this=s__YugitoClawsStrike___Spell_Alloc__instanceCount
+            if ( s__YugitoClawsStrike__Spell_Alloc__recycle[(0)] == 0 ) then
+                set s__YugitoClawsStrike__Spell_Alloc__instanceCount=s__YugitoClawsStrike__Spell_Alloc__instanceCount + 1
+                set this=s__YugitoClawsStrike__Spell_Alloc__instanceCount
             else
-                set this=s__YugitoClawsStrike___Spell_Alloc__recycle[(0)]
-                set s__YugitoClawsStrike___Spell_Alloc__recycle[(0)]=s__YugitoClawsStrike___Spell_Alloc__recycle[s__YugitoClawsStrike___Spell_Alloc__recycle[(0)]]
+                set this=s__YugitoClawsStrike__Spell_Alloc__recycle[(0)]
+                set s__YugitoClawsStrike__Spell_Alloc__recycle[(0)]=s__YugitoClawsStrike__Spell_Alloc__recycle[s__YugitoClawsStrike__Spell_Alloc__recycle[(0)]]
             endif
 
     
             return this
         endfunction
     
-        function s__YugitoClawsStrike___Spell_deallocate takes integer this returns nothing
-            set s__YugitoClawsStrike___Spell_Alloc__recycle[this]=s__YugitoClawsStrike___Spell_Alloc__recycle[(0)]
-            set s__YugitoClawsStrike___Spell_Alloc__recycle[(0)]=this
+        function s__YugitoClawsStrike__Spell_deallocate takes integer this returns nothing
+            set s__YugitoClawsStrike__Spell_Alloc__recycle[this]=s__YugitoClawsStrike__Spell_Alloc__recycle[(0)]
+            set s__YugitoClawsStrike__Spell_Alloc__recycle[(0)]=this
         endfunction
         
         
-        function s__YugitoClawsStrike___Spell_periodic takes nothing returns nothing
+        function s__YugitoClawsStrike__Spell_periodic takes nothing returns nothing
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real dummy_x= GetUnitX(s__YugitoClawsStrike___Spell_dummy[this])
-            local real dummy_y= GetUnitY(s__YugitoClawsStrike___Spell_dummy[this])
-            local real new_x= dummy_x + Cos(s__YugitoClawsStrike___Spell_angle[this]) * 25
-            local real new_y= dummy_y + Sin(s__YugitoClawsStrike___Spell_angle[this]) * 25
+            local real dummy_x= GetUnitX(s__YugitoClawsStrike__Spell_dummy[this])
+            local real dummy_y= GetUnitY(s__YugitoClawsStrike__Spell_dummy[this])
+            local real new_x= dummy_x + Cos(s__YugitoClawsStrike__Spell_angle[this]) * 25
+            local real new_y= dummy_y + Sin(s__YugitoClawsStrike__Spell_angle[this]) * 25
             local real unit_x
             local real unit_y
-            set s__YugitoClawsStrike___Spell_count[this]=s__YugitoClawsStrike___Spell_count[this] + 1
-            call SetUnitX(s__YugitoClawsStrike___Spell_dummy[this], new_x)
-            call SetUnitY(s__YugitoClawsStrike___Spell_dummy[this], new_y)
+            set s__YugitoClawsStrike__Spell_count[this]=s__YugitoClawsStrike__Spell_count[this] + 1
+            call SetUnitX(s__YugitoClawsStrike__Spell_dummy[this], new_x)
+            call SetUnitY(s__YugitoClawsStrike__Spell_dummy[this], new_y)
             set bj_lastCreatedGroup=CreateGroup()
             call GroupEnumUnitsInRange(bj_lastCreatedGroup, new_x, new_y, 220.0, null)
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
-                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__YugitoClawsStrike___Spell_caster[this])) and not IsUnitInGroup(bj_lastCreatedUnit, s__YugitoClawsStrike___Spell_damaged[this]) then
+                if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__YugitoClawsStrike__Spell_caster[this])) and not IsUnitInGroup(bj_lastCreatedUnit, s__YugitoClawsStrike__Spell_damaged[this]) then
                     set unit_x=GetUnitX(bj_lastCreatedUnit)
                     set unit_y=GetUnitY(bj_lastCreatedUnit)
                     call DestroyEffect(AddSpecialEffect(("war3mapImported\\Blood.mdl" ), (( unit_x )*1.0), (( unit_y)*1.0))) // INLINED!!
-                    call UnitDamageTarget(s__YugitoClawsStrike___Spell_caster[this], bj_lastCreatedUnit, ( GetHeroAgi(s__YugitoClawsStrike___Spell_caster[this], true) / 2 ) * GetUnitAbilityLevel(s__YugitoClawsStrike___Spell_caster[this], s__YugitoClawsStrike___Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
-                    call GroupAddUnit(s__YugitoClawsStrike___Spell_damaged[this], bj_lastCreatedUnit)
+                    call UnitDamageTarget(s__YugitoClawsStrike__Spell_caster[this], bj_lastCreatedUnit, ( GetHeroAgi(s__YugitoClawsStrike__Spell_caster[this], true) / 2 ) * GetUnitAbilityLevel(s__YugitoClawsStrike__Spell_caster[this], s__YugitoClawsStrike__Spell_SPELL_ID), true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, null)
+                    call GroupAddUnit(s__YugitoClawsStrike__Spell_damaged[this], bj_lastCreatedUnit)
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
-            call GroupAddGroup(s__YugitoClawsStrike___Spell_dummies[this], bj_lastCreatedGroup)
+            call GroupAddGroup(s__YugitoClawsStrike__Spell_dummies[this], bj_lastCreatedGroup)
             loop
 		set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
                 set dummy_x=GetUnitX(bj_lastCreatedUnit)
                 set dummy_y=GetUnitY(bj_lastCreatedUnit)
-                set new_x=(((dummy_x )*1.0) + Cos((( s__YugitoClawsStrike___Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
-                set new_y=(((dummy_y )*1.0) + Sin((( s__YugitoClawsStrike___Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
+                set new_x=(((dummy_x )*1.0) + Cos((( s__YugitoClawsStrike__Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
+                set new_y=(((dummy_y )*1.0) + Sin((( s__YugitoClawsStrike__Spell_angle[this] )*1.0)) * (( 25)*1.0)) // INLINED!!
                 call SetUnitX(bj_lastCreatedUnit, new_x)
                 call SetUnitY(bj_lastCreatedUnit, new_y)
             endloop
             call DestroyGroup(bj_lastCreatedGroup)
-            if s__YugitoClawsStrike___Spell_count[this] > 30 then
+            if s__YugitoClawsStrike__Spell_count[this] > 30 then
                 loop
-                    set bj_lastCreatedUnit=FirstOfGroup(s__YugitoClawsStrike___Spell_dummies[this])
+                    set bj_lastCreatedUnit=FirstOfGroup(s__YugitoClawsStrike__Spell_dummies[this])
                     exitwhen bj_lastCreatedUnit == null
-                    call GroupRemoveUnit(s__YugitoClawsStrike___Spell_dummies[this], bj_lastCreatedUnit)
+                    call GroupRemoveUnit(s__YugitoClawsStrike__Spell_dummies[this], bj_lastCreatedUnit)
                     call KillUnit(bj_lastCreatedUnit)
 		    call ShowUnit(bj_lastCreatedUnit, false)
                 endloop
-                call DestroyGroup(s__YugitoClawsStrike___Spell_dummies[this])
-                set s__YugitoClawsStrike___Spell_dummies[this]=null
-                call RemoveUnit(s__YugitoClawsStrike___Spell_dummy[this])
-                call DestroyGroup(s__YugitoClawsStrike___Spell_damaged[this])
-                set s__YugitoClawsStrike___Spell_damaged[this]=null
-                set s__YugitoClawsStrike___Spell_dummy[this]=null
-                call s__YugitoClawsStrike___Spell_deallocate(this)
+                call DestroyGroup(s__YugitoClawsStrike__Spell_dummies[this])
+                set s__YugitoClawsStrike__Spell_dummies[this]=null
+                call RemoveUnit(s__YugitoClawsStrike__Spell_dummy[this])
+                call DestroyGroup(s__YugitoClawsStrike__Spell_damaged[this])
+                set s__YugitoClawsStrike__Spell_damaged[this]=null
+                set s__YugitoClawsStrike__Spell_dummy[this]=null
+                call s__YugitoClawsStrike__Spell_deallocate(this)
                 call ReleaseTimer(GetExpiredTimer())
             endif
         endfunction
         
-        function s__YugitoClawsStrike___Spell_actions takes nothing returns nothing
-            local integer this= s__YugitoClawsStrike___Spell_allocate()
+        function s__YugitoClawsStrike__Spell_actions takes nothing returns nothing
+            local integer this= s__YugitoClawsStrike__Spell_allocate()
             local real caster_x= GetUnitX(GetTriggerUnit())
             local real caster_y= GetUnitY(GetTriggerUnit())
             local real target_x= GetSpellTargetX()
@@ -129995,10 +130287,10 @@ endfunction
             local real y
             local real angle
             local real offset
-            set s__YugitoClawsStrike___Spell_angle[this]=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
-            set s__YugitoClawsStrike___Spell_damaged[this]=CreateGroup()
-            set s__YugitoClawsStrike___Spell_caster[this]=GetTriggerUnit()
-	    set s__YugitoClawsStrike___Spell_dummies[this]=CreateGroup()
+            set s__YugitoClawsStrike__Spell_angle[this]=Atan2(( target_y - caster_y ), ( target_x - caster_x ))
+            set s__YugitoClawsStrike__Spell_damaged[this]=CreateGroup()
+            set s__YugitoClawsStrike__Spell_caster[this]=GetTriggerUnit()
+	    set s__YugitoClawsStrike__Spell_dummies[this]=CreateGroup()
 	    set i=0
             loop
 		set i=i + 1
@@ -130007,21 +130299,21 @@ endfunction
                 set offset=GetRandomReal(0, 30)
 		set x=(((caster_x )*1.0) + Cos((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
                 set y=(((caster_y )*1.0) + Sin((( angle )*1.0)) * (( offset)*1.0)) // INLINED!!
-		set bj_lastCreatedUnit=CreateUnit(GetTriggerPlayer(), 'e084', x, y, Rad2Deg(s__YugitoClawsStrike___Spell_angle[this]) + GetRandomReal(- 30, 30))
+		set bj_lastCreatedUnit=CreateUnit(GetTriggerPlayer(), 'e084', x, y, Rad2Deg(s__YugitoClawsStrike__Spell_angle[this]) + GetRandomReal(- 30, 30))
 		call SetUnitTimeScale(GetLastCreatedUnit(), 0.30)
-		call GroupAddUnit(s__YugitoClawsStrike___Spell_dummies[this], bj_lastCreatedUnit)
+		call GroupAddUnit(s__YugitoClawsStrike__Spell_dummies[this], bj_lastCreatedUnit)
             endloop
-            set s__YugitoClawsStrike___Spell_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, Rad2Deg(s__YugitoClawsStrike___Spell_angle[this]))
-            set s__YugitoClawsStrike___Spell_dummy2=s__YugitoClawsStrike___Spell_dummy[this]
-            call SetUnitX(s__YugitoClawsStrike___Spell_dummy[this], caster_x)
-            call SetUnitY(s__YugitoClawsStrike___Spell_dummy[this], caster_y)
-            set s__YugitoClawsStrike___Spell_count[this]=0
-	    call DestroyEffect(AddSpecialEffect(("war3mapImported\\Reaper's Claws Blue.mdl" ), (( GetUnitX(s__YugitoClawsStrike___Spell_caster[this]) )*1.0), (( GetUnitY(s__YugitoClawsStrike___Spell_caster[this]))*1.0))) // INLINED!!
-            call TimerStartEx(NewTimerEx(this) , 0.025 , true , function s__YugitoClawsStrike___Spell_periodic , "YugitoE_periodic")
+            set s__YugitoClawsStrike__Spell_dummy[this]=CreateUnit(GetTriggerPlayer(), 'e007', caster_x, caster_y, Rad2Deg(s__YugitoClawsStrike__Spell_angle[this]))
+            set s__YugitoClawsStrike__Spell_dummy2=s__YugitoClawsStrike__Spell_dummy[this]
+            call SetUnitX(s__YugitoClawsStrike__Spell_dummy[this], caster_x)
+            call SetUnitY(s__YugitoClawsStrike__Spell_dummy[this], caster_y)
+            set s__YugitoClawsStrike__Spell_count[this]=0
+	    call DestroyEffect(AddSpecialEffect(("war3mapImported\\Reaper's Claws Blue.mdl" ), (( GetUnitX(s__YugitoClawsStrike__Spell_caster[this]) )*1.0), (( GetUnitY(s__YugitoClawsStrike__Spell_caster[this]))*1.0))) // INLINED!!
+            call TimerStartEx(NewTimerEx(this) , 0.025 , true , function s__YugitoClawsStrike__Spell_periodic , "YugitoE_periodic")
         endfunction
         
-        function s__YugitoClawsStrike___Spell_onInit takes nothing returns nothing
-            call RegisterSpellEffectEventForId(79 , s__YugitoClawsStrike___Spell_SPELL_ID , function s__YugitoClawsStrike___Spell_actions)
+        function s__YugitoClawsStrike__Spell_onInit takes nothing returns nothing
+            call RegisterSpellEffectEventForId(79 , s__YugitoClawsStrike__Spell_SPELL_ID , function s__YugitoClawsStrike__Spell_actions)
         endfunction
         
     
@@ -131567,9 +131859,9 @@ endfunction
         set i=0
         loop
             exitwhen i > 5
-            call ShowUnit(s__ZetsuMayflyClones___zetsuclones[(this)*(1)+i], false)
-            call KillUnit(s__ZetsuMayflyClones___zetsuclones[(this)*(1)+i])
-            set s__ZetsuMayflyClones___zetsuclones[(this)*(1)+i]= null
+            call ShowUnit(s__ZetsuMayflyClones__zetsuclones[(this)*(1)+i], false)
+            call KillUnit(s__ZetsuMayflyClones__zetsuclones[(this)*(1)+i])
+            set s__ZetsuMayflyClones__zetsuclones[(this)*(1)+i]= null
             set i=i + 1
         endloop
         call s__ZetsuMayflyClones_deallocate(this)
@@ -131585,15 +131877,15 @@ endfunction
         loop
             exitwhen i > 5
             set bj_lastCreatedGroup=CreateGroup()
-            call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__ZetsuMayflyClones___zetsuclones[(this)*(1)+i]), GetUnitY(s__ZetsuMayflyClones___zetsuclones[(this)*(1)+i]), 150.0, null)
+            call GroupEnumUnitsInRange(bj_lastCreatedGroup, GetUnitX(s__ZetsuMayflyClones__zetsuclones[(this)*(1)+i]), GetUnitY(s__ZetsuMayflyClones__zetsuclones[(this)*(1)+i]), 150.0, null)
             loop
                 set bj_lastCreatedUnit=FirstOfGroup(bj_lastCreatedGroup)
                 exitwhen bj_lastCreatedUnit == null
                 if IsUnitEnemy(bj_lastCreatedUnit, GetOwningPlayer(s__ZetsuMayflyClones_caster[this])) and GetWidgetLife(bj_lastCreatedUnit) > 0.405 and IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_HERO) == true then
 			call UnitDamageTarget(s__ZetsuMayflyClones_caster[this], bj_lastCreatedUnit, GetHeroInt(s__ZetsuMayflyClones_caster[this], true) / 2, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-                    call DestroyEffect(AddSpecialEffect(("shadowclone.mdx" ), (( GetUnitX(s__ZetsuMayflyClones___zetsuclones[(this)*(1)+i]) )*1.0), (( GetUnitY(s__ZetsuMayflyClones___zetsuclones[(this)*(1)+i]))*1.0))) // INLINED!!
-                    call SetUnitX(s__ZetsuMayflyClones___zetsuclones[(this)*(1)+i], 9654)
-                    call SetUnitY(s__ZetsuMayflyClones___zetsuclones[(this)*(1)+i], 6458)
+                    call DestroyEffect(AddSpecialEffect(("shadowclone.mdx" ), (( GetUnitX(s__ZetsuMayflyClones__zetsuclones[(this)*(1)+i]) )*1.0), (( GetUnitY(s__ZetsuMayflyClones__zetsuclones[(this)*(1)+i]))*1.0))) // INLINED!!
+                    call SetUnitX(s__ZetsuMayflyClones__zetsuclones[(this)*(1)+i], 9654)
+                    call SetUnitY(s__ZetsuMayflyClones__zetsuclones[(this)*(1)+i], 6458)
                 endif
                 call GroupRemoveUnit(bj_lastCreatedGroup, bj_lastCreatedUnit)
             endloop
@@ -131627,8 +131919,8 @@ endfunction
 	   	    set x=(((s__ZetsuMayflyClones_target_x[this] )*1.0) + Cos((( Deg2Rad(60 * i) )*1.0)) * (( 450.0)*1.0)) // INLINED!!
            	set y=(((s__ZetsuMayflyClones_target_y[this] )*1.0) + Sin((( Deg2Rad(60 * i) )*1.0)) * (( 450.0)*1.0)) // INLINED!!
             set angle=Atan3(x , y , s__ZetsuMayflyClones_target_x[this] , s__ZetsuMayflyClones_target_y[this])
-            set s__ZetsuMayflyClones___zetsuclones[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__ZetsuMayflyClones_caster[this]), 'n03E', x, y, Rad2Deg(angle))
-            call IssueTargetOrder(s__ZetsuMayflyClones___zetsuclones[(this)*(1)+i], "attack", s__ZetsuMayflyClones_target[this])
+            set s__ZetsuMayflyClones__zetsuclones[(this)*(1)+i]= CreateUnit(GetOwningPlayer(s__ZetsuMayflyClones_caster[this]), 'n03E', x, y, Rad2Deg(angle))
+            call IssueTargetOrder(s__ZetsuMayflyClones__zetsuclones[(this)*(1)+i], "attack", s__ZetsuMayflyClones_target[this])
             set i=i + 1
         endloop
 
@@ -136018,22 +136310,22 @@ endfunction
 
 
     
-    function s__SendGoldAndCystal___Command_receiveCrystal takes nothing returns nothing
+    function s__SendGoldAndCystal__Command_receiveCrystal takes nothing returns nothing
         local integer id= 0
         local integer i
         loop
             exitwhen id > 11
-            if GetClickedDialog() == s__SendGoldAndCystal___cd[id] then
+            if GetClickedDialog() == s__SendGoldAndCystal__cd[id] then
                 set i=0
                 loop
                     exitwhen i > 11
-                    if GetClickedButton() == s__SendGoldAndCystal___cb[(id)*(12)+i] then
-                        if s__SendGoldAndCystal___c[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) then
-                            set s__SendGoldAndCystal___c[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER)
+                    if GetClickedButton() == s__SendGoldAndCystal__cb[(id)*(12)+i] then
+                        if s__SendGoldAndCystal__c[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) then
+                            set s__SendGoldAndCystal__c[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER)
                         endif
-                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) - s__SendGoldAndCystal___c[id])
-                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER) + s__SendGoldAndCystal___c[id])
-                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal___c[id]) + "|r|cff87ceeb crystal.|r")
+                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_LUMBER) - s__SendGoldAndCystal__c[id])
+                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_LUMBER) + s__SendGoldAndCystal__c[id])
+                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal__c[id]) + "|r|cff87ceeb crystal.|r")
                     endif
                     set i=i + 1
                 endloop
@@ -136042,23 +136334,23 @@ endfunction
         endloop
     endfunction 
     
-    function s__SendGoldAndCystal___Command_receiveGold takes nothing returns nothing
+    function s__SendGoldAndCystal__Command_receiveGold takes nothing returns nothing
         local integer id= 0
         local integer i
         loop
             exitwhen id > 11
-            if GetClickedDialog() == s__SendGoldAndCystal___gd[id] then
+            if GetClickedDialog() == s__SendGoldAndCystal__gd[id] then
                 set i=0
                 loop
                     exitwhen i > 11
-                    if GetClickedButton() == s__SendGoldAndCystal___gb[(id)*(12)+i] then
-                        if s__SendGoldAndCystal___g[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) then
-                            set s__SendGoldAndCystal___g[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD)
+                    if GetClickedButton() == s__SendGoldAndCystal__gb[(id)*(12)+i] then
+                        if s__SendGoldAndCystal__g[id] > GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) then
+                            set s__SendGoldAndCystal__g[id]= GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD)
                         endif
-                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) - s__SendGoldAndCystal___g[id])
-                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD) + s__SendGoldAndCystal___g[id])
-                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal___g[id]) + "|r|cff87ceeb gold.|r")
-			            set s__SendGoldAndCystal___given[id]= s__SendGoldAndCystal___given[id] + s__SendGoldAndCystal___g[id]
+                        call SetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(id), PLAYER_STATE_RESOURCE_GOLD) - s__SendGoldAndCystal__g[id])
+                        call SetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(Player(i), PLAYER_STATE_RESOURCE_GOLD) + s__SendGoldAndCystal__g[id])
+                        call DisplayTextToPlayer(Player(i), 0, 0, GetPlayerName(Player(id)) + " |cff87ceebsent you |r|cffffcc00" + I2S(s__SendGoldAndCystal__g[id]) + "|r|cff87ceeb gold.|r")
+			            set s__SendGoldAndCystal__given[id]= s__SendGoldAndCystal__given[id] + s__SendGoldAndCystal__g[id]
                     endif
                     set i=i + 1
                 endloop
@@ -136067,18 +136359,18 @@ endfunction
         endloop
     endfunction 
     
-    function s__SendGoldAndCystal___Command_sendCrystal takes nothing returns nothing
+    function s__SendGoldAndCystal__Command_sendCrystal takes nothing returns nothing
         local integer amount= S2I(SubStringBJ(GetEventPlayerChatString(), 4, 10))
         local integer id= GetPlayerId(GetTriggerPlayer())
         local integer i= 0
         local integer count= 0
-        set s__SendGoldAndCystal___c[id]= amount
-        call DialogClear(s__SendGoldAndCystal___cd[id])
-        call DialogSetMessage(s__SendGoldAndCystal___cd[id], "Choose a player to send crystal")
+        set s__SendGoldAndCystal__c[id]= amount
+        call DialogClear(s__SendGoldAndCystal__cd[id])
+        call DialogSetMessage(s__SendGoldAndCystal__cd[id], "Choose a player to send crystal")
         loop
             exitwhen i > 11
             if i != 3 and i != 7 and i != 11 and GetPlayerController(Player(i)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING and IsPlayerAlly(Player(i), GetTriggerPlayer()) and i != id then
-                set s__SendGoldAndCystal___cb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal___cd[id], GetPlayerName(Player(i)), 0)
+                set s__SendGoldAndCystal__cb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal__cd[id], GetPlayerName(Player(i)), 0)
                 set count=count + 1
             endif
             set i=i + 1
@@ -136086,11 +136378,11 @@ endfunction
         if count == 0 then
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You don't have any ally to send crystal to.|r")
         else
-            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal___cd[id], true)
+            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal__cd[id], true)
         endif
     endfunction 
     
-    function s__SendGoldAndCystal___Command_sendGold takes nothing returns nothing
+    function s__SendGoldAndCystal__Command_sendGold takes nothing returns nothing
         local integer amount= S2I(SubStringBJ(GetEventPlayerChatString(), 4, 10))
         local integer id= GetPlayerId(GetTriggerPlayer())
         local integer i= 0
@@ -136105,13 +136397,13 @@ endfunction
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000Amount cannot be negative.|r")
             return
         endif
-        set s__SendGoldAndCystal___g[id]= amount
-        call DialogClear(s__SendGoldAndCystal___gd[id])
-        call DialogSetMessage(s__SendGoldAndCystal___gd[id], "Choose a player to send gold")
+        set s__SendGoldAndCystal__g[id]= amount
+        call DialogClear(s__SendGoldAndCystal__gd[id])
+        call DialogSetMessage(s__SendGoldAndCystal__gd[id], "Choose a player to send gold")
         loop
             exitwhen i > 11
             if i != 3 and i != 7 and i != 11 and GetPlayerController(Player(i)) == MAP_CONTROL_USER and GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING and IsPlayerAlly(Player(i), GetTriggerPlayer()) and i != id then
-                set s__SendGoldAndCystal___gb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal___gd[id], GetPlayerName(Player(i)), 0)
+                set s__SendGoldAndCystal__gb[(id)*(12)+i]= DialogAddButton(s__SendGoldAndCystal__gd[id], GetPlayerName(Player(i)), 0)
                 set count=count + 1
             endif
             set i=i + 1
@@ -136119,11 +136411,11 @@ endfunction
         if count == 0 then
             call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffff0000You don't have any ally to send gold to.|r")
         else
-            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal___gd[id], true)
+            call DialogDisplay(GetTriggerPlayer(), s__SendGoldAndCystal__gd[id], true)
         endif
     endfunction 
     
-    function s__SendGoldAndCystal___Command_onInit takes nothing returns nothing
+    function s__SendGoldAndCystal__Command_onInit takes nothing returns nothing
         local trigger t1= CreateTrigger()
         local trigger t2= CreateTrigger()
         local trigger t3= CreateTrigger()
@@ -136135,18 +136427,18 @@ endfunction
             if i != 3 and i != 7 and i != 11 then
                 call TriggerRegisterPlayerChatEvent(t1, Player(i), "-g", false)
                 //call TriggerRegisterPlayerChatEvent(t2, Player(i), "-c", false)
-                set s__SendGoldAndCystal___gd[i]= DialogCreate()
+                set s__SendGoldAndCystal__gd[i]= DialogCreate()
                 //set cd[i] = DialogCreate() 
-                call TriggerRegisterDialogEventBJ(t3, s__SendGoldAndCystal___gd[i])
+                call TriggerRegisterDialogEventBJ(t3, s__SendGoldAndCystal__gd[i])
                 //call TriggerRegisterDialogEventBJ(t4, cd[i])
             endif
-	    set s__SendGoldAndCystal___given[i]= 0
+	    set s__SendGoldAndCystal__given[i]= 0
             set i=i + 1
         endloop
-        call TriggerAddAction(t1, function s__SendGoldAndCystal___Command_sendGold)
-        call TriggerAddAction(t2, function s__SendGoldAndCystal___Command_sendCrystal)
-        call TriggerAddAction(t3, function s__SendGoldAndCystal___Command_receiveGold)
-        call TriggerAddAction(t4, function s__SendGoldAndCystal___Command_receiveCrystal)
+        call TriggerAddAction(t1, function s__SendGoldAndCystal__Command_sendGold)
+        call TriggerAddAction(t2, function s__SendGoldAndCystal__Command_sendCrystal)
+        call TriggerAddAction(t3, function s__SendGoldAndCystal__Command_receiveGold)
+        call TriggerAddAction(t4, function s__SendGoldAndCystal__Command_receiveCrystal)
     endfunction 
     
 
@@ -154137,6 +154429,7 @@ function InitCustomTriggers takes nothing returns nothing
     call RegisterPlayerUnitEvent2((EVENT_PLAYER_UNIT_DEATH ) , Filter(( function Trig_FlashBomb_Actions))) // INLINED!!
     call RegisterSpellEffectEvent2(('A08S' ) , Filter(( function Trig_Body_Replacing_Doll_Actions))) // INLINED!!
     //Function not found: call InitTrig_KohakuNoJohei()
+    //Function not found: call InitTrig_Untitled_Trigger_001()
     //Function not found: call InitTrig_Oil()
     //Function not found: call InitTrig_PoisonPills()
     //Function not found: call InitTrig_Bomb()
@@ -155500,10 +155793,11 @@ function main takes nothing returns nothing
     call InitSounds()
     call CreateRegions()
     call CreateCameras()
+    call CreateAllItems()
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs18407265")
+call ExecuteFunc("jasshelper__initstructs36136015")
 call ExecuteFunc("BoundSentinel__init")
 call ExecuteFunc("ItemTable__init")
 call ExecuteFunc("Minimap___onInit")
@@ -155511,15 +155805,15 @@ call ExecuteFunc("PowerupSentinel__onInit")
 call ExecuteFunc("PreventSave__onInit")
 call ExecuteFunc("TimerUtils__init")
 call ExecuteFunc("UIMath__Init")
-call ExecuteFunc("AutoBuyS___init")
+call ExecuteFunc("AutoBuyS__init")
 call ExecuteFunc("RegisterPlayerUnitEvent_init")
 call ExecuteFunc("UnitUtils__init")
-call GaiYagai___init()
+call GaiYagai__init()
 set QHitTable=s__Table_create() // INLINED!!
-call KaidoShock__onInit()
-call KurotsuchiQuicklimeE__onInit()
-call KurotsuchiR__onInit()
-call KaidoLeap__onInit()
+call KaidoShock___onInit()
+call KurotsuchiQuicklimeE___onInit()
+call KurotsuchiR___onInit()
+call KaidoLeap___onInit()
 call Mu__init()
 
     call InitGlobals()
@@ -156853,69 +157147,69 @@ function sa__NagatoDevaArea_actions takes nothing returns boolean
     call s__NagatoDevaArea_actions(f__arg_unit1)
    return true
 endfunction
-function sa__MadaraRikuudou__Spell_delay2 takes nothing returns boolean
+function sa__MadaraRikuudou___Spell_delay2 takes nothing returns boolean
 
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0HE', true)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0HM', true)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0CX', true)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), 'A0HO', true)
-            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou__Spell_caster[this]), s__MadaraRikuudou__Spell_SPELL_ID, true)
-            	call s__MadaraRikuudou__Spell_deallocate(this)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0HE', true)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0HM', true)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0CX', true)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), 'A0HO', true)
+            call SetPlayerAbilityAvailable(GetOwningPlayer(s__MadaraRikuudou___Spell_caster[this]), s__MadaraRikuudou___Spell_SPELL_ID, true)
+            	call s__MadaraRikuudou___Spell_deallocate(this)
             call ReleaseTimer(GetExpiredTimer())
    return true
 endfunction
-function sa__KaidoLeap__LeapSpell_periodic takes nothing returns boolean
+function sa__KaidoLeap___LeapSpell_periodic takes nothing returns boolean
 
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
-            local real t= s__KaidoLeap__LeapSpell_elapsed[this] / KaidoLeap__LEAP_DURATION
-            local player p= GetOwningPlayer(s__KaidoLeap__LeapSpell_caster[this])
+            local real t= s__KaidoLeap___LeapSpell_elapsed[this] / KaidoLeap___LEAP_DURATION
+            local player p= GetOwningPlayer(s__KaidoLeap___LeapSpell_caster[this])
             local real step
             local real newX
             local real newY
             local real mouseX= (s__UserMouse_mouseX[s__UserMouse__staticgetindex((p))]) // INLINED!!
             local real mouseY= (s__UserMouse_mouseY[s__UserMouse__staticgetindex((p))]) // INLINED!!
-            local real currentX= GetUnitX(s__KaidoLeap__LeapSpell_caster[this])
-            local real currentY= GetUnitY(s__KaidoLeap__LeapSpell_caster[this])
+            local real currentX= GetUnitX(s__KaidoLeap___LeapSpell_caster[this])
+            local real currentY= GetUnitY(s__KaidoLeap___LeapSpell_caster[this])
             local real dx= mouseX - currentX
             local real dy= mouseY - currentY
             local real dist= SquareRoot(dx * dx + dy * dy)
             local real angle= Atan2(dy, dx)
-            local real height= KaidoLeap__LEAP_HEIGHT * Sin(t * bj_PI)
+            local real height= KaidoLeap___LEAP_HEIGHT * Sin(t * bj_PI)
             local real baseDmg
             local group g
             local unit u
             local integer i
-            set s__KaidoLeap__LeapSpell_elapsed[this]=s__KaidoLeap__LeapSpell_elapsed[this] + 0.03
-            set step=800.0 / KaidoLeap__LEAP_DURATION * 0.03
+            set s__KaidoLeap___LeapSpell_elapsed[this]=s__KaidoLeap___LeapSpell_elapsed[this] + 0.03
+            set step=800.0 / KaidoLeap___LEAP_DURATION * 0.03
             set newX=currentX + step * Cos(angle)
             set newY=currentY + step * Sin(angle)
-            if dist >= KaidoLeap__LEAP_DEADZONE then
-                call SetUnitX(s__KaidoLeap__LeapSpell_caster[this], newX)
-                call SetUnitY(s__KaidoLeap__LeapSpell_caster[this], newY)
+            if dist >= KaidoLeap___LEAP_DEADZONE then
+                call SetUnitX(s__KaidoLeap___LeapSpell_caster[this], newX)
+                call SetUnitY(s__KaidoLeap___LeapSpell_caster[this], newY)
             endif
-            call SetUnitFlyHeight(s__KaidoLeap__LeapSpell_caster[this], height, 0)
-            call BlzSetUnitFacingEx(s__KaidoLeap__LeapSpell_caster[this], Rad2Deg(angle))
+            call SetUnitFlyHeight(s__KaidoLeap___LeapSpell_caster[this], height, 0)
+            call BlzSetUnitFacingEx(s__KaidoLeap___LeapSpell_caster[this], Rad2Deg(angle))
             if t >= 1.0 then
-                call PauseUnit(s__KaidoLeap__LeapSpell_caster[this], false)
-                call SetUnitFlyHeight(s__KaidoLeap__LeapSpell_caster[this], 0.0, 0.0)
-                set s__KaidoLeap__LeapSpell_e1[this]=AddSpecialEffect(KaidoLeap__SFX_IMPACT, newX, newY)
-                call BlzSetSpecialEffectScale(s__KaidoLeap__LeapSpell_e1[this], 1.0)
-                call BlzSetSpecialEffectHeight(s__KaidoLeap__LeapSpell_e1[this], GetPointZ(newX , newY) + 10)
-                set s__KaidoLeap__LeapSpell_e2[this]=AddSpecialEffect(KaidoLeap__SFX_IMPACT, newX, newY)
-                call BlzSetSpecialEffectScale(s__KaidoLeap__LeapSpell_e2[this], 1.0)
-                call DestroyEffect(s__KaidoLeap__LeapSpell_e3[this])
-                set s__KaidoLeap__LeapSpell_e3[this]=null
+                call PauseUnit(s__KaidoLeap___LeapSpell_caster[this], false)
+                call SetUnitFlyHeight(s__KaidoLeap___LeapSpell_caster[this], 0.0, 0.0)
+                set s__KaidoLeap___LeapSpell_e1[this]=AddSpecialEffect(KaidoLeap___SFX_IMPACT, newX, newY)
+                call BlzSetSpecialEffectScale(s__KaidoLeap___LeapSpell_e1[this], 1.0)
+                call BlzSetSpecialEffectHeight(s__KaidoLeap___LeapSpell_e1[this], GetPointZ(newX , newY) + 10)
+                set s__KaidoLeap___LeapSpell_e2[this]=AddSpecialEffect(KaidoLeap___SFX_IMPACT, newX, newY)
+                call BlzSetSpecialEffectScale(s__KaidoLeap___LeapSpell_e2[this], 1.0)
+                call DestroyEffect(s__KaidoLeap___LeapSpell_e3[this])
+                set s__KaidoLeap___LeapSpell_e3[this]=null
                 set g=CreateGroup()
-                set baseDmg=10.0 * I2R(GetHeroStr(s__KaidoLeap__LeapSpell_caster[this], true))
-                call GroupEnumUnitsInRange(g, newX, newY, KaidoLeap__DAMAGE_RADIUS, null)
+                set baseDmg=10.0 * I2R(GetHeroStr(s__KaidoLeap___LeapSpell_caster[this], true))
+                call GroupEnumUnitsInRange(g, newX, newY, KaidoLeap___DAMAGE_RADIUS, null)
                 loop
                     set u=FirstOfGroup(g)
                     exitwhen u == null
                     call GroupRemoveUnit(g, u)
-                    if IsUnitEnemy(u, GetOwningPlayer(s__KaidoLeap__LeapSpell_caster[this])) and GetWidgetLife(u) > 0.405 and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
-                        call UnitDamageTarget(s__KaidoLeap__LeapSpell_caster[this], u, 10.0 * I2R(GetHeroStr(s__KaidoLeap__LeapSpell_caster[this], true)), false, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
-                        call StunUnitTimed(s__KaidoLeap__LeapSpell_caster[this] , u , 0.75)
+                    if IsUnitEnemy(u, GetOwningPlayer(s__KaidoLeap___LeapSpell_caster[this])) and GetWidgetLife(u) > 0.405 and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
+                        call UnitDamageTarget(s__KaidoLeap___LeapSpell_caster[this], u, 10.0 * I2R(GetHeroStr(s__KaidoLeap___LeapSpell_caster[this], true)), false, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC, null)
+                        call StunUnitTimed(s__KaidoLeap___LeapSpell_caster[this] , u , 0.75)
                     endif
                 endloop
                 call DestroyGroup(g)
@@ -156925,53 +157219,53 @@ function sa__KaidoLeap__LeapSpell_periodic takes nothing returns boolean
                     set dx=s__RockData_rx[i] - newX
                     set dy=s__RockData_ry[i] - newY
                     set dist=dx * dx + dy * dy
-                    if dist <= KaidoLeap__DAMAGE_RADIUS * KaidoLeap__DAMAGE_RADIUS then
-                        if KaidoShock_ExplodeRock(s__RockData_rock[i] , s__KaidoLeap__LeapSpell_caster[this]) then
+                    if dist <= KaidoLeap___DAMAGE_RADIUS * KaidoLeap___DAMAGE_RADIUS then
+                        if KaidoShock_ExplodeRock(s__RockData_rock[i] , s__KaidoLeap___LeapSpell_caster[this]) then
                             exitwhen true
                         endif
                     endif
                     set i=i + 1
                 endloop
-                call TimerStart(NewTimerEx(this), 0.5, false, function s__KaidoLeap__LeapSpell_destroyEffects)
-                call SetUnitTimeScalePercent(s__KaidoLeap__LeapSpell_caster[this], 100)
-                call DestroyTimer(s__KaidoLeap__LeapSpell_t[this])
-                call s__KaidoLeap__LeapSpell_deallocate(this)
+                call TimerStart(NewTimerEx(this), 0.5, false, function s__KaidoLeap___LeapSpell_destroyEffects)
+                call SetUnitTimeScalePercent(s__KaidoLeap___LeapSpell_caster[this], 100)
+                call DestroyTimer(s__KaidoLeap___LeapSpell_t[this])
+                call s__KaidoLeap___LeapSpell_deallocate(this)
             endif
    return true
 endfunction
-function sa__KurotsuchiR__YokaiSpray_cleanup takes nothing returns boolean
+function sa__KurotsuchiR___YokaiSpray_cleanup takes nothing returns boolean
 local integer this=f__arg_this
             local integer i
             local integer baseIdx
             local effect e
             local integer movedInst
-            set baseIdx=s__KurotsuchiR__YokaiSpray_instanceIndex[this] * KurotsuchiR__MAX_TRACKED_UNITS
+            set baseIdx=s__KurotsuchiR___YokaiSpray_instanceIndex[this] * KurotsuchiR___MAX_TRACKED_UNITS
             set i=0
             loop
-                exitwhen i >= trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]
+                exitwhen i >= trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]
                 set trackedUnits[baseIdx + i]=null
                 set i=i + 1
             endloop
-            set trackedCounts[s__KurotsuchiR__YokaiSpray_instanceIndex[this]]=0
-            set i=s__KurotsuchiR__YokaiSpray_instanceIndex[this]
+            set trackedCounts[s__KurotsuchiR___YokaiSpray_instanceIndex[this]]=0
+            set i=s__KurotsuchiR___YokaiSpray_instanceIndex[this]
             set activeInstanceCount=activeInstanceCount - 1
             if i < activeInstanceCount then
                 set movedInst=activeInstances[activeInstanceCount]
                 set activeInstances[i]=movedInst
-                set s__KurotsuchiR__YokaiSpray_instanceIndex[movedInst]=i
+                set s__KurotsuchiR___YokaiSpray_instanceIndex[movedInst]=i
             endif
             set activeInstances[activeInstanceCount]=0
-            call DestroyGroup(s__KurotsuchiR__YokaiSpray_affectedUnits[this])
-            call s__Table_destroy(s__KurotsuchiR__YokaiSpray_hitThisTick[this])
-            call s__Table_destroy(s__KurotsuchiR__YokaiSpray_blobDamageDone[this])
-            call s__Table_destroy(s__KurotsuchiR__YokaiSpray_unitsFullyDamaged[this])
+            call DestroyGroup(s__KurotsuchiR___YokaiSpray_affectedUnits[this])
+            call s__Table_destroy(s__KurotsuchiR___YokaiSpray_hitThisTick[this])
+            call s__Table_destroy(s__KurotsuchiR___YokaiSpray_blobDamageDone[this])
+            call s__Table_destroy(s__KurotsuchiR___YokaiSpray_unitsFullyDamaged[this])
             call s__Table_destroy((LoadInteger(Table__ht, (YokaiSpray_blobDamageDone), (this)))) // INLINED!!
             call s__Table_destroy((LoadInteger(Table__ht, (YokaiSpray_unitsFullyDamaged), (this)))) // INLINED!!
             call RemoveSavedInteger(Table__ht, (YokaiSpray_blobDamageDone), (this)) // INLINED!!
             call RemoveSavedInteger(Table__ht, (YokaiSpray_unitsFullyDamaged), (this)) // INLINED!!
             set i=0
             loop
-                exitwhen i >= s__KurotsuchiR__YokaiSpray_totalEmitted[this]
+                exitwhen i >= s__KurotsuchiR___YokaiSpray_totalEmitted[this]
                 set e=LoadEffectHandle(KurotsuchiHash, this, i * 20 + 10)
                 if e != null then
                     call BlzSetSpecialEffectX(e, 9861.0)
@@ -156981,27 +157275,27 @@ local integer this=f__arg_this
                 set i=i + 1
             endloop
             call FlushChildHashtable(KurotsuchiHash, this)
-            call s__KurotsuchiR__YokaiSpray_deallocate(this)
+            call s__KurotsuchiR___YokaiSpray_deallocate(this)
    return true
 endfunction
-function sa__KurotsuchiQuicklimeE__QuicklimeTether_destroy takes nothing returns boolean
+function sa__KurotsuchiQuicklimeE___QuicklimeTether_destroy takes nothing returns boolean
 local integer this=f__arg_this
             local integer i= 0
             local integer idx
             loop
-                exitwhen i >= s__KurotsuchiQuicklimeE__QuicklimeTether_segCount[this]
+                exitwhen i >= s__KurotsuchiQuicklimeE___QuicklimeTether_segCount[this]
                 set idx=((this ) * 32 + ( i)) // INLINED!!
-                if s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx] != null then
-                    call DestroyEffect(s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx])
-                    set s__KurotsuchiQuicklimeE__QuicklimeTether_segPool[idx]=null
+                if s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx] != null then
+                    call DestroyEffect(s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx])
+                    set s__KurotsuchiQuicklimeE___QuicklimeTether_segPool[idx]=null
                 endif
                 set i=i + 1
             endloop
-            call DestroyTimer(s__KurotsuchiQuicklimeE__QuicklimeTether_t[this])
-            call s__KurotsuchiQuicklimeE__QuicklimeTether_deallocate(this)
+            call DestroyTimer(s__KurotsuchiQuicklimeE___QuicklimeTether_t[this])
+            call s__KurotsuchiQuicklimeE___QuicklimeTether_deallocate(this)
    return true
 endfunction
-function sa__KaidoShock__KaidoShockSpell_periodic takes nothing returns boolean
+function sa__KaidoShock___KaidoShockSpell_periodic takes nothing returns boolean
 
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real dx
@@ -157010,82 +157304,82 @@ function sa__KaidoShock__KaidoShockSpell_periodic takes nothing returns boolean
             local real t
             local integer i
             local real sinkT
-            set s__KaidoShock__KaidoShockSpell_elapsed[this]=s__KaidoShock__KaidoShockSpell_elapsed[this] + 0.03
-            if s__KaidoShock__KaidoShockSpell_phase[this] == 0 then
-                if ModuloReal(s__KaidoShock__KaidoShockSpell_elapsed[this], 0.10) == 0.0 then
+            set s__KaidoShock___KaidoShockSpell_elapsed[this]=s__KaidoShock___KaidoShockSpell_elapsed[this] + 0.03
+            if s__KaidoShock___KaidoShockSpell_phase[this] == 0 then
+                if ModuloReal(s__KaidoShock___KaidoShockSpell_elapsed[this], 0.10) == 0.0 then
                     set dx=GetRandomReal(- 15.0, 15.0)
                     set dy=GetRandomReal(- 15.0, 15.0)
                     set dz=GetRandomReal(5.0, 20.0)
-                    call SetUnitFlyHeight(s__KaidoShock__KaidoShockSpell_dummy[this], dz, 0.0)
+                    call SetUnitFlyHeight(s__KaidoShock___KaidoShockSpell_dummy[this], dz, 0.0)
                 endif
-                if s__KaidoShock__KaidoShockSpell_elapsed[this] >= KaidoShock__KS_DELAY then
-                    set s__KaidoShock__KaidoShockSpell_phase[this]=1
-                    set s__KaidoShock__KaidoShockSpell_elapsed[this]=0.0
+                if s__KaidoShock___KaidoShockSpell_elapsed[this] >= KaidoShock___KS_DELAY then
+                    set s__KaidoShock___KaidoShockSpell_phase[this]=1
+                    set s__KaidoShock___KaidoShockSpell_elapsed[this]=0.0
                     set i=0
                     loop
                         exitwhen i > 5
-                        set dx=(((s__KaidoShock__KaidoShockSpell_x[this] )*1.0) + Cos((( Deg2Rad(60 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
-                        set dy=(((s__KaidoShock__KaidoShockSpell_y[this] )*1.0) + Sin((( Deg2Rad(60 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
+                        set dx=(((s__KaidoShock___KaidoShockSpell_x[this] )*1.0) + Cos((( Deg2Rad(60 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
+                        set dy=(((s__KaidoShock___KaidoShockSpell_y[this] )*1.0) + Sin((( Deg2Rad(60 * i) )*1.0)) * (( 200)*1.0)) // INLINED!!
                         set bj_lastCreatedEffect=AddSpecialEffect("Effects//s_War_Stomp.mdl", dx, dy)
                         call BlzSetSpecialEffectTimeScale(bj_lastCreatedEffect, 3.0)
                         call DestroyEffect(bj_lastCreatedEffect)
                         set i=i + 1
                     endloop
-                    call SetUnitX(s__KaidoShock__KaidoShockSpell_dummy[this], s__KaidoShock__KaidoShockSpell_x[this])
-                    call SetUnitY(s__KaidoShock__KaidoShockSpell_dummy[this], s__KaidoShock__KaidoShockSpell_y[this])
-                    call SetUnitFlyHeight(s__KaidoShock__KaidoShockSpell_dummy[this], 5.0, 0.0)
-                    call SetUnitAnimation(s__KaidoShock__KaidoShockSpell_dummy[this], "birth")
-                    call SetUnitScale(s__KaidoShock__KaidoShockSpell_dummy[this], 1.1, 1.1, 1.1)
-                    call SaveUnitHandle(KaidoShock__RockHT, GetHandleId(s__KaidoShock__KaidoShockSpell_dummy[this]), 0, s__KaidoShock__KaidoShockSpell_caster[this])
-                    call s__KaidoShock__KaidoShockSpell_knockupUnits(s__KaidoShock__KaidoShockSpell_caster[this] , s__KaidoShock__KaidoShockSpell_x[this] , s__KaidoShock__KaidoShockSpell_y[this] , s__KaidoShock__KaidoShockSpell_lvl[this])
+                    call SetUnitX(s__KaidoShock___KaidoShockSpell_dummy[this], s__KaidoShock___KaidoShockSpell_x[this])
+                    call SetUnitY(s__KaidoShock___KaidoShockSpell_dummy[this], s__KaidoShock___KaidoShockSpell_y[this])
+                    call SetUnitFlyHeight(s__KaidoShock___KaidoShockSpell_dummy[this], 5.0, 0.0)
+                    call SetUnitAnimation(s__KaidoShock___KaidoShockSpell_dummy[this], "birth")
+                    call SetUnitScale(s__KaidoShock___KaidoShockSpell_dummy[this], 1.1, 1.1, 1.1)
+                    call SaveUnitHandle(KaidoShock___RockHT, GetHandleId(s__KaidoShock___KaidoShockSpell_dummy[this]), 0, s__KaidoShock___KaidoShockSpell_caster[this])
+                    call s__KaidoShock___KaidoShockSpell_knockupUnits(s__KaidoShock___KaidoShockSpell_caster[this] , s__KaidoShock___KaidoShockSpell_x[this] , s__KaidoShock___KaidoShockSpell_y[this] , s__KaidoShock___KaidoShockSpell_lvl[this])
                 endif
-            elseif s__KaidoShock__KaidoShockSpell_phase[this] == 1 then
-                set t=s__KaidoShock__KaidoShockSpell_elapsed[this] / KaidoShock__KS_RISE_DURATION
+            elseif s__KaidoShock___KaidoShockSpell_phase[this] == 1 then
+                set t=s__KaidoShock___KaidoShockSpell_elapsed[this] / KaidoShock___KS_RISE_DURATION
                 if t >= 1.0 then
-                    set s__KaidoShock__KaidoShockSpell_height[this]=KaidoShock__KS_RISE_HEIGHT
-                    call SetUnitFlyHeight(s__KaidoShock__KaidoShockSpell_dummy[this], s__KaidoShock__KaidoShockSpell_height[this], 0.0)
-                    set s__KaidoShock__KaidoShockSpell_phase[this]=2
-                    set s__KaidoShock__KaidoShockSpell_elapsed[this]=0.
+                    set s__KaidoShock___KaidoShockSpell_height[this]=KaidoShock___KS_RISE_HEIGHT
+                    call SetUnitFlyHeight(s__KaidoShock___KaidoShockSpell_dummy[this], s__KaidoShock___KaidoShockSpell_height[this], 0.0)
+                    set s__KaidoShock___KaidoShockSpell_phase[this]=2
+                    set s__KaidoShock___KaidoShockSpell_elapsed[this]=0.
                 else
-                    set s__KaidoShock__KaidoShockSpell_height[this]=KaidoShock__KS_RISE_HEIGHT * t * t
-                    call SetUnitFlyHeight(s__KaidoShock__KaidoShockSpell_dummy[this], s__KaidoShock__KaidoShockSpell_height[this], 0.0)
+                    set s__KaidoShock___KaidoShockSpell_height[this]=KaidoShock___KS_RISE_HEIGHT * t * t
+                    call SetUnitFlyHeight(s__KaidoShock___KaidoShockSpell_dummy[this], s__KaidoShock___KaidoShockSpell_height[this], 0.0)
                 endif
-            elseif s__KaidoShock__KaidoShockSpell_phase[this] == 2 then
-                if s__KaidoShock__KaidoShockSpell_elapsed[this] >= KaidoShock__KS_DURATION then
-                    set s__KaidoShock__KaidoShockSpell_phase[this]=3
-                    set s__KaidoShock__KaidoShockSpell_elapsed[this]=0.
+            elseif s__KaidoShock___KaidoShockSpell_phase[this] == 2 then
+                if s__KaidoShock___KaidoShockSpell_elapsed[this] >= KaidoShock___KS_DURATION then
+                    set s__KaidoShock___KaidoShockSpell_phase[this]=3
+                    set s__KaidoShock___KaidoShockSpell_elapsed[this]=0.
                 endif
-            elseif s__KaidoShock__KaidoShockSpell_phase[this] == 3 then
-                set sinkT=s__KaidoShock__KaidoShockSpell_elapsed[this] / KaidoShock__KS_RISE_DURATION
+            elseif s__KaidoShock___KaidoShockSpell_phase[this] == 3 then
+                set sinkT=s__KaidoShock___KaidoShockSpell_elapsed[this] / KaidoShock___KS_RISE_DURATION
                 if sinkT >= 1.0 then
-                    call FlushChildHashtable(KaidoShock__RockHT, GetHandleId(s__KaidoShock__KaidoShockSpell_dummy[this]))
-                    call KillUnit(s__KaidoShock__KaidoShockSpell_dummy[this])
-                    call RemoveUnit(s__KaidoShock__KaidoShockSpell_dummy[this])
-                    call DestroyTimer(s__KaidoShock__KaidoShockSpell_t[this])
-                    call s__KaidoShock__KaidoShockSpell_deallocate(this)
+                    call FlushChildHashtable(KaidoShock___RockHT, GetHandleId(s__KaidoShock___KaidoShockSpell_dummy[this]))
+                    call KillUnit(s__KaidoShock___KaidoShockSpell_dummy[this])
+                    call RemoveUnit(s__KaidoShock___KaidoShockSpell_dummy[this])
+                    call DestroyTimer(s__KaidoShock___KaidoShockSpell_t[this])
+                    call s__KaidoShock___KaidoShockSpell_deallocate(this)
 return true
                 else
-                    set s__KaidoShock__KaidoShockSpell_height[this]=KaidoShock__KS_RISE_HEIGHT * ( 1.0 - sinkT * sinkT )
-                    call SetUnitFlyHeight(s__KaidoShock__KaidoShockSpell_dummy[this], s__KaidoShock__KaidoShockSpell_height[this], 0.0)
+                    set s__KaidoShock___KaidoShockSpell_height[this]=KaidoShock___KS_RISE_HEIGHT * ( 1.0 - sinkT * sinkT )
+                    call SetUnitFlyHeight(s__KaidoShock___KaidoShockSpell_dummy[this], s__KaidoShock___KaidoShockSpell_height[this], 0.0)
                 endif
             endif
    return true
 endfunction
-function sa__KaidoShock__Knockup_periodic takes nothing returns boolean
+function sa__KaidoShock___Knockup_periodic takes nothing returns boolean
 
             local integer this= (LoadInteger(TimerUtils__ht, 0, GetHandleId((GetExpiredTimer())))) // INLINED!!
             local real t
             local real z
-            set s__KaidoShock__Knockup_elapsed[this]=s__KaidoShock__Knockup_elapsed[this] + 0.03
-            set t=s__KaidoShock__Knockup_elapsed[this] / s__KaidoShock__Knockup_duration[this]
+            set s__KaidoShock___Knockup_elapsed[this]=s__KaidoShock___Knockup_elapsed[this] + 0.03
+            set t=s__KaidoShock___Knockup_elapsed[this] / s__KaidoShock___Knockup_duration[this]
             if t >= 1.0 then
-                call SetUnitFlyHeight(s__KaidoShock__Knockup_u[this], 0.0, 0.0)
-                call PauseUnit(s__KaidoShock__Knockup_u[this], false)
-                call DestroyTimer(s__KaidoShock__Knockup_t[this])
-                call s__KaidoShock__Knockup_deallocate(this)
+                call SetUnitFlyHeight(s__KaidoShock___Knockup_u[this], 0.0, 0.0)
+                call PauseUnit(s__KaidoShock___Knockup_u[this], false)
+                call DestroyTimer(s__KaidoShock___Knockup_t[this])
+                call s__KaidoShock___Knockup_deallocate(this)
             else
-                set z=s__KaidoShock__Knockup_height[this] * Sin(t * bj_PI)
-                call SetUnitFlyHeight(s__KaidoShock__Knockup_u[this], z, 0.0)
+                set z=s__KaidoShock___Knockup_height[this] * Sin(t * bj_PI)
+                call SetUnitFlyHeight(s__KaidoShock___Knockup_u[this], z, 0.0)
             endif
    return true
 endfunction
@@ -159056,7 +159350,7 @@ function sa___prototype3_s__SMission_allocate takes nothing returns boolean
     return true
 endfunction
 
-function jasshelper__initstructs18407265 takes nothing returns nothing
+function jasshelper__initstructs36136015 takes nothing returns nothing
     set st__TeamMatching___System_medicalHeal=CreateTrigger()
     call TriggerAddCondition(st__TeamMatching___System_medicalHeal,Condition( function sa__TeamMatching___System_medicalHeal))
     set st__AHSS_Graphics_create=CreateTrigger()
@@ -159197,18 +159491,18 @@ function jasshelper__initstructs18407265 takes nothing returns nothing
     call TriggerAddCondition(st__NagatoAsuraArea_actions,Condition( function sa__NagatoAsuraArea_actions))
     set st__NagatoDevaArea_actions=CreateTrigger()
     call TriggerAddCondition(st__NagatoDevaArea_actions,Condition( function sa__NagatoDevaArea_actions))
-    set st__MadaraRikuudou__Spell_delay2=CreateTrigger()
-    call TriggerAddCondition(st__MadaraRikuudou__Spell_delay2,Condition( function sa__MadaraRikuudou__Spell_delay2))
-    set st__KaidoLeap__LeapSpell_periodic=CreateTrigger()
-    call TriggerAddCondition(st__KaidoLeap__LeapSpell_periodic,Condition( function sa__KaidoLeap__LeapSpell_periodic))
-    set st__KurotsuchiR__YokaiSpray_cleanup=CreateTrigger()
-    call TriggerAddCondition(st__KurotsuchiR__YokaiSpray_cleanup,Condition( function sa__KurotsuchiR__YokaiSpray_cleanup))
-    set st__KurotsuchiQuicklimeE__QuicklimeTether_destroy=CreateTrigger()
-    call TriggerAddCondition(st__KurotsuchiQuicklimeE__QuicklimeTether_destroy,Condition( function sa__KurotsuchiQuicklimeE__QuicklimeTether_destroy))
-    set st__KaidoShock__KaidoShockSpell_periodic=CreateTrigger()
-    call TriggerAddCondition(st__KaidoShock__KaidoShockSpell_periodic,Condition( function sa__KaidoShock__KaidoShockSpell_periodic))
-    set st__KaidoShock__Knockup_periodic=CreateTrigger()
-    call TriggerAddCondition(st__KaidoShock__Knockup_periodic,Condition( function sa__KaidoShock__Knockup_periodic))
+    set st__MadaraRikuudou___Spell_delay2=CreateTrigger()
+    call TriggerAddCondition(st__MadaraRikuudou___Spell_delay2,Condition( function sa__MadaraRikuudou___Spell_delay2))
+    set st__KaidoLeap___LeapSpell_periodic=CreateTrigger()
+    call TriggerAddCondition(st__KaidoLeap___LeapSpell_periodic,Condition( function sa__KaidoLeap___LeapSpell_periodic))
+    set st__KurotsuchiR___YokaiSpray_cleanup=CreateTrigger()
+    call TriggerAddCondition(st__KurotsuchiR___YokaiSpray_cleanup,Condition( function sa__KurotsuchiR___YokaiSpray_cleanup))
+    set st__KurotsuchiQuicklimeE___QuicklimeTether_destroy=CreateTrigger()
+    call TriggerAddCondition(st__KurotsuchiQuicklimeE___QuicklimeTether_destroy,Condition( function sa__KurotsuchiQuicklimeE___QuicklimeTether_destroy))
+    set st__KaidoShock___KaidoShockSpell_periodic=CreateTrigger()
+    call TriggerAddCondition(st__KaidoShock___KaidoShockSpell_periodic,Condition( function sa__KaidoShock___KaidoShockSpell_periodic))
+    set st__KaidoShock___Knockup_periodic=CreateTrigger()
+    call TriggerAddCondition(st__KaidoShock___Knockup_periodic,Condition( function sa__KaidoShock___Knockup_periodic))
     set st__KisameBubbleDrain_start=CreateTrigger()
     call TriggerAddCondition(st__KisameBubbleDrain_start,Condition( function sa__KisameBubbleDrain_start))
     set st__KidomaruTripleArrow_actions=CreateTrigger()
@@ -160509,7 +160803,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__Recipes_onInit")
     call ExecuteFunc("s__RecipeBashosen_onInit")
     call ExecuteFunc("s__BadgeOfAnbu_onInit")
-    call ExecuteFunc("s__JadePassive___Item_onInit")
+    call ExecuteFunc("s__JadePassive__Item_onInit")
     call ExecuteFunc("s__SpiritOrbs_onInit")
     call ExecuteFunc("s__EightHeadSwordCritical_onInit")
     call ExecuteFunc("s__EarthKusanagiCritical_onInit")
@@ -160551,7 +160845,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__SenbonsDance_onInit")
     call ExecuteFunc("s__TimedExplosiveTag_onInit")
     call ExecuteFunc("s__ExplosiveTagExplosion_onInit")
-    call ExecuteFunc("s__Bashosen___Item_onInit")
+    call ExecuteFunc("s__Bashosen__Item_onInit")
     call ExecuteFunc("s__Ocarina_onInit")
     call ExecuteFunc("s__AkatukiSet_onInit")
     call ExecuteFunc("s__GreaterMedicalSphere_onInit")
@@ -160568,7 +160862,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__DragonBlast_onInit")
     call ExecuteFunc("s__ThunderKusa_onInit")
     call ExecuteFunc("s__ItemShikiFuujin_onInit")
-    call ExecuteFunc("s__AdamantineStaffActive___Spell_onInit")
+    call ExecuteFunc("s__AdamantineStaffActive__Spell_onInit")
     call ExecuteFunc("s__ExecutionBlade_onInit")
     call ExecuteFunc("s__TotsukaSeal_onInit")
     call ExecuteFunc("s__PurifiedTotsuka_onInit")
@@ -160588,7 +160882,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__ItachiRingActive_onInit")
     call ExecuteFunc("s__AnkoQ_onInit")
     call ExecuteFunc("s__AnkoW_onInit")
-    call ExecuteFunc("s__AnkoNewE___AnkoNewE_onInit")
+    call ExecuteFunc("s__AnkoNewE__AnkoNewE_onInit")
     call ExecuteFunc("s__AnkoR_onInit")
     call ExecuteFunc("s__AnkoT_onInit")
     call ExecuteFunc("s__AnkoD_onInit")
@@ -160598,7 +160892,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__Cloak_onInit")
     call ExecuteFunc("s__CrabWhirlpool_onInit")
     call ExecuteFunc("s__Bird_onInit")
-    call ExecuteFunc("s__Panda___Spell_onInit")
+    call ExecuteFunc("s__Panda__Spell_onInit")
     call ExecuteFunc("s__AsumaChakraBlades_onInit")
     call ExecuteFunc("s__AsumaAssault_onInit")
     call ExecuteFunc("s__ShadowStrike_onInit")
@@ -160610,7 +160904,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__BorutoFarm_onInit")
     call ExecuteFunc("s__BorutoClone_onInit")
     call ExecuteFunc("s__BorutoRasengan_onInit")
-    call ExecuteFunc("s__BorutoOyakoRasengan___Spell_onInit")
+    call ExecuteFunc("s__BorutoOyakoRasengan__Spell_onInit")
     call ExecuteFunc("s__ChiyoTrap_onInit")
     call ExecuteFunc("s__ChiyoFlyingKunais_onInit")
     call ExecuteFunc("s__ChiyoAssaultBlade_onInit")
@@ -160629,10 +160923,10 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__DanzoIzanagiModel_onInit")
     call ExecuteFunc("s__DanzoSuicide_onInit")
     call ExecuteFunc("s__DaruiRaiton_onInit")
-    call ExecuteFunc("s__DaruiSuiton___Spell_onInit")
+    call ExecuteFunc("s__DaruiSuiton__Spell_onInit")
     call ExecuteFunc("s__DaruiSuitonMultiChoice_onInit")
     call ExecuteFunc("s__DaruiLightningStrike_onInit")
-    call ExecuteFunc("s__DaruiLaserCircus___Spell_onInit")
+    call ExecuteFunc("s__DaruiLaserCircus__Spell_onInit")
     call ExecuteFunc("s__DaruiBlackPanther_onInit")
     call ExecuteFunc("s__DaruiBlackLightning_onInit")
     call ExecuteFunc("s__DeidaraC0_onInit")
@@ -160652,7 +160946,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__FuuNewE_onInit")
     call ExecuteFunc("s__FuuPowder_onInit")
     call ExecuteFunc("s__FuuUltimate_onInit")
-    call ExecuteFunc("s__GaaraSandShield___Spell_onInit")
+    call ExecuteFunc("s__GaaraSandShield__Spell_onInit")
     call ExecuteFunc("s__GaaraSabakuKyu_onInit")
     call ExecuteFunc("s__GaaraGokusa_onInit")
     call ExecuteFunc("s__GaaraKidSandDrizzle_onInit")
@@ -160661,20 +160955,20 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__SabakuSotaisonDie_onInit")
     call ExecuteFunc("s__GaaraUltimateChoice_onInit")
     call ExecuteFunc("s__GaaraUltimate_onInit")
-    call ExecuteFunc("s__GaaraKidShukakuBijuuDama___Spell_onInit")
+    call ExecuteFunc("s__GaaraKidShukakuBijuuDama__Spell_onInit")
     call ExecuteFunc("s__GaaraFlyLevel_onInit")
     call ExecuteFunc("s__GaiDynamicEntry_onInit")
-    call ExecuteFunc("s__GaiOmoteRenge___Spell_onInit")
+    call ExecuteFunc("s__GaiOmoteRenge__Spell_onInit")
     call ExecuteFunc("s__HachimonLifeDrain_onInit")
     call ExecuteFunc("s__GaiEighthGates_onInit")
     call ExecuteFunc("s__GaiEveningElephant_onInit")
     call ExecuteFunc("s__GengetsuMirage_onInit")
-    call ExecuteFunc("s__NidaimeMizukageWaterPistol___Spell_onInit")
-    call ExecuteFunc("s__NidaimeMizukageBubbles___Spell_onInit")
+    call ExecuteFunc("s__NidaimeMizukageWaterPistol__Spell_onInit")
+    call ExecuteFunc("s__NidaimeMizukageBubbles__Spell_onInit")
     call ExecuteFunc("s__NidaimeMizukageSuikaNoJutsu_onInit")
     call ExecuteFunc("s__NidaimeMIzukageClamDrop_onInit")
-    call ExecuteFunc("s__NidaimeMizukageGenjutsu___Spell_onInit")
-    call ExecuteFunc("s__NidaimeMizukageJokiBoi___Spell_onInit")
+    call ExecuteFunc("s__NidaimeMizukageGenjutsu__Spell_onInit")
+    call ExecuteFunc("s__NidaimeMizukageJokiBoi__Spell_onInit")
     call ExecuteFunc("s__GurenSuishoRo_onInit")
     call ExecuteFunc("s__GurenSuishoHibari_onInit")
     call ExecuteFunc("s__GurenCrystalWheel_onInit")
@@ -160844,7 +161138,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__KakuzuReleaseMaskE_onInit")
     call ExecuteFunc("s__KakuzuMasks_onInit")
     call ExecuteFunc("s__KakuzuRaiton_onInit")
-    call ExecuteFunc("s__KakuzuCombinedAttack__Item_onInit")
+    call ExecuteFunc("s__KakuzuCombinedAttack___Item_onInit")
     call ExecuteFunc("s__KakuzuUltimateChoice_onInit")
     call ExecuteFunc("s__KakuzuRess_onInit")
     call ExecuteFunc("s__KankuroSalamander_onInit")
@@ -160876,11 +161170,11 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__KillerBeeAcrobaticSwords_onInit")
     call ExecuteFunc("s__KillerBeeNewR_onInit")
     call ExecuteFunc("s__KillerBeeThrowInk_onInit")
-    call ExecuteFunc("s__KillerBeeMorph__Spell_onInit")
+    call ExecuteFunc("s__KillerBeeMorph___Spell_onInit")
     call ExecuteFunc("s__KillerBeeHachimaki_onInit")
     call ExecuteFunc("s__KillerBeePunch_onInit")
     call ExecuteFunc("s__KillerBeeLariat_onInit")
-    call ExecuteFunc("s__KillerBeNewBijuuDama__Spell_onInit")
+    call ExecuteFunc("s__KillerBeNewBijuuDama___Spell_onInit")
     call ExecuteFunc("s__KimimaroPassive_onInit")
     call ExecuteFunc("s__KimimaroQ_onInit")
     call ExecuteFunc("s__KimimaroKaramatsu_onInit")
@@ -160888,23 +161182,23 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__KimimaroCursedSealAbiltiies_onInit")
     call ExecuteFunc("s__KimimaroTessenka_onInit")
     call ExecuteFunc("s__KimimaroTessenkaTsuru_onInit")
-    call ExecuteFunc("s__KimimaroTessenkaHana__Spell_onInit")
+    call ExecuteFunc("s__KimimaroTessenkaHana___Spell_onInit")
     call ExecuteFunc("s__KimimaroSawarabiNoMai_onInit")
     call ExecuteFunc("s__KimimaroBoneSpear_onInit")
-    call ExecuteFunc("s__BrotherBashosen__Item_onInit")
+    call ExecuteFunc("s__BrotherBashosen___Item_onInit")
     call ExecuteFunc("s__Farm_onInit")
     call ExecuteFunc("s__GinkakuPot_onInit")
     call ExecuteFunc("s__ShichiseikenSlash_onInit")
     call ExecuteFunc("s__KinkakuRopeNew_onInit")
     call ExecuteFunc("s__Combination_onInit")
-    call ExecuteFunc("s__UltimateRoar__Spell_onInit")
+    call ExecuteFunc("s__UltimateRoar___Spell_onInit")
     call ExecuteFunc("s__KinkakuAbilities_onInit")
     call ExecuteFunc("s__KisameSharkDance_onInit")
     call ExecuteFunc("s__KisameNewWaterPrison_onInit")
     call ExecuteFunc("s__KisameSilentKilling_onInit")
     call ExecuteFunc("s__KisameSemi_onInit")
     call ExecuteFunc("s__KisameMugensame_onInit")
-    call ExecuteFunc("s__KisameDaikoudan__Spell_onInit")
+    call ExecuteFunc("s__KisameDaikoudan___Spell_onInit")
     call ExecuteFunc("s__KisameNewD_onInit")
     call ExecuteFunc("s__KisameBubble_onInit")
     call ExecuteFunc("s__KisameLevel_onInit")
@@ -160920,7 +161214,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__KonoRasengan_onInit")
     call ExecuteFunc("s__KonohamaruHarem_onInit")
     call ExecuteFunc("s__KonohamaruShuriken_onInit")
-    call ExecuteFunc("s__KonohamaruOodamaRasengan__Spell_onInit")
+    call ExecuteFunc("s__KonohamaruOodamaRasengan___Spell_onInit")
     call ExecuteFunc("s__KonohamaruGamakichi_onInit")
     call ExecuteFunc("s__KurenaiFlowerFarm_onInit")
     call ExecuteFunc("s__KurenaiFlowerEscape_onInit")
@@ -160929,7 +161223,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__KurenaiUltimate_onInit")
     call ExecuteFunc("s__KurenaiInvisibility_onInit")
     call ExecuteFunc("s__KurotsuchiDotonDefense_onInit")
-    call ExecuteFunc("s__KurotsuchiWaterTrumpet__TrumpetSpell_onInit")
+    call ExecuteFunc("s__KurotsuchiWaterTrumpet___TrumpetSpell_onInit")
     call ExecuteFunc("s__KushinaQ_onInit")
     call ExecuteFunc("s__KushinaW_onInit")
     call ExecuteFunc("s__KushinaChains_onInit")
@@ -160940,18 +161234,18 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__KushinaRush_onInit")
     call ExecuteFunc("s__KushinaSeal_onInit")
     call ExecuteFunc("s__KushinaD_onInit")
-    call ExecuteFunc("s__MadaraMokuton__Spell_onInit")
-    call ExecuteFunc("s__MadaraKaton__Spell_onInit")
-    call ExecuteFunc("s__PenRemoveSoul__Spell_onInit")
-    call ExecuteFunc("s__MadaraAnnihilation__Spell_onInit")
-    call ExecuteFunc("s__MadaraNewSusanoo__Spell_onInit")
-    call ExecuteFunc("s__MadaraYasaka__Spell_onInit")
+    call ExecuteFunc("s__MadaraMokuton___Spell_onInit")
+    call ExecuteFunc("s__MadaraKaton___Spell_onInit")
+    call ExecuteFunc("s__PenRemoveSoul___Spell_onInit")
+    call ExecuteFunc("s__MadaraAnnihilation___Spell_onInit")
+    call ExecuteFunc("s__MadaraNewSusanoo___Spell_onInit")
+    call ExecuteFunc("s__MadaraYasaka___Spell_onInit")
     call ExecuteFunc("s__MadaraTengaiShinseiSingle_onInit")
     call ExecuteFunc("s__MadaraSusanooSlash_onInit")
     call ExecuteFunc("s__MadaraBonesPassive_onInit")
-    call ExecuteFunc("s__MadaraRikuudou__Spell_onInit")
+    call ExecuteFunc("s__MadaraRikuudou___Spell_onInit")
     call ExecuteFunc("s__MadaraIntonRaiha_onInit")
-    call ExecuteFunc("s__MadaraRantonKouga__Spell_onInit")
+    call ExecuteFunc("s__MadaraRantonKouga___Spell_onInit")
     call ExecuteFunc("s__MadaraTengaiShinsei_onInit")
     call ExecuteFunc("s__MadaraUltimateChoice_onInit")
     call ExecuteFunc("s__MadaraMugenTsukuyomi_onInit")
@@ -161255,11 +161549,11 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__YamanakaSemiUltimateChoice_onInit")
     call ExecuteFunc("s__YamanakaLevel_onInit")
     call ExecuteFunc("s__YamanakaControl_onInit")
-    call ExecuteFunc("s__YamatoReleaseCage___Spell_onInit")
-    call ExecuteFunc("s__YamatoNewSemi___Spell_onInit")
+    call ExecuteFunc("s__YamatoReleaseCage__Spell_onInit")
+    call ExecuteFunc("s__YamatoNewSemi__Spell_onInit")
     call ExecuteFunc("s__YamatoSealing_onInit")
     call ExecuteFunc("s__YamatoNewSemi_onInit")
-    call ExecuteFunc("s__YamatoNewD___Spell_onInit")
+    call ExecuteFunc("s__YamatoNewD__Spell_onInit")
     call ExecuteFunc("s__YaguraCoralWave_onInit")
     call ExecuteFunc("s__YaguraFuuton_onInit")
     call ExecuteFunc("s__YaguraWaterMirror_onInit")
@@ -161268,7 +161562,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__YaguraBloodList_onInit")
     call ExecuteFunc("s__YugitoJump_onInit")
     call ExecuteFunc("s__YugitoClawsStorm_onInit")
-    call ExecuteFunc("s__YugitoClawsStrike___Spell_onInit")
+    call ExecuteFunc("s__YugitoClawsStrike__Spell_onInit")
     call ExecuteFunc("s__YugitoClawCombo_onInit")
     call ExecuteFunc("s__YugitoT_onInit")
     call ExecuteFunc("s__YugitoRat_onInit")
@@ -161293,7 +161587,7 @@ call ExecuteFunc("s__RegisterPlayerUnitEvent__S_RegisterPlayerUnitEvent__M__onIn
     call ExecuteFunc("s__MissionARankReward_onInit")
     call ExecuteFunc("s__SMission_onInit")
     call ExecuteFunc("s__TeamDuel_onInit")
-    call ExecuteFunc("s__SendGoldAndCystal___Command_onInit")
+    call ExecuteFunc("s__SendGoldAndCystal__Command_onInit")
     call ExecuteFunc("s__BuyAttributes_onInit")
     call ExecuteFunc("s__Killme_onInit")
     call ExecuteFunc("s__MoveSpeedBug_onInit")

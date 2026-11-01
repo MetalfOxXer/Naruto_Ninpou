@@ -3669,13 +3669,13 @@ STRING 611
 }
 
 STRING 612
-// Abilities: A0B0 (Kurohigi Kiki Ippatsu), Hotkey (Hotkey - Normal)
+// Items: ISB1 (Sensing Barrier), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 613
-// Abilities: A0F0 (|cffe95e01Katon: Goukakyuu no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B0 (Kurohigi Kiki Ippatsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -3813,13 +3813,13 @@ Learning shadow binding technique (|cffffcc00Q |r) - [|cffffcc00 Level% d |r]
 }
 
 STRING 636
-// Abilities: A0F0 (|cffe95e01Katon: Goukakyuu no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0F0 (|cffe95e01Katon: Goukakyuu no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 637
-// Abilities: A0W0 (Iaidou Multiple Stab), Researchhotkey (Hotkey - Learn)
+// Abilities: A0F0 (|cffe95e01Katon: Goukakyuu no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -3963,13 +3963,13 @@ Throw a ball to help countless bombs on the enemy within the scope of damage.
 }
 
 STRING 661
-// Abilities: A0W0 (Iaidou Multiple Stab), Hotkey (Hotkey - Normal)
+// Abilities: A0W0 (Iaidou Multiple Stab), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 662
-// Abilities: A041 (Fire Cracker), Researchhotkey (Hotkey - Learn)
+// Abilities: A0W0 (Iaidou Multiple Stab), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -4113,13 +4113,13 @@ Throw a ball to help countless bombs on the enemy within the scope of damage.
 }
 
 STRING 686
-// Abilities: A052 (Kugutsu: Puppet Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A041 (Fire Cracker), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 687
-// Abilities: A052 (Kugutsu: Puppet Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A052 (Kugutsu: Puppet Bomb), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -4245,19 +4245,19 @@ Eternal Mangekyou Sharingan
 }
 
 STRING 708
-// Abilities: A013 (Explosion), Unhotkey (Hotkey - Turn Off)
+// Abilities: A052 (Kugutsu: Puppet Bomb), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 709
-// Abilities: A013 (Explosion), Hotkey (Hotkey - Normal)
+// Abilities: A013 (Explosion), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
 
 STRING 710
-// Abilities: A033 (Explosive Tag), Researchhotkey (Hotkey - Learn)
+// Abilities: A013 (Explosion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -5290,13 +5290,13 @@ STRING 881
 }
 
 STRING 882
-// Abilities: A093 (|cff8b4600Doton: Yomi Numa|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A033 (Explosive Tag), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 883
-// Abilities: A093 (|cff8b4600Doton: Yomi Numa|r), Hotkey (Hotkey - Normal)
+// Abilities: A093 (|cff8b4600Doton: Yomi Numa|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -5314,13 +5314,13 @@ STRING 885
 }
 
 STRING 886
-// Abilities: A0F3 (Adamantine Stomp), Hotkey (Hotkey - Normal)
+// Abilities: A093 (|cff8b4600Doton: Yomi Numa|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 887
-// Abilities: A0K3 (|cff53a4ffMakyo Hyosho: Backslash|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0F3 (Adamantine Stomp), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -5530,7 +5530,7 @@ STRING 921
 }
 
 STRING 922
-// Abilities: A0K3 (|cff53a4ffMakyo Hyosho: Backslash|r), Hotkey (Hotkey - Normal)
+// Abilities: A0K3 (|cff53a4ffMakyo Hyosho: Backslash|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -5776,13 +5776,13 @@ STRING 962
 }
 
 STRING 963
-// Abilities: A014 (|cff008000Mokuton Trap|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K3 (|cff53a4ffMakyo Hyosho: Backslash|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 964
-// Abilities: A014 (|cff008000Mokuton Trap|r), Hotkey (Hotkey - Normal)
+// Abilities: A014 (|cff008000Mokuton Trap|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -5794,7 +5794,7 @@ E
 }
 
 STRING 966
-// Abilities: A0M4 (|cff0fcaf7Chakra Blades|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A014 (|cff008000Mokuton Trap|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -5836,7 +5836,7 @@ Legendary sword owned by Orochimaru. It has a strong power.|n|cff32cd32+10 All S
 }
 
 STRING 973
-// Abilities: A0P4 (|cff8a2be2Senpou: Inton Raiha), Hotkey (Hotkey - Normal)
+// Abilities: A0M4 (|cff0fcaf7Chakra Blades|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -5949,7 +5949,7 @@ Sage Mode
 }
 
 STRING 992
-// Abilities: A0R4 (|cff0fcaf7Chakra Katana|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P4 (|cff8a2be2Senpou: Inton Raiha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -6009,13 +6009,13 @@ STRING 1001
 }
 
 STRING 1002
-// Abilities: A0G5 (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R4 (|cff0fcaf7Chakra Katana|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 1003
-// Abilities: A0G5 (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Hotkey (Hotkey - Normal)
+// Abilities: A0G5 (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -6147,13 +6147,13 @@ STRING 1024
 }
 
 STRING 1025
-// Abilities: A0P5 (|cff8a2be2Senpou: Ranton Kouga|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G5 (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 1026
-// Abilities: A0D6 (|cffba0000Reverse Kamui|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P5 (|cff8a2be2Senpou: Ranton Kouga|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -6297,13 +6297,13 @@ RASHOMON GATE GREEN
 }
 
 STRING 1050
-// Abilities: A0D6 (|cffba0000Reverse Kamui|r), Hotkey (Hotkey - Normal)
+// Abilities: A0D6 (|cffba0000Reverse Kamui|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 1051
-// Abilities: A0F6 (Adamantine Stomp), Hotkey (Hotkey - Normal)
+// Abilities: A0D6 (|cffba0000Reverse Kamui|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -6447,13 +6447,13 @@ Attachment
 }
 
 STRING 1075
-// Abilities: A0V6 (|cff53a4ffKuchiyose: Gamakichi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0F6 (Adamantine Stomp), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 1076
-// Abilities: A0M7 (Plant Trap), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V6 (|cff53a4ffKuchiyose: Gamakichi|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -6615,13 +6615,13 @@ Increases attack speed by |cff87ceeb5% x skill level|r and each attack throw |cf
 }
 
 STRING 1103
-// Abilities: A0T7 (|cff8080ffDance of Chains|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Plant Trap), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 1104
-// Abilities: A0T7 (|cff8080ffDance of Chains|r), Hotkey (Hotkey - Normal)
+// Abilities: A0T7 (|cff8080ffDance of Chains|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -7880,13 +7880,13 @@ STRING 1313
 }
 
 STRING 1314
-// Abilities: A008 (|cffff0000Katon: Zukokku), Hotkey (Hotkey - Normal)
+// Abilities: A0T7 (|cff8080ffDance of Chains|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 1315
-// Abilities: A0C8 (|cff008000Mokuton: Mokuryu no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A008 (|cffff0000Katon: Zukokku), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -8276,13 +8276,13 @@ STRING 1379
 }
 
 STRING 1380
-// Abilities: A0C8 (|cff008000Mokuton: Mokuryu no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0C8 (|cff008000Mokuton: Mokuryu no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 1381
-// Abilities: A0Q8 (|cff000000Gudoudama Blade), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0C8 (|cff008000Mokuton: Mokuryu no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -8450,7 +8450,7 @@ STRING 1408
 }
 
 STRING 1409
-// Abilities: A0Q8 (|cff000000Gudoudama Blade), Hotkey (Hotkey - Normal)
+// Abilities: A0Q8 (|cff000000Gudoudama Blade), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -8480,7 +8480,7 @@ Kakuzu Tentacle
 }
 
 STRING 1414
-// Abilities: A01A (Iron Fan Mastery), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q8 (|cff000000Gudoudama Blade), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -8606,7 +8606,7 @@ Rasengan [|cffffcc00Q|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 1435
-// Abilities: A01A (Iron Fan Mastery), Hotkey (Hotkey - Normal)
+// Abilities: A01A (Iron Fan Mastery), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -8636,7 +8636,7 @@ A powerful rank A technique developed by Fourth Hokage which deals |cff32cd32(20
 }
 
 STRING 1440
-// Abilities: A0IB (Amenominaka), Researchhotkey (Hotkey - Learn)
+// Abilities: A01A (Iron Fan Mastery), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -8774,7 +8774,7 @@ STRING 1462
 }
 
 STRING 1463
-// Abilities: A0IB (Amenominaka), Hotkey (Hotkey - Normal)
+// Abilities: A0IB (Amenominaka), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -8990,13 +8990,13 @@ STRING 1498
 }
 
 STRING 1499
-// Abilities: A08C (Hakke: Kusho), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Amenominaka), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 1500
-// Abilities: A08C (Hakke: Kusho), Hotkey (Hotkey - Normal)
+// Abilities: A08C (Hakke: Kusho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -9146,13 +9146,13 @@ The Nine-Tails Soul.|n|cff32cd32+5 All Stats
 }
 
 STRING 1525
-// Abilities: A0LC (|cff808080Sawarabi no Mai), Researchhotkey (Hotkey - Learn)
+// Abilities: A08C (Hakke: Kusho), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 1526
-// Abilities: A0LC (|cff808080Sawarabi no Mai), Hotkey (Hotkey - Normal)
+// Abilities: A0LC (|cff808080Sawarabi no Mai), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -9559,13 +9559,13 @@ Ball Ring
 }
 
 STRING 1594
-// Abilities: A0OC (|cffff0000Yagai), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LC (|cff808080Sawarabi no Mai), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 1595
-// Abilities: A0OC (|cffff0000Yagai), Hotkey (Hotkey - Normal)
+// Abilities: A0OC (|cffff0000Yagai), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -10219,13 +10219,13 @@ STRING 1703
 }
 
 STRING 1704
-// Abilities: A00D (Satetsu Kaiho), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OC (|cffff0000Yagai), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 1705
-// Abilities: A09E (|cffe36d50Yoton: Youkai no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A00D (Satetsu Kaiho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -10375,13 +10375,13 @@ Uwabami [|cffffcc00R|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 1730
-// Abilities: A09E (|cffe36d50Yoton: Youkai no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A09E (|cffe36d50Yoton: Youkai no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 1731
-// Abilities: A0EE (|cff87ceebShark Dance), Hotkey (Hotkey - Normal)
+// Abilities: A09E (|cffe36d50Yoton: Youkai no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -10609,13 +10609,13 @@ Learn Bansho Ten'in [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 1769
-// Abilities: A0EE (|cff87ceebShark Dance), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EE (|cff87ceebShark Dance), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 1770
-// Abilities: A0HE (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EE (|cff87ceebShark Dance), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -11661,13 +11661,13 @@ STRING 1944
 }
 
 STRING 1945
-// Abilities: A0HE (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Hotkey (Hotkey - Normal)
+// Abilities: A0HE (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 1946
-// Abilities: A00F (Senpou: Goemon), Hotkey (Hotkey - Normal)
+// Abilities: A0HE (|cff008000Mokuton Hijutsu: Jukai Koutan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -12207,13 +12207,13 @@ Shinranshin no Jutsu
 }
 
 STRING 2036
-// Abilities: A0AF (Perfume Spray), Researchhotkey (Hotkey - Learn)
+// Abilities: A00F (Senpou: Goemon), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2037
-// Abilities: A0AF (Perfume Spray), Hotkey (Hotkey - Normal)
+// Abilities: A0AF (Perfume Spray), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -12321,13 +12321,13 @@ STRING 2054
 }
 
 STRING 2055
-// Abilities: A0TF (|cff000000Jiongu: Grab|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0AF (Perfume Spray), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2056
-// Abilities: A0TF (|cff000000Jiongu: Grab|r), Hotkey (Hotkey - Normal)
+// Abilities: A0TF (|cff000000Jiongu: Grab|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -12657,7 +12657,7 @@ W
 }
 
 STRING 2111
-// Abilities: A01G (|cff5b85ffSuiton: Suikodan no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TF (|cff000000Jiongu: Grab|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -12681,7 +12681,7 @@ STRING 2114
 }
 
 STRING 2115
-// Abilities: A01G (|cff5b85ffSuiton: Suikodan no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A01G (|cff5b85ffSuiton: Suikodan no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -13125,13 +13125,13 @@ Armor made from the Sanbi's skin.|n|cff32cd32+50 Armor|n+35 All Stats|n- Reduce 
 }
 
 STRING 2189
-// Abilities: A0AG (Ether Spray), Researchhotkey (Hotkey - Learn)
+// Abilities: A01G (|cff5b85ffSuiton: Suikodan no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 2190
-// Abilities: A0AG (Ether Spray), Hotkey (Hotkey - Normal)
+// Abilities: A0AG (Ether Spray), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -13575,7 +13575,7 @@ Release the puppet, allowing Kankuro to cast spells under this puppet possession
 }
 
 STRING 2264
-// Abilities: A0RG (Shunshin no Jutsu: Silent Kill), Researchhotkey (Hotkey - Learn)
+// Abilities: A0AG (Ether Spray), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -14144,13 +14144,13 @@ Ether Spray
 }
 
 STRING 2359
-// Abilities: A0RG (Shunshin no Jutsu: Silent Kill), Hotkey (Hotkey - Normal)
+// Abilities: A0RG (Shunshin no Jutsu: Silent Kill), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2360
-// Abilities: A0WG (|cff8080ffErubou|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RG (Shunshin no Jutsu: Silent Kill), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -14168,13 +14168,13 @@ Learn Tsukuyomi [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 2363
-// Abilities: A0WG (|cff8080ffErubou|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WG (|cff8080ffErubou|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2364
-// Abilities: A01H (Timed Explosive Tag), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WG (|cff8080ffErubou|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -14234,7 +14234,7 @@ STRING 2373
 }
 
 STRING 2374
-// Abilities: A02H (Explosion), Unhotkey (Hotkey - Turn Off)
+// Abilities: A01H (Timed Explosive Tag), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -14276,7 +14276,7 @@ Raiton: Gian [|cffffcc00Q|r]
 }
 
 STRING 2381
-// Abilities: A02H (Explosion), Hotkey (Hotkey - Normal)
+// Abilities: A02H (Explosion), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -14594,7 +14594,7 @@ STRING 2433
 }
 
 STRING 2434
-// Abilities: A04H (|cff39e30cPoison Pills|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A02H (Explosion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -15259,7 +15259,7 @@ STRING 2544
 }
 
 STRING 2545
-// Abilities: A08H (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A04H (|cff39e30cPoison Pills|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -15301,7 +15301,7 @@ STRING 2551
 }
 
 STRING 2552
-// Abilities: A08H (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A08H (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -16207,7 +16207,7 @@ Rasengan [|cffffcc00Q|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 2703
-// Abilities: A0FH (Teshi Sendan), Researchhotkey (Hotkey - Learn)
+// Abilities: A08H (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -16237,7 +16237,7 @@ Suiton: Suiryuudan no Jutsu [|cffffcc00R|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 2708
-// Abilities: A0FH (Teshi Sendan), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Teshi Sendan), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -16741,7 +16741,7 @@ T
 }
 
 STRING 2792
-// Abilities: A0HH (|cffff8080Shoton: Suisho Ro no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FH (Teshi Sendan), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -16848,13 +16848,13 @@ HP
 }
 
 STRING 2810
-// Abilities: A0HH (|cffff8080Shoton: Suisho Ro no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0HH (|cffff8080Shoton: Suisho Ro no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 2811
-// Abilities: A0KH (|cff800080Curse of Jashin|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HH (|cffff8080Shoton: Suisho Ro no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -17864,7 +17864,7 @@ STRING 2978
 }
 
 STRING 2979
-// Abilities: A0KH (|cff800080Curse of Jashin|r), Hotkey (Hotkey - Normal)
+// Abilities: A0KH (|cff800080Curse of Jashin|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18153,7 +18153,7 @@ Puppet bomb (|cffffcc00Q |r) - [|cffffcc00 Level 7 |r]
 }
 
 STRING 3027
-// Abilities: A0QH (Fungokyaku), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KH (|cff800080Curse of Jashin|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18183,13 +18183,13 @@ STRING 3031
 }
 
 STRING 3032
-// Abilities: A0QH (Fungokyaku), Hotkey (Hotkey - Normal)
+// Abilities: A0QH (Fungokyaku), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 3033
-// Abilities: A0TH (|cff8080ffRaiton: Gian), Hotkey (Hotkey - Normal)
+// Abilities: A0QH (Fungokyaku), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18405,13 +18405,13 @@ Z
 }
 
 STRING 3069
-// Abilities: A0WH (|cff8080ffRaitou Jutsu: Rakurai|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TH (|cff8080ffRaiton: Gian), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 3070
-// Abilities: A0WH (|cff8080ffRaitou Jutsu: Rakurai|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WH (|cff8080ffRaitou Jutsu: Rakurai|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18586,7 +18586,7 @@ Serial Gudoudamas [|cffffcc00R|r]
 }
 
 STRING 3100
-// Abilities: A02J (Smoke Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WH (|cff8080ffRaitou Jutsu: Rakurai|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18632,7 +18632,7 @@ STRING 3107
 }
 
 STRING 3108
-// Abilities: A04J (|cffb36d54Shichuurou no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A02J (Smoke Bomb), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18670,7 +18670,7 @@ Truth Seeker Orb [|cffffcc00Q|r] - [|cffffcc00Level 5|r]
 }
 
 STRING 3115
-// Abilities: A04J (|cffb36d54Shichuurou no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A04J (|cffb36d54Shichuurou no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18946,7 +18946,7 @@ STRING 3160
 }
 
 STRING 3161
-// Abilities: A05J (|cffff0000Kugutsu no Jutsu: Sanshouo|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A04J (|cffb36d54Shichuurou no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -19383,7 +19383,7 @@ Truth Seeker Orb [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 3234
-// Abilities: A05J (|cffff0000Kugutsu no Jutsu: Sanshouo|r), Hotkey (Hotkey - Normal)
+// Abilities: A05J (|cffff0000Kugutsu no Jutsu: Sanshouo|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -19629,7 +19629,7 @@ STRING 3274
 }
 
 STRING 3275
-// Abilities: A0DJ (Explode), Hotkey (Hotkey - Normal)
+// Abilities: A05J (|cffff0000Kugutsu no Jutsu: Sanshouo|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -19785,7 +19785,7 @@ Truth Seeker Orb [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 3301
-// Abilities: A0PK (|cffff8080Shoton: Suisho Meikyu no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DJ (Explode), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -19809,7 +19809,7 @@ STRING 3304
 }
 
 STRING 3305
-// Abilities: A07L (|cff9d6c56Nikudan Sensha|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PK (|cffff8080Shoton: Suisho Meikyu no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -20655,13 +20655,13 @@ STRING 3445
 }
 
 STRING 3446
-// Abilities: A07L (|cff9d6c56Nikudan Sensha|r), Hotkey (Hotkey - Normal)
+// Abilities: A07L (|cff9d6c56Nikudan Sensha|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 3447
-// Abilities: A0GL (Explosive Kunai), Researchhotkey (Hotkey - Learn)
+// Abilities: A07L (|cff9d6c56Nikudan Sensha|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21387,7 +21387,7 @@ Explode! [|cffffcc00Q|r]
 }
 
 STRING 3568
-// Abilities: A0IL (Flash Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GL (Explosive Kunai), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21501,13 +21501,13 @@ STRING 3586
 }
 
 STRING 3587
-// Abilities: A0LL (|cffff0000Roar), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0IL (Flash Bomb), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 3588
-// Abilities: A0LL (|cffff0000Roar), Hotkey (Hotkey - Normal)
+// Abilities: A0LL (|cffff0000Roar), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -21651,7 +21651,7 @@ STRING 3611
 }
 
 STRING 3612
-// Abilities: A0GM (Six Swords Dance), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LL (|cffff0000Roar), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -22426,7 +22426,7 @@ R
 }
 
 STRING 3741
-// Abilities: A0GM (Six Swords Dance), Hotkey (Hotkey - Normal)
+// Abilities: A0GM (Six Swords Dance), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22564,13 +22564,13 @@ STRING 3763
 }
 
 STRING 3764
-// Abilities: A0NM (Beauty of Destruction), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GM (Six Swords Dance), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 3765
-// Abilities: A0NM (Beauty of Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0NM (Beauty of Destruction), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -23038,7 +23038,7 @@ STRING 3842
 }
 
 STRING 3843
-// Abilities: A0TM (|cff20b1aaCoral Wave|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NM (Beauty of Destruction), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23533,7 +23533,7 @@ STRING 3905
 }
 
 STRING 3906
-// Abilities: A0TM (|cff20b1aaCoral Wave|r), Hotkey (Hotkey - Normal)
+// Abilities: A0TM (|cff20b1aaCoral Wave|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -23557,7 +23557,7 @@ Sasuke get pills from the serpent's days of Sigil, the curse can be greatly enha
 }
 
 STRING 3910
-// Abilities: A0WN (|cff8080ffRaikiri|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TM (|cff20b1aaCoral Wave|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23779,7 +23779,7 @@ Wind Assault [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 3947
-// Abilities: A0WN (|cff8080ffRaikiri|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WN (|cff8080ffRaikiri|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -23803,7 +23803,7 @@ STRING 3950
 }
 
 STRING 3951
-// Abilities: A09O (Shinranshin no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WN (|cff8080ffRaikiri|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -24112,7 +24112,7 @@ STRING 3982
 }
 
 STRING 3983
-// Abilities: A09O (Shinranshin no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A09O (Shinranshin no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -24829,13 +24829,13 @@ STRING 4082
 }
 
 STRING 4083
-// Abilities: A0SO (|cff0fcaf7Chakra Enhanced Strength|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A09O (Shinranshin no Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 4084
-// Abilities: A0PP (|cff008000Mokuton: Kajukai Korin|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SO (|cff0fcaf7Chakra Enhanced Strength|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -25129,7 +25129,7 @@ STRING 4132
 }
 
 STRING 4133
-// Abilities: A00Q (Shadow binding technique), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PP (|cff008000Mokuton: Kajukai Korin|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -26010,13 +26010,13 @@ Jinton: Genkai Hakuri no Jutsu [|cffffcc00R|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 4277
-// Abilities: A00Q (Shadow binding technique), Hotkey (Hotkey - Normal)
+// Abilities: A00Q (Shadow binding technique), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 4278
-// Abilities: A0BQ (|cfffffc00Hiraishingiri|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Q (Shadow binding technique), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -26268,7 +26268,7 @@ STRING 4319
 }
 
 STRING 4320
-// Abilities: A0BQ (|cfffffc00Hiraishingiri|r), Hotkey (Hotkey - Normal)
+// Abilities: A0BQ (|cfffffc00Hiraishingiri|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -26436,13 +26436,13 @@ STRING 4347
 }
 
 STRING 4348
-// Abilities: A0TQ ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BQ (|cfffffc00Hiraishingiri|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 4349
-// Abilities: A0TQ ( ), Hotkey (Hotkey - Normal)
+// Abilities: A0TQ ( ), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -26802,7 +26802,7 @@ By fusing Yin and Yang Chakra the Rikuudou Sennin was able to obtain the Stone o
 }
 
 STRING 4409
-// Abilities: A0KR (Jinton: Genkai Hakuri no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TQ ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -26868,7 +26868,7 @@ Adamantine Stomp [|cffffcc00Q|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 4420
-// Abilities: A0KR (Jinton: Genkai Hakuri no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Jinton: Genkai Hakuri no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -27091,13 +27091,13 @@ Shiki_Silence2
 }
 
 STRING 4457
-// Abilities: A0WR (|cffc7ad60Sabaku Kyu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KR (Jinton: Genkai Hakuri no Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 4458
-// Abilities: A0WR (|cffc7ad60Sabaku Kyu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WR (|cffc7ad60Sabaku Kyu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -27457,7 +27457,7 @@ STRING 4517
 }
 
 STRING 4518
-// Abilities: A00S (Satetsu Kesshu), Hotkey (Hotkey - Normal)
+// Abilities: A0WR (|cffc7ad60Sabaku Kyu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -27789,7 +27789,7 @@ E
 }
 
 STRING 4556
-// Abilities: A0CS (Indra's Arrow), Hotkey (Hotkey - Normal)
+// Abilities: A00S (Satetsu Kesshu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -27873,7 +27873,7 @@ Learn |cff32cd32Byakugou|r [|cffffcc00T|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 4570
-// Abilities: A0ST (Asura Path), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CS (Indra's Arrow), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -28125,7 +28125,7 @@ STRING 4611
 }
 
 STRING 4612
-// Abilities: A0ST (Asura Path), Hotkey (Hotkey - Normal)
+// Abilities: A0ST (Asura Path), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28377,13 +28377,13 @@ I need your blood
 }
 
 STRING 4654
-// Abilities: A00U (Shikyaku no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ST (Asura Path), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 4655
-// Abilities: A00U (Shikyaku no Jutsu), Unhotkey (Hotkey - Turn Off)
+// Abilities: A00U (Shikyaku no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28976,12 +28976,6 @@ STRING 4753
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r (plus (10 + Taijutsu x 0.2) x Hachibi Chakra Mode skill level if Hachibi Chakra Mode is activated)|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb1.1 x skill level|r|n|cff32cd32Description:|r|nTechnique similiar to Six Swords Dance, but instead of inflicting damage to several enemies, it focus on a single enemy, dealing higher damage.
 }
 
-STRING 4754
-// Items: I03S (Fireworks!), Description (Description)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 2000|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effect:|r Grants vision over the effected area and grants true sight for 5s|r|n|cff32cd32Cooldown:|r |cff87ceeb4s|r|n|cffff0000Classification: None|r
-}
-
 STRING 4755
 // Abilities: A11V (|cff8dc3fcBubble Frenzy|r), Researchhotkey (Hotkey - Learn)
 {
@@ -29211,13 +29205,13 @@ Mujin Meisai [|cffffcc00E|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 4793
-// Abilities: A00U (Shikyaku no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A00U (Shikyaku no Jutsu), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
 
 STRING 4794
-// Abilities: A02U (Kikaichuu Tsumoji no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A00U (Shikyaku no Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30464,7 +30458,7 @@ Pipe
 }
 
 STRING 5002
-// Abilities: A02U (Kikaichuu Tsumoji no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A02U (Kikaichuu Tsumoji no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -30518,13 +30512,13 @@ STRING 5010
 }
 
 STRING 5011
-// Abilities: A07U (|cffec6200Oil|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A02U (Kikaichuu Tsumoji no Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 5012
-// Abilities: A00V (Off smoke), Researchhotkey (Hotkey - Learn)
+// Abilities: A07U (|cffec6200Oil|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31736,7 +31730,7 @@ STRING 5213
 }
 
 STRING 5214
-// Abilities: A00V (Off smoke), Hotkey (Hotkey - Normal)
+// Abilities: A00V (Off smoke), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32210,7 +32204,7 @@ This unit is under effects of Bone Aura; meele units that attack it will take da
 }
 
 STRING 5293
-// Abilities: A0KV (|cff8080ffChidori|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A00V (Off smoke), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33745,7 +33739,7 @@ Hiraishingiri
 }
 
 STRING 5552
-// Abilities: A0KV (|cff8080ffChidori|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KV (|cff8080ffChidori|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34021,7 +34015,7 @@ STRING 5597
 }
 
 STRING 5598
-// Abilities: A0KV (|cff8080ffChidori|r), Hotkey (Hotkey - Normal)
+// Abilities: A0KV (|cff8080ffChidori|r), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -34045,7 +34039,7 @@ STRING 5601
 }
 
 STRING 5602
-// Abilities: A0VV (|cff53a4ffMizudeppou no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KV (|cff8080ffChidori|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34607,7 +34601,7 @@ Cero
 }
 
 STRING 5696
-// Abilities: A0VV (|cff53a4ffMizudeppou no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A0VV (|cff53a4ffMizudeppou no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34673,7 +34667,7 @@ Bash - [|cffffcc00Level 5|r]
 }
 
 STRING 5707
-// Abilities: A0GW (|cffad3f45Demon Slash|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VV (|cff53a4ffMizudeppou no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34921,7 +34915,7 @@ STRING 5748
 }
 
 STRING 5749
-// Abilities: A0GW (|cffad3f45Demon Slash|r), Hotkey (Hotkey - Normal)
+// Abilities: A0GW (|cffad3f45Demon Slash|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35222,7 +35216,7 @@ STRING 5797
 }
 
 STRING 5798
-// Abilities: A0UW (Bijuu Hachimaki), Hotkey (Hotkey - Normal)
+// Abilities: A0GW (|cffad3f45Demon Slash|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35246,7 +35240,7 @@ STRING 5801
 }
 
 STRING 5802
-// Abilities: A09X (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UW (Bijuu Hachimaki), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35335,7 +35329,7 @@ STRING 5816
 }
 
 STRING 5817
-// Abilities: A09X (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A09X (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35359,7 +35353,7 @@ STRING 5820
 }
 
 STRING 5821
-// Abilities: A0AX (|cffff0000Flamethrower), Hotkey (Hotkey - Normal)
+// Abilities: A09X (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35998,7 +35992,7 @@ STRING 5928
 }
 
 STRING 5929
-// Abilities: A0UY (Bijuu Lariat), Researchhotkey (Hotkey - Learn)
+// Abilities: A0AX (|cffff0000Flamethrower), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -36232,7 +36226,7 @@ Deals |cff40e0d080 X [Ability Level] |r|cff800080non-elemental |rdamage in line.
 }
 
 STRING 5968
-// Abilities: A0DZ (Paper Chakram), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UY (Bijuu Lariat), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -37212,7 +37206,7 @@ STRING 6130
 }
 
 STRING 6131
-// Abilities: A0DZ (Paper Chakram), Hotkey (Hotkey - Normal)
+// Abilities: A0DZ (Paper Chakram), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -37764,7 +37758,7 @@ R
 }
 
 STRING 6223
-// Abilities: A0X3 (I need your blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DZ (Paper Chakram), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -37980,7 +37974,7 @@ Drag
 }
 
 STRING 6259
-// Abilities: A0X3 (I need your blood), Hotkey (Hotkey - Normal)
+// Abilities: A0X3 (I need your blood), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -38136,7 +38130,7 @@ STRING 6284
 }
 
 STRING 6285
-// Abilities: A0XJ (Assassination Technique), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X3 (I need your blood), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -39337,7 +39331,7 @@ Mokuton: Mokuryu no Jutsu [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 6485
-// Abilities: A0XJ (Assassination Technique), Hotkey (Hotkey - Normal)
+// Abilities: A0XJ (Assassination Technique), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -39361,7 +39355,7 @@ Learn Mokuton: Mokuryu no Jutsu [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 6489
-// Abilities: A0Z0 (|cff800080Poison Senbons|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XJ (Assassination Technique), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -39595,7 +39589,7 @@ STRING 6527
 }
 
 STRING 6528
-// Abilities: A0Z0 (|cff800080Poison Senbons|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0Z0 (|cff800080Poison Senbons|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40356,7 +40350,7 @@ STRING 6654
 }
 
 STRING 6655
-// Abilities: A0Z0 (|cff800080Poison Senbons|r), Hotkey (Hotkey - Normal)
+// Abilities: A0Z0 (|cff800080Poison Senbons|r), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -40578,7 +40572,7 @@ STRING 6691
 }
 
 STRING 6692
-// Abilities: A0ZT (|cffff0000Sen'en Gouka|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z0 (|cff800080Poison Senbons|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40608,7 +40602,7 @@ STRING 6696
 }
 
 STRING 6697
-// Abilities: A0ZT (|cffff0000Sen'en Gouka|r), Hotkey (Hotkey - Normal)
+// Abilities: A0ZT (|cffff0000Sen'en Gouka|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40698,7 +40692,7 @@ Throw Kunai [|cffffcc00W|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 6712
-// Abilities: A10F (|cff000000Mushi Kame No Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZT (|cffff0000Sen'en Gouka|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40824,7 +40818,7 @@ STRING 6732
 }
 
 STRING 6733
-// Abilities: A10F (|cff000000Mushi Kame No Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A10F (|cff000000Mushi Kame No Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40884,7 +40878,7 @@ STRING 6742
 }
 
 STRING 6743
-// Abilities: A11P (|cff8dc3fcDrowning Bubble Technique|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10F (|cff000000Mushi Kame No Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40950,7 +40944,7 @@ S
 }
 
 STRING 6754
-// Abilities: A11P (|cff8dc3fcDrowning Bubble Technique|r), Hotkey (Hotkey - Normal)
+// Abilities: A11P (|cff8dc3fcDrowning Bubble Technique|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40974,7 +40968,7 @@ A powerful A-rank developed by Fourth Hokage. Naruto concrentate chakra on palm 
 }
 
 STRING 6758
-// Abilities: A11W (|cff8dc3fcBubble Dome|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A11P (|cff8dc3fcDrowning Bubble Technique|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41118,7 +41112,7 @@ Webs
 }
 
 STRING 6782
-// Abilities: A125 (Roar), Unhotkey (Hotkey - Turn Off)
+// Abilities: A11W (|cff8dc3fcBubble Dome|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -41364,7 +41358,7 @@ STRING 6822
 }
 
 STRING 6823
-// Abilities: A125 (Roar), Hotkey (Hotkey - Normal)
+// Abilities: A125 (Roar), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -41430,7 +41424,7 @@ STRING 6833
 }
 
 STRING 6834
-// Abilities: A12V (Multiple slashes combo), Researchhotkey (Hotkey - Learn)
+// Abilities: A125 (Roar), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42180,7 +42174,7 @@ http://wc3campaigns.net/vexorian
 }
 
 STRING 6959
-// Abilities: A12V (Multiple slashes combo), Hotkey (Hotkey - Normal)
+// Abilities: A12V (Multiple slashes combo), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42269,13 +42263,13 @@ Suiton: Suidanha [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 6974
-// Abilities: A048 (Strong Floating Blade), Researchhotkey (Hotkey - Learn)
+// Abilities: A12V (Multiple slashes combo), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 6975
-// Abilities: A05Z ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A048 (Strong Floating Blade), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42371,7 +42365,7 @@ Amenominaka [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 6991
-// Abilities: A05Z ( ), Hotkey (Hotkey - Normal)
+// Abilities: A05Z ( ), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42401,7 +42395,7 @@ Learn Suiton: Suidanha [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 6996
-// Abilities: A0C2 (Hiraishingiri), Researchhotkey (Hotkey - Learn)
+// Abilities: A05Z ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42661,13 +42655,13 @@ STRING 7038
 }
 
 STRING 7039
-// Abilities: A0C2 (Hiraishingiri), Hotkey (Hotkey - Normal)
+// Abilities: A0C2 (Hiraishingiri), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7040
-// Abilities: A0N0 (Bone Crush), Hotkey (Hotkey - Normal)
+// Abilities: A0C2 (Hiraishingiri), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43246,7 +43240,7 @@ Channeling|r
 }
 
 STRING 7130
-// Abilities: A0N5 (Bone Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0N0 (Bone Crush), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43481,7 +43475,7 @@ Learn Jinton: Bunretsu Genkai Hakuri no Jutsu [|cffffcc00T|r] - [|cffffcc00Level
 }
 
 STRING 7154
-// Abilities: A0N8 (Sameodori no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0N5 (Bone Spear), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43547,7 +43541,7 @@ Mushi Kame no Jutsu [|cffffcc00E|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 7165
-// Abilities: A0ND (Cat Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0N8 (Sameodori no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43649,7 +43643,7 @@ STRING 7181
 }
 
 STRING 7182
-// Abilities: A0ND (Cat Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0ND (Cat Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44039,7 +44033,7 @@ A
 }
 
 STRING 7247
-// Abilities: A0TO (|cff37458cSword Strike|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ND (Cat Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44069,7 +44063,7 @@ Specially designed for assassination.|n|cff32cd32+120 Movement Speed|n+300 HP|n+
 }
 
 STRING 7252
-// Abilities: A0TO (|cff37458cSword Strike|r), Hotkey (Hotkey - Normal)
+// Abilities: A0TO (|cff37458cSword Strike|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44267,7 +44261,7 @@ Upgrade Sword of Totsuka
 }
 
 STRING 7285
-// Abilities: A0UO (Toton Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A0TO (|cff37458cSword Strike|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44351,7 +44345,7 @@ By fusing Yin and Yang Chakra the Rikuudou Sennin was able to obtain the Stone o
 }
 
 STRING 7299
-// Abilities: A0ZV (|cffe36d50Lava Geyser|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UO (Toton Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44863,13 +44857,13 @@ Purchase Bingo Book [|cffffcc00Q|r]
 }
 
 STRING 7384
-// Abilities: A0ZV (|cffe36d50Lava Geyser|r), Hotkey (Hotkey - Normal)
+// Abilities: A0ZV (|cffe36d50Lava Geyser|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7385
-// Abilities: A14S (|cff000000Truth-Seeking Ball|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ZV (|cffe36d50Lava Geyser|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45557,13 +45551,13 @@ STRING 7499
 }
 
 STRING 7500
-// Abilities: A14S (|cff000000Truth-Seeking Ball|r), Hotkey (Hotkey - Normal)
+// Abilities: A14S (|cff000000Truth-Seeking Ball|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7501
-// Abilities: A14W (|cff000000Serial Gudoudamas|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A14S (|cff000000Truth-Seeking Ball|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45677,7 +45671,7 @@ Wait eight minutes!
 }
 
 STRING 7520
-// Abilities: A178 ( ), Hotkey (Hotkey - Normal)
+// Abilities: A14W (|cff000000Serial Gudoudamas|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45737,7 +45731,7 @@ STRING 7529
 }
 
 STRING 7530
-// Abilities: A17A (|cff8080ffChidori Eiso), Hotkey (Hotkey - Normal)
+// Abilities: A178 ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45995,13 +45989,13 @@ STRING 7572
 }
 
 STRING 7573
-// Abilities: A17S (Naruto Missile), Researchhotkey (Hotkey - Learn)
+// Abilities: A17A (|cff8080ffChidori Eiso), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7574
-// Abilities: A17S (Naruto Missile), Hotkey (Hotkey - Normal)
+// Abilities: A17S (Naruto Missile), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46157,13 +46151,13 @@ R
 }
 
 STRING 7600
-// Abilities: A17Y (|cffba0000Reverse Kamui|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A17S (Naruto Missile), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7601
-// Abilities: A17Y (|cffba0000Reverse Kamui|r), Hotkey (Hotkey - Normal)
+// Abilities: A17Y (|cffba0000Reverse Kamui|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46217,7 +46211,7 @@ Assault Blade [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 7610
-// Abilities: A182 (Karasu's Barbed Attack), Hotkey (Hotkey - Normal)
+// Abilities: A17Y (|cffba0000Reverse Kamui|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46439,7 +46433,7 @@ Animal Realm: Summoning: Chamaleon [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 7647
-// Abilities: A188 (|cff8080ffScythe Combo|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A182 (Karasu's Barbed Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46481,7 +46475,7 @@ Deals 80 X Level normal damage in line.|n|cffffcc00Cooldown:|r 11-15s
 }
 
 STRING 7654
-// Abilities: A188 (|cff8080ffScythe Combo|r), Hotkey (Hotkey - Normal)
+// Abilities: A188 (|cff8080ffScythe Combo|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46859,13 +46853,13 @@ Amenominaka [|cffffcc00Q|r] - [|cffffcc00Level 8|r]
 }
 
 STRING 7717
-// Abilities: A189 ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A188 (|cff8080ffScythe Combo|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7718
-// Abilities: A189 ( ), Hotkey (Hotkey - Normal)
+// Abilities: A189 ( ), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47111,13 +47105,13 @@ Animal Realm: Summoning: Chamaleon [|cffffcc00W|r] - [|cffffcc00Level 6|r]
 }
 
 STRING 7759
-// Abilities: A19T (|cffdeaf69Kumo Nenkin|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A189 ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7760
-// Abilities: A19T (|cffdeaf69Kumo Nenkin|r), Hotkey (Hotkey - Normal)
+// Abilities: A19T (|cffdeaf69Kumo Nenkin|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47621,7 +47615,7 @@ Sandaime Kazekage Puppet
 }
 
 STRING 7844
-// Abilities: A19Y (|cffdeaf69Nenkin no Yoroi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A19T (|cffdeaf69Kumo Nenkin|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47968,13 +47962,13 @@ STRING 7901
 }
 
 STRING 7902
-// Abilities: A1A3 (|cffff8000Get Lost!|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A19Y (|cffdeaf69Nenkin no Yoroi|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7903
-// Abilities: A1A3 (|cffff8000Get Lost!|r), Hotkey (Hotkey - Normal)
+// Abilities: A1A3 (|cffff8000Get Lost!|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48358,13 +48352,13 @@ STRING 7966
 }
 
 STRING 7967
-// Abilities: A1A4 ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A1A3 (|cffff8000Get Lost!|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7968
-// Abilities: A1A4 ( ), Hotkey (Hotkey - Normal)
+// Abilities: A1A4 ( ), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49024,7 +49018,7 @@ E
 }
 
 STRING 8078
-// Abilities: A1A6 (|cff0fcaf7Rasenrengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1A4 ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49312,7 +49306,7 @@ STRING 8120
 }
 
 STRING 8121
-// Abilities: A1A6 (|cff0fcaf7Rasenrengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A1A6 (|cff0fcaf7Rasenrengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49336,7 +49330,7 @@ STRING 8124
 }
 
 STRING 8125
-// Abilities: A1A8 (|cff00bfffJikuukan Rasenrengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1A6 (|cff0fcaf7Rasenrengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49959,13 +49953,13 @@ STRING 8225
 }
 
 STRING 8226
-// Abilities: A1A8 (|cff00bfffJikuukan Rasenrengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A1A8 (|cff00bfffJikuukan Rasenrengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 8227
-// Abilities: A1A9 (|cff8080ffRaiton: Kangekiha|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1A8 (|cff00bfffJikuukan Rasenrengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50223,7 +50217,7 @@ Suiton: Suijinheki [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 8270
-// Abilities: A1A9 (|cff8080ffRaiton: Kangekiha|r), Hotkey (Hotkey - Normal)
+// Abilities: A1A9 (|cff8080ffRaiton: Kangekiha|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50344,7 +50338,7 @@ Fuuton: Atsugai [|cffffcc00Q|r]
 }
 
 STRING 8292
-// Abilities: A08I (Net-shaped Prison), Researchhotkey (Hotkey - Learn)
+// Abilities: A1A9 (|cff8080ffRaiton: Kangekiha|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50527,7 +50521,7 @@ STRING 8318
 }
 
 STRING 8319
-// Abilities: A0FZ (Sen'eijashu), Researchhotkey (Hotkey - Learn)
+// Abilities: A08I (Net-shaped Prison), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50678,7 +50672,7 @@ Sanbi's Shell
 }
 
 STRING 8342
-// Abilities: A0FZ (Sen'eijashu), Hotkey (Hotkey - Normal)
+// Abilities: A0FZ (Sen'eijashu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50867,7 +50861,7 @@ Crystal is taken from killed enemy heroes.
 }
 
 STRING 8365
-// Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FZ (Sen'eijashu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51025,7 +51019,7 @@ The legendary Kusanagi infused with water|n|cff32cd32+550 HP|n+150 Damage|n+40 G
 }
 
 STRING 8387
-// Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Hotkey (Hotkey - Normal)
+// Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -51067,7 +51061,7 @@ STRING 8393
 }
 
 STRING 8394
-// Abilities: A0Q3 (Sen'eijashu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LS (|cff0fcaf7Chakra Blast|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51932,7 +51926,7 @@ Channeling|r
 }
 
 STRING 8523
-// Abilities: A0Q3 (Sen'eijashu), Hotkey (Hotkey - Normal)
+// Abilities: A0Q3 (Sen'eijashu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -51956,7 +51950,7 @@ STRING 8526
 }
 
 STRING 8527
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q3 (Sen'eijashu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52060,7 +52054,7 @@ STRING 8539
 }
 
 STRING 8540
-// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Hotkey (Hotkey - Normal)
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52138,7 +52132,7 @@ M
 }
 
 STRING 8553
-// Abilities: A16I (Heal Bite), Researchhotkey (Hotkey - Learn)
+// Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52405,7 +52399,7 @@ STRING 8577
 }
 
 STRING 8578
-// Abilities: A15U ( ), Researchhotkey (Hotkey - Learn)
+// Abilities: A16I (Heal Bite), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52429,7 +52423,7 @@ STRING 8581
 }
 
 STRING 8582
-// Abilities: A15V (|cff000000Serial Gudoudamas|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A15U ( ), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52591,13 +52585,13 @@ R
 }
 
 STRING 8609
-// Abilities: A16Y (Kyoumeisen), Researchhotkey (Hotkey - Learn)
+// Abilities: A15V (|cff000000Serial Gudoudamas|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 8610
-// Abilities: A16Y (Kyoumeisen), Hotkey (Hotkey - Normal)
+// Abilities: A16Y (Kyoumeisen), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52721,7 +52715,7 @@ Senbons infused with yang. The carrier feels a holy aura coming from it.|n|cff32
 }
 
 STRING 8631
-// Abilities: A1BQ (|cffffc2c0Boruto Stream|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A16Y (Kyoumeisen), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53034,13 +53028,13 @@ Item Edo Tensei
 }
 
 STRING 8668
-// Abilities: A1BQ (|cffffc2c0Boruto Stream|r), Hotkey (Hotkey - Normal)
+// Abilities: A1BQ (|cffffc2c0Boruto Stream|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 8669
-// Abilities: A1CO (|cff53a4ffSuiton: Suiryuudan no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1BQ (|cffffc2c0Boruto Stream|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53210,7 +53204,7 @@ Claws Combo [|cffffcc00E|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 8693
-// Abilities: A1CO (|cff53a4ffSuiton: Suiryuudan no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A1CO (|cff53a4ffSuiton: Suiryuudan no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53228,13 +53222,13 @@ STRING 8695
 }
 
 STRING 8696
-// Abilities: A03Z (|cff90ee90Omote Renge|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1CO (|cff53a4ffSuiton: Suiryuudan no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 8697
-// Abilities: A03Z (|cff90ee90Omote Renge|r), Hotkey (Hotkey - Normal)
+// Abilities: A03Z (|cff90ee90Omote Renge|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53456,7 +53450,7 @@ STRING 8733
 }
 
 STRING 8734
-// Abilities: A07J (|cff09520eKuchiyose no Jutsu: Hebi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A03Z (|cff90ee90Omote Renge|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53582,13 +53576,13 @@ STRING 8754
 }
 
 STRING 8755
-// Abilities: A07J (|cff09520eKuchiyose no Jutsu: Hebi|r), Hotkey (Hotkey - Normal)
+// Abilities: A07J (|cff09520eKuchiyose no Jutsu: Hebi|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 8756
-// Abilities: A10Z (|cffba0000Genjutsu: Sharingan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A07J (|cff09520eKuchiyose no Jutsu: Hebi|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53926,7 +53920,7 @@ M
 }
 
 STRING 8812
-// Abilities: A10Z (|cffba0000Genjutsu: Sharingan|r), Hotkey (Hotkey - Normal)
+// Abilities: A10Z (|cffba0000Genjutsu: Sharingan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53956,7 +53950,7 @@ Mei turns into Youton Mode, making her attack have a chance to deal |cff87ceeb10
 }
 
 STRING 8817
-// Abilities: A19H (|cff867092Kuchiyose no Jutsu: Ushi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10Z (|cffba0000Genjutsu: Sharingan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54142,7 +54136,7 @@ STRING 8847
 }
 
 STRING 8848
-// Abilities: A19H (|cff867092Kuchiyose no Jutsu: Ushi|r), Hotkey (Hotkey - Normal)
+// Abilities: A19H (|cff867092Kuchiyose no Jutsu: Ushi|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -54244,13 +54238,13 @@ Fuuton: Shinkuu Taigyoku [|cffffcc00R|r] - [|cffffcc00Level 2|r]
 }
 
 STRING 8865
-// Abilities: A19K (|cff5d6f2bChameleon Cloak), Hotkey (Hotkey - Normal)
+// Abilities: A19H (|cff867092Kuchiyose no Jutsu: Ushi|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 8866
-// Abilities: A1D3 (|cffba0000Getsuga Tensho|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A19K (|cff5d6f2bChameleon Cloak), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54442,7 +54436,7 @@ STRING 8897
 }
 
 STRING 8898
-// Abilities: A1D3 (|cffba0000Getsuga Tensho|r), Hotkey (Hotkey - Normal)
+// Abilities: A1D3 (|cffba0000Getsuga Tensho|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -54478,7 +54472,7 @@ Learn Kikaichuu Tsumoji no Jutsu [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 8904
-// Abilities: A1DA (Adamantine Stomp), Hotkey (Hotkey - Normal)
+// Abilities: A1D3 (|cffba0000Getsuga Tensho|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54617,13 +54611,13 @@ STRING 8924
 }
 
 STRING 8925
-// Abilities: A1DI (|cff8080ffRaikiri|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DA (Adamantine Stomp), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 8926
-// Abilities: A1DI (|cff8080ffRaikiri|r), Hotkey (Hotkey - Normal)
+// Abilities: A1DI (|cff8080ffRaikiri|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55207,13 +55201,13 @@ M
 }
 
 STRING 9006
-// Abilities: A1DX (Fuinjutsu: Shishi Heiko), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DI (|cff8080ffRaikiri|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9007
-// Abilities: A1DX (Fuinjutsu: Shishi Heiko), Hotkey (Hotkey - Normal)
+// Abilities: A1DX (Fuinjutsu: Shishi Heiko), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55393,7 +55387,7 @@ Kyuubi Aura
 }
 
 STRING 9037
-// Abilities: A1E3 (Kongo Roheki), Researchhotkey (Hotkey - Learn)
+// Abilities: A1DX (Fuinjutsu: Shishi Heiko), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56245,13 +56239,13 @@ Senei Jashu [|cffffcc00Q|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 9153
-// Abilities: A1AJ (Sen'ei Tajashu), Researchhotkey (Hotkey - Learn)
+// Abilities: A1E3 (Kongo Roheki), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9154
-// Abilities: A1AJ (Sen'ei Tajashu), Hotkey (Hotkey - Normal)
+// Abilities: A1AJ (Sen'ei Tajashu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56269,7 +56263,7 @@ Senei Jashu [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 9157
-// Abilities: A04W (|cff0fcaf7Shotei|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A1AJ (Sen'ei Tajashu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56569,13 +56563,13 @@ Satetsu Kesshu
 }
 
 STRING 9207
-// Abilities: A04W (|cff0fcaf7Shotei|r), Hotkey (Hotkey - Normal)
+// Abilities: A04W (|cff0fcaf7Shotei|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9208
-// Abilities: A1EU (Wind Tornado), Researchhotkey (Hotkey - Learn)
+// Abilities: A04W (|cff0fcaf7Shotei|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56689,7 +56683,7 @@ STRING 9226
 }
 
 STRING 9227
-// Abilities: A1EU (Wind Tornado), Hotkey (Hotkey - Normal)
+// Abilities: A1EU (Wind Tornado), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56995,13 +56989,13 @@ Fungokyaku [|cffffcc00Q|r] - [|cffffcc00Level 7|r]
 }
 
 STRING 9278
-// Abilities: A1EV (Infinite Sandstorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EU (Wind Tornado), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9279
-// Abilities: A1EX (Air Bullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A1EV (Infinite Sandstorm), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57069,7 +57063,7 @@ STRING 9285
 }
 
 STRING 9286
-// Abilities: A02Z (|cffff0000Yasaka Magatama), Hotkey (Hotkey - Normal)
+// Abilities: A1EX (Air Bullet), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57403,7 +57397,7 @@ R
 }
 
 STRING 9333
-// Abilities: A08M (Cero), Hotkey (Hotkey - Normal)
+// Abilities: A02Z (|cffff0000Yasaka Magatama), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -57715,13 +57709,13 @@ STRING 9384
 }
 
 STRING 9385
-// Abilities: A01O (|cff000000Kagemane no Jutsu|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A08M (Cero), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9386
-// Abilities: A01O (|cff000000Kagemane no Jutsu|r), Hotkey (Hotkey - Normal)
+// Abilities: A01O (|cff000000Kagemane no Jutsu|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -58003,13 +57997,13 @@ Learn |cffff0000Katon: Gamayu Endan|r [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 9433
-// Abilities: A035 (|cffff0000Katon: Karyu Endan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A01O (|cff000000Kagemane no Jutsu|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9434
-// Abilities: A035 (|cffff0000Katon: Karyu Endan|r), Hotkey (Hotkey - Normal)
+// Abilities: A035 (|cffff0000Katon: Karyu Endan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -58333,7 +58327,7 @@ STRING 9487
 }
 
 STRING 9488
-// Abilities: A064 (Fuuton: Atsugai), Hotkey (Hotkey - Normal)
+// Abilities: A035 (|cffff0000Katon: Karyu Endan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -58537,13 +58531,13 @@ STRING 9521
 }
 
 STRING 9522
-// Abilities: A066 (|cffff0000Flamethrower), Unhotkey (Hotkey - Turn Off)
+// Abilities: A064 (Fuuton: Atsugai), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9523
-// Abilities: A066 (|cffff0000Flamethrower), Hotkey (Hotkey - Normal)
+// Abilities: A066 (|cffff0000Flamethrower), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -58561,7 +58555,7 @@ STRING 9525
 }
 
 STRING 9526
-// Abilities: A06H (Kuchiyose: Karasu), Hotkey (Hotkey - Normal)
+// Abilities: A066 (|cffff0000Flamethrower), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -59089,7 +59083,7 @@ STRING 9613
 }
 
 STRING 9614
-// Abilities: A0AB (Explosive Kunai), Researchhotkey (Hotkey - Learn)
+// Abilities: A06H (Kuchiyose: Karasu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -60843,7 +60837,7 @@ E
 }
 
 STRING 9907
-// Abilities: A0C4 (|cff0000ffYasaka no Magatama|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0AB (Explosive Kunai), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -60867,7 +60861,7 @@ STRING 9910
 }
 
 STRING 9911
-// Abilities: A0CF (|cff53a4ffKusari|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C4 (|cff0000ffYasaka no Magatama|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -61239,7 +61233,7 @@ STRING 9972
 }
 
 STRING 9973
-// Abilities: A0CF (|cff53a4ffKusari|r), Hotkey (Hotkey - Normal)
+// Abilities: A0CF (|cff53a4ffKusari|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -61347,7 +61341,7 @@ Funsuiken [|cffffcc00W|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 9991
-// Abilities: A0DK (|cff53a4ffTsuiseki|r), Hotkey (Hotkey - Normal)
+// Abilities: A0CF (|cff53a4ffKusari|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61509,7 +61503,7 @@ E
 }
 
 STRING 10018
-// Abilities: A0DQ (Shuriken Kage Bunshin no Jutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DK (|cff53a4ffTsuiseki|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61539,7 +61533,7 @@ STRING 10022
 }
 
 STRING 10023
-// Abilities: A0DQ (Shuriken Kage Bunshin no Jutsu), Hotkey (Hotkey - Normal)
+// Abilities: A0DQ (Shuriken Kage Bunshin no Jutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -61569,7 +61563,7 @@ One of the three legendary items, which bolsters user's defenses.|n|cff32cd32+40
 }
 
 STRING 10028
-// Abilities: A14E (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DQ (Shuriken Kage Bunshin no Jutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -62243,7 +62237,7 @@ STRING 10139
 }
 
 STRING 10140
-// Abilities: A14E (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A14E (|cff0fcaf7Rasengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -62339,7 +62333,7 @@ STRING 10155
 }
 
 STRING 10156
-// Abilities: A0VG (Adamantine Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A14E (|cff0fcaf7Rasengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -62369,7 +62363,7 @@ STRING 10160
 }
 
 STRING 10161
-// Abilities: A0VG (Adamantine Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0VG (Adamantine Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -62387,7 +62381,7 @@ EntBirth
 }
 
 STRING 10164
-// Abilities: A0VI (Instant Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VG (Adamantine Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -62579,7 +62573,7 @@ STRING 10195
 }
 
 STRING 10196
-// Abilities: A0VI (Instant Water), Hotkey (Hotkey - Normal)
+// Abilities: A0VI (Instant Water), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -63197,7 +63191,7 @@ R
 }
 
 STRING 10299
-// Abilities: A0DV (Blink), Hotkey (Hotkey - Normal)
+// Abilities: A0VI (Instant Water), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -64597,7 +64591,7 @@ STRING 10531
 }
 
 STRING 10532
-// Abilities: A0E1 (|cfffffc00Rorentsugan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DV (Blink), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -65151,7 +65145,7 @@ STRING 10623
 }
 
 STRING 10624
-// Abilities: A0E7 (Senei Jashu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E1 (|cfffffc00Rorentsugan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -66470,7 +66464,7 @@ Ground Smack [|cffffcc00W|r] - [|cffffcc00Level 9|r]
 }
 
 STRING 10844
-// Abilities: A0E7 (Senei Jashu), Hotkey (Hotkey - Normal)
+// Abilities: A0E7 (Senei Jashu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -66494,7 +66488,7 @@ STRING 10847
 }
 
 STRING 10848
-// Abilities: A0EP (|cff5ace76Senpou: Orochi Mikazuchi|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E7 (Senei Jashu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66524,7 +66518,7 @@ STRING 10852
 }
 
 STRING 10853
-// Abilities: A0EP (|cff5ace76Senpou: Orochi Mikazuchi|r), Hotkey (Hotkey - Normal)
+// Abilities: A0EP (|cff5ace76Senpou: Orochi Mikazuchi|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -67672,7 +67666,7 @@ STRING 11043
 }
 
 STRING 11044
-// Abilities: A0F5 (Ninpou: Chouji Giga "Tigers"), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EP (|cff5ace76Senpou: Orochi Mikazuchi|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68184,7 +68178,7 @@ STRING 11128
 }
 
 STRING 11129
-// Abilities: A0F5 (Ninpou: Chouji Giga "Tigers"), Hotkey (Hotkey - Normal)
+// Abilities: A0F5 (Ninpou: Chouji Giga "Tigers"), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68983,7 +68977,7 @@ Deals 80 X Level normal damage in line.|n|cffffcc00Cooldown:|r 11-15s
 }
 
 STRING 11262
-// Abilities: A04Z (|cff8b4600Kongo Roheki|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0F5 (Ninpou: Chouji Giga "Tigers"), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69067,7 +69061,7 @@ Senpou: Hakugeki no Jutsu [|cffffcc00R|r]
 }
 
 STRING 11276
-// Abilities: A0FO (|cffa5fde2Truth-Seeking Balls|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A04Z (|cff8b4600Kongo Roheki|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69091,7 +69085,7 @@ Animal Realm: Summoning: Chamaleon [|cffffcc00W|r] - [|cffffcc00Level 3|r]
 }
 
 STRING 11280
-// Abilities: A0FO (|cffa5fde2Truth-Seeking Balls|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FO (|cffa5fde2Truth-Seeking Balls|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69103,7 +69097,7 @@ Animal Realm: Summoning: Chamaleon [|cffffcc00W|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 11282
-// Abilities: A0FN (|cffa5fde2Unleashed|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FO (|cffa5fde2Truth-Seeking Balls|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69500,7 +69494,7 @@ STRING 11347
 }
 
 STRING 11348
-// Abilities: A0GY (|cff000000Pan Slam|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FN (|cffa5fde2Unleashed|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70290,7 +70284,7 @@ E
 }
 
 STRING 11481
-// Abilities: A0GY (|cff000000Pan Slam|r), Hotkey (Hotkey - Normal)
+// Abilities: A0GY (|cff000000Pan Slam|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70314,7 +70308,7 @@ STRING 11484
 }
 
 STRING 11485
-// Abilities: A0HD (Chakra Chains), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GY (|cff000000Pan Slam|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70344,7 +70338,7 @@ STRING 11489
 }
 
 STRING 11490
-// Abilities: A0I9 (Deadly Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HD (Chakra Chains), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70945,7 +70939,7 @@ Chakra Shield
 }
 
 STRING 11590
-// Abilities: A0I9 (Deadly Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0I9 (Deadly Kick), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71011,7 +71005,7 @@ Jinton: Genkai Hakuri no Jutsu [|cffffcc00Q|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 11601
-// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I9 (Deadly Kick), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71035,7 +71029,7 @@ STRING 11604
 }
 
 STRING 11605
-// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71251,7 +71245,7 @@ STRING 11640
 }
 
 STRING 11641
-// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Hotkey (Hotkey - Normal)
+// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -71522,7 +71516,7 @@ STRING 11685
 }
 
 STRING 11686
-// Abilities: A0J1 (|cffff0000Fox Slam|r), Hotkey (Hotkey - Normal)
+// Abilities: A0IA (|cff8b4600Doton: Boruda|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71768,13 +71762,13 @@ STRING 11726
 }
 
 STRING 11727
-// Abilities: A0J4 (|cff091515Shisho Fuin|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J1 (|cffff0000Fox Slam|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11728
-// Abilities: A0J7 (Shotei), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J4 (|cff091515Shisho Fuin|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71798,7 +71792,7 @@ STRING 11731
 }
 
 STRING 11732
-// Abilities: A0J7 (Shotei), Hotkey (Hotkey - Normal)
+// Abilities: A0J7 (Shotei), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71852,7 +71846,7 @@ STRING 11740
 }
 
 STRING 11741
-// Abilities: A010 (|cffffc0cbAnshosui|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0J7 (Shotei), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -72032,7 +72026,7 @@ E
 }
 
 STRING 11771
-// Abilities: A010 (|cffffc0cbAnshosui|r), Hotkey (Hotkey - Normal)
+// Abilities: A010 (|cffffc0cbAnshosui|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -72548,7 +72542,7 @@ STRING 11856
 }
 
 STRING 11857
-// Abilities: A0BZ (Wind Assault), Researchhotkey (Hotkey - Learn)
+// Abilities: A010 (|cffffc0cbAnshosui|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73118,7 +73112,7 @@ Learn Doki Control: Madness [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 11952
-// Abilities: A0BZ (Wind Assault), Hotkey (Hotkey - Normal)
+// Abilities: A0BZ (Wind Assault), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -73130,7 +73124,7 @@ STRING 11953
 }
 
 STRING 11954
-// Abilities: A0JI (|cff38625bDynamic Entry|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BZ (Wind Assault), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73400,7 +73394,7 @@ ShopBoardHighLevelCombine
 }
 
 STRING 11999
-// Abilities: A0JI (|cff38625bDynamic Entry|r), Hotkey (Hotkey - Normal)
+// Abilities: A0JI (|cff38625bDynamic Entry|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -73448,7 +73442,7 @@ W
 }
 
 STRING 12007
-// Abilities: A0DS (|cff8080ffChidori|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (|cff38625bDynamic Entry|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -73971,7 +73965,7 @@ Ninja
 }
 
 STRING 12095
-// Abilities: A0DS (|cff8080ffChidori|r), Hotkey (Hotkey - Normal)
+// Abilities: A0DS (|cff8080ffChidori|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -73987,7 +73981,7 @@ Ninjas
 }
 
 STRING 12098
-// Abilities: A0L8 (Net Shaped Prison), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DS (|cff8080ffChidori|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -74203,7 +74197,7 @@ STRING 12133
 }
 
 STRING 12134
-// Abilities: A0L8 (Net Shaped Prison), Hotkey (Hotkey - Normal)
+// Abilities: A0L8 (Net Shaped Prison), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -76789,7 +76783,7 @@ STRING 12564
 }
 
 STRING 12565
-// Abilities: A0LW (Club), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L8 (Net Shaped Prison), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -76999,7 +76993,7 @@ STRING 12599
 }
 
 STRING 12600
-// Abilities: A0LW (Club), Hotkey (Hotkey - Normal)
+// Abilities: A0LW (Club), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -78980,7 +78974,7 @@ Iaigiri Dancing Blade [|cffffcc00W|r] - [|cffffcc00Level 4|r]
 }
 
 STRING 12930
-// Abilities: A0LX (|cffB0B0B0Doki Control: Primary Attack|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LW (Club), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -80547,7 +80541,7 @@ STRING 13190
 }
 
 STRING 13191
-// Abilities: A0LX (|cffB0B0B0Doki Control: Primary Attack|r), Hotkey (Hotkey - Normal)
+// Abilities: A0LX (|cffB0B0B0Doki Control: Primary Attack|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -83145,7 +83139,7 @@ STRING 13623
 }
 
 STRING 13624
-// Abilities: A0NK (|cffc71585Bashosen|r), Hotkey (Hotkey - Normal)
+// Abilities: A0LX (|cffB0B0B0Doki Control: Primary Attack|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -83685,7 +83679,7 @@ E
 }
 
 STRING 13714
-// Abilities: A0NK (|cffc71585Bashosen|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NK (|cffc71585Bashosen|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -91052,6 +91046,12 @@ STRING 14932
 V
 }
 
+STRING 14933
+// Items: I03S (Fireworks!), Description (Description)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Casting Range:|r 2000|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effect:|r Grants vision over the effected area and grants true sight for 4s|r|n|cff32cd32Cooldown:|r |cff87ceeb20s|r|n|cffff0000Classification: None|r
+}
+
 STRING 14934
 // Items: I06T (Three-Tails), Tip (Tooltip - Basic)
 {
@@ -94816,7 +94816,7 @@ STRING 15427
 }
 
 STRING 15428
-// Abilities: A0OF (|cffd9d6d9Shichiseiken|r), Hotkey (Hotkey - Normal)
+// Abilities: A0NK (|cffc71585Bashosen|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -94888,7 +94888,7 @@ Learn |cffff8080Shoton: Isshi Komyou|r [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 15440
-// Abilities: A0OH ( ), Hotkey (Hotkey - Normal)
+// Abilities: A0OF (|cffd9d6d9Shichiseiken|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -96148,7 +96148,7 @@ Scorched Earth Aura
 }
 
 STRING 15650
-// Abilities: A0SA (Sekizo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OH ( ), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -96475,6 +96475,12 @@ STRING 15704
 // Abilities: A11N (|cff800080Poison Mist|r), Tip (Tooltip - Normal)
 {
 Shuradou [|cffffcc00W|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 15705
+// Units: uSB1 (Seal), Ubertip (Tooltip - Extended)
+{
+A detonating operators, after the death of an explosion!
 }
 
 STRING 15706
@@ -97057,6 +97063,12 @@ STRING 15802
 // Abilities: A0FV (Kusanagi Backstab), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 200|n|cff32cd32Damage:|r (500 + Ninjutsu) x Cursed Seal of Heaven skill level|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Effects:|r Stuns the target for 2.5s|n|cff32cd32Chakra Cost:|r 180|n|cff32cd32Cooldown:|r 70s|n|cff32cd32Description:|r|nSasuke hits the target multiple times with his Kusanagi gravely injuring them.
+}
+
+STRING 15803
+// Units: uSB1 (Seal), EditorSuffix (Name - Editor Suffix)
+{
+(Sense barrier)
 }
 
 STRING 15804
@@ -98856,7 +98868,7 @@ Rock Wall
 }
 
 STRING 16103
-// Abilities: A0TB (Throw Fuuma Shuriken), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SA (Sekizo), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -98904,7 +98916,7 @@ STRING 16110
 }
 
 STRING 16111
-// Abilities: A0TB (Throw Fuuma Shuriken), Hotkey (Hotkey - Normal)
+// Abilities: A0TB (Throw Fuuma Shuriken), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -99656,7 +99668,7 @@ STRING 16235
 }
 
 STRING 16236
-// Buffs/Effects: B03N (), Bufftip (Tooltip)
+// Units: uSB1 (Seal), Name (Name)
 {
 Seal
 }
@@ -104288,10 +104300,22 @@ STRING 17007
 Dance of Chains [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
 }
 
+STRING 17008
+// Units: uSB2 (Seal2), Ubertip (Tooltip - Extended)
+{
+A detonating operators, after the death of an explosion!
+}
+
 STRING 17009
 // Abilities: A0FM (|cffa5fde2Sage Chakra|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nDosu generates sound waves to attack enemies in a fan-like area.
+}
+
+STRING 17010
+// Units: uSB2 (Seal2), EditorSuffix (Name - Editor Suffix)
+{
+(Sense barrier)
 }
 
 STRING 17011
@@ -104310,6 +104334,12 @@ STRING 17013
 // Abilities: A0VL (Kikaichuu Yajiri no Jutsu), Researchtip (Tooltip - Learn)
 {
 Learn Kikaichuu Yajiri no Jutsu [|cffffcc00W|r] - [|cffffcc00Level %d|r]
+}
+
+STRING 17014
+// Units: uSB2 (Seal2), Name (Name)
+{
+Seal2
 }
 
 STRING 17015
@@ -111198,7 +111228,7 @@ STRING 18160
 }
 
 STRING 18161
-// Abilities: A0UE (Release Chakra), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TB (Throw Fuuma Shuriken), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -115796,6 +115826,54 @@ STRING 18918
 Back to Normal Mode [|cffffcc00E|r]
 }
 
+STRING 18919
+// Items: ISB1 (Sensing Barrier), Name (Name)
+{
+Sensing Barrier
+}
+
+STRING 18920
+// Items: ISB1 (Sensing Barrier), Description (Description)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effect:|r Gives 500 vision, removes debuffs and grants Invulnerability for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb30s|r (Shared with Gunbai)|n|cffff0000Classification: None|r
+}
+
+STRING 18921
+// Items: ISB1 (Sensing Barrier), Ubertip (Tooltip - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Effect:|r Gives 500 vision, removes debuffs and grants Invulnerability for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb30s|r (Shared with Gunbai)|n|cffff0000Classification: None|r
+}
+
+STRING 18922
+// Items: ISB1 (Sensing Barrier), Tip (Tooltip - Basic)
+{
+Purchase Substitution Wood [|cffffcc00Q|r]
+}
+
+STRING 18923
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 18924
+// Abilities: ASB1 (Channel), Name (Name)
+{
+Channel
+}
+
+STRING 18925
+// Abilities: ASB2 (Place sense barrier), Name (Name)
+{
+Place sense barrier
+}
+
+STRING 18926
+// Abilities: ASBI (Sensing Barrier Invisibility), Name (Name)
+{
+Sensing Barrier Invisibility
+}
+
 STRING 18927
 // Abilities: A0EZ (|cffaa8a29Doton: Chokajugan no Jutsu|r), Tip (Tooltip - Normal)
 {
@@ -117288,6 +117366,12 @@ STRING 19175
 // Abilities: A19H (|cff867092Kuchiyose no Jutsu: Ushi|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|r|n|cff32cd32Damage:|cff87ceeb Genjutsu x skill level|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Pushes the target back.|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 5s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nAnimal Path summons a Giant Ox to push all enemies away
+}
+
+STRING 19176
+// Buffs/Effects: B03N (), Bufftip (Tooltip)
+{
+Seal
 }
 
 STRING 19177
@@ -126037,7 +126121,7 @@ STRING 20612
 }
 
 STRING 20613
-// Abilities: A0UE (Release Chakra), Hotkey (Hotkey - Normal)
+// Abilities: A0UE (Release Chakra), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -126061,7 +126145,7 @@ Toneri Gathers Chakra
 }
 
 STRING 20617
-// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UE (Release Chakra), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -127226,7 +127310,7 @@ Space-time Jutsu [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 20792
-// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Hotkey (Hotkey - Normal)
+// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -127244,7 +127328,7 @@ STRING 20794
 }
 
 STRING 20795
-// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Hotkey (Hotkey - Normal)
+// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -132025,7 +132109,7 @@ Yanagi no Mai [|cffffcc00E|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 21602
-// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -132115,7 +132199,7 @@ STRING 21616
 }
 
 STRING 21617
-// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -133510,7 +133594,7 @@ STRING 21848
 }
 
 STRING 21849
-// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -134866,7 +134950,7 @@ Learn |cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 22075
-// Abilities: A0XA (|cffff8080Kessho: Kyodai Rokkaku Shuriken|r), Hotkey (Hotkey - Normal)
+// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -135666,7 +135750,7 @@ STRING 22209
 }
 
 STRING 22210
-// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XA (|cffff8080Kessho: Kyodai Rokkaku Shuriken|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -135684,7 +135768,7 @@ Learn |cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r]  - [|cffffcc00Level %d|r]
 }
 
 STRING 22214
-// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Hotkey (Hotkey - Normal)
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
