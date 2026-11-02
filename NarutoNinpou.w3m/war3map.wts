@@ -3669,7 +3669,7 @@ STRING 611
 }
 
 STRING 612
-// Items: ISB1 (Sensing Barrier), Hotkey (Hotkey)
+// Items: ISB1 (Kanchi Kekkai), Hotkey (Hotkey)
 {
 Q
 }
@@ -28974,6 +28974,12 @@ STRING 4753
 // Abilities: A0GR (Acrobatic Swords), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebTaijutsu x skill level|r (plus (10 + Taijutsu x 0.2) x Hachibi Chakra Mode skill level if Hachibi Chakra Mode is activated)|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb1.1 x skill level|r|n|cff32cd32Description:|r|nTechnique similiar to Six Swords Dance, but instead of inflicting damage to several enemies, it focus on a single enemy, dealing higher damage.
+}
+
+STRING 4754
+// Items: ISB1 (Kanchi Kekkai), Name (Name)
+{
+Kanchi Kekkai
 }
 
 STRING 4755
@@ -96478,7 +96484,7 @@ Shuradou [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 15705
-// Units: uSB1 (Seal), Ubertip (Tooltip - Extended)
+// Units: uSB2 (Seal2), Ubertip (Tooltip - Extended)
 {
 A detonating operators, after the death of an explosion!
 }
@@ -104298,12 +104304,6 @@ STRING 17007
 // Abilities: A18W (|cffff00ffKuchiyose no Jutsu: Ibuse|r), Tip (Tooltip - Normal)
 {
 Dance of Chains [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
-}
-
-STRING 17008
-// Units: uSB2 (Seal2), Ubertip (Tooltip - Extended)
-{
-A detonating operators, after the death of an explosion!
 }
 
 STRING 17009
@@ -115827,31 +115827,13 @@ Back to Normal Mode [|cffffcc00E|r]
 }
 
 STRING 18919
-// Items: ISB1 (Sensing Barrier), Name (Name)
+// Units: uSB1 (Seal), Ubertip (Tooltip - Extended)
 {
-Sensing Barrier
-}
-
-STRING 18920
-// Items: ISB1 (Sensing Barrier), Description (Description)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effect:|r Gives 500 vision, removes debuffs and grants Invulnerability for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb30s|r (Shared with Gunbai)|n|cffff0000Classification: None|r
-}
-
-STRING 18921
-// Items: ISB1 (Sensing Barrier), Ubertip (Tooltip - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Effect:|r Gives 500 vision, removes debuffs and grants Invulnerability for |cff87ceeb2s|r|n|cff32cd32Cooldown:|r |cff87ceeb30s|r (Shared with Gunbai)|n|cffff0000Classification: None|r
-}
-
-STRING 18922
-// Items: ISB1 (Sensing Barrier), Tip (Tooltip - Basic)
-{
-Purchase Substitution Wood [|cffffcc00Q|r]
+0
 }
 
 STRING 18923
-// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Hotkey (Hotkey - Normal)
+// Abilities: A0UE (Release Chakra), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -118688,6 +118670,12 @@ STRING 19394
 // Abilities: A1ER (Hakke: Rokujuyon Sho), Tip (Tooltip - Normal)
 {
 Shugohakke Rokujuuyon Sho [|cffffcc00W|r] - [|cffffcc00Level 7|r]
+}
+
+STRING 19395
+// Items: ISB1 (Kanchi Kekkai), Description (Description)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Effect:|r Places a Sensory barrier that pings enemies, lasts for |cff87ceeb40s|r|n|cff32cd32Cooldown:|r |cff87ceeb30s|r |n|cffff0000Classification: None|r
 }
 
 STRING 19396
@@ -126121,7 +126109,7 @@ STRING 20612
 }
 
 STRING 20613
-// Abilities: A0UE (Release Chakra), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UE (Release Chakra), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -126145,7 +126133,7 @@ Toneri Gathers Chakra
 }
 
 STRING 20617
-// Abilities: A0UE (Release Chakra), Hotkey (Hotkey - Normal)
+// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -126853,6 +126841,12 @@ STRING 20714
 Learn |cffFC6022Shakuton: Daijohappa|r [|cffffcc00R|r] - [|cffffcc00Level %d|r]
 }
 
+STRING 20715
+// Items: ISB1 (Kanchi Kekkai), Ubertip (Tooltip - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Effect:|r Places a Sensory barrier that pings enemies, lasts for |cff87ceeb40s|r|n|cff32cd32Cooldown:|r |cff87ceeb30s|r |n|cffff0000Classification: None|r
+}
+
 STRING 20716
 // Abilities: A0NC (|cff215dbfClaws Strike|r), Tip (Tooltip - Normal)
 {
@@ -127310,7 +127304,7 @@ Space-time Jutsu [|cffffcc00W|r] - [|cffffcc00Level 10|r]
 }
 
 STRING 20792
-// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -127328,7 +127322,7 @@ STRING 20794
 }
 
 STRING 20795
-// Abilities: A0V7 (|cffFC6022Shakuton: Zanka Shoha|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -127349,6 +127343,12 @@ STRING 20798
 // Abilities: A0GN (Hachibi Chakra Mode (KillerBee)), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 20799
+// Items: ISB1 (Kanchi Kekkai), Tip (Tooltip - Basic)
+{
+Purchase Kanchi Kekkai [|cffffcc00Q|r]
 }
 
 STRING 20801
@@ -132109,7 +132109,7 @@ Yanagi no Mai [|cffffcc00E|r] - [|cffffcc00Level 1|r]
 }
 
 STRING 21602
-// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Hotkey (Hotkey - Normal)
+// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -132199,7 +132199,7 @@ STRING 21616
 }
 
 STRING 21617
-// Abilities: A0WZ (|cff53a4ffSuiton: Mizurappa|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -133594,7 +133594,7 @@ STRING 21848
 }
 
 STRING 21849
-// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -134950,7 +134950,7 @@ Learn |cff87ceebSuiro no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level %d|r]
 }
 
 STRING 22075
-// Abilities: A0X5 (|cff00bfffJikuukan Rasenrengan|r), Hotkey (Hotkey - Normal)
+// Abilities: A0XA (|cffff8080Kessho: Kyodai Rokkaku Shuriken|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -135750,7 +135750,7 @@ STRING 22209
 }
 
 STRING 22210
-// Abilities: A0XA (|cffff8080Kessho: Kyodai Rokkaku Shuriken|r), Hotkey (Hotkey - Normal)
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -135768,7 +135768,7 @@ Learn |cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r]  - [|cffffcc00Level %d|r]
 }
 
 STRING 22214
-// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Hotkey (Hotkey - Normal)
 {
 Q
 }
