@@ -7477,18 +7477,6 @@ STRING 1246
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy Heroes|n|cff32cd32Damage:|r|cff87ceeb 1.5 x Ninjustu + 1.5 x Taijutsu|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Effects:|r Causes all poisoned enemy heroes to explode after 0.5s. If an enemy hero is hit by this explosion, but not the hero that explodes it spreads to them.|n|cff32cd32Area of Effect:|r 1250|r|n|cff32cd32Cooldown:|r 45s|r|r
 }
 
-STRING 1247
-// Abilities: A1A5 (|cff004000Okasho|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb10 x Taijutsu|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Chakra Cost:|r 250|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nSakura punches the ground, causing several rocks to fly through the air. Taking advantage of that, she jumps on the target and gives them a fatal blow.
-}
-
-STRING 1248
-// Abilities: A1A5 (|cff004000Okasho|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb10 x Taijutsu|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Chakra Cost:|r 250|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nSakura punches the ground, causing several rocks to fly through the air. Taking advantage of that, she jumps on the target and gives them a fatal blow.
-}
-
 STRING 1249
 // Units: h01P (HiruzenShurikenShadowCloneDummy), Name (Name)
 {
@@ -40770,7 +40758,7 @@ Jade of Susano'o
 }
 
 STRING 6724
-// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WN (|cff8080ffRaikiri|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
 }
@@ -40907,12 +40895,6 @@ STRING 6746
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb90 x skill level|r at max|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 800 length x 220 width|n|cff32cd32Chakra Cost:|r 30 + |cff87ceeb10 x skill level|r|n|cff32cd32Cooldown:|r 15s + |cff87ceeb0.5 x skill level|r|n|cff32c32Description:|r|nKisame spits out a great volume of water, creating a huge wave to crush all enemies in line.
 }
 
-STRING 6747
-// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
-}
-
 STRING 6748
 // Items: I01T (Battle Senbons - |cffffcc00Level MAX|r), Name (Name)
 {
@@ -40929,12 +40911,6 @@ STRING 6750
 // Items: I00C (Ninja Shippu Boots), Hotkey (Hotkey)
 {
 J
-}
-
-STRING 6751
-// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
 }
 
 STRING 6752
@@ -40989,12 +40965,6 @@ STRING 6760
 // Items: I05R (Combine: Juubi's Skin), Hotkey (Hotkey)
 {
 Z
-}
-
-STRING 6761
-// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
 }
 
 STRING 6762
@@ -41091,12 +41061,6 @@ STRING 6777
 // Abilities: A17M ( ), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 6778
-// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
 }
 
 STRING 6779
@@ -43442,12 +43406,6 @@ STRING 7147
 // Abilities: A0I5 (Darui Suiton), Tip (Tooltip - Normal)
 {
 Darui Suiton
-}
-
-STRING 7148
-// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
 }
 
 STRING 7149
@@ -68971,7 +68929,7 @@ STRING 11259
 }
 
 STRING 11260
-// Abilities: A184 (Futton: Kairiki Muso), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A184 (Futton: Kairiki Muso), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb(750 + 3 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nHan uses his incredible strength to make all enemies around him fly, making them fall two seconds after, dealing damage and stunning them.
 }
@@ -69563,12 +69521,6 @@ STRING 11358
 // Abilities: A0GM (Six Swords Dance), Researchtip (Tooltip - Learn)
 {
 Learn Six Sword Dance [|cffffcc00Q|r] - [|cffffcc00Level %d|r]
-}
-
-STRING 11359
-// Abilities: A184 (Futton: Kairiki Muso), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb(750 + 3 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|n|cff32cd32Cooldown:|r 50s|n|cff32cd32Description:|r|nHan uses his incredible strength to make all enemies around him fly, making them fall two seconds after, dealing damage and stunning them.
 }
 
 STRING 11360
@@ -90662,18 +90614,6 @@ STRING 14867
 Three-Tails
 }
 
-STRING 14868
-// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
-}
-
-STRING 14869
-// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
-}
-
 STRING 14870
 // Abilities: A0A7 (|cff0fcaf7Juuken|r), Tip (Tooltip - Normal)
 {
@@ -91498,18 +91438,6 @@ STRING 14998
 // Items: I04R (Speed Pills), Description (Description)
 {
 |cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Ally, Self|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Effect:|r Increases movement speed to maximum for |cff87ceeb8s|r|n|cff32cd32Cooldown:|r |cff87ceeb80s|r|n|cffff0000Classification: None|r
-}
-
-STRING 14999
-// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
-}
-
-STRING 15000
-// Abilities: A0WN (|cff8080ffRaikiri|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
 }
 
 STRING 15001
@@ -104306,6 +104234,12 @@ STRING 17007
 Dance of Chains [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
 }
 
+STRING 17008
+// Items: I06N (|cff2e86c1Chakra Blades -|r |cffffcc00Level MAX|r), Ubertip (Tooltip - Extended)
+{
+A special made metal infused with chakra|n|cff32cd32+50 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Chakra Blades (active, rng: 900, cd: 50s)|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line|n|cffff0000Item Type: Weapon|r
+}
+
 STRING 17009
 // Abilities: A0FM (|cffa5fde2Sage Chakra|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -105432,12 +105366,6 @@ STRING 17196
 // Abilities: A0EG (|cff8b4600Doton: Tsuiga no Jutsu|r), Tip (Tooltip - Normal)
 {
 |cff8b4600Doton: Tsuiga no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 7|r]
-}
-
-STRING 17197
-// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
 }
 
 STRING 17198
@@ -115832,6 +115760,24 @@ STRING 18919
 0
 }
 
+STRING 18920
+// Items: I06N (|cff2e86c1Chakra Blades -|r |cffffcc00Level MAX|r), Description (Description)
+{
+A special made metal infused with chakra|n|cff32cd32+50 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Chakra Blades (active, rng: 900, cd: 50s)|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line|n|cffff0000Item Type: Weapon|r
+}
+
+STRING 18921
+// Items: I07T (|cffff0000Fire Chakra Blades|r), Ubertip (Tooltip - Extended)
+{
+A special made metal infused with fire|n|cff32cd32+50 All Stats|n+50 Taijutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Fire Wave (active, rng: 900, cd: 50s):|n  - Deals (3 x Taijutsu + 3 x Ninjutsu + 3 x Genjutsu) Magic Damage in line|n|cffff0000Item Type: Weapon|r
+}
+
+STRING 18922
+// Items: I07T (|cffff0000Fire Chakra Blades|r), Description (Description)
+{
+A special made metal infused with fire|n|cff32cd32+50 All Stats|n+50 Taijutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Fire Wave (active, rng: 900, cd: 50s):|n  - Deals (3 x Taijutsu + 3 x Ninjutsu + 3 x Genjutsu) Magic Damage in line|n|cffff0000Item Type: Weapon|r
+}
+
 STRING 18923
 // Abilities: A0UE (Release Chakra), Researchhotkey (Hotkey - Learn)
 {
@@ -119749,12 +119695,6 @@ STRING 19573
 Mokuton Hijutsu: Jukai Koutan [|cffffcc00E|r] - [|cffffcc00Level 6|r]
 }
 
-STRING 19574
-// Items: I06N (|cff2e86c1Chakra Blades -|r |cffffcc00Level MAX|r), Ubertip (Tooltip - Extended)
-{
-A special made metal infused with chakra|n|cff32cd32+50 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Chakra Blades (active, rng: 900, cd: 50s)|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line|n|cffff0000Item Type: Weapon|r
-}
-
 STRING 19575
 // Abilities: A0P2 (Water (W) + Fire (E): Boil Release - Boiling Mist), Tip (Tooltip - Normal)
 {
@@ -119797,12 +119737,6 @@ STRING 19581
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceeb100 x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Effects:|r Slow affected enemies for two seconds|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 10s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nSuigetsu creates a powerful water dragon to smash all enemies around the selected area down.
 }
 
-STRING 19582
-// Items: I06N (|cff2e86c1Chakra Blades -|r |cffffcc00Level MAX|r), Description (Description)
-{
-A special made metal infused with chakra|n|cff32cd32+50 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Chakra Blades (active, rng: 900, cd: 50s)|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line|n|cffff0000Item Type: Weapon|r
-}
-
 STRING 19583
 // Abilities: A0PA (Wind (R) + Water (W): Ice Release - Icicle Barrage), Tip (Tooltip - Normal)
 {
@@ -119825,30 +119759,6 @@ STRING 19586
 // Abilities: A02Y (|cffba8b55Gokusa Maiso|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r at max|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 350|n|cff32cd32Effects:|r Drag affectes enemies to the center of it|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 14s + |cff87ceeb0.5 x skill level|r|n|cff32cd32Description:|r|nGaara manipulates sand to loosens the ground below his enemies, catching them in a pitfall which drags them to the center and deals damage over-time.
-}
-
-STRING 19587
-// Items: I07T (|cffff0000Fire Chakra Blades|r), Ubertip (Tooltip - Extended)
-{
-A special made metal infused with fire|n|cff32cd32+50 All Stats|n+50 Taijutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Fire Wave (active, rng: 900, cd: 50s):|n  - Deals (3 x Taijutsu + 3 x Ninjutsu + 3 x Genjutsu) Magic Damage in line|n|cffff0000Item Type: Weapon|r
-}
-
-STRING 19588
-// Items: I07T (|cffff0000Fire Chakra Blades|r), Description (Description)
-{
-A special made metal infused with fire|n|cff32cd32+50 All Stats|n+50 Taijutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Fire Wave (active, rng: 900, cd: 50s):|n  - Deals (3 x Taijutsu + 3 x Ninjutsu + 3 x Genjutsu) Magic Damage in line|n|cffff0000Item Type: Weapon|r
-}
-
-STRING 19589
-// Items: I07U (|cfffffc00Thunder Chakra Blades|r), Ubertip (Tooltip - Extended)
-{
-A special made metal infused with lightning|n|cff32cd32+50 All Stats|n+50 Ninjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Lightning Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage in line and ensnares for 2s|n|cffff0000Item Type: Weapon|r
-}
-
-STRING 19590
-// Items: I07U (|cfffffc00Thunder Chakra Blades|r), Description (Description)
-{
-A special made metal infused with lightning|n|cff32cd32+50 All Stats|n+50 Ninjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Lightning Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage in line and ensnares for 2s|n|cffff0000Item Type: Weapon|r
 }
 
 STRING 19591
@@ -119891,12 +119801,6 @@ STRING 19597
 // Abilities: A1AL (|cff8b4600Doton: Doryou Dango|r), Tip (Tooltip - Normal)
 {
 |cff8b4600Doton: Doryou Dango|r [|cffffcc00Q|r] - [|cffffcc00Level 1|r]
-}
-
-STRING 19598
-// Items: I07V (|cffc600ffYin Chakra Blades|r), Ubertip (Tooltip - Extended)
-{
-A special made metal infused with yin|n|cff32cd32+85 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Darkness Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage Normal Damage in line and silences for 1.5s|n|cffff0000Item Type: Weapon|r
 }
 
 STRING 19599
@@ -120221,12 +120125,6 @@ STRING 19652
 // Buffs/Effects: B05V (Explosion Release), EditorName (Name (Editor Only))
 {
 Explosion Release
-}
-
-STRING 19653
-// Items: I07V (|cffc600ffYin Chakra Blades|r), Description (Description)
-{
-A special made metal infused with yin|n|cff32cd32+85 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Darkness Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage Normal Damage in line and silences for 1.5s|n|cffff0000Item Type: Weapon|r
 }
 
 STRING 19654
@@ -121175,24 +121073,6 @@ STRING 19811
 // Buffs/Effects: B06D (Swift Release), Buffubertip (Tooltip - Extended)
 {
 Swift Release was previously cast and is currently on cooldown.
-}
-
-STRING 19812
-// Abilities: A04A (|cff8b4600Earth Splitter|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceeb(3 x Taijutsu + 750 x skill level)|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 220 width x 1000 length|n|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb5 x Taijutsu|r + (|cff87ceeb750 x skill level|r) (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Damage Type:|r Chaos (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Area of Effect:|r 220 width x 1500 length (|cff90ee90Active Chakra Enhanced Strength|r)|n|n|cff32cd32Effect:|r Slow affected enemies for 3 seconds.|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb100 x skill level|r|cff32cd32|nCooldown:|r 60s|n|cff32cd32Description:|r|nSakura uses her enormous strength to punch the ground, creating a huge fissure, damaging all enemies in line.
-}
-
-STRING 19813
-// Abilities: A04A (|cff8b4600Earth Splitter|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceeb(3 x Taijutsu + 750 x skill level)|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 220 width x 1000 length|n|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb5 x Taijutsu|r + (|cff87ceeb750 x skill level|r) (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Damage Type:|r Chaos (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Area of Effect:|r 220 width x 1500 length (|cff90ee90Active Chakra Enhanced Strength|r)|n|n|cff32cd32Effect:|r Slow affected enemies for 3 seconds.|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb100 x skill level|r|cff32cd32|nCooldown:|r 60s|n|cff32cd32Description:|r|nSakura uses her enormous strength to punch the ground, creating a huge fissure, damaging all enemies in line.
-}
-
-STRING 19814
-// Abilities: A04A (|cff8b4600Earth Splitter|r), Researchubertip (Tooltip - Learn - Extended)
-{
-|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceeb(3 x Taijutsu + 750 x skill level)|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 220 width x 1000 length|n|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb5 x Taijutsu|r + (|cff87ceeb750 x skill level|r) (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Damage Type:|r Chaos (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Area of Effect:|r 220 width x 1500 length (|cff90ee90Active Chakra Enhanced Strength|r)|n|n|cff32cd32Effect:|r Slow affected enemies for 3 seconds.|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb100 x skill level|r|cff32cd32|nCooldown:|r 60s|n|cff32cd32Description:|r|nSakura uses her enormous strength to punch the ground, creating a huge fissure, damaging all enemies in line.
 }
 
 STRING 19815
@@ -127351,6 +127231,12 @@ STRING 20799
 Purchase Kanchi Kekkai [|cffffcc00Q|r]
 }
 
+STRING 20800
+// Items: I07U (|cfffffc00Thunder Chakra Blades|r), Ubertip (Tooltip - Extended)
+{
+A special made metal infused with lightning|n|cff32cd32+50 All Stats|n+50 Ninjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Lightning Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage in line and ensnares for 2s|n|cffff0000Item Type: Weapon|r
+}
+
 STRING 20801
 // Abilities: A0L0 (Claws Combo), Ubertip (Tooltip - Normal - Extended)
 {
@@ -127381,6 +127267,18 @@ STRING 20805
 Mokuton Hijutsu: Jukai Koutan [|cffffcc00W|r] 
 }
 
+STRING 20806
+// Items: I07U (|cfffffc00Thunder Chakra Blades|r), Description (Description)
+{
+A special made metal infused with lightning|n|cff32cd32+50 All Stats|n+50 Ninjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Lightning Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage in line and ensnares for 2s|n|cffff0000Item Type: Weapon|r
+}
+
+STRING 20807
+// Items: I07V (|cffc600ffYin Chakra Blades|r), Ubertip (Tooltip - Extended)
+{
+A special made metal infused with yin|n|cff32cd32+85 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Darkness Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage Normal Damage in line and silences for 1.5s|n|cffff0000Item Type: Weapon|r
+}
+
 STRING 20808
 // Abilities: A0AO (|cff5b85ffSuiton: Senshokukou|r), Ubertip (Tooltip - Normal - Extended)
 {
@@ -127409,6 +127307,18 @@ STRING 20812
 // Abilities: A0XC (Kisei Bunshin), Ubertip (Tooltip - Normal - Extended)
 {
 |cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 500|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Effects:|r Stun the target for two seconds. Apply one charge.|n|cff32cd32Chakra Cost:|r 25 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 11s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nUsing Kiba, the user first buries the blades into the ground and then sends out an electrical charge towards the target.
+}
+
+STRING 20813
+// Items: I07V (|cffc600ffYin Chakra Blades|r), Description (Description)
+{
+A special made metal infused with yin|n|cff32cd32+85 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Darkness Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage Normal Damage in line and silences for 1.5s|n|cffff0000Item Type: Weapon|r
+}
+
+STRING 20814
+// Items: I07W (|cffFFFFE0Yang Chakra Blades|r), Ubertip (Tooltip - Extended)
+{
+A special made metal infused with the sage's powers|n|cff32cd32+85 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Yang Wave (active, rng: 900, cd: 50s):|n  -  Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage in line and heals for half|n|cffff0000Item Type: Weapon|r
 }
 
 STRING 20815
@@ -127717,6 +127627,12 @@ STRING 20865
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r at first strike and |cff87ceebNinjutsu / 2 x skill level|r at the second|n|cff32cd32Damage Type:|r Normal at first strike, magic at second|n|cff32cd32Area of Effect:|r 220 width x 700 length|n|cff32cd32Chakra Cost:|r 20 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 8s + |cff87ceeb1 x skill level|r|n|cff32cd32Description:|r|nHayate throws an explosive kunai at the target, exploding all enemies in area.
 }
 
+STRING 20866
+// Items: I07W (|cffFFFFE0Yang Chakra Blades|r), Description (Description)
+{
+A special made metal infused with the sage's powers|n|cff32cd32+85 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Yang Wave (active, rng: 900, cd: 50s):|n  -  Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage in line and heals for half|n|cffff0000Item Type: Weapon|r
+}
+
 STRING 20867
 // Abilities: A0VK ( ), EditorSuffix (Editor Suffix)
 {
@@ -127740,10 +127656,22 @@ STRING 20870
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebGenjutsu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 150 width x 880 length|n|cff32cd32Effects:|r Stuns for 1s. Also if it his a hero allows you to teleport to the end of the cast.|n|cff32cd32Chakra Cost:|r 10 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nGengetsu mimics a gun with his hand and then compresses a drop of water in his index finger, firing it with tremendous force and speed.
 }
 
+STRING 20871
+// Items: I07X (|cffB0B0B0Wind Chakra Blades|r), Ubertip (Tooltip - Extended)
+{
+A special made metal infused with wind|n|cff32cd32+50 All Stats|n+50 Ninjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (6000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 6000)|n|cff87ceeb- Wind Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in line|n|cffff0000Item Type: Weapon|r
+}
+
 STRING 20872
 // Abilities: A126 (Mazo no Kusari), Name (Name)
 {
 Mazo no Kusari
+}
+
+STRING 20873
+// Items: I07X (|cffB0B0B0Wind Chakra Blades|r), Description (Description)
+{
+A special made metal infused with wind|n|cff32cd32+50 All Stats|n+50 Ninjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (6000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 6000)|n|cff87ceeb- Wind Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in line|n|cffff0000Item Type: Weapon|r
 }
 
 STRING 20874
@@ -127840,6 +127768,12 @@ STRING 20889
 // Abilities: A0VP (|cffFC6022Shakuton: Daijohappa|r), Tip (Tooltip - Normal)
 {
 |cffFC6022Shakuton: Extremely Steaming Murder|r [|cffffcc00E|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 20890
+// Items: I07Y (|cff53a4ffWater Chakra Blades|r), Ubertip (Tooltip - Extended)
+{
+A special made metal infused with water.|n|cff32cd32+50 All Stats|n+50 Genjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Water Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line and slows by 50%|n|cffff0000Item Type: Weapon|r
 }
 
 STRING 20891
@@ -129598,48 +129532,6 @@ STRING 21183
 // Abilities: A16X (!), Tip (Tooltip - Normal)
 {
 Kamui [|cffffcc00Q|r] - [|cffffcc00Level 6|r]
-}
-
-STRING 21184
-// Items: I07W (|cffFFFFE0Yang Chakra Blades|r), Ubertip (Tooltip - Extended)
-{
-A special made metal infused with the sage's powers|n|cff32cd32+85 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Yang Wave (active, rng: 900, cd: 50s):|n  -  Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage in line and heals for half|n|cffff0000Item Type: Weapon|r
-}
-
-STRING 21185
-// Items: I07W (|cffFFFFE0Yang Chakra Blades|r), Description (Description)
-{
-A special made metal infused with the sage's powers|n|cff32cd32+85 All Stats|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Yang Wave (active, rng: 900, cd: 50s):|n  -  Deals (Taijutsu + Ninjutu + Genjutsu) x 2 Magic Damage in line and heals for half|n|cffff0000Item Type: Weapon|r
-}
-
-STRING 21186
-// Items: I07X (|cffB0B0B0Wind Chakra Blades|r), Ubertip (Tooltip - Extended)
-{
-A special made metal infused with wind|n|cff32cd32+50 All Stats|n+50 Ninjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Wind Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in line|n|cffff0000Item Type: Weapon|r
-}
-
-STRING 21187
-// Items: I07X (|cffB0B0B0Wind Chakra Blades|r), Description (Description)
-{
-A special made metal infused with wind|n|cff32cd32+50 All Stats|n+50 Ninjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Wind Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in line|n|cffff0000Item Type: Weapon|r
-}
-
-STRING 21188
-// Items: I07Y (|cff53a4ffWater Chakra Blades|r), Ubertip (Tooltip - Extended)
-{
-A special made metal infused with water.|n|cff32cd32+50 All Stats|n+50 Genjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Water Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line and slows by 50%|n|cffff0000Item Type: Weapon|r
-}
-
-STRING 21189
-// Items: I07Y (|cff53a4ffWater Chakra Blades|r), Description (Description)
-{
-A special made metal infused with water.|n|cff32cd32+50 All Stats|n+50 Genjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Water Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line and slows by 50%|n|cffff0000Item Type: Weapon|r
-}
-
-STRING 21190
-// Items: I07Z (|cff8b4600Earthen Chakra Blades|r), Description (Description)
-{
-A special made metal infused with earth|n|cff32cd32+50 All Stats|n+40 Taijutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (3000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 3000)|n|cff87ceeb- Earth Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line that stuns for 1s and does not push|n|cffff0000Item Type: Weapon|r
 }
 
 STRING 21191
@@ -135647,10 +135539,22 @@ STRING 22190
 Back to Normal Mode [E]
 }
 
+STRING 22191
+// Items: I07Y (|cff53a4ffWater Chakra Blades|r), Description (Description)
+{
+A special made metal infused with water.|n|cff32cd32+50 All Stats|n+50 Genjutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Water Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line and slows by 50%|n|cffff0000Item Type: Weapon|r
+}
+
 STRING 22192
 // Abilities: A1E5 (Semi Choice), EditorSuffix (Editor Suffix)
 {
 (Fuu)
+}
+
+STRING 22193
+// Items: I07Z (|cff8b4600Earthen Chakra Blades|r), Description (Description)
+{
+A special made metal infused with earth|n|cff32cd32+50 All Stats|n+40 Taijutsu|n+150 Damage|n- Chakra Crits (passive, spells have a (4000 - damage) / 150 % chance to deal 50% extra damage, damage is capped at 4000)|n|cff87ceeb- Earth Wave (active, rng: 900, cd: 50s):|n  - Deals (Taijutsu + Ninjutsu + Genjutsu) x 2 Magic Damage in a line that stuns for 1s and does not push|n|cffff0000Item Type: Weapon|r
 }
 
 STRING 22194
@@ -135767,6 +135671,12 @@ STRING 22212
 Learn |cff8b4600Doton: Dochu Senko|r [|cffffcc00Q|r]  - [|cffffcc00Level %d|r]
 }
 
+STRING 22213
+// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level (1.1x Ninjutsu x skill level when Susano is chosen)|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
+}
+
 STRING 22214
 // Abilities: A0XD (|cff8b4600Doton: Dochu Senko|r), Hotkey (Hotkey - Normal)
 {
@@ -135809,10 +135719,58 @@ STRING 22220
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 700|n|cff32cd32Damage:|r |cff87ceebGenjustu x skill level|r|n|cff32cd32Damage Type:|r Magic|n|cff32cd32Effects:|r Traps enemies hit in a crystal prison for 2s, if Guren's W hits the prison then stun nearby enemies for 1.5s |n|cff32cd32Area of Effect:|r 150|n|cff32cd32Chakra Cost:|r 60 + |cff87ceeb15 x skill level|r|n|cff32cd32Cooldown:|r 20s|r|n|cff32cd32Description:|r|nGuren encases her target in crystals dealing damage.
 }
 
+STRING 22221
+// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level (1.1x Ninjutsu x skill level when Susano is chosen)|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
+}
+
 STRING 22222
 // Abilities: A04Z (|cff8b4600Kongo Roheki|r), Tip (Tooltip - Normal)
 {
 |cffff8080Shoton: Suisho Ro no Jutsu|r [|cffffcc00Q|r] - [|cffffcc00Level 2|r]
+}
+
+STRING 22223
+// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level (1.1x Ninjutsu x skill level when Susano is chosen)|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
+}
+
+STRING 22224
+// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level (1.1x Ninjutsu x skill level when Susano is chosen)|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
+}
+
+STRING 22225
+// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level (1.1x Ninjutsu x skill level when Susano is chosen)|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
+}
+
+STRING 22226
+// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level (1.1x Ninjutsu x skill level when Susano is chosen)|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
+}
+
+STRING 22227
+// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level (1.1x Ninjutsu x skill level when Susano is chosen)|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
+}
+
+STRING 22228
+// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level (1.1x Ninjutsu x skill level when Susano is chosen)|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
+}
+
+STRING 22229
+// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level (1.1x Ninjutsu x skill level when Susano is chosen)|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
 }
 
 STRING 22230
@@ -135881,6 +135839,12 @@ STRING 22240
 |cffab695fKuchiyose: Yatai Kuzushi no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 8|r]
 }
 
+STRING 22241
+// Abilities: A0WN (|cff8080ffRaikiri|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 400 + |cff87ceeb40 x skill level|n|cff32cd32Damage:|r |cff87ceebNinjutsu x skill level (1.1x Ninjutsu x skill level when Susano is chosen)|r  |n|cff32cd32Damage Type:|r Magic|n|cff32cd32Area of Effect:|r 220 width x 870 length|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb25 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.33 x skill level|r|n|cff32cd32Description:|r|nKakashi concentrates raiton chakra on the palm of his hand and runs toward the target with ferocious speed, giving them a fatal blow. Kakashi named this jutsu after he split a bolt of lighting with it.
+}
+
 STRING 22242
 // Abilities: A1E2 (|cff000000Tsukuyomi|r), Tip (Tooltip - Normal)
 {
@@ -135891,6 +135855,12 @@ STRING 22243
 // Abilities: A1E2 (|cff000000Tsukuyomi|r), Tip (Tooltip - Normal)
 {
 |cffab695fKuchiyose: Yatai Kuzushi no Jutsu|r [|cffffcc00E|r] - [|cffffcc00Level 10|r]
+}
+
+STRING 22244
+// Abilities: A14W (|cff000000Serial Gudoudamas|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r |cff87ceeb(600 + 2.5 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Chakra Cost:|r |cff87ceeb75 + 75 x skill level|n|cff32cd32Cooldown:|r 70s|n|cff32cd32Description:|r|nThe user summons black balls composed of the combination of the five nature transformations to damage all enemies around him.
 }
 
 STRING 22245
@@ -135963,6 +135933,12 @@ STRING 22256
 // Abilities: A0MA (|cff53a4ffMizu Fuusen no Jutsu|r), Tip (Tooltip - Normal)
 {
 |cff53a4ffMizu Fuusen no Jutsu|r [|cffffcc00W|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 22257
+// Abilities: A14W (|cff000000Serial Gudoudamas|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r |cff87ceeb(600 + 2.5 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Chakra Cost:|r |cff87ceeb75 + 75 x skill level|n|cff32cd32Cooldown:|r 70s|n|cff32cd32Description:|r|nThe user summons black balls composed of the combination of the five nature transformations to damage all enemies around him.
 }
 
 STRING 22258
@@ -136091,6 +136067,18 @@ STRING 22278
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Heroes|n|cff32cd32Casting Range:|r 5000|n|cff32cd32Damage:|r |cff87ceebTaijutsu * (6 + Distance/1000)|r |n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Charge:|r The charge can be released by moving or after 5.5s at your mouse location.|n|cff32cd32Effects:|r Drags and damages heroes by 75% of the initial damage, each time a hero is damaged this value is reduced by 25%. Any hero who collides into a wall will  also be stunned up to 2s and damaged up to 1250 (Scales with the charge).|n|cff32cd32Chakra Cost:|r 300|r|n|cff32cd32Cooldown:|r 60s|r|n|cff32cd32Description:|r Juugo uses his transformation to grow jet booster-like arms that increases his attacking and throwing power. This is a more powerful version of Piston Fist, with the combination of the Jet Booster Jump.
 }
 
+STRING 22279
+// Abilities: A184 (Futton: Kairiki Muso), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb(750 + 3 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Chakra Cost:|r 100 + |cff87ceeb100 x skill level|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nHan uses his incredible strength to make all enemies around him fly, making them fall two seconds after, dealing damage and stunning them.
+}
+
+STRING 22283
+// Abilities: A1A5 (|cff004000Okasho|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb11 x Taijutsu|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Chakra Cost:|r 250|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nSakura punches the ground, causing several rocks to fly through the air. Taking advantage of that, she jumps on the target and gives them a fatal blow.
+}
+
 STRING 22284
 // Abilities: A0I7 (|cff800080Shinkirou no Genjutsu|r), Researchtip (Tooltip - Learn)
 {
@@ -136121,10 +136109,22 @@ STRING 22288
 The legendary Raijin no Ken, created by Senju Tobirama. It has the ability to cut space-time.|n|cff32cd32+1500 HP|n+200 Damage|n+130 Ninjutsu|n|cff87ceeb- Space-Time Barrier (active, cd: 30s):|n   - Slows enemy movespeed by 50% for 20s in 600 AoE|n|cffff0000Item Type: Weapon|r
 }
 
+STRING 22289
+// Abilities: A1A5 (|cff004000Okasho|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Unit Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 400|n|cff32cd32Damage:|r |cff87ceeb11 x Taijutsu|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Chakra Cost:|r 250|n|cff32cd32Cooldown:|r 60s|n|cff32cd32Description:|r|nSakura punches the ground, causing several rocks to fly through the air. Taking advantage of that, she jumps on the target and gives them a fatal blow.
+}
+
 STRING 22290
 // Units: e068 (DashWave), Name (Name)
 {
 DashWave
+}
+
+STRING 22291
+// Abilities: A04A (|cff8b4600Earth Splitter|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceeb(1.5 x Taijutsu + 900 x skill level)|n|cff32cd32Damage:|r |cff87ceeb(3 x Taijutsu + 750 x skill level) |r|n|cff32cd32|r |cffA9A9A9(Okasho Ultimate)|n|r|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 220 width x 1000 length|n|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb5 x Taijutsu|r + (|cff87ceeb750 x skill level|r) (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Damage Type:|r Chaos (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Area of Effect:|r 220 width x 1500 length (|cff90ee90Active Chakra Enhanced Strength|r)|n|n|cff32cd32Effect:|r Slow affected enemies for 3 seconds.|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb100 x skill level|r|cff32cd32|nCooldown:|r 60s|n|cff32cd32Description:|r|nSakura uses her enormous strength to punch the ground, creating a huge fissure, damaging all enemies in line.
 }
 
 STRING 22292
@@ -136185,6 +136185,18 @@ STRING 22301
 // Abilities: A0VJ (|cff5375f3Suiton: Suijinheki|r), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Instant Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 400|n|cff32cd32Effects:|r Paralyze nearby enemies and gives to the user maximum armor during spell execution|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 15s|n|cff32cd32Description:|r|nTobirama uses a large amount of water to create a protector barrier around himg, dealing damage and stunning nearby enemies.
+}
+
+STRING 22302
+// Abilities: A04A (|cff8b4600Earth Splitter|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceeb(1.5 x Taijutsu + 900 x skill level)|n|cff32cd32Damage:|r |cff87ceeb(3 x Taijutsu + 750 x skill level) |r|n|cff32cd32|r |cffA9A9A9(Okasho Ultimate)|n|r|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 220 width x 1000 length|n|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb5 x Taijutsu|r + (|cff87ceeb750 x skill level|r) (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Damage Type:|r Chaos (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Area of Effect:|r 220 width x 1500 length (|cff90ee90Active Chakra Enhanced Strength|r)|n|n|cff32cd32Effect:|r Slow affected enemies for 3 seconds.|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb100 x skill level|r|cff32cd32|nCooldown:|r 60s|n|cff32cd32Description:|r|nSakura uses her enormous strength to punch the ground, creating a huge fissure, damaging all enemies in line.
+}
+
+STRING 22303
+// Abilities: A04A (|cff8b4600Earth Splitter|r), Researchubertip (Tooltip - Learn - Extended)
+{
+|cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Casting Range:|r 1000|n|cff32cd32Damage:|r |cff87ceeb(1.5 x Taijutsu + 900 x skill level)|n|cff32cd32Damage:|r |cff87ceeb(3 x Taijutsu + 750 x skill level) |r|n|cff32cd32|r |cffA9A9A9(Okasho Ultimate)|n|r|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 220 width x 1000 length|n|n|cff32cd32Damage:|r |cff87ceeb|cff87ceeb5 x Taijutsu|r + (|cff87ceeb750 x skill level|r) (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Damage Type:|r Chaos (|cffA9A9A9Passive Byakugo|r)|n|cff32cd32Area of Effect:|r 220 width x 1500 length (|cff90ee90Active Chakra Enhanced Strength|r)|n|n|cff32cd32Effect:|r Slow affected enemies for 3 seconds.|n|cff32cd32Chakra Cost:|r 50 + |cff87ceeb100 x skill level|r|cff32cd32|nCooldown:|r 60s|n|cff32cd32Description:|r|nSakura uses her enormous strength to punch the ground, creating a huge fissure, damaging all enemies in line.
 }
 
 STRING 22310
@@ -145695,18 +145707,6 @@ STRING 27191
 // Abilities: A0ND (Cat Jump), Researchubertip (Tooltip - Learn - Extended)
 {
 |cff32cd32Target Type:|r Point Target|n|cff32cd32Targets Allowed:|r Enemy|n|cff32cd32Casting Range:|r 800|n|cff32cd32Damage:|r |cff87ceeb80 x skill level|r|n|cff32cd32Damage Type:|r Normal|n|cff32cd32Area of Effect:|r 300|n|cff32cd32Effects:|r Slow enemies by 50% for 3s|n|cff32cd32Chakra Cost:|r 0 + |cff87ceeb20 x skill level|r|n|cff32cd32Cooldown:|r 13s + |cff87ceeb0.3 x skill level|r|n|cff32cd32Description:|r|nYugito uses her claws to jump at the location.
-}
-
-STRING 27193
-// Abilities: A14W (|cff000000Serial Gudoudamas|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r |cff87ceeb(500 + 2.5 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Chakra Cost:|r |cff87ceeb75 + 75 x skill level|n|cff32cd32Cooldown:|r 70s|n|cff32cd32Description:|r|nThe user summons black balls composed of the combination of the five nature transformations to damage all enemies around him.
-}
-
-STRING 27194
-// Abilities: A14W (|cff000000Serial Gudoudamas|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff32cd32Target Type:|r Instant|n|cff32cd32Targets Allowed:|r Enemy, Building|n|cff32cd32Damage:|r |cff87ceeb(500 + 2.5 x Taijutsu) x skill level|r|n|cff32cd32Damage Type:|r Chaos|n|cff32cd32Area of Effect:|r 600|n|cff32cd32Chakra Cost:|r |cff87ceeb75 + 75 x skill level|n|cff32cd32Cooldown:|r 70s|n|cff32cd32Description:|r|nThe user summons black balls composed of the combination of the five nature transformations to damage all enemies around him.
 }
 
 STRING 27225
